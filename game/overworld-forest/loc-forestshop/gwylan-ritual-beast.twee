@@ -2420,7 +2420,7 @@
 <<elseif $jordansong>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"그 노래 정말 예뻤어요, 어디서 배우셨어요? 최근에 들었는데, 가사가 달랐어요."
-		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어요? 전에도 들은 적이 있는데, 가사가 달랐어요."
+		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어? 전에도 들은 적이 있는데, 가사가 달랐어."
 		<<default>>"그 노래 어디선가 들어본 것 같아요. 가사는 좀 달랐지만요. 어디서 배우셨어요?"
 	<</switch>>
 	<br><br>
@@ -2434,7 +2434,7 @@
 <<else>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"그 노래 정말 예뻤어요, 어디서 배우셨어요? 최근에 들었는데, 가사는 없었어요."
-		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어요? 전에도 들어 봤는데, 가사를 아는 사람은 아무도 없었어요."
+		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어? 전에도 들어 봤는데, 가사를 아는 사람은 아무도 없었어."
 		<<default>>"그 노래 어디선가 들어본 것 같아요. 다른 사람이 가사를 아는 건 이번이 처음이에요. 어디서 배우셨어요?"
 	<</switch>>
 	<br><br>
@@ -3717,7 +3717,7 @@
 
 <<personsimple>> 몸이 떨리더니, <<his>> 나뭇잎 옷이 마치 한 송이 거대한 꽃처럼 벌어지며 <<him>>【을를】 더 드러내기 시작한다.
 <<if $beastRitual.tainted>>
-	그윌란이 얼굴을 찡그린다. <span class="purple"><<persons>> 피부 곳곳이 썩은 고목 껍질처럼 깊게 갈라져 있다. <<His>> $beastRitual.taintedArm【은는】 앙상하고 가늘다. 팔꿈치에서 금방이라도 부러질 것처럼 보인다.</span>
+	그윌란이 얼굴을 찡그린다. <span class="purple"><<persons>> 피부 곳곳이 썩은 고목 껍질처럼 깊게 갈라져 있다. <<His>> <<print $beastRitual.taintedArm is "right arm" ? "오른팔" : "왼팔">>【은는】 앙상하고 가늘다. 팔꿈치에서 금방이라도 부러질 것처럼 보인다.</span>
 	<br><br>
 
 	"하마터면 너무 늦을 뻔했어." <<nnpc_he "Gwylan">>【이가】 무릎을 꿇고 더 자세히 살피며 말한다. "<<He>>【이가】 최악의 상황을 숨기고 있었어. 우리에게 응답한 게 <<hes>>라 다행이야. 흉터는 좀 남겠지만, 아직 완전히 회복할 수 있어."
@@ -3862,7 +3862,7 @@
 
 <<abomination>>
 <<if $beastRitual.tainted>>
-	<<His>> $beastRitual.taintedArm【이가】 <<his>> 옆에 축 늘어져 있다.
+	<<His>> <<print $beastRitual.taintedArm is "right arm" ? "오른팔" : "왼팔">>【이가】 <<his>> 옆에 축 늘어져 있다.
 	<<if $beastRitual.taintedArm is "right arm">>
 		<<set $NPCList[0].righthand to "idle">>
 	<<else>>
@@ -4319,7 +4319,7 @@
 	<<elseif $phase is "offer">>
 		<<switch $speech_attitude>>
 			<<case "meek" "shy">>"제가 먼저 보답해도 될까요?" 당신은 수줍게 묻는다.
-			<<case "bratty" "confident">>"제가 먼저 보답할게요. 이 꿀이 전부 헛되이 버려지면 아깝잖아요." 당신이 말한다.
+			<<case "bratty" "confident">>"내가 먼저 보답할게. 이 꿀이 전부 헛되이 버려지면 아깝잖아." 당신이 말한다.
 			<<default>>"제가 먼저 보답하게 해주는 건 어때요?" 당신은 묻는다.
 		<</switch>>
 		<br><br>

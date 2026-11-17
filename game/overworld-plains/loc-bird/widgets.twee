@@ -2938,9 +2938,9 @@
 					<</if>>
 				<<else>>
 					<<if _litter.length gte 2>>
-						<span class="lewd"><<= _litter.length>>개의 수정된 새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+						<span class="lewd"><<= _litter.length>>개의 수정된 새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 					<<else>>
-						<span class="lewd">수정된 새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+						<span class="lewd">수정된 새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 					<</if>>
 				<</if>>
 				<<if $arousal gte $arousalmax>>
@@ -2985,9 +2985,9 @@
 					<</if>>
 				<<else>>
 					<<if _litter.length gte 2>>
-						<span class="lewd"><<= _litter.length>>개의 수정된 새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+						<span class="lewd"><<= _litter.length>>개의 수정된 새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 					<<else>>
-						<span class="lewd">수정된 새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+						<span class="lewd">수정된 새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 					<</if>>
 				<</if>>
 				<<if $arousal gte $arousalmax>>
@@ -3032,9 +3032,9 @@
 				<</if>>
 			<<else>>
 				<<if $harpyEggs.count gte 2>>
-					<span class="lewd">$harpyEggs.count개의 새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+					<span class="lewd">$harpyEggs.count개의 새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 각각의 알이 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 				<<else>>
-					<span class="lewd">새의 알</span>이 당신의 $_eggnantGenital【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
+					<span class="lewd">새의 알</span>이 당신의 <<print $_eggnantGenital is "cervix" ? "자궁경부" : "항문">>【을를】 통과하며, 당신의 입구를 천천히 넓히고는 툭 떨어져 당신의 둥지에 안착한다.
 				<</if>>
 			<</if>>
 			<<if $arousal gte $arousalmax>>

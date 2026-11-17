@@ -344,7 +344,7 @@
 			][random(0,4)]>>
 		<<elseif ($speechSexToyState is "aroused" or $speechNoticeSexToy is 1) and random(0,2) isnot 0 and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 			<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
-				<<set $_sexToy to "sex toys">>
+				<<set $_sexToy to "섹스 토이들">>
 			<<elseif $rightarm is "heldSexToy">>
 				<<set $_sexToy to $currentSexToyRight.name>>
 			<<else>>
@@ -360,7 +360,7 @@
 			][random(0,4)]>>
 		<<elseif $speechSexToyState is "shocked" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 			<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
-				<<set $_sexToy to "sex toys">>
+				<<set $_sexToy to "섹스 토이들">>
 			<<elseif $rightarm is "heldSexToy">>
 				<<set $_sexToy to $currentSexToyRight.name>>
 			<<else>>
@@ -376,7 +376,7 @@
 			][random(0,4)]>>
 		<<elseif $speechSexToyState is "disappointed" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 			<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
-				<<set $_sexToy to "sex toys">>
+				<<set $_sexToy to "섹스 토이들">>
 			<<elseif $rightarm is "heldSexToy">>
 				<<set $_sexToy to $currentSexToyRight.name>>
 			<<else>>
@@ -392,7 +392,7 @@
 			][random(0,4)]>>
 		<<elseif $speechSexToyState is "angry" and ($rightarm is "heldSexToy" or $leftarm is "heldSexToy")>>
 			<<if $rightarm is "heldSexToy" and $leftarm is "heldSexToy">>
-				<<set $_sexToy to "sex toys">>
+				<<set $_sexToy to "섹스 토이들">>
 			<<elseif $rightarm is "heldSexToy">>
 				<<set $_sexToy to $currentSexToyRight.name>>
 			<<else>>
@@ -5640,7 +5640,7 @@
 					<<if $wolfgirl gte 4 and $transformationParts.wolf.ears isnot "hidden" and $location is "forest">>
 						<<He>>【은는】 당신의 늑대 귀를 살펴보고 눈살을 찌푸린다. "이봐, 넌 그... 아니야, 신경 쓰지 마."
 					<<elseif (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $transformationParts.bird.wings isnot "hidden" and $location is "moor">>
-						<<He>>【은는】 당신의<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>> 새<</if>> 날개를 살펴보고 눈살을 찌푸린다. "이봐, 넌 그... 아니야, 신경 쓰지 마."
+						<<He>>【은는】 당신의<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>> 새 같은<</if>> 날개를 살펴보고 눈살을 찌푸린다. "이봐, 넌 그... 아니야, 신경 쓰지 마."
 					<<elseif ($cow gte 2 or $transformationParts.cow.horns is "default") and $transformationParts.cow.horns isnot "hidden" and $location is "moor">>
 						<<He>>【은는】 당신의<<if ($demon gte 2 or ($transformationParts.demon.horns isnot "disabled" and $transformationParts.demon.horns isnot "hidden"))>> 소<</if>> 뿔을 살펴보고는 미소를 짓는다. "걱정 마. 레미가 널 데려가게 내버려두지 않을 테니까."
 					<<elseif $rng gte 51>>

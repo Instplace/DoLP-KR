@@ -6407,8 +6407,10 @@
 <<widget "foodstuff_find_tip">>
 	<<if _tempItem isnot undefined>>
 		<<if setup.foodstuff[_tempItem] is undefined>>
-			오류. _tempItems【을를】 찾을 수 없습니다.
+			오류. _tempItem【을를】 찾을 수 없습니다.
 		<<else>>
+			<<set _tempItemKr to setup.foodstuff[_tempItem].name>>
+			<<set _tempItemsKr to setup.foodstuff[_tempItem].plural ?? _tempItemKr>>
 			<<if setup.foodstuff[_tempItem].category is "seafood">>
 				<<set _fishloc to setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredLocation>>
 				<<if _fishloc.includes("fishingPier")>>
@@ -6438,57 +6440,57 @@
 					<<set _fishlocfin to _fishloc>>
 				<</if>>
 				<<set _fishseason to setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredSeason>>
-				_tempItem.toUpperFirst()【은는】 <<print setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredBait>>【을를】 좋아하며 _fishlocfin 일대에서 찾을 수 있습니다.
+				_tempItemKr【은는】 <<print setup.foodstuff[setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredBait]?.name ?? setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredBait>>【을를】 좋아하며 _fishlocfin 일대에서 찾을 수 있습니다.
 				<<if _fishseason.length is 4>>
 					이 물고기는 일 년 내내 찾을 수 있습니다.
 				<<elseif _fishseason.length is 3>>
-					이 물고기는 <<print ["spring","summer","autumn","winter"].filter(item => T.fishseason.indexOf(item)==-1).toUpperFirst()>>【을를】 제외한 어느 계절에나 찾을 수 있습니다.
+					이 물고기는 <<print window.KR.getSeasonKr(["spring","summer","autumn","winter"].filter(item => T.fishseason.indexOf(item)==-1)[0])>>【을를】 제외한 어느 계절에나 찾을 수 있습니다.
 				<<else>>
-					이 물고기는 _fishseason[0].toUpperFirst()<<if _fishseason.length is 2>>【와과】 _fishseason[1].toUpperFirst()에<<else>>에만<</if>> 찾을 수 있습니다.
+					이 물고기는 <<print window.KR.getSeasonKr(_fishseason[0])>><<if _fishseason.length is 2>>【와과】 <<print window.KR.getSeasonKr(_fishseason[1])>>에<<else>>에만<</if>> 찾을 수 있습니다.
 				<</if>>
 				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>><br>하이 가의 슈퍼마켓에서도 구입할 수 있습니다.<</if>>
 			<<elseif setup.foodstuff[_tempItem].category is "dish">>
 				<<if setup.foodstuff[_tempItem].knows_recipe>>
-					<<set _ingredientList to setup.foodstuff[_tempItem].recipe.ingredients.map((e) => (e)).join(" and ")>>
+					<<set _ingredientList to setup.foodstuff[_tempItem].recipe.ingredients.map((e) => (setup.foodstuff[e]?.name ?? e)).join(", ")>>
 					<<if _ingredientList.length gte 2>>
 						<<for _i = 0; _i to _ingredientList.length--; _i++>>
 							<<set _ingredientList.replace(" and",",")>>
 						<</for>>
 					<</if>>
-					<<print setup.foodstuff[_tempItem].recipe.recipe_name>>【을를】 만들려면 _ingredientList【이가】 필요합니다.
+					<<recipe_name _tempItem>>【을를】 만들려면 _ingredientList【이가】 필요합니다.
 				<<else>>
 					이 요리의 조리법을 모릅니다.
 				<</if>>
 			<<else>>
 				<<if setup.foodstuff[_tempItem].tending isnot undefined and setup.foodstuff[_tempItem].tending.has_seeds is true>>
 					<<if _tempItem is "carnation" and $town_projects.green gte 3>>
-						_tempItems【을를】 학교 뒷마당에서 어울리다 보면 구할 수 있고, 심어서도 얻을 수 있습니다.
+						_tempItemsKr【을를】 학교 뒷마당에서 어울리다 보면 구할 수 있고, 심어서도 얻을 수 있습니다.
 					<<elseif _tempItem is "carnation">>
-						_tempItems【을를】 섬에서 채집하거나 심어서 얻을 수 있습니다.
+						_tempItemsKr【을를】 섬에서 채집하거나 심어서 얻을 수 있습니다.
 					<<elseif _tempItem is "tulip">>
-						_tempItems【을를】 공원에서 구하거나 심어서 얻을 수 있습니다.
+						_tempItemsKr【을를】 공원에서 구하거나 심어서 얻을 수 있습니다.
 					<<elseif ["garlic","onion","broccoli","wild_carrot"].includes(_tempItem)>>
 						황야에서 찾을 수 있습니다.
 					<<elseif ["lily","red_rose","orchid"].includes(_tempItem)>>
-						_tempItems【을를】 숲에서 구하거나 심어서 얻을 수 있습니다.
+						_tempItemsKr【을를】 숲에서 구하거나 심어서 얻을 수 있습니다.
 					<<elseif ["rice","potato"].includes(_tempItem)>>
-						_tempItem【을를】 무작위 이벤트나 심기를 통해 얻을 수 있습니다.
+						_tempItemKr【을를】 무작위 이벤트나 심기를 통해 얻을 수 있습니다.
 					<<else>>
-						_tempItems.toUpperFirst()【은는】 심어서만 얻을 수 있습니다. 즐거운 정원 가꾸기 되십시오!
+						_tempItemsKr【은는】 심어서만 얻을 수 있습니다. 즐거운 정원 가꾸기 되십시오!
 					<</if>>
 					<<if !setup.foodstuff[_tempItem].tending.seasons.includes(Time.season)>> 다만 지금은 알맞은 계절이 아닙니다. 안타까운 일입니다.<</if>>
 				<</if>>
 
 				<<if _tempItem is "ghostshroom">>
-					카일라의 저택에서 식물을 돌보다 보면 _tempItems【을를】 찾을 수 있습니다.
+					카일라의 저택에서 식물을 돌보다 보면 _tempItemsKr【을를】 찾을 수 있습니다.
 				<<elseif _tempItem is "blood_lemon">>
-					붉은 달이 뜬 밤의 깊은 숲에서 _tempItems【을를】 찾을 수 있습니다.
+					붉은 달이 뜬 밤의 깊은 숲에서 _tempItemsKr【을를】 찾을 수 있습니다.
 				<<elseif _tempItem is "orange">>
-					다뉴브 가<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>나 신전 정원<</if>>에서 _tempItems【을를】 훔칠 수 있습니다.<<if $avery_mansion isnot undefined>> 에이버리가 가끔 이 물건들을 들여놓기도 합니다.<</if>>
+					다뉴브 가<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>나 신전 정원<</if>>에서 _tempItemsKr【을를】 훔칠 수 있습니다.<<if $avery_mansion isnot undefined>> 에이버리가 가끔 이 물건들을 들여놓기도 합니다.<</if>>
 				<<elseif _tempItem is "banana">>
-					콘누다투스 가의 시장을 둘러보면 _tempItems【을를】 찾을 수 있습니다.
+					콘누다투스 가의 시장을 둘러보면 _tempItemsKr【을를】 찾을 수 있습니다.
 				<<elseif ["apple","blackberry","lemon","bird_egg","mushroom","wolfshroom","strawberry","pear"].includes(_tempItem)>>
-					_tempItems【을를】 숲에서 채집하면 찾을 수 있습니다
+					_tempItemsKr【을를】 숲에서 채집하면 찾을 수 있습니다
 					<<switch _tempItem>>
 						<<case "blackberry">>
 							. 거주 지구 골목 뒤쪽 덤불에서도 찾을 수 있습니다.
@@ -6499,12 +6501,12 @@
 						<<default>>.
 					<</switch>>
 				<<elseif ["plum","peach","truffle"].includes(_tempItem)>>
-					_tempItem【을를】 농장의 삼림 지대에서 채집하면 찾을 수 있습니다.
+					_tempItemKr【을를】 농장의 삼림 지대에서 채집하면 찾을 수 있습니다.
 				<<elseif _tempItem is "lime" and $temple_rank isnot undefined and $temple_rank isnot "prospective">>
-					_tempItems【을를】 신전 정원에서 찾을 수 있습니다.
+					_tempItemsKr【을를】 신전 정원에서 찾을 수 있습니다.
 				<</if>>
 
-				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>>_tempItems.toUpperFirst()【은는】 하이 가의 슈퍼마켓에서 구입할 수 있습니다.<br><</if>>
+				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>>_tempItemsKr【은는】 하이 가의 슈퍼마켓에서 구입할 수 있습니다.<br><</if>>
 			<</if>>
 		<</if>>
 	<</if>>

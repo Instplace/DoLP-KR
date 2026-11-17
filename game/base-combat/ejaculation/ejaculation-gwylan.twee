@@ -686,8 +686,8 @@
 		<<handejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid "leftarm" "semen">><<bodyliquid "rightarm" "semen">>
 
 	<<elseif $NPCList[_nn].penis is "leftarm" or $NPCList[_nn].penis is "rightarm">>
-		<<set $_arm to $NPCList[_nn].penis is "leftarm" ? "left" : "right">>
-		당신이 $_arm 손으로 <<his>> 자지를 감질나게 쓰다듬어 갓 뿜어진 정액을 이끌어내자, <<He>>【은는】 조용히 몸을 떤다.
+		<<set $_arm to $NPCList[_nn].penis is "leftarm" ? "왼손" : "오른손">>
+		당신이 $_arm으로 <<his>> 자지를 감질나게 쓰다듬어 갓 뿜어진 정액을 이끌어내자, <<He>>【은는】 조용히 몸을 떤다.
 		<<if $hypnosis_traits.devotion gte 3>>
 			<<He>>【은는】 낄낄거리며 당신의 얼굴을 향해 손가락 하나를 치켜든다. "<<gwylanCommand "깨끗이 핥아.">>" <<hypnosisText "몸이 <<his>> 명령에 복종한다.">>
 			당신은 게걸스럽게 <<his>> 정액을 핥아 올리며, 심지어 <<his>> <<npcPenis>>에 남은 마지막 방울까지 싹싹 핥아먹는다. 당신이 그렇게 하는 동안 <<He>>【은는】 미소 지으며 당신을 내려다보고 머리를 쓰다듬는다. <<trauma -1>><<ltrauma>>

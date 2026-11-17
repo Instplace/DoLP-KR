@@ -3356,7 +3356,7 @@
 						<br><br>
 						<<housekeeping_exam_select>>
 						<<if $chosen_recipe isnot "none">>
-							<span class="gold">여기서 요리책에 실린 레시피를 하나 독학할 수 있다.</span> 당신이 책을 펼치자 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 나온다.<br><br>
+							<span class="gold">여기서 요리책에 실린 레시피를 하나 독학할 수 있다.</span> 당신이 책을 펼치자 <<recipe_name $chosen_recipe>> 레시피가 나온다.<br><br>
 							<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
 						<<else>>
 							더 이상 배울 수 있는 레시피가 없다.

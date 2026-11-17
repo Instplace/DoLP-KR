@@ -1128,7 +1128,7 @@
 	<<set _fruit to either("lemons", "limes", "apples", "oranges", "pears")>>
 	<<set _fruitCall to _fruit.replace(/s$/, "")>>
 	<<wearProp _fruitCall>>
-	바구니를 든 채 사다리를 올라 <<print {"lemons":"레몬","limes":"라임","apples":"사과","oranges":"오렌지","pears":"배"}[_fruit]>>【을를】 따기 시작한다. <<tending_text>> 즐겁긴 하지만, 몇몇은 꽤 멀리 팔을 뻗어야 닿는다. <<physique 6>><<lstress>><<stress -6>>
+	바구니를 든 채 사다리를 올라 <<print ({"lemons":"레몬","limes":"라임","apples":"사과","oranges":"오렌지","pears":"배"})[_fruit]>>【을를】 따기 시작한다. <<tending_text>> 즐겁긴 하지만, 몇몇은 꽤 멀리 팔을 뻗어야 닿는다. <<physique 6>><<lstress>><<stress -6>>
 	<br><br>
 
 	<<link [[몇 개 훔친다|Temple Garden Steal Night]]>><<set $skulduggerydifficulty to 400>><<set $phase to _fruit>><</link>><<crime "petty">>

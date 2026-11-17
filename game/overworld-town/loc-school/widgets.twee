@@ -1613,7 +1613,7 @@
 	<<if ["seat","active"].includes($whitneymaths)>>
 		<<addinlineevent "mathsWhitneyWake">>
 			<<npc Whitney>><<person1>>
-			<<set _cum to C.npc.Whitney.penis is "none" ? "juices" : "cum">>
+			<<set _cum to C.npc.Whitney.penis is "none" ? "애액" : "정액">>
 			<<if C.npc.Whitney.dom lte 15>>
 				당신은 뒤통수에 무언가 부딪히는 것을 느낀다. 잠시 후 또 느껴진다. 눈을 뜨고 고개를 든다. 머리를 쓸어 넘기다 침 묻은 종이 뭉치를 발견한다. 휘트니가 비죽이며 당신을 쳐다보고 있다. <<ltiredness>><<gdom>><<npcincr Whitney dom 1>>
 				<br><br>

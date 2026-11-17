@@ -687,7 +687,7 @@
 	<<glove>><<npcincr Winter love 1>>
 
 <<elseif $antiquemoney gte 1000>>
-	<<His>> 회의적인 태도는 <<he>>【이가】 작업하는 동안 사라진다. "이걸 어디서 구했습니까?" <<he>>【이가】 묻는다. <<He>>【은는】 대답을 기다리지 않고, 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
+	<<His>> 회의적인 태도는 <<he>>【이가】 작업하는 동안 사라진다. "이걸 어디서 구했지?" <<he>>【이가】 묻는다. <<He>>【은는】 대답을 기다리지 않고, 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
 	<<glove>><<npcincr Winter love 1>>
 
 <<elseif $antiquemoney gte 200>>

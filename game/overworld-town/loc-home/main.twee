@@ -107,7 +107,7 @@
 		<<default>>
 			<span class="red">오류입니다. 프로스트버그에게 알려 주십시오.</span>
 	<</switch>>
-	【이가】 예상되는 시각은 <<print _forecastDate.monthName + " " + _forecastDate.day + "일, ">> <<ampm _forecastDate.hour _forecastDate.minute>>이며, 지금으로부터
+	【이가】 예상되는 시각은 <<print window.KR.getMonthKr(_forecastDate.monthName) + " " + _forecastDate.day + "일, ">> <<ampm _forecastDate.hour _forecastDate.minute>>이며, 지금으로부터
 	<<if Time.date.compareWith(_forecastDate).days gt 0>>
 		<<print Time.date.compareWith(_forecastDate).days>>일 뒤입니다."
 	<<elseif Time.date.compareWith(_forecastDate).hours gt 0>>
@@ -4837,7 +4837,7 @@ and !$fromRobinRoom and _robin.cdquest is 2 and _robin.trauma lte 20 and !$daily
 		<br><br>
 		<<housekeeping_exam_select>>
 		<<if $chosen_recipe isnot "none">>
-			<span class="gold">여기서 요리책으로 레시피를 독학할 수 있다.</span> 당신은 책을 펼치고 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 적힌 페이지에서 손을 멈춘다.<br><br>
+			<span class="gold">여기서 요리책으로 레시피를 독학할 수 있다.</span> 당신은 책을 펼치고 <<recipe_name $chosen_recipe>> 레시피가 적힌 페이지에서 손을 멈춘다.<br><br>
 			<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
 		<<else>>
 			더 이상 배울 수 있는 레시피가 없다.

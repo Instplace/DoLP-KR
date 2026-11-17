@@ -1607,7 +1607,7 @@
 <br><br>
 <<if setup.foodstuff[$phase].category is "fruit" or setup.foodstuff[$phase].category is "vegetable">>
 	<<if $phase is "lemon" or $phase is "lime">>
-		"$phase? 이 난장판을 벌여 가며 <<recipe_name $phase>>【을를】 쟁여 두려 했다고?" 에이버리가 그 생각에 얼굴을 찡그린다. "내려놔.
+		"<<recipe_name $phase "cap">>? 이 난장판을 벌여 가며 <<recipe_name $phase>>【을를】 쟁여 두려 했다고?" 에이버리가 그 생각에 얼굴을 찡그린다. "내려놔.
 		<<if $avery_mansion.jobs.includes("kitchen")>> 그리고 난장판 치워.<<else>> 그리고 더 이상 아무것도 깨뜨리지 마.<</if>>"
 		<br><br>
         에이버리는 휙 돌아서 <<if $avery_mansion.schedule is "dinner">>식당으로 돌아간다.<<else>>부엌을 나선다.<</if>>

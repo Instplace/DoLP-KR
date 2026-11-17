@@ -3,7 +3,7 @@
 <<if $gwylan.requestDone>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"저-저기, 제가 도울 일이 더 있을까요?" 당신이 묻는다.
-		<<case "bratty" "confident">>"저한테 시킬 일이 더 있어요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"나한테 시킬 일 더 있어?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 더 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -12,7 +12,7 @@
 <<elseif $gwylan.request.event>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"저-저기, 제가 도울 일이 더 있을까요?" 당신이 묻는다.
-		<<case "bratty" "confident">>"저한테 시킬 일이 더 있어요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"나한테 시킬 일 더 있어?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 더 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -31,7 +31,7 @@
 <<elseif !$gwylanSeen.includes("request_intro")>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"저-저기, 제가 도울 일이 있을까요?" 당신이 묻는다.
-		<<case "bratty" "confident">>"저기, 바빠 보이네요. 필요한 거 있어요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저기, 바빠 보이네. 필요한 거 있어?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -49,7 +49,7 @@
 <<else>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>"저-저기, 제가 도울 일이 있을까요?" 당신이 묻는다.
-		<<case "bratty" "confident">>"저기, 바빠 보이네요. 필요한 거 있어요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저기, 바빠 보이네. 필요한 거 있어?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>

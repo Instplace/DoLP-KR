@@ -3363,7 +3363,7 @@
 
 <<if $shortcut.lost gte 5>>
 	<<pain -2>>
-	<<set _goingTo to $bus is "disposal" ? "forest" : "disposal channel">>
+	<<set _goingTo to $bus is "disposal" ? "숲" : "처리 통로">>
 	<<set $shortcut.item to $hcItems.filter(item => item.location is "held" and item.type isnot "torch")[0]>>
 	<<if $shortcut.item?.type is "container" and $hcItems.filter(x => x.type is "water" and x.location is $shortcut.item.containerID).length>>
 		<<set $shortcut.itemName to "bucket of water">>
@@ -3447,8 +3447,8 @@
 :: Hopeless Cycle Shortcut Mirror
 <<set _thermoDisable to true>><<effects>>
 <<hopelessCycleEffects>>
-<<set _goingTo to $bus is "disposal" ? "forest" : "disposal channel">>
-<<set _comingFrom to $bus is "disposal" ? "disposal channel" : "forest">>
+<<set _goingTo to $bus is "disposal" ? "숲" : "처리 통로">>
+<<set _comingFrom to $bus is "disposal" ? "처리 통로" : "숲">>
 <<set _comingFromLink to "Hopeless Cycle " + $bus.toLocaleUpperFirst()>>
 <<set $hcItems.filter(torch => torch.type is "torch" and ["snuffed","burnt"].includes(torch.state) and torch.location is "held")[0].state to "lit">>
 <<wearProp "torch">>

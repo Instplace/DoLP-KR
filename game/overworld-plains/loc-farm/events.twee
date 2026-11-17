@@ -4737,7 +4737,7 @@ _bottom.name에서 멀리 떨어진 곳에 넓은 호를 그리며 곡물을 흩
 <<if $speech_attitude is "meek">>
 	"아-아니요." 당신은 말한다. "당신이 지켜줄 거란 걸 알았어요."
 <<elseif $speech_attitude is "shy">>
-	"ㅇ-아니." 당신이 말한다. "난 그보다는 용감해."
+	"아-아니." 당신이 말한다. "난 그보다는 용감해."
 <<elseif $speech_attitude is "bratty">>
 	"물론 아니죠." 당신은 말한다.
 <<else>>

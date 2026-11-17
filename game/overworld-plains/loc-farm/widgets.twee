@@ -799,15 +799,15 @@
 	<</if>>
 	<<set _timeString to getTimeString(_baseTime)>>
 	<<if $farm.waterField is 1 and !$farm.build_finished.includes("water field 2")>>
-		<<set _string to "the water">>
+		<<set _string to "수경지 ">>
 	<<else>>
-		<<set _string to "a">>
+		<<set _string to "">>
 	<</if>>
 	<<if ($farm_stage isnot 12 or ($farm.waterField is 1 and !$farm.build_finished.includes("water field 2"))) and $farm_work.alex is "clearing" and ($exposed lt 2 or hasSexStat("exhibitionism", 5)) and Time.dayState isnot "night">>
 		<<if pcAreArmsBound("both")>>
 			<span class="red">두 팔이 묶여 있기 때문에</span>, 알렉스가 밭을 개간하는 것을 도울 수 없다.
 		<<else>>
-			<<farmicon "clear yard">><<link [["알렉스를 도와 " + _string + " 밭을 개간한다 ("+ _timeString +")"|Farm Clearing]]>><<physique 2>><<farm_clear>><</link>><<gtiredness>><<run _actions++>>
+			<<farmicon "clear yard">><<link [["알렉스를 도와 " + _string + "밭을 개간한다 ("+ _timeString +")"|Farm Clearing]]>><<physique 2>><<farm_clear>><</link>><<gtiredness>><<run _actions++>>
 		<</if>>
 		<br>
 	<</if>>
@@ -815,7 +815,7 @@
 		<<if pcAreArmsBound("both")>>
 			<span class="red">두 팔이 묶여 있기 때문에</span>, 혼자서 밭을 개간할 수 없다.
 		<<else>>
-			<<farmicon "clear yard">><<link [["혼자서 " + _string + " 밭을 개간한다 ("+ _timeString +")"|Farm Clearing Alone]]>><<physique 4>><<farm_clear>><</link>><<ggtiredness>><<run _actions++>>
+			<<farmicon "clear yard">><<link [["혼자서 " + _string + "밭을 개간한다 ("+ _timeString +")"|Farm Clearing Alone]]>><<physique 4>><<farm_clear>><</link>><<ggtiredness>><<run _actions++>>
 		<</if>>
 		<br>
 	<</if>>

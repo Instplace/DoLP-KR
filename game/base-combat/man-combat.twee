@@ -643,9 +643,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		/*<<set $penisuse to 0>>*/
 	<<elseif $rng gte 51>>
 		<<switch $penisstate>>
-			<<case "otheranus">><<set $_teased to "anus">>
-			<<case "penetrated">><<set $_teased to "vagina">>
-			<<case "penispenetrated">><<set $_teased to "cock">>
+			<<case "otheranus">><<set $_teased to "항문">>
+			<<case "penetrated">><<set $_teased to "보지">>
+			<<case "penispenetrated">><<set $_teased to "자지">>
 		<</switch>>
 		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【을를】 사용하여 당신의 <<penis>>【을를】 <<strokes>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 통해.<<elseif $penisstate is "otheranus" or $penisstate is "penetrated">><<set $_n to _n>>, <<personselect $penistarget>><<combatpersons>> $_teased【을를】 희롱하며.<<personselect $_n>><<else>>.<</if>>
 		<<neutral 10 "genitals" _n>>
@@ -687,9 +687,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<elseif $rng lte 100>>
 		<<if ["otheranus","penetrated","penispenetrated"].includes($penisstate)>>
 			<<switch $penisstate>>
-				<<case "otheranus">><<set $_teased to "anus">><<set $_fuck to "penetrate">>
-				<<case "penetrated">><<set $_teased to "vagina">><<set $_fuck to "fuck">>
-				<<case "penispenetrated">><<set $_teased to "cock">><<set $_fuck to "frot">>
+				<<case "otheranus">><<set $_teased to "항문">><<set $_fuck to "찌르는">>
+				<<case "penetrated">><<set $_teased to "보지">><<set $_fuck to "박는">>
+				<<case "penispenetrated">><<set $_teased to "자지">><<set $_fuck to "문지르는">>
 			<</switch>>
 			<<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】, <<he>>【이가】 당신의 <<penis>> 전체를 <<print either("마사지한다","문지른다","펜싱하듯 부딪친다","비빈다")>>
 			당신이 <<set $_n to _n>><<personselect $penistarget>><<combatpersons>> $_teased【을를】 $_fuck 동안.<<personselect $_n>>

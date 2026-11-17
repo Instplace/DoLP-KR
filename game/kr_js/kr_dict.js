@@ -112,6 +112,7 @@ window.KR.dict = {
   "boy's gym socks": "남학생 체육복 양말",
   "boyshorts": "사각팬티",
   "bra": "브래지어",
+  "padded bra": "패드 브라",
   "breeches": "승마바지",
   "briefs": "삼각팬티",
   "broomstick": "빗자루",
@@ -627,6 +628,7 @@ window.KR.dict = {
   "naked": "알몸",
   "necktie": "넥타이",
   "newsboy cap": "빵모자",
+  "piece of fabric": "천 조각",
   "night cap": "수면 모자",
   "nightgown": "잠옷",
   "nipple pasties": "유두 가리개",
@@ -1771,6 +1773,13 @@ window.KR.getSeasonKr = function(season) {
         case "winter": return "겨울";
         default: return season;
     }
+};
+
+/* 월 이름(Time.monthName 등 영어 달 이름) 한글 번역: "March" -> "3월". 미등록 값은 원문 그대로. */
+window.KR.getMonthKr = function(month) {
+    var names = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+    var i = names.indexOf(String(month).toLowerCase());
+    return i < 0 ? month : (i + 1) + "월";
 };
 
 /* 강수 형태(Weather.precipitation) 한글 번역. */

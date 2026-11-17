@@ -76,7 +76,7 @@
 :: School Changing Room Strip
 
 <<set $outside to 0>><<schooleffects>><<effects>>
-<<set _genderAppearance to $player.gender_appearance is "m" ? "boy" : "girl">>
+<<set _genderAppearance to $player.gender_appearance is "m" ? "남자" : "여자">>
 <<if $phase is 1>>
 	당신은 <<nervously>> 옷을 벗는다. 몇몇 <<if $changingRoomGender is "girls">>여학생<<else>>남학생<</if>>【은는】 얼굴을 붉히며 고개를 돌리지만, 대부분은 최소한 호기심을 보인다. 당신 주변으로 무리가 형성된다. 곧 그들 앞에서 알몸이 된다.
 	<<covered>>
@@ -185,7 +185,7 @@
 :: School Changing Room Refuse Molestation Finish
 
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
-<<set _genderAppearance to $player.gender_appearance is "m" ? "boy" : "girl">>
+<<set _genderAppearance to $player.gender_appearance is "m" ? "남자" : "여자">>
 <<if $alarm is 1 and $rescue is 1>>
 	<<set $rescued += 1>>
 	<<endevent>><<npc Mason>><<person1>>메이슨이 비명 소리를 듣고 달려온다. $changingRoomGender【은는】 뒷걸음질 치며 자신들과는 상관없는 일인 척한다.
@@ -682,7 +682,7 @@
 	<<if $speech_attitude is "meek">>
 		"나-나한테 마음대로 해도 돼." 당신이 말한다.
 	<<elseif ($speech_attitude is "shy" or $speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-		"저를 기다리게 하지 마세요, <<print $changingRoomGender is "girls" ? "여학생" : "남학생">>【아야】." 당신이 말한다.
+		"제발 나 기다리게 하지 마, <<print $changingRoomGender is "girls" ? "여학생" : "남학생">>【아야】." 당신이 말한다.
 	<<elseif $speech_attitude is "bratty">>
 		"뭘 꾸물거리는 거야." 당신이 말한다. "나 시간 없거든."
 	<<else>>

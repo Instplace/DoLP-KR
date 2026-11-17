@@ -945,7 +945,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"학생을 따라 사물함에 들어오다니," 당신이 놀린다. "그러고는 발기까지! 못된 선생님이네."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"학생을 따라 사물함에 들어오다니." 당신이 놀린다. "그러고는 발기까지! 어머, 정말 부적절하네요."
+	"학생을 따라 사물함에 들어오다니요." 당신이 놀린다. "그러고는 발기까지요! 어머, 정말 부적절하네요."
 <<elseif $speech_attitude is "bratty">>
 	"학생한테 괴롭힘당하니까 발기하는 거야?" 당신이 놀린다. "정말 변태 같은 선생님이네."
 <<else>>
@@ -1061,7 +1061,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"학생을 따라 라커까지 들어오다니," 당신은 놀린다. "그러고는 젖어버리고! 음란한 선생님이네."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"학생을 따라 라커까지 들어오다니." 당신은 놀린다. "그러고는 젖어 버리고! 어머, 정말 부적절하네요."
+	"학생을 따라 라커까지 들어오다니요." 당신은 놀린다. "그러고는 젖어 버리다니요! 어머, 정말 부적절하네요."
 <<elseif $speech_attitude is "bratty">>
 	"학생한테 괴롭힘당하니까 젖는 거예요?" 당신은 놀린다. "정말 변태 같은 선생님이네."
 <<else>>

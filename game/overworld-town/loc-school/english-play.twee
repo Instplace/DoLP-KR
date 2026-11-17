@@ -485,7 +485,7 @@
 		<<playLinePool>>
 		당신은 연습용 책자를 집어 들고 시드니가 연극의 일부를 연기하는 것을 돕는다.
 		<<set _tempRole to (random(0,1) ? "Taylor" : "Sterling")>>
-		당신은 _tempRole 역할을 맡는다.
+		당신은 <<print _tempRole is "Taylor" ? "테일러" : "스털링">> 역할을 맡는다.
 		<br>
 		"<<print _englishPlayLinePool[_tempRole].pluck()>>"
 		<br>

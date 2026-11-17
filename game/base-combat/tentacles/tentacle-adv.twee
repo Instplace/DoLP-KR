@@ -2008,9 +2008,9 @@
 
 		<<if $rng lte 30>> /* Leg grapple? */
 			<<if $rng gte 16>>
-				<<set _leg to "left">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
+				<<set _leg to "왼쪽">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
 			<<else>>
-				<<set _leg to "right">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
+				<<set _leg to "오른쪽">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
 			<</if>>
 			<<neutral 1>><<feettentacledisable>>
 			_The _tentacle.fullDesc【이가】 당신의 _leg 다리를 감고 올라와, <span class="blue">구속해 버린다.</span>
@@ -2052,9 +2052,9 @@
 
 			<<if $rng lte 30>>
 				<<if $rng gte 16>>
-					<<set _leg to "left">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
+					<<set _leg to "왼쪽">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
 				<<else>>
-					<<set _leg to "right">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
+					<<set _leg to "오른쪽">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
 				<</if>>
 				<<neutral 1>><<feettentacledisable>>
 				_The _tentacle.fullDesc【이가】 당신의 _leg 다리를 감고 올라와, <span class="blue">구속해 버린다.</span>
@@ -2086,9 +2086,9 @@
 
 			<<if $rng lte 30>>
 				<<if $rng gte 16>>
-					<<set _leg to "left">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
+					<<set _leg to "왼쪽">><<set _tentacle.shaft to "leftleg">><<set $leftleg to "grappled">><<set $feettarget to "tentacles">>
 				<<else>>
-					<<set _leg to "right">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
+					<<set _leg to "오른쪽">><<set _tentacle.shaft to "rightleg">><<set $rightleg to "grappled">><<set $feettarget to "tentacles">>
 				<</if>>
 				<<neutral 1>><<feettentacledisable>>
 				_The _tentacle.fullDesc【이가】 당신의 _leg 다리를 감고 올라와, <span class="blue">구속해 버린다.</span>

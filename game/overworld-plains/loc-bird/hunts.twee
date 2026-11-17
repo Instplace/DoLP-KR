@@ -545,9 +545,9 @@
 	<</if>>
 	<<set $bird.hunts.direction to _directionPool.pluck()>>
 	<<if $monster is 1>>
-		"<<Wife>>【이가】 따르겠나? 내가 이끌지." <<bhe>>【이가】 말하며 $bird.hunts.direction 쪽으로 날아간다.
+		"<<Wife>>【이가】 따르겠나? 내가 이끌지." <<bhe>>【이가】 말하며 <<print ({east:"동쪽",north:"북쪽",south:"남쪽",west:"서쪽"})[$bird.hunts.direction]>>【으로로】 날아간다.
 	<<else>>
-		<<bHe>>【은는】 화답하듯 날카롭게 울고는 $bird.hunts.direction 쪽으로 날기 시작한다.
+		<<bHe>>【은는】 화답하듯 날카롭게 울고는 <<print ({east:"동쪽",north:"북쪽",south:"남쪽",west:"서쪽"})[$bird.hunts.direction]>>【으로로】 날기 시작한다.
 	<</if>>
 	<<switch $bird.hunts.direction>>
 		<<case "north">><<set $bird.hunts.distanceNorth++>>
@@ -603,9 +603,9 @@
 	차질을 무시하고 계속한다.
 <</if>>
 <<if $bird.hunts.goal is "hawk">>
-	뭔가 발견하길 바라며 <<beasttype>> $bird.hunts.direction【으로로】 따라간다.
+	뭔가 발견하길 바라며 <<beasttype>> <<print ({east:"동쪽",north:"북쪽",south:"남쪽",west:"서쪽"})[$bird.hunts.direction]>>【으로로】 따라간다.
 <<else>>
-	<<if $bird.hunts.duo is true>>둘 다 <</if>>뭔가 발견하길 바라며 $bird.hunts.direction【으로로】 날아간다.
+	<<if $bird.hunts.duo is true>>둘 다 <</if>>뭔가 발견하길 바라며 <<print ({east:"동쪽",north:"북쪽",south:"남쪽",west:"서쪽"})[$bird.hunts.direction]>>【으로로】 날아간다.
 <</if>>
 <<if Weather.precipitation is "rain">>비는 수색에 전혀 도움이 되지 않는다.<<elseif Weather.precipitation is "snow">>눈은 수색에 전혀 도움이 되지 않는다.<</if>>
 <<if $daily.birdHuntPhysique is undefined>>
@@ -7356,7 +7356,7 @@
 		<<else>>
 			<<set $birdSilverHunt.player.position to ($birdSilverHunt.player.position is 8 ? 0 : $birdSilverHunt.player.position + 1)>>
 		<</if>>
-		당신은 _direction 쪽의 다른 은신처로 이동한다.
+		당신은 <<print _direction is "left" ? "왼쪽" : "오른쪽">>의 다른 은신처로 이동한다.
 		<<if $birdSilverHunt.lurkerSpawn is $birdSilverHunt.player.position>>
 			은신처에 도착했을 때, 들키지 않았다고 생각했지만, 갑자기 럴커 한 마리가 등 뒤에서 덮쳐온다!
 			<<silver_hunt_lurker_caught>>
@@ -7379,9 +7379,9 @@
 		<<set _direction to ($birdSilverHunt.player.action is "crawlLeft" ? "left" : "right")>>
 		<<if Object.values($birdSilverHuntGuards).find(guard => (guard.position is $birdSilverHunt.player.position))>>
 			<<set _guardOnTop to Object.values($birdSilverHuntGuards).find(guard => (guard.position is $birdSilverHunt.player.position))>>
-			당신은 _guardOnTop.name【이가】 당신에게서 약간 멀어질 때까지 기다렸다가, 은신처에서 나와 들키지 않고 다른 은신처에 도달하기를 바라며 _direction 쪽으로 천천히 기어간다.
+			당신은 _guardOnTop.name【이가】 당신에게서 약간 멀어질 때까지 기다렸다가, 은신처에서 나와 들키지 않고 다른 은신처에 도달하기를 바라며 <<print _direction is "left" ? "왼쪽" : "오른쪽">>으로 천천히 기어간다.
 		<<else>>
-			당신은 들키지 않고 다른 은신처에 도달하기를 바라며 _direction 쪽으로 천천히 기어간다.
+			당신은 들키지 않고 다른 은신처에 도달하기를 바라며 <<print _direction is "left" ? "왼쪽" : "오른쪽">>으로 천천히 기어간다.
 		<</if>>
 		<<if _direction is "left">>
 			<<set $birdSilverHunt.player.position to ($birdSilverHunt.player.position is 0 ? 8 : $birdSilverHunt.player.position - 1)>>
@@ -7440,10 +7440,10 @@
 					<<set _distanceTotal to Math.min(_distanceRight,_distanceLeft)>>
 					<<set _distanceClose to (_distanceRight gt _distanceLeft ? "left" : "right")>>
 					<<switch _distanceTotal>>
-						<<case 1>>당신은 _distanceClose 쪽에 있는 <<personselect _gg>><<person>>【을를】 더 잘 볼 수 있다.
-						<<case 2>>당신은 _distanceClose 쪽에 <<personselect _gg>><<person>>【이가】 있고, 당신과 꽤 가깝다는 것을 알 수 있다.
-						<<case 3>>_distanceClose 쪽에서 <<personselect _gg>><<person>>【을를】 본다. <<He>>【은는】 아직 당신과 꽤 거리가 있다.
-						<<default>>당신은 _distanceClose 쪽 멀리 있는 <<personselect _gg>><<person>>【을를】 본다.
+						<<case 1>>당신은 <<print _distanceClose is "left" ? "왼쪽" : "오른쪽">>에 있는 <<personselect _gg>><<person>>【을를】 더 잘 볼 수 있다.
+						<<case 2>>당신은 <<print _distanceClose is "left" ? "왼쪽" : "오른쪽">>에 <<personselect _gg>><<person>>【이가】 있고, 당신과 꽤 가깝다는 것을 알 수 있다.
+						<<case 3>><<print _distanceClose is "left" ? "왼쪽" : "오른쪽">>에서 <<personselect _gg>><<person>>【을를】 본다. <<He>>【은는】 아직 당신과 꽤 거리가 있다.
+						<<default>>당신은 <<print _distanceClose is "left" ? "왼쪽" : "오른쪽">> 멀리 있는 <<personselect _gg>><<person>>【을를】 본다.
 					<</switch>>
 					<<if $birdSilverHuntGuards[_guard_keys[_gg]].movingTo isnot "none">>
 						<<set _distanceRightMoving to ($birdSilverHuntGuards[_guard_keys[_gg]].movingTo - $birdSilverHunt.player.position + 9) % 9>>

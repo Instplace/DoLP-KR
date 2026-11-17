@@ -79,11 +79,11 @@
 		<<set $eventskip to 1>>
 
 		<<if random(0,100) gt 80 and (maleChance() lt 100 or $settings.maleNPCVaginaChance gt 0) and $earSlime.deviancy gte 3>>
-			<<set _coveredIn to "slime">>
+			<<set _coveredIn to "슬라임">>
 			<<slimeWakeBodyliquid "goo">>
 		<</if>>
 		<<if random(0,100) gt 80 and (maleChance() gt 0 or $settings.femaleNPCPenisChance gt 0) and $earSlime.promiscuity gte 3>>
-			<<set _coveredIn to (_coveredIn is "slime" ? "슬라임과 정액" : "정액")>>
+			<<set _coveredIn to (_coveredIn is "슬라임" ? "슬라임과 정액" : "정액")>>
 			<<slimeWakeBodyliquid "semen">>
 		<</if>>
 		<<if _coveredIn isnot undefined>>

@@ -1565,6 +1565,7 @@
 	<<else>>
 		<<set _type to _litter[0].species>>
 	<</if>>
+	<<set _typeKr to _type is "harpy" ? "하피" : window.KR.getBeastTypeKr(_litter[0].species) + (_type.endsWith("person") ? "인간" : "")>>
 	<<switch childBaseSpecies(_pregnancy.donorSpecies)>>
 		<<case "human">>
 			<<He>>【은는】 마침내 당신을 돌아본다. "보시겠어요?"
@@ -1681,9 +1682,9 @@
 			<<if !knowsChild(_litter[0].childId, "pc")>>
 				"축하드립니다." <<he>>【이가】 당신을 향해 몸을 돌리며 말을 시작한다. "아주 특이한 임신을 하셨군요. 운이 좋으십니다. 인간 아이 대신, <span class="lewd">당신이 임신한 것은
 				<<if _multiple>>
-					_typeText 새끼 한 배입니다.
+					_typeKr 새끼 한 배입니다.
 				<<else>>
-					_type 새끼 한 마리입니다.
+					_typeKr 새끼 한 마리입니다.
 				<</if>>
 				</span>놀랍군요."
 				<br><br>

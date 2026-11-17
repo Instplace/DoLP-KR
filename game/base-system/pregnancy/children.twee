@@ -436,7 +436,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "손">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "앞발">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "hand" : "wing")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "손" : "날개")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>
@@ -452,7 +452,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "손">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "발">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "hands" : "wings")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "손" : "날개")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>
@@ -467,7 +467,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "발">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "발">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "feet" : "legs")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "발" : "다리")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>
@@ -482,7 +482,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "발가락">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "발바닥">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "toes" : "talons")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "발가락" : "발톱")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>
@@ -497,7 +497,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "손가락">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "발톱">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "finger" : "wing")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "손가락" : "날개")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>
@@ -584,7 +584,7 @@ Groups littermates by pregnancyId.*/
 		<<switch $childRecords[$_id].species>>
 			<<case "human">><<set $_text_output to "아이">>
 			<<case "wolf" "wolfboy" "wolfgirl">><<set $_text_output to "새끼">>
-			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "nestling" : "chick")>>
+			<<case "hawk">><<set $_text_output to ($childRecords[$_id].features.monster is "monster" ? "새끼 새" : "새끼")>>
 		<</switch>>
 	<</if>>
 <</silently>><<if $_text_output>><<print $_text_output>><</if>><</widget>>

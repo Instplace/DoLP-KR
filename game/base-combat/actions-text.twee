@@ -688,10 +688,10 @@
 
 <<widget "actionsumbrella">>
 	<<if _args[0] is "both">>
-		<<set _hand to "umbrella">>
+		<<set _hand to "우산">>
 		<<set $_target to $lefttarget>>
 	<<else>>
-		<<set _hand to "umbrella">>
+		<<set _hand to "우산">>
 		<<if _args[0] isnot undefined>>
 			<<set $_target to _args[0]>>
 		<<else>>
@@ -748,10 +748,10 @@
 
 <<widget "actionsguard">>
 	<<if _args[0] is "both">>
-		<<set _arm to "arms">>
+		<<set _arm to "양팔">>
 		<<set $_target to $lefttarget>>
 	<<else>>
-		<<set _arm to "arm">>
+		<<set _arm to "팔">>
 		<<if _args[0] isnot undefined>>
 			<<set $_target to _args[0]>>
 		<<else>>
@@ -771,10 +771,10 @@
 
 <<widget "actionsfeint">>
 	<<if _args[0] is "both">>
-		<<set _hand to "hands">>
+		<<set _hand to "양손">>
 		<<set $_target to $lefttarget>>
 	<<else>>
-		<<set _hand to "hand">>
+		<<set _hand to "손">>
 		<<if _args[0] isnot undefined>>
 			<<set $_target to _args[0]>>
 		<<else>>
@@ -833,10 +833,10 @@
 
 <<widget "actionshookpunch">>
 	<<if _args[0] is "both">>
-		<<set _hand to "fists">>
+		<<set _hand to "양 주먹">>
 		<<set $_target to $lefttarget>>
 	<<else>>
-		<<set _hand to "fist">>
+		<<set _hand to "주먹">>
 		<<if _args[0] isnot undefined>>
 			<<set $_target to _args[0]>>
 		<<else>>
@@ -3121,7 +3121,7 @@
 						<<elseif $arousal lte ($arousalmax / 5) * 4>>
 							"나가! 그건 포피 거야!"
 						<<else>>
-							"난 포피를 배신하지 않아.... 떨어져!"
+							"난 포피를 배신하지 않아... 떨어져!"
 						<</if>>
 					<<elseif $penisstate is "penetrated" or $penisstate is "otheranus">>
 						<<if $arousal lte $arousalmax / 5>>

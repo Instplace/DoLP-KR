@@ -917,7 +917,7 @@
 		<h1 class="header gold bold">낚시</h1>
 		<ul class="journal">
 			<<icon `"fish/" + $daily.fishing.baitShopRequestFish + ".png"`>> 미끼 상점 주인이 갓 잡은
-			<mouse class="tooltip gold">$daily.fishing.baitShopRequestFish<span class="white">
+			<mouse class="tooltip gold"><<= setup.foodstuff[$daily.fishing.baitShopRequestFish].name>><span class="white">
 			<<set _tempItem to $daily.fishing.baitShopRequestFish>>
 			<<foodstuff_find_tip>>
 			</span></mouse>

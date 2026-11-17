@@ -1429,7 +1429,7 @@
 	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 		"저... 저도 좀 마셔봐도 될까요?"
 	<<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-		"저도 좀 마셔도 괜찮을까요?"
+		"나도 좀 마셔도 괜찮을까?"
 	<<elseif $speech_attitude is "bratty">>
 		"제가 마실 것도 남아있나요?"
 	<<else>>

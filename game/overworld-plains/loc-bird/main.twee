@@ -314,7 +314,7 @@
 			<<if $speech_attitude_special is "docile">>
 				"아-안 돼! 제발! 안 돼!" 당신은 앞뒤가 맞는 말을 하나도 만들어 내지 못한다.
 			<<else>>
-				"제-제발 해치지 마세요." 당신은 애원한다.
+				"제-제발 해치지 마." 당신은 애원한다.
 			<</if>>
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
@@ -5328,7 +5328,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <br><br>
 
 <<switch $speech_attitude>>
-	<<case "meek">>"<<if $speech_attitude_special is "docile">>ㅁ-미안해... 그런데... <</if>>처음부터 다시 해야 할 것 같아." 당신이 말한다. "ㅂ-부탁이 너무 과하지 않다면 말이야."
+	<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 그런데... <</if>>처음부터 다시 해야 할 것 같아." 당신이 말한다. "부-부탁이 너무 과하지 않다면 말이야."
 	<<case "special" "flamboyant" "polite">>"처음부터 다시 해야 할 것 같아." 당신이 말한다. "그게 더 나을 것 같아."
 	<<case "bratty">>"이건 인간한테는 최악이야." 당신이 말한다. "다시 만들 거야."
 	<<default>>"처음부터 다시 시작해야 해." 당신이 말한다. "날 믿어, 이게 더 나을 거야."
@@ -6727,7 +6727,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<br><br>
 
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"ㅁ-많이 무서웠는데... 그, 그런데... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여줄래?" 당신이 지저귀듯 말한다.<<else>>"아깐 정말 무서웠어. 하지만... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여주는 건 어때?" 당신이 지저귀듯 말한다.<</if>>
+		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"마-많이 무서웠는데... 그-그런데... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여줄래?" 당신이 지저귀듯 말한다.<<else>>"아깐 정말 무서웠어. 하지만... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여주는 건 어때?" 당신이 지저귀듯 말한다.<</if>>
 		<<case "flamboyant" "polite">>"부-분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
 		<<case "bratty" "confident" "framboyant" "special">><<if $speech_attitude_special is "cruel">>"아까 정말 깜짝 놀랐다고. 그것도 별로 유쾌하지 않은 쪽으로. 아까 일은 제대로 사과할 거지?" 당신이 입술을 핥으며 달콤하게 속삭인다.<<else>>"아까 정말 깜짝 놀랐다고. 그것도 별로 유쾌하지 않은 쪽으로. 아까 일은 제대로 사과할 거지?" 당신이 입술을 핥으며 달콤하게 속삭인다.<</if>>
 		<<default>>"분명 언젠가는 너만의 아이를 가질 수 있을 거야." 당신은 말한다.
@@ -7396,7 +7396,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<setTowerTemp>><<effects>>
 <<if $syndromebird gte 1>>
 	<<switch $speech_attitude>>
-		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"ㅇ-언제든 다시 시도할 수 있잖아." 당신은 말한다.
+		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"언-언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<case "bratty">>"그렇게 풀 죽어 있지 마, 그냥 더 열심히 해야 한다는 뜻이잖아." 당신은 말한다.
 		<<case "flamboyant" "special" "polite">>"제발 속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<default>>"속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
@@ -7628,7 +7628,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<setTowerTemp>><<effects>>
 <<if $syndromebird gte 1>>
 	<<switch $speech_attitude>>
-		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"ㅇ-언제든 다시 시도할 수 있잖아." 당신은 말한다.
+		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"언-언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<case "bratty">>"그렇게 풀 죽어 있지 마, 그냥 더 열심히 해야 한다는 뜻이잖아." 당신은 말한다.
 		<<case "flamboyant" "special" "polite">>"제발 속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<default>>"속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.

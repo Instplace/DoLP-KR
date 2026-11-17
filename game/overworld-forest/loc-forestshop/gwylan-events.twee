@@ -2009,13 +2009,13 @@
 		당신은 <<person3>><<person>>에게 신호를 보낸다.
 		<<switch $speech_attitude>>
 			<<case "meek">>
-				"저기... 어, 그러니까— 음, $phase 주문할 수 있을까요? 제, 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
+				"저기... 어, 그러니까— 음, <<phaseFoodKR>> 주문할 수 있을까요? 제, 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
 			<<case "special" "shy">>
-				"저기... 어, 그러니까— 음, $phase 좀 주실 수 있을까요? 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
+				"저기... 어, 그러니까— 음, <<phaseFoodKR>> 좀 주실 수 있을까요? 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
 			<<case "bratty">>
-				"여기 내 친구한테 $phase 하나 줘, 빨리." 당신이 말한다.
+				"여기 내 친구한테 <<phaseFoodKR>> 하나 줘, 빨리." 당신이 말한다.
 			<<default>>
-				"$phase 하나 주문할게요. 제 친구가 먹을 거예요." 당신이 말한다.
+				"<<phaseFoodKR>> 하나 주문할게요. 제 친구가 먹을 거예요." 당신이 말한다.
 		<</switch>>
 		당신은 돈을 건넨다. <<personsimple>>【은는】 고개를 끄덕이고 카페 안으로 사라진다.
 		<br><br>
@@ -2025,7 +2025,7 @@
 		<<person3>><<person>>【이가】 재빨리 테이블로 다가온다. "무엇을 도와드릴까요?"
 		<br><br>
 
-		"네, $phase 주세요. 감사합니다." 로빈이 말한다. <<person2>><<He>>【은는】 계산하려고 지갑에 손을 뻗지만, 당신은 그 손 위에 당신의 손을 얹어 제지한다. "내가 낼게." 당신은 <<person3>><<personsimple>>에게 돈을 지불한다.
+		"네, <<phaseFoodKR>> 주세요. 감사합니다." 로빈이 말한다. <<person2>><<He>>【은는】 계산하려고 지갑에 손을 뻗지만, 당신은 그 손 위에 당신의 손을 얹어 제지한다. "내가 낼게." 당신은 <<person3>><<personsimple>>에게 돈을 지불한다.
 		<br><br>
 
 		로빈은 미소를 지으며 당신의 <<if $robinromance>>뺨에 뽀뽀를 한다<<else>>어깨를 한 팔로 껴안는다<</if>>.
@@ -2033,7 +2033,7 @@
 		<<person3>><<person>>【이가】 재빨리 테이블로 다가온다. "무엇을 도와드릴까요?"
 		<br><br>
 
-		"네, $phase 주세요. 감사합니다." 로빈이 지폐를 내밀며 말한다. "알겠습니다. 잠시만 기다려 주세요." <<personsimple>>【은는】 카페 안으로 사라진다.
+		"네, <<phaseFoodKR>> 주세요. 감사합니다." 로빈이 지폐를 내밀며 말한다. "알겠습니다. 잠시만 기다려 주세요." <<personsimple>>【은는】 카페 안으로 사라진다.
 	<</if>>
 	<br><br>
 
@@ -2049,7 +2049,7 @@
 				"밀린 학교 숙제가 있어서 잠 깰 게 필요했거든." <<He>>【이가】 잔을 들어 올린다. "짠."
 			<</if>>
 		<<case "fruity ale" "shandy" "autumn ale" "winter ale">>
-			길쭉한 잔에 담긴 $phase【이가】 금세 나온다.
+			길쭉한 잔에 담긴 <<phaseFoodKR>>【이가】 금세 나온다.
 			<<if _robin.trauma gte 60>>
 				<<set $gwylanSeen.pushUnique("bad_day_drinking")>>
 				로빈은 곧바로 크게 한 모금 들이켠다. <<He>>【은는】 인상을 찌푸리더니, 잔을 내려놓고 기침을 한다. "이거—" <<He>>【은는】 다시 기침을 한다. "이거 엄청 독하다..."
@@ -2160,7 +2160,7 @@
 
 	로빈이 식사를 마치는 동안 셋이서 가벼운 대화를 나눈다.
 <<elseif $phase2 is 3 or $phase2 is 6>> /* Share */
-	당신은 $phase【을를】 로빈 쪽으로 밀어준다.
+	당신은 <<phaseFoodKR>>【을를】 로빈 쪽으로 밀어준다.
 	<<if $phase2 is 3>> /* Robin did nothing */
 		"여기. 난 배불러서 못 먹겠으니까 네가 먹어."
 		<br><br>
@@ -2237,7 +2237,7 @@
 			<<case "bratty">>
 				"관둬. 이런 바가지 씌운 쓰레기 음식 먹을 바엔 차라리 <<if Time.schoolDay>>학교<<else>>집<</if>>에서 먹는 게 나아." 당신이 쏘아붙인다.
 			<<default>>
-				"야, 로빈. 고작 $phase에 쓰기엔 너무 큰 돈이야. 그럴 가치가 없어." 당신이 말한다.
+				"야, 로빈. 고작 <<phaseFoodKR>>에 쓰기엔 너무 큰 돈이야. 그럴 가치가 없어." 당신이 말한다.
 		<</switch>>
 	<</if>>
 	<br><br>
@@ -2256,9 +2256,9 @@
 			<<case "fruity ale" "shandy", "autumn ale", "winter ale">><<set $robinmoney -= 7>>
 			<<case "pancakes" "crepes">><<set $robinmoney -= 10>>
 			<<case "deluxe cream bun">><<set $robinmoney -= 50>>
-		<<default>><span class="red">오류: 허용된 음식 아이템 목록에서 $phase【을를】 찾을 수 없습니다. 버그를 제보해 주십시오.</span>
+		<<default>><span class="red">오류: 허용된 음식 아이템 목록에서 <<phaseFoodKR>>【을를】 찾을 수 없습니다. 버그를 제보해 주십시오.</span>
 		<</switch>>
-		<<His>> 코가 살짝 찡그러진다. "<span class="red">하지만 넌 $phase【을를】 먹고 있잖아?</span>
+		<<His>> 코가 살짝 찡그러진다. "<span class="red">하지만 넌 <<phaseFoodKR>>【을를】 먹고 있잖아?</span>
 		<<if $robinpaid>>
 			<<if _robin.love gte 60 and _robin.trauma lt 60>>
 				네가 내 빚을 대신 내준다고 해서 나까지 즐길 자격이 없는 건 아니잖아..."
@@ -2283,7 +2283,7 @@
 		<<npcincr Robin love -1>><<llove "Robin">>
 		<br><br>
 
-		당신은 어떻게 대답해야 할지 말문이 막힌다. <<person3>><<person>>【이가】 다가온다. "네, 필요하신 게 있으신가요?" 로빈이 고개를 끄덕인다. "여기 $phase 하나 주세요." <<person2>><<he>>【이가】 돈을 내밀며 말한다.
+		당신은 어떻게 대답해야 할지 말문이 막힌다. <<person3>><<person>>【이가】 다가온다. "네, 필요하신 게 있으신가요?" 로빈이 고개를 끄덕인다. "여기 <<phaseFoodKR>> 하나 주세요." <<person2>><<he>>【이가】 돈을 내밀며 말한다.
 		<br><br>
 
 		곧 주문한 음식이 나오고, <<he>>【은는】 조용히 식사를 즐긴다.
@@ -3853,7 +3853,7 @@
 :: Gwylan Yearning Talk Cry
 <<effects>><<run statusCheck("Gwylan")>>
 <<switch $speech_attitude>>
-	<<case "meek" "special">>"괜찮아요? 너무 슬퍼 보여요."
+	<<case "meek" "special">>"괜찮아? 너무 슬퍼 보여."
 	<<case "bratty">>"꼴이 말이 아니네." 당신이 말한다. "괜찮아?"
 	<<default>>"무슨 일 있어? 울었던 것 같은데."
 <</switch>>

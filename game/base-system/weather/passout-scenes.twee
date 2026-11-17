@@ -2262,7 +2262,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 :: Passout Gwylan Hot Cold End
 <<set $outside to 0>><<set $location to "forest_shop">><<effects>>
 <<set $gwylan.timer.lastSeen to Time.date.timeStamp>>
-당신이 차를 다 마시자 그윌란이 창밖을 내다본다. "이제 밖에서는 좀 나을 거야. <<= $passoutReason>> 같은 건 치명적일 수 있으니까. 죽지 마, 알았지?"
+당신이 차를 다 마시자 그윌란이 창밖을 내다본다. "이제 밖에서는 좀 나을 거야. <<= $passoutReason is "hyperthermia" ? "열사병" : "저체온증">> 같은 건 치명적일 수 있으니까. 죽지 마, 알았지?"
 <<if $gwylanSeen.includes("romance")>>
 	<<His>> 미소가 약간 슬퍼진다. "진심이야. 나와 한 약속은 지켜야 해."
 <<elseif $gwylanSeen.includes("partners")>>

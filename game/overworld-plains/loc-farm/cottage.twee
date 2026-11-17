@@ -315,7 +315,7 @@
 		<<default>>
 			<span class="red">오류입니다. 프로스트버그에게 알려 주세요.</span>
 	<</switch>>
-	, 일시는 <<print ordinalSuffixOf(_forecastDate.day) + " of " + _forecastDate.monthName + ", ">> <<ampm _forecastDate.hour _forecastDate.minute>>, 지금으로부터
+	, 일시는 <<print window.KR.getMonthKr(_forecastDate.monthName) + " " + _forecastDate.day + "일, ">> <<ampm _forecastDate.hour _forecastDate.minute>>, 지금으로부터
 	<<if Time.date.compareWith(_forecastDate).days gt 0>>
 		<<print Time.date.compareWith(_forecastDate).days>>일 뒤입니다."
 	<<elseif Time.date.compareWith(_forecastDate).hours gt 0>>
@@ -5375,7 +5375,7 @@
 	<br><br>
 	<<housekeeping_exam_select>>
 	<<if $chosen_recipe isnot "none">>
-		<span class="gold">여기서 요리책으로 레시피를 독학할 수 있습니다.</span> 책을 펼치자 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 눈에 들어온다.<br><br>
+		<span class="gold">여기서 요리책으로 레시피를 독학할 수 있습니다.</span> 책을 펼치자 <<recipe_name $chosen_recipe>> 레시피가 눈에 들어온다.<br><br>
 		<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><</link>><<ghousekeeping 1000>>
 	<<else>>
 		더 이상 배울 수 있는 레시피가 없다.

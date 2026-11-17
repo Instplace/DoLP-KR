@@ -2322,7 +2322,7 @@
 					<<gwylanRescueStats false _args[0]>><<set $rescue to 0>>
 					<<if _args[0] is "Eden">>
 						<<if C.npc.Eden.name_known>>
-							<<set $_assailant to "Eden">>
+							<<set $_assailant to "에덴">>
 						<<else>>
 							<<set $_assailant to "<<= window.KR.getNpcTitleKr(C.npc.Eden.title)>>">>
 						<</if>>

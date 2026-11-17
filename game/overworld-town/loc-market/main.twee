@@ -910,7 +910,7 @@
 		<span class="green">당신은 목표물에 가까워지고,</span> <<him>>【을를】 골목으로 몰아넣는다. 막다른 길이다.
 		<br><br>
 
-		"죄-죄송해요." <<he>>【이가】 <<print setup.foodstuff[$stall_expensive].name>>【을를】 내밀며 당신의 시선을 피하며 말한다. "제 <<print $stallThiefPartner>>에게 주고 싶었는데, 돈이 없었어요. 잘못했어요."
+		"죄-죄송해요." <<he>>【이가】 <<print setup.foodstuff[$stall_expensive].name>>【을를】 내밀며 당신의 시선을 피하며 말한다. "제 <<print $stallThiefPartner is "boyfriend" ? "남자친구" : "여자친구">>에게 주고 싶었는데, 돈이 없었어요. 잘못했어요."
 		<br><br>
 
 		<<link [[가지게 둔다|Stall Keep]]>><<famegood 4>><</link>>
@@ -1059,11 +1059,11 @@
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"괜-괜찮아요." 당신은 말한다. "당신의 <<print $stallThiefPartner>>에게 주세요."
+	"괜-괜찮아요." 당신은 말한다. "당신의 <<print $stallThiefPartner is "boyfriend" ? "남자친구" : "여자친구">>에게 주세요."
 <<elseif $speech_attitude is "bratty">>
 	"애정을 표현하는 더 저렴한 방법을 생각해보는 게 좋을 거예요." 당신은 말한다. "하지만 이번만은 눈감아줄게요. 가지세요."
 <<else>>
-	"당신의 <<print $stallThiefPartner>>에게 주세요." 당신은 말한다.
+	"당신의 <<print $stallThiefPartner is "boyfriend" ? "남자친구" : "여자친구">>에게 주세요." 당신은 말한다.
 <</if>>
 <br><br>
 

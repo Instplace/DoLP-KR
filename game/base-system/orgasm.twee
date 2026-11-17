@@ -877,7 +877,7 @@
 			당신은 짧게 자란 잔디 위로 넘어질 뻔하지만, 절정이 잦아들자 어떻게든 몸을 지탱한다.
 		<<case "mmaGym">>
 			<<if !Time.openingHours() and Time.hour isnot $closinghour>>
-				<<set $_quiet to "gym">>
+				<<set $_quiet to "체육관">>
 			<<elseif $exposed gte 1>>
 				<<set $_hidden to true>>
 			<<else>>

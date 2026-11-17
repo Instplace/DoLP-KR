@@ -91,7 +91,7 @@ const events = [
 		starthour: 7,
 		endhour: 19,
 		priority: 2,
-		text: "미끼 가게 주인이 <<print V.daily.fishing.baitShopRequestFish>>【을를】 가져다 달라고 부탁했습니다.",
+		text: "미끼 가게 주인이 <<print setup.foodstuff[V.daily.fishing.baitShopRequestFish].name>>【을를】 가져다 달라고 부탁했습니다.",
 		failuretext: "미끼 가게 주인의 부탁을 완수하지 못했습니다.",
 	},
 	{

@@ -3392,20 +3392,20 @@
 <<else>>
 	/* Continue */
 	<<if $domusLoftMachine.canPenetrate>>
-		<<set _entrance to ($player.vaginaExist ? "pussy" : "ass")>>
+		<<set _entrance to ($player.vaginaExist ? "pussy" : "ass")>><<set _entranceKr to (_entrance is "pussy" ? "보지" : "항문")>>
 		<<if $domusLoftMachine.untilPenetration gte 2>>
-			<span class="blue">기계가 당신의 _entrance【을를】 찌르고 쑤신다.</span>
+			<span class="blue">기계가 당신의 _entranceKr【을를】 찌르고 쑤신다.</span>
 		<<elseif $domusLoftMachine.untilPenetration is 1>>
 			<span class="red">기계가 당신을 관통하려 한다!</span>
 		<<elseif $domusLoftMachine.untilPenetration is 0>>
-			<span class="lewd">기계의 끝부분이 천천히 당신의 _entrance 안으로 파고든다.</span>
+			<span class="lewd">기계의 끝부분이 천천히 당신의 _entranceKr 안으로 파고든다.</span>
 			<<if _entrance is "pussy">>
 				<<takeVirginity "sex machine" "vaginal">><<vaginaraped>>
 			<<else>>
 				<<takeVirginity "sex machine" "anal">><<anusraped>>
 			<</if>>
 		<<else>>
-			<span class="lewd">기계가 계속해서 당신의 _entrance 안에서 왕복한다.</span><<arousal 600 "genitals">><<garousal>>
+			<span class="lewd">기계가 계속해서 당신의 _entranceKr 안에서 왕복한다.</span><<arousal 600 "genitals">><<garousal>>
 		<</if>>
 		<br><br>
 	<</if>>

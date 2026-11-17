@@ -51,7 +51,7 @@
 
 <<widget "emptyClassroomMasturbationDescription">>
 	<<set $_caught to _args[0]>> /* true or false */
-	<<set $_stood to ($_caught ? "stand" : "stood")>>
+	<<set $_stood to ($_caught ? "서 있는" : "서 있던")>>
 	<<if _masturbation_semen gt 0>>
 		<<if _masturbation_semen gte 1000>>
 			당신의 정액이 책상들을 뒤덮고 큰 웅덩이를 이루었으며, 그 무수한 자국들은 모두 당신이 $_stood 곳을 향하고 있다. <<if !$_caught>>사람들은 이 모든 게 한 명한테서 나왔다는 걸 도저히 믿지 못할 것이다.<</if>>

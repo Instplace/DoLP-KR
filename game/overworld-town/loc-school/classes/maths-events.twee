@@ -2189,7 +2189,7 @@
 <<link [[다음|Maths Lesson]]>><<endevent>><</link>>
 
 :: Whitney Maths Wake
-<<set _cum to C.npc.Whitney.penis is "none" ? "juices" : "cum">>
+<<set _cum to C.npc.Whitney.penis is "none" ? "애액" : "정액">>
 
 <<if $phase is 0>>
 	당신은 여전히 축축한 손을 들어 올린다. 짓궂은 미소를 지으며, 당신은 손가락을 입에 넣는다. 휘트니의 <<print _cum>>【을를】 전부 핥아먹을 때까지, 시간을 들여 손가락을 하나씩 핥는다. 다 끝내고는 <<him>>에게 윙크를 보낸다.

@@ -5008,7 +5008,7 @@
 	<</if>>
 	가 쪽이다. <<if $avery_mansion>><<gdom>><<npcincr Avery dom 1>><</if>>
 <<else>>
-	당신은 에이버리에게 $avery_helicopter.destination에 가고 싶다고 말한다.
+	당신은 에이버리에게 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>>에 가고 싶다고 말한다.
 	<br><br>
 	<<He>>【은는】 고개를 끄덕이고 칸막이 창을 열어 조종사에게 목적지를 알린다. 이내 창이 다시 닫히고, 헬리콥터가 그쪽으로 방향을 트는 게 느껴진다.
 <</if>>
@@ -5203,7 +5203,7 @@
 :: Avery Helicopter 2
 <<effects>>
 
-헬리콥터가 $avery_helicopter.destination【으로로】 계속 항로를 잡아 나아가는 동안,
+헬리콥터가 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>>【으로로】 계속 항로를 잡아 나아가는 동안,
 <<if random(1,3) is 1>> /* Gossip */
 	<<if $rng gte 66 and $avery_mansion?.party_guests_seen?.length>> /* The following should be adjusted to have variations when the dinner parties post-tower finale are changed */
 		<<set $phase2 to 1>>
@@ -5770,7 +5770,7 @@
 	<<set _end to "bad">>
 <</if>>
 
-헬리콥터가 서서히 속도를 늦추다가 $avery_helicopter.destination 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 음, 하고 소리를 낸다. <<He>>【은는】
+헬리콥터가 서서히 속도를 늦추다가 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>> 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 음, 하고 소리를 낸다. <<He>>【은는】
 <<if $phase is 2 and $phase2 is 1>>
 	당신의 손아귀에서 몸을 빼내고
 <</if>>
@@ -5926,7 +5926,7 @@
 <br><br>
 
 <<if _end isnot "threat">>
-	헬리콥터가 속도를 늦추다가 $avery_helicopter.destination 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 툭 두드린다.
+	헬리콥터가 속도를 늦추다가 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>> 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 툭 두드린다.
 	<br><br>
 	<<if _end is "good">>
 		"영원할 수는 없겠죠."
@@ -6050,7 +6050,7 @@
 <</if>>
 <br><br>
 <<if _end isnot "threat">>
-	헬리콥터가 속도를 늦추다가 $avery_helicopter.destination 위에서 멈춘다. 에이버리는 콧소리를 내며 당신의 허벅지를 툭 두드린다.
+	헬리콥터가 속도를 늦추다가 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>> 위에서 멈춘다. 에이버리는 콧소리를 내며 당신의 허벅지를 툭 두드린다.
 	<br><br>
 	"이제 내릴 때가 된 것 같네요." <<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀어 연 다음 사다리를 걷어차 내린다.
 	<<if $averySeen.includes("helicopter_ride")>>
@@ -6144,7 +6144,7 @@
 <</if>>
 <br><br>
 <<set $averySeen.pushUnique("helicopter_ascended_threat")>>
-헬리콥터가 속도를 늦추다가 $avery_helicopter.destination 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 툭 두드린다.
+헬리콥터가 속도를 늦추다가 <<print ({"office":"사무실","cafe":"카페","photo studio":"사진 스튜디오","mansion":"저택","orphanage":"고아원"})[$avery_helicopter.destination] ?? $avery_helicopter.destination>> 위에서 멈춘다. 에이버리는<<if _end is "good">> 아쉬운 듯<</if>> 콧소리를 내며 당신의 허벅지를 툭 두드린다.
 <br><br>
 "이제 내릴 때가 된 것 같군." <<he>>【이가】 말한다. <<He>>【은는】 헬리콥터 문의 잠금을 풀어 연 다음 사다리를 걷어차 내린다.
 <<if $averySeen.includes("helicopter_ride")>>
