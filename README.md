@@ -2,18 +2,6 @@
 
 [Degrees of Lewdity Plus](https://gitgud.io/Frostberg/degrees-of-lewdity-plus)(DoL+)의 한국어 번역본입니다.
 
-원작 0.5.13.8 한국어판인 [DoL-KR](https://github.com/Instplace/DoL-KR)의 번역을 바탕으로, DoL+가 더하고 바꾼 내용을 옮겼습니다. 지금 기준으로 삼는 DoL+는 원작 0.5.13.8에 맞춘 개발 브랜치 `bec-dev`입니다.
-
-## 받기
-
-[릴리스](https://github.com/Instplace/DoLP-KR/releases)에서 받습니다.
-
-- **PC**: `…-Vanilla.zip`(기본 이미지) 또는 BEEESSS, Goose, Mikili, Aoki Utage, Rotting 등 DoL+와 같은 이미지 구성의 zip. 압축을 풀고 HTML 파일을 브라우저로 엽니다.
-- **안드로이드**: `….apk`. 공식 앱과 따로 설치되는 별개의 앱입니다.
-- `main`은 최신판, `dev`는 시험판입니다. `dev`에 푸시될 때마다 시험판(`dev-커밋`)이 게시됩니다.
-
-> 이 게임은 성인용입니다. 성적·폭력적인 내용을 담고 있으며 미성년자에게 적합하지 않습니다.
-
 ## 원작과 출처
 
 - **원작**: Vrelnir의 [Degrees of Lewdity](https://vrelnir.blogspot.com/) ([소스 저장소](https://gitgud.io/Vrelnir/degrees-of-lewdity))
@@ -29,8 +17,6 @@
 - **SA (동일조건변경허락)**: 이 번역본을 고치거나 바탕으로 삼은 2차 저작물에도 같은 라이선스를 적용해야 합니다.
 
 자세한 내용은 [`LICENSE`](LICENSE) 파일과 [라이선스 한글 요약](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko)을 참고하세요.
-
-번역 기준(문체, 용어집, 인물별 말투)은 [`docs/kr-translation`](docs/kr-translation)에 있습니다.
 
 아래로는 DoL+의 `README.md`가 이어집니다.
 
