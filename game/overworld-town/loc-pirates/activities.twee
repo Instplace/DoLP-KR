@@ -694,7 +694,7 @@
 		<br><br>
 		<<antiqueicon "copper-ring">><<link [[가져간다|Pirate Bilge]]>><<set $antiquemoney += 5>><<museumAntiqueStatus "antiquecopperring" "found">><</link>>
 		<br>
-		<<antiqueicon "copper_ring">><<link [[Wear it|Pirate Bilge]]>><<ringswear 9>><</link>>
+		<<antiqueicon "copper_ring">><<link [[착용한다|Pirate Bilge]]>><<ringswear 9>><</link>>
 		<br>
 		<<getouticon>><<link [[나간다|Pirate Bilge]]>><</link>>
 		<br>

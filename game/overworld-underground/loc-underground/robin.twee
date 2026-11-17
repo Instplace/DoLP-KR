@@ -448,7 +448,7 @@
 				<<if $speech_attitude is "meek">>
 					<<if $robinromance is 1>>"오히려 내가 더 고마워해야지." 당신이 말한다.<<else>>"미-미안해." 당신은 떨리는 목소리로 말한다. "도와줄 수 있는 방법이 그것밖에 안 떠올랐어. 그냥 내가 곁에 있다는 걸 알려주고 싶어서..."<</if>>
 				<<elseif $speech_attitude is "bratty">>
-					<<if $robinromance is 1>>"I should've done more," you say, gritting your teeth. "I hate them." <<else>>"Sorry," you grit your teeth, "I wanted to take your mind off of it. You're my friend, Robin, I..." your fists clench, "I wish I could've helped more. I hate them."<</if>>
+					<<if $robinromance is 1>>"내가 더 뭔가를 해줬어야 했는데." 당신은 이를 악물며 말한다. "그놈들 다 혐오스러워." <<else>>"미안." 당신은 이를 악문다. "딴생각이라도 하게 해주고 싶었어. 넌 내 친구잖아, 로빈, 난..." 주먹을 꽉 쥔다. "더 도와줄 수 있었으면 좋았을 텐데. 그놈들 다 혐오스러워."<</if>>
 				<<else>>
 					<<if $robinromance is 1>>"그 정도는 당연히 해줄 수 있는걸." 당신이 말한다.<<else>>"그냥 다른 쪽에 집중하게 해주고 싶었어." 목이 메어오며 당신이 말한다. "도움이 될 줄 알았거든."<</if>>
 				<</if>>

@@ -198,7 +198,7 @@
 	<<if $moor lt 100>>
 
 		<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $birdFly gte 1 and !$plucked>>
-			<<glideicon>><<link [[Go deeper into the moor: Flight (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
+			<<glideicon>><<link [[황야 더 깊숙이 들어간다: 활공 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor += 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
 			<br>
 		<</if>>
 		<<if $worn.feet.type.includes("heels") and !$possessed>>
@@ -214,7 +214,7 @@
 			<<set _flyTimeSearch to Math.max(_flightTimeSearch, 4)>>
 			<<set _flyHours to Math.floor(_flyTimeSearch / 60)>>
 			<<set _flyMinutes to _flyTimeSearch % 60>>
-			<<glideicon>><<link [[Search nearby: Flight (<<print getTimeString(_flyHours, _flyMinutes)>>)|Moor]]>>
+			<<glideicon>><<link [[근처를 수색한다: 활공 (<<print getTimeString(_flyHours, _flyMinutes)>>)|Moor]]>>
 				<<set $fatigueMod to _fatigueMod>>
 				<<set $flightTime to _flyTimeSearch>>
 				<<bird_pass _flyTimeSearch>>
@@ -228,7 +228,7 @@
 	<<if $moor gt 0>>
 
 		<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $birdFly gte 1 and !$plucked>>
-			<<glideicon>><<link [[Go towards the coast: Flight (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
+			<<glideicon>><<link [[해안 쪽으로 향한다: 활공 (<<print getTimeString(_hoursPassed, _minutesPassed)>>)|Moor]]>><<set $fatigueMod to _fatigueMod>><<set $flightTime to _flightTime>><<bird_pass _flightTime>><<set $moor -= 5>><<set $forestmod to 1>><<set $moormove to "fly">><</link>><<flight_text>><<gtiredness>>
 			<br>
 		<</if>>
 		<<if $worn.feet.type.includes("heels") and !$possessed>>

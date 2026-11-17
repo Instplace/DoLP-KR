@@ -63,10 +63,10 @@
 				<<set _mouthaction["용서한다"] to "forgive">>
 			<</if>>
 			<<if (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") and $fallenangelretribution isnot 1>>
-				<<set _mouthaction["Retribution"] to "retribution">>
+				<<set _mouthaction["응징한다"] to "retribution">>
 			<</if>>
 			<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") and $demonseduce isnot 1>>
-				<<set _mouthaction["Seduce"] to "seduce">>
+				<<set _mouthaction["유혹한다"] to "seduce">>
 			<</if>>
 			<<if (($fallenangel gte 4 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") and $angelforgive isnot 1 and $enemytype is "man">>
 				<<set _mouthaction["깎아내린다"] to "disparage">>
@@ -86,8 +86,8 @@
 			<<set _mouthaction["신음한다"] to "moan">>
 		<</if>>
 		<<if $orgasmCum gte 0>>
-			<<set _mouthaction["Stifle moans"] to "stifleorgasm">>
-			<<set _mouthaction["Let it out"] to "letoutorgasm">>
+			<<set _mouthaction["참는다"] to "stifleorgasm">>
+			<<set _mouthaction["소리를 낸다"] to "letoutorgasm">>
 		<</if>>
 		<<if !$npcSub and $settings.asphyxiaLevel gte 1 and $consensual is 1 and $enemytype is "man" and ($choketrait or ($chokeorgasm gte 1) or ($awarelevel gte 2)) and !$gloryhole>>
 			<<set _askActions["목을 조르라고 한다"] to "askchoke">>
@@ -96,7 +96,7 @@
 			<<set _askActions["더 거칠게 해달라고 한다"] to "askrough">>
 		<</if>>
 		<<if $consensual is 1 and $enemytype is "man" and (($player.penisExist and $penisuse is 0) or ($player.vaginaExist and $vaginause is 0)) and $NPCList[$mouthtarget].location.head isnot "genitals" and $NPCList[$mouthtarget].location.genitals isnot "genitals" and !$gloryhole>>
-			<<set _askActions["to use "+$NPCList[$mouthtarget].pronouns.his+" mouth"  + _diffText] to "askoral">>
+			<<set _askActions["상대의 입을 쓰게 해달라고 한다" + _diffText] to "askoral">>
 		<</if>>
 		<<if $enemytype is "man" and !$NPCList[$mouthtarget].condomAsk and $settings.condomLevel gte 1 and !$abomination and $NPCList[$mouthtarget].fullDescription isnot "Ivory Wraith">>
 			<<if ($NPCList[$mouthtarget].penis is "none" or $NPCList[$mouthtarget].penisdesc.includes("strap-on")) and (!$player.penisExist or $crossdressing gte 1)>>

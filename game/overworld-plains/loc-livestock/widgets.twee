@@ -463,9 +463,9 @@
 			당신은 아주 잠시 위를 올려다본다. 당신을 노골적으로 쳐다보는 <<generate1>><<person1>><<person>>【을를】 발견하지만,
 			당신은 <<him>>【을를】 무시하고 하던 일에 집중한다.
 			<<if $livestock.winter.active>>
-				munching on <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>tasty <</if>>pieces of hay.
+				<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>맛있는 <</if>>건초 조각을 계속 우물거린다.
 			<<else>>
-				your search for <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>tasty <</if>>tufts of grass.
+				<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>맛있는 <</if>>풀 다발을 계속 찾는다.
 			<</if>>
 		<</if>>
 		<br><br>

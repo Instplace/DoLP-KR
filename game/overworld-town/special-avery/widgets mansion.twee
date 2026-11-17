@@ -1371,20 +1371,20 @@
 		<<endevent>>
 		<<avery_mansion_end_links>>
 	<<elseif C.npc.Avery.love gte 95 and C.npc.Avery.dom gte 25 and C.npc.Avery.rage lte 0 and random(1, 75) is 75 and Time.hour lt 22>>
-		"You've been such a good <<girl>> lately.," <<he>> smiles. "A little shopping trip is in order to award such a good behaviour, don't you think?"
+		"요즘 정말 착한 <<girl>>【이었였】어." <<he>>【이가】 미소 짓는다. "그렇게 착하게 군 상으로 쇼핑 나들이 정도는 해야겠지, 안 그래?"
 		<br><br>
 
 		<<if $exposed lte 0>>
-			<<link [[Go shopping with Avery (0:30)|Mansion Return Shopping]]>><<pass 5>><</link>>
+			<<link [[에이버리와 함께 쇼핑하러 간다 (0:30)|Mansion Return Shopping]]>><<pass 5>><</link>>
 		<<elseif exposed gte 1>>
 			<<if ($exposed gte 2 and $exhibitionism gte 75) or ($exposed gte 1 and $exhibitionism gte 35)>>
-				<<link [[Say you're too shy (lie)|Mansion Return Shopping Shy]]>><</link>>
+				<<link [[부끄럽다고 말한다 (거짓)|Mansion Return Shopping Shy]]>><</link>>
 			<<else>>
-				<<link [[Say you're too shy (truth)|Mansion Return Shopping Shy]]>><</link>>
+				<<link [[부끄럽다고 말한다 (진실)|Mansion Return Shopping Shy]]>><</link>>
 			<</if>>
 		<</if>>
 		<br>
-		<<link [[Refuse|Mansion Return Shopping Refuse]]>><</link>>
+		<<link [[거절한다|Mansion Return Shopping Refuse]]>><</link>>
 	<<else>>
 		<<if $avery_mansion.jobs.includes("dungeon") and random(1, 7) is 7 and Time.weekDay isnot 1>>
 			"따라와. 훈육을 좀 해야겠군."
@@ -3356,15 +3356,15 @@
 						<br><br>
 						<<housekeeping_exam_select>>
 						<<if $chosen_recipe isnot "none">>
-							<span class="gold">You can teach yourself a recipe from your cookbook here.</span> You flip open the book and land on a recipe for <<print $chosen_recipe.replace(/_/g," ")>>.<br><br>
-							<<link [["Learn something new (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
+							<span class="gold">여기서 요리책에 실린 레시피를 하나 독학할 수 있다.</span> 당신이 책을 펼치자 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 나온다.<br><br>
+							<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
 						<<else>>
-							There's no more recipes you can learn.
+							더 이상 배울 수 있는 레시피가 없다.
 						<</if>>
 						<br>
 					<</if>>
 				<</if>>
-				<<link [[Steal|Avery Kitchen Steal]]>><<handheldon>><</link>>
+				<<link [[훔친다|Avery Kitchen Steal]]>><<handheldon>><</link>>
 				<br><br>
 			<</if>>
 
@@ -4684,96 +4684,96 @@
 	<<if $averyragerevealed is 1 and C.npc.Avery.rage gte random(20, 100)>>
 		<<if !_args[1]>>
 			<<if random(1, 2) is 2>>
-				<<link [[Say you were planning to make <<recipe_name _valid "article">>|Mansion Steal Cooking Valid Rage]]>><<set $phase2 to _valid>><</link>><br>
-				<<link [[Say you were planning to make <<recipe_name _unvalid "article">>|Mansion Steal Cooking Rage]]>><<set $phase2 to _unvalid>><</link>><br>
+				<<link [[<<recipe_name _valid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Valid Rage]]>><<set $phase2 to _valid>><</link>><br>
+				<<link [[<<recipe_name _unvalid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Rage]]>><<set $phase2 to _unvalid>><</link>><br>
 			<<else>>
-				<<link [[Say you were planning to make <<recipe_name _unvalid "article">>|Mansion Steal Cooking Rage]]>><<set $phase2 to _unvalid>><</link>><br>
-				<<link [[Say you were planning to make <<recipe_name _valid "article">>|Mansion Steal Cooking Valid Rage]]>><<set $phase2 to _valid>><</link>><br>
+				<<link [[<<recipe_name _unvalid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Rage]]>><<set $phase2 to _unvalid>><</link>><br>
+				<<link [[<<recipe_name _valid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Valid Rage]]>><<set $phase2 to _valid>><</link>><br>
 			<</if>>
-			<<link [[Say you wanted to get a snack|Mansion Steal Snack Rage]]>><</link>><br>
+			<<link [[간식을 가지러 왔다고 말한다|Mansion Steal Snack Rage]]>><</link>><br>
 		<</if>>
-		<<link [[Say you wanted to get a hidden food stash|Mansion Steal Stash Rage]]>><</link>><br>
+		<<link [[숨겨 둔 음식을 가지러 왔다고 말한다|Mansion Steal Stash Rage]]>><</link>><br>
 		<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") and $phase is "chicken_egg">>
-			<<link [[Say you wanted to bury the egg|Mansion Steal Bury Egg Rage]]>><</link>><br>
+			<<link [[달걀을 묻으려 했다고 말한다|Mansion Steal Bury Egg Rage]]>><</link>><br>
 		<</if>>
 		<<if $avery_mansion.kitchen_stock.requested.includes($phase) && $avery_mansion.kitchen_stock.requested.length gte 3>>
-			<<link [[Say you wanted to save it for another time|Mansion Steal Save Rage]]>><</link>><br>
+			<<link [[나중을 위해 챙겨 두려 했다고 말한다|Mansion Steal Save Rage]]>><</link>><br>
 		<<else>>
-			<<link [[Say you wanted to save it for another time|Mansion Steal Save Rage Fail]]>><</link>><br>
+			<<link [[나중을 위해 챙겨 두려 했다고 말한다|Mansion Steal Save Rage Fail]]>><</link>><br>
 		<</if>>
 		<<if $phase is "pork" or $phase is "beef">>
 			<<if ((($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox"))>>
-				<<link [[Say you wanted to eat <<recipe_name $phase "article">>|Mansion Steal Raw]]>><</link>><br>
+				<<link [[<<recipe_name $phase "article">>【을를】 먹고 싶었다고 말한다|Mansion Steal Raw]]>><</link>><br>
 			<</if>>
 			<<if Object.values($children).find(child => child.mother === "pc" && child.location === "wolf_cave")>>
-				<<link [[Say you wanted to feed it to a child|Mansion Steal Child Rage]]>><</link>><br>
+				<<link [[아이에게 먹이려 했다고 말한다|Mansion Steal Child Rage]]>><</link>><br>
 			<</if>>
 			<<if $syndromewolves gte 1>>
-				<<link [[Say you wanted to give it to Black Wolf|Mansion Steal Friend Rage]]>><<set $phase2 to "wolf">><</link>><br>
+				<<link [[검은 늑대에게 주려 했다고 말한다|Mansion Steal Friend Rage]]>><<set $phase2 to "wolf">><</link>><br>
 			<</if>>
 			<<if $syndromebird gte 1>>
-				<<link [[Say you wanted to give it to the Great Hawk|Mansion Steal Friend Rage]]>><<set $phase2 to "bird">><</link>><br>
+				<<link [[거대 매에게 주려 했다고 말한다|Mansion Steal Friend Rage]]>><<set $phase2 to "bird">><</link>><br>
 			<</if>>
 		<</if>>
 		<<if (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear") and $phase is "honeycomb">>
-			<<link [[Say you like honey|Mansion Steal Honey Rage]]>><</link>><br>
+			<<link [[꿀을 좋아한다고 말한다|Mansion Steal Honey Rage]]>><</link>><br>
 		<</if>>
-		<<link [[Say you're making a surprise|Mansion Steal Surprise Rage]]>><</link>><br>
+		<<link [[깜짝 선물을 준비 중이라고 말한다|Mansion Steal Surprise Rage]]>><</link>><br>
 		
-		<<link [[Make something up|Mansion Steal Dumb Rage]]>><<set $phase2 to _valid>><</link>><br>
+		<<link [[아무 말이나 지어낸다|Mansion Steal Dumb Rage]]>><<set $phase2 to _valid>><</link>><br>
 		
-		<<link [[Say you wanted to give it to the orphans|Mansion Steal Orphans Rage]]>><</link>><br>
+		<<link [[고아원 아이들에게 주려 했다고 말한다|Mansion Steal Orphans Rage]]>><</link>><br>
 		<<if ($fox gte 2 or ($transformationParts.fox.ear isnot "hidden" and $transformationParts.fox.ear isnot "disabled")) and $phase is "chicken_egg">>
-			<<link [[Defend stealing as your natural need|Mansion Steal Fox Rage]]>><</link>><br>
+			<<link [[훔치는 건 타고난 본능이라고 항변한다|Mansion Steal Fox Rage]]>><</link>><br>
 		<<else>>
-			<<link [[Admit to stealing|Mansion Steal Admit Rage]]>><</link>><br>
+			<<link [[훔치려 했다고 인정한다|Mansion Steal Admit Rage]]>><</link>><br>
 		<</if>>
 	<<else>>
 		<<if !_args[1]>>
 			<<if random(1, 2) is 2>>
-				<<link [[Say you were planning to make <<recipe_name _valid "article">>|Mansion Steal Cooking Valid Calm]]>><<set $phase2 to _valid>><</link>><br>
-				<<link [[Say you were planning to make <<recipe_name _unvalid "article">>|Mansion Steal Cooking Calm]]>><<set $phase2 to _unvalid>><</link>><br>
+				<<link [[<<recipe_name _valid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Valid Calm]]>><<set $phase2 to _valid>><</link>><br>
+				<<link [[<<recipe_name _unvalid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Calm]]>><<set $phase2 to _unvalid>><</link>><br>
 			<<else>>
-				<<link [[Say you were planning to make <<recipe_name _unvalid "article">>|Mansion Steal Cooking Calm]]>><<set $phase2 to _unvalid>><</link>><br>
-				<<link [[Say you were planning to make <<recipe_name _valid "article">>|Mansion Steal Cooking Valid Calm]]>><<set $phase2 to _valid>><</link>><br>
+				<<link [[<<recipe_name _unvalid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Calm]]>><<set $phase2 to _unvalid>><</link>><br>
+				<<link [[<<recipe_name _valid "article">>【을를】 만들려던 참이었다고 말한다|Mansion Steal Cooking Valid Calm]]>><<set $phase2 to _valid>><</link>><br>
 			<</if>>
-			<<link [[Say you wanted to get a snack|Mansion Steal Snack Calm]]>><</link>><br>
+			<<link [[간식을 가지러 왔다고 말한다|Mansion Steal Snack Calm]]>><</link>><br>
 		<</if>>
-		<<link [[Say you wanted to get a hidden food stash|Mansion Steal Stash Calm]]>><</link>><br>
+		<<link [[숨겨 둔 음식을 가지러 왔다고 말한다|Mansion Steal Stash Calm]]>><</link>><br>
 		<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") and $phase is "chicken_egg">>
-			<<link [[Say you wanted to bury the egg|Mansion Steal Bury Egg]]>><</link>><br>
+			<<link [[달걀을 묻으려 했다고 말한다|Mansion Steal Bury Egg]]>><</link>><br>
 		<</if>>
 		<<if $avery_mansion.kitchen_stock.requested.includes($phase) && $avery_mansion.kitchen_stock.requested.length gte 3>>
-			<<link [[Say you wanted to save it for another time|Mansion Steal Save]]>><</link>><br>
+			<<link [[나중을 위해 챙겨 두려 했다고 말한다|Mansion Steal Save]]>><</link>><br>
 		<<else>>
-			<<link [[Say you wanted to save it for another time|Mansion Steal Save Fail]]>><</link>><br>
+			<<link [[나중을 위해 챙겨 두려 했다고 말한다|Mansion Steal Save Fail]]>><</link>><br>
 		<</if>>
 		<<if $phase is "pork" or $phase is "beef">>
 			<<if ((($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox"))>>
-				<<link [[Say you wanted to eat <<recipe_name $phase "article">>|Mansion Steal Raw]]>><</link>><br>
+				<<link [[<<recipe_name $phase "article">>【을를】 먹고 싶었다고 말한다|Mansion Steal Raw]]>><</link>><br>
 			<</if>>
 			<<if Object.values($children).find(child => child.mother === "pc" && child.location === "wolf_cave")>>
-				<<link [[Say you wanted to feed it to a child|Mansion Steal Child]]>><</link>><br>
+				<<link [[아이에게 먹이려 했다고 말한다|Mansion Steal Child]]>><</link>><br>
 			<</if>>
 			<<if $syndromewolves gte 1>>
-				<<link [[Say you wanted to give it to Black Wolf|Mansion Steal Friend]]>><<set $phase2 to "wolf">><</link>><br>
+				<<link [[검은 늑대에게 주려 했다고 말한다|Mansion Steal Friend]]>><<set $phase2 to "wolf">><</link>><br>
 			<</if>>
 			<<if $syndromebird gte 1>>
-				<<link [[Say you wanted to give it to the Great Hawk|Mansion Steal Friend]]>><<set $phase2 to "bird">><</link>><br>
+				<<link [[거대 매에게 주려 했다고 말한다|Mansion Steal Friend]]>><<set $phase2 to "bird">><</link>><br>
 			<</if>>
 		<</if>>
 		<<if (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear") and $phase is "honeycomb">>
-			<<link [[Say you like honey|Mansion Steal Honey]]>><</link>><br>
+			<<link [[꿀을 좋아한다고 말한다|Mansion Steal Honey]]>><</link>><br>
 		<</if>>
-		<<link [[Say you're making a surprise|Mansion Steal Surprise]]>><</link>><br>
+		<<link [[깜짝 선물을 준비 중이라고 말한다|Mansion Steal Surprise]]>><</link>><br>
 		
-		<<link [[Make something up|Mansion Steal Dumb]]>><<set $phase2 to _valid>><</link>><br>
+		<<link [[아무 말이나 지어낸다|Mansion Steal Dumb]]>><<set $phase2 to _valid>><</link>><br>
 		
-		<<link [[Say you wanted to give it to the orphans|Mansion Steal Orphans]]>><</link>><br>
+		<<link [[고아원 아이들에게 주려 했다고 말한다|Mansion Steal Orphans]]>><</link>><br>
 		<<if ($fox gte 2  or ($transformationParts.fox.ear isnot "hidden" and $transformationParts.fox.ear isnot "disabled")) and $phase is "chicken_egg">>
-			<<link [[Defend stealing as your natural need|Mansion Steal Fox]]>><</link>><br>
+			<<link [[훔치는 건 타고난 본능이라고 항변한다|Mansion Steal Fox]]>><</link>><br>
 		<<else>>
-			<<link [[Admit to stealing|Mansion Steal Admit]]>><</link>><br>
+			<<link [[훔치려 했다고 인정한다|Mansion Steal Admit]]>><</link>><br>
 		<</if>>
 	<</if>>
 <</widget>>

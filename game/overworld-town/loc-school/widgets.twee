@@ -227,13 +227,13 @@
 <<widget "classgrades">>
 	<<if $schoolstate is "morning" or ($schoolstate is "first" and Time.minute lte 58)>>
 		<<if $sciencetrait gte 8>>
-			Your current science grade is <span class="lustful">SSS</span>. Why are you here? Just to flex?
+			현재 과학 성적은 <span class="lustful">SSS</span>이다. 여긴 왜 온 거지? 그냥 자랑하려고?
 		<<elseif $sciencetrait gte 7>>
-			Your current science grade is <span class="gold">SS</span>. You'd probably rival a professor.
+			현재 과학 성적은 <span class="gold">SS</span>이다. 교수와도 맞먹을 것이다.
 		<<elseif $sciencetrait gte 6>>
-			Your current science grade is <span class="yellow">S+</span>. You're not sure if the teacher knows more than you.
+			현재 과학 성적은 <span class="yellow">S+</span>이다. 선생님이 당신보다 더 많이 아는지 확신이 서지 않는다.
 		<<elseif $sciencetrait gte 5>>
-			Your current science grade is <span class="yellow">S</span>. You'd probably qualify as a teaching assistant.
+			현재 과학 성적은 <span class="yellow">S</span>이다. 조교 자격은 충분할 것이다.
 		<<elseif $sciencetrait gte 4>>
 			현재 과학 성적은 <span class="green">A+</span>이다. 이 수업에서 더 이상 배울 것이 없다.
 		<<elseif $sciencetrait gte 3>>
@@ -249,13 +249,13 @@
 		<</if>>
 	<<elseif $schoolstate is "first" or ($schoolstate is "second" and Time.minute lte 58)>>
 		<<if $mathstrait gte 8>>
-			Your current maths grade is <span class="lustful">SSS</span>. Why are you here? Just to flex?
+			현재 수학 성적은 <span class="lustful">SSS</span>이다. 여긴 왜 온 거지? 그냥 자랑하려고?
 		<<elseif $mathstrait gte 7>>
-			Your current maths grade is <span class="gold">SS</span>. You'd probably rival a professor.
+			현재 수학 성적은 <span class="gold">SS</span>이다. 교수와도 맞먹을 것이다.
 		<<elseif $mathstrait gte 6>>
-			Your current maths grade is <span class="yellow">S+</span>. You're not sure if the teacher knows more than you.
+			현재 수학 성적은 <span class="yellow">S+</span>이다. 선생님이 당신보다 더 많이 아는지 확신이 서지 않는다.
 		<<elseif $mathstrait gte 5>>
-			Your current maths grade is <span class="yellow">S</span>. You'd probably qualify as a teaching assistant.
+			현재 수학 성적은 <span class="yellow">S</span>이다. 조교 자격은 충분할 것이다.
 		<<elseif $mathstrait gte 4>>
 			현재 수학 성적은 <span class="green">A+</span>이다. 이 수업에서 더 이상 배울 것이 없다.
 		<<elseif $mathstrait gte 3>>
@@ -271,13 +271,13 @@
 		<</if>>
 	<<elseif $schoolstate is "second" or ($schoolstate is "third" and Time.minute lte 58)>>
 		<<if $englishtrait gte 8>>
-			Your current English grade is <span class="lustful">SSS</span>. Why are you here? Just to flex?
+			현재 영어 성적은 <span class="lustful">SSS</span>이다. 여긴 왜 온 거지? 그냥 자랑하려고?
 		<<elseif $englishtrait gte 7>>
-			Your current English grade is <span class="gold">SS</span>. You'd probably rival a professor.
+			현재 영어 성적은 <span class="gold">SS</span>이다. 교수와도 맞먹을 것이다.
 		<<elseif $englishtrait gte 6>>
-			Your current English grade is <span class="yellow">S+</span>. You're not sure if the teacher knows more than you.
+			현재 영어 성적은 <span class="yellow">S+</span>이다. 선생님이 당신보다 더 많이 아는지 확신이 서지 않는다.
 		<<elseif $englishtrait gte 5>>
-			Your current English grade is <span class="yellow">S</span>. You'd probably qualify as a teaching assistant.
+			현재 영어 성적은 <span class="yellow">S</span>이다. 조교 자격은 충분할 것이다.
 		<<elseif $englishtrait gte 4>>
 			현재 영어 성적은 <span class="green">A+</span>이다. 이 수업에서 더 이상 배울 것이 없다.
 		<<elseif $englishtrait gte 3>>
@@ -293,13 +293,13 @@
 		<</if>>
 	<<elseif $schoolstate is "lunch" or ($schoolstate is "fourth" and Time.minute lte 58)>>
 		<<if $historytrait gte 8>>
-			Your current history grade is <span class="lustful">SSS</span>. Why are you here? Just to flex?
+			현재 역사 성적은 <span class="lustful">SSS</span>이다. 여긴 왜 온 거지? 그냥 자랑하려고?
 		<<elseif $historytrait gte 7>>
-			Your current history grade is <span class="gold">SS</span>. You'd probably rival a professor.
+			현재 역사 성적은 <span class="gold">SS</span>이다. 교수와도 맞먹을 것이다.
 		<<elseif $historytrait gte 6>>
-			Your current history grade is <span class="yellow">S+</span>. You're not sure if the teacher knows more than you.
+			현재 역사 성적은 <span class="yellow">S+</span>이다. 선생님이 당신보다 더 많이 아는지 확신이 서지 않는다.
 		<<elseif $historytrait gte 5>>
-			Your current history grade is <span class="yellow">S</span>. You'd probably qualify as a teaching assistant.
+			현재 역사 성적은 <span class="yellow">S</span>이다. 조교 자격은 충분할 것이다.
 		<<elseif $historytrait gte 4>>
 			현재 역사 성적은 <span class="green">A+</span>이다. 이 수업에서 더 이상 배울 것이 없다.
 		<<elseif $historytrait gte 3>>
@@ -747,7 +747,7 @@
 		시리스가 여우과 동물의 습성과 번식에 대한 수업을 시작한다.
 
 		<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>
-			You do your best to pay attention to the lesson, but your eyes continuously flicker to your classmates' stationry, feeling an intense urge to take their belongings.
+			당신은 최대한 수업에 집중하려 애쓰지만, 자꾸만 시선이 동급생들의 학용품으로 향하고 그것들을 훔치고 싶다는 강렬한 충동을 느낀다.
 		<<elseif hasSexStat("deviancy", 3)>>
 			당신은 이 강의가 제법 흥미롭다고 느끼기 시작한다. <<arousal 200>><<garousal>>
 		<<else>>
@@ -1628,7 +1628,7 @@
 				<<link [[옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 1>><</link>>
 				<br>
 				/* <<if displayDefiantOption(500)>> */
-					<<link [[Wipe your hand on Whitney's clothes|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link 500>><<ldom>>
+					<<link [[휘트니의 옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link 500>><<ldom>>
 				/* <</if>> */
 			<</if>>
 		<</addinlineevent>>
@@ -3827,58 +3827,58 @@
 	<<else>>
 		대여 가능한 여러 교과서가 구비되어 있다.
 		<<if $studyBooks.rented.count gte 1>>
-			Your current rental is <<if $book_rent_timer gt 0>>due back in <span class="gold">$book_rent_timer <<pluralise $book_rent_timer "day">>.</span><<elseif $book_rent_timer is 0>><span class="blue">due today.</span><<else>><span class="red">overdue.</span><</if>>
+			현재 대여한 책은 <<if $book_rent_timer gt 0>><span class="gold"><<print $book_rent_timer>>일 후 반납해야 한다.<!-- $book_rent_timer --></span><<elseif $book_rent_timer is 0>><span class="blue">오늘 반납해야 한다.</span><<else>><span class="red">반납 기한이 지났다.</span><</if>>
 		<<else>>
 			반납할 대여 도서가 없다.
 		<</if>>
 	<</if>>
 	<br>
 	<<if $studyBooks.rented.science is 1>>
-		<<schoolicon "library">><<link [[Return your rented science textbook|Book Rental]]>><<set $phase2 to "return">><<set $phase to 1>><</link>>
+		<<schoolicon "library">><<link [[대여한 과학 교과서를 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.rented.maths is 1>>
-		<<schoolicon "library">><<link [[Return your rented maths textbook|Book Rental]]>><<set $phase2 to "return">><<set $phase to 2>><</link>>
+		<<schoolicon "library">><<link [[대여한 수학 교과서를 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.rented.english is 1>>
-		<<schoolicon "library">><<link [[Return your rented English textbook|Book Rental]]>><<set $phase2 to "return">><<set $phase to 3>><</link>>
+		<<schoolicon "library">><<link [[대여한 영어 교과서를 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.rented.history is 1>>
-		<<schoolicon "library">><<link [[Return your rented history textbook|Book Rental]]>><<set $phase2 to "return">><<set $phase to 4>><</link>>
+		<<schoolicon "library">><<link [[대여한 역사 교과서를 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.rented.RaulAndJanet is 1>>
-		<<schoolicon "library">><<link [[Return your rented copy of "Raul and Janet"|Book Rental]]>><<set $phase2 to "return">><<set $phase to 5>><</link>>
+		<<schoolicon "library">><<link [[대여한 "라울과 자넷" 책을 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.rented.pinch is 1>>
-		<<schoolicon "library">><<link [[Return the olive-coloured book|Book Rental]]>><<set $phase2 to "return">><<set $phase to 6>><</link>>
+		<<schoolicon "library">><<link [[올리브색 책을 반납한다|Book Rental]]>><<set $phase2 to "return">><<set $phase to 6>><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.science is 1>>
-		<<schoolicon "library">><<link [[Return your stolen science textbook|Book Rental Return Stolen]]>><<set $returnBook to "science">><</link>>
+		<<schoolicon "library">><<link [[훔친 과학 교과서를 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "science">><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.maths is 1>>
-		<<schoolicon "library">><<link [[Return your stolen maths textbook|Book Rental Return Stolen]]>><<set $returnBook to "maths">><</link>>
+		<<schoolicon "library">><<link [[훔친 수학 교과서를 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "maths">><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.english is 1>>
-		<<schoolicon "library">><<link [[Return your stolen english textbook|Book Rental Return Stolen]]>><<set $returnBook to "english">><</link>>
+		<<schoolicon "library">><<link [[훔친 영어 교과서를 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "english">><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.history is 1>>
-		<<schoolicon "library">><<link [[Return your stolen history textbook|Book Rental Return Stolen]]>><<set $returnBook to "history">><</link>>
+		<<schoolicon "library">><<link [[훔친 역사 교과서를 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "history">><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.RaulAndJanet is 1>>
-		<<schoolicon "library">><<link [[Return your stolen copy of "Raul and Janet"|Book Rental Return Stolen]]>><<set $returnBook to "RaulAndJanet">><</link>>
+		<<schoolicon "library">><<link [[훔친 "라울과 자넷" 책을 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "RaulAndJanet">><</link>>
 		<br>
 	<</if>>
 	<<if $studyBooks.stolen.pinch is 1>>
-		<<schoolicon "library">><<link [[Return the olive-coloured book|Book Rental Return Stolen]]>><<set $returnBook to "pinch">><</link>>
+		<<schoolicon "library">><<link [[올리브색 책을 반납한다|Book Rental Return Stolen]]>><<set $returnBook to "pinch">><</link>>
 		<br>
 	<</if>>
 	<<sydneySchedule>>
@@ -3886,37 +3886,37 @@
 		<<set _rentPrice to Math.round(2000 * (1 + ($studyBooks.rented.count * $studyBooks.rented.count)))>>
 		<<if $money gte _rentPrice and $bookOverdue is undefined>>
 			<<if $studyBooks.rented.science is 0 and $studyBooks.stolen.science is 0>>
-				<<scienceicon>><<link [["Rent a science textbook (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "science">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "science">><<set $phase to 1>><<set $studyBooks.rented.science to 1>><</link>><<note "+ Passive Science" "green">>
+				<<scienceicon>><<link [["과학 교과서를 대여한다 (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "science">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "science">><<set $phase to 1>><<set $studyBooks.rented.science to 1>><</link>><<note "+ 과학 학습 효율" "green">>
 				<br>
 			<</if>>
 			<<if $studyBooks.rented.maths is 0 and $studyBooks.stolen.maths is 0>>
-				<<mathicon>><<link [["Rent a maths textbook (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "maths">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "math">><<set $phase to 2>><<set $studyBooks.rented.maths to 1>><</link>><<note "+ Passive Maths" "green">>
+				<<mathicon>><<link [["수학 교과서를 대여한다 (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "maths">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "math">><<set $phase to 2>><<set $studyBooks.rented.maths to 1>><</link>><<note "+ 수학 학습 효율" "green">>
 				<br>
 			<</if>>
 			<<if $studyBooks.rented.english is 0 and $studyBooks.stolen.english is 0>>
-				<<englishicon>><<link [["Rent an English textbook (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "english">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "english">><<set $phase to 3>><<set $studyBooks.rented.english to 1>><</link>><<note "+ Passive English" "green">>
+				<<englishicon>><<link [["영어 교과서를 대여한다 (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "english">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $studyBooks.rented.last to "english">><<set $phase to 3>><<set $studyBooks.rented.english to 1>><</link>><<note "+ 영어 학습 효율" "green">>
 				<br>
 			<</if>>
 			<<if $studyBooks.rented.history is 0 and $studyBooks.stolen.history is 0>>
-				<<historyicon>><<link [["Rent a history textbook (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "history">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $phase to 4>><<set $studyBooks.rented.last to "history">><<set $studyBooks.rented.history to 1>><</link>><<note "+ Passive History" "green">>
+				<<historyicon>><<link [["역사 교과서를 대여한다 (£" + _rentPrice / 100 + ")"|Book Rental]]>><<handheldon>><<wearProp "history">><<money `-_rentPrice` "libraryBooks">><<set $studyBooks.rented.count += 1>><<set $phase2 to "rent">><<set $phase to 4>><<set $studyBooks.rented.last to "history">><<set $studyBooks.rented.history to 1>><</link>><<note "+ 역사 학습 효율" "green">>
 				<br>
 			<</if>>
 			<<if currentSkillValue('english') gte 300 and $studyBooks.rented.RaulAndJanet is 0 and $studyBooks.stolen.RaulAndJanet is 0>>
-				<<scarleticon>><<link [['Rent "Raul and Janet" (£' + _rentPrice / 100 + ')'|Book Rental]]>><<set $phase to 5>><<set $studyBooks.rented.count += 1>><<handheldon>><<wearProp "scarlet">><<money `-_rentPrice` "libraryBooks">><<set $phase2 to "rent">><<set $studyBooks.rented.RaulAndJanet to 1>><</link>>
+				<<scarleticon>><<link [['"라울과 자넷"을 대여한다 (£' + _rentPrice / 100 + ')'|Book Rental]]>><<set $phase to 5>><<set $studyBooks.rented.count += 1>><<handheldon>><<wearProp "scarlet">><<money `-_rentPrice` "libraryBooks">><<set $phase2 to "rent">><<set $studyBooks.rented.RaulAndJanet to 1>><</link>>
 				<br>
 			<</if>>
 			<<if ((Time.monthName is "November" and Time.monthDay gte 24) or Time.monthName is "December") and $studyBooks.rented.pinch is 0 and $studyBooks.stolen.pinch is 0>>
-				<<oliveicon>><<link [["Rent the olive-coloured book (£" + _rentPrice / 100 + ")"|Book Rental]]>><<set $phase to 6>><<set $studyBooks.rented.count += 1>><<handheldon>><<wearProp "olive">><<money `-_rentPrice` "libraryBooks">><<set $phase2 to "rent">><<set $studyBooks.rented.pinch to 1>><</link>>
+				<<oliveicon>><<link [["올리브색 책을 대여한다 (£" + _rentPrice / 100 + ")"|Book Rental]]>><<set $phase to 6>><<set $studyBooks.rented.count += 1>><<handheldon>><<wearProp "olive">><<money `-_rentPrice` "libraryBooks">><<set $phase2 to "rent">><<set $studyBooks.rented.pinch to 1>><</link>>
 				<br>
 			<</if>>
 		<<elseif $bookOverdue>>
-			<span class=purple>You can't rent another textbook while overdue.</span>
+			<span class=purple>반납 기한이 지난 동안에는 다른 교과서를 대여할 수 없다.</span>
 			<br>
 		<<elseif $money lt _rentPrice>>
 			<<if $studyBooks.rented.count is 0>>
 				<span class=purple>교과서를 대여할 돈이 부족하다.</span>
 			<<else>>
-				<span class=purple>You can't afford to rent another textbook.</span>
+				<span class=purple>다른 교과서를 대여할 돈이 부족하다.</span>
 			<</if>>
 			<br>
 		<</if>>
@@ -3929,28 +3929,28 @@
 			<<if $money gte _totalRentPrice and $book_rent_timer lte 13 and $book_rent_timer gt 0 and $book_rent_deposit lte 0>>
 				<<highicon>>
 				<<if $studyBooks.rented.count gt 1>>
-					<<link [["Renew your book rentals (£" + (_totalRentPrice/100) + ")"|Book Rental]]>><<money `-_totalRentPrice` "libraryBooks">><<set $phase2 to "renew">><</link>>
+					<<link [["도서 대여를 연장한다 (£" + (_totalRentPrice/100) + ")"|Book Rental]]>><<money `-_totalRentPrice` "libraryBooks">><<set $phase2 to "renew">><</link>>
 				<<else>>
-					<<link [["Renew your book rental (£" + (_totalRentPrice/100) + ")"|Book Rental]]>><<money `-_totalRentPrice` "libraryBooks">><<set $phase2 to "renew">><</link>>
+					<<link [["도서 대여를 연장한다 (£" + (_totalRentPrice/100) + ")"|Book Rental]]>><<money `-_totalRentPrice` "libraryBooks">><<set $phase2 to "renew">><</link>>
 				<</if>>
 				<br>
 			<<elseif $money lt _totalRentPrice>>
 				<<if $studyBooks.rented.count gt 1>>
-					<span class=purple>You can't afford to renew your rentals (£_totalRentPriceDisplay).</span>
+					<span class=purple>도서 대여를 연장할 돈이 부족하다 (£_totalRentPriceDisplay).</span>
 				<<else>>
-					<span class=purple>You can't afford to renew your rental (£_totalRentPriceDisplay).</span>
+					<span class=purple>도서 대여를 연장할 돈이 부족하다 (£_totalRentPriceDisplay).</span>
 				<</if>>
 				<br>
 			<</if>>
 			<<if $money gte 100>>
 				<<if $studyBooks.rented.count gt 1>>
-					<<link [[Deposit for your book rentals|Book Rental Deposit]]>><</link>>
+					<<link [[대여한 책들의 보증금을 낸다|Book Rental Deposit]]>><</link>>
 				<<else>>
-					<<link [[Deposit for your book rental|Book Rental Deposit]]>><</link>>
+					<<link [[대여한 책의 보증금을 낸다|Book Rental Deposit]]>><</link>>
 				<</if>>
 				<br>
 			<<else>>
-				<span class=purple>You can't deposit with no money.</span>
+				<span class=purple>돈이 없어서 보증금을 낼 수 없다.</span>
 				<br>
 			<</if>>
 		<</if>>
@@ -3958,31 +3958,31 @@
 		<<if (!Time.schoolDay or $schoolstate is "early" or $schoolstate is "late")>>
 			<<if ($studyBooks.rented.science is 0 and $studyBooks.stolen.science is 0) or ($studyBooks.rented.maths is 0 and $studyBooks.stolen.maths is 0) or ($studyBooks.rented.english is 0 and $studyBooks.stolen.english is 0) or ($studyBooks.rented.history is 0 and $studyBooks.stolen.history is 0) or (currentSkillValue('english') gte 300 and $studyBooks.rented.RaulAndJanet is 0 and $studyBooks.stolen.RaulAndJanet is 0) or (((Time.monthName is "November" and Time.monthDay gte 24) or Time.monthName is "December") and $studyBooks.rented.pinch is 0 and $studyBooks.stolen.pinch is 0)>>
 				<<if $studyBooks.rented.science is 0 and $studyBooks.stolen.science is 0>>
-					<<scienceicon>><<link [[Steal a science textbook|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "science">><<set $studyBooks.stolen.science to 1>><</link>><<crime "thievery">><<note "+ Passive Science" "green">>
+					<<scienceicon>><<link [[과학 교과서를 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "science">><<set $studyBooks.stolen.science to 1>><</link>><<crime "thievery">><<note "+ 과학 학습 효율" "green">>
 					<br>
 				<</if>>
 				<<if $studyBooks.rented.maths is 0 and $studyBooks.stolen.maths is 0>>
-					<<mathicon>><<link [[Steal a maths textbook|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "maths">><<set $studyBooks.stolen.maths to 1>><</link>><<crime "thievery">><<note "+ Passive Maths" "green">>
+					<<mathicon>><<link [[수학 교과서를 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "maths">><<set $studyBooks.stolen.maths to 1>><</link>><<crime "thievery">><<note "+ 수학 학습 효율" "green">>
 					<br>
 				<</if>>
 				<<if $studyBooks.rented.english is 0 and $studyBooks.stolen.english is 0>>
-					<<englishicon>><<link [[Steal an English textbook|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "English">><<set $studyBooks.stolen.english to 1>><</link>><<crime "thievery">><<note "+ Passive English" "green">>
+					<<englishicon>><<link [[영어 교과서를 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "English">><<set $studyBooks.stolen.english to 1>><</link>><<crime "thievery">><<note "+ 영어 학습 효율" "green">>
 					<br>
 				<</if>>
 				<<if $studyBooks.rented.history is 0 and $studyBooks.stolen.history is 0>>
-					<<historyicon>><<link [[Steal a history textbook|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "history">><<set $studyBooks.stolen.history to 1>><</link>><<crime "thievery">><<note "+ Passive History" "green">>
+					<<historyicon>><<link [[역사 교과서를 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "history">><<set $studyBooks.stolen.history to 1>><</link>><<crime "thievery">><<note "+ 역사 학습 효율" "green">>
 					<br>
 				<</if>>
 				<<if currentSkillValue('english') gte 300 and $studyBooks.rented.RaulAndJanet is 0 and $studyBooks.stolen.RaulAndJanet is 0>>
-					<<scarleticon>><<link [[Steal "Raul and Janet"|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase to 5>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "Raul and Janet">><<set $studyBooks.stolen.RaulAndJanet to 1>><</link>><<crime "thievery">>
+					<<scarleticon>><<link [["라울과 자넷"을 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase to 5>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "Raul and Janet">><<set $studyBooks.stolen.RaulAndJanet to 1>><</link>><<crime "thievery">>
 					<br>
 				<</if>>
 				<<if ((Time.monthName is "November" and Time.monthDay gte 24) or Time.monthName is "December") and $studyBooks.rented.pinch is 0 and $studyBooks.stolen.pinch is 0>>
-					<<oliveicon>><<link [[Steal the olive-coloured book|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase to 6>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "pinch">><<set $studyBooks.stolen.pinch to 1>><</link>><<crime "thievery">>
+					<<oliveicon>><<link [[올리브색 책을 훔친다|Book Rental]]>><<set $studyBooks.stolen.count += 1>><<set $phase to 6>><<set $phase2 to "steal">><<set $studyBooks.stolen.last to "pinch">><<set $studyBooks.stolen.pinch to 1>><</link>><<crime "thievery">>
 					<br>
 				<</if>>
 			<<else>>
-				You've stolen all of the useful books.
+				쓸 만한 책은 전부 훔쳤다.
 				<br>
 			<</if>>
 		<</if>>
@@ -4060,19 +4060,19 @@
 			<<set _studyGain += 1.5>>
 		<</if>>
 		<<if $studyBooks.rented.science is 1>>
-			<<link [[Study science (0:20)|$passage]]>><<set $study to 1>><<scienceskill _studyGain>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
+			<<link [[과학을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<scienceskill _studyGain>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
 			<br>
 		<</if>>
 		<<if $studyBooks.rented.maths is 1>>
-			<<link [[Study maths (0:20)|$passage]]>><<set $study to 1>><<mathsskill _studyGain>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
+			<<link [[수학을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<mathsskill _studyGain>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
 			<br>
 		<</if>>
 		<<if $studyBooks.rented.english is 1>>
-			<<link [[Study English (0:20)|$passage]]>><<set $study to 1>><<englishskill _studyGain>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
+			<<link [[영어을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<englishskill _studyGain>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
 			<br>
 		<</if>>
 		<<if $studyBooks.rented.history is 1>>
-			<<link [[Study history (0:20)|$passage]]>><<set $study to 1>><<historyskill _studyGain>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
+			<<link [[역사을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<historyskill _studyGain>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
 			<br>
 		<</if>>
 		<<if $studyBooks.rented.RaulAndJanet is 1>>
@@ -4084,19 +4084,19 @@
 			<br>
 		<</if>>
 		<<if $studyBooks.stolen.science is 1>>
-			<<link [[Study science (0:20)|$passage]]>><<set $study to 1>><<scienceskill _studyGain>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
+			<<link [[과학을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<scienceskill _studyGain>><<pass 20>><<set $phase to 1>><</link>><<gscience>>
 			<br>
 		<</if>>
 		<<if $studyBooks.stolen.maths is 1>>
-			<<link [[Study maths (0:20)|$passage]]>><<set $study to 1>><<mathsskill _studyGain>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
+			<<link [[수학을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<mathsskill _studyGain>><<pass 20>><<set $phase to 2>><</link>><<gmaths>>
 			<br>
 		<</if>>
 		<<if $studyBooks.stolen.english is 1>>
-			<<link [[Study English (0:20)|$passage]]>><<set $study to 1>><<englishskill _studyGain>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
+			<<link [[영어을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<englishskill _studyGain>><<pass 20>><<set $phase to 3>><</link>><<genglish>>
 			<br>
 		<</if>>
 		<<if $studyBooks.stolen.history is 1>>
-			<<link [[Study history (0:20)|$passage]]>><<set $study to 1>><<historyskill _studyGain>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
+			<<link [[역사을 공부한다 (0:20)|$passage]]>><<set $study to 1>><<historyskill _studyGain>><<pass 20>><<set $phase to 4>><</link>><<ghistory>>
 			<br>
 		<</if>>
 		<<if $studyBooks.stolen.RaulAndJanet is 1>>
@@ -4319,9 +4319,9 @@
 <</widget>>
 
 <<widget "depositLibraryExitConfirm">>
-	You are depositing <<printmoney _depositAmount>>, are you sure?
+	보증금으로 <<printmoney _depositAmount>>【을를】 내려고 합니다. 확실합니까?
 	<br>
-	<<link [[Confirm|Book Rental]]>>
+	<<link [[확인한다|Book Rental]]>>
 		<<set $book_rent_deposit += _depositAmount>>
 		<<money `-_depositAmount`>>
 		<<set $phase2 to "deposit">>

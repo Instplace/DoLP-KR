@@ -488,7 +488,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "rings">>
 						<<else>>
-							<div class="category-icon-alt">Ri</div>
+							<div class="category-icon-alt">반</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<RingsShop>><</replace>><</link>>
 					</div>
@@ -541,7 +541,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "earrings">>
 					<<else>>
-						<div class="category-icon-alt">Ea</div>
+						<div class="category-icon-alt">귀</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<EarringsShop>><</replace>><</link>>
 				</div>
@@ -550,7 +550,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "rings">>
 					<<else>>
-						<div class="category-icon-alt">Ri</div>
+						<div class="category-icon-alt">반</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<RingsShop>><</replace>><</link>>
 				</div>

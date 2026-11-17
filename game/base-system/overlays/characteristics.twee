@@ -22,11 +22,11 @@
 	<<if $wraithSkin>>
 		정령
 	<<elseif _seraphimActive and $angel gte 6 and $harpy gte 6>>
-		a seraphim
+		세라핌
 	<<elseif _kitsuneActive and (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") and (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>
-		a kitsune
+		키츠네
 	<<elseif _okamiActive and (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") and (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>
-		an okami
+		오카미
 
 	<!-- Animal TFs -->
 	<<elseif (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow") or (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") or (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny") or ($bear gte 6 or ($transformationParts.bear.tail isnot "hidden" and $transformationParts.bear.tail isnot "disabled")) or (($waterdragon gte 7 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "waterdragon")>>
@@ -49,11 +49,11 @@
 		<<elseif (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>
 			고양이
 		<<elseif (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny") and (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-		    jackalope
+		    잭얼로프
 		<<elseif (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny") and (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>>
-		    moon rabbit
+		    달토끼
 		<<elseif (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny")>>
-		    bunny
+		    토끼
 		<<elseif (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>
 			<<if $player.gender_appearance is "m">>
 				황소
@@ -61,7 +61,7 @@
 				젖소
 			<</if>>
 		<<elseif ($bear gte 6 or ($transformationParts.bear.tail isnot "hidden" and $transformationParts.bear.tail isnot "disabled"))>>
-			bear
+			곰
 		<<elseif (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>
 			<<if resolveIfNamedBeastIsMonster("greathawk")>>
 				하피
@@ -71,7 +71,7 @@
 		<<elseif (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>
 			여우
 		<<elseif (($waterdragon gte 7 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "waterdragon")>>
-			water dragon
+			수룡
 		<</if>>
 
 	<!-- Non Animal TFs -->
@@ -92,13 +92,13 @@
 	<br><br>
 
 	<<switch $bodysize>>
-		<<case -1>>You are miniature compared to others.
+		<<case -1>>다른 사람들보다 극도로 작으며,
 		<<case 0>>다른 사람들보다 매우 작으며,
 		<<case 1>>다른 사람들보다 작으며,
 		<<case 2>>보통 키며,
-		<<case 2.5>>You are rather tall compared to others.
+		<<case 2.5>>다른 사람들보다 꽤 큰 편이며,
 		<<case 3>>다른 사람들보다 크며,
-		<<case 4>>You are a giant.
+		<<case 4>>거인이며,
 	<</switch>>
 
 	<!-- Eye details -->
@@ -361,34 +361,34 @@
 
 				<!--PHYSIQUE-->
 				<<if $AMCTraits.physique is 2>>
-					<<set _physiqueConfig = { name : "Physique", icon : "ui/sym-physique", displayType : "level", currentValue : $physique, maxValue: $physiquesize * $AMCTraits.physique, modifier: 100, modTypes: { good: [], bad: [] },
+					<<set _physiqueConfig = { name : "체격", icon : "ui/sym-physique", displayType : "level", currentValue : $physique, maxValue: $physiquesize * $AMCTraits.physique, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue:	0,							level: 0, color: 'red',		description: `You are ${$player.bodyshape === "soft" ? "malnourished" : "emaciated"}.`},
-							{ requiredValue:	$physiquesize / 7,			level: 1, color: 'pink',	description: `Your body is ${$player.bodyshape === "soft" ? "squishy" : "skinny"}.`},
-							{ requiredValue:	($physiquesize / 7) * 2,	level: 2, color: 'purple',	description: `Your body is ${$player.bodyshape === "soft" ? "soft and supple" : "lithe and slender"}.`},
-							{ requiredValue:	($physiquesize / 7) * 3,	level: 3, color: 'blue',	description: `Your body is ${$player.bodyshape === "soft" ? "well built" : "slim"}.`},
-							{ requiredValue:	($physiquesize / 7) * 4,	level: 4, color: 'lblue',	description: `Your body is ${$player.bodyshape === "soft" ? "sturdy" : "slim"} and athletic.`},
-							{ requiredValue:	($physiquesize / 7) * 5,	level: 5, color: 'teal',	description: `Your body is ${$player.bodyshape === "soft" ? "robust" : "toned"} and firm.`},
-							{ requiredValue:	($physiquesize / 7) * 6,	level: 6, color: 'green',	description: `Your body is ${$player.bodyshape === "soft" ? "robust" : "toned"} and powerful.`},
-							{ requiredValue:	($physiquesize / 7) * 7,	level: 7, color: 'green',	description: 'Your body is sculpted and athletic.'},
-							{ requiredValue:	($physiquesize / 7) * 8,	level: 8, color: 'gold',	description: 'Your body is chiseled and formidable.'},
-							{ requiredValue:	($physiquesize / 7) * 9,	level: 9, color: 'gold',	description: 'Your body is honed and muscular.'},
-							{ requiredValue:	($physiquesize / 7) * 10,	level: 10, color: 'gold',	description: 'Your body is ripped and robust.'},
-							{ requiredValue:	($physiquesize / 7) * 11,	level: 11, color: 'gold',	description: 'Your body is defined and Herculean.'},
-							{ requiredValue:	($physiquesize / 7) * 12,	level: 12, color: 'lustful',description: 'Your body is powerful and supremely fit.'},
-							{ requiredValue:	($physiquesize / 7) * 13,	level: 13, color: 'lustful',description: 'Your body is a pinnacle of strength and vitality.'}
+							{ requiredValue:	0,							level: 0, color: 'red',		description: `당신의 몸은 ${$player.bodyshape === "soft" ? "영양실조 상태다" : "여위었다"}.`},
+							{ requiredValue:	$physiquesize / 7,			level: 1, color: 'pink',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "말랑하다" : "마른 편이다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 2,	level: 2, color: 'purple',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "부드럽고 유연하다" : "가냘프다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 3,	level: 3, color: 'blue',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "균형 잡혀 있다" : "날씬하다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 4,	level: 4, color: 'lblue',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "튼튼하고" : "날씬하며"} 건강하다.`},
+							{ requiredValue:	($physiquesize / 7) * 5,	level: 5, color: 'teal',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "다부지고" : "탄탄하고"} 탄력이 있다.`},
+							{ requiredValue:	($physiquesize / 7) * 6,	level: 6, color: 'green',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "건장하고" : "탄탄하고"} 강력하다.`},
+							{ requiredValue:	($physiquesize / 7) * 7,	level: 7, color: 'green',	description: '당신의 몸은 조각처럼 다듬어져 있고 탄탄하다.'},
+							{ requiredValue:	($physiquesize / 7) * 8,	level: 8, color: 'gold',	description: '당신의 몸은 조각처럼 뚜렷하고 위압적이다.'},
+							{ requiredValue:	($physiquesize / 7) * 9,	level: 9, color: 'gold',	description: '당신의 몸은 단련되어 근육질이다.'},
+							{ requiredValue:	($physiquesize / 7) * 10,	level: 10, color: 'gold',	description: '당신의 몸은 근육이 선명하고 우람하다.'},
+							{ requiredValue:	($physiquesize / 7) * 11,	level: 11, color: 'gold',	description: '당신의 몸은 근육이 뚜렷하고 헤라클레스 같다.'},
+							{ requiredValue:	($physiquesize / 7) * 12,	level: 12, color: 'lustful',description: '당신의 몸은 강력하고 더할 나위 없이 건강하다.'},
+							{ requiredValue:	($physiquesize / 7) * 13,	level: 13, color: 'lustful',description: '당신의 몸은 힘과 활력의 정점이다.'}
 						]
 					}>>
 				<<else>>
 					<<set _physiqueConfig = { name : "체격", icon : "ui/sym-physique", displayType : "level", currentValue : $physique, maxValue: $physiquesize, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue:	0,							level: 0, color: 'red',		description: `You are ${$player.bodyshape === "soft" ? "malnourished" : "emaciated"}.`},
-							{ requiredValue:	$physiquesize / 7,			level: 1, color: 'pink',	description: `Your body is ${$player.bodyshape === "soft" ? "squishy" : "skinny"}.`},
-							{ requiredValue:	($physiquesize / 7) * 2,	level: 2, color: 'purple',	description: `Your body is ${$player.bodyshape === "soft" ? "soft and supple" : "lithe and slender"}.`},
-							{ requiredValue:	($physiquesize / 7) * 3,	level: 3, color: 'blue',	description: `Your body is ${$player.bodyshape === "soft" ? "well built" : "slim"}.`},
-							{ requiredValue:	($physiquesize / 7) * 4,	level: 4, color: 'lblue',	description: `Your body is ${$player.bodyshape === "soft" ? "sturdy" : "slim"} and athletic.`},
-							{ requiredValue:	($physiquesize / 7) * 5,	level: 5, color: 'teal',	description: `Your body is ${$player.bodyshape === "soft" ? "robust" : "toned"} and firm.`},
-							{ requiredValue:	($physiquesize / 7) * 6,	level: 6, color: 'green',	description: `Your body is ${$player.bodyshape === "soft" ? "robust" : "toned"} and powerful.`}
+							{ requiredValue:	0,							level: 0, color: 'red',		description: `당신의 몸은 ${$player.bodyshape === "soft" ? "영양실조 상태다" : "여위었다"}.`},
+							{ requiredValue:	$physiquesize / 7,			level: 1, color: 'pink',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "말랑하다" : "마른 편이다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 2,	level: 2, color: 'purple',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "부드럽고 유연하다" : "가냘프다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 3,	level: 3, color: 'blue',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "균형 잡혀 있다" : "날씬하다"}.`},
+							{ requiredValue:	($physiquesize / 7) * 4,	level: 4, color: 'lblue',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "튼튼하고" : "날씬하며"} 건강하다.`},
+							{ requiredValue:	($physiquesize / 7) * 5,	level: 5, color: 'teal',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "다부지고" : "탄탄하고"} 탄력이 있다.`},
+							{ requiredValue:	($physiquesize / 7) * 6,	level: 6, color: 'green',	description: `당신의 몸은 ${$player.bodyshape === "soft" ? "건장하고" : "탄탄하고"} 강력하다.`}
 						]
 					}>>
 				<</if>>
@@ -416,43 +416,43 @@
 				<</switch>>
 				<<if $drunk gte 120 and $substanceRebalance is 1>>
 					<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _physiqueConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _physiqueConfig.modTypes.bad.pushUnique("술기운")>>
 				<<elseif $drunk gte 1 and $substanceRebalance is 1>>
 					<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 0.95)>>
-					<<set _physiqueConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _physiqueConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if $hallucinogen gte 1 and $substanceRebalance is 1>>
 					<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _physiqueConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _physiqueConfig.modTypes.bad.pushUnique("환각제")>>
 				<</if>>
 				<<if $DoLPTFBuffs is 1>>
 					<<if $TFWolfBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 1.2)>>
-						<<set _physiqueConfig.modTypes.good.pushUnique("spirit of the wild")>>
+						<<set _physiqueConfig.modTypes.good.pushUnique("야생의 정령")>>
 					<</if>>
 					<<if $TFCatBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 0.8)>>
-						<<set _physiqueConfig.modTypes.bad.pushUnique("felinous mischief")>>
+						<<set _physiqueConfig.modTypes.bad.pushUnique("고양이의 장난기")>>
 					<</if>>
 					<<if $TFCowBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 1.4)>>
-						<<set _physiqueConfig.modTypes.good.pushUnique("nature's nurturer")>>
+						<<set _physiqueConfig.modTypes.good.pushUnique("자연의 양육자")>>
 					<</if>>
 					<<if $TFBearBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 1.5)>>
-						<<set _physiqueConfig.modTypes.good.pushUnique("ursine strength")>>
+						<<set _physiqueConfig.modTypes.good.pushUnique("곰의 힘")>>
 					<</if>>
 					<<if $TFBirdBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 0.7)>>
-						<<set _physiqueConfig.modTypes.bad.pushUnique("sky's embrace")>>
+						<<set _physiqueConfig.modTypes.bad.pushUnique("하늘의 품")>>
 					<</if>>
 					<<if $TFFoxBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 0.9)>>
-						<<set _physiqueConfig.modTypes.bad.pushUnique("vixen's guile")>>
+						<<set _physiqueConfig.modTypes.bad.pushUnique("암여우의 교활함")>>
 					<</if>>
 					<<if $TFBunnyBuffs is 1>>
 						<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * 0.7)>>
-						<<set _physiqueConfig.modTypes.bad.pushUnique("lapine's celerity")>>
+						<<set _physiqueConfig.modTypes.bad.pushUnique("토끼의 민첩함")>>
 					<</if>>
 				<</if>>
 				<<if $auriga_artefact is "pc">>
@@ -462,34 +462,34 @@
 
 				<!--WILLPOWER-->
 				<<if $AMCTraits.willpower is 2>>
-					<<set _willpowerConfig = { name : "Willpower", icon : "ui/sym-trauma", displayType : "level", currentValue : $willpower, maxValue: $willpowermax * $AMCTraits.willpower, modifier: 100, modTypes: { good: [], bad: [] },
+					<<set _willpowerConfig = { name : "의지력", icon : "ui/sym-trauma", displayType : "level", currentValue : $willpower, maxValue: $willpowermax * $AMCTraits.willpower, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue:	0,							level: 0, color: 'red',		description: 'You are timid.'},
-							{ requiredValue:	$willpowermax / 7,			level: 1, color: 'pink',	description: 'You are fainthearted.'},
-							{ requiredValue:	($willpowermax / 7) * 2,	level: 2, color: 'purple',	description: 'You are mindful.'},
-							{ requiredValue:	($willpowermax / 7) * 3,	level: 3, color: 'blue',	description: 'You are resolved.'},
-							{ requiredValue:	($willpowermax / 7) * 4,	level: 4, color: 'lblue',	description: 'You are determined.'},
-							{ requiredValue:	($willpowermax / 7) * 5,	level: 5, color: 'teal',	description: 'You are tenacious.'},
-							{ requiredValue:	($willpowermax / 7) * 6,	level: 6, color: 'green',	description: 'Your will is iron.'},
-							{ requiredValue:	($willpowermax / 7) * 7,	level: 7, color: 'green',	description: 'You are resolute.'},
-							{ requiredValue:	($willpowermax / 7) * 8,	level: 8, color: 'gold',	description: 'You are unwavering.'},
-							{ requiredValue:	($willpowermax / 7) * 9,	level: 9, color: 'gold',	description: 'You are indomitable.'},
-							{ requiredValue:	($willpowermax / 7) * 10,	level: 10, color: 'gold',	description: 'You are unyielding.'},
-							{ requiredValue:	($willpowermax / 7) * 11,	level: 11, color: 'gold',	description: 'Your will is adamantine.'},
-							{ requiredValue:	($willpowermax / 7) * 12,	level: 12, color: 'lustful',description: 'Your will is invincible.'},
-							{ requiredValue:	($willpowermax / 7) * 13,	level: 13, color: 'lustful',description: 'Your will is titanic.'}
+							{ requiredValue:	0,							level: 0, color: 'red',		description: '당신은 소심하다.'},
+							{ requiredValue:	$willpowermax / 7,			level: 1, color: 'pink',	description: '당신은 소극적이다.'},
+							{ requiredValue:	($willpowermax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 신중하다.'},
+							{ requiredValue:	($willpowermax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 굳건하다.'},
+							{ requiredValue:	($willpowermax / 7) * 4,	level: 4, color: 'lblue',	description: '당신은 단호하다.'},
+							{ requiredValue:	($willpowermax / 7) * 5,	level: 5, color: 'teal',	description: '당신은 집요하다.'},
+							{ requiredValue:	($willpowermax / 7) * 6,	level: 6, color: 'green',	description: '당신의 의지는 강철 같다.'},
+							{ requiredValue:	($willpowermax / 7) * 7,	level: 7, color: 'green',	description: '당신은 꿋꿋하다.'},
+							{ requiredValue:	($willpowermax / 7) * 8,	level: 8, color: 'gold',	description: '당신은 흔들림이 없다.'},
+							{ requiredValue:	($willpowermax / 7) * 9,	level: 9, color: 'gold',	description: '당신은 불굴이다.'},
+							{ requiredValue:	($willpowermax / 7) * 10,	level: 10, color: 'gold',	description: '당신은 굽힐 줄 모른다.'},
+							{ requiredValue:	($willpowermax / 7) * 11,	level: 11, color: 'gold',	description: '당신의 의지는 아다만타이트 같다.'},
+							{ requiredValue:	($willpowermax / 7) * 12,	level: 12, color: 'lustful',description: '당신의 의지는 무적이다.'},
+							{ requiredValue:	($willpowermax / 7) * 13,	level: 13, color: 'lustful',description: '당신의 의지는 타이탄 같다.'}
 						]
 					}>>
 				<<else>>
 					<<set _willpowerConfig = { name : "의지력", icon : "ui/sym-trauma", displayType : "level", currentValue : $willpower, maxValue: $willpowermax, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue:	0,							level: 0, color: 'red',		description: 'You are timid.'},
-							{ requiredValue:	$willpowermax / 7,			level: 1, color: 'pink',	description: 'You are fainthearted.'},
-							{ requiredValue:	($willpowermax / 7) * 2,	level: 2, color: 'purple',	description: 'You are mindful.'},
-							{ requiredValue:	($willpowermax / 7) * 3,	level: 3, color: 'blue',	description: 'You are resolved.'},
-							{ requiredValue:	($willpowermax / 7) * 4,	level: 4, color: 'lblue',	description: 'You are determined.'},
-							{ requiredValue:	($willpowermax / 7) * 5,	level: 5, color: 'teal',	description: 'You are tenacious.'},
-							{ requiredValue:	($willpowermax / 7) * 6,	level: 6, color: 'green',	description: 'Your will is iron.'}
+							{ requiredValue:	0,							level: 0, color: 'red',		description: '당신은 소심하다.'},
+							{ requiredValue:	$willpowermax / 7,			level: 1, color: 'pink',	description: '당신은 소극적이다.'},
+							{ requiredValue:	($willpowermax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 신중하다.'},
+							{ requiredValue:	($willpowermax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 굳건하다.'},
+							{ requiredValue:	($willpowermax / 7) * 4,	level: 4, color: 'lblue',	description: '당신은 단호하다.'},
+							{ requiredValue:	($willpowermax / 7) * 5,	level: 5, color: 'teal',	description: '당신은 집요하다.'},
+							{ requiredValue:	($willpowermax / 7) * 6,	level: 6, color: 'green',	description: '당신의 의지는 강철 같다.'}
 						]
 					}>>
 				<</if>>
@@ -502,68 +502,68 @@
 				<</if>>
 				<<if $drunk gte 120 and $substanceRebalance is 1>>
 					<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _willpowerConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _willpowerConfig.modTypes.bad.pushUnique("술기운")>>
 				<<elseif $drunk gte 1 and $substanceRebalance is 1>>
 					<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 0.95)>>
-					<<set _willpowerConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _willpowerConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if $hallucinogen gte 1 and $substanceRebalance is 1>>
 					<<set _willpowerConfig.modifier to Math.floor(_willpowerConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _willpowerConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _willpowerConfig.modTypes.bad.pushUnique("환각제")>>
 				<</if>>
 				<<if $DoLPTFBuffs is 1>>
 					<<if $TFWolfBuffs is 1>>
 						<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 1.1)>>
-						<<set _willpowerConfig.modTypes.good.pushUnique("spirit of the wild")>>
+						<<set _willpowerConfig.modTypes.good.pushUnique("야생의 정령")>>
 					<</if>>
 					<<if $TFCatBuffs is 1>>
 						<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 1.1)>>
-						<<set _willpowerConfig.modTypes.good.pushUnique("felinous mischief")>>
+						<<set _willpowerConfig.modTypes.good.pushUnique("고양이의 장난기")>>
 					<</if>>
 					<<if $TFCowBuffs is 1>>
 						<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 0.8)>>
-						<<set _willpowerConfig.modTypes.bad.pushUnique("nature's nurturer")>>
+						<<set _willpowerConfig.modTypes.bad.pushUnique("자연의 양육자")>>
 					<</if>>
 					<<if $TFBearBuffs is 1>>
 						<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 1.2)>>
-						<<set _willpowerConfig.modTypes.good.pushUnique("ursine strength")>>
+						<<set _willpowerConfig.modTypes.good.pushUnique("곰의 힘")>>
 					<</if>>
 					<<if $TFBunnyBuffs is 1>>
 						<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * 0.8)>>
-						<<set _willpowerConfig.modTypes.bad.pushUnique("lapine's celerity")>>
+						<<set _willpowerConfig.modTypes.bad.pushUnique("토끼의 민첩함")>>
 					<</if>>
 				<</if>>
 
 				<!--BEAUTY-->
 				<<if $AMCTraits.beauty is 2>>
-					<<set _beautyConfig = { name : "Beauty", icon : "ui/sym-beauty", displayType : "level", currentValue : $beauty, maxValue: $beautymax * $AMCTraits.beauty, modifier: 100, modTypes: { good: [], bad: [] },
+					<<set _beautyConfig = { name : "미모", icon : "ui/sym-beauty", displayType : "level", currentValue : $beauty, maxValue: $beautymax * $AMCTraits.beauty, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
 							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},{ requiredValue: $beautymax / 7, level: 1, color: 'pink', description: '당신은 귀엽다.'},{ requiredValue: ($beautymax / 7) * 2, level: 2, color: 'purple', description: '당신은 예쁘다.'},{ requiredValue: ($beautymax / 7) * 3, level: 3, color: 'blue', description: '당신은 매력적이다.'},{ requiredValue: ($beautymax / 7) * 4, level: 4, color: 'lblue', description: '당신은 아름답다.'},{ requiredValue: ($beautymax / 7) * 5, level: 5, color: 'teal', description: '당신은 눈부시게 매혹적이다.'},{ requiredValue: ($beautymax / 7) * 6, level: 6, color: 'green', description: '당신의 아름다움은 경이롭다.'}					]
-							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: 'You are cute.'},
-							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: 'You are pretty.'},
-							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: 'You are charming.'},
-							{ requiredValue:	($beautymax / 7) * 4,	level: 4, color: 'lblue',	description: 'You are beautiful.'},
-							{ requiredValue:	($beautymax / 7) * 5,	level: 5, color: 'teal',	description: 'You are ravishing.'},
-							{ requiredValue:	($beautymax / 7) * 6,	level: 6, color: 'green',	description: 'Your beauty is divine.'},
-							{ requiredValue:	($beautymax / 7) * 7,	level: 7, color: 'green',	description: 'You are alluring.'},
-							{ requiredValue:	($beautymax / 7) * 8,	level: 8, color: 'gold',	description: 'You are stunning.'},
-							{ requiredValue:	($beautymax / 7) * 9,	level: 9, color: 'gold',	description: 'You are mesmerizing.'},
-							{ requiredValue:	($beautymax / 7) * 10,	level: 10, color: 'gold',	description: 'You are enchanting.'},
-							{ requiredValue:	($beautymax / 7) * 11,	level: 11, color: 'gold',	description: 'You are captivating.'},
-							{ requiredValue:	($beautymax / 7) * 12,	level: 12, color: 'lustful',description: 'You are breathtaking.'},
-							{ requiredValue:	($beautymax / 7) * 13,	level: 13, color: 'lustful',description: 'Your beauty surpasses divinity.'}
+							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: '당신은 귀엽다.'},
+							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 예쁘다.'},
+							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 매력적이다.'},
+							{ requiredValue:	($beautymax / 7) * 4,	level: 4, color: 'lblue',	description: '당신은 아름답다.'},
+							{ requiredValue:	($beautymax / 7) * 5,	level: 5, color: 'teal',	description: '당신은 눈부시게 매혹적이다.'},
+							{ requiredValue:	($beautymax / 7) * 6,	level: 6, color: 'green',	description: '당신의 아름다움은 경이롭다.'},
+							{ requiredValue:	($beautymax / 7) * 7,	level: 7, color: 'green',	description: '당신은 사람을 끌어당긴다.'},
+							{ requiredValue:	($beautymax / 7) * 8,	level: 8, color: 'gold',	description: '당신은 눈이 번쩍 뜨일 만큼 아름답다.'},
+							{ requiredValue:	($beautymax / 7) * 9,	level: 9, color: 'gold',	description: '당신은 넋을 빼앗는다.'},
+							{ requiredValue:	($beautymax / 7) * 10,	level: 10, color: 'gold',	description: '당신은 황홀하다.'},
+							{ requiredValue:	($beautymax / 7) * 11,	level: 11, color: 'gold',	description: '당신은 시선을 사로잡는다.'},
+							{ requiredValue:	($beautymax / 7) * 12,	level: 12, color: 'lustful',description: '당신은 숨이 멎을 만큼 아름답다.'},
+							{ requiredValue:	($beautymax / 7) * 13,	level: 13, color: 'lustful',description: '당신의 아름다움은 신성마저 뛰어넘는다.'}
 						]
 					}>>
 				<<else>>
 					<<set _beautyConfig = { name : "미모", icon : "ui/sym-beauty", displayType : "level", currentValue : $beauty, maxValue: $beautymax, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
 							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},{ requiredValue: $beautymax / 7, level: 1, color: 'pink', description: '당신은 귀엽다.'},{ requiredValue: ($beautymax / 7) * 2, level: 2, color: 'purple', description: '당신은 예쁘다.'},{ requiredValue: ($beautymax / 7) * 3, level: 3, color: 'blue', description: '당신은 매력적이다.'},{ requiredValue: ($beautymax / 7) * 4, level: 4, color: 'lblue', description: '당신은 아름답다.'},{ requiredValue: ($beautymax / 7) * 5, level: 5, color: 'teal', description: '당신은 눈부시게 매혹적이다.'},{ requiredValue: ($beautymax / 7) * 6, level: 6, color: 'green', description: '당신의 아름다움은 경이롭다.'}					]
-							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: 'You are cute.'},
-							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: 'You are pretty.'},
-							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: 'You are charming.'},
-							{ requiredValue:	($beautymax / 7) * 4,	level: 4, color: 'lblue',	description: 'You are beautiful.'},
-							{ requiredValue:	($beautymax / 7) * 5,	level: 5, color: 'teal',	description: 'You are ravishing.'},
-							{ requiredValue:	($beautymax / 7) * 6,	level: 6, color: 'green',	description: 'Your beauty is divine.'}
+							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: '당신은 귀엽다.'},
+							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 예쁘다.'},
+							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 매력적이다.'},
+							{ requiredValue:	($beautymax / 7) * 4,	level: 4, color: 'lblue',	description: '당신은 아름답다.'},
+							{ requiredValue:	($beautymax / 7) * 5,	level: 5, color: 'teal',	description: '당신은 눈부시게 매혹적이다.'},
+							{ requiredValue:	($beautymax / 7) * 6,	level: 6, color: 'green',	description: '당신의 아름다움은 경이롭다.'}
 						]
 					}>>
 				<</if>>
@@ -594,9 +594,9 @@
 				<</if>>
 
 				<<if $hallucinogen gte 1>>
-					<<set _promiscuityConfig.modTypes.good.pushUnique("hallucinogen")>>
-					<<set _exhibitionismConfig.modTypes.good.pushUnique("hallucinogen")>>
-					<<set _deviancyConfig.modTypes.good.pushUnique("hallucinogen")>>
+					<<set _promiscuityConfig.modTypes.good.pushUnique("환각제")>>
+					<<set _exhibitionismConfig.modTypes.good.pushUnique("환각제")>>
+					<<set _deviancyConfig.modTypes.good.pushUnique("환각제")>>
 				<</if>>
 
 				<!-- Visual indicator for lewd stats being affected by heat -->
@@ -620,9 +620,9 @@
 				<</if>>
 				<<if $options.statNerf lt 100>>
 					<<set _physiqueConfig.modifier to Math.round(_physiqueConfig.modifier * ($options.statNerf / 100))>>
-					<<set _physiqueConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _physiqueConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _willpowerConfig.modifier to Math.round(_willpowerConfig.modifier * ($options.statNerf / 100))>>
-					<<set _willpowerConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _willpowerConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<</if>>
 			<</silently>>
 
@@ -721,15 +721,15 @@
 				<</if>>
 				<<if $transformationParts.traits.wdgrace isnot "disabled">>
 					<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.2)>>
-					<<set _athleticsConfig.modTypes.good.pushUnique("dragon's grace")>>
+					<<set _athleticsConfig.modTypes.good.pushUnique("용의 우아함")>>
 					<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 1.5)>>
-					<<set _swimmingConfig.modTypes.good.pushUnique("dragon's grace")>>
+					<<set _swimmingConfig.modTypes.good.pushUnique("용의 우아함")>>
 				<</if>>
 				<<if $transformationParts.traits.strongFeet isnot "disabled">>
 					<<set _dancingConfig.modifier to Math.floor(_dancingConfig.modifier * 1.05)>>
-					<<set _dancingConfig.modTypes.good.pushUnique("strong feet")>>
+					<<set _dancingConfig.modTypes.good.pushUnique("튼튼한 발")>>
 					<<set _athleticsConfig.modifier to Math.floor(_athleticsConfig.modifier * 1.05)>>
-					<<set _athleticsConfig.modTypes.good.pushUnique("strong feet")>>
+					<<set _athleticsConfig.modTypes.good.pushUnique("튼튼한 발")>>
 				<</if>>
 				<<if $worn.under_upper.type.includesAny("dance", "naked") and $worn.under_lower.type.includesAny("dance", "naked")
 				and $worn.upper.type.includesAny("dance", "naked")and $worn.lower.type.includesAny("dance", "naked")>>
@@ -817,119 +817,119 @@
 				<</if>>
 				<<if $drunk gte 120 and $substanceRebalance is 1>>
 					<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _skulduggeryConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _skulduggeryConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _dancingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _dancingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _swimmingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _swimmingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _athleticsConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _athleticsConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _tendingConfig.modifier to Math.round(_tendingConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _tendingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _tendingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _housekeepingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _housekeepingConfig.modTypes.bad.pushUnique("술기운")>>
 				<<elseif $drunk gte 1 and $substanceRebalance is 1>>
 					<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * 0.95)>>
-					<<set _skulduggeryConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _skulduggeryConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 0.95)>>
-					<<set _dancingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _dancingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 0.95)>>
-					<<set _swimmingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _swimmingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 0.95)>>
-					<<set _athleticsConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _athleticsConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _tendingConfig.modifier to Math.round(_tendingConfig.modifier * 0.95)>>
-					<<set _tendingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _tendingConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * 0.95)>>
-					<<set _housekeepingConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _housekeepingConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if $hallucinogen gte 1 and $substanceRebalance is 1>>
 					<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _skulduggeryConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _skulduggeryConfig.modTypes.bad.pushUnique("환각제")>>
 					<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _dancingConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _dancingConfig.modTypes.bad.pushUnique("환각제")>>
 					<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _swimmingConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _swimmingConfig.modTypes.bad.pushUnique("환각제")>>
 					<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _athleticsConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _athleticsConfig.modTypes.bad.pushUnique("환각제")>>
 					<<set _tendingConfig.modifier to Math.round(_tendingConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _tendingConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _tendingConfig.modTypes.bad.pushUnique("환각제")>>
 					<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _housekeepingConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _housekeepingConfig.modTypes.bad.pushUnique("환각제")>>
 				<</if>>
 				<<if $DoLPTFBuffs is 1>>
 					<<if $TFWolfBuffs is 1>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 1.1)>>
-						<<set _dancingConfig.modTypes.good.pushUnique("spirit of the wild")>>
+						<<set _dancingConfig.modTypes.good.pushUnique("야생의 정령")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.2)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("spirit of the wild")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("야생의 정령")>>
 						<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * 0.9)>>
-						<<set _housekeepingConfig.modTypes.bad.pushUnique("spirit of the wild")>>
+						<<set _housekeepingConfig.modTypes.bad.pushUnique("야생의 정령")>>
 					<</if>>
 					<<if $TFCatBuffs is 1>>
 						<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * 1.2)>>
-						<<set _skulduggeryConfig.modTypes.good.pushUnique("felinous mischief")>>
+						<<set _skulduggeryConfig.modTypes.good.pushUnique("고양이의 장난기")>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 1.4)>>
-						<<set _dancingConfig.modTypes.good.pushUnique("felinous mischief")>>
+						<<set _dancingConfig.modTypes.good.pushUnique("고양이의 장난기")>>
 						<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 0.8)>>
-						<<set _swimmingConfig.modTypes.bad.pushUnique("felinous mischief")>>
+						<<set _swimmingConfig.modTypes.bad.pushUnique("고양이의 장난기")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.1)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("felinous mischief")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("고양이의 장난기")>>
 						<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * 0.9)>>
-						<<set _housekeepingConfig.modTypes.bad.pushUnique("felinous mischief")>>
+						<<set _housekeepingConfig.modTypes.bad.pushUnique("고양이의 장난기")>>
 					<</if>>
 					<<if $TFCowBuffs is 1>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 0.9)>>
-						<<set _dancingConfig.modTypes.bad.pushUnique("nature's nurturer")>>
+						<<set _dancingConfig.modTypes.bad.pushUnique("자연의 양육자")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 0.9)>>
-						<<set _athleticsConfig.modTypes.bad.pushUnique("nature's nurturer")>>
+						<<set _athleticsConfig.modTypes.bad.pushUnique("자연의 양육자")>>
 						<<set _tendingConfig.modifier to Math.round(_tendingConfig.modifier * 1.4)>>
-						<<set _tendingConfig.modTypes.good.pushUnique("nature's nurturer")>>
+						<<set _tendingConfig.modTypes.good.pushUnique("자연의 양육자")>>
 					<</if>>
 					<<if $TFBearBuffs is 1>>
 						<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * 0.9)>>
-						<<set _skulduggeryConfig.modTypes.bad.pushUnique("ursine strength")>>
+						<<set _skulduggeryConfig.modTypes.bad.pushUnique("곰의 힘")>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 0.7)>>
-						<<set _dancingConfig.modTypes.bad.pushUnique("ursine strength")>>
+						<<set _dancingConfig.modTypes.bad.pushUnique("곰의 힘")>>
 						<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 1.3)>>
-						<<set _swimmingConfig.modTypes.good.pushUnique("ursine strength")>>
+						<<set _swimmingConfig.modTypes.good.pushUnique("곰의 힘")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.2)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("ursine strength")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("곰의 힘")>>
 						<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * 0.8)>>
-						<<set _housekeepingConfig.modTypes.bad.pushUnique("ursine strength")>>
+						<<set _housekeepingConfig.modTypes.bad.pushUnique("곰의 힘")>>
 					<</if>>
 					<<if $TFBirdBuffs is 1>>
 						<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * 1.1)>>
-						<<set _skulduggeryConfig.modTypes.good.pushUnique("sky's embrace")>>
+						<<set _skulduggeryConfig.modTypes.good.pushUnique("하늘의 품")>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 1.3)>>
-						<<set _dancingConfig.modTypes.good.pushUnique("sky's embrace")>>
+						<<set _dancingConfig.modTypes.good.pushUnique("하늘의 품")>>
 						<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 0.8)>>
-						<<set _swimmingConfig.modTypes.bad.pushUnique("sky's embrace")>>
+						<<set _swimmingConfig.modTypes.bad.pushUnique("하늘의 품")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.2)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("sky's embrace")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("하늘의 품")>>
 						<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * 1.3)>>
-						<<set _housekeepingConfig.modTypes.good.pushUnique("sky's embrace")>>
+						<<set _housekeepingConfig.modTypes.good.pushUnique("하늘의 품")>>
 					<</if>>
 					<<if $TFFoxBuffs is 1>>
 						<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * 1.3)>>
-						<<set _skulduggeryConfig.modTypes.good.pushUnique("vixen's guile")>>
+						<<set _skulduggeryConfig.modTypes.good.pushUnique("암여우의 교활함")>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 1.1)>>
-						<<set _dancingConfig.modTypes.good.pushUnique("vixen's guile")>>
+						<<set _dancingConfig.modTypes.good.pushUnique("암여우의 교활함")>>
 						<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 0.9)>>
-						<<set _swimmingConfig.modTypes.bad.pushUnique("vixen's guile")>>
+						<<set _swimmingConfig.modTypes.bad.pushUnique("암여우의 교활함")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.1)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("vixen's guile")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("암여우의 교활함")>>
 					<</if>>
 					<<if $TFBunnyBuffs is 1>>
 						<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * 1.4)>>
-						<<set _dancingConfig.modTypes.good.pushUnique("lapine's celerity")>>
+						<<set _dancingConfig.modTypes.good.pushUnique("토끼의 민첩함")>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.5)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("lapine's celerity")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("토끼의 민첩함")>>
 					<</if>>
 					<<if $TFWaterDragonBuffs is 1>>
 						<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * 1.2)>>
-						<<set _athleticsConfig.modTypes.good.pushUnique("dragon's grace")>>
+						<<set _athleticsConfig.modTypes.good.pushUnique("용의 우아함")>>
 						<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * 1.5)>>
-						<<set _swimmingConfig.modTypes.good.pushUnique("dragon's grace")>>
+						<<set _swimmingConfig.modTypes.good.pushUnique("용의 우아함")>>
 					<</if>>
 				<</if>>
 				<<if $moorLuck gt 0>>
@@ -948,17 +948,17 @@
 				<</if>>
 				<<if $options.statNerf lt 100>>
 					<<set _skulduggeryConfig.modifier to Math.round(_skulduggeryConfig.modifier * ($options.statNerf / 100))>>
-					<<set _skulduggeryConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _skulduggeryConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _dancingConfig.modifier to Math.round(_dancingConfig.modifier * ($options.statNerf / 100))>>
-					<<set _dancingConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _dancingConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _swimmingConfig.modifier to Math.round(_swimmingConfig.modifier * ($options.statNerf / 100))>>
-					<<set _swimmingConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _swimmingConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _athleticsConfig.modifier to Math.round(_athleticsConfig.modifier * ($options.statNerf / 100))>>
-					<<set _athleticsConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _athleticsConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _tendingConfig.modifier to Math.round(_tendingConfig.modifier * ($options.statNerf / 100))>>
-					<<set _tendingConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _tendingConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _housekeepingConfig.modifier to Math.round(_housekeepingConfig.modifier * ($options.statNerf / 100))>>
-					<<set _housekeepingConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _housekeepingConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<</if>>
 			<</silently>>
 			<<characteristic-box _skulduggeryConfig>>
@@ -1050,94 +1050,94 @@
 			<<if $drunk gte 120 and $substanceRebalance is 1>>
 				<<if _vaginalConfig>>
 					<<set _vaginalConfig.modifier to Math.round(_vaginalConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _vaginalConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _vaginalConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if _penileConfig>>
 					<<set _penileConfig.modifier to Math.round(_penileConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _penileConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _penileConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<set _analConfig.modifier to Math.round(_analConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-				<<set _analConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+				<<set _analConfig.modTypes.bad.pushUnique("술기운")>>
 				<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-				<<set _seductionConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+				<<set _seductionConfig.modTypes.bad.pushUnique("술기운")>>
 			<<elseif $drunk gte 1 and $substanceRebalance is 1>>
 				<<if _vaginalConfig>>
 					<<set _vaginalConfig.modifier to Math.round(_vaginalConfig.modifier * 0.95)>>
-					<<set _vaginalConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _vaginalConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if _penileConfig>>
 					<<set _penileConfig.modifier to Math.round(_penileConfig.modifier * 0.95)>>
-					<<set _penileConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _penileConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<set _analConfig.modifier to Math.round(_analConfig.modifier * 0.95)>>
-				<<set _analConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+				<<set _analConfig.modTypes.bad.pushUnique("술기운")>>
 				<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 0.95)>>
-				<<set _seductionConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+				<<set _seductionConfig.modTypes.bad.pushUnique("술기운")>>
 			<</if>>
 			<<if $hallucinogen gte 1 and $substanceRebalance is 1>>
 				<<if _vaginalConfig>>
 					<<set _vaginalConfig.modifier to Math.round(_vaginalConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _vaginalConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _vaginalConfig.modTypes.bad.pushUnique("환각제")>>
 				<</if>>
 				<<if _penileConfig>>
 					<<set _penileConfig.modifier to Math.round(_penileConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-					<<set _penileConfig.modTypes.bad.pushUnique("hallucinogens")>>
+					<<set _penileConfig.modTypes.bad.pushUnique("환각제")>>
 				<</if>>
 				<<set _analConfig.modifier to Math.round(_analConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-				<<set _analConfig.modTypes.bad.pushUnique("hallucinogens")>>
+				<<set _analConfig.modTypes.bad.pushUnique("환각제")>>
 				<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * (1 - (0.125 * Math.round(V.hallucinogen / 250))))>>
-				<<set _seductionConfig.modTypes.bad.pushUnique("hallucinogens")>>
+				<<set _seductionConfig.modTypes.bad.pushUnique("환각제")>>
 			<</if>>
 			<<if $DoLPTFBuffs is 1>>
 				<<if $TFCatBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 1.2)>>
-					<<set _seductionConfig.modTypes.good.pushUnique("felinous mischief")>>
+					<<set _seductionConfig.modTypes.good.pushUnique("고양이의 장난기")>>
 				<</if>>
 				<<if $TFCowBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 1.1)>>
-					<<set _seductionConfig.modTypes.good.pushUnique("nature's nurturer")>>
+					<<set _seductionConfig.modTypes.good.pushUnique("자연의 양육자")>>
 				<</if>>
 				<<if $TFBearBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 0.9)>>
-					<<set _seductionConfig.modTypes.bad.pushUnique("ursine strength")>>
+					<<set _seductionConfig.modTypes.bad.pushUnique("곰의 힘")>>
 				<</if>>
 				<<if $TFBirdBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 1.1)>>
-					<<set _seductionConfig.modTypes.good.pushUnique("sky's embrace")>>
+					<<set _seductionConfig.modTypes.good.pushUnique("하늘의 품")>>
 				<</if>>
 				<<if $TFFoxBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 1.2)>>
-					<<set _seductionConfig.modTypes.good.pushUnique("vixen's guile")>>
+					<<set _seductionConfig.modTypes.good.pushUnique("암여우의 교활함")>>
 				<</if>>
 				<<if $TFBunnyBuffs is 1>>
 					<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * 1.1)>>
-					<<set _seductionConfig.modTypes.good.pushUnique("lapine's celerity")>>
+					<<set _seductionConfig.modTypes.good.pushUnique("토끼의 민첩함")>>
 				<</if>>
 			<</if>>
 			<<if $options.statNerf lt 100>>
 				<<set _seductionConfig.modifier to Math.round(_seductionConfig.modifier * ($options.statNerf / 100))>>
-				<<set _seductionConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _seductionConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _oralConfig.modifier to Math.round(_oralConfig.modifier * ($options.statNerf / 100))>>
-				<<set _oralConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _oralConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _chestConfig.modifier to Math.round(_chestConfig.modifier * ($options.statNerf / 100))>>
-				<<set _chestConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _chestConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _handsConfig.modifier to Math.round(_handsConfig.modifier * ($options.statNerf / 100))>>
-				<<set _handsConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _handsConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _buttocksConfig.modifier to Math.round(_buttocksConfig.modifier * ($options.statNerf / 100))>>
-				<<set _buttocksConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _buttocksConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _analConfig.modifier to Math.round(_analConfig.modifier * ($options.statNerf / 100))>>
-				<<set _analConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _analConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _thighsConfig.modifier to Math.round(_thighsConfig.modifier * ($options.statNerf / 100))>>
-				<<set _thighsConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _thighsConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<set _feetConfig.modifier to Math.round(_feetConfig.modifier * ($options.statNerf / 100))>>
-				<<set _feetConfig.modTypes.bad.pushUnique("stat nerf")>>
+				<<set _feetConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<<if $player.penisExist || playerHasStrapon()>>
 					<<set _penileConfig.modifier to Math.round(_penileConfig.modifier * ($options.statNerf / 100))>>
-					<<set _penileConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _penileConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<</if>>
 				<<if $player.vaginaExist>>
 					<<set _vaginalConfig.modifier to Math.round(_vaginalConfig.modifier * ($options.statNerf / 100))>>
-					<<set _vaginalConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _vaginalConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<</if>>
 			<</if>>
 		<</silently>>
@@ -1256,31 +1256,31 @@
 				<<set _historyConfig =	{ name : '역사', icon : 'misc/icon/history', displayType : "grade",	currentValue : $historytrait,	modifier: 100, modTypes: { good: [], bad: [] },	percent: $history_exam,		showStars: true, starLevel: $history_star,	states : _schoolGradeStates}>>
 				<<if $drunk gte 120 and $substanceRebalance is 1>>
 					<<set _scienceConfig.modifier to Math.round(_scienceConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _scienceConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _scienceConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _mathsConfig.modifier to Math.round(_mathsConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _mathsConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _mathsConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _englishConfig.modifier to Math.round(_englishConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _englishConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _englishConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _historyConfig.modifier to Math.round(_historyConfig.modifier * (1 - (0.1 * Math.round(V.drunk / 120))))>>
-					<<set _historyConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _historyConfig.modTypes.bad.pushUnique("술기운")>>
 				<<elseif $drunk gte 1 and $substanceRebalance is 1>>
 					<<set _scienceConfig.modifier to Math.round(_scienceConfig.modifier * 0.95)>>
-					<<set _scienceConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _scienceConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _mathsConfig.modifier to Math.round(_mathsConfig.modifier * 0.95)>>
-					<<set _mathsConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _mathsConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _englishConfig.modifier to Math.round(_englishConfig.modifier * 0.95)>>
-					<<set _englishConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _englishConfig.modTypes.bad.pushUnique("술기운")>>
 					<<set _historyConfig.modifier to Math.round(_historyConfig.modifier * 0.95)>>
-					<<set _historyConfig.modTypes.bad.pushUnique("alcohol intoxication")>>
+					<<set _historyConfig.modTypes.bad.pushUnique("술기운")>>
 				<</if>>
 				<<if $DoLPTFBuffs is 1>>
 					<<if $TFBirdBuffs is 1>>
 						<<set _englishConfig.modifier to Math.round(_englishConfig.modifier * 1.1)>>
-						<<set _englishConfig.modTypes.good.pushUnique("sky's embrace")>>
+						<<set _englishConfig.modTypes.good.pushUnique("하늘의 품")>>
 					<</if>>
 					<<if $TFFoxBuffs is 1>>
 						<<set _englishConfig.modifier to Math.round(_englishConfig.modifier * 1.2)>>
-						<<set _englishConfig.modTypes.good.pushUnique("vixen's guile")>>
+						<<set _englishConfig.modTypes.good.pushUnique("암여우의 교활함")>>
 					<</if>>
 				<</if>>
 				<<if $moorLuck gt 0>>
@@ -1295,13 +1295,13 @@
 				<</if>>
 				<<if $options.statNerf lt 100>>
 					<<set _scienceConfig.modifier to Math.round(_scienceConfig.modifier * ($options.statNerf / 100))>>
-					<<set _scienceConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _scienceConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _mathsConfig.modifier to Math.round(_mathsConfig.modifier * ($options.statNerf / 100))>>
-					<<set _mathsConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _mathsConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _englishConfig.modifier to Math.round(_englishConfig.modifier * ($options.statNerf / 100))>>
-					<<set _englishConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _englishConfig.modTypes.bad.pushUnique("능력치 너프")>>
 					<<set _historyConfig.modifier to Math.round(_historyConfig.modifier * ($options.statNerf / 100))>>
-					<<set _historyConfig.modTypes.bad.pushUnique("stat nerf")>>
+					<<set _historyConfig.modTypes.bad.pushUnique("능력치 너프")>>
 				<</if>>
 			<</silently>>
 
@@ -1313,15 +1313,15 @@
 		<div class="characteristic-box-extras">
 			<<set _schoolPerformanceConfig = { currentValue : $school, preText: '당신의 전반적인 학교 성적은 ', modifier: 100, modTypes: { good: [], bad: [] }, states : [
 					{ requiredValue: 0, color: 'red', description: '끔찍하다.'},{ requiredValue: 1, color: 'pink', description: '매우 나쁘다.'},{ requiredValue: 400, color: 'purple', description: '나쁘다.'},{ requiredValue: 800, color: 'blue', description: '나쁘지 않다.'},{ requiredValue: 1600, color: 'lblue', description: '좋다.'},{ requiredValue: 2800, color: 'teal', description: '훌륭하다.'},{ requiredValue: 4000, color: 'green', description: '모범적이다.'}				]
-					{ requiredValue: 1,		color: 'pink',		description: 'awful.'},
-					{ requiredValue: 400,	color: 'purple',	description: 'bad.'},
-					{ requiredValue: 800,	color: 'blue',		description: 'okay.'},
-					{ requiredValue: 1600,	color: 'lblue',		description: 'good.'},
-					{ requiredValue: 2800,	color: 'teal',		description: 'excellent.'},
-					{ requiredValue: 4000,	color: 'green',		description: 'exemplary.'},
-					{ requiredValue: 5000,	color: 'gold',		description: 'outstanding.'},
-					{ requiredValue: 6500,	color: 'gold',		description: 'distinguished.'},
-					{ requiredValue: 8000,	color: 'lustful',		description: 'exceptional.'}
+					{ requiredValue: 1,		color: 'pink',		description: '매우 나쁘다.'},
+					{ requiredValue: 400,	color: 'purple',	description: '나쁘다.'},
+					{ requiredValue: 800,	color: 'blue',		description: '나쁘지 않다.'},
+					{ requiredValue: 1600,	color: 'lblue',		description: '좋다.'},
+					{ requiredValue: 2800,	color: 'teal',		description: '훌륭하다.'},
+					{ requiredValue: 4000,	color: 'green',		description: '모범적이다.'},
+					{ requiredValue: 5000,	color: 'gold',		description: '뛰어나다.'},
+					{ requiredValue: 6500,	color: 'gold',		description: '탁월하다.'},
+					{ requiredValue: 8000,	color: 'lustful',		description: '비범하다.'}
 				]
 			}>>
 			<<characteristic-text _schoolPerformanceConfig>>

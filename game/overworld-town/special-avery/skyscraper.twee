@@ -83,16 +83,16 @@
 <<print _tower_progress>>%
 <br><br>
 <<if $cheatsEnabled is true and (($avery_tower.progress lt 25 and $avery_tower.stage is 0) or ($avery_tower.progress lt 60 and $avery_tower.stage is 1) or ($avery_tower.progress lt 100 and $avery_tower.stage is 2))>>
-	<<linkreplace "Super sneaky help">>
+	<<linkreplace "엄청나게 돕는다">>
 		<<if $auriga_artefact is "Avery">>
-			Doing this will be helping Avery with <<nnpc_his "Avery">> plans. Do you wish to proceed?
+			이렇게 하면 에이버리의 계획을 돕게 됩니다. 계속하시겠습니까?
 		<<elseif $auriga_artefact is "pc">>
-			You have sabotaged Avery's plan. Do you wish to proceed?
+			당신은 에이버리의 계획을 방해했습니다. 계속하시겠습니까?
 		<<else>>
-			This will push Avery's tower progress to the next important point. Do you wish to proceed?
+			이렇게 하면 에이버리의 마천루 진행도가 다음 중요한 지점까지 올라갑니다. 계속하시겠습니까?
 		<</if>>
 		<<ind>>
-		<<link [[Proceed|$passage]]>>
+		<<link [[계속한다|$passage]]>>
 			<<if $avery_tower.progress lt 25 and $avery_tower.stage is 0>>
 				<<set $avery_tower.progress to 25>>
 			<<elseif $avery_tower.progress lt 60 and $avery_tower.stage is 1>>
@@ -103,9 +103,9 @@
 		<</link>>
 	<</linkreplace>>
 	<br>
-	<i>Increases tower progress enough to unlock the next tier of events.</i> | <span class="red">Cheat.</span><!-- Appears even with blind stats enabled. Intentional --><br>
+	<i>다음 단계 이벤트를 잠금 해제할 만큼 마천루 진행도를 증가시킵니다.</i> | <span class="red">치트.</span><!-- Appears even with blind stats enabled. Intentional --><br>
 <<elseif $cheatsEnabled is true>>
-	<i>Avery has something to show you. Please check the mansion.</i><br>
+	<i>에이버리가 당신에게 보여 줄 것이 있습니다. 저택을 확인해 주십시오.</i><br>
 <</if>>
 <<link [[떠난다 (0:01)|Elk Street]]>><<pass 1>><</link>>
 <br>

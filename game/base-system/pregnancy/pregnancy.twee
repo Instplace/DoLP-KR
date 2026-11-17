@@ -1787,9 +1787,9 @@
 						그것이 종종걸음으로 다가오더니 당신에게 닿기 직전에 걸음을 늦춘다. 천천히 고개를 낮춰 당신의 <<bellyDescription>>에 머리를 댄다. <span class="blue">무력감은 사라지지만 고통은 그대로다.</span>
 						당신을 올려다보던 세 개의 눈이 모두 깜박이더니, 이내 얼굴에서 자리를 바꿔가며 돈다. 그리고 똑바로 일어선다.
 						<<switch $bodysize>>
-							<<case -1 0>>Even on all fours, it completely dwarfs you in height.
-							<<case 1 2 2.5 3>>Even on all fours, it's taller than you are.
-							<<case 4>>It's not any shorter than you.
+							<<case -1 0>>네 발로 서 있는데도 그 크기가 당신을 완전히 압도한다.
+							<<case 1 2 2.5 3>>네 발로 서 있는데도 당신보다 키가 크다.
+							<<case 4>>당신보다 별로 작지 않다.
 						<</switch>>
 						<br><br>
 

@@ -18,9 +18,9 @@
 	<</if>>
 	<<if $loft_kylar is undefined and $loft_independentLab is undefined and $loft_known is 1>>
 		<<if $sciencetrait gte 2 and $money gte 5000000>>
-			<<link [[Set up the orphanage loft lab (<<printmoney 5000000>> 1:00)|Pub Orphanage Lab]]>><<money -5000000 "orphanageUpgrades">><<set $loft_independentLab to 1>><<set $loft_upgrade += 1>><<pass 60>><</link>>
+			<<link [[고아원 다락 연구실을 설치한다 (<<printmoney 5000000>> 1:00)|Pub Orphanage Lab]]>><<money -5000000 "orphanageUpgrades">><<set $loft_independentLab to 1>><<set $loft_upgrade += 1>><<pass 60>><</link>>
 		<<elseif $sciencetrait gte 2>>
-			You don't have the <<printmoney 5000000>> for the orphanage loft lab.
+			고아원 다락 연구실을 설치할 <<printmoney 5000000>>이 없다.
 		<</if>>
 		<br>
 	<</if>>
@@ -69,10 +69,10 @@
 		<</if>>
 	<</if>>
 	<<if $lockpickTrainingSet lt 5>>
-		<<link [[Ask to buy a lockpick training set|Pub Lockpick Training Set]]>><</link>>
+		<<link [[자물쇠 따기 연습 세트를 사고 싶다고 말한다|Pub Lockpick Training Set]]>><</link>>
 		<br>
 	<<else>>
-		You already have the best lockpick training set.
+		이미 최고급 자물쇠 따기 연습 세트를 가지고 있다.
 		<br>
 	<</if>>
 	<br>
@@ -549,15 +549,15 @@
 	<<exit>>
 <<elseif _poppyWithLandry>>
 	<<npc Landry>><<person1>>
-	You ask the bartender for Landry, who nods and beckons you over to your usual table. You've barely sat down when Landry arrives and sits opposite you. To your surprise, Poppy is accompanying Landry, but
+	바텐더에게 랜드리를 찾자, 바텐더는 고개를 끄덕이며 늘 앉던 테이블로 당신을 안내한다. 당신이 자리에 앉자마자 랜드리가 도착해 맞은편에 앉는다. 놀랍게도 포피가 랜드리와 동행하고 있다. 하지만
 	<<npc Poppy 2>><<person2>>
-	<<he>> doesn't linger. Poppy acknowledges you with a smile and a pat on the shoulder. You watch as <<he>> walks out of the pub.
+	<<he>>【은는】 오래 머물지 않는다. 포피는 미소를 지으며 당신의 어깨를 토닥여 인사한다. <<he>>【이가】 술집을 나서는 모습을 당신은 지켜본다.
 	<br><br>
 	<<person1>>
-	"What have you got for me?" Landry asks.
+	"나한테 뭘 가져왔어?" 랜드리가 묻는다.
 	<br><br>
 	<<landryoptions>>
-	<<getouticon>><<link [[Leave|Pub]]>><<endevent>><</link>><br>
+	<<getouticon>><<link [[떠난다|Pub]]>><<endevent>><</link>><br>
 <<else>>
 	<<npc Landry>><<person1>>바텐더에게 랜드리를 찾자, 바텐더는 고개를 끄덕이며 늘 앉던 테이블로 당신을 안내한다. 당신이 자리에 앉자마자 랜드리가 도착해 맞은편에 앉는다.
 	<br><br>
@@ -609,7 +609,7 @@
 <<else>>
 	<<set _sale to ($blackmoney * 100)>>
 <</if>>
-You make <<printmoney `_sale`>>.
+당신은 <<printmoney `_sale`>>【을를】 번다.
 <<money `_sale` "pubStolenGoods">><<set $blackmoney to 0>>
 <br><br>
 <<getouticon>><<link [[술집|Pub]]>><<endevent>><</link>>
@@ -1108,56 +1108,56 @@ You make <<printmoney `_sale`>>.
 <<set $outside to 0>><<set $location to "pub">><<effects>>
 
 <<if $skulduggery gte 1000>>
-	"Not sure why you're here but hey," <<he>> shrugs. "I'll take the money."
+	"네가 왜 여기 왔는지는 모르겠지만, 뭐." <<he>>【이가】 어깨를 으쓱한다. "돈은 받아 두지."
 <<elseif $skulduggery gte 900>>
-	"Oho, very close, but not quite." <<he>> says. "This here is a lockpick training set straight from the lockpick lawyer himself, best of the best."
+	"오호, 아주 가깝지만 아직은 아니야." <<he>>【이가】 말한다. "이건 락픽 로이어 본인이 직접 만든 자물쇠 따기 연습 세트야. 최고 중의 최고지."
 <<elseif $skulduggery gte 700>>
-	"For you, master would be the next step," <<he>> says. "But of course, you can just buy the best one and be done with it. I recommend that."
+	"너한테는 마스터가 다음 단계야." <<he>>【이가】 말한다. "하지만 물론, 그냥 제일 좋은 걸 사서 끝내도 돼. 나라면 그걸 권하겠어."
 <<elseif $skulduggery gte 500>>
-	"We have a fledgling thief in our hands!" <<he>> says grinning. "Advanced is next but the more advanced the better."
+	"우리 앞에 풋내기 도둑이 있군!" <<he>>【이가】 씩 웃으며 말한다. "다음은 고급인데, 고급일수록 좋은 법이지."
 <<elseif $skulduggery gte 300>>
-	"Alright, you've got the bare basics down," <<he>> says. "The intermediate set would be the next step for you but the harder it is the better."
+	"좋아, 기초는 겨우 뗐군." <<he>>【이가】 말한다. "다음 단계는 중급 세트야. 하지만 어려울수록 좋은 법이지."
 <<else>>
-	"Here to start learning the basics?" <<he>> motions to <<his>> collection. "Feel free to peruse. Just remember, the more challenging it is, the better."
+	"기초를 배우러 왔어?" <<he>>【이가】 <<his>> 수집품을 가리킨다. "마음껏 둘러봐. 다만 기억해 둬, 어려울수록 더 좋은 거야."
 <</if>>
 <br><br>
 
 <<if $lockpickTrainingSet lt 5 and $money gte 800000>>
-	<<link [["Buy the Lockpick Lawyer Training Set (£8000)"|Pub Landry]]>><<set $lockpickTrainingSet to 5>><<money -800000>><</link>><<if $AMCTraits.skulduggery is 2>><span class="lustful">Trains up to SSS</span><<else>><span class="green">Trains up to S</span><</if>>
+	<<link [["락픽 로이어 연습 세트를 산다 (£8000)"|Pub Landry]]>><<set $lockpickTrainingSet to 5>><<money -800000>><</link>><<if $AMCTraits.skulduggery is 2>><span class="lustful">SSS까지 훈련</span><<else>><span class="green">S까지 훈련</span><</if>>
 	<br>
 <<elseif $lockpickTrainingSet lt 5>>
-	You don't have the £8000 to afford the Lockpick Lawyer Training Set.
+	락픽 로이어 연습 세트를 살 £8000이 없다.
 	<br>
 <</if>>
 <<if $lockpickTrainingSet lt 4 and $money gte 400000>>
-	<<link [["Buy the Master Training Set (£4000)"|Pub Landry]]>><<set $lockpickTrainingSet to 4>><<money -400000>><</link>><span class="teal">Trains up to A+</span>
+	<<link [["마스터 연습 세트를 산다 (£4000)"|Pub Landry]]>><<set $lockpickTrainingSet to 4>><<money -400000>><</link>><span class="teal">A+까지 훈련</span>
 	<br>
 <<elseif $lockpickTrainingSet lt 4>>
-	You don't have the £4000 to afford the Master Training Set.
+	마스터 연습 세트를 살 £4000이 없다.
 	<br>
 <</if>>
 <<if $lockpickTrainingSet lt 3 and $money gte 200000>>
-	<<link [["Buy the Advanced Training Set (£2000)"|Pub Landry]]>><<set $lockpickTrainingSet to 3>><<money -200000>><</link>><span class="lblue">Trains up to B+</span>
+	<<link [["고급 연습 세트를 산다 (£2000)"|Pub Landry]]>><<set $lockpickTrainingSet to 3>><<money -200000>><</link>><span class="lblue">B+까지 훈련</span>
 	<br>
 <<else>>
-	You don't have the £2000 to afford the Advanced Training Set.
+	고급 연습 세트를 살 £2000이 없다.
 	<br>
 <</if>>
 <<if $lockpickTrainingSet lt 2 and $money gte 100000>>
-	<<link [["Buy the Intermediate Training Set (£1000)"|Pub Landry]]>><<set $lockpickTrainingSet to 2>><<money -100000>><</link>><span class="blue">Trains up to C+</span>
+	<<link [["중급 연습 세트를 산다 (£1000)"|Pub Landry]]>><<set $lockpickTrainingSet to 2>><<money -100000>><</link>><span class="blue">C+까지 훈련</span>
 	<br>
 <<elseif $lockpickTrainingSet lt 2>>
-	You don't have the £1000 to afford the Intermediate Training Set.
+	중급 연습 세트를 살 £1000이 없다.
 	<br>
 <</if>>
 <<if $lockpickTrainingSet lt 1 and $money gte 50000>>
-	<<link [["Buy the Basic Training Set (£500)"|Pub Landry]]>><<set $lockpickTrainingSet to 1>><<money -50000>><</link>><span class="purple">Trains up to D+</span>
+	<<link [["기본 연습 세트를 산다 (£500)"|Pub Landry]]>><<set $lockpickTrainingSet to 1>><<money -50000>><</link>><span class="purple">D+까지 훈련</span>
 	<br>
 <<elseif $lockpickTrainingSet lt 1>>
-	You don't have the £500 to afford the Basic Training Set.
+	기본 연습 세트를 살 £500이 없다.
 	<br>
 <</if>>
-<<link [[Back|Pub Landry]]>><</link>>
+<<link [[뒤로|Pub Landry]]>><</link>>
 
 :: Pub Music
 <<set $outside to 0>><<set $location to "pub">><<effects>>
@@ -1325,16 +1325,16 @@ You make <<printmoney `_sale`>>.
 :: Pub Orphanage Lab
 <<set $outside to 0>><<set $location to "pub">><<effects>>
 
-You give Landry a list of materials and tools you'll need delivered to the orphanage loft.
+당신은 랜드리에게 고아원 다락으로 배달받아야 할 재료와 도구의 목록을 건넨다.
 <br><br>
 
-<<He>> gives the list a read, their expression going from furrowed eyebrows to an amused smirk. "Oleoresin Capsicum, Ethanol and Nitrogen canisters? You're trying to make a pepper spray lab, aren't you? Under Bailey's nose no less."
+<<He>>【은는】 목록을 읽어 내려가고, 찌푸렸던 눈썹이 즐거운 듯한 미소로 바뀐다. "올레오레진 캡시쿰, 에탄올, 질소 통이라고? 최루 스프레이 연구실을 만들려는 거지? 그것도 베일리의 코앞에서."
 <br><br>
 
-<<He>> leans back. "It'll cost you, but consider it done. I'll have some of my people over and quickly set it up. I trust you'll be able to teach the orphans how to operate the lab."
+<<He>>【은는】 등을 뒤로 기댄다. "돈은 들겠지만 된 걸로 쳐. 내 사람들 몇을 보내서 금방 설치해 줄게. 고아원 애들한테 연구실 쓰는 법은 네가 가르쳐 줄 수 있을 거라 믿어."
 <br><br>
 
-<<link [[Next|Pub Landry]]>><</link>>
+<<link [[다음|Pub Landry]]>><</link>>
 
 :: Pub Farm USB
 <<effects>>

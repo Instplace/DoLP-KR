@@ -1668,7 +1668,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "special")>>
 	"제-제발 보내주세요." 당신이 말한다. "집에 가고 싶어요."
 <<elseif ($speech_attitude is "flamboyant" or $speech_attitude is "polite")>>
-	"Please let me go," you say. "You don't have to do this."
+	"제발 보내 주세요." 당신이 말한다. "이러실 필요 없잖아요."
 <<elseif $speech_attitude is "bratty">>
 	"제가 이럴 만큼의 가치는 없잖아요." 당신이 말한다. "가볍게 손목만 때리는 건 어때요?"
 <<else>>

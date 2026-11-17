@@ -41,11 +41,11 @@
 	<br>
 	<<else>>
 		<<if Time.dayState is "night" and $transformationParts.traits.sharpEyes is "disabled">>
-			It's too dark to work in the garden
+			정원에서 일하기에는 너무 어둡다
 			<<if $skulduggery gte 600>>
-				, but you could try to steal some fruits if you were careful enough.
+				, 하지만 충분히 조심한다면 과일 몇 개쯤은 훔칠 수 있을지도 모른다.
 				<br>
-				<<crimeicon  "mark">><<link [[Steal fruits (1:00)|Temple Garden Steal Night]]>><<pass 60>><<set $skulduggerydifficulty to 750>><<set $phase to 0>><</link>><<crime "petty">>
+				<<crimeicon  "mark">><<link [[과일을 훔친다 (1:00)|Temple Garden Steal Night]]>><<pass 60>><<set $skulduggerydifficulty to 750>><<set $phase to 0>><</link>><<crime "petty">>
 			<<else>>
 				.
 			<</if>>
@@ -58,9 +58,9 @@
 			<span class="red">두 팔이 모두 묶여 있어</span>, 정원에서 일할 수 없다.
 			<br>
 		<<elseif Time.dayState is "night" and $transformationParts.traits.sharpEyes isnot "disabled">>
-			It's dark, but your sharp eyes let you see a bit. <span class="blue">Working now will take more time, but it's still possible</span>, but nobody will know it was you.<br><br>
+			어둡지만, 날카로운 눈 덕분에 조금은 보인다. <span class="blue">지금 일하면 시간은 더 걸리지만 여전히 가능하고</span>, 게다가 누구의 소행인지 아무도 알지 못할 것이다.<br><br>
 			<<templeicon "garden">>
-			<<link [[Work in the garden (1:00)|Temple Garden Work Night]]>>
+			<<link [[정원에서 일한다 (1:00)|Temple Garden Work Night]]>>
 			<<if currentSkillValue('tending') gte 1800>>
 				<<set $temple_garden += 7>>
 			<<elseif currentSkillValue('tending') gte 1500>>
@@ -76,9 +76,9 @@
 			<<else>>
 				<<set $temple_garden += 1>>
 			<</if>>
-			<<pass 60>><<tiredness 6>><<tending 1>><</link>><<gtending>><<gtiredness>><<note "Tending skill affects efficiency" "blue">>
+			<<pass 60>><<tiredness 6>><<tending 1>><</link>><<gtending>><<gtiredness>><<note "관리 스킬이 효율에 영향을 줍니다" "blue">>
 			<br>
-			<<crimeicon  "mark">><<link [[Steal fruits (0:30)|Temple Garden Steal Night]]>><<pass 30>><<set $skulduggerydifficulty to 400>><<set $phase to 0>><</link>><<crime "petty">>
+			<<crimeicon  "mark">><<link [[과일을 훔친다 (0:30)|Temple Garden Steal Night]]>><<pass 30>><<set $skulduggerydifficulty to 400>><<set $phase to 0>><</link>><<crime "petty">>
 			<br>
 		<<else>>
 			<<templeicon "garden">>
@@ -100,7 +100,7 @@
 			<</if>>
 			<<pass 60>><<grace 1 monk>><<tiredness 6>><<tending 1>><</link>><<gtending>><<ggrace monk>><<gtiredness>><<note "관리 스킬이 효율에 영향을 줍니다" "blue">>
 			<br>
-			<<crimeicon  "mark">><<link [[Steal fruits (1:00)|Temple Garden Steal]]>><<pass 60>><<set $skulduggerydifficulty to 400>><<set $phase to 0>><</link>><<crime "petty">>
+			<<crimeicon  "mark">><<link [[과일을 훔친다 (1:00)|Temple Garden Steal]]>><<pass 60>><<set $skulduggerydifficulty to 400>><<set $phase to 0>><</link>><<crime "petty">>
 			<br>
 		<</if>>
 	<</if>>
@@ -196,8 +196,8 @@
 		바구니를 든 채 사다리를 올라 <<print _fruitKr>>들을 따기 시작한다. <<tending_text>> 즐겁긴 하지만, 몇몇은 꽤 멀리 팔을 뻗어야 닿는다. <<physique 6>><<lstress>><<stress -6>>
 		<br><br>
 		<<if $skulduggery gte 100>>
-			<span class="blue">You think you could steal some if you were careful enough.</span><br>
-			<<link [[Steal some|Temple Garden Steal]]>><<set $skulduggerydifficulty to 400>><<set $phase to _fruit + "s">><</link>><<crime "petty">>
+			<span class="blue">충분히 조심한다면 몇 개쯤은 훔칠 수 있을 것 같다.</span><br>
+			<<link [[몇 개 훔친다|Temple Garden Steal]]>><<set $skulduggerydifficulty to 400>><<set $phase to _fruit + "s">><</link>><<crime "petty">>
 			<br>
 		<</if>>
 		<<link [[다음|Temple Garden]]>><</link>>
@@ -930,10 +930,10 @@
 	당신은 줄에 걸린 수녀복 한 벌을 본다. <<if Weather.precipitation is "rain">>급히 비를 피해 옮겨 놓은 것 같다<<elseif Weather.precipitation is "snow">>급히 눈을 피해 옮겨 놓은 것 같다<<else>>화단 위에 걸려 있다<</if>>. 같은 줄에는 수건 몇 장도 걸려 있다. 수건 쪽이 더 가깝다. 수도복을 입은 <<fullGroup>>【이가】 근처 화단을 돌보고 있다. 그들의 등은 돌아서 있다.
 	<br><br>
 	<<set $skulduggerydifficulty to 700>>
-	<<link [[Steal habit|Temple Garden Habit]]>><<set $skulduggerydifficulty to 700>><<crimeUp 50 "thievery">><</link>><<skulduggerycheck "silent">><<crime "thievery">>
+	<<link [[수도복을 훔친다|Temple Garden Habit]]>><<set $skulduggerydifficulty to 700>><<crimeUp 50 "thievery">><</link>><<skulduggerycheck "silent">><<crime "thievery">>
 	<br>
 	<<set $skulduggerydifficulty to 300>>
-	<<link [[Take towels|Temple Garden Towels]]>><<set $skulduggerydifficulty to 300>><</link>><<skulduggerycheck "silent">>
+	<<link [[수건을 가져간다|Temple Garden Towels]]>><<set $skulduggerydifficulty to 300>><</link>><<skulduggerycheck "silent">>
 	<br>
 <</if>>
 
@@ -1065,11 +1065,11 @@
 :: Temple Garden Work Night
 <<set $outside to 1>><<set $location to "temple">><<temple_effects>><<effects>>
 
-You look around the garden.
+정원을 둘러본다.
 <<endevent>>
 <<if $rng gte 81>>
 	<<wearProp "hedge shears">>
-	You decide to trim a row of hedges. You take a pair of shears and get to work.
+	울타리 한 줄을 다듬기로 한다. 가위를 들고 일을 시작한다.
 	<br><br>
 	<<if dangerEvent() and $settings.tentaclesEnabled and ($hallucinations gte 2 or $backgroundTraits.includes("plantlover"))>>
 		<<tending_text>> 힘들었지만, 정원이 한층 더 깔끔해졌다. <<physique 6>>
@@ -1090,7 +1090,7 @@ You look around the garden.
 		<br>
 	<</if>>
 <<elseif $rng gte 61>>
-	You' decide to deweed the flower beds. You drop to your knees and get to work.
+	화단의 잡초를 뽑기로 한다. 무릎을 꿇고 일을 시작한다.
 	<br><br>
 	<<beastNEWinit 1 wolf>>
 	<<if dangerEvent() and (($monster is 1 or $settings.bestialityEnabled) and not ($NPCList[0] and $NPCList[0].lewdBlocked))>>
@@ -1122,47 +1122,47 @@ You look around the garden.
 		<br>
 	<</if>>
 <<elseif $rng gte 41>>
-	You decide to gather fruit from the trees growing near the temple proper.
+	신전 본관 근처에서 자라는 나무에서 과일을 따기로 한다.
 	<br><br>
 
 	<<set _fruit to either("lemons", "limes", "apples", "oranges", "pears")>>
 	<<set _fruitCall to _fruit.replace(/s$/, "")>>
 	<<wearProp _fruitCall>>
-	Basket in hand, you climb a stepladder and start picking <<print _fruit>>. <<tending_text>> It's pleasant, though you need to stretch pretty far to reach some of them. <<physique 6>><<lstress>><<stress -6>>
+	바구니를 든 채 사다리를 올라 <<print {"lemons":"레몬","limes":"라임","apples":"사과","oranges":"오렌지","pears":"배"}[_fruit]>>【을를】 따기 시작한다. <<tending_text>> 즐겁긴 하지만, 몇몇은 꽤 멀리 팔을 뻗어야 닿는다. <<physique 6>><<lstress>><<stress -6>>
 	<br><br>
 
-	<<link [[Steal some|Temple Garden Steal Night]]>><<set $skulduggerydifficulty to 400>><<set $phase to _fruit>><</link>><<crime "petty">>
+	<<link [[몇 개 훔친다|Temple Garden Steal Night]]>><<set $skulduggerydifficulty to 400>><<set $phase to _fruit>><</link>><<crime "petty">>
 	<br>
 	<<link [[다음|Temple Garden]]>><</link>>
 	<br>
 <<elseif $rng gte 21>>
 	<<wearProp "shovel">>
-	You decide to tend the fire in the hedge maze.
+	미로 울타리 안의 불을 돌보기로 한다.
 	<br><br>
 
-	You shovel coal onto the fire.
+	석탄을 삽으로 퍼서 불 위에 던져 넣는다.
 	<br><br>
-	<<tending_text>> It takes you only a second.
+	<<tending_text>> 단 몇 초면 끝난다.
 	<br><br>
 
 	<<link [[다음|Temple Garden]]>><<endevent>><</link>>
 	<br>
 <<else>>
 	<<generateTemple 1>><<person1>>
-	You decide to tend to the crops at the forest's edge.
+	숲 가장자리의 농작물을 돌보기로 한다.
 	<br><br>
 	당신은 <<him>>【이가】 격자 울타리 줄을 돌보는 것을 발견한다. 각 울타리에는 생생한 홉 덩굴이 자라고 있다.
 	<<rng>>
 	<<if $rng gte 81>>
-		You search the plants for mites. <<tending_text>><br>
+		식물에서 진드기를 찾아본다. <<tending_text>><br>
 	<<elseif $rng gte 61>>
-		You search the plants for mildew. <<tending_text>><br>
+		식물에서 곰팡이를 찾아본다. <<tending_text>><br>
 	<<elseif $rng gte 41>>
-		You remove weeds from the soil. <<tending_text>><br>
+		흙에서 잡초를 뽑는다. <<tending_text>><br>
 	<<elseif $rng gte 21>>
-		You remove weeds from the soil. <<tending_text>><br>
+		흙에서 잡초를 뽑는다. <<tending_text>><br>
 	<<else>>
-		You harvest the riper plants. <<tending_text>><br><br>
+		잘 익은 작물을 수확한다. <<tending_text>><br><br>
 	<</if>>
 	<<physique 6>>
 	<br>
@@ -1177,7 +1177,7 @@ You look around the garden.
 	<<wearProp _fruitCall>>
 	<<set $phase to _fruit>>
 <</if>>
-You look around and manage to sneak some into your pocket.<br><br>
+주위를 둘러보고 몇 개를 주머니에 슬쩍 집어넣는 데 성공한다.<br><br>
 
 <<skulduggerycheck>>
 <<if $skulduggerysuccess is 1>>
@@ -1194,12 +1194,12 @@ You look around and manage to sneak some into your pocket.<br><br>
 			<<tending_pick pear 2 6>>
 	<</switch>>
 <<else>>
-	Before you can finish, <span class="red">someone's hand grasps your hand.</span>.<br><br>
+	끝내기도 전에, <span class="red">누군가의 손이 당신의 손을 붙잡는다.</span><br><br>
 	<<generateTemple 1>><<person1>>
-	"Just what are you doing?" a <<monk>> asks you, a frown on <<his>> face. "Put it back this instant."<<grace -10 monk>><<lllgrace monk>><<crimeUp 5 "petty">><<gcrime>>
+	"지금 뭘 하는 거예요?" <<monk>>【이가】 얼굴을 찌푸리며 묻는다. "당장 도로 놓으세요."<<grace -10 monk>><<lllgrace monk>><<crimeUp 5 "petty">><<gcrime>>
 	<br><br>
-	You put back the fruits under <<his>> gaze. The <<monk>> checks all your pockets carefully to make sure you didn't take anything with you.<br>
-	"Don't do it again," <<He>> says before walking away with the fruits you attempted to steal.
+	<<his>> 시선 아래에서 과일을 도로 내려놓는다. <<monk>>【은는】 당신이 아무것도 몰래 가져가지 않았는지 주머니를 하나하나 꼼꼼히 확인한다.<br>
+	"다시는 그러지 마세요." <<He>>【은는】 그렇게 말하고는 당신이 훔치려던 과일을 들고 걸어간다.
 <</if>>
 <br><br>
 <<link [[다음|Temple Garden]]>><</link>>
@@ -1213,7 +1213,7 @@ You look around and manage to sneak some into your pocket.<br><br>
 	<<wearProp _fruitCall>>
 	<<set $phase to _fruit>>
 <</if>>
-You start picking the fruits and hiding it in your bag.<br><br>
+과일을 따서 가방에 숨기기 시작한다.<br><br>
 
 <<skulduggerycheck>>
 <<if $skulduggerysuccess is 1>>
@@ -1234,15 +1234,15 @@ You start picking the fruits and hiding it in your bag.<br><br>
 	<<link [[다음|Temple Garden]]>><<endevent>><</link>>
 <<else>>
 	<<beastNEWinit 1 wolf>>
-	The noise you were making attracted somethig.
+	당신이 낸 소리가 무언가를 끌어들였다.
 	<<if $syndromewolves is 1>>
-		You hear footsteps behind you. You turn just as <span class="green">a <<beasttype>> jumps on top of you.</span>. <<bHe>> licks your face. You can't help but laugh.
+		등 뒤에서 발소리가 들린다. 돌아보는 순간 <span class="green"><<beasttype>> 한 마리가 당신 위로 뛰어오른다.</span> <<bHe>>【이가】 당신의 얼굴을 핥는다. 웃지 않을 수 없다.
 		<<if $monster is 1>>
-			"Heard <<ppackbrother>>. Had to see. Come home soon? Pack misses you."
+			"<<ppackbrother>> 목소리 들렸어. 보러 와야 했지. 곧 집에 올 거지? 무리가 널 그리워해."
 		<</if>>
 		<<ltrauma>><<lstress>><<trauma -6>><<stress -6>>
 		<br><br>
-		You watch as <<bhe>> returns to the forest, then glance at the fruits you just picked. Some of themlie squished on the ground, but most are untouched. Still, you should tidy up after yourself.<<crimeUp 2 "petty">><<set $temple_garden -= 3>><br>
+		<<bhe>>【이가】 숲으로 돌아가는 것을 지켜보다가, 방금 딴 과일로 시선을 돌린다. 일부는 바닥에 뭉개져 있지만 대부분은 멀쩡하다. 그래도 자기가 어지른 것은 치워야 한다.<<crimeUp 2 "petty">><<set $temple_garden -= 3>><br>
 		<<switch $phase>>
 			<<case "lemons">>
 				<<tending_pick lemon 2 8>>
@@ -1262,7 +1262,7 @@ You start picking the fruits and hiding it in your bag.<br><br>
 	<<else>>
 		뒤에서 발소리가 들린다. 돌아서기도 전에 <span class="red"><<beasttype>> 한 마리가 당신 위로 뛰어든다</span>.
 		<br><br>
-		<<link [[Next|Temple Garden Work Wolf Steal]]>><<set $molestationstart to 1>><</link>>
+		<<link [[다음|Temple Garden Work Wolf Steal]]>><<set $molestationstart to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1291,9 +1291,9 @@ You start picking the fruits and hiding it in your bag.<br><br>
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Temple Garden Work Wolf Steal Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Temple Garden Work Wolf Steal Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Temple Garden Work Wolf Steal]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Temple Garden Work Wolf Steal]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Temple Garden Work Wolf Steal Finish
@@ -1354,7 +1354,7 @@ You start picking the fruits and hiding it in your bag.<br><br>
 		<br>
 		<<endcombat>>
 	<</if>>
-	You look around for your fruits, just to realize they were turned into goo. You manage to 
+	과일을 찾아 주위를 둘러보지만, 모두 걸쭉하게 뭉개져 있다. 그래도 겨우
 	<<switch $phase>>
 		<<case "lemons">>
 			<<tending_pick lemon 1 3>>
@@ -1366,7 +1366,7 @@ You start picking the fruits and hiding it in your bag.<br><br>
 			<<tending_pick orange 1 3>>
 		<<case "pears">>
 			<<tending_pick pear 1 3>>
-	<</switch>> The rest is unfortunately irrescuable. You also did a big mess. The <<monks>> will know.<<crimeUp 5 "petty">><<grace -5>><<llgrace>><<gcrime>><<set $temple_garden -= 10>>
+	<</switch>> 나머지는 안타깝게도 건질 수 없다. 게다가 크게 어질러 놓기까지 했다. <<monks>>【이가】 알게 될 것이다.<<crimeUp 5 "petty">><<grace -5>><<llgrace>><<gcrime>><<set $temple_garden -= 10>>
 	<br><br>
 <</if>>
 <<link [[다음|Temple Garden]]>><</link>>

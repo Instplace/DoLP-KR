@@ -116,7 +116,7 @@
 <br>
 <span class="green">습격 시 공격자들을 약간 늦춘다.</span>
 <br>
-<span class="gold">Costs £2000. Express costs £5250. Premium costs £7875.</span>
+<span class="gold">비용 £2000. 속성은 £5250. 프리미엄은 £7875.</span>
 <br>
 <span class="blue">건설에 일주일이 걸린다.</span>
 <br>
@@ -131,11 +131,11 @@
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.build to "wall 1">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 525000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -525000 "farmUpgrades">><<set $farm.build to "wall 1">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -525000 "farmUpgrades">><<set $farm.build to "wall 1">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 787500>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -787500 "farmUpgrades">><<set $farm.build to "wall 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -787500 "farmUpgrades">><<set $farm.build to "wall 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -147,31 +147,31 @@
 :: Farm Upgrades Build
 <<effects>>
 
-You make the call.
+당신은 전화를 건다.
 <<if $phase is "net1">>
-	A few Amazoom drones soon drops off your new polyester nets.
+	곧 아마줌 드론 몇 대가 당신의 새 폴리에스터 그물을 떨어뜨리고 간다.
 <<elseif $phase is "net2">>
-	A couple of Amazoom drones soon drops off your new nylon nets.
+	곧 아마줌 드론 두어 대가 당신의 새 나일론 그물을 떨어뜨리고 간다.
 <<elseif $phase is "net3">>
-	An Amazoom drone soon drops off your new polyethylene nets.
+	곧 아마줌 드론 한 대가 당신의 새 폴리에틸렌 그물을 떨어뜨리고 간다.
 <<elseif $phase is "net4">>
-	An Amazoom-certified pigeon soon drops off your new polypropylene nets.
+	곧 아마줌 인증 비둘기 한 마리가 당신의 새 폴리프로필렌 그물을 떨어뜨리고 간다.
 <<elseif $phase is "tractor1">>
-	A car with the Amazoon logo emblazoned on it soon rolls up towing your 30 HP tractor.
+	곧 아마줌 로고가 큼직하게 박힌 자동차가 당신의 30마력 트랙터를 끌고 도착한다.
 <<elseif $phase is "tractor2">>
-	An Amazoom truck soon rolls up with your 80 HP tractor.
+	곧 아마줌 트럭이 당신의 80마력 트랙터를 싣고 도착한다.
 <<elseif $phase is "tractor3">>
-	An Amazoom helicoper soon drops off your 200 HP tractor.
+	곧 아마줌 헬리콥터가 당신의 200마력 트랙터를 내려놓고 간다.
 <<elseif $phase is "plough">>
-	An army of Amazoom drones soon drops off your plough attachment.
+	곧 아마줌 드론 군단이 당신의 쟁기 부착물을 떨어뜨리고 간다.
 <<elseif $phase is "seed drill">>
-	An Amazoom plane soon airdrops the seed drill attachment onto the field.
+	곧 아마줌 비행기가 파종기 부착물을 밭에 공중 투하한다.
 <<elseif $phase is "harvester">>
-	A knock is soon heard on the door with the harvester attachment left out on the porch with an Amazoom receipt on it.
+	곧 문 두드리는 소리가 들리고, 현관 앞에는 아마줌 영수증이 붙은 수확기 부착물이 놓여 있다.
 <<elseif $phase is "loader">>
-	An Amazoom dozer soon rolls up and drops off your loader attachment.
+	곧 아마줌 불도저가 도착해 당신의 로더 부착물을 내려놓는다.
 <<else>>
-	They'll start work at once.
+	그들은 즉시 작업을 시작할 것이다.
 <</if>>
 <<set $phase to 0>>
 <br><br>
@@ -189,9 +189,9 @@ You make the call.
 <br>
 <span class="green">습격 시 공격자들을 더욱 늦춘다.</span>
 <br>
-<span class="gold">Costs £5000. Express costs £15000. Premium costs £22500.</span>
+<span class="gold">비용 £5000. 속성은 £15000. 프리미엄은 £22500.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -204,11 +204,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "wall 2">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "wall 2">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "wall 2">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "wall 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "wall 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -226,9 +226,9 @@ You make the call.
 <br>
 <span class="green">습격 시 공격자들을 더욱 늦춘다.</span>
 <br>
-<span class="gold">Costs £15000. Express costs £37500. Premium costs £56250.</span>
+<span class="gold">비용 £15000. 속성은 £37500. 프리미엄은 £56250.</span>
 <br>
-<span class="blue">Will take 2 weeks to build. Express will take a week to build. Premium will take four days to build.</span>
+<span class="blue">건설에 2주일이 걸린다. 속성은 일주일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -241,11 +241,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "wall 3">><<set $farm.build_timer to 14>><</link>>
 	<br>
 	<<if $money gte 3750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "wall 3">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "wall 3">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 5625000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "wall 3">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "wall 3">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -262,9 +262,9 @@ You make the call.
 <br>
 <span class="green">습격 시 공격자들을 더욱 늦춘다.</span>
 <br>
-<span class="gold">Costs £3000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £3000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -277,11 +277,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -300000 "farmUpgrades">><<set $farm.build to "wall 4">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "wall 4">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "wall 4">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "wall 4">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "wall 4">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -303,9 +303,9 @@ You make the call.
 <br>
 <span class="purple">완전히 기능하려면 직원이 배치되어야 한다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £10000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take 2 weeks to build. Express will take a week to build. Premium will take four days to build.</span>
+<span class="blue">건설에 2주일이 걸린다. 속성은 일주일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -318,11 +318,11 @@ You make the call.
    <<link [[건설한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "tower 1">><<set $farm.build_timer to 14>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "tower 1">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "tower 1">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "tower 1">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "tower 1">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -342,9 +342,9 @@ You make the call.
 <br>
 <span class="purple">직원이 배치되어 있을 때만 작동한다.</span>
 <br>
-<span class="gold">Costs £3000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £3000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -357,11 +357,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -300000 "farmUpgrades">><<set $farm.build to "tower 2">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "tower 2">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "tower 2">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "tower 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "tower 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -382,9 +382,9 @@ You make the call.
 <br>
 <span class="red">자유가 많아지면 돼지들을 통제하기 더 어려워진다.</span>
 <br>
-<span class="gold">Costs £5000. Express costs £15000. Premium costs £22500.</span>
+<span class="gold">비용 £5000. 속성은 £15000. 프리미엄은 £22500.</span>
 <br>
-<span class="blue">Will take three days to extend the fence. Express will take two days to extend the fence. Premium will take a day to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 3일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -397,11 +397,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "woodland 1">><<set $farm.build_timer to 3>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "woodland 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "woodland 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "woodland 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "woodland 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -419,9 +419,9 @@ You make the call.
 <br>
 <span class="purple">관리가 필요하다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £10000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take five days to extend the fence. Express will take three days to extend the fence. Premium will take two days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 5일이 걸린다. 속성은 3일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -434,11 +434,11 @@ You make the call.
    <<link [[건설한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "woodland 2">><<set $farm.build_timer to 5>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "woodland 2">><<set $farm.build_timer to 3>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "woodland 2">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "woodland 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "woodland 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -460,9 +460,9 @@ You make the call.
 <br>
 <span class="red">자유가 많아지면 돼지들을 통제하기 더 어려워진다.</span>
 <br>
-<span class="gold">Costs £25000. Express costs £45000. Premium costs £67500.</span>
+<span class="gold">비용 £25000. 속성은 £45000. 프리미엄은 £67500.</span>
 <br>
-<span class="blue">Will take a week to extend the fence. Express will take four days to extend the fence. Premium will take two days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -475,11 +475,11 @@ You make the call.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2500000 "farmUpgrades">><<set $farm.build to "woodland 3">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 4500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "woodland 3">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "woodland 3">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 6750000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6750000 "farmUpgrades">><<set $farm.build to "woodland 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6750000 "farmUpgrades">><<set $farm.build to "woodland 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -490,18 +490,18 @@ You make the call.
 :: Farm Upgrades Woodland 4
 <<effects>>
 
-Eeeven more woodland could be annexed, giving you and the swine more room to forage.
+더어어 많은 삼림지를 합병하여 당신과 돼지들이 채집할 공간을 늘릴 수 있다.
 <br><br>
 
-<span class="green">Increases truffles produced further.</span>
+<span class="green">송로버섯 생산량을 더욱 증가시킨다.</span>
 <br>
-<span class="green">Increases forage produced further.</span>
+<span class="green">채집 생산량이 더욱 증가한다.</span>
 <br>
 <span class="purple">관리가 필요하다.</span>
 <br>
-<span class="gold">Costs £40000. Express costs £60000. Premium costs £90000.</span>
+<span class="gold">비용 £40000. 속성은 £60000. 프리미엄은 £90000.</span>
 <br>
-<span class="blue">Will take a week to extend the fence. Express will take four days to extend the fence. Premium will take two days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -511,14 +511,14 @@ Eeeven more woodland could be annexed, giving you and the swine more room to for
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 4000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 7>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 6000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 9000000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "woodland 4">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -529,20 +529,20 @@ Eeeven more woodland could be annexed, giving you and the swine more room to for
 :: Farm Upgrades Woodland 5
 <<effects>>
 
-Eeeeeven more woodland could be annexed, giving you and the swine more room to forage.
+더어어어어 많은 삼림지를 합병하여 당신과 돼지들이 채집할 공간을 늘릴 수 있다.
 <br><br>
 
-<span class="green">Increases truffles produced even further.</span>
+<span class="green">송로버섯 생산량을 한층 더 증가시킨다.</span>
 <br>
-<span class="green">Increases forage produced even further.</span>
+<span class="green">채집 생산량이 한층 더 증가한다.</span>
 <br>
 <span class="purple">관리가 필요하다.</span>
 <br>
-<span class="red">More freedom will make the swine even harder to control.</span>
+<span class="red">자유가 많아지면 돼지들을 통제하기가 한층 더 어려워진다.</span>
 <br>
-<span class="gold">Costs £50000. Express costs £75000. Premium costs £112500.</span>
+<span class="gold">비용 £50000. 속성은 £75000. 프리미엄은 £112500.</span>
 <br>
-<span class="blue">Will take nine days to extend the fence. Express will take five days to extend the fence. Premium will take three days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 9일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -552,14 +552,14 @@ Eeeeeven more woodland could be annexed, giving you and the swine more room to f
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 5000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5000000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 9>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5000000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 9>><</link>>
 	<br>
 	<<if $money gte 7500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7500000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 5>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7500000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 11250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -11250000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -11250000 "farmUpgrades">><<set $farm.build to "woodland 5">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -570,18 +570,18 @@ Eeeeeven more woodland could be annexed, giving you and the swine more room to f
 :: Farm Upgrades Woodland 6
 <<effects>>
 
-Eeeeeeeven more woodland could be annexed, giving you and the swine more room to forage.
+더어어어어어어 많은 삼림지를 합병하여 당신과 돼지들이 채집할 공간을 늘릴 수 있다.
 <br><br>
 
-<span class="green">Increases truffles produced even furtherer.</span>
+<span class="green">송로버섯 생산량을 한층 더더욱 증가시킨다.</span>
 <br>
-<span class="green">Increases forage produced even furtherer.</span>
+<span class="green">채집 생산량이 한층 더더욱 증가한다.</span>
 <br>
 <span class="purple">관리가 필요하다.</span>
 <br>
-<span class="gold">Costs £60000. Express costs £90000. Premium costs £135000.</span>
+<span class="gold">비용 £60000. 속성은 £90000. 프리미엄은 £135000.</span>
 <br>
-<span class="blue">Will take ten days to extend the fence. Express will take five days to extend the fence. Premium will take three days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 10일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -591,14 +591,14 @@ Eeeeeeeven more woodland could be annexed, giving you and the swine more room to
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 6000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 10>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 10>><</link>>
 	<br>
 	<<if $money gte 9000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 5>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 13500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -13500000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -13500000 "farmUpgrades">><<set $farm.build to "woodland 6">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -609,20 +609,20 @@ Eeeeeeeven more woodland could be annexed, giving you and the swine more room to
 :: Farm Upgrades Woodland 7
 <<effects>>
 
-Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room to forage.
+더어어어어어어어어 많은 삼림지를 합병하여 당신과 돼지들이 채집할 공간을 늘릴 수 있다.
 <br><br>
 
-<span class="green">Increases truffles produced even furthererer.</span>
+<span class="green">송로버섯 생산량을 한층 더더더욱 증가시킨다.</span>
 <br>
-<span class="green">Increases forage produced even furthererer.</span>
+<span class="green">채집 생산량이 한층 더더더욱 증가한다.</span>
 <br>
 <span class="purple">관리가 필요하다.</span>
 <br>
-<span class="red">More freedom will make the swine significantly harder to control.</span>
+<span class="red">자유가 많아지면 돼지들을 통제하기가 훨씬 더 어려워진다.</span>
 <br>
-<span class="gold">Costs £70000. Express costs £105000. Premium costs £157500.</span>
+<span class="gold">비용 £70000. 속성은 £105000. 프리미엄은 £157500.</span>
 <br>
-<span class="blue">Will take twelve days to extend the fence. Express will take six days to extend the fence. Premium will take three days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 12일이 걸린다. 속성은 6일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -632,14 +632,14 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 7000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7000000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 12>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7000000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 12>><</link>>
 	<br>
 	<<if $money gte 10500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -10500000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 6>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -10500000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 6>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 15750000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -15750000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -15750000 "farmUpgrades">><<set $farm.build to "woodland 7">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -663,9 +663,9 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 <br>
 <span class="red">공격성은 가축들에게도 불안감을 줄 것이다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £22500. Premium costs £33750.</span>
+<span class="gold">비용 £10000. 속성은 £22500. 프리미엄은 £33750.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -678,11 +678,11 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "kennel 1">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 2250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "kennel 1">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "kennel 1">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 3375000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "kennel 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "kennel 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -699,9 +699,9 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 
 <span class="green">말을 타고 마을을 더 빨리 오갈 수 있다.</span>
 <br>
-<span class="gold">Costs £15000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £15000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take 2 weeks to build. Express will take a week to build. Premium will take four days to build.</span>
+<span class="blue">건설에 2주일이 걸린다. 속성은 일주일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -714,11 +714,11 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "stable 1">><<set $farm.build_timer to 14>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "stable 1">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "stable 1">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "stable 1">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "stable 1">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -736,9 +736,9 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 <br>
 <span class="green">스스로를 더 빨리 착유할 수 있다.</span>
 <br>
-<span class="gold">Costs £3000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £3000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take two days to build. Express will take one day to build. Premium will instantly build.</span>
+<span class="blue">건설에 2일이 걸린다. 속성은 1일이 걸린다. 프리미엄은 즉시 완공된다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -751,11 +751,11 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -300000 "farmUpgrades">><<set $farm.build to "barn 1">><<set $farm.build_timer to 2>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "barn 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "barn 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("barn 1")>><<set $farm.barn to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("barn 1")>><<set $farm.barn to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -773,9 +773,9 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 <br>
 <span class="red">착유에 더 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £10000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take ten days to build. Express will take five days to build. Premium will take three days to build.</span>
+<span class="blue">건설에 10일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -788,11 +788,11 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "barn 2">><<set $farm.build_timer to 10>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "barn 2">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "barn 2">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "barn 2">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "barn 2">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -803,16 +803,16 @@ Eeeeeeeeeven more woodland could be annexed, giving you and the swine more room 
 :: Farm Upgrades Barn 3
 <<effects>>
 
-A spacious loft is being added above the barn to move the equipment into.
+헛간 위에 장비를 옮겨 둘 넓은 다락이 증축되고 있다.
 <br><br>
 
-<span class="green">Provides more space for more cattle, and more milk.</span>
+<span class="green">더 많은 소와 더 많은 우유를 위한 공간이 생긴다.</span>
 <br>
-<span class="red">Even more time spent milking.</span>
+<span class="red">착유에 훨씬 더 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £20000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £20000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take eight days to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 8일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -822,14 +822,14 @@ A spacious loft is being added above the barn to move the equipment into.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 8>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 8>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "barn 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -840,16 +840,16 @@ A spacious loft is being added above the barn to move the equipment into.
 :: Farm Upgrades Barn 4
 <<effects>>
 
-Modern feeding systems are being installed to improve efficiency.
+효율을 높이기 위해 현대식 급식 시스템이 설치되고 있다.
 <br><br>
 
-<span class="green">Even more cattle, and more milk.</span>
+<span class="green">소가 훨씬 더 늘어나고, 우유도 더 많이 나온다.</span>
 <br>
-<span class="red">Even more time spent milking.</span>
+<span class="red">착유에 훨씬 더 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £35000. Express costs £52500. Premium costs £78750.</span>
+<span class="gold">비용 £35000. 속성은 £52500. 프리미엄은 £78750.</span>
 <br>
-<span class="blue">Will take ten days to install. Express will take five days to build. Premium will take three days to build.</span>
+<span class="blue">설치에 10일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -859,14 +859,14 @@ Modern feeding systems are being installed to improve efficiency.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 3500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3500000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 10>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3500000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 10>><</link>>
 	<br>
 	<<if $money gte 5250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5250000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 5>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5250000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 7875000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7875000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7875000 "farmUpgrades">><<set $farm.build to "barn 4">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -877,18 +877,18 @@ Modern feeding systems are being installed to improve efficiency.
 :: Farm Upgrades Barn 5
 <<effects>>
 
-An advanced ventilation system is being fitted to enhance animal comfort.
+동물의 편안함을 높이기 위해 고급 환기 시스템이 설치되고 있다.
 <br><br>
 
-<span class="green">Enhances animal comfort and health with better air quality.</span>
+<span class="green">공기 질이 좋아져 동물의 편안함과 건강이 향상된다.</span>
 <br>
-<span class="green">Even more cattle, and more milk.</span>
+<span class="green">소가 훨씬 더 늘어나고, 우유도 더 많이 나온다.</span>
 <br>
-<span class="red">Even more time spent milking.</span>
+<span class="red">착유에 훨씬 더 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £40000. Express costs £60000. Premium costs £90000.</span>
+<span class="gold">비용 £40000. 속성은 £60000. 프리미엄은 £90000.</span>
 <br>
-<span class="blue">Will take twelve days to install. Express will take six days to install. Premium will take three days to install.</span>
+<span class="blue">설치에 12일이 걸린다. 속성은 6일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -898,14 +898,14 @@ An advanced ventilation system is being fitted to enhance animal comfort.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 4000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 12>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 12>><</link>>
 	<br>
 	<<if $money gte 6000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 6>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 6>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 9000000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9000000 "farmUpgrades">><<set $farm.build to "barn 5">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -916,16 +916,16 @@ An advanced ventilation system is being fitted to enhance animal comfort.
 :: Farm Upgrades Barn 6
 <<effects>>
 
-A new wing is being constructed to house more livestock.
+더 많은 가축을 수용할 새 별동이 지어지고 있다.
 <br><br>
 
-<span class="green">Expands barn capacity for additional livestock.</span>
+<span class="green">추가 가축을 위해 헛간 수용량이 늘어난다.</span>
 <br>
-<span class="red">Even more time spent milking.</span>
+<span class="red">착유에 훨씬 더 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £55000. Express costs £82500. Premium costs £123750.</span>
+<span class="gold">비용 £55000. 속성은 £82500. 프리미엄은 £123750.</span>
 <br>
-<span class="blue">Will take sixteen days to build. Express will take eight days to install. Premium will take four days to install.</span>
+<span class="blue">건설에 16일이 걸린다. 속성은 8일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -935,14 +935,14 @@ A new wing is being constructed to house more livestock.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 5500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5500000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 16>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5500000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 16>><</link>>
 	<br>
 	<<if $money gte 8250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -8250000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 8>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -8250000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 8>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 12375000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -12375000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -12375000 "farmUpgrades">><<set $farm.build to "barn 6">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -953,16 +953,16 @@ A new wing is being constructed to house more livestock.
 :: Farm Upgrades Barn 7
 <<effects>>
 
-Cutting-edge automation technology is being integrated into the barn.
+최첨단 자동화 기술이 헛간에 도입되고 있다.
 <br><br>
 
-<span class="green">Mindbogglingly more cattle, and more milk.</span>
+<span class="green">믿기지 않을 만큼 소가 늘어나고, 우유도 더 많이 나온다.</span>
 <br>
-<span class="red">Mindbogglingly more time spent milking.</span>
+<span class="red">착유에 믿기지 않을 만큼 많은 시간이 소요된다.</span>
 <br>
-<span class="gold">Costs £65000. Express costs £97500. Premium costs £146250.</span>
+<span class="gold">비용 £65000. 속성은 £97500. 프리미엄은 £146250.</span>
 <br>
-<span class="blue">Will take fourteen days to build. Express will take seven days to build. Premium will take four days to build.</span>
+<span class="blue">건설에 14일이 걸린다. 속성은 7일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -972,14 +972,14 @@ Cutting-edge automation technology is being integrated into the barn.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 6500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6500000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 14>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -6500000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 14>><</link>>
 	<br>
 	<<if $money gte 9750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9750000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -9750000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 14625000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -14625000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -14625000 "farmUpgrades">><<set $farm.build to "barn 7">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -996,9 +996,9 @@ Cutting-edge automation technology is being integrated into the barn.
 
 <span class="green">더 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £1000. Express costs £3000. Premium costs £4500.</span>
+<span class="gold">비용 £1000. 속성은 £3000. 프리미엄은 £4500.</span>
 <br>
-<span class="blue">Will take five days to build. Express will take three days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 5일이 걸린다. 속성은 3일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1011,11 +1011,11 @@ Cutting-edge automation technology is being integrated into the barn.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -100000 "farmUpgrades">><<set $farm.build to "coop 1">><<set $farm.build_timer to 5>><</link>>
 	<br>
 	<<if $money gte 300000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -300000 "farmUpgrades">><<set $farm.build to "coop 1">><<set $farm.build_timer to 3>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -300000 "farmUpgrades">><<set $farm.build to "coop 1">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 450000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -450000 "farmUpgrades">><<set $farm.build to "coop 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -450000 "farmUpgrades">><<set $farm.build to "coop 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1032,9 +1032,9 @@ Cutting-edge automation technology is being integrated into the barn.
 
 <span class="green">훨씬 더 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £2000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £2000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1047,11 +1047,11 @@ Cutting-edge automation technology is being integrated into the barn.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.build to "coop 2">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "coop 2">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "coop 2">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "coop 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "coop 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1062,16 +1062,16 @@ Cutting-edge automation technology is being integrated into the barn.
 :: Farm Upgrades Coop 3
 <<effects>>
 
-An outdoor run is being added for the chickens to explore.
+닭들이 돌아다닐 수 있도록 야외 사육장이 추가되고 있다.
 <br><br>
 
-<span class="green">Allows chickens to explore an outdoor run, increasing their happiness and egg production.</span>
+<span class="green">닭들이 야외 사육장을 돌아다닐 수 있어 행복도와 달걀 생산량이 늘어난다.</span>
 <br>
 <span class="green">훨씬 더 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £7500. Express costs £11250. Premium costs £16875.</span>
+<span class="gold">비용 £7500. 속성은 £11250. 프리미엄은 £16875.</span>
 <br>
-<span class="blue">Will take six days to build. Express will take three days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 6일이 걸린다. 속성은 3일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1081,14 +1081,14 @@ An outdoor run is being added for the chickens to explore.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 750000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 6>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 6>><</link>>
 	<br>
 	<<if $money gte 1125000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 3>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1687500>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1687500 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1687500 "farmUpgrades">><<set $farm.build to "coop 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1099,16 +1099,16 @@ An outdoor run is being added for the chickens to explore.
 :: Farm Upgrades Coop 4
 <<effects>>
 
-An automatic feeding system is being set up in the coop.
+닭장에 자동 급이 시스템이 설치되고 있다.
 <br><br>
 
-<span class="green">Automates feeding, saving time and ensuring consistent nutrition.</span>
+<span class="green">급이를 자동화해 시간을 절약하고 일정한 영양을 보장한다.</span>
 <br>
-<span class="green">Eeeeeven more eggs produced.</span>
+<span class="green">더어어어어 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £12000. Express costs £18000. Premium costs £27000.</span>
+<span class="gold">비용 £12000. 속성은 £18000. 프리미엄은 £27000.</span>
 <br>
-<span class="blue">Will take eight days to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 8일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1118,14 +1118,14 @@ An automatic feeding system is being set up in the coop.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1200000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1200000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 8>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1200000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 8>><</link>>
 	<br>
 	<<if $money gte 1800000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1800000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1800000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2700000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2700000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2700000 "farmUpgrades">><<set $farm.build to "coop 4">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1136,16 +1136,16 @@ An automatic feeding system is being set up in the coop.
 :: Farm Upgrades Coop 5
 <<effects>>
 
-Perches are being upgraded to improve chicken comfort.
+닭들의 편안함을 높이기 위해 횃대가 개량되고 있다.
 <br><br>
 
-<span class="green">Enhances chicken comfort, leading to increased egg production.</span>
+<span class="green">닭의 편안함이 향상되어 달걀 생산량이 늘어난다.</span>
 <br>
-<span class="green">Eeeeeeeven more eggs produced.</span>
+<span class="green">더어어어어어어 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £15000. Express costs £22500. Premium costs £33750.</span>
+<span class="gold">비용 £15000. 속성은 £22500. 프리미엄은 £33750.</span>
 <br>
-<span class="blue">Will take seven days to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 7일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1155,14 +1155,14 @@ Perches are being upgraded to improve chicken comfort.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 7>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 2250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 3375000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "coop 5">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1173,16 +1173,16 @@ Perches are being upgraded to improve chicken comfort.
 :: Farm Upgrades Coop 6
 <<effects>>
 
-A modern ventilation system is being installed in the coop.
+닭장에 현대식 환기 시스템이 설치되고 있다.
 <br><br>
 
-<span class="green">Improves air quality, enhancing chicken health and productivity.</span>
+<span class="green">공기 질이 개선되어 닭의 건강과 생산성이 향상된다.</span>
 <br>
-<span class="green">Eeeeeeeeeven more eggs produced.</span>
+<span class="green">더어어어어어어어어 많은 달걀을 생산한다.</span>
 <br>
-<span class="gold">Costs £25000. Express costs £37500. Premium costs £56250.</span>
+<span class="gold">비용 £25000. 속성은 £37500. 프리미엄은 £56250.</span>
 <br>
-<span class="blue">Will take ten days to build. Express will take five days to build. Premium will take three days to build.</span>
+<span class="blue">건설에 10일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1192,14 +1192,14 @@ A modern ventilation system is being installed in the coop.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2500000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 10>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2500000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 10>><</link>>
 	<br>
 	<<if $money gte 3750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 5>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 5625000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "coop 6">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1210,14 +1210,14 @@ A modern ventilation system is being installed in the coop.
 :: Farm Upgrades Coop 7
 <<effects>>
 
-Security measures are being enhanced to protect the chickens from predators.
+포식자로부터 닭을 지키기 위해 보안 대책이 강화되고 있다.
 <br><br>
 
-<span class="green">Increases chicken safety, reducing potential losses.</span>
+<span class="green">닭의 안전이 높아져 잠재적 손실이 줄어든다.</span>
 <br>
-<span class="gold">Costs £20000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £20000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take nine days to build. Express will take five days to build. Premium will take three days to build.</span>
+<span class="blue">건설에 9일이 걸린다. 속성은 5일이 걸린다. 프리미엄은 3일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br>
@@ -1227,14 +1227,14 @@ Security measures are being enhanced to protect the chickens from predators.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 9>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 9>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 5>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 5>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 3>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "coop 7">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1249,9 +1249,9 @@ Security measures are being enhanced to protect the chickens from predators.
 
 <span class="green">기생충 보관소.</span>
 <br>
-<span class="gold">Costs £2000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £2000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take 2 weeks to build. Express will take a week to build. Premium will take four days to build.</span>
+<span class="blue">건설에 2주일이 걸린다. 속성은 일주일이 걸린다. 프리미엄은 4일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1262,11 +1262,11 @@ Security measures are being enhanced to protect the chickens from predators.
    <<link [[건설한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.build to "parasites 1">><<set $farm.build_timer to 14>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "parasites 1">><<set $farm.build_timer to 7>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "parasites 1">><<set $farm.build_timer to 7>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "parasites 1">><<set $farm.build_timer to 4>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "parasites 1">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1281,9 +1281,9 @@ Security measures are being enhanced to protect the chickens from predators.
 
 <span class="green">기생충 축사를 업그레이드하여 공간을 약간 더 확보하고, 기생충들이 스스로 더 오래 생존할 수 있게 한다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £10000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1294,11 +1294,11 @@ Security measures are being enhanced to protect the chickens from predators.
    <<link [[건설한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "parasites 2">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "parasites 2">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "parasites 2">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "parasites 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "parasites 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1312,9 +1312,9 @@ Security measures are being enhanced to protect the chickens from predators.
 
 <span class="green">밭에 관개 시설을 추가하여 더 이상 작물에 물을 줄 필요가 없게 한다.</span>
 <br>
-<span class="gold">Costs £5000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £5000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take three days to build. Express will take two days to build. Premium will take a day to build.</span>
+<span class="blue">건설에 3일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1325,11 +1325,11 @@ Security measures are being enhanced to protect the chickens from predators.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "irrigation">><<set $farm.build_timer to 3>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "irrigation">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "irrigation">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "irrigation">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<set $farm.build to "irrigation">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1340,17 +1340,17 @@ Security measures are being enhanced to protect the chickens from predators.
 :: Farm Upgrades Tractor 1
 <<effects>>
 
-A compact tractor with 30 HP.
+30마력의 소형 트랙터.
 <br><br>
 
-<span class="green">Faster tilling, planting, harvesting and clearing.</span>
+<span class="green">경작, 파종, 수확, 정리가 더 빨라진다.</span>
 <br>
 <span class="gold">건설 비용: £10000</span>
 <br>
 <br>
 
 <<if $money gte 1000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.tractor to 1>><<set $phase to "tractor1">><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.tractor to 1>><<set $phase to "tractor1">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1361,16 +1361,16 @@ A compact tractor with 30 HP.
 :: Farm Upgrades Tractor 2
 <<effects>>
 
-An upgraded tractor with 80 HP.
+80마력으로 업그레이드된 트랙터.
 <br><br>
 
-<span class="green">Even faster tilling, planting, harvesting and clearing.</span>
+<span class="green">경작, 파종, 수확, 정리가 훨씬 더 빨라진다.</span>
 <br>
-<span class="gold">Costs £20000.</span>
+<span class="gold">비용 £20000.</span>
 <br>
 <br>
 <<if $money gte 2000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.tractor to 2>><<set $phase to "tractor2">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.tractor to 2>><<set $phase to "tractor2">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1380,16 +1380,16 @@ An upgraded tractor with 80 HP.
 :: Farm Upgrades Tractor 3
 <<effects>>
 
-An upgraded tractor with 200 HP.
+200마력으로 업그레이드된 트랙터.
 <br><br>
 
-<span class="green">EVEN FASTER tilling, planting, harvesting and clearing.</span>
+<span class="green">경작, 파종, 수확, 정리가 정말 훨씬 더 빨라진다.</span>
 <br>
-<span class="gold">Costs £40000.</span>
+<span class="gold">비용 £40000.</span>
 <br>
 <br>
 <<if $money gte 4000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.tractor to 3>><<set $phase to "tractor3">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4000000 "farmUpgrades">><<set $farm.tractor to 3>><<set $phase to "tractor3">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1399,16 +1399,16 @@ An upgraded tractor with 200 HP.
 :: Farm Upgrades Tractor Plough
 <<effects>>
 
-An tractor attachment for tilling.
+경작용 트랙터 부착물.
 <br><br>
 
-<span class="green">Till like you never tilled before.</span>
+<span class="green">지금까지와는 차원이 다른 경작.</span>
 <br>
 <span class="gold">비용 £15000.</span>
 <br>
 <br>
 <<if $money gte 1500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.tractorplough to true>><<set $phase to "plough">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.tractorplough to true>><<set $phase to "plough">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1418,16 +1418,16 @@ An tractor attachment for tilling.
 :: Farm Upgrades Tractor Seed Drill
 <<effects>>
 
-An tractor attachment for planting seeds.
+파종용 트랙터 부착물.
 <br><br>
 
-<span class="green">Plant seeds like you never planted before.</span>
+<span class="green">지금까지와는 차원이 다른 파종.</span>
 <br>
 <span class="gold">비용 £15000.</span>
 <br>
 <br>
 <<if $money gte 1500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.tractorseeddrill to true>><<set $phase to "seed drill">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.tractorseeddrill to true>><<set $phase to "seed drill">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1437,16 +1437,16 @@ An tractor attachment for planting seeds.
 :: Farm Upgrades Tractor Harvester
 <<effects>>
 
-An tractor attachment for harvesting.
+수확용 트랙터 부착물.
 <br><br>
 
-<span class="green">Harvest like you never harvested before.</span>
+<span class="green">지금까지와는 차원이 다른 수확.</span>
 <br>
 <span class="gold">건설 비용: £10000</span>
 <br>
 <br>
 <<if $money gte 1000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.tractorharvester to true>><<set $phase to "harvester">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.tractorharvester to true>><<set $phase to "harvester">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1456,16 +1456,16 @@ An tractor attachment for harvesting.
 :: Farm Upgrades Tractor Loader
 <<effects>>
 
-An tractor attachment for clearing.
+밭 정리용 트랙터 부착물.
 <br><br>
 
-<span class="green">Clear fields like you never cleared before.</span>
+<span class="green">지금까지와는 차원이 다른 밭 정리.</span>
 <br>
 <span class="gold">비용 £2000.</span>
 <br>
 <br>
 <<if $money gte 200000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.tractorloader to true>><<set $phase to "loader">><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.tractorloader to true>><<set $phase to "loader">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1481,10 +1481,10 @@ An tractor attachment for clearing.
 <span class="green">오두막에 아이들이 살 수 있는 아기방을 추가한다.</span>
 <br>
 
-<span class="gold">Costs £2000. Express costs £4500. Premium costs £6750.</span>
+<span class="gold">비용 £2000. 속성은 £4500. 프리미엄은 £6750.</span>
 <br>
 
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
@@ -1498,11 +1498,11 @@ An tractor attachment for clearing.
 	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.build to "nursery">><<set $farm.build_timer to 7>><<set $cottage_nursery_prep to 1>><</link>>
 	<br>
 	<<if $money gte 450000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -450000 "farmUpgrades">><<set $farm.build to "nursery">><<set $farm.build_timer to 4>><<set $cottage_nursery_prep to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -450000 "farmUpgrades">><<set $farm.build to "nursery">><<set $farm.build_timer to 4>><<set $cottage_nursery_prep to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 675000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -675000 "farmUpgrades">><<set $farm.build to "nursery">><<set $farm.build_timer to 2>><<set $cottage_nursery_prep to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -675000 "farmUpgrades">><<set $farm.build to "nursery">><<set $farm.build_timer to 2>><<set $cottage_nursery_prep to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1514,14 +1514,14 @@ An tractor attachment for clearing.
 :: Farm Upgrades Compost Bin 1
 <<effects>>
 
-A compost bin for composting green manure into fertiliser.
+녹비를 퇴비로 만들어 비료로 쓰기 위한 퇴비통.
 <br><br>
 
-<span class="green">A legal source of fertiliser, finally.</span>
+<span class="green">드디어 합법적인 비료 공급원.</span>
 <br>
-<span class="gold">Costs £5000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £5000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take two days to build. Express will take one day to build. Premium will instantly build.</span>
+<span class="blue">건설에 2일이 걸린다. 속성은 1일이 걸린다. 프리미엄은 즉시 완공된다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1529,14 +1529,14 @@ A compost bin for composting green manure into fertiliser.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "compost bin 1">><<set $farm.build_timer to 2>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "compost bin 1">><<set $farm.build_timer to 2>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "compost bin 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "compost bin 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("compost bin 1")>><<set $farm.compostbin to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("compost bin 1")>><<set $farm.compostbin to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1547,14 +1547,14 @@ A compost bin for composting green manure into fertiliser.
 :: Farm Upgrades Compost Bin 2
 <<effects>>
 
-A bigger compost bin.
+더 큰 퇴비통.
 <br><br>
 
-<span class="green">More green manure composting at once.</span>
+<span class="green">한 번에 더 많은 녹비를 퇴비로 만든다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £15000. Premium costs £22500.</span>
+<span class="gold">비용 £10000. 속성은 £15000. 프리미엄은 £22500.</span>
 <br>
-<span class="blue">Will take two days to build. Express will take one day to build. Premium will instantly build.</span>
+<span class="blue">건설에 2일이 걸린다. 속성은 1일이 걸린다. 프리미엄은 즉시 완공된다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1562,14 +1562,14 @@ A bigger compost bin.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "compost bin 2">><<set $farm.build_timer to 2>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "compost bin 2">><<set $farm.build_timer to 2>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "compost bin 2">><<set $farm.build_timer to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "compost bin 2">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<run $farm.build_finished.pushUnique("compost bin 2")>><<set $farm.compostbin to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<run $farm.build_finished.pushUnique("compost bin 2")>><<set $farm.compostbin to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1580,14 +1580,14 @@ A bigger compost bin.
 :: Farm Upgrades Compost Bin 3
 <<effects>>
 
-An even bigger compost bin.
+훨씬 더 큰 퇴비통.
 <br><br>
 
-<span class="green">Even more green manure composting at once.</span>
+<span class="green">한 번에 훨씬 더 많은 녹비를 퇴비로 만든다.</span>
 <br>
-<span class="gold">Costs £20000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £20000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take four days to build. Express will take two days to build. Premium will take a day to build.</span>
+<span class="blue">건설에 4일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1595,14 +1595,14 @@ An even bigger compost bin.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 4>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 4>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "compost bin 3">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1613,14 +1613,14 @@ An even bigger compost bin.
 :: Farm Upgrades Extract 1
 <<effects>>
 
-An aphrodisiac extraction system for lurkers.
+럴커를 위한 최음제 추출 장치.
 <br><br>
 
-<span class="green">No more waiting for Alex.</span>
+<span class="green">더 이상 알렉스를 기다릴 필요가 없다.</span>
 <br>
-<span class="gold">Costs £5000. Express costs £7500. Premium costs £11250.</span>
+<span class="gold">비용 £5000. 속성은 £7500. 프리미엄은 £11250.</span>
 <br>
-<span class="blue">Will take two days to build. Express will take one day to build. Premium will instantly build.</span>
+<span class="blue">건설에 2일이 걸린다. 속성은 1일이 걸린다. 프리미엄은 즉시 완공된다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1628,14 +1628,14 @@ An aphrodisiac extraction system for lurkers.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 500000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "extract 1">><<set $farm.build_timer to 2>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.build to "extract 1">><<set $farm.build_timer to 2>><</link>>
 	<br>
 	<<if $money gte 750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "extract 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -750000 "farmUpgrades">><<set $farm.build to "extract 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 1125000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("extract 1")>><<set $farm.extract to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1125000 "farmUpgrades">><<run $farm.build_finished.pushUnique("extract 1")>><<set $farm.extract to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1646,14 +1646,14 @@ An aphrodisiac extraction system for lurkers.
 :: Farm Upgrades Extract 2
 <<effects>>
 
-Automate the aphrodisiac extraction system.
+최음제 추출 장치를 자동화한다.
 <br><br>
 
-<span class="green">Automatic extraction from cages.</span>
+<span class="green">우리에서 자동으로 추출한다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £15000. Premium costs £22500.</span>
+<span class="gold">비용 £10000. 속성은 £15000. 프리미엄은 £22500.</span>
 <br>
-<span class="blue">Will take two days to build. Express will take one day to build. Premium will instantly build.</span>
+<span class="blue">건설에 2일이 걸린다. 속성은 1일이 걸린다. 프리미엄은 즉시 완공된다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1661,14 +1661,14 @@ Automate the aphrodisiac extraction system.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1000000>>
-	<<link [[Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "extract 2">><<set $farm.build_timer to 2>><</link>>
+	<<link [[건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "extract 2">><<set $farm.build_timer to 2>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "extract 2">><<set $farm.build_timer to 1>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "extract 2">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<run $farm.build_finished.pushUnique("extract 2")>><<set $farm.extract to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<run $farm.build_finished.pushUnique("extract 2")>><<set $farm.extract to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1679,18 +1679,18 @@ Automate the aphrodisiac extraction system.
 :: Farm Upgrades Net 1
 <<effects>>
 
-Upgrade your nets to Polyester. Lighter than your current net but still bulkier than more advanced materials. Polyester is foldable and easier to carry but can still feel heavy during extended use.
+그물을 폴리에스터로 업그레이드한다. 지금 쓰는 그물보다 가볍지만, 더 발전된 소재보다는 여전히 부피가 크다. 폴리에스터는 접을 수 있어 들고 다니기 쉽지만, 오래 쓰면 여전히 무겁게 느껴질 수 있다.
 <br><br>
 
-<span class="green">Allows up to 2 lurkers to be carried.</span>
+<span class="green">럴커를 최대 2마리까지 운반할 수 있다.</span>
 <br>
 <span class="gold">비용 £2000.</span>
 <br>
-<span class="blue">Still requires 3000 physique per lurker.</span>
+<span class="blue">여전히 럴커 한 마리당 체격 3000이 필요하다.</span>
 <br><br>
 
 <<if $money gte 200000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.net to 1>><<set $phase to "net1">><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -200000 "farmUpgrades">><<set $farm.net to 1>><<set $phase to "net1">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1700,18 +1700,18 @@ Upgrade your nets to Polyester. Lighter than your current net but still bulkier 
 :: Farm Upgrades Net 2
 <<effects>>
 
-Upgrade your nets to Nylon. Much lighter and more flexible than polyester, though still not the lightest. You can fold and carry nylon nets with ease, making them more practical for transport.
+그물을 나일론으로 업그레이드한다. 폴리에스터보다 훨씬 가볍고 유연하지만, 가장 가벼운 것은 아니다. 나일론 그물은 쉽게 접어 들고 다닐 수 있어 운반에 더 실용적이다.
 <br><br>
 
-<span class="green">Allows up to 4 lurkers to be carried.</span>
+<span class="green">럴커를 최대 4마리까지 운반할 수 있다.</span>
 <br>
 <span class="gold">비용 £5000.</span>
 <br>
-<span class="blue">Still requires 3000 physique per lurker.</span>
+<span class="blue">여전히 럴커 한 마리당 체격 3000이 필요하다.</span>
 <br><br>
 
 <<if $money gte 500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.net to 2>><<set $phase to "net2">><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -500000 "farmUpgrades">><<set $farm.net to 2>><<set $phase to "net2">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1721,18 +1721,18 @@ Upgrade your nets to Nylon. Much lighter and more flexible than polyester, thoug
 :: Farm Upgrades Net 3
 <<effects>>
 
-Upgrade your nets to Polyethylene. Lightweight and easy to store, HDPE nets are much easier to carry than nylon or polyester. Their durability is still excellent, making them a versatile choice for more demanding tasks.
+그물을 폴리에틸렌으로 업그레이드한다. 가볍고 보관이 쉬운 고밀도 폴리에틸렌 그물은 나일론이나 폴리에스터보다 훨씬 들고 다니기 쉽다. 내구성도 여전히 뛰어나 더 고된 작업에도 두루 쓸 수 있다.
 <br><br>
 
-<span class="green">Allows up to 6 lurkers to be carried.</span>
+<span class="green">럴커를 최대 6마리까지 운반할 수 있다.</span>
 <br>
 <span class="gold">건설 비용: £10000</span>
 <br>
-<span class="blue">Still requires 3000 physique per lurker.</span>
+<span class="blue">여전히 럴커 한 마리당 체격 3000이 필요하다.</span>
 <br><br>
 
 <<if $money gte 1000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.net to 3>><<set $phase to "net3">><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.net to 3>><<set $phase to "net3">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1742,18 +1742,18 @@ Upgrade your nets to Polyethylene. Lightweight and easy to store, HDPE nets are 
 :: Farm Upgrades Net 4
 <<effects>>
 
-Upgrade your nets to Polypropylene. The lightest and most portable option, polypropylene nets are ideal for anyone prioritizing ease of transport. They fold compactly and are easy to carry for extended periods.
+그물을 폴리프로필렌으로 업그레이드한다. 가장 가볍고 휴대하기 좋은 선택지로, 운반의 편리함을 최우선으로 생각하는 사람에게 이상적이다. 작게 접히고 오랫동안 들고 다녀도 부담이 적다.
 <br><br>
 
-<span class="green">Allows up to 8 lurkers to be carried.</span>
+<span class="green">럴커를 최대 8마리까지 운반할 수 있다.</span>
 <br>
 <span class="gold">비용 £15000.</span>
 <br>
-<span class="blue">Still requires 3000 physique per lurker.</span>
+<span class="blue">여전히 럴커 한 마리당 체격 3000이 필요하다.</span>
 <br><br>
 
 <<if $money gte 1500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.net to 4>><<set $phase to "net4">><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.net to 4>><<set $phase to "net4">><</link>>
 	<br>
 <</if>>
 <br>
@@ -1763,14 +1763,14 @@ Upgrade your nets to Polypropylene. The lightest and most portable option, polyp
 :: Farm Upgrades Cooler 1
 <<effects>>
 
-Install a larger refrigeration unit to better preserve your farm's produce. This basic cooler will help keep your products fresh for longer, reducing waste due to spoilage.
+농장 수확물을 더 잘 보존하도록 더 큰 냉장 설비를 설치한다. 이 기본형 냉장고는 제품을 더 오래 신선하게 유지해 상해서 버려지는 양을 줄여 준다.
 <br><br>
 
-<span class="green">Increases preservation rate from 80% to 90% per day.</span>
+<span class="green">하루당 보존율이 80%에서 90%로 오른다.</span>
 <br>
-<span class="gold">Costs £20000. Express costs £30000. Premium costs £45000.</span>
+<span class="gold">비용 £20000. 속성은 £30000. 프리미엄은 £45000.</span>
 <br>
-<span class="blue">Will take three days to build. Express will take two days to build. Premium will take a day to build.</span>
+<span class="blue">건설에 3일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1779,14 +1779,14 @@ Install a larger refrigeration unit to better preserve your farm's produce. This
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 3>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 3>><</link>>
 	<br>
 	<<if $money gte 3000000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 4500000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -4500000 "farmUpgrades">><<set $farm.build to "cooler 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1797,14 +1797,14 @@ Install a larger refrigeration unit to better preserve your farm's produce. This
 :: Farm Upgrades Cooler 2
 <<effects>>
 
-Upgrade to a state-of-the-art cooling system with improved insulation. This advanced cooler will further extend the freshness of your produce, significantly reducing spoilage.
+단열 성능이 개선된 최신식 냉각 시스템으로 업그레이드한다. 이 고급 냉장고는 수확물의 신선도를 한층 더 오래 유지해 상하는 양을 크게 줄여 준다.
 <br><br>
 
-<span class="green">Increases preservation rate to 95% per day.</span>
+<span class="green">하루당 보존율이 95%로 오른다.</span>
 <br>
-<span class="gold">Costs £35000. Express costs £52500. Premium costs £78750.</span>
+<span class="gold">비용 £35000. 속성은 £52500. 프리미엄은 £78750.</span>
 <br>
-<span class="blue">Will take five days to build. Express will take three days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 5일이 걸린다. 속성은 3일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1813,14 +1813,14 @@ Upgrade to a state-of-the-art cooling system with improved insulation. This adva
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 3500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3500000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 5>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3500000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 5>><</link>>
 	<br>
 	<<if $money gte 5250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5250000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 3>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5250000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 7875000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7875000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7875000 "farmUpgrades">><<set $farm.build to "cooler 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1831,14 +1831,14 @@ Upgrade to a state-of-the-art cooling system with improved insulation. This adva
 :: Farm Upgrades Cooler 3
 <<effects>>
 
-Implement advanced climate control technology for optimal storage conditions. This top-tier cooler will maximize the preservation of your produce, ensuring minimal loss due to spoilage.
+최적의 보관 환경을 위해 첨단 온도 관리 기술을 도입한다. 이 최상급 냉장고는 수확물의 보존을 극대화해 상해서 버려지는 양을 최소로 줄여 준다.
 <br><br>
 
-<span class="green">Increases preservation rate to 99% per day.</span>
+<span class="green">하루당 보존율이 99%로 오른다.</span>
 <br>
-<span class="gold">Costs £50000. Express costs £75000. Premium costs £112500.</span>
+<span class="gold">비용 £50000. 속성은 £75000. 프리미엄은 £112500.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1847,14 +1847,14 @@ Implement advanced climate control technology for optimal storage conditions. Th
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 5000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5000000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 7>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5000000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 7>><</link>>
 	<br>
 	<<if $money gte 7500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7500000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 4>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -7500000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 4>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 11250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -11250000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -11250000 "farmUpgrades">><<set $farm.build to "cooler 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1865,14 +1865,14 @@ Implement advanced climate control technology for optimal storage conditions. Th
 :: Farm Upgrades Water Field 1
 <<effects>>
 
-Purchase a section of land in preparation for a water field.
+수경지를 조성할 준비로 땅 한 구획을 매입한다.
 <br><br>
 
-<span class="green">Will unlock a water field when developed to completion.</span>
+<span class="green">완전히 개발하면 수경지를 사용할 수 있게 된다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £15000. Premium costs £22500.</span>
+<span class="gold">비용 £10000. 속성은 £15000. 프리미엄은 £22500.</span>
 <br>
-<span class="blue">Will take five days to extend the fence. Express will take three days to extend the fence. Premium will take two days to extend the fence.</span>
+<span class="blue">울타리를 넓히는 데 5일이 걸린다. 속성은 3일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1881,14 +1881,14 @@ Purchase a section of land in preparation for a water field.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 5>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 5>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 3>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 3>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2250000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "water field 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1899,16 +1899,16 @@ Purchase a section of land in preparation for a water field.
 :: Farm Upgrades Water Field 2
 <<effects>>
 
-Hire help to excavate the water field.
+수경지를 굴착할 일손을 고용한다.
 <br><br>
 
-<span class="green">You won't have to do the excavation yourself.</span>
+<span class="green">직접 굴착하지 않아도 된다.</span>
 <br>
-<span class="gold">Costs £15000. Express costs £22500. Premium costs £33750.</span>
+<span class="gold">비용 £15000. 속성은 £22500. 프리미엄은 £33750.</span>
 <br>
-<span class="blue">You can save on costs if you do the excavation yourself.</span>
+<span class="blue">직접 굴착하면 비용을 아낄 수 있다.</span>
 <br>
-<span class="blue">Will take three days to complete the excavation. Express will take two days to complete the excavation. Premium will take a day to complete the excavation.</span>
+<span class="blue">굴착을 마치는 데 3일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1917,14 +1917,14 @@ Hire help to excavate the water field.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 3>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 3>><</link>>
 	<br>
 	<<if $money gte 2250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 3375000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3375000 "farmUpgrades">><<set $farm.build to "water field 2">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1935,14 +1935,14 @@ Hire help to excavate the water field.
 :: Farm Upgrades Water Field 3
 <<effects>>
 
-Install synthetic liners for the water field.
+수경지에 합성 방수막을 설치한다.
 <br><br>
 
-<span class="green">Another step towards the water field.</span>
+<span class="green">수경지로 가는 또 한 걸음.</span>
 <br>
-<span class="gold">Costs £25000. Express costs £37500. Premium costs £56250.</span>
+<span class="gold">비용 £25000. 속성은 £37500. 프리미엄은 £56250.</span>
 <br>
-<span class="blue">Will take three days to install the lining. Express will take two days to install the lining. Premium will take a day to install the lining.</span>
+<span class="blue">방수막 설치에 3일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1951,14 +1951,14 @@ Install synthetic liners for the water field.
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 2500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2500000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 3>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2500000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 3>><</link>>
 	<br>
 	<<if $money gte 3750000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3750000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 5625000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -5625000 "farmUpgrades">><<set $farm.build to "water field 3">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -1969,14 +1969,14 @@ Install synthetic liners for the water field.
 :: Farm Upgrades Water Field 4
 <<effects>>
 
-Drill a well, install a pump, prepare overflow pipes and drainage systems for the water field.
+우물을 파고 펌프를 설치하고, 수경지를 위한 넘침 배관과 배수 시스템을 마련한다.
 <br><br>
 
-<span class="green">Unlocks the water field.</span>
+<span class="green">수경지를 사용할 수 있게 된다.</span>
 <br>
-<span class="gold">Costs £12000. Express costs £18000. Premium costs £27000.</span>
+<span class="gold">비용 £12000. 속성은 £18000. 프리미엄은 £27000.</span>
 <br>
-<span class="blue">Will take a week to build. Express will take four days to build. Premium will take two days to build.</span>
+<span class="blue">건설에 일주일이 걸린다. 속성은 4일이 걸린다. 프리미엄은 2일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -1985,14 +1985,14 @@ Drill a well, install a pump, prepare overflow pipes and drainage systems for th
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1200000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1200000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 4>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1200000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 4>><</link>>
 	<br>
 	<<if $money gte 1800000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1800000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1800000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2700000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2700000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2700000 "farmUpgrades">><<set $farm.build to "water field 4">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -2003,14 +2003,14 @@ Drill a well, install a pump, prepare overflow pipes and drainage systems for th
 :: Farm Upgrades Greenhouse Sprinklers
 <<effects>>
 
-Have your usual workers install a sprinkler system in the greenhouse behind the orphanage.
+평소 일꾼들에게 고아원 뒤 온실에 스프링클러 시스템을 설치시킨다.
 <br><br>
 
-<span class="green">Adds automatic watering to the orphanage greenhouse crops.</span>
+<span class="green">고아원 온실 작물에 자동 급수가 추가된다.</span>
 <br>
-<span class="gold">Costs £10000. Express costs £15000. Premium costs £20000.</span>
+<span class="gold">비용 £10000. 속성은 £15000. 프리미엄은 £20000.</span>
 <br>
-<span class="blue">Will take four days to build. Express will take two days to build. Premium will take one day to build.</span>
+<span class="blue">건설에 4일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -2019,14 +2019,14 @@ Have your usual workers install a sprinkler system in the greenhouse behind the 
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1000000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 4>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1000000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 4>><</link>>
 	<br>
 	<<if $money gte 1500000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 2000000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2000000 "farmUpgrades">><<set $farm.build to "greenhouse 1">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>
@@ -2037,14 +2037,14 @@ Have your usual workers install a sprinkler system in the greenhouse behind the 
 :: Farm Upgrades Greenhouse Hydroponics
 <<effects>>
 
-Have your usual workers install hydroponic grow beds inside the orphanage greenhouse.
+평소 일꾼들에게 고아원 온실 안에 수경 재배 베드를 설치시킨다.
 <br><br>
 
-<span class="green">Adds more beds to the greenhouse. They're too small for mass production, but they'll be good for cooking ingredients.</span>
+<span class="green">온실에 베드가 더 생긴다. 대량 생산에는 너무 작지만, 요리 재료로는 쓸 만하다.</span>
 <br>
-<span class="gold">Costs £15000. Express costs £22500. Premium costs £30000.</span>
+<span class="gold">비용 £15000. 속성은 £22500. 프리미엄은 £30000.</span>
 <br>
-<span class="blue">Will take four days to build. Express will take two days to build. Premium will take one day to build.</span>
+<span class="blue">건설에 4일이 걸린다. 속성은 2일이 걸린다. 프리미엄은 1일이 걸린다.</span>
 <br>
 <span class="blue">프로젝트가 완료될 때까지 농장에 인부들이 있을 것이다.</span>
 <br><br>
@@ -2053,14 +2053,14 @@ Have your usual workers install hydroponic grow beds inside the orphanage greenh
 	<span class="blue">한 번에 하나의 업그레이드만 진행할 수 있다.</span>
 	<br>
 <<elseif $money gte 1500000>>
-	<<link [[Purchase (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 4>><</link>>
+	<<link [[구매한다 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -1500000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 4>><</link>>
 	<br>
 	<<if $money gte 2250000>>
-		<<link [[Express Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 2>><</link>>
+		<<link [[속성 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -2250000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 2>><</link>>
 		<br>
 	<</if>>
 	<<if $money gte 3000000>>
-		<<link [[Premium Build (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 1>><</link>>
+		<<link [[프리미엄 건설 (0:20)|Farm Upgrades Build]]>><<pass 20>><<money -3000000 "farmUpgrades">><<set $farm.build to "greenhouse 2">><<set $farm.build_timer to 1>><</link>>
 		<br>
 	<</if>>
 <</if>>

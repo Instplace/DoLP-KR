@@ -72,8 +72,8 @@
 	<<else>>
 		<<set $clothingShop.ban to 14>>
 	<</if>>
-	"That should do it," <<he>> continues. "Well. You won't be entering this establishment for quite some time. You aren't getting into the jewellery store either.
-	Hopefully this will teach you a lesson."
+	"이걸로 됐군." <<he>>【이가】 말을 잇는다. "자. 넌 한동안 이 건물에 들어오지 못할 거야. 보석 가게에도 못 들어간다.
+	이걸로 교훈을 얻길 바라."
 <</if>>
 <br><br>
 "자, 날 따라와. 여기서 밖으로 데려다주지. 널 곧장 형틀로 끌고 가지 않는 걸 다행으로 알아."
@@ -89,17 +89,14 @@
 <<set $clothingShop.banCount++>>
 <<set $clothingShop.spotted to false>>
 최대한 조용히 가게 문을 닫고 돌아서자, 당신은 경비원과 정면으로 마주쳐 경악한다. 도망칠 생각조차 하기 전에 <<He>>【이가】 당신의 어깨를 덥석 붙잡는다.
-find a security guard face to face with you. <<He>> places a hand on your shoulder before you can even think of running.
 <br><br>
 "이게 누구야? 값비싼 옷가지를 훔쳐 달아나려던 작은 쥐새끼잖아?" <<he>>【은는】 혀를 차며 말한다. "주인한테 바로 일러바쳐야겠군."
-disapproving expression. "I'll be informing the owners of this situation."
 <br><br>
 <<He>>【은는】 휴대전화를 꺼내 가게 주인에게 전화를 거는 듯하다.
 <<if $clothingShop.ban gt 0>>
 	<<set $clothingShop.banExtension to true>>
 	<<set $clothingShop.ban += 7>>
 	"아하! 이미 출입 금지 상태였잖아?" <<he>>【이가】 말을 잇는다. "이 가게는 출입 금지 규정이 꽤 엄격하거든. 여기서 쇼핑하고 싶다면 한참은 더 기다려야 할 거다."
-	so it's going to be a good while before you're going to be able to shop here."
 <<else>>
 	<<if $clothingShop.banCount lt 4>>
 		<<set $clothingShop.ban to 7>>
@@ -108,8 +105,8 @@ disapproving expression. "I'll be informing the owners of this situation."
 	<<else>>
 		<<set $clothingShop.ban to 14>>
 	<</if>>
-	"That should do it," <<he>> continues. "Well. You won't be entering this establishment for quite some time. You aren't getting into the clothing store either.
-	Hopefully this will teach you a lesson."
+	"이걸로 됐군." <<he>>【이가】 말을 잇는다. "자. 넌 한동안 이 건물에 들어오지 못할 거야. 의류점에도 못 들어간다.
+	이걸로 교훈을 얻길 바라."
 <</if>>
 <br><br>
 "자, 날 따라와. 여기서 밖으로 데려다주지. 널 곧장 형틀로 끌고 가지 않는 걸 다행으로 알아."

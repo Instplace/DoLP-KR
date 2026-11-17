@@ -771,7 +771,7 @@
 	<<else>>
 
 		<<if $waterdragontf is 1 or $waterdragon gte 7 or $transformationParts.traits.aquatic isnot "disabled">>
-			<<icon "tf_waterdragon.png">><<link [[Swim to the island|Water Dragon Island Travel]]>><</link>>
+			<<icon "tf_waterdragon.png">><<link [[섬으로 헤엄쳐 간다|Water Dragon Island Travel]]>><</link>>
 			<br>
 		<</if>>
 

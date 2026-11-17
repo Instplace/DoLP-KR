@@ -203,11 +203,11 @@
 	<<if $photo.audienceSize is 1 and $photo.timesWithThisAudienceSize is 1>>
 		<!-- First time we've seen an audience -->
 		<br><br>
-		Niki looks up from adjusting the tripod camera. "Photoshoots are sometimes observed by others in the industry," <<nnpc_he "Niki">> says. "It's normal. You get an extra <span class="gold">£<<print Math.round(50* ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span> per person. There'll be more interest as you become better known."
+		니키가 삼각대 카메라를 조절하다 말고 고개를 든다. "사진 촬영은 가끔 업계의 다른 사람들이 참관하기도 해요." <<nnpc_he "Niki">>【이가】 말한다. "흔한 일이에요. 한 사람당 <span class="gold">£<<print Math.round(50* ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span>씩 더 받을 수 있어요. 당신이 더 유명해지면 더 많은 관심을 받게 될 거예요."
 	<</if>>
 
 	<br><br>
-	<<link [[Continue with audience|Photo Model 3]]>><<set $photo.money += Math.round(( 50 * $photo.audienceSize ) * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>><</link>>
+	<<link [[관객과 함께 계속한다|Photo Model 3]]>><<set $photo.money += Math.round(( 50 * $photo.audienceSize ) * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>><</link>>
 	<br>
 	<<link [[관객을 거부한다|Photo Model Refuse]]>><<npcincr Niki love -1>><</link>><<llove "Niki">>
 	<br>
@@ -762,7 +762,7 @@
 <<if $photo.pubfame>>
 	"다음은 속옷 촬영이에요." <<nnpc_he "Niki">>【이가】 말한다. <<nnpc_He "Niki">>【은는】 당신을 힐끗 본다. "억지로 할 필요 없어요. 그만하고 싶으면 그만할 거예요."
 <<else>>
-	Niki pauses. "We could wrap it up here," <<nnpc_he "Niki">> says. "But if you're down for shots in your underwear, I'll throw in another <span class="gold">£<<print Math.round(400 * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span>. Just another half hour."
+	니키가 잠시 멈춘다. "여기서 마무리할 수도 있어요." <<nnpc_he "Niki">>【이가】 말한다. "하지만 속옷 차림으로 촬영할 의향이 있다면, <span class="gold">£<<print Math.round(400 * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span>【을를】 더 얹어줄게요. 30분만 더 하면 돼요."
 <</if>>
 <br><br>
 
@@ -847,7 +847,7 @@
 <<if $photo.pubfame>>
 	니키가 영상을 살펴본다. "조금만 더 하면 돼요. 그 $worn.under_lower.name【을를】 벗을 수 있다면, 여기서 끝내고 사진을 받게 될 거예요."
 <<else>>
-	Niki examines the footage. "Could I tempt you to remove those $worn.under_lower.name?" <<nnpc_he "Niki">> asks without looking. "There'll be an extra <span class="gold">£<<print Math.round(500 * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span> in it. Thirty more minutes."
+	니키가 영상을 살펴본다. "그 $worn.under_lower.name【을를】 벗도록 유혹해도 될까요?" <<nnpc_he "Niki">>【이가】 쳐다보지도 않고 묻는다. "<span class="gold">£<<print Math.round(500 * ((fameTotal() + Math.clamp($beauty / 3, 0, 3000)) / 3000))>></span>【이가】 더 붙어요. 30분만 더요."
 <</if>>
 
 <br><br>

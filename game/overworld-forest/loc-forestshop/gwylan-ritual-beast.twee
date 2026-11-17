@@ -736,7 +736,7 @@
 			<</if>>
 		<</if>>
 		당신은 몸을 떤다. "바보 같은 <<pcpetname "Gwylan" "simple">>."
-		<<He>> gives your <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<bottom>><<else>><<bellyDescription>><</if>> a few light pats, before standing up and continuing <<his>> stretches. <<arousal 1200>><<ggarousal>>
+		<<He>>【은는】 당신의 <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<bottom>><<else>><<bellyDescription>><</if>>【을를】 가볍게 몇 번 두드려 주고는, 일어나서 <<his>> 스트레칭을 계속한다. <<arousal 1200>><<ggarousal>>
 	<</if>>
 	<<set $beastRitual.petplay++>>
 <</if>>
@@ -1608,7 +1608,7 @@
 			"나 여기 있어, 너무 뒤처져서 미안해." 당신이 말한다.
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"Jeez, you need to worry less about me. I'm fine," you say.
+				"아 진짜, 나 걱정 좀 덜 해도 돼. 난 괜찮아." 당신이 말한다.
 			<<else>>
 				"와, 그렇게나 나를 신경 쓰는 줄 몰랐네. 난 괜찮아." 당신이 말한다.
 			<</if>>
@@ -2399,18 +2399,18 @@
 
 <<if $avery_fate is "ascended" and $avery_mansion?.fox?.end>>
 	<<switch $speech_attitude>>
-		<<case "meek" "polite" "flamboyant" "special">>"That song was so pretty, but I've heard a different version of it. Come to think of it,
-		<<case "bratty" "confident">>"Where did you learn that song? I've heard it before, but the words were different. In fact,
+		<<case "meek" "polite" "flamboyant" "special">>"그 노래 정말 예뻤어요, 그런데 다른 버전을 들어 본 적이 있어요. 생각해 보니,
+		<<case "bratty" "confident">>"그 노래는 어디서 배웠어요? 전에 들어 본 적이 있는데, 가사가 달랐어요. 사실,
 		<<default>>"그 노래 어디선가 들어본 것 같아요. 가사를 바꾸셨네요. 생각해보니,
 	<</switch>>
 	그 노래에 대한 이상한 꿈을 꿨어요. 뿔이 달린 누군가가 피아노로 그 멜로디를 연주하면서 노래를 불렀어요."
 	<br><br>
 
-	"Are you certain it was a dream?" <<He>> looks to you with a smile. "Dreams are often reflections of memories sprinkled with half-truths. The words are interchangable. It's the melody that's important."
+	"정말 꿈이었던 게 확실해?" <<He>>【은는】 미소를 띠고 당신을 바라본다. "꿈은 반쯤의 진실이 뿌려진 기억의 반영일 때가 많아. 가사는 바뀔 수 있어. 중요한 건 멜로디야."
 <<elseif $avery_fate isnot "ascended" and $avery_mansion?.fox?.end and $brownFoxRevealed>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"Your voice is so pretty.
-		<<case "bratty" "confident">>"Nice singing.
+		<<case "meek" "shy">>"목소리가 정말 예뻐요.
+		<<case "bratty" "confident">>"노래 잘하네요.
 		<<default>>"목소리가 아름답네요.
 	<</switch>>
 	그 노래는 어디서 배웠어요? 언젠가 그 노래에 대해 더 말해주겠다고 했잖아요. 가사를 들으니 더 익숙하게 들려요."
@@ -2419,8 +2419,8 @@
 	<<His>> 고개가 갸웃거린다. "기억하고 있다니 다행이네. 가사를 이해했다는 게 놀랍긴 하지만."
 <<elseif $jordansong>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"That song was so pretty, where did you learn it? I've heard it recently, but the words were different."
-		<<case "bratty" "confident" "special">>"Where did you learn that song? I've heard it before, but with different words."
+		<<case "meek" "shy">>"그 노래 정말 예뻤어요, 어디서 배우셨어요? 최근에 들었는데, 가사가 달랐어요."
+		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어요? 전에도 들은 적이 있는데, 가사가 달랐어요."
 		<<default>>"그 노래 어디선가 들어본 것 같아요. 가사는 좀 달랐지만요. 어디서 배우셨어요?"
 	<</switch>>
 	<br><br>
@@ -2433,8 +2433,8 @@
 	<</if>>
 <<else>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"That song was so pretty, where did you learn it? I've heard it recently, but not with words."
-		<<case "bratty" "confident" "special">>"Where did you learn that song? I've heard it before, but no one else has known the words."
+		<<case "meek" "shy">>"그 노래 정말 예뻤어요, 어디서 배우셨어요? 최근에 들었는데, 가사는 없었어요."
+		<<case "bratty" "confident" "special">>"그 노래 어디서 배웠어요? 전에도 들어 봤는데, 가사를 아는 사람은 아무도 없었어요."
 		<<default>>"그 노래 어디선가 들어본 것 같아요. 다른 사람이 가사를 아는 건 이번이 처음이에요. 어디서 배우셨어요?"
 	<</switch>>
 	<br><br>
@@ -2541,7 +2541,7 @@
 <<switch $speech_attitude>>
 	<<case "meek">>
 		<<if $speech_attitude_special is "cruel">>
-			"H-hey, um... Can I... get a proper thank you?" you ask, tapping your lips.
+			"저-저기, 음... 제대로 된 감사 인사... 받아도 돼?" 당신은 입술을 톡톡 치며 묻는다.
 		<<else>>
 			"저-저기, 제대로 된 감사 인사는 없어?" 당신은 입술을 톡톡 치며 묻는다.
 		<</if>>
@@ -2944,7 +2944,7 @@
 <<if $beastRitual.petplay gte 3>>
 	<<nnpc_He "Gwylan">>【이가】 휘파람을 분다.
 	<<if $hypnosis_traits.devotion gte 1>>
-		<<hypnosisText "Your ears twitch, and you sit in front of <<nnpc_him 'Gwylan'>> like a <<if ($cat gte 6 or ($transformationParts.cat.tail isnot 'hidden' and $transformationParts.cat.tail isnot 'disabled'))>>cat<<else>>dog<</if>> without even thinking about it.">>
+		<<hypnosisText "귀가 쫑긋거리고, 당신은 생각할 겨를도 없이 그윌란 앞에 <<if ($cat gte 6 or ($transformationParts.cat.tail isnot 'hidden' and $transformationParts.cat.tail isnot 'disabled'))>>고양이<<else>>개<</if>>처럼 앉는다.">>
 	<<else>>
 		당신은 그것이 자신을 향한 것임을 깨닫는다. "<<gwylanCommand "Sit," 2>>" <<nnpc_he "Gwylan">>【이가】 당신의 목줄을 당기며 말한다. 당신은 그대로 한다.
 	<</if>>
@@ -4318,8 +4318,8 @@
 		<br>
 	<<elseif $phase is "offer">>
 		<<switch $speech_attitude>>
-			<<case "meek" "shy">>"Can I return the favour first?" you ask shyly.
-			<<case "bratty" "confident">>"Let me return the favour first. It'd be a shame to let all that nectar go to waste," you say.
+			<<case "meek" "shy">>"제가 먼저 보답해도 될까요?" 당신은 수줍게 묻는다.
+			<<case "bratty" "confident">>"제가 먼저 보답할게요. 이 꿀이 전부 헛되이 버려지면 아깝잖아요." 당신이 말한다.
 			<<default>>"제가 먼저 보답하게 해주는 건 어때요?" 당신은 묻는다.
 		<</switch>>
 		<br><br>
@@ -4403,7 +4403,7 @@
 <<elseif $phase is "cuddle">>
 	당신은 그윌란에게 매달리고, 두 사람은 천천히 정원의 풀밭 위로 눕는다. <<He>>【이가】 당신을 더 가까이 끌어당겨, 안은 채로 머리카락을 쓰다듬는다. "<<pcPetname "Gwylan" "good">>." <<he>>【이가】 속삭인다.
 	<<if $bodysize gte 4>>
-		<<He>> buries <<his>> face in your chest.
+		<<He>>【은는】 <<his>> 얼굴을 당신의 가슴에 묻는다.
 	<<elseif $bodysize gte 3>>
 		<<He>>【은는】 얼굴을 당신의 어깨에 묻는다.
 	<<else>>
@@ -4912,7 +4912,7 @@
 					<</if>>
 				<</if>>
 				<<if _gwylanStatus.includes("wantsPregnancy") and $settings.pregnancySpeechEnabled>>
-					"Good, because I need this. I need you to put <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>a litter<<else>>your child<</if>> in me." <<His>> voice trembles.
+					"좋아, 이게 필요하거든. 네가 내 안에 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>새끼들을<<else>>네 아이를<</if>> 갖게 해 줬으면 좋겠어." <<His>> 목소리가 떨린다.
 				<<elseif _gwylanStatus.includes("heat") and $settings.pregnancySpeechEnabled>>
 					"좋아, 네가 필요하거든. 네가 날 임신시켜 줬으면 좋겠어." <<His>> 목소리가 떨린다.
 				<</if>>
@@ -5421,7 +5421,7 @@
 		<<else>>
 			"드라이어드가 특히 심하게 오염되면, 일부 덩굴이 과포화 상태가 될 수 있어. 그 덩굴을 정화할 수 없으면, 그것들도 잘라내서 먹어치워야 하지.
 		<</if>>
-		I typically chop them up and use them in various dishes over the span of the week. It's easier on me if I don't do it all at once." <<He>> pulls the thorn back out of <<his>> skin. It's a noticably lighter shade now.
+		나는 보통 그걸 잘게 썰어서 일주일 동안 여러 요리에 나눠 써. 한꺼번에 다 하지 않는 편이 나한테 수월하거든." <<He>>【은는】 <<his>> 피부에서 가시를 다시 뽑아낸다. 이제 눈에 띄게 옅은 색이 되었다.
 		"난 꽤 익숙해. 어쨌든, 내 일과니까." <<He>>【은는】 당신에게서 시선을 피한다. "그 일과가 바뀌는 게 특별히 싫다는 건 아니야. 네가 여기 있어서 기쁘고, 머물기로 해줘서 고마워."
 	<<else>>
 		<<if $gwylanSeen.includes("request_gold_accessories") and !$gwylanSeen.includes("ritual_poison_talk")>>
@@ -5511,12 +5511,12 @@
 				"도-도와줄게." 당신은 말한다. "반은 내가 맡을 수 있어, 전에도 해봤으니까."
 				<<case "bratty" "special">>
 				<<if $speech_attitude_special is "cruel">>
-					"That stuff is gross to take in," you say. "Luckily I'm a master at it. Let me help."
+					"그거 삼키기 역겹잖아." 당신은 말한다. "다행히 난 그걸 잘해. 도와줄게."
 				<<else>>
 					"그거 먹기 역겹잖아." 당신은 말한다. "나도 알아. 도와줄게."
 				<</if>>
 			<<case "polite" "flamboyant">>
-				"Please let me help," you say. "I can take half, I've done it before."
+				"나도 돕게 해줘." 당신은 말한다. "반은 내가 맡을 수 있어, 전에도 해봤으니까."
 			<<default>>
 				"도와줄게." 당신은 말한다. "반은 내가 맡을 수 있어, 전에도 해봤으니까."
 		<</switch>>
@@ -5526,12 +5526,12 @@
 				"도-도와줄게." 당신은 말한다. "반은 내가 맡을게."
 				<<case "bratty" "special">>
 				<<if $speech_attitude_special is "cruel">>
-					"Well, if you can't take it, I will help."
+					"그래, 네가 못 받아들이겠으면 내가 도울게."
 				<<else>>
 					"기분 나빠지잖아. 내가 도울게."
 				<</if>>
 			<<case "polite" "flamboyant">>
-				"Please let me help," you say. "I can take half."
+				"나도 돕게 해줘." 당신은 말한다. "반은 내가 맡을 수 있어."
 			<<default>>
 				"도와줄게." 당신은 말한다. "반은 내가 맡을게."
 		<</switch>>
@@ -5549,10 +5549,10 @@
 		<<case "meek">>
 			"ㄷ-내가 반 맡을게."
 		<<case "polite" "flamboyant" "special">>
-			"Please let me help."
+			"나도 돕게 해줘."
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"I'm taking the half, you clearly need help."
+				"내가 반 맡을 거야. 너 도움이 필요한 게 분명하잖아."
 			<<else>>
 				"도와줄게. 묻는 거 아니야."
 			<</if>>

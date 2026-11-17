@@ -6,7 +6,7 @@
 		<<if _deniedOrgasm and $speechorgasmnocumcount is 0>>
 			<<set $speechorgasmnocumcount += 1>>
 			<<if $enemyanger lte 40>>
-				"Be a good boy and maybe I'll let you cum."
+				"착한 남자애처럼 굴면 어쩌면 싸게 해줄지도 모르지."
 			<<elseif $enemyanger lte 100>>
 				"방금 가려고 하지 않았어? 어떻게 된 거지?"
 			<<else>>
@@ -14,11 +14,11 @@
 			<</if>>
 		<<elseif _deniedOrgasm and $enemyanger gt 100>>
 			<<switch random(1,5)>>
-				<<case 1>> "What's the matter? Did that orgasm hurt? Good lesson for a little brat.",
-				<<case 2>> "Good! You deserve it, you little brat.",
+				<<case 1>> "왜 그래? 절정이 아팠어? 건방진 꼬맹이한테 좋은 교훈이군.",
+				<<case 2>> "좋아! 넌 그래도 싸, 꼬맹아.",
 				<<case 3>> "우리가 좀 더 거칠게 다뤄주면 절정의 고통이 조금 더 견디기 쉬워질지도 모르겠는데."
-				<<case 4>> "You want to cum? Start begging for it.",
-				<<case 5>> "If you act like a good little slut you can cum.",
+				<<case 4>> "싸고 싶어? 그럼 빌기 시작해.",
+				<<case 5>> "착한 걸레처럼 굴면 싸게 해줄게.",
 			<</switch>>
 		<<elseif ($orgasmcount gte 24 or $femaleclimax) and $speechorgasmnocumcount is 0>>
 			<<set $speechorgasmnocumcount += 1>>
@@ -58,8 +58,8 @@
 					<<case 3>> "<<pShe>>【이가】 또 싸네? 이거 끝내주는데!"
 					<<case 4>> "이러다간 아주 한 방울도 안 남게 짜이겠어."
 					<<case 5>> "나중에 쓸 수 있게 <<pher>> 정액 좀 남겨두고 싶어."
-					<<case 6>> "Cum any more and you will turn stupid."
-					<<case 7>> "Let's see how much it takes for <<pher>> to break."
+					<<case 6>> "더 싸면 멍청이가 돼 버릴걸."
+					<<case 7>> "<<pShe>>【이가】 얼마나 해야 무너지는지 한번 보자."
 					<<default>> "저렇게 많이 쌌는데, 저 녀석 무사할까?"
 				<</switch>>
 			<</if>>
@@ -202,7 +202,7 @@
 						<<elseif $brothelVirginityState is "chastitylost">>
 							<<print [
 								`"이게 대체 뭐야? 이 걸레년은 전혀 처녀가 아니잖아!"`,
-								`"Filthy, lying piece of meat! You're getting what you deserve!"`,
+								`"더럽고 거짓말쟁이 같은 고깃덩어리! 넌 그래도 싸!"`,
 								`"너 같은 걸레가 처녀가 아닌 건 놀랄 일도 아니지."`,
 								`"이게 거짓말하는 창녀들의 최후야!"`,
 								`"넌 이런 취급을 받을 자격도 없어. 분명 강간당하는 걸 즐기고 있을 테지."`,
@@ -272,8 +272,8 @@
 				`"씨발 <<bitch>> 같으니, 어차피 널 ${($player.sex is 'm' ? "여자애" : "남자애")} 다루듯이 쑤셔주마."`,
 				`"이게 웃긴 줄 아냐? 어차피 정신 나갈 때까지 박아줄 테니까."`,
 				`"이 대가를 치르게 해주지, 걸레년."`,
-				`"You want to be treated like a ${($player.sex is 'm' ? "girl" : "boy")} ? I'll fuck you like one then,"`,
-				`"Don't worry I'd treat you like a slut anyways."`,
+				`"${($player.sex is 'm' ? "여자애" : "남자애")} 취급을 받고 싶다고? 그럼 그렇게 박아주지."`,
+				`"걱정 마, 어차피 널 걸레처럼 다뤄줄 테니까."`,
 			][random(0,6)]>>
 		<<elseif $speechCrossdressAroused is 1>>
 			<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 바라본다.
@@ -283,7 +283,7 @@
 				`"크로스드레서 걸레만큼 날 흥분시키는 건 없지."`,
 				`"선물 포장을 뜯는 기분인걸."`,
 				`"교활한 걸레년, 널 어떻게 다뤄야 할지 딱 알겠군."`,
-				`"This is really the best of both worlds."`,
+				`"이거야말로 양쪽 장점을 다 가졌네."`,
 			][random(0,5)]>>
 		<<elseif $speechCrossdressShock is 1>>
 			<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다.
@@ -293,7 +293,7 @@
 				`"너 진짜 응큼하구나."`,
 				`"이것도 꽤 괜찮네."`,
 				`"완전히 깜빡 속았어."`,
-				`"Don't worry you still going to make me feel good."`,
+				`"걱정 마, 어쨌든 날 기분 좋게 해줄 거잖아."`,
 			][random(0,5)]>>
 		<<elseif $speechCrossdressDisappointed is 1>>
 			<<He>>【이가】 당신의 <<genitals>>【을를】 보며 한숨을 쉰다.
@@ -312,7 +312,7 @@
 				`"씨발 <<bitch>>. 어쨌든 <<girl>>처럼 쑤셔주지."`,
 				`"존나 변태 같지만, 어찌 됐든 정신 나갈 때까지 박아주마."`,
 				`"정상인인 척 날 속이다니 믿을 수가 없군. 대가를 치러야 할 거야."`,
-				`"I should take a picture and show everyone what a freak you are."`,
+				`"사진을 찍어서 네가 얼마나 변태인지 다들 보게 해줘야겠어."`,
 			][random(0,5)]>>
 		<<elseif $speechHermAroused is 1>>
 			<<He>>【이가】 방금 드러난 당신의 <<genitals>>【을를】 굶주린 시선으로 바라본다.
@@ -322,7 +322,7 @@
 				`"소년이랑 소녀가 하나로 섞여 있다니. 마치 생일 같네."`,
 				`"선물 포장을 뜯는 기분인걸."`,
 				`"교활한 걸레년, 널 어떻게 다뤄야 할지 딱 알겠군."`,
-				`"You really are the best of both worlds."`,
+				`"넌 정말 양쪽 장점을 다 가졌구나."`,
 			][random(0,5)]>>
 		<<elseif $speechHermShock is 1>>
 			<<He>>【이가】 충격에 빠져 당신의 <<genitals>>【을를】 쳐다본다.
@@ -404,8 +404,8 @@
 				`"이 빌어먹을 변태 새끼."`,
 				`"씨발 <<bitch>>. 정신을 못 차리게 박아주지."`,
 				`"내가 씨발 존나 놀란 걸 보니까 아주 맘에 들겠지. 내가 널 끝내고 나면 웃음기도 싹 가실 거야."`,
-				`"Put that shit away you fucking slut."`,
-				`"What you arn't good enough without a toy."`,
+				`"그딴 건 치워, 이 씨발 걸레년아."`,
+				`"뭐야, 장난감 없이는 안 되는 거냐?"`,
 			][random(0,5)]>>
 		<<elseif $speechExposeGenitals is 1>>
 			/* ToDo: Strapon - check if any one this needs its own strapon text */
@@ -506,7 +506,7 @@
 					<<if $NPCList[_n].penis isnot "none">>
 						<<He>>【이가】 말한다. "나중에 널 다시 찾아내서 내 손으로 임신시켜 주마!"
 					<<elseif $enemyarousal gte ($enemyarousalmax /5) * 3>>
-						<<He>> speaks. and rubs your tummy "How cute, seems you been having fun"
+						<<He>>【이가】 말하며 당신의 배를 쓰다듬는다. "귀엽네, 꽤 재미 봤나 보지."
 					<<else>>
 						<<He>>【이가】 말한다. "이 거추장스러운 배만 없었으면 얼마나 더 쥑여줬을지 상상도 안 가는군."
 					<</if>>
@@ -517,33 +517,33 @@
 				<</if>>
 			<<elseif $enemyanger lte 40>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-					<<He>> speaks. "Look at that, the little pregnant slut can make me cum."
+					<<He>>【이가】 말한다. "이것 봐라, 임신한 꼬마 걸레가 날 싸게 만드네."
 				<<elseif $enemyarousal gte ($enemyarousalmax /5) * 3>>
-					<<He>> speaks. "Fuck, You want me to breed you aswell?"
+					<<He>>【이가】 말한다. "씨발, 너한테도 임신시켜 달라는 거냐?"
 				<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-					<<He>> speaks. "Be a good little cumdump."
+					<<He>>【이가】 말한다. "착한 정액받이가 되어 봐."
 				<<else>>
-					<<He>> speaks. "What a cute bump."
+					<<He>>【이가】 말한다. "귀여운 배네."
 				<</if>>
 			<<elseif $enemyanger lte 60>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-					<<He>> speaks. "I'll find after you gave birth so we can make you pregnant again."
+					<<He>>【이가】 말한다. "네가 애를 낳고 나면 찾아낼 거야, 또 임신시킬 수 있게."
 				<<elseif $enemyarousal gte ($enemyarousalmax /5) * 3>>
-					<<He>> speaks. "You a abused little pregnant cocksleeve aren't you?"
+					<<He>>【이가】 말한다. "혹사당하는 임신한 육변기지, 안 그래?"
 				<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-					<<He>> speaks. "Should I abuse your little pregnant hole?"
+					<<He>>【이가】 말한다. "임신한 네 구멍을 마구 써볼까?"
 				<<else>>
-					<<He>> speaks. "Don't make me mad or I'll breed you more."
+					<<He>>【이가】 말한다. "날 화나게 하면 더 임신시켜 버린다."
 				<</if>>
 			<<elseif $enemyanger lte 80>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-					<<He>> speaks. "Spread yourself wide, lets see if we can make you double pregnant."
+					<<He>>【이가】 말한다. "활짝 벌려. 두 배로 임신시킬 수 있나 보자."
 				<<elseif $enemyarousal gte ($enemyarousalmax /5) * 3>>
-					<<He>> speaks. "You better be a good little bred slut."
+					<<He>>【이가】 말한다. "얌전한 임신 걸레가 되는 게 좋을걸."
 				<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-					<<He>> speaks. "You would think a little pregnant <<bitch>> would get you off."
+					<<He>>【이가】 말한다. "임신한 <<bitch>>쯤 되면 날 만족시켜 줄 줄 알았지."
 				<<else>>
-					<<He>> speaks. "You better still have a tight little ${($player.sex is 'm' ? "ass" : "cunt")}, for your sake."
+					<<He>>【이가】 말한다. "네 몸을 위해서라도 아직 꽉 조이는 ${($player.sex is 'm' ? "엉덩이" : "보지")}여야 할 거야."
 				<</if>>
 			<<elseif $enemyanger lte 100>>
 				<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -573,8 +573,8 @@
 					<<else>>
 						<<He>>【이가】 말한다.
 						<<print [
-						`"Yeah, keep moving just like that!"`,
-						`"Get pregnant get pregnant get pregnant get pregnant get pregnant."`
+						`"그래, 계속 그렇게 움직여!"`,
+						`"임신해 임신해 임신해 임신해 임신해."`
 						][random(0,1)]>>
 					<</if>>
 				<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
@@ -632,27 +632,27 @@
 			<<if $player.gender_appearance is "m">>
 				<<if $player.breastsize lte 0>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "Guess I'm not surprised."
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "뭐, 놀랍지도 않네."
 					<<else>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "No surprises here."
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "새로울 게 없네."
 					<</if>>
 				<<elseif $player.breastsize lte 1>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "Those are asking to be bullied."
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "괴롭혀 달라고 졸라대는 가슴이네."
 					<<else>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "Cute and puffy."
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "귀엽고 통통하네."
 					<</if>>
 				<<elseif $player.breastsize lte 2>>
 					<<if $enemyanger lte 70>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "정말 끝내주는 <<bitch>> 젖통을 달고 있네."
 					<<else>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "those are some slutty tits on you"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "음탕한 젖통을 달고 있네."
 					<</if>>
 				<<elseif $player.breastsize lte 4>>
 					<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "마치 여자 같은 젖가슴을 가졌잖아!"
 				<<else>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "You really want to be a cow so bad?"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "그렇게 젖소가 되고 싶냐?"
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "이거 존나 거대한데! 소년의 모유라도 좀 나눠주지 그래."
 					<</if>>
@@ -660,32 +660,32 @@
 			<<else>>
 				<<if $player.breastsize lte 0>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "How cute that chest of yours is!"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "네 가슴 진짜 귀엽다!"
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "납작하다고 부끄러워할 거 없어, 이거 진짜 귀여우니까."
 					<</if>>
 				<<elseif $player.breastsize lte 1>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "So tiny, that means they need the most attention"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "이렇게 작으니까 제일 많이 만져줘야겠네."
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "발육 중인 가슴만큼 끝내주는 것도 없지. 엄청 음탕하고 귀엽네."
 					<</if>>
 				<<elseif $player.breastsize lte 2>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "How small!"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "정말 작네!"
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "네 쪼그만 젖가슴은 정말 음탕하군."
 					<</if>>
 
 				<<elseif $player.breastsize lte 4>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "Who knew sluts could have cow tits?"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "걸레한테 젖소 젖통이 달릴 줄 누가 알았겠어?"
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "가슴이 이렇게 노출된다고 부끄러워하지 마, 원래 그러라고 달린 거니까."
 					<</if>>
 				<<else>>
 					<<if $enemyanger lte 70>>
-						<<He>> ?admires your newly-exposed <<breasts>>. "I've seen cows with smaller tits than these!"
+						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "이것보다 작은 젖통을 가진 젖소도 본 적 있어!"
 					<<else>>
 						<<He>>【은는】 막 드러난 당신의 <<breasts>>【을를】 ?admires. "이것들 엄청 크네! 아주 훌륭한 젖소가 되겠어."
 					<</if>>
@@ -695,7 +695,7 @@
 		<<elseif $speechScreamForHelp is 1>>
 			<<set $speechScreamForHelp to 0>>
 			<<if $enemyanger lte 50>>
-				<<He>> <<print $CTAnnoyedMidC.random()>>
+				<<He>>【이가】 <<print $CTAnnoyedMidC.random()>>
 				<<print [
 					`"씨발 그 주둥이 닥쳐."`,
 					`"내가 널 쥐어패길 바라는 거야? 조용히 해!"`,
@@ -704,11 +704,11 @@
 					`"살려달라고 소리쳐? 아무도 좆도 신경 안 쓴다고."`,
 				][random(0,4)]>>
 			<<else>>
-				<<He>> <<print $CTAngryLowC.random()>>
+				<<He>>【이가】 <<print $CTAngryLowC.random()>>
 				<<print [
-					`"SHUT THE FUCK UP!"`,
-					`"DO YOU WANT TO GET HURT?!"`,
-					`"SHUT UP BEFORE I HURT YOU!"`
+					`"닥쳐, 씨발!"`,
+					`"맞고 싶어?!"`,
+					`"입 다물어, 안 그러면 패버린다!"`
 				][random(0,2)]>>
 			<</if>>
 		<<elseif $speechSteal is 1>>
@@ -740,12 +740,12 @@
 			<<set $speechChokedWheeze to 0>>
 			<<if $enemyanger lte 20>>
 				<<if $rng lte 7>>
-					<<He>> <<print $CTHappyLowC.random()>>
+					<<He>>【이가】 <<print $CTHappyLowC.random()>>
 					"<<print [
-					"I love seeing you like this.",
-					"You can do it, just a bit more.",
-					"You sound so hot baby.",
-					"Just a little longer, baby."
+					"이런 네 모습을 보는 게 너무 좋아.",
+					"할 수 있어, 조금만 더.",
+					"소리가 정말 야하네, 자기야.",
+					"조금만 더, 자기야."
 					][random(0,3)]>>"
 				<<else>>
 					<<He>>【이가】 당신의 목에서 손을 뗀다. "미안, <<girl>>【아야】, 방금 뭐라고 했어?"
@@ -785,8 +785,8 @@
 					<<case 3>> "그냥 빨리 들어와!"
 					<<case 4>> "씨발, 들어오기도 전에 날 가버리게 만들겠어."
 					<<case 5>> "네가 날 둘로 찢어놓아도 상관없어."
-					<<case 6>> "You are going to break me in  half"
-					<<case 7>> "You are going to ruin me"
+					<<case 6>> "날 반으로 쪼개놓겠네."
+					<<case 7>> "날 망쳐놓겠어."
 					<<default>>"빨리 내 안에 넣어줘."
 				<</switch>>
 			<<else>>
@@ -884,7 +884,7 @@
 
 		<<elseif $speechMasturbate is 1 and random(1,2) is 1 and not $gloryhole>>
 			<<if $enemyanger lt 20>>
-				<<He>> <<print ["speaks","speaks","coos","whispers"][random(0,3)]>>.
+				<<He>>【이가】 <<print ["말한다","말한다","달콤하게 속삭인다","속삭인다"][random(0,3)]>>.
 				<<print [
 					`"내가 너한텐 성에 안 차냐?"`,
 					`"혼자서 쑤시는 걸 보니까 꼴려 미치겠는데."`,
@@ -892,16 +892,16 @@
 					`"날 받을 준비를 알아서 하고 있군."`,
 				][random(0,3)]>>
 			<<elseif $enemyanger lt 60>>
-				<<He>> <<print ["speaks","jeers","coos","whispers"][random(0,3)]>>.
+				<<He>>【이가】 <<print ["말한다","조롱한다","달콤하게 속삭인다","속삭인다"][random(0,3)]>>.
 				<<print [
 					`"내가 그렇게 역겹냐? 직접 손을 대서 빼야 할 만큼?"`,
 					`"착한 <<girl>>【아야】, 뜨겁게 달궈놔, 그래야 재밌게 놀아주지."`,
 					`"좀 거칠게 다뤄지는 걸 좋아하는 모양이네."`,
 					`"나한테나 집중해, <<bitch>>."`,
-					`"I knew you'd be into this, slut."`,
+					`"이런 거 좋아할 줄 알았다, 걸레야."`,
 				][random(0,4)]>>
 			<<else>>
-				<<He>> <<print ["speaks","speaks","snarls","jeers"][random(0,3)]>>.
+				<<He>>【이가】 <<print ["말한다","말한다","으르렁거린다","조롱한다"][random(0,3)]>>.
 				<<print [
 					`"창녀답게 자기 분수를 잘 아네."`,
 					`"얌전히 구니까 훨씬 재밌잖아, 안 그래?"`,
@@ -1010,7 +1010,7 @@
 		<<elseif $speechDildoVagina is 1 and random(1, 2) is 2>>
 			<<if (($enemyarousal / $enemyarousalmax) * 100) gte 70>>
 				<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
-					<<He>> <<print ["speaks","speaks","snarls","jeers"][random(0,3)]>>.
+					<<He>>【이가】 <<print ["말한다","말한다","으르렁거린다","조롱한다"][random(0,3)]>>.
 					<<switch $npcspeechcycle>>
 						<<case 0>> "지금 멈출 생각은 하지 마!"
 						<<case 1>> "한 방울도 낭비하지 않는 게 좋을 거다."
@@ -1021,7 +1021,7 @@
 						<<default>> "씨발 갈 것 같아."
 					<</switch>>
 				<<else>>
-					<<He>> <<print ["speaks","speaks","whispers","moans"][random(0,3)]>>.
+					<<He>>【이가】 <<print ["말한다","말한다","속삭인다","신음한다"][random(0,3)]>>.
 					<<switch $npcspeechcycle>>
 						<<case 0>> "네 장난감이 내 애액으로 미끈거려."
 						<<case 1>> "거기야. 멈추지 마!"
@@ -1034,7 +1034,7 @@
 				<</if>>
 			<<else>>
 				<<if (($enemyanger / $enemyangermax) * 100) gte 10>>
-					<<He>> <<print ["speaks","speaks","snarls","jeers"][random(0,3)]>>.
+					<<He>>【이가】 <<print ["말한다","말한다","으르렁거린다","조롱한다"][random(0,3)]>>.
 					<<switch $npcspeechcycle>>
 						<<case 0>> "내 보지를 제대로 다루는 게 좋을 거다."
 						<<case 1>> "내 보지는 이 정도로는 부족해."
@@ -1045,7 +1045,7 @@
 						<<default>> "제대로 안 하면 벌을 줄 테다."
 					<</switch>>
 				<<else>>
-					<<He>> <<print ["speaks","speaks","whispers","moans"][random(0,3)]>>.
+					<<He>>【이가】 <<print ["말한다","말한다","속삭인다","신음한다"][random(0,3)]>>.
 					<<switch $npcspeechcycle>>
 						<<case 0>> "네 장난감 느낌이 너무 좋아."
 						<<case 1>> "보지를 어떻게 다뤄야 하는지 잘 아네."
@@ -1066,7 +1066,7 @@
 						<<case 0>> "지금 멈출 생각은 하지 마!"
 						<<case 1>> "이 장난감 다루는 법은 알고 있는 게 좋을 거다."
 						<<case 2>> "끝나면 네 장난감을 깨끗이 핥게 해주지."
-						<<case 3>> "Keep going or I'll hurt you."
+						<<case 3>> "계속해, 안 그러면 아프게 해줄 테니까."
 						<<case 4>> "계속 이대로 하는 게 좋을 거다."
 						<<case 5>> "계속해, 창녀야."
 						<<default>> "씨발 갈 것 같아."
@@ -1114,8 +1114,8 @@
 						<<case 0>> "지금 멈출 생각은 하지 마!"
 						<<case 1>> "이 장난감 다루는 법은 알고 있는 게 좋을 거다."
 						<<case 2>> "끝나면 네 장난감을 깨끗이 핥게 해주지."
-						<<case 3>> "Keep going or I'll hurt you."
-						<<case 4>> "<<print ["You better keep this up.","Aim it at your mouth, or I'll force it down your throat!"][random(0,1)]>>"
+						<<case 3>> "계속해, 안 그러면 아프게 해줄 테니까."
+						<<case 4>> <<print ["계속 이대로 하는 게 좋을 거다.","입에 겨눠. 안 그러면 억지로 목구멍에 처넣어주마!"][random(0,1)]>>
 						<<case 5>> "계속해, 창녀야."
 						<<default>> "너답게 걸레처럼 계속 쑤셔봐."
 					<</switch>>
@@ -1171,7 +1171,7 @@
 					<<switch $npcspeechcycle>>
 						<<case 0>> "네 엉덩이, 넋이 나갈 만큼 좋네."
 						<<case 1>> "너 이거 꽤 잘하네."
-						<<case 2>> "Don't stop! Keep going!"
+						<<case 2>> "멈추지 마! 계속해!"
 						<<case 3>> "네 몸 위에 잔뜩 싸질러주겠어."
 						<<case 4>> "네 엉덩이짝 사이를 박아대는 게 좋아."
 						<<case 5>> "네 엉덩이가 내 자지에 닿는 느낌이 끝내줘."
@@ -1606,7 +1606,7 @@
 
 		<<elseif $speechVaginaEscape is 1>>
 			<<set $speechVaginaEscape to 0>>
-			<<He>> <<print $CTAnnoyedLowC.random()>>
+			<<He>>【이가】 <<print $CTAnnoyedLowC.random()>>
 			<<if $enemyanger lte 20>>
 				<<print [
 					`"계속 그렇게 버둥거리면 제대로 즐길 수가 없잖아."`,
@@ -1701,120 +1701,120 @@
 				<<if $enemyanger lte 20>>
 					<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 						<<if $consensual is 1>>
-							<<He>> <<print ["is lost in the moment.","breathes","moans"][random(0,2)]>>
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다.","숨을 몰아쉰다","신음한다"][random(0,2)]>>
 								<<print [
-								`"It feels too good, I nee- wait please before I--- oh my god wa--"`,
-								`"Please harder, I need you deeper inside of me."`,
-								`"Fuck, you feel so good in me! Please fuck me more."`,
-								`"I can't think straight with you fucking me! You're making me dick drunk..."`,
-								`"I can't get enough of you! Please, let's fuck more!"`
+								`"너무 좋아서 나 필- 잠깐만 제발 내가---아 세상에 잠--"`,
+								`"제발 더 세게, 내 안 더 깊이 네가 필요해."`,
+								`"씨발, 네가 내 안에 있으니까 너무 좋아! 제발 더 박아줘."`,
+								`"네가 박고 있으면 제정신이 아니야! 자지에 취해 버리겠어..."`,
+								`"아무리 해도 부족해! 제발, 더 하자!"`
 								][random(0,4)]>>
 						<<else>>
-							<<He>> <<print ["is lost in the moment.","breathes","moans"][random(0,2)]>>
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다.","숨을 몰아쉰다","신음한다"][random(0,2)]>>
 								<<print [
-								`"Yes! Yes! Give it to me! AH!"`,
-								`"Oh fuck keep going, I a-almost t-there."`,
-								`"Keep hitting me there, it feels so good"`,
-								`"Right there, oh my god I'm almost... AH!"`,
-								`"You are good for a slutty l-litt--- AH!"`
+								`"그래! 그래! 내게 줘! 아앗!"`,
+								`"씨발 계속해, 거-거의 다 왔어."`,
+								`"거기 계속 쳐줘, 너무 좋아."`,
+								`"바로 거기, 세상에 나 거의... 아앗!"`,
+								`"너는 야한 꼬-꼬맹이로서는 괜찮--- 아앗!"`
 								][random(0,4)]>>
 						<</if>>
 					<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 						<<if $consensual is 1>>
-							<<He>> speaks hushedly.
+							<<He>>【이가】 숨죽여 말한다.
 								<<print [
-								`"I've been needing this so badly."`,
-								`"Fuck me harder cutie, make me cum."`,
-								`"You are so cute fucking me like that."`
+								`"이게 정말 간절히 필요했어."`,
+								`"더 세게 박아줘, 귀염둥이, 나 싸게 해줘."`,
+								`"그렇게 날 박는 네 모습이 정말 귀여워."`
 								][random(0,2)]>>
 						<<elseif $multiOrgasmToggle is 1>>
 							<<He>>【이가】 말한다.
 								<<print [
-								`"Let's see how many times you can make me cum."`,
-								`"I'm fucking you until I can't no more."`,
-								`"You're not done until I am satisfied."`
+								`"네가 날 몇 번이나 싸게 만드는지 보자."`,
+								`"더는 못 할 때까지 박아줄 거야."`,
+								`"내가 만족할 때까지 끝난 게 아니야."`
 								][random(0,2)]>>
 						<<else>>
-							<<He>> speaks hushedly.
+							<<He>>【이가】 숨죽여 말한다.
 							<<print [
-							`"I've been needing this so badly."`,
-							`"I'll make you fuck me till you are a shriveling mess."`,
-							`"You'd better do your best to please me."`,
-							`"I'm not letting you go until I'm done."`
+							`"이게 정말 간절히 필요했어."`,
+							`"네가 바싹 말라비틀어질 때까지 나를 박게 만들어 주지."`,
+							`"날 만족시키려면 최선을 다하는 게 좋을 거야."`,
+							`"내가 끝날 때까지는 못 보내."`
 							][random(0,3)]>>
 						<</if>>
 					<<else>>
 						<<if playerHasStrapon()>>
-							<<He>> <<print ["speaks.","speaks.","coos.","whispers."][random(0,3)]>>
-							"Your <<print $worn.under_lower.name>> feels so good inside me."
+							<<He>>【이가】 <<print ["말한다.","말한다.","달콤하게 속삭인다.","속삭인다."][random(0,3)]>>
+							"내 안의 네 <<print $worn.under_lower.name>>【이가】 너무 좋아."
 						<<else>>
 						<<He>>【이가】 말한다.
-						"You feel so good inside me."
+						"내 안의 네 감촉이 정말 좋아."
 						<</if>>
 					<</if>>
 				<<elseif $enemyanger lte 100>>
 					<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-						<<He>> is lost in the moment.
+						<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 						<<print [
-						`"K-keep going.. I'm about to.. AH!"`,
-						`"F-uck Right there, Ha-harder!.. AH!"`,
-						`<<He>> mutters "F-Fuck me.. a-almost there AH"`,
-						`"UHH! That's it...Not long now... AH!"`
+						`"계-계속해.. 나 곧.. 아앗!"`,
+						`"씨-발 바로 거기, 더-더 세게!.. 아앗!"`,
+						`<<He>>【이가】 중얼거린다. "씨-씨발 박아줘.. 거-거의 다 왔어 아앗"`,
+						`"으윽! 그거야... 얼마 안 남았어... 아앗!"`
 						][random(0,3)]>>
 					<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-						<<He>> <<print ["speaks hushedly.","sneers","groans"][random(0,2)]>>
+						<<He>>【이가】 <<print ["숨죽여 말한다.","비웃는다","끙끙거린다"][random(0,2)]>>
 						<<print [
-						`"Right there, keep going good <<girl>>."`,
-						`"Harder! Right there, give me MORE!"`,
-						`"Yes! Right there, keep hitting me right there slut!"`,
-						`"You better work hard to make me cum you whore."`,
-						`"Keep going, right there."`,
-						`"Good <<girl>>, just like that."`,
-						`"That's it. Right there. Good <<girl>>."`
+						`"바로 거기, 계속해, 착한 <<girl>>【아야】."`,
+						`"더 세게! 바로 거기, 더 줘!"`,
+						`"그래! 바로 거기야, 거기 계속 쳐, 걸레야!"`,
+						`"날 싸게 하려면 열심히 해야지, 창녀야."`,
+						`"계속해, 바로 거기."`,
+						`"착한 <<girl>>【아야】, 그렇게."`,
+						`"그래. 바로 거기. 착한 <<girl>>【아야】."`
 						][random(0,6)]>>
 					<<else>>
-						<<He>> speaks
+						<<He>>【이가】 말한다
 						<<print [
-						`"We are going to have some fun."`,
-						`"I've been waiting for this. Let's see how much of a whore you are."`,
-						`"I've been waiting too long for this so don't even think about stopping!"`
+						`"우리 재미 좀 보자."`,
+						`"이걸 기다렸어. 네가 얼마나 창녀인지 보자."`,
+						`"너무 오래 기다렸으니까 멈출 생각은 꿈도 꾸지 마!"`
 						][random(0,2)]>>
 					<</if>>
 				<<else>>
 					<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-						<<He>> is lost in the moment.
+						<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 						<<print [
-						`"You.... A-at least you... f-f-FUCK good. AH!"`,
-						`"At least..you worthless slut can... fuck good. AH!"`,
-						`"You... Stupid... AHH!"`
+						`"너.... 적-적어도 너... 씨-씨발 잘 박네. 아앗!"`,
+						`"적어도..쓸모없는 걸레가... 박는 건 잘하네. 아앗!"`,
+						`"너... 멍청... 아앗!"`
 						][random(0,2)]>>
 					<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 						<<if playerHasStrapon()>>
-							<<He>> <<print ["jeers","mocks you","teases","laughs"][random(0,3)]>>.
+							<<He>>【이가】 <<print ["조롱한다","당신을 조롱한다","놀린다","웃는다"][random(0,3)]>>.
 							<<print [
-							`"Do you even know how to use this toy?"`,
-							`"Really? You need that?"`,
-							`"Hope you won't be a useless fuck."`,
-							`"Do you need a instruction guide for that, dweeb?"`
+							`"이 장난감 쓸 줄이나 아는 거야?"`,
+							`"진짜? 그게 필요해?"`,
+							`"쓸모없는 새끼는 아니었으면 좋겠는데."`,
+							`"그거 설명서라도 필요하냐, 찌질아?"`
 							][random(0,3)]>>
 						<<else>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							<<print [
-							`"I feel good don't I slut? What a whore."`,
-							`"I know you can't have enough of my insides. You fucking whore."`,
-							`"What's it like having your dick dominated like this?"`,
-							`"You like fucking me whore? I know you do."`,
-							`"I wonder... If I hit you harder, will you cum?"`
+							`"나 기분 좋지, 안 그래, 걸레야? 이 창녀."`,
+							`"내 안이 아무리 해도 부족하지. 이 씨발 창녀야."`,
+							`"자지가 이렇게 지배당하는 기분이 어때?"`,
+							`"나 박는 게 좋냐, 창녀야? 좋은 거 알아."`,
+							`"궁금한데... 더 세게 치면 너 쌀까?"`
 							][random(0,4)]>>
 						<</if>>
 					<<else>>
-						<<He>> mocks you.
+						<<He>>【이가】 당신을 조롱한다.
 						<<print [
-						`"You dick belong to me."`,
-						`"Whore dick for a whore <<girl>>! What a thing!"`,
-						`"You will fuck me good or I'll fuck you up."`,
-						`"You like being used like this? Fucking <<bitch>>."`,
-						`"You're right where you belong."`
+						`"네 자지는 내 거야."`,
+						`"창녀 같은 <<girl>>에게 창녀 같은 자지라니! 가관이네!"`,
+						`"날 제대로 박든가, 아니면 내가 널 박살 낼 거야."`,
+						`"이렇게 쓰이는 게 좋아? 씨발 <<bitch>>."`,
+						`"넌 딱 있어야 할 자리에 있네."`
 						][random(0,4)]>>
 					<</if>>
 				<</if>>
@@ -1863,7 +1863,7 @@
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 숨죽여 말한다. "그래, 바로 거기야, 착한 <<girl>>."
 						<<else>>
-							<<He>> <<print ["speaks. \"I've been waiting too long for this, don't even think about stopping!\"","teases. \"Do you know how to use this toy?\""][random(0,1)]>>
+							<<He>>【이가】 <<print ["말한다. \"이걸 너무 오래 기다렸어. 멈출 생각은 하지도 마!\"","놀린다. \"이 장난감 쓰는 법은 알지?\""][random(0,1)]>>
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
@@ -1934,12 +1934,12 @@
 				<<if $vaginatarget isnot undefined and npcHasStrapon($vaginatarget)>> <!-- NPC strap-on -->
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-								"Yes, baby, just like that!",
-								"Oh yes! Just like that, my little fucktoy!",
-								"Take it like the whore you are!",
-								"I can feel your legs shaking!"
+								"그래, 자기야, 바로 그렇게!",
+								"오 그래! 바로 그렇게, 나의 귀여운 육변기!",
+								"창녀답게 받아내!",
+								"네 다리가 떨리는 게 느껴져!"
 								][random(0,3)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 말한다. "내 클리토리스를 마구 들이박으니까 아주 기분 좋군."
@@ -1966,118 +1966,118 @@
 				<<else>>
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> <<print ["is lost in the moment","speaks","coos","whispers", "speaks hushedly"][random(0,4)]>>.
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다","말한다","달콤하게 속삭인다","속삭인다", "숨죽여 말한다"][random(0,4)]>>.
 							<<print [
-								`"Your pussy feels so good!"`,
-								`"Your pussy was made for this."`,
-								`"I love pounding this sweet pussy of yours."`,
-								`"God this feels so good."`,
-								`"I'm gonna fill you up soon, I hope you're ready!"`,
-								`"Your wet cunt feels way too good!"`,
-								`"Pussy really shouldn't feel this good!"`,
-								`"Fuck this is too good, I'm going to cum!"`,
-								`"You are making me cum!"`,
-								`"You are just so damn tight-"`
+								`"네 보지 너무 좋아!"`,
+								`"네 보지는 이러려고 만들어졌어."`,
+								`"네 이 달콤한 보지를 박아대는 게 너무 좋아."`,
+								`"하, 이거 너무 좋아."`,
+								`"곧 가득 채워줄 테니 준비해 둬!"`,
+								`"네 젖은 보지 너무 좋아서 미치겠어!"`,
+								`"보지가 이렇게 좋으면 안 되는 거잖아!"`,
+								`"씨발 이건 너무 좋아, 쌀 것 같아!"`,
+								`"네가 날 싸게 만들고 있어!"`,
+								`"넌 진짜 존나 꽉 조여-"`
 							][random(0,9)]>>
 						<<elseif playerBellyVisible() and $settings.pregnancySpeechEnabled>>
-							<<He>> says.
+							<<He>>【이가】 말한다.
 							<<print [
-								`"For a <<bred>> <<bitch>>, you're still pretty tight."`,
-								`"A <<bred>> <<bitch>> is always the most fun."`,
-								`"You really know how to use that pussy of yours."`,
-								`"Fuck I'm really cumming in a <<bred>> cunt."`,
-								`"Should I cum inside you? Seeing as you won't get anymore pregnant."`,
+								`"<<bred>> <<bitch>> 치고는 아직도 꽤 꽉 조이네."`,
+								`"<<bred>> <<bitch>>【이가】 언제나 제일 재밌지."`,
+								`"그 보지를 어떻게 쓰는지 정말 잘 아네."`,
+								`"씨발, <<bred>> 보지 안에 진짜 싸고 있어."`,
+								`"안에 싸 줄까? 어차피 더 임신할 일도 없으니까."`,
 							][random(0,4)]>>"
 							<<insecurity "pregnancy" 2>><<ginsecurity "pregnancy">>
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 말한다.
 							<<print [
-								`"You feel so nice around my dick."`,
-								`"Such a tight little cunt!"`,
-								`"So warm, almost making me melt."`,
-								`"It's almost like you are made for me."`,
-								`"You're so cute when you're being fucked!"`,
-								`"I could fuck this cunt all day long!"`,
-								`"Just relax so I can hit all your sweet spots~"`,
+								`"내 자지를 감싸는 느낌이 아주 좋네."`,
+								`"꽉 조이는 작은 보지네!"`,
+								`"따뜻해서, 녹아버릴 것 같아."`,
+								`"꼭 나를 위해 만들어진 것 같잖아."`,
+								`"박히고 있을 때 너 진짜 귀여워!"`,
+								`"이 보지는 하루 종일이라도 박을 수 있겠어!"`,
+								`"힘 빼, 네 약한 곳을 전부 쳐줄 테니까~"`,
 							][random(0,6)]>>
 						<<else>>
-							<<He>> <<print ["speaks", "whispers" , "murmurs" , "breathes"][random(0,3)]>>.
+							<<He>>【이가】 <<print ["말한다", "속삭인다" , "중얼거린다" , "숨을 몰아쉰다"][random(0,3)]>>.
 							<<print [
-								`"Your pussy is so warm."`,
-								`"I love how you tremble when I touch you."`,
-								`"I'm going to strech your pussy so good."`,
-								`"I'm going to enjoy this!"`,
-								`"I can't get enough of this cunt-"`,
-								`"This cunt is addictive~"`,
-								`"I've been waiting for this warm pussy-"`,
+								`"네 보지 정말 따뜻해."`,
+								`"내가 만지면 네가 떠는 게 너무 좋아."`,
+								`"네 보지를 제대로 늘려줄 거야."`,
+								`"이거 아주 즐겁겠는데!"`,
+								`"이 보지 질리지가 않아."`,
+								`"이 보지는 중독적이야~"`,
+								`"이 따뜻한 보지를 얼마나 기다렸는지."`,
 							][random(0,6)]>>
 						<</if>>
 					<<elseif $enemyanger lte 100>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> <<print ["is lost in the moment","snarls","sneers","growls"][random(0,3)]>>.
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다","으르렁거린다","비웃는다","낮게 으르렁거린다"][random(0,3)]>>.
 							<<print [
-								`"That's it! Take it, whore!"`,
-								`"This pussy is made to be pounded."`,
-								`"That's it take all I give you."`,
-								`"Bratty <<girl>>'s have the best cunts."`,
-								`"Whores like you deserve their cunts being abused."`,
+								`"바로 그거야! 받아라, 창녀야!"`,
+								`"이 보지는 박히라고 만들어진 거야."`,
+								`"그래 그거야, 내가 주는 건 전부 받아."`,
+								`"건방진 <<girl>>의 보지가 제일 맛있지."`,
+								`"너 같은 창녀들은 보지가 학대당해도 싸."`,
 							][random(0,4)]>>
 						<<elseif playerBellyVisible() and $settings.pregnancySpeechEnabled>>
 						<<print [
-							`"Keep struggling and I'll put another brat in you"`,
-							`"The more you struggle, the rougher I get, and that can't be good for the little brat, now can it?"`,
-							`"Let me to you a favor and widen your pussy up for the brat-"`,
+							`"계속 발버둥 치면 새끼를 하나 더 배게 해주지"`,
+							`"네가 저항할수록 난 더 거칠어질 거고, 그럼 뱃속의 애새끼한테 안 좋을 텐데, 안 그래?"`,
+							`"애새끼를 위해서라도 네 보지를 활짝 벌려주는 호의를 베풀어주지."`,
 						][(0,2)]>>
 							<<insecurity "pregnancy" 2>><<ginsecurity "pregnancy">>
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> <<print ["speaks hushedly","snarls","sneers","growls"][random(0,3)]>>.
+							<<He>>【이가】 <<print ["숨죽여 말한다","으르렁거린다","비웃는다","낮게 으르렁거린다"][random(0,3)]>>.
 							<<print [
 								`"착한 <<girl>>."`,
-								`"Beg for it, you filthy slut."`,
-								`"You are such a naughty little whore."`,
-								`"I'm going to make you feel every inch of me."`,
-								`"Do you like me pounding you slutty little cunt."`,
-								`"You asked for this, walking around like that."`,
-								`"What a needy cunt."`,
+								`"애원해봐, 이 더러운 걸레야."`,
+								`"넌 정말 발칙한 어린 창녀구나."`,
+								`"내 몸 구석구석을 전부 느끼게 해줄 거야."`,
+								`"내가 이 걸레 같은 보지를 박아대니까 좋아?"`,
+								`"그러고 돌아다녔으니 이럴 줄 알았잖아."`,
+								`"어지간히 굶주린 보지네."`,
 							][random(0,6)]>>
 						<<else>>
-							<<He>> <<print ["speaks", "snarls", "growl", "jeers"][random(0,3)]>>.
+							<<He>>【이가】 <<print ["말한다", "으르렁거린다", "낮게 으르렁거린다", "조롱한다"][random(0,3)]>>.
 							<<print [
-								`"Your body is welcoming me at least."`,
-								`"You are nothing but a hole for me to use."`,
-								`"I'll show you what it means to be owned."`,
-								`"You're nothing but a slut craving punishment."`,
-								`"You're just a filthy fucktoy for me."`,
-								`"I'll fuck your pussy till you are nothing but a quivering mess."`,
+								`"적어도 네 몸은 날 반기고 있군."`,
+								`"넌 내가 쓰는 구멍일 뿐이야."`,
+								`"누군가의 소유물이 된다는 게 어떤 건지 보여주지."`,
+								`"넌 벌 받고 싶어 안달 난 걸레일 뿐이야."`,
+								`"넌 그저 나한테 더러운 육변기일 뿐이야."`,
+								`"네가 부들부들 떠는 꼴이 될 때까지 네 보지를 박아줄게."`,
 							][random(0,5)]>>
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 								<<print [
-								`"Take it! Take it all you worthless slut!"`,
-								`"This pussy exists for my pleasure, nothing else."`,
-								`"Take every inch of me deep in your cunt, you filthy whore."`,
-								`"You're just a filthy slut craving my cock pounding that cunt."`,
-								`"I'll ruin you until you're worthless slit is a cum-drenched mess."`,
-								`"I'll make sure you're cunt properly used like the slut you are."`,
+								`"받아라! 전부 다 받아들여, 이 쓸모없는 걸레야!"`,
+								`"이 보지는 내 쾌락을 위해서만 존재해, 다른 건 없어."`,
+								`"내 전부를 네 보지 깊숙이 받아들여, 이 더러운 창녀야."`,
+								`"넌 내 자지가 그 보지를 박아주길 갈망하는 더러운 걸레일 뿐이야."`,
+								`"네 쓸모없는 씹구멍이 정액 범벅이 될 때까지 망가뜨려 주지."`,
+								`"네 보지가 걸레답게 제대로 쓰이게 해줄 테니 걱정 마."`,
 							][random(0,5)]>>
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							<<print [
-							`"What's it like having your pussy dominated like this?"`,
-							`"Your bratty cunt is begging for punishment."`,
-							`"I'll teach you what it means to be a dirty little whore."`,
-							`"I'll leave your cunt a drooling mess"`,
-							`"Your pussy is mine to use however I want."`,
+							`"이렇게 보지가 유린당하는 기분이 어때?"`,
+							`"건방진 네 보지가 벌을 달라고 애원하고 있어."`,
+							`"더러운 어린 창녀가 어떤 건지 가르쳐주지."`,
+							`"네 보지를 침을 질질 흘리는 꼴로 만들어줄게"`,
+							`"네 보지는 내가 원하는 대로 쓸 수 있는 내 거야."`,
 							][random(0,4)]>>
 						<<else>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							<<print [
-							`"You're right where you belong."`,
-							`"Your worthless cunt is begging for this."`,
-							`"I know you love having your pussy dominated."`,
-							`"Don't worry, l'll make your pussy remember me."`,
+							`"넌 딱 네 자리에 있군."`,
+							`"쓸모없는 네 보지가 이걸 달라고 애원하고 있어."`,
+							`"보지를 유린당하는 걸 네가 좋아한다는 거 다 알아."`,
+							`"걱정 마, 네 보지가 날 기억하게 만들어줄 테니까."`,
 							][random(0,3)]>>
 						<</if>>
 					<</if>>
@@ -2095,13 +2095,13 @@
 					<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 						<<He>>【은는】 쾌락에 취해 정신을 놓는다. "계속... 계속해... 이제 다 왔어."
 					<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-						<<He>> speaks. "Nothing like the cunt of a <<girl>> who tried to fight back."
+						<<He>>【이가】 말한다. "반항하던 <<girl>>의 보지 맛만큼 죽이는 건 없지."
 					<<else>>
 						<<He>>【이가】 말한다. "이렇게 안이 가득 채워지는 거 좋지, 안 그래?"
 					<</if>>
 				<<else>>
 					<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-						<<He>> is lost in the moment. "Don't act like you didn't want this. I can feel you squeezing my dick, begging for my cum."
+						<<He>>【은는】 쾌락에 취해 정신을 놓는다. "원하지 않았던 척 굴지 마. 네가 내 자지를 꽉 조이면서 내 정액을 달라고 조르는 게 다 느껴지니까."
 					<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 						<<He>>【이가】 숨죽여 말한다. "여기가 네 자리야, 똑똑히 기억해."
 					<<else>>
@@ -2115,28 +2115,28 @@
 				<<if $anustarget isnot undefined and npcHasStrapon($anustarget)>> <!-- NPC strap-on -->
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 								"<<print [
-								"Yes, baby, just like that!",
-								"Oh yes! Just like that, my little fucktoy!",
-								"Your moans are so good! I'm cumming!",
-								"Moan for me, <<bitch>>!",
-								"You like me fucking your ass."
+								"그래, 자기야, 바로 그거야!",
+								"오 그래! 바로 그거야, 나의 작은 육변기!",
+								"네 신음 소리 너무 좋아! 싼다!",
+								"날 위해 신음해, <<bitch>>【아야】!",
+								"내가 네 엉덩이를 박는 게 좋지."
 								][random(0,4)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 말한다.
 							"<<print [
-							"Do you like me fucking your butt with my strap on baby<<girl>>?",
-							"My little toy will have you cumming in no time.",
-							"It feels so good hammering against my clit."
+							"내가 페니스 밴드로 네 엉덩이를 박는 게 좋아, 귀여운 <<girl>>【아야】?",
+							"내 장난감이 금방 널 가게 만들어줄 거야.",
+							"내 클리토리스에 부딪치는 게 너무 좋아."
 							][random(0,2)]>>"
 						<<else>>
 							<<He>>【이가】 말한다.
 								"<<print [
-								"Your butt is so welcoming.",
-								"You're so tight, just relax.",
-								"I know you like this, just relax.",
-								"Do you want me to make your little hole feel good."
+								"네 엉덩이는 날 아주 잘 반겨줘.",
+								"너 정말 꽉 조이네, 긴장 풀어.",
+								"너도 이거 좋아하는 거 알아, 긴장 풀어.",
+								"네 작은 구멍을 기분 좋게 해줄까."
 								][random(0,3)]>>"
 						<</if>>
 					<<elseif $enemyanger lte 100>>
@@ -2159,94 +2159,94 @@
 				<<else>>
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> <<print ["is lost in the moment", "moans", "breathes"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다", "신음한다", "숨을 몰아쉰다"][random(0,2)]>>.
 							"<<print [
-							"Yes, just like that. I'm about to cum.",
-							"I love your tight little asshole around my dick.",
-							"Fuck you feel too good that I'm about to...",
-							"I'm gonna fill you up soon, I hope you're ready!",
-							"Moan for me while I fill you up.",
-							"You like me fucking your little ass."
+							"그래, 바로 그거야. 곧 쌀 것 같아.",
+							"내 자지를 조이는 네 꽉 찬 작은 항문이 너무 좋아.",
+							"씨발 너무 좋아서 곧 싸...",
+							"곧 널 가득 채워줄 테니까, 준비됐길 바라!",
+							"널 채우는 동안 날 위해 신음해.",
+							"내가 네 작은 엉덩이를 박는 게 좋지."
 							][random(0,5)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> <<print ["speaks", "mutters"," coos"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["말한다", "중얼거린다","달콤하게 속삭인다"][random(0,2)]>>.
 							"<<print [
-							"Your ass feels amazing.",
-							"I love seeing it jiggle every time I thrust in.",
-							"Do you like me fucking your ass baby<<girl>>.",
-							"I know you love the shape of my cock in your ass.",
-							"Don't worry my cock will have you cumming in no time.",
-							"You feel so nice around my dick."
+							"네 엉덩이 끝내줘.",
+							"박아 넣을 때마다 출렁이는 게 너무 좋아.",
+							"내가 네 엉덩이를 박는 게 좋아, 귀여운 <<girl>>【아야】.",
+							"네 엉덩이 속에서 내 자지 모양이 좋은 거 다 알아.",
+							"걱정 마, 내 자지가 금방 널 가게 만들어줄 테니까.",
+							"내 자지를 감싸는 네 느낌이 아주 좋아."
 							][random(0,5)]>>"
 						<<else>>
 							<<He>>【이가】 말한다.
 							"<<print [
-							"Do you want me to fuck your little tight ass.",
-							"You will remember the shape of my dick by the time I'm done with you.",
-							"Spread your legs for me, I wanna see you taking my dick.",
-							"Your butt is so warm."
+							"네 작고 꽉 조이는 엉덩이를 박아줄까.",
+							"내가 널 다 가지고 놀 때쯤이면 내 자지 모양을 똑똑히 기억하게 될 거야.",
+							"날 위해 다리를 벌려, 네가 내 자지를 받아들이는 걸 보고 싶어.",
+							"네 엉덩이 정말 따뜻해."
 							][random(0,3)]>>"
 						<</if>>
 					<<elseif $enemyanger lte 100>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> <<print ["is lost in the moment", "moans", "groans"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["쾌락에 취해 정신을 놓는다", "신음한다", "끙끙거린다"][random(0,2)]>>.
 							"<<print [
-							"Sqeeze that slutty hole tighter.",
-							"That's right <<bitch>>, take all of me.",
-							"Do-- You-- Like-- Me-- Pounding-- Your-- Little-- Whore-- Ass--.",
-							"Your ass will remember my cock after this.",
-							"At least you got this tight little hole.",
-							"That's it! Take it, whore!"
+							"그 걸레 같은 구멍을 더 꽉 조여.",
+							"그래 맞아, <<bitch>>【아야】, 내 전부를 받아.",
+							"너-- 내가-- 네-- 음탕한-- 창녀-- 엉덩이를-- 박는-- 게-- 좋-- 아--.",
+							"이러고 나면 네 엉덩이는 내 자지를 기억할 거야.",
+							"적어도 이렇게 꽉 조이는 작은 구멍은 있잖아.",
+							"바로 그거야! 받아라, 창녀야!"
 							][random(0,5)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> <<print ["speaks hushedly", "whispers", "breathes"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["숨죽여 말한다", "속삭인다", "숨을 몰아쉰다"][random(0,2)]>>.
 							"<<print [
-							"Be a good <<girl>> and take all of me.",
-							"You love my dick in your ass, I know you do.",
-							"Your ass is made for this moment.",
-							"Fuck me, you feel so good around my dick.",
-							"Do you hear the sound of your slutty asshole begging for more?",
-							"Your asshole is being good, will you be as well?",
+							"착한 <<girl>>답게 내 전부를 받아.",
+							"내 자지가 네 엉덩이에 들어가는 거 좋아하잖아, 다 알아.",
+							"네 엉덩이는 이 순간을 위해 만들어진 거야.",
+							"씨발, 내 자지를 감싸는 네 느낌이 너무 좋아.",
+							"네 걸레 같은 항문이 더 달라고 애원하는 소리 들려?",
+							"네 항문은 착하게 구는데, 너도 그럴 거지?",
 							"착한 <<girl>>."
 							][random(0,6)]>>"
 						<<else>>
 							<<He>>【이가】 말한다.
 							"<<print [
-							"You will remember the shape of my dick by the time I'm done with you.",
-							"Do you want me to stuff you with my cock?",
-							"Let's see how long you can last.",
-							"Your hole feels amazing.",
-							"At least your body is welcoming me.",
+							"내가 널 다 가지고 놀 때쯤이면 내 자지 모양을 똑똑히 기억하게 될 거야.",
+							"내 자지로 널 가득 채워줄까?",
+							"네가 얼마나 버티는지 보자.",
+							"네 구멍 끝내줘.",
+							"적어도 네 몸은 날 반겨주네.",
 							][random(0,4)]>>"
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"The one good thing about you is your tight asshole.",
-							"Fuck me! This worthless body at least has a great asshole.",
-							"You need a good pounding to show you your place.",
-							"Take it you whore! Take all of my cock in your worthless hole.",
-							"Your whore asshole keeps sucking me in, at least knows it's place.",
-							"Take it! Take it all you worthless slut!"
+							"너한테 좋은 건 꽉 조이는 항문 하나뿐이야.",
+							"씨발! 이 쓸모없는 몸뚱이에도 적어도 끝내주는 항문은 있군.",
+							"네 분수를 알려주려면 제대로 박아줘야겠군.",
+							"받아라, 창녀야! 내 자지를 전부 네 쓸모없는 구멍에 받아.",
+							"네 창녀 같은 항문이 계속 날 빨아들이네, 적어도 제 분수는 아는군.",
+							"받아라! 전부 다 받아들여, 이 쓸모없는 걸레야!"
 							][random(0,5)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> <<print ["mocks you", "sneers", "growls"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["당신을 조롱한다", "비웃는다", "낮게 으르렁거린다"][random(0,2)]>>.
 							"<<print [
-							"You love my cock in you, don't you? You stupid whore.",
-							"When I'm done with you all you will think of is my cock.",
-							"I've been waiting for this moment, to abuse your hole like this.",
-							"Spread yourself open for me, let me see your whoreish hole take all of my cock.",
-							"At least this hole is worth something.",
-							"What's it like having your ass dominated like this?"
+							"내 자지가 네 안에 있는 게 좋지, 안 그래? 이 멍청한 창녀야.",
+							"내가 널 다 가지고 놀고 나면 네 머릿속엔 내 자지 생각뿐일 거야.",
+							"이 순간을 기다렸어, 네 구멍을 이렇게 학대하는 순간을.",
+							"날 위해 활짝 벌려, 네 창녀 같은 구멍이 내 자지를 전부 받아들이는 걸 보여줘.",
+							"적어도 이 구멍은 쓸모가 있군.",
+							"엉덩이가 이렇게 유린당하는 기분이 어때?"
 							][random(0,5)]>>"
 						<<else>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							"<<print [
-							"You're right where you belong.",
-							"Your place is right here whore, with my cock up your ass.",
-							"You already moaning like the little whore you are.",
-							"This worthless hole needs to know who's boss."
+							"넌 딱 네 자리에 있군.",
+							"네 자리는 바로 여기야, 창녀야, 내 자지를 엉덩이에 박은 채로.",
+							"넌 벌써 어린 창녀처럼 신음하고 있네.",
+							"이 쓸모없는 구멍은 누가 주인인지 알아야 해."
 							][random(0,3)]>>"
 						<</if>>
 					<</if>>
@@ -2284,81 +2284,81 @@
 				<<if $mouthtarget isnot undefined and npcHasStrapon($mouthtarget)>> <!-- NPC strap-on -->
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-								"Yes, baby, just like that!",
-								"Oh yes! Just like that, my little fucktoy!",
-								"Open your mouth for me, <<bitch>>.",
-								"Just like that, keep going!",
-								"Good to have a toy for my toy.",
-								"You are so hot with your lips around my strap-on.",
-								"Your drooling is so hot."
+								"그래, 자기야, 바로 그거야!",
+								"오 그래! 바로 그거야, 나의 작은 육변기!",
+								"날 위해 입을 벌려, <<bitch>>【아야】.",
+								"바로 그거야, 계속해!",
+								"내 장난감을 위한 장난감이 있으니 좋네.",
+								"내 페니스 밴드에 입술을 감싼 네 모습이 너무 야해.",
+								"네가 침을 흘리는 모습이 너무 야해."
 								][random(0,6)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 말한다. "내 클리토리스를 마구 들이박으니까 아주 기분 좋군."
 						<<else>>
-							<<He>> <<print ["speaks.","breathes","mutters"][random(0,2)]>>
+							<<He>>【이가】 <<print ["말한다.","숨을 몰아쉰다","중얼거린다"][random(0,2)]>>
 							"<<print [
-								"Do you like mouth fucking my toy?",
-								"How does my toy taste?",
-								"This is so hot baby.",
-								"I want to see you deep throat my toy.",
-								"Just like that, let me fuck that cute throat.",
-								"So hot seeing this little toy getting throat-fucked by my toy."
+								"내 장난감을 입으로 박는 게 좋아?",
+								"내 장난감 맛이 어때?",
+								"이거 너무 야해, 자기야.",
+								"네가 내 장난감을 목구멍 깊숙이 받아들이는 걸 보고 싶어.",
+								"바로 그거야, 그 귀여운 목구멍을 박게 해줘.",
+								"내 장난감이 이 작은 장난감의 목구멍을 박는 걸 보니 너무 야해."
 								][random(0,5)]>>"
 						<</if>>
 					<<elseif $enemyanger lte 100>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"Take all of it you whore.",
-							"That's it! use that useless mouth of yours.",
-							"Fuck, I'm about to cum.",
-							"That's it! Take it, whore!"
+							"전부 받아, 이 창녀야.",
+							"그래! 그 쓸모없는 입을 써봐.",
+							"씨발, 곧 싼다.",
+							"바로 그거야! 받아라, 창녀야!"
 							][random(0,3)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> <<print ["speaks hushedly", "growls","gazes with hunger"][random(0,2)]>>.
+							<<He>>【이가】 <<print ["숨죽여 말한다", "낮게 으르렁거린다","굶주린 시선으로 바라본다"][random(0,2)]>>.
 							"<<print [
-							"Open your mouth more so I can fuck your little throat.",
-							"Don't you love this? Someone using your mouth like a hole to fuck!",
-							"Look me in the eyes while you are getting your throat fucked.",
-							"Good <<girl>>.",
-							"I know you love having your throat abused like this."
+							"입을 더 벌려, 네 작은 목구멍을 박을 수 있게.",
+							"좋지 않아? 누군가 네 입을 박는 구멍처럼 쓰고 있잖아!",
+							"목구멍이 박히는 동안 내 눈을 똑바로 봐.",
+							"착한 <<girl>>.",
+							"이렇게 목구멍이 학대당하는 걸 네가 좋아한다는 거 다 알아."
 							][random(0,4)]>>"
 						<<else>>
-							<<He>> speaks
+							<<He>>【이가】 말한다.
 							"<<print [
-							"Your throat is very obedient, unlike you.",
-							"What a little slut! I know you love me throat-fucking you with my toy.",
-							"Your throat is welcoming me at least."
+							"네 목구멍은 너와 달리 아주 순종적이네.",
+							"이런 걸레 같으니! 내가 장난감으로 목구멍을 박는 걸 네가 좋아한다는 거 알지.",
+							"적어도 네 목구멍은 날 반겨주네."
 							][random(0,2)]>>"
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"You like me throat-fucking your little whore mouth.",
-							"Take it! Take all of it! Use that worthless mouth of yours!",
-							"You like that, whore? You like me abusing your little mouth-",
-							"Take it! Take it all you worthless slut!"
+							"내가 네 창녀 같은 입을 목구멍까지 박아대는 게 좋지.",
+							"받아! 전부 다 받아! 그 쓸모없는 입을 써!",
+							"좋냐, 창녀야? 내가 네 작은 입을 학대하는 게 좋냐-",
+							"받아라! 전부 다 받아들여, 이 쓸모없는 걸레야!"
 							][random(0,3)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							"<<print [
-							"Keep your mouth open whore, or i'll force it open.",
-							"What a worthless whore, only thing you can do is be abused.",
-							"You like that! You like being used like a toy!?",
-							"What's it like being dominated like this?"
+							"입 벌리고 있어, 창녀야, 아니면 억지로 벌려줄 테니까.",
+							"쓸모없는 창녀 같으니, 네가 할 수 있는 건 학대당하는 것뿐이야.",
+							"좋지! 장난감처럼 쓰이는 게 좋지!?",
+							"이렇게 지배당하는 기분이 어때?"
 							][random(0,3)]>>"
 						<<else>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							"<<print [
-							"Don't worry I won't be too rough.",
-							"Let's see how deep this rabbithole goes.",
-							"You act like a whore, let's see if you suck like one too.",
-							"This is all your fault, being abused like this.",
-							"Don't worry, you won't see straight after I'm done with you.",
-							"You're right where you belong."
+							"걱정 마, 너무 거칠게 하진 않을 테니까.",
+							"이 토끼굴이 얼마나 깊은지 한번 보자.",
+							"창녀처럼 굴더니, 빠는 것도 창녀처럼 하는지 보자.",
+							"이렇게 학대당하는 건 전부 네 탓이야.",
+							"걱정 마, 내가 끝내고 나면 넌 똑바로 보지도 못할 테니까.",
+							"넌 딱 네 자리에 있군."
 							][random(0,5)]>>"
 						<</if>>
 					<</if>>
@@ -2366,81 +2366,81 @@
 					<!-- Not indented until feedback. Regular blowsex code -->
 					<<if $enemyanger lte 20>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"Yes, baby! Just like that!",
-							"You feel so good wrapped around my cock.",
-							"I love your drooling mouth on my cock.",
-							"Open your mouth more, take all of my cock!",
-							"I'm gonna fill you up soon, I hope you're ready!"
+							"그래, 자기야! 바로 그거야!",
+							"내 자지를 감싸는 네 느낌이 너무 좋아.",
+							"침을 흘리는 네 입이 내 자지에 닿는 게 너무 좋아.",
+							"입을 더 벌려, 내 자지를 전부 받아!",
+							"곧 널 가득 채워줄 테니까, 준비됐길 바라!"
 							][random(0,4)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
 							<<He>>【이가】 말한다.
 							"<<print [
-							"Do you like me mouth-fucking you with my cock?",
-							"You are so hot baby.",
-							"Just like that, open your mouth more.",
-							"You are so hot, drooling everywhere.",
-							"Your mouth is so warm."
+							"내 자지로 네 입을 박는 게 좋아?",
+							"넌 정말 야해, 자기야.",
+							"그래 그거야, 입을 더 벌려.",
+							"넌 정말 야해, 사방으로 침을 흘리고.",
+							"네 입 안이 정말 따뜻해."
 							][random(0,4)]>>"
 						<<else>>
 							<<He>>【이가】 말한다. "내 자지를 조이는 네 감촉이 아주 좋군."
 						<</if>>
 					<<elseif $enemyanger lte 100>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"That's it! Use that useless mouth of yours.",
-							"Fuck, I'm about to cum.",
-							"Take all of it, you whore!",
-							"Open your mouth more, let me cum in you.",
-							"That's it! Take it, whore!"
+							"그래! 그 쓸모없는 입을 써봐.",
+							"씨발, 곧 싼다.",
+							"전부 받아, 이 창녀야!",
+							"입을 더 벌려, 네 안에 싸게 해줘.",
+							"바로 그거야! 받아라, 창녀야!"
 							][random(0,4)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> speaks hushedly.
+							<<He>>【이가】 숨죽여 말한다.
 							"<<print [
-							"Open your mouth, so I can fuck your little throat.",
-							"Do you like this? Do you like me fucking that little throat!",
-							"You like having your throat abused by my cock, whore?",
-							"Keep doing that, your whore of a mouth feels good.",
+							"입을 벌려, 네 작은 목구멍을 박을 수 있게.",
+							"이거 좋아? 내가 그 작은 목구멍을 박는 게 좋아!",
+							"내 자지에 목구멍이 학대당하는 게 좋냐, 창녀야?",
+							"계속해, 네 창녀 같은 입이 기분 좋아."
 							"착한 <<girl>>."
 							][random(0,4)]>>"
 						<<else>>
-							<<He>> speaks
+							<<He>>【이가】 말한다.
 							"<<print [
-							"Your throat is so obedient, unlike you.",
-							"You're so cute with my cock down your throat.",
-							"Be a good <<girl>> and this won't hurt.",
-							"Your throat is welcoming me at least."
+							"네 목구멍은 너와 달리 정말 순종적이야.",
+							"내 자지가 목구멍에 박혀 있는 모습이 참 귀엽네.",
+							"착한 <<girl>>답게 굴면 아프지 않을 거야.",
+							"적어도 네 목구멍은 날 반겨주네."
 							][random(0,3)]>>"
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-							<<He>> is lost in the moment.
+							<<He>>【은는】 쾌락에 취해 정신을 놓는다.
 							"<<print [
-							"You like me throatfucking your little whore mouth.",
-							"Take it! Take all of it! Use that worthkess mouth of yours!",
-							"You like that whore! You like me abusing your little mouth.",
-							"I should cum all over your whore face.",
-							"Take it! Take it all you worthless slut!"
+							"내가 네 창녀 같은 입을 목구멍까지 박아대는 게 좋지.",
+							"받아! 전부 다 받아! 그 쓸모없는 입을 써!",
+							"좋냐, 창녀야! 내가 네 작은 입을 학대하는 게 좋냐.",
+							"네 창녀 같은 얼굴에 잔뜩 싸질러야겠어.",
+							"받아라! 전부 다 받아들여, 이 쓸모없는 걸레야!"
 							][random(0,4)]>>"
 						<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							"<<print [
-							"Keep your mouth open whore, or I'll force it open.",
-							"What a worthless whore, only thing you can do is be abused.",
-							"You like that! You like being used like a toy!?",
-							"What's it like being dominated like this?"
+							"입 벌리고 있어, 창녀야, 아니면 억지로 벌려줄 테니까.",
+							"쓸모없는 창녀 같으니, 네가 할 수 있는 건 학대당하는 것뿐이야.",
+							"좋지! 장난감처럼 쓰이는 게 좋지!?",
+							"이렇게 지배당하는 기분이 어때?"
 							][random(0,3)]>>"
 						<<else>>
-							<<He>> mocks you.
+							<<He>>【이가】 당신을 조롱한다.
 							"<<print [
-							"Don't worry, I won't be too rough.",
-							"Let's see how deep this rabbithole goes.",
-							"You act like a whore, let's see if you suck like one too.",
-							"This is all your fault, being abused like this.",
-							"Don't worry, you won't see straight after I'm done with you.",
-							"You're right where you belong."
+							"걱정 마, 너무 거칠게 하진 않을 테니까.",
+							"이 토끼굴이 얼마나 깊은지 한번 보자.",
+							"창녀처럼 굴더니, 빠는 것도 창녀처럼 하는지 보자.",
+							"이렇게 학대당하는 건 전부 네 탓이야.",
+							"걱정 마, 내가 끝내고 나면 넌 똑바로 보지도 못할 테니까.",
+							"넌 딱 네 자리에 있군."
 							][random(0,5)]>>"
 						<</if>>
 					<</if>>
@@ -2505,17 +2505,17 @@
 				<<if $player.virginity.vaginal is true>>
 					<<if $enemyanger lte 60>>
 						<<print [
-							`"My dick is pressing against your virgin pussy... I can deflower you at any moment."`,
-							`"I'm about to be the first in your virgin pussy!"`,
+							`"내 자지가 네 처녀 보지에 닿아 있어... 내가 마음만 먹으면 언제든 네 처음을 빼앗을 수 있지."`,
+							`"내가 네 처녀 보지의 첫 번째가 될 거야!"`,
 							`"네 처녀 보지가 내 자지를 감당할 수 있는지 어디 한번 볼까."`,
-							`"My cock is so close, I almost took your viginity"`
+							`"내 자지가 아주 가까이 왔어, 네 처녀성을 거의 따먹을 뻔했네"`
 						][random(0,3)]>>
 					<<else>>
 						<<print [
 							`"네 처녀막이 뚫리기까지 딱 1인치 남았어, <<bitch>>."`,
 							`"얼마 안 가 넌 처녀가 아니게 될 거다."`,
-							`"I'm about to pound your vigin pussy."`,
-							`"I've always wanted to fuck a virgin cunt."`
+							`"곧 네 처녀 보지를 마구 박아줄 거야."`,
+							`"처녀 보지를 박아보는 게 늘 소원이었지."`
 						][random(0,3)]>>
 					<</if>>
 				<<else>>
@@ -2523,7 +2523,7 @@
 						"네 운이 좋다면, 그 뱃속의 애새끼가 태어날 때쯤 내가 다시 찾아와서 내 씨를 하나 더 심어주지."
 					<<elseif $enemyanger lte 60>>
 						<<print [
-							`"Just having the tip pressing against you like this drives me mad!"`,
+							`"이렇게 끝만 맞대고 있는데도 미쳐버릴 것 같아!"`,
 							`"네 보지를 마구 유린해주고 싶어 미치겠군."`,
 						][random(0,1)]>>
 					<<else>>
@@ -2569,7 +2569,7 @@
 			<<else>>
 				<<if $enemyanger lte 60>>
 					<<print [
-						`"Just having the tip pressing against me like this drives me mad!"`,
+						`"이렇게 끝만 맞대고 있는데도 미쳐버릴 것 같아!"`,
 						`"네가 내 안으로 들어오는 걸 빨리 느끼고 싶어."`,
 					][random(0,1)]>>
 				<<else>>
@@ -2601,7 +2601,7 @@
 				<</if>>
 			<<elseif $player.virginity.penile is true>>
 				<<if $enemyanger lte 60>>
-					"My ass is pressing against your virgin dick... I can deflower you at any moment."
+					"내 엉덩이가 네 동정 자지에 닿아 있어... 내가 마음만 먹으면 언제든 네 처음을 빼앗을 수 있지."
 				<<else>>
 					"네 동정을 따먹기까지 딱 1인치 남았어, <<bitch>>."
 				<</if>>
@@ -2614,7 +2614,7 @@
 			<</if>>
 
 		<<elseif $speechAnusImminent is 1>>
-			<<He>> <<print ["speaks", "gazes with hunger at your ass"][random(0,1)]>>.
+			<<He>>【이가】 <<print ["말한다", "굶주린 시선으로 당신의 엉덩이를 바라본다"][random(0,1)]>>.
 			<<if $anustarget isnot undefined and npcHasStrapon($anustarget)>>
 				<<if $player.virginity.anal is true>>
 					<<if $enemyanger lte 60>>
@@ -2625,9 +2625,9 @@
 				<<else>>
 					<<if $enemyanger lte 60>>
 						"<<print [
-						"Can't wait to see you streching around my strap-on.",
-						"I can't wait to start pounding your ass!",
-						"Do you want me to fuck you right here?",
+						"내 페니스 밴드에 네가 벌어지는 걸 빨리 보고 싶어.",
+						"빨리 네 엉덩이를 마구 박아대고 싶어 미치겠군!",
+						"여기서 바로 박아줄까?",
 						][random(0,2)]>>"
 					<<else>>
 						"네 엉덩이가 내 페니스 밴드를 받아들일 준비가 됐길 바란다, <<bitch>>!"
@@ -2645,10 +2645,10 @@
 						"걱정 마, 뱃속의 꼬마를 지켜주기 위해 네 엉덩이에 대신 박아줄 테니까."
 					<<elseif $enemyanger lte 60>>
 						"<<print [
-						"Just having the tip pressing against you like this drives me mad!",
-						"Can't wait to see you strech around my cock.",
-						"I can't wait to start fucking your ass!",
-						"Don't you want me to fuck you in the ass?",
+						"이렇게 끝만 맞대고 있는데도 미쳐버릴 것 같아!",
+						"내 자지에 네가 벌어지는 걸 빨리 보고 싶어.",
+						"빨리 네 엉덩이를 박고 싶어 미치겠군!",
+						"엉덩이에 박아주길 바라지 않아?",
 						][random(0,3)]>>"
 					<<else>>
 						"네 엉덩이가 준비됐길 바라, 내 자지는 이미 터질 것 같으니까!"
@@ -2677,15 +2677,15 @@
 			<<if $enemyanger lte 20>>
 				"너 같은 귀여운 꼬맹이한테 어떻게 화를 낼 수 있겠어?"
 			<<elseif $enemyanger lte 40>>
-				"Look how cute you are when you apologise."
+				"사과할 때 얼마나 귀여운지 봐."
 			<<elseif $enemyanger lte 60>>
-				"I know you didn't mean to, now let's have some fun."
+				"네가 일부러 그런 게 아니라는 거 알아, 이제 좀 즐겨보자."
 			<<elseif $enemyanger lte 80>>
 				"내게 보답할 방법이 몇 가지 생각나는데 말이야."
 			<<elseif $enemyanger lte 100>>
-				"You better show me how sorry you truly are."
+				"네가 얼마나 미안한지 제대로 보여주는 게 좋을 거야."
 			<<else>>
-				"You better not be lying to me, else you'll be real sorry."
+				"나한테 거짓말하는 거 아니길 바라, 아니면 진짜 후회하게 될 테니까."
 			<</if>>
 
 		<<elseif $speechVaginaEntrance is 1>>
@@ -2694,13 +2694,13 @@
 				<<if $enemyanger lte 20>>
 					"걱정 마, 부드럽게 해줄게."
 				<<elseif $enemyanger lte 40>>
-					"Can't wait to fuck your cute pussy."
+					"네 귀여운 보지를 빨리 박고 싶어."
 				<<elseif $enemyanger lte 60>>
-					"You will be mine soon."
+					"곧 넌 내 거야."
 				<<elseif $enemyanger lte 80>>
-					"Don't squirm! Or do you want me to hurt you?"
+					"꿈틀거리지 마! 아니면 아프게 해줄까?"
 				<<elseif $enemyanger lte 100>>
-					"I can't wait to fuck you sore."
+					"빨리 네가 아플 때까지 박고 싶어."
 				<<else>>
 					"발버둥치지 마. 넌 내 거니까."
 				<</if>>
@@ -2708,13 +2708,13 @@
 				<<if $enemyanger lte 20>>
 					"걱정 마, 부드럽게 해줄게."
 				<<elseif $enemyanger lte 40>>
-					"Can't wait to fuck your cute pussy."
+					"네 귀여운 보지를 빨리 박고 싶어."
 				<<elseif $enemyanger lte 60>>
-					"You will be mine soon."
+					"곧 넌 내 거야."
 				<<elseif $enemyanger lte 80>>
-					"Don't Squirm, or do you want me to hurt you?"
+					"꿈틀거리지 마, 아니면 아프게 해줄까?"
 				<<elseif $enemyanger lte 100>>
-					"I can't wait to fuck you sore."
+					"빨리 네가 아플 때까지 박고 싶어."
 				<<else>>
 					"도망갈 생각 마. 넌 내 거니까."
 				<</if>>
@@ -2725,11 +2725,11 @@
 			<<if $enemyanger lte 20>>
 				"걱정 마, 네 엉덩이는 부드럽게 다뤄줄 테니까."
 			<<elseif $enemyanger lte 40>>
-				"Do you want me to fuck you ass till you cum?"
+				"네 엉덩이를 박아서 가게 해줄까?"
 			<<elseif $enemyanger lte 60>>
-				"Don't worry this will feel good for at least one of us."
+				"걱정 마, 적어도 우리 중 한 명은 기분 좋을 테니까."
 			<<elseif $enemyanger lte 80>>
-				"Don't anger me or you won't be able to walk straight afterwards."
+				"날 화나게 하지 마, 안 그러면 그 뒤에 똑바로 걷지도 못할 테니까."
 			<<elseif $enemyanger lte 100>>
 				"빨리 널 따먹고 싶어 미치겠어."
 			<<else>>
@@ -2742,13 +2742,13 @@
 				<<if $enemyanger lte 20>>
 					"네 그 혀 좀 한 번 보자."
 				<<elseif $enemyanger lte 40>>
-					"That mouth is begging to be stuffed with my toy."
+					"그 입이 내 장난감으로 채워지길 애원하고 있네."
 				<<elseif $enemyanger lte 60>>
-					"Let's see that mouth around my toy."
+					"그 입으로 내 장난감을 감싸는 걸 보자."
 				<<elseif $enemyanger lte 80>>
-					"I can't wait to feel your tongue on my toy."
+					"내 장난감에서 네 혀가 움직이는 걸 빨리 느끼고 싶어."
 				<<elseif $enemyanger lte 100>>
-					"Don't make me force it in there."
+					"억지로 쑤셔 넣게 만들지 마."
 				<<else>>
 					"네 입술로 내 장난감을 머금었으면 좋겠는데. 당장."
 				<</if>>
@@ -2756,13 +2756,13 @@
 				<<if $enemyanger lte 20>>
 					"네 그 혀 좀 한 번 보자."
 				<<elseif $enemyanger lte 40>>
-					"That mouth is begging to be stuffed with my cock."
+					"그 입이 내 자지로 채워지길 애원하고 있네."
 				<<elseif $enemyanger lte 60>>
-					"Let's see that mouth around my dick."
+					"그 입으로 내 자지를 감싸는 걸 보자."
 				<<elseif $enemyanger lte 80>>
 					"내 자지에서 네 혀가 움직이는 걸 빨리 느끼고 싶어."
 				<<elseif $enemyanger lte 100>>
-					"Don't make me force it in there."
+					"억지로 쑤셔 넣게 만들지 마."
 				<<else>>
 					"네 입술로 내 자지를 물었으면 좋겠는데. 당장."
 				<</if>>
@@ -2778,7 +2778,7 @@
 				<<elseif $enemyanger lte 60>>
 					"이 장난감을 어떻게 쓰는지 알고 있길 바라."
 				<<elseif $enemyanger lte 100>>
-					"You better use that thing correctly, or I'll take the real thing instead."
+					"그걸 제대로 쓰는 게 좋을 거야, 아니면 대신 진짜를 가져갈 테니까."
 				<<else>>
 					"너를 위해서라도, 네 장난감이 날 만족시켜 줬으면 좋겠네."
 				<</if>>
@@ -2787,11 +2787,11 @@
 				<<if $enemyanger lte 20>>
 					"기대감에 미쳐버릴 것 같아!"
 				<<elseif $enemyanger lte 40>>
-					"Who would have guessed that you would be packing."
+					"네가 이런 걸 달고 있을 줄 누가 알았겠어."
 				<<elseif $enemyanger lte 60>>
-					"I know you want my pussy."
+					"내 보지를 원한다는 거 다 알아."
 				<<elseif $enemyanger lte 80>>
-					"Make better make me cum with that cute thing of yours."
+					"그 귀여운 물건으로 제대로 날 가게 만드는 게 좋을 거야."
 				<<elseif $enemyanger lte 100>>
 					"내 보지를 갈망하고 있잖아, 숨기려 하지 마."
 				<<else>>
@@ -2801,9 +2801,9 @@
 				<<if $enemyanger lte 20>>
 					"내 보지가 널 집어삼키기 직전이야, 기대감에 미쳐버릴 것 같아!"
 				<<elseif $enemyanger lte 40>>
-					"My pussy is drooling for you."
+					"내 보지가 널 원해서 침을 흘리고 있어."
 				<<elseif $enemyanger lte 60>>
-					"I need some hard fucking, Do you need it too?"
+					"난 거칠게 박히고 싶은데, 너도 그래?"
 				<<elseif $enemyanger lte 100>>
 					"내 보지를 갈망하고 있잖아, 숨기려 하지 마."
 				<<else>>
@@ -3092,12 +3092,12 @@
 			<<print [
 				`"그건 네가 당연히 받아야 할 최소한의 벌이야, <<bitch>>!"`,
 				`"이거 더 맞고 싶어? 엉?"`,
-				`"Hurts, doesn't it."`,
+				`"아프지, 안 그래."`,
 				`"필요하다면 패서라도 널 복종시키겠어."`,
 				`"이거나 처먹어라 이 병신 새끼야!"`,
 				`"아직 받을 벌이 한참 남았다고, 창녀년아."`,
 				`"걸레년들이 벌벌 떠는 꼴이 난 너무 좋더라."`,
-				`"I'll have my fun even if I have to beat it out of you."`,
+				`"널 패서 억지로 짜내야 하더라도, 난 끝까지 즐길 거야."`,
 				`"어쩌면 맞는 걸 좋아하는 거 아냐? 얼마든지 맞춰줄 수 있지."`,
 				`"이제 좀 내가 무서워?"`,
 			][random(0,9)]>>
@@ -3171,7 +3171,7 @@
 			<<if $enemyanger lte 20>>
 				<<print [
 					`"이딴 걸 안 입었으면 좋았을 텐데."`,
-					`"Help me get this thing off, won't you?"`,
+					`"이거 벗는 것 좀 도와줄래?"`,
 					`"정말 이 안에서 빠져나가고 싶어."`,
 				][random(0,2)]>>
 			<<elseif $enemyanger lte 100>>
@@ -3201,7 +3201,7 @@
 					<<print [
 						`"오, 이 앙큼한 것 봐."`,
 						`"씨발, 벗기는 건 고사하고 이걸 어떻게 입은 건지도 모르겠네."`,
-						`"Oh you poor thing, I'll get this thing off for you."`,
+						`"오, 불쌍하기도 하지, 내가 이 장치를 벗겨 줄게."`,
 					][random(0,2)]>>
 				<<else>>
 					<<print [
@@ -3370,7 +3370,7 @@
 				][random(0,2)]>>
 			<<else>>
 				<<print [
-					`"You like having your cock toyed with, <<bitch>>? Or do you prefer I tease your pussy?"`,
+					`"네 자지를 갖고 노니까 기분 좋아, <<bitch>>【아야】? 아니면 네 보지를 희롱해 주는 게 더 좋으려나?"`,
 					`"괴물의 자지를 희롱하며 우월감을 뽐내는 것만큼 좋은 일도 없지."`,
 					`"괴물이 자지를 희롱당했다고 느끼다니, 놀라운걸."`,
 				][random(0,2)]>>
@@ -3387,7 +3387,7 @@
 			<<elseif $enemyanger lte 100>>
 				<<print [
 					`"네 자지를 가지고 노는 거 엄청 재밌네."`,
-					`"I could hurt instead of pleasure you, you know? Best be a good <<girl>>."`,
+					`"기분 좋게 해주는 대신 고통을 줄 수도 있으니까, 얌전한 <<girl>>【으로로】 구는 게 좋을 거야."`,
 					`"날 화나게 하고 싶진 않겠지, 네 자지가 이렇게 무방비한 상태에서는 말이야."`,
 				][random(0,2)]>>
 			<<else>>
@@ -3569,7 +3569,7 @@
 				<<if $npcspeechcycle is 0>>
 					"너 좀 반항하네!"
 				<<elseif $npcspeechcycle is 1>>
-					"You'll be barking like a <<bitch>> soon."
+					"머지않아 <<bitch>>처럼 짖게 만들어주마."
 				<<elseif $npcspeechcycle is 2>>
 					"깨물지 않는 게 좋을걸. 후회하게 될 테니까."
 				<<elseif $npcspeechcycle is 3>>
@@ -3604,7 +3604,7 @@
 			<<if $npcspeechcycle is 0>>
 				"누군가 아주 <<print ($settings.pregnancySpeechEnabled ? "임신시키기" : "박기")>> 딱 좋은 기분이 된 모양이네!"
 			<<elseif $npcspeechcycle is 1>>
-				"Someone's a little too horny to be a threat."
+				"위협을 하기엔 누가 너무 발정한 거 같은데."
 			<<elseif $npcspeechcycle is 2>>
 				"그래, 착한 <<bitch>>지."
 			<<elseif $npcspeechcycle is 3>>
@@ -3650,10 +3650,10 @@
 		<<elseif $speechMoan is 1>>
 			<<if random(0,2) isnot 0 and (($vaginastate is "doublepenetrated" and $NPCList[$vaginatarget].penis is "vaginadouble" and $NPCList[$vaginadoubletarget].penis is "vaginadouble")
 				or ($anusstate is "doublepenetrated" and $NPCList[$anustarget].penis is "anusdouble" and $NPCList[$anusdoubletarget].penis is "anusdouble"))>>
-				<<He>> <<print ["speaks","speaks","whispers","coos","laughs","sniggers","jeers"][random(0,6)]>>.
+				<<He>>【이가】 <<print ["말한다","말한다","속삭인다","달콤하게 속삭인다","웃는다","킥킥거린다","조롱한다"][random(0,6)]>>.
 				<<print [
 					`"우리한테 구멍이 엉망진창으로 유린당하는 게 좋지, 안 그래 <<bitch>>?"`,
-					`"You like that, slut? Like having two fat cocks stretching you out?"`,
+					`"좋냐, 이 창녀야? 두툼한 자지 두 개가 널 찢어발기는 게?"`,
 					`"걱정 마, 널 제대로 써먹어 줄 테니까."`,
 					`"참 귀엽네. 우리 자지들을 받아내는 걸 정말 좋아하잖아."`,
 					`"그래, 자기야. 우리 자지를 깊숙이 삼켜봐, 이 천박한 자지집년아."`,
@@ -3848,7 +3848,7 @@
 				<<print [
 					`"입 닥쳐, <<bitch>>."`,
 					`"네 목구멍에 쑤셔 넣어버리기 전에 입 다물어."`,
-					`"Do you have permission to speak, slut?"`,
+					`"내가 입 놀려도 좋다고 허락했나, 이 걸레야?"`,
 				][random(0,2)]>>
 			<</if>>
 		<<elseif $speechApologiseUnforgiving is 1>>
@@ -3965,15 +3965,15 @@
 		<<elseif $speechgrapple is 1>>
 			<<if (($enemyanger / $enemyangermax) * 100) gte 30>>
 				<<print [
-					"<<He>> threatens. \"I'm tapping that ass one way or another.\"",
-					"<<He>> threatens. \"Behave or else.\"",
-					"<<He>> threatens. \"I WILL beat you if you keep resisting.\""
+					"<<He>>【이가】 위협한다. \"어떻게든 그 엉덩이를 박고 말겠어.\"",
+					"<<He>>【이가】 위협한다. \"얌전히 굴어, 안 그러면 알지.\"",
+					"<<He>>【이가】 위협한다. \"계속 저항하면 진짜 패버린다.\""
 				][random(0,2)]>>
 			<<else>>
 				<<print [
-					"<<He>> speaks. \"Come on babe, stop resisting.\"",
-					"<<He>> speaks. \"Don't make this difficult.\"",
-					"<<He>> speaks. \"Don't you want a good time?\""
+					"<<He>>【이가】 말한다. \"자, 자기야, 그만 저항해.\"",
+					"<<He>>【이가】 말한다. \"일을 어렵게 만들지 마.\"",
+					"<<He>>【이가】 말한다. \"즐거운 시간을 보내고 싶지 않아?\""
 				][random(0,2)]>>
 			<</if>>
 		<<else>>
@@ -3991,132 +3991,132 @@
 <<widget "basespeech">>
 	<<if $combatExtended.reverseRapeStart is 1>>
 		<<rng>>
-		<<He>> whimpers.
+		<<He>>【이가】 끙끙댄다.
 		<<if $penisstate is "penetrated" and $arousal gte ($arousalmax / 5) * 4>>
 			<<if $rng lte 5>>
-				"W-wait... Not inside!"
+				"자-잠깐... 안에는 안 돼!"
 			<<elseif $rng lte 10>>
-				"P-pull out!"
+				"빼-빼줘!"
 			<<elseif $rng lte 15>>
-				"D-don't cum inside!"
+				"아-안에 싸지 마!"
 			<<elseif $rng lte 20>>
-				"S-stop... Please...!"
+				"그-그만... 제발...!"
 			<<elseif $rng lte 25>>
-				"Don't... Don't cum inside...!"
+				"안 돼... 안에 싸지 마...!"
 			<<elseif $rng lte 30>>
-				"Pull out... Please...!"
+				"빼줘... 제발...!"
 			<<elseif $rng lte 35>>
-				"I'll do anything... Just don't cum inside...!"
+				"뭐든 할게... 안에만 싸지 마...!"
 			<<elseif $rng lte 40>>
-				"I-I don't want to get pregnant...!"
+				"나-나 임신하기 싫어...!"
 			<<elseif $rng lte 45>>
-				"Please stop..!"
+				"제발 그만..!"
 			<<elseif $rng lte 50>>
-				"I beg you... Don't cum inside...!"
+				"부탁이야... 안에 싸지 마...!"
 			<<elseif $rng lte 55>>
-				"I-I don't want your babies...!"
+				"나-난 네 애는 싫어...!"
 			<<elseif $rng lte 60>>
-				"Not inside...! Please...!"
+				"안에는 안 돼...! 제발...!"
 			<<elseif $rng lte 65>>
-				"I'm sorry, I'm sorry, I'm sorry...!"
+				"미안해, 미안해, 미안해...!"
 			<<elseif $rng lte 70>>
-				"D-don't do this...!"
+				"이-이러지 마...!"
 			<<elseif $rng lte 75>>
-				"Out out out...!"
+				"빼 빼 빼...!"
 			<<elseif $rng lte 80>>
-				"Pull out... Pull out...!"
+				"빼줘... 빼줘...!"
 			<<elseif $rng lte 85>>
-				"Please no...!"
+				"제발 안 돼...!"
 			<<elseif $rng lte 90>>
-				"I beg you...! Pull out...!"
+				"부탁이야...! 빼줘...!"
 			<<elseif $rng lte 95>>
-				"I don't want to get pregnant...!"
+				"임신하기 싫어...!"
 			<<elseif $rng lte 100>>
-				"Get out...! Get out...!"
+				"나가...! 나가...!"
 			<</if>>
 		<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<if $rng lte 5>>
-				"I-I'm close..."
+				"나-나 거의..."
 			<<elseif $rng lte 10>>
-				"N-No... Not like this!"
+				"아-아냐... 이러면 안 돼!"
 			<<elseif $rng lte 15>>
-				"I don't... I don't want this!"
+				"난... 이런 거 싫어!"
 			<<elseif $rng lte 20>>
-				"S-stop, I don't want to cum from this!"
+				"그-그만, 이걸로 가기 싫어!"
 			<<elseif $rng lte 25>>
-				"Why does this feel good...?"
+				"왜 이게 좋은 거지...?"
 			<<elseif $rng lte 30>>
-				"M-my body isn't listening..."
+				"내-내 몸이 말을 안 들어..."
 			<<elseif $rng lte 35>>
-				"I-I can't think..."
+				"아-아무 생각도 안 나..."
 			<<elseif $rng lte 40>>
-				"Let me cum...!"
+				"가게 해줘...!"
 			<<elseif $rng lte 45>>
-				"Please let me cum...!"
+				"제발 가게 해줘...!"
 			<<elseif $rng lte 50>>
-				"I-I can't take it anymore...!"
+				"더-더는 못 참겠어...!"
 			<<elseif $rng lte 55>>
-				"S-stop... Please..."
+				"그-그만... 제발..."
 			<<elseif $rng lte 60>>
-				"I feel so good..."
+				"너무 좋아..."
 			<<elseif $rng lte 65>>
-				"I'm sorry...!"
+				"미안해...!"
 			<<elseif $rng lte 70>>
-				"Don't stop...!"
+				"멈추지 마...!"
 			<<elseif $rng lte 75>>
-				"Mercy..!"
+				"봐줘..!"
 			<<elseif $rng lte 80>>
-				"Slow... Slow down please...!"
+				"천천히... 제발 천천히...!"
 			<<elseif $rng lte 85>>
-				"T-too much...!"
+				"너-너무 강해...!"
 			<<elseif $rng lte 90>>
-				"Oh god I'm close..."
+				"세상에 나 거의..."
 			<<elseif $rng lte 95>>
-				"I-I'm cumming from this...? Is something wrong with me...?"
+				"나-나 이걸로 가고 있어...? 나 어디 이상한 걸까...?"
 			<<elseif $rng lte 100>>
-				"I-I can't believe I'm getting close...!"
+				"나-나 벌써 가려 한다니 믿을 수 없어...!"
 			<</if>>
 		<<else>>
 			<<if $rng lte 5>>
-				"Please... have mercy."
+				"제발... 자비를 베풀어줘."
 			<<elseif $rng lte 10>>
-				"I-I'm sorry! Please stop!"
+				"미-미안해! 제발 그만해!"
 			<<elseif $rng lte 15>>
-				"You're too strong... I can't resist..."
+				"너 너무 강해... 저항할 수가 없어..."
 			<<elseif $rng lte 20>>
-				"I'll do anything! Just stop!"
+				"뭐든 할게! 제발 그만해!"
 			<<elseif $rng lte 25>>
-				"You're scaring me!"
+				"너 때문에 무서워!"
 			<<elseif $rng lte 30>>
-				"I-I didn't mean it!"
+				"나-나 그럴 생각은 아니었어!"
 			<<elseif $rng lte 35>>
-				"Please! I don't want this!"
+				"제발! 이러고 싶지 않아!"
 			<<elseif $rng lte 40>>
-				"I... I can't take anymore!"
+				"나... 더는 못 견뎌!"
 			<<elseif $rng lte 45>>
-				"You're too much... I c-can't handle it..."
+				"너 너무해... 감-감당 못 하겠어..."
 			<<elseif $rng lte 50>>
-				"Please, I'm begging you!"
+				"제발, 부탁이야!"
 			<<elseif $rng lte 55>>
-				"I-I can't breathe!"
+				"숨-숨을 못 쉬겠어!"
 			<<elseif $rng lte 60>>
-				"I'm too weak to fight back..."
+				"너무 약해서 맞서 싸울 수가 없어..."
 			<<elseif $rng lte 65>>
-				"I'll do anything, just let me go!"
+				"뭐든 할게, 제발 놔줘!"
 			<<elseif $rng lte 70>>
-				"I never should have underestimated you..."
+				"널 얕보는 게 아니었어..."
 			<<elseif $rng lte 75>>
-				"You're enjoying this, aren't you...?"
+				"너 이거 즐기고 있지...?"
 			<<elseif $rng lte 80>>
-				"Please, be gentle..."
+				"제발, 살살 해줘..."
 			<<elseif $rng lte 85>>
-				"I-I don't want this anymore..."
+				"더-더는 이거 싫어..."
 			<<elseif $rng lte 90>>
-				"My body... it can't take anymore..."
+				"내 몸이... 더는 못 버텨..."
 			<<elseif $rng lte 95>>
-				"You're relentless..."
+				"넌 끝도 없구나..."
 			<<elseif $rng lte 100>>
-				"Y-you're too much for me..."
+				"너-너는 나한테 너무 벅차..."
 			<</if>>
 		<</if>>
 	<<elseif $enemyanger lte 20 or _args[0] is "low">>
@@ -5238,7 +5238,7 @@
 						<<case 5>> "그 위로 내 손을 이리저리 문질러대고 싶네."
 					<</switch>>
 				<<case "jeans">>
-					"Those really accentuate your legs."
+					"그건 네 다리를 정말 돋보이게 해 주네."
 				<<case "school trousers">>
 					<<if $player.gender_appearance is "f">>
 						"완전 선머슴이라니까."
@@ -5640,9 +5640,9 @@
 					<<if $wolfgirl gte 4 and $transformationParts.wolf.ears isnot "hidden" and $location is "forest">>
 						<<He>>【은는】 당신의 늑대 귀를 살펴보고 눈살을 찌푸린다. "이봐, 넌 그... 아니야, 신경 쓰지 마."
 					<<elseif (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $transformationParts.bird.wings isnot "hidden" and $location is "moor">>
-						<<He>> examines your<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>> bird<</if>> wings and frowns. "Hey, are you with the... never mind."
+						<<He>>【은는】 당신의<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>> 새<</if>> 날개를 살펴보고 눈살을 찌푸린다. "이봐, 넌 그... 아니야, 신경 쓰지 마."
 					<<elseif ($cow gte 2 or $transformationParts.cow.horns is "default") and $transformationParts.cow.horns isnot "hidden" and $location is "moor">>
-						<<He>> examines your<<if ($demon gte 2 or ($transformationParts.demon.horns isnot "disabled" and $transformationParts.demon.horns isnot "hidden"))>> cow<</if>> horns and smiles. "Don't worry. I won't let Remy get you."
+						<<He>>【은는】 당신의<<if ($demon gte 2 or ($transformationParts.demon.horns isnot "disabled" and $transformationParts.demon.horns isnot "hidden"))>> 소<</if>> 뿔을 살펴보고는 미소를 짓는다. "걱정 마. 레미가 널 데려가게 내버려두지 않을 테니까."
 					<<elseif $rng gte 51>>
 						<<He>>【은는】 말한다. "넌 이걸 받을 자격이 있어. 이 쾌락을 누릴 자격이 있다고."
 					<<else>>

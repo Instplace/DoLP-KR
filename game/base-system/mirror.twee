@@ -160,7 +160,7 @@
 	
 	__DecoMod__
 	<br>
-	<<decoicon>><<link "Beautify your inner self">><<set $mirrorMenu to "mood">><<replace #mirror>><<mirrorDisplay>><</replace>><<numberify "#passages > .passage">><</link>>
+	<<decoicon>><<link "내면을 아름답게 가꾼다">><<set $mirrorMenu to "mood">><<replace #mirror>><<mirrorDisplay>><</replace>><<numberify "#passages > .passage">><</link>>
 	<br><br>
 	
 	
@@ -266,7 +266,7 @@
 <<widget "mirrorAppearance">>
 	<<mirroricon>><<link "뒤로">><<replace #mirror>><<mirrorMenu>><</replace>><<numberify "#passages > .passage">><<unset $mirrorMenu>><</link>>
 	<br><br>
-	<i>Attractiveness measures your ability to use your looks to your advantage.</i>
+	<i>외모는 당신의 외모를 당신에게 유리하게 활용할 수 있는 능력을 수치화한 것입니다.</i>
 	<br>
 	매력 등급:
 	<<if $attractiveness gte 5000>>
@@ -286,150 +286,150 @@
 
 	<span class="green">
 		<<if $beauty gte ($beautymax / 7)>>
-			Cute
+			귀여움
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 2>>
-			Pretty
+			예쁨
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 3>>
-			Charming
+			매력적
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 4>>
-			Beautiful
+			아름다움
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 5>>
-			Ravishing
+			매혹적
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 6>>
-			Divine
+			신성함
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 7>>
-			Alluring
+			유혹적
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 8>>
-			Stunning
+			눈부심
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 9>>
-			Mesmerizing
+			넋을 잃게 함
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 10>>
-			Enchanting
+			황홀함
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 11>>
-			Captivating
+			사로잡음
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 12>>
-			Breathtaking
+			숨 막히는 아름다움
 			<br>
 		<</if>>
 		<<if $beauty gte ($beautymax / 7) * 13>>
-			Beyond Divine
+			신성함 그 이상
 			<br>
 		<</if>>
-		Hair length
+		머리 길이
 		<br>
 		<<if $worn.upper.type.includes("naked")>>
-			Topless
+			상의 탈의
 			<br>
 		<<elseif $worn.upper.reveal gte 500>>
-			Revealing top
+			노출도 높은 상의
 			<br>
 		<</if>>
 		<<if $worn.lower.type.includes("naked")>>
-			Bottomless
+			하의 없음
 			<br>
 		<<elseif $worn.lower.reveal gte 500>>
-			Revealing bottoms
+			노출도 높은 하의
 			<br>
 		<</if>>
 		<<if $worn.under_lower.type.includes("naked")>>
-			Pantiless
+			팬티 없음
 			<br>
 		<<elseif $worn.under_lower.reveal gte 500>>
-			Sexy underwear
+			섹시한 속옷
 			<br>
 		<</if>>
 		<<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>
-			Wolfy
+			늑대형
 			<br>
 		<</if>>
 		<<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>
-			Catlike
+			고양이형
 			<br>
 		<</if>>
 		<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>
-			Bovine
+			소형
 			<br>
 		<</if>>
 		<<if (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear")>>
-			Bearly
+			곰형
 			<br>
 		<</if>>
 		<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>
-			Harpy
+			하피형
 			<br>
 		<</if>>
 		<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>
-			Vulpine
+			여우형
 			<br>
 		<</if>>
 		<<if (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>>
-			Angel
+			천사
 			<br>
 		<</if>>
 		<<if (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>>
-			Fallen angel
+			타락 천사
 			<br>
 		<</if>>
 		<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-			Demon
+			악마
 			<br>
 		<</if>>
 		<<if ($transformationParts.okami.wings isnot "hidden" and $transformationParts.okami.wings isnot "disabled")>>
-			Okami
+			오카미
 			<br>
 		<</if>>
 		<<if ($transformationParts.seraphim.wings isnot "hidden" and $transformationParts.seraphim.wings isnot "disabled")>>
-			Seraphim
+			세라핌
 			<br>
 		<</if>>
 		<<if ($transformationParts.kitsune.tail isnot "hidden" and $transformationParts.kitsune.tail isnot "disabled")>>
-			Kitsune
+			키츠네
 			<br>
 		<</if>>
 		<<if $makeup.lipstick != 0 or $makeup.eyeshadow != 0 or $makeup.mascara != 0>>
-			Attractive makeup
+			매력적인 화장
 			<br>
 		<</if>>
 		<<if $worn.head.reveal gte 50>>
-			Attractive headwear
+			매력적인 머리 장식
 			<br>
 		<</if>>
 		<<if $worn.face.reveal gte 50>>
-			Attractive face accessory
+			매력적인 얼굴 장식
 			<br>
 		<</if>>
 		<<if $worn.neck.reveal gte 50>>
-			Attractive collar
+			매력적인 목 장식
 			<br>
 		<</if>>
 		<<if $worn.legs.reveal gte 50>>
-			Attractive legwear
+			매력적인 양말류
 			<br>
 		<</if>>
 		<<if $worn.feet.reveal gte 50>>
-			Attractive shoes
+			매력적인 신발
 			<br>
 		<</if>>
 	</span>
@@ -479,16 +479,16 @@
 			<<run _increaseBoth("섹시한 속옷")>>
 		<</if>>
 		<<if ["ears", "tail"].filter(p => $transformationParts.wolf[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Wolfy ${"+".repeat(2 - ["ears", "tail"].filter(p => $transformationParts.wolf[p] is "disabled").length)}`)>>
+			<<run _increaseBoth(`늑대형 ${"+".repeat(2 - ["ears", "tail"].filter(p => $transformationParts.wolf[p] is "disabled").length)}`)>>
 		<</if>>
 		<<if ["ears", "tail"].filter(p => $transformationParts.cat[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Catlike ${"+".repeat(2 - ["ears", "tail"].filter(p => $transformationParts.cat[p] is "disabled").length)}`)>>
+			<<run _increaseBoth(`고양이형 ${"+".repeat(2 - ["ears", "tail"].filter(p => $transformationParts.cat[p] is "disabled").length)}`)>>
 		<</if>>
 		<<if ["ears", "tail", "horns"].filter(p => $transformationParts.cow[p] is "disabled").length < 3>>
-			<<run _increaseBoth(`Bovine ${"+".repeat(2 - Math.ceil(["ears", "tail", "horns"].filter(p => $transformationParts.cow[p] is "disabled").length / 2))}`)>>
+			<<run _increaseBoth(`소형 ${"+".repeat(2 - Math.ceil(["ears", "tail", "horns"].filter(p => $transformationParts.cow[p] is "disabled").length / 2))}`)>>
 		<</if>>
 		<<if ["tail", "eyes", "malar", "plumage", "wings"].filter(p => $transformationParts.bird[p] is "disabled").length < 5>>
-			<<run _increaseBoth(`Harpy ${"+".repeat(2 - Math.ceil(["tail", "eyes", "malar", "plumage", "wings"].filter(p => $transformationParts.bird[p] is "disabled").length / 3))}`)>>
+			<<run _increaseBoth(`하피형 ${"+".repeat(2 - Math.ceil(["tail", "eyes", "malar", "plumage", "wings"].filter(p => $transformationParts.bird[p] is "disabled").length / 3))}`)>>
 		<</if>>
 		<<if ["ears", "tail"].filter(p => $transformationParts.fox[p] is "disabled").length < 2>>
 			<<run _increaseAttractive.push(`Vulpine ${"+".repeat(3 - ["ears", "tail"].filter(p => $transformationParts.fox[p] is "disabled").length)}`)>>
@@ -497,31 +497,31 @@
 			<<run _increaseAllure.push(`Foxy ${"+".repeat(3 - ["ears", "tail"].filter(p => $transformationParts.fox[p] is "disabled").length)}`)>>
 		<</if>>
 		<<if ["ears", "tail"].filter(p => $transformationParts.bear[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Bear ${"+".repeat(2 - Math.ceil(["ears","tail"].filter(p => $transformationParts.bear[p] is "disabled").length))}`)>>
+			<<run _increaseBoth(`곰형 ${"+".repeat(2 - Math.ceil(["ears","tail"].filter(p => $transformationParts.bear[p] is "disabled").length))}`)>>
 		<</if>>
 		<<if ["ears", "tail", "horns"].filter(p => $transformationParts.waterdragon[p] is "disabled").length < 3>>
-			<<run _increaseBoth(`Draconic ${"+".repeat(2 - Math.ceil(["ears", "tail", "horns"].filter(p => $transformationParts.waterdragon[p] is "disabled").length / 2))}`)>>
+			<<run _increaseBoth(`수룡형 ${"+".repeat(2 - Math.ceil(["ears", "tail", "horns"].filter(p => $transformationParts.waterdragon[p] is "disabled").length / 2))}`)>>
 		<</if>>
 		<<if ["ears", "tail"].filter(p => $transformationParts.bunny[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Bunny ${"+".repeat(2 - Math.ceil(["ears","tail"].filter(p => $transformationParts.bunny[p] is "disabled").length))}`)>>
+			<<run _increaseBoth(`토끼형 ${"+".repeat(2 - Math.ceil(["ears","tail"].filter(p => $transformationParts.bunny[p] is "disabled").length))}`)>>
 		<</if>>
 		<<if ["ears", "tail", "wings"].filter(p => $transformationParts.okami[p] is "disabled").length < 3>>
-			<<run _increaseBoth(`Okami ${"+".repeat(4 - Math.ceil(["ears", "tail", "wings"].filter(p => $transformationParts.okami[p] is "disabled").length))}`)>>
+			<<run _increaseBoth(`오카미 ${"+".repeat(4 - Math.ceil(["ears", "tail", "wings"].filter(p => $transformationParts.okami[p] is "disabled").length))}`)>>
 		<</if>>
 		<<if ["wings", "plumage"].filter(p => $transformationParts.seraphim[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Seraphim ${"+".repeat(4 - Math.ceil(["wings", "plumage"].filter(p => $transformationParts.seraphim[p] is "disabled").length))}`)>>
+			<<run _increaseBoth(`세라핌 ${"+".repeat(4 - Math.ceil(["wings", "plumage"].filter(p => $transformationParts.seraphim[p] is "disabled").length))}`)>>
 		<</if>>
 		<<if ["ears", "tail", "cheeks"].filter(p => $transformationParts.kitsune[p] is "disabled").length < 3>>
-			<<run _increaseBoth(`Kitsune ${"+".repeat(4 - Math.ceil(["ears", "tail", "cheeks"].filter(p => $transformationParts.kitsune[p] is "disabled").length))}`)>>
+			<<run _increaseBoth(`키츠네 ${"+".repeat(4 - Math.ceil(["ears", "tail", "cheeks"].filter(p => $transformationParts.kitsune[p] is "disabled").length))}`)>>
 		<</if>>
 		<<if ["halo", "wings"].filter(p => $transformationParts.angel[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Angel ${"+".repeat(2 - ["halo", "wings"].filter(p => $transformationParts.angel[p] is "disabled").length)}`)>>
+			<<run _increaseBoth(`천사 ${"+".repeat(2 - ["halo", "wings"].filter(p => $transformationParts.angel[p] is "disabled").length)}`)>>
 		<</if>>
 		<<if ["halo", "wings"].filter(p => $transformationParts.fallenAngel[p] is "disabled").length < 2>>
-			<<run _increaseBoth(`Fallen angel ${"+".repeat(2 - ["halo", "wings"].filter(p => $transformationParts.fallenAngel[p] is "disabled").length)}`)>>
+			<<run _increaseBoth(`타락 천사 ${"+".repeat(2 - ["halo", "wings"].filter(p => $transformationParts.fallenAngel[p] is "disabled").length)}`)>>
 		<</if>>
 		<<if ["horns", "tail", "wings"].filter(p => $transformationParts.demon[p] is "disabled").length < 3>>
-			<<run _increaseBoth(`Demon ${"+".repeat(2 - Math.ceil(["horns", "tail", "wings"].filter(p => $transformationParts.demon[p] is "disabled").length / 2))}`)>>
+			<<run _increaseBoth(`악마 ${"+".repeat(2 - Math.ceil(["horns", "tail", "wings"].filter(p => $transformationParts.demon[p] is "disabled").length / 2))}`)>>
 		<</if>>
 		<<if $earSlime.growth gt 50>>
 			<<run _increaseAllure.push(`귀 슬라임 페로몬${$earSlime.growth gt 75 ? " " + "+".repeat(Math.ceil(($earSlime.growth - 75) / 25)): ""}`)>>
@@ -580,9 +580,9 @@
 			<<run _increaseAllure.push(`엘크 흉터 ${"+".repeat($auriga_scar)}`)>>
 		<</if>>
 		<<set _negLabels = [
-			{ threshold: 4000, class: "lustful", label: "Legendary" },
-			{ threshold: 3000, class: "lustful", label: "Renowned" },
-			{ threshold: 2000, class: "red", label: "Infamous" },
+			{ threshold: 4000, class: "lustful", label: "전설적인" },
+			{ threshold: 3000, class: "lustful", label: "저명한" },
+			{ threshold: 2000, class: "red", label: "악명이 자자한" },
 			{ threshold: 1000, class: "red", label: "악명 높은" },
 			{ threshold: 600, class: "pink", label: "유명한" },
 			{ threshold: 400, class: "purple", label: "알려진" },
@@ -591,20 +591,20 @@
 			{ threshold: 30, class: "teal", label: "무명" }
 		]>>
 		<<set _posLabels = [
-			{ threshold: 4000, class: "lustful", label: "Legendary" },
-			{ threshold: 3500, class: "lustful", label: "Exalted" },
-			{ threshold: 3000, class: "gold", label: "Renowned" },
-			{ threshold: 2500, class: "gold", label: "Esteemed" },
-			{ threshold: 2000, class: "gold", label: "Notorious" },
-			{ threshold: 1500, class: "green", label: "Well-regarded" },
-			{ threshold: 1200, class: "green", label: "Distinguished" },
-			{ threshold: 1000, class: "green", label: "Famous" },
-			{ threshold: 800, class: "teal", label: "Honoured" },
-			{ threshold: 600, class: "teal", label: "Recognised" },
-			{ threshold: 400, class: "lblue", label: "Known" },
-			{ threshold: 200, class: "blue", label: "Low-key" },
-			{ threshold: 100, class: "purple", label: "Obscure" },
-			{ threshold: 30, class: "pink", label: "Unknown" }
+			{ threshold: 4000, class: "lustful", label: "전설적인" },
+			{ threshold: 3500, class: "lustful", label: "추앙받는" },
+			{ threshold: 3000, class: "gold", label: "저명한" },
+			{ threshold: 2500, class: "gold", label: "존경받는" },
+			{ threshold: 2000, class: "gold", label: "악명 높은" },
+			{ threshold: 1500, class: "green", label: "호평받는" },
+			{ threshold: 1200, class: "green", label: "걸출한" },
+			{ threshold: 1000, class: "green", label: "유명한" },
+			{ threshold: 800, class: "teal", label: "명예로운" },
+			{ threshold: 600, class: "teal", label: "알려진" },
+			{ threshold: 400, class: "lblue", label: "인지된" },
+			{ threshold: 200, class: "blue", label: "눈에 띄지 않는" },
+			{ threshold: 100, class: "purple", label: "무명" },
+			{ threshold: 30, class: "pink", label: "알려지지 않은" }
 		]>>
 		<<set _neg = [
 			{ type: "sex", name: "걸레" },
@@ -690,7 +690,7 @@
 				<<for _fame range _neg>>
 					<<set _famous = _negLabels.find(status => $fame[_fame.type] >= status.threshold)>>
 					<<if _famous>>
-						<span @class="_famous.class">Fame: <<= _famous.label>> <<= _fame.name>> <<= "+".repeat([30, 100, 200, 400, 600, 1000, 2000, 3000, 4000].indexOf(_famous.threshold))>></span>
+						<span @class="_famous.class">명성: <<= _famous.label>> <<= _fame.name>> <<= "+".repeat([30, 100, 200, 400, 600, 1000, 2000, 3000, 4000].indexOf(_famous.threshold))>></span>
 						<br>
 					<</if>>
 				<</for>>
@@ -704,7 +704,7 @@
 					<<for _fame range _pos>>
 						<<set _famous = _posLabels.find(status => $fame[_fame.type] >= status.threshold)>>
 						<<if _famous>>
-							<span @class="_famous.class">Fame: <<= _famous.label>> <<= _fame.name>> <<= "+".repeat([30, 100, 200, 400, 600, 800, 1000, 1200, 1500, 2000, 2500, 3000, 3500, 4000].indexOf(_famous.threshold))>></span>
+							<span @class="_famous.class">명성: <<= _famous.label>> <<= _fame.name>> <<= "+".repeat([30, 100, 200, 400, 600, 800, 1000, 1200, 1500, 2000, 2500, 3000, 3500, 4000].indexOf(_famous.threshold))>></span>
 							<br>
 						<</if>>
 					<</for>>
@@ -990,13 +990,13 @@
 		</div>
 		<div class="settingsToggleItemWide">
 			<div class="armMenu">
-				<span class="gold bold">Right arm position:</span>
-				<mouse class="tooltip-small linkBlue">(?)<span>This is a cosmetic change.</span></mouse>
+				<span class="gold bold">오른팔 위치:</span>
+				<mouse class="tooltip-small linkBlue">(?)<span>이것은 외형적인 변화입니다.</span></mouse>
 				<br>
-				Your chosen right arm position is:
+				당신이 선택한 오른팔 위치는 다음과 같습니다:
 				<<set _positionOptions to {
-					"Above": "above",
-					"Below": "below"
+					"위": "above",
+					"아래": "below"
 				}>>
 				<<listbox "$rightArmPosition" autoselect>>
 					<<optionsfrom _positionOptions>>
@@ -1009,15 +1009,15 @@
 		</div>
 		<div class="settingsToggleItemWide">
 			<div class="releaseboobs">
-				<span class="gold bold">Release the boobas from the sideview:</span>
-				<mouse class="tooltip-small linkBlue">(?)<span>This is a cosmetic change.</span></mouse>
+				<span class="gold bold">측면 이미지의 가슴 해방:</span>
+				<mouse class="tooltip-small linkBlue">(?)<span>이것은 외형적인 변화입니다.</span></mouse>
 				<br>
-				<span class="red">Only for Goose Female!</span>
+				<span class="red">Goose 여성 전용!</span>
 				<br>
-				Your chosen sideview booba state is:
+				당신이 선택한 측면 이미지의 가슴 상태는 다음과 같습니다:
 				<<set _releaseboobs to {
-					"Release": "release",
-					"Contain": "contain"
+					"해방": "release",
+					"가둠": "contain"
 				}>>
 				<<listbox "$releaseBoobs" autoselect>>
 					<<optionsfrom _releaseboobs>>
@@ -1596,17 +1596,17 @@
 			|
 			<<switch $tfearsposition>>
 				<<case "front">>
-					<<link "Position hair in front of TF ears">>
+					<<link "머리카락을 변이 귀 앞에 둔다">>
 						<<run State.setVar("$tfearsposition", "back")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "back">>
-					<<link "Tuck hair behind TF ears">>
+					<<link "머리카락을 변이 귀 뒤로 넘긴다">>
 						<<run State.setVar("$tfearsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Tuck hair behind TF ears">>
+					<<link "머리카락을 변이 귀 뒤로 넘긴다">>
 						<<run State.setVar("$tfearsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -1614,17 +1614,17 @@
 			|
 			<<switch $tfearshatposition>>
 				<<case "through">>
-					<<link "Tuck ears under hats">>
+					<<link "귀를 모자 아래로 집어넣는다">>
 						<<run State.setVar("$tfearshatposition", "under")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "under">>
-					<<link "Poke ears through hats">>
+					<<link "귀를 모자 밖으로 내민다">>
 						<<run State.setVar("$tfearshatposition", "through")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Tuck ears under hats">>
+					<<link "귀를 모자 아래로 집어넣는다">>
 						<<run State.setVar("$tfearshatposition", "under")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -1650,22 +1650,22 @@
 			|
 			<<switch $earringsposition>>
 				<<case "fringe">>
-					<<link "Position earrings behind hair">>
+					<<link "귀걸이를 머리카락 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "back")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "back">>
-					<<link "Position earrings in front of hair">>
+					<<link "귀걸이를 머리카락 앞에 둔다">>
 						<<run State.setVar("$earringsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "front">>
-					<<link "Position earrings behind fringe">>
+					<<link "귀걸이를 앞머리 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "fringe")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Position earrings behind fringe">>
+					<<link "귀걸이를 앞머리 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "fringe")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -1746,17 +1746,17 @@
 			|
 			<<switch $tfearsposition>>
 				<<case "front">>
-					<<link "Position hair in front of TF ears">>
+					<<link "머리카락을 변이 귀 앞에 둔다">>
 						<<run State.setVar("$tfearsposition", "back")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "back">>
-					<<link "Tuck hair behind TF ears">>
+					<<link "머리카락을 변이 귀 뒤로 넘긴다">>
 						<<run State.setVar("$tfearsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Tuck hair behind TF ears">>
+					<<link "머리카락을 변이 귀 뒤로 넘긴다">>
 						<<run State.setVar("$tfearsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -1764,17 +1764,17 @@
 			|
 			<<switch $tfearshatposition>>
 				<<case "through">>
-					<<link "Tuck ears under hats">>
+					<<link "귀를 모자 아래로 집어넣는다">>
 						<<run State.setVar("$tfearshatposition", "under")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "under">>
-					<<link "Poke ears through hats">>
+					<<link "귀를 모자 밖으로 내민다">>
 						<<run State.setVar("$tfearshatposition", "through")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Tuck ears under hats">>
+					<<link "귀를 모자 아래로 집어넣는다">>
 						<<run State.setVar("$tfearshatposition", "under")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -1800,22 +1800,22 @@
 			|
 			<<switch $earringsposition>>
 				<<case "fringe">>
-					<<link "Position earrings behind hair">>
+					<<link "귀걸이를 머리카락 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "back")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "back">>
-					<<link "Position earrings in front of hair">>
+					<<link "귀걸이를 머리카락 앞에 둔다">>
 						<<run State.setVar("$earringsposition", "front")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<case "front">>
-					<<link "Position earrings behind fringe">>
+					<<link "귀걸이를 앞머리 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "fringe")>>
 						<<run Engine.show()>>
 					<</link>>
 				<<default>>
-					<<link "Position earrings behind fringe">>
+					<<link "귀걸이를 앞머리 뒤에 둔다">>
 						<<run State.setVar("$earringsposition", "fringe")>>
 						<<run Engine.show()>>
 					<</link>>
@@ -2719,9 +2719,9 @@
 	<<mirroricon>><<link "뒤로">><<replace #mirror>><<mirrorMenu>><</replace>><<numberify "#passages > .passage">><<unset $mirrorMenu>><</link>>
 	<br><br>
 
-	__Genome Dump__
+	__게놈 덤프__
 	<br>
-	<<link "Reset Transformation">><<set $mirrorMenu to "genomedump">><<replace #mirror>><<mirrorDisplay>><</replace>><<numberify "#passages > .passage">><</link>>
+	<<link "변이를 초기화한다">><<set $mirrorMenu to "genomedump">><<replace #mirror>><<mirrorDisplay>><</replace>><<numberify "#passages > .passage">><</link>>
 	<br><br>
 
 	<<tfcheck>>
@@ -2785,30 +2785,30 @@
 	<<if _angelFullCheck or _fallenFullCheck or _fallenPlusFullCheck or _demonFullCheck>>
 		/* Active Divine TF */
 		<<set _options = {}>> 
-		<<set _options["None"] = "disabled">>
+		<<set _options["없음"] = "disabled">>
 		<<if _angelFullCheck>>
-			<<set _options["Angel"] = "angel">>
+			<<set _options["천사"] = "angel">>
 			<<if _traits.activeTF is "angel">>
-				<<set _activeTFChoice to _options["Angel"]>>
+				<<set _activeTFChoice to _options["천사"]>>
 			<</if>>
 		<</if>>
 		<<if _fallenFullCheck>>
-			<<set _options["Fallen Angel"] = "fallenAngel">>
+			<<set _options["타락 천사"] = "fallenAngel">>
 			<<if _traits.activeTF is "fallenAngel">>
-				<<set _activeTFChoice to _options["Fallen Angel"]>>
+				<<set _activeTFChoice to _options["타락 천사"]>>
 			<</if>>
 		<</if>>
 		<<if _demonFullCheck>>
-			<<set _options["Demon"] = "demon">>
+			<<set _options["악마"] = "demon">>
 			<<if _traits.activeTF is "demon">>
-				<<set _activeTFChoice to _options["Demon"]>>
+				<<set _activeTFChoice to _options["악마"]>>
 			<</if>>
 		<</if>>
 		<<if !_activeTFChoice>>
 			<<set _activeTFChoice to 0>>
 		<</if>>
 		<<if Object.keys(_options).length > 1>>
-			<label>Active Divine TF: <<note "If set to anything other than disabled, it will override TF checks to your choice." "yellow">>
+			<label>활성 신성 변이: <<note "비활성화 외의 값으로 설정하면 변이 판정이 당신의 선택으로 덮어씌워집니다." "yellow">>
 				<div class="tf-activeDivineTF">
 					<<listbox "_activeDivineTFChoice" autoselect>>
 						<<optionsfrom _options>>
@@ -2822,78 +2822,78 @@
 	<<if _catFullCheck or _cowFullCheck or _bearFullCheck or _waterdragonFullCheck or _wolfFullCheck or _birdFullCheck or _foxFullCheck or _bunnyFullCheck>>
 		/* Active TF */
 		<<set _options = {}>> 
-		<<set _options["None"] = "disabled">>
+		<<set _options["없음"] = "disabled">>
 		<<if _wolfFullCheck>>
-			<<set _options["Wolf"] = "wolf">>
+			<<set _options["늑대"] = "wolf">>
 			<<if _traits.activeTF is "wolf">>
-				<<set _activeTFChoice to _options["Wolf"]>>
+				<<set _activeTFChoice to _options["늑대"]>>
 			<</if>>
 		<</if>>
 		<<if _catFullCheck>>
-			<<set _options["Cat"] = "cat">>
+			<<set _options["고양이"] = "cat">>
 			<<if _traits.activeTF is "cat">>
-				<<set _activeTFChoice to _options["Cat"]>>
+				<<set _activeTFChoice to _options["고양이"]>>
 			<</if>>
 		<</if>>
 		<<if _cowFullCheck>>
-			<<set _options["Cow"] = "cow">>
+			<<set _options["젖소"] = "cow">>
 			<<if _traits.activeTF is "cow">>
-				<<set _activeTFChoice to _options["Cow"]>>
+				<<set _activeTFChoice to _options["젖소"]>>
 			<</if>>
 		<</if>>
 		<<if _bearFullCheck>>
-			<<set _options["Bear"] = "bear">>
+			<<set _options["곰"] = "bear">>
 			<<if _traits.activeTF is "bear">>
-				<<set _activeTFChoice to _options["Bear"]>>
+				<<set _activeTFChoice to _options["곰"]>>
 			<</if>>
 		<</if>>
 		<<if _waterdragonTraitsCheck>>
-			<<set _options["Water Dragon"] = "waterdragon">>
+			<<set _options["수룡"] = "waterdragon">>
 			<<if _traits.activeTF is "waterdragon">>
-				<<set _activeTFChoice to _options["Water Dragon"]>>
+				<<set _activeTFChoice to _options["수룡"]>>
 			<</if>>
 		<</if>>
 		<<if _birdFullCheck>>
-			<<set _options["Bird"] = "bird">>
+			<<set _options["새"] = "bird">>
 			<<if _traits.activeTF is "bird">>
-				<<set _activeTFChoice to _options["Bird"]>>
+				<<set _activeTFChoice to _options["새"]>>
 			<</if>>
 		<</if>>
 		<<if _foxFullCheck>>
-			<<set _options["Fox"] = "fox">>
+			<<set _options["여우"] = "fox">>
 			<<if _traits.activeTF is "fox">>
-				<<set _activeTFChoice to _options["Fox"]>>
+				<<set _activeTFChoice to _options["여우"]>>
 			<</if>>
 		<</if>>
 		<<if _bunnyFullCheck>>
-			<<set _options["Bunny"] = "bunny">>
+			<<set _options["토끼"] = "bunny">>
 			<<if _traits.activeTF is "bunny">>
-				<<set _activeTFChoice to _options["Bunny"]>>
+				<<set _activeTFChoice to _options["토끼"]>>
 			<</if>>
 		<</if>>
 		<<if _angelFullCheck>>
-			<<set _options["Angel"] = "angel">>
+			<<set _options["천사"] = "angel">>
 			<<if _traits.activeTF is "angel">>
-				<<set _activeTFChoice to _options["Angel"]>>
+				<<set _activeTFChoice to _options["천사"]>>
 			<</if>>
 		<</if>>
 		<<if _fallenFullCheck>>
-			<<set _options["Fallen Angel"] = "fallenAngel">>
+			<<set _options["타락 천사"] = "fallenAngel">>
 			<<if _traits.activeTF is "fallenAngel">>
-				<<set _activeTFChoice to _options["Fallen Angel"]>>
+				<<set _activeTFChoice to _options["타락 천사"]>>
 			<</if>>
 		<</if>>
 		<<if _demonFullCheck>>
-			<<set _options["Demon"] = "demon">>
+			<<set _options["악마"] = "demon">>
 			<<if _traits.activeTF is "demon">>
-				<<set _activeTFChoice to _options["Demon"]>>
+				<<set _activeTFChoice to _options["악마"]>>
 			<</if>>
 		<</if>>
 		<<if !_activeTFChoice>>
 			<<set _activeTFChoice to 0>>
 		<</if>>
 		<<if Object.keys(_options).length > 1>>
-			<label>Active TF: <<note "If set to anything other than disabled, it will override TF checks to your choice." "yellow">>
+			<label>활성 변이: <<note "비활성화 외의 값으로 설정하면 변이 판정이 당신의 선택으로 덮어씌워집니다." "yellow">>
 				<div class="tf-activeTF">
 					<<listbox "_activeTFChoice" autoselect>>
 						<<optionsfrom _options>>
@@ -2907,139 +2907,139 @@
 	<<if _wolfInitialCheck or _catInitialCheck or _cowFullCheck or _bearFullCheck or _waterdragonMenuCheck or $harpy gte 3 or $harpytf is 1 or $fox gte 3 or $foxtf is 1 or _bunnyInitialCheck or (_demonPartialCheck and $exhibitionism gte 95)>>
 		__Traits__<br>
 		<<if _wolfInitialCheck or _catInitialCheck or _foxInitialCheck or _bearInitialCheck or _waterdragonMenuCheck>>
-			Fangs: <<checkbox "_traits.fangs" "disabled" "default" autocheck>><br>
+			송곳니: <<checkbox "_traits.fangs" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if _catInitialCheck or _birdInitialCheck or _foxInitialCheck>>
-			Sharp Eyes: <<checkbox "_traits.sharpEyes" "disabled" "default" autocheck>><br>
+			날카로운 눈: <<checkbox "_traits.sharpEyes" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if $waterdragon gte 7 or $waterdragontf is 1 or $waterdragonCosmeticUnlocked is 1>>
-			Dragon Eyes: <<checkbox "_traits.dragonEyes" "disabled" "default" autocheck>><br>
+			용의 눈: <<checkbox "_traits.dragonEyes" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if _cowFullCheck>>
-			Double Semen/Milk: 
+			정액/모유 두 배:
 			<<if $semen_max isnot 6000>>
-				<<link [[Set|$passage]]>><<set $semen_max to 6000>><<set $milk_max to 6000>><</link>>
+				<<link [[설정한다|$passage]]>><<set $semen_max to 6000>><<set $milk_max to 6000>><</link>>
 			<<else>>
-				<<link [[Clear|$passage]]>><<set $semen_max to 3000>><<set $milk_max to 3000>><</link>>
+				<<link [[해제한다|$passage]]>><<set $semen_max to 3000>><<set $milk_max to 3000>><</link>>
 			<</if>>
 			<br>
 		<</if>>
 		<<if $harpy gte 3 or $harpytf is 1 or $fox gte 3 or $foxtf is 1>>
-			Mate for Life: <<checkbox "_traits.mateForLife" "disabled" "default" autocheck>><br>
+			평생의 짝: <<checkbox "_traits.mateForLife" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if $fox gte 4 or $foxtf is 1>>
-			Thrill of the Chase: <<checkbox "_traits.chase" "disabled" "default" autocheck>><br>
+			추격의 짜릿함: <<checkbox "_traits.chase" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if _bunnyInitialCheck>>
-			Strong Feet: <<checkbox "_traits.strongFeet" "disabled" "default" autocheck>><br>
+			튼튼한 발: <<checkbox "_traits.strongFeet" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if _demonPartialCheck and hasSexStat("exhibitionism", 6)>>
-			Flaunting when exposed: <<checkbox "_traits.flaunting" "disabled" "default" autocheck>><br>
+			노출 시 과시: <<checkbox "_traits.flaunting" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if $waterdragon gte 7 or $waterdragontf is 1>>
-			Aquatic Lungs: <<checkbox "_traits.aquatic" "disabled" "default" autocheck>><br>
+			수중 폐: <<checkbox "_traits.aquatic" "disabled" "default" autocheck>><br>
 		<</if>>
 		<<if _waterdragonSkinMenuCheck>>
-			Water Dragon Skin:
+			수룡 피부:
 			<<if $waterdragonSkinLock isnot 1>>
-				<<link [[Set|$passage]]>><<set $waterdragonSkinLock to 1>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>>
+				<<link [[설정한다|$passage]]>><<set $waterdragonSkinLock to 1>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>>
 			<<elseif $waterdragonSkinLock isnot -1>>
-				<<link [[Clear|$passage]]>><<set $waterdragonSkinLock to -1>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>>
+				<<link [[해제한다|$passage]]>><<set $waterdragonSkinLock to -1>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>>
 			<</if>>
 			<br>
 		<</if>>
 		<<if $cat gte 7 or $cattf is 1>>
 			오드아이:
 			<<if _cat.heterochromia isnot "default">>
-				<<link [[Set|$passage]]>><<set _cat.heterochromia = "default">><<run window.determineCatEyeStages()>><<set $original_colour = [$leftEyeColour, $rightEyeColour]>><<catHeterochromiaTF 3>><<updatesidebarimg>><</link>>
+				<<link [[설정한다|$passage]]>><<set _cat.heterochromia = "default">><<run window.determineCatEyeStages()>><<set $original_colour = [$leftEyeColour, $rightEyeColour]>><<catHeterochromiaTF 3>><<updatesidebarimg>><</link>>
 			<<else>>
-				<<link [[Clear|$passage]]>><<set _cat.heterochromia = "disabled">><<set $leftEyeColour to $original_colour[0]>><<set $rightEyeColour to $original_colour[1]>><<catHeterochromiaTF "hide">><<updatesidebarimg>><</link>>
+				<<link [[해제한다|$passage]]>><<set _cat.heterochromia = "disabled">><<set $leftEyeColour to $original_colour[0]>><<set $rightEyeColour to $original_colour[1]>><<catHeterochromiaTF "hide">><<updatesidebarimg>><</link>>
 			<</if>>
 			<br><br>
 		<</if>>
 		<<if $DoLPTFBuffs is 1>>
 			<<if _wolfFullCheck>>
-				Spirit of the Wild: <<checkbox "$TFWolfBuffs" 0 1 autocheck>><br>
+				야생의 정령: <<checkbox "$TFWolfBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _catFullCheck>>
-				Felinous Mischief: <<checkbox "$TFCatBuffs" 0 1 autocheck>><br>
+				고양이의 장난기: <<checkbox "$TFCatBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _cowFullCheck>>
-				Nature's Nurturer: <<checkbox "$TFCowBuffs" 0 1 autocheck>><br>
+				자연의 양육자: <<checkbox "$TFCowBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _bearFullCheck>>
-				Ursine Strength: <<checkbox "$TFBearBuffs" 0 1 autocheck>><br>
+				곰의 힘: <<checkbox "$TFBearBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _waterdragonTraitsCheck>>
-				Dragon's Grace: <<checkbox "$TFWaterDragonBuffs" 0 1 autocheck>><br>
+				용의 우아함: <<checkbox "$TFWaterDragonBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _birdFullCheck>>
-				Sky's Embrace: <<checkbox "$TFBirdBuffs" 0 1 autocheck>><br>
+				하늘의 품: <<checkbox "$TFBirdBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _foxFullCheck>>
-				Vixen's Guile: <<checkbox "$TFFoxBuffs" 0 1 autocheck>><br>
+				암여우의 교활함: <<checkbox "$TFFoxBuffs" 0 1 autocheck>><br>
 			<</if>>
 			<<if _bunnyFullCheck>>
-				Lapine Celerity: <<checkbox "$TFBunnyBuffs" 0 1 autocheck>><br>
+				토끼의 민첩함: <<checkbox "$TFBunnyBuffs" 0 1 autocheck>><br>
 			<</if>>
 		<</if>>
 		<<if $DoLPTFTempTolerance is 1>>
 			/* Temp Tolerance */
 			<<set _options = {}>> 
-			<<set _options["None"] = "disabled">>
+			<<set _options["없음"] = "disabled">>
 			<<if _wolfFullCheck>>
-				<<set _options["Wolf"] = "wolf">>
+				<<set _options["늑대"] = "wolf">>
 				<<if _traits.tempTolerance is "wolf">>
-					<<set _tempToleranceChoice to _options["Wolf"]>>
+					<<set _tempToleranceChoice to _options["늑대"]>>
 				<</if>>
 			<</if>>
 			<<if _catFullCheck>>
-				<<set _options["Cat"] = "cat">>
+				<<set _options["고양이"] = "cat">>
 				<<if _traits.tempTolerance is "cat">>
-					<<set _tempToleranceChoice to _options["Cat"]>>
+					<<set _tempToleranceChoice to _options["고양이"]>>
 				<</if>>
 			<</if>>
 			<<if _cowFullCheck>>
-				<<set _options["Cow"] = "cow">>
+				<<set _options["젖소"] = "cow">>
 				<<if _traits.tempTolerance is "cow">>
-					<<set _tempToleranceChoice to _options["Cow"]>>
+					<<set _tempToleranceChoice to _options["젖소"]>>
 				<</if>>
 			<</if>>
 			<<if _bearFullCheck>>
-				<<set _options["Bear"] = "bear">>
+				<<set _options["곰"] = "bear">>
 				<<if _traits.tempTolerance is "bear">>
-					<<set _tempToleranceChoice to _options["Bear"]>>
+					<<set _tempToleranceChoice to _options["곰"]>>
 				<</if>>
 			<</if>>
 			<<if _waterdragonTraitsCheck>>
-				<<set _options["Water Dragon"] = "waterdragon">>
+				<<set _options["수룡"] = "waterdragon">>
 				<<if _traits.tempTolerance is "waterdragon">>
-					<<set _tempToleranceChoice to _options["Water Dragon"]>>
+					<<set _tempToleranceChoice to _options["수룡"]>>
 				<</if>>
 			<</if>>
 			<<if _birdFullCheck>>
-				<<set _options["Bird"] = "bird">>
+				<<set _options["새"] = "bird">>
 				<<if _traits.tempTolerance is "bird">>
-					<<set _tempToleranceChoice to _options["Bird"]>>
+					<<set _tempToleranceChoice to _options["새"]>>
 				<</if>>
 			<</if>>
 			<<if _foxFullCheck>>
-				<<set _options["Fox"] = "fox">>
+				<<set _options["여우"] = "fox">>
 				<<if _traits.tempTolerance is "fox">>
-					<<set _tempToleranceChoice to _options["Fox"]>>
+					<<set _tempToleranceChoice to _options["여우"]>>
 				<</if>>
 			<</if>>
 			<<if _bunnyFullCheck>>
-				<<set _options["Bunny"] = "bunny">>
+				<<set _options["토끼"] = "bunny">>
 				<<if _traits.tempTolerance is "bunny">>
-					<<set _tempToleranceChoice to _options["Bunny"]>>
+					<<set _tempToleranceChoice to _options["토끼"]>>
 				<</if>>
 			<</if>>
 			<<if !_tempToleranceChoice>>
 				<<set _tempToleranceChoice to 0>>
 			<</if>>
 			<<if Object.keys(_options).length > 1>>
-				<label>Temperature Tolerance:
+				<label>온도 내성:
 					<div class="tf-tempTolerance">
 						<<listbox "_tempToleranceChoice" autoselect>>
 							<<optionsfrom _options>>
@@ -3054,24 +3054,24 @@
 
 	/* misc */
 	<<set _options = {}>> 
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _angelFullCheck and _wolfFullCheck>>
-		<<set _options["Okami"] = ["okami", "default"]>>
+		<<set _options["오카미"] = ["okami", "default"]>>
 		<<if _okami.misc is "default">>
-			<<set _miscChoice to _options["Okami"]>>
+			<<set _miscChoice to _options["오카미"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _foxFullCheck>>
-		<<set _options["Kitsune"] = ["kitsune", "default"]>>
+		<<set _options["키츠네"] = ["kitsune", "default"]>>
 		<<if _kitsune.misc is "default">>
-			<<set _miscChoice to _options["Kitsune"]>>
+			<<set _miscChoice to _options["키츠네"]>>
 		<</if>>
 	<</if>>
 	<<if !_miscChoice>>
 		<<set _miscChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Hybrid Misc:
+		<label>혼합형 기타:
 			<div class="tf-misc">
 				<<listbox "_miscChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3083,30 +3083,30 @@
 
 	/* Cheeks */
 	<<set _options = {}>> 
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if $fox gte 5 or $foxtf is 1>>
-		<<set _options["Fox"] = ["fox", "default"]>>
+		<<set _options["여우"] = ["fox", "default"]>>
 		<<if _fox.cheeks is "default">>
-			<<set _cheeksChoice to _options["Fox"]>>
+			<<set _cheeksChoice to _options["여우"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfFullCheck>>
-		<<set _options["Wolf"] = ["wolf", "feral"]>>
+		<<set _options["늑대"] = ["wolf", "feral"]>>
 		<<if _wolf.cheeks is "feral">>
-			<<set _cheeksChoice to _options["Wolf"]>>
+			<<set _cheeksChoice to _options["늑대"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _foxFullCheck>>
-		<<set _options["Kitsune"] = ["kitsune", "default"]>>
+		<<set _options["키츠네"] = ["kitsune", "default"]>>
 		<<if _kitsune.cheeks is "default">>
-			<<set _cheeksChoice to _options["Kitsune"]>>
+			<<set _cheeksChoice to _options["키츠네"]>>
 		<</if>>
 	<</if>>
 	<<if !_cheeksChoice>>
 		<<set _cheeksChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Cheeks:
+		<label>뺨:
 			<div class="tf-cheeks">
 				<<listbox "_cheeksChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3118,18 +3118,18 @@
 
 	/* Malar */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _birdInitialCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.malar is "default">>
-			<<set _malarChoice to _options["Bird"]>>
+			<<set _malarChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if !_malarChoice>>
 		<<set _malarChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Malar:
+		<label>광대뼈 줄무늬:
 			<div class="tf-malar">
 				<<listbox "_malarChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3141,12 +3141,12 @@
 
 	/* Pits */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if $settings.pubicHairEnabled>>
 		<<if _wolfPartialCheck>>
-			<<set _options["Wolf"] = ["wolf", "default"]>>
+			<<set _options["늑대"] = ["wolf", "default"]>>
 			<<if _wolf.pits is "default">>
-				<<set _pitsChoice to _options["Wolf"]>>
+				<<set _pitsChoice to _options["늑대"]>>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -3154,7 +3154,7 @@
 		<<set _pitsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Pits:
+		<label>겨드랑이:
 			<div class="tf-pits">
 				<<listbox "_pitsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3166,30 +3166,30 @@
 
 	/* Plumage and Fur */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _bearPartialCheck>>
-		<<set _options["Bear"] = ["bear", "default"]>>
+		<<set _options["곰"] = ["bear", "default"]>>
 		<<if _bear.plumage is "default">>
-			<<set _plumageChoice to _options["Bear"]>>
+			<<set _plumageChoice to _options["곰"]>>
 		<</if>>
 	<</if>>
 	<<if _birdPartialCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.plumage is "default">>
-			<<set _plumageChoice to _options["Bird"]>>
+			<<set _plumageChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _birdFullCheck>>
-		<<set _options["Seraphim"] = ["seraphim", "default"]>>
+		<<set _options["세라핌"] = ["seraphim", "default"]>>
 		<<if _seraphim.plumage is "default">>
-			<<set _plumageChoice to _options["Seraphim"]>>
+			<<set _plumageChoice to _options["세라핌"]>>
 		<</if>>
 	<</if>>
 	<<if !_plumageChoice>>
 		<<set _plumageChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Plumage and Fur:
+		<label>깃털과 털:
 			<div class="tf-plumage">
 				<<listbox "_plumageChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3201,24 +3201,24 @@
 
 	/* Pubes */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if $settings.pubicHairEnabled>>
 		<<if _bearFullCheck>>
-			<<set _options["Bear"] = ["bear", "default"]>>
+			<<set _options["곰"] = ["bear", "default"]>>
 			<<if _bear.pubes is "default">>
-				<<set _pubesChoice to _options["Bear"]>>
+				<<set _pubesChoice to _options["곰"]>>
 			<</if>>
 		<</if>>
 		<<if _birdPartialCheck>>
-			<<set _options["Bird"] = ["bird", "default"]>>
+			<<set _options["새"] = ["bird", "default"]>>
 			<<if _bird.pubes is "default">>
-				<<set _pubesChoice to _options["Bird"]>>
+				<<set _pubesChoice to _options["새"]>>
 			<</if>>
 		<</if>>
 		<<if _wolfPartialCheck>>
-			<<set _options["Wolf"] = ["wolf", "default"]>>
+			<<set _options["늑대"] = ["wolf", "default"]>>
 			<<if _wolf.pubes is "default">>
-				<<set _pubesChoice to _options["Wolf"]>>
+				<<set _pubesChoice to _options["늑대"]>>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -3226,7 +3226,7 @@
 		<<set _pubesChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Pubes:
+		<label>음모:
 			<div class="tf-pubes">
 				<<listbox "_pubesChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3238,93 +3238,93 @@
 
 	/* Ears */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _bearFullCheck>>
-		<<set _options["Bear"] = ["bear", "default"]>>
+		<<set _options["곰"] = ["bear", "default"]>>
 		<<if _bear.ears is "default">>
-			<<set _earsChoice to _options["Bear"]>>
+			<<set _earsChoice to _options["곰"]>>
 		<</if>>
 	<</if>>
 	<<if _bunnyPartialCheck>>
-		<<set _options["Bunny Default"] = ["bunny", "default"]>>
-		<<set _options["Bunny Lop"] = ["bunny", "lop"]>>
+		<<set _options["토끼 - 기본"] = ["bunny", "default"]>>
+		<<set _options["토끼 - 처진 귀"] = ["bunny", "lop"]>>
 		<<if _bunny.ears is "default">>
-			<<set _earsChoice to _options["Bunny Default"]>>
+			<<set _earsChoice to _options["토끼 - 기본"]>>
 		<<elseif _bunny.ears is "lop">>
-			<<set _earsChoice to _options["Bunny Lop"]>>
+			<<set _earsChoice to _options["토끼 - 처진 귀"]>>
 		<</if>>
 	<</if>>
 	<<if _catPartialCheck>>
-		<<set _options["Cat"] = ["cat", "default"]>>
+		<<set _options["고양이"] = ["cat", "default"]>>
 		<<if _cat.ears is "default">>
-			<<set _earsChoice to _options["Cat"]>>
+			<<set _earsChoice to _options["고양이"]>>
 		<</if>>
 	<</if>>
 	<<if _cowPartialCheck>>
-		<<set _options["Cow"] = ["cow", "default"]>>
-		<<set _options["Cow Spotted Black"] = ["cow", "spotted-black"]>>
-		<<set _options["Cow Spotted Brown"] = ["cow", "spotted-brown"]>>
-		<<set _options["Cow Classic"] = ["cow", "classic"]>>
-		<<set _options["Cow Classic Spotted Black"] = ["cow", "classic-spotted-black"]>>
-		<<set _options["Cow Classic Spotted Brown"] = ["cow", "classic-spotted-brown"]>>
+		<<set _options["젖소"] = ["cow", "default"]>>
+		<<set _options["젖소 - 검은 얼룩"] = ["cow", "spotted-black"]>>
+		<<set _options["젖소 - 갈색 얼룩"] = ["cow", "spotted-brown"]>>
+		<<set _options["젖소 - 클래식"] = ["cow", "classic"]>>
+		<<set _options["젖소 - 클래식 검은 얼룩"] = ["cow", "classic-spotted-black"]>>
+		<<set _options["젖소 - 클래식 갈색 얼룩"] = ["cow", "classic-spotted-brown"]>>
 		<<if _cow.ears is "default">>
-			<<set _earsChoice to _options["Cow"]>>
+			<<set _earsChoice to _options["젖소"]>>
 		<<elseif _cow.ears is "spotted-black">>
-			<<set _earsChoice to _options["Cow Spotted Black"]>>
+			<<set _earsChoice to _options["젖소 - 검은 얼룩"]>>
 		<<elseif _cow.ears is "spotted-brown">>
-			<<set _earsChoice to _options["Cow Spotted Brown"]>>
+			<<set _earsChoice to _options["젖소 - 갈색 얼룩"]>>
 		<<elseif _cow.ears is "classic">>
-			<<set _earsChoice to _options["Cow Classic"]>>
+			<<set _earsChoice to _options["젖소 - 클래식"]>>
 		<<elseif _cow.ears is "classic-spotted-black">>
-			<<set _earsChoice to _options["Cow Classic Spotted Black"]>>
+			<<set _earsChoice to _options["젖소 - 클래식 검은 얼룩"]>>
 		<<elseif _cow.ears is "classic-spotted-brown">>
-			<<set _earsChoice to _options["Cow Classic Spotted Brown"]>>
+			<<set _earsChoice to _options["젖소 - 클래식 갈색 얼룩"]>>
 		<</if>>
 	<</if>>
 	<<if _foxPartialCheck>>
-		<<set _options["Fox"] = ["fox", "default"]>>
+		<<set _options["여우"] = ["fox", "default"]>>
 		<<if _fox.ears is "default">>
-			<<set _earsChoice to _options["Fox"]>>
+			<<set _earsChoice to _options["여우"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfPartialCheck>>
-		<<set _options["Wolf Default"] = ["wolf", "default"]>>
-		<<set _options["Wolf Feral"] = ["wolf", "feral"]>>
+		<<set _options["늑대 - 기본"] = ["wolf", "default"]>>
+		<<set _options["늑대 - 야생"] = ["wolf", "feral"]>>
 		<<if _wolf.ears is "default">>
-			<<set _earsChoice to _options["Wolf Default"]>>
+			<<set _earsChoice to _options["늑대 - 기본"]>>
 		<<elseif _wolf.ears is "feral">>
-			<<set _earsChoice to _options["Wolf Feral"]>>
+			<<set _earsChoice to _options["늑대 - 야생"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfFullCheck and _angelFullCheck>>
-		<<set _options["Okami"] = ["okami", "default"]>>
+		<<set _options["오카미"] = ["okami", "default"]>>
 		<<if _okami.ears is "default">>
-			<<set _earsChoice to _options["Okami"]>>
+			<<set _earsChoice to _options["오카미"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _foxFullCheck>>
-		<<set _options["Kitsune"] = ["kitsune", "default"]>>
+		<<set _options["키츠네"] = ["kitsune", "default"]>>
 		<<if _kitsune.ears is "default">>
-			<<set _earsChoice to _options["Kitsune"]>>
+			<<set _earsChoice to _options["키츠네"]>>
 		<</if>>
 	<</if>>
 	<<if _waterdragonAppearanceCheck>>
-		<<set _options["Water Dragon"] = ["waterdragon", "default"]>>
-		<<set _options["Water Dragon Purple"] = ["waterdragon", "purple"]>>
-		<<set _options["Water Dragon Gray"] = ["waterdragon", "gray"]>>
+		<<set _options["수룡"] = ["waterdragon", "default"]>>
+		<<set _options["수룡 - 보라색"] = ["waterdragon", "purple"]>>
+		<<set _options["수룡 - 회색"] = ["waterdragon", "gray"]>>
 		<<if _waterdragon.ears is "default">>
-			<<set _earsChoice to _options["Water Dragon"]>>
+			<<set _earsChoice to _options["수룡"]>>
 		<<elseif _waterdragon.ears is "purple">>
-			<<set _earsChoice to _options["Water Dragon Purple"]>>
+			<<set _earsChoice to _options["수룡 - 보라색"]>>
 		<<elseif _waterdragon.ears is "gray">>
-			<<set _earsChoice to _options["Water Dragon Gray"]>>
+			<<set _earsChoice to _options["수룡 - 회색"]>>
 		<</if>>
 	<</if>>
 	<<if !_earsChoice>>
 		<<set _earsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Ears:
+		<label>귀:
 			<div class="tf-ears">
 				<<listbox "_earsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3336,30 +3336,30 @@
 
 	/* Eyes */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _catInitialCheck or _birdInitialCheck or _foxInitialCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.eyes is "default">>
-			<<set _eyesChoice to _options["Bird"]>>
+			<<set _eyesChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _birdFullCheck>>
-		<<set _options["Seraphim"] = ["seraphim", "default"]>>
+		<<set _options["세라핌"] = ["seraphim", "default"]>>
 		<<if _seraphim.eyes is "default">>
-			<<set _eyesChoice to _options["Seraphim"]>>
+			<<set _eyesChoice to _options["세라핌"]>>
 		<</if>>
 	<</if>>
 	<<if _catInitialCheck or _birdInitialCheck or _kitsuneInitialCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.eyes is "default">>
-			<<set _eyesChoice to _options["Bird"]>>
+			<<set _eyesChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if !_eyesChoice>>
 		<<set _eyesChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Eyes:
+		<label>눈:
 			<div class="tf-eyes">
 				<<listbox "_eyesChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3371,42 +3371,42 @@
 
 	/* Halo */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _angelPartialCheck>>
-		<<set _options["Angel Default"] = ["angel", "default"]>>
-		<<set _options["Angel Traditional"] = ["angel", "traditional"]>>
-		<<set _options["Angel Celestial"] = ["angel", "celestial"]>>
+		<<set _options["천사 - 기본"] = ["angel", "default"]>>
+		<<set _options["천사 - 전통형"] = ["angel", "traditional"]>>
+		<<set _options["천사 - 천상형"] = ["angel", "celestial"]>>
 		<<if _angel.halo is "default">>
-			<<set _haloChoice to _options["Angel Default"]>>
+			<<set _haloChoice to _options["천사 - 기본"]>>
 		<<elseif _angel.halo is "traditional">>
-			<<set _haloChoice to _options["Angel Traditional"]>>
+			<<set _haloChoice to _options["천사 - 전통형"]>>
 		<<elseif _angel.halo is "celestial">>
-			<<set _haloChoice to _options["Angel Celestial"]>>
+			<<set _haloChoice to _options["천사 - 천상형"]>>
 		<</if>>
 	<</if>>
 	<<if $fallenangel gte 1 or $fallenangeltf is 1>>
-		<<set _options["Fallen Angel Default"] = ["fallenAngel", "default"]>>
-		<<set _options["Fallen Angel Celestial"] = ["fallenAngel", "celestial"]>>
-		<<set _options["Fallen Angel Dark Celestial"] = ["fallenAngel", "celestial-black"]>>
-		<<set _options["Fallen Angel Forgiven Celestial"] = ["fallenAngel", "celestial-fallenplus"]>>
-		<<set _options["Fallen Angel Traditional"] = ["fallenAngel", "traditional"]>>
+		<<set _options["타락 천사 - 기본"] = ["fallenAngel", "default"]>>
+		<<set _options["타락 천사 - 천상형"] = ["fallenAngel", "celestial"]>>
+		<<set _options["타락 천사 - 어두운 천상형"] = ["fallenAngel", "celestial-black"]>>
+		<<set _options["타락 천사 - 용서받은 천상형"] = ["fallenAngel", "celestial-fallenplus"]>>
+		<<set _options["타락 천사 - 전통형"] = ["fallenAngel", "traditional"]>>
 		<<if _fallen.halo is "default">>
-			<<set _haloChoice to _options["Fallen Angel Default"]>>
+			<<set _haloChoice to _options["타락 천사 - 기본"]>>
 		<<elseif _fallen.halo is "celestial">>
-			<<set _haloChoice to _options["Fallen Angel Celestial"]>>
+			<<set _haloChoice to _options["타락 천사 - 천상형"]>>
 		<<elseif _fallen.halo is "celestial-black">>
-			<<set _haloChoice to _options["Fallen Angel Dark Celestial"]>>
+			<<set _haloChoice to _options["타락 천사 - 어두운 천상형"]>>
 		<<elseif _fallen.halo is "celestial-fallenplus">>
-			<<set _haloChoice to _options["Fallen Angel Forgiven Celestial"]>>
+			<<set _haloChoice to _options["타락 천사 - 용서받은 천상형"]>>
 		<<elseif _fallen.halo is "traditional">>
-			<<set _haloChoice to _options["Fallen Angel Traditional"]>>
+			<<set _haloChoice to _options["타락 천사 - 전통형"]>>
 		<</if>>
 	<</if>>
 	<<if !_haloChoice>>
 		<<set _haloChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Halo:
+		<label>헤일로:
 			<div class="tf-halo">
 				<<listbox "_haloChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3418,24 +3418,24 @@
 
 	/* Divine Horns */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _demonInitialCheck>>
-		<<set _options["Demon Default"] = ["demon", "default"]>>
-		<<set _options["Demon Succubus"] = ["demon", "succubus"]>>
-		<<set _options["Demon Classic"] = ["demon", "classic"]>>
+		<<set _options["악마 - 기본"] = ["demon", "default"]>>
+		<<set _options["악마 - 서큐버스"] = ["demon", "succubus"]>>
+		<<set _options["악마 - 클래식"] = ["demon", "classic"]>>
 		<<if _demon.horns is "default">>
-			<<set _divineHornsChoice to _options["Demon Default"]>>
+			<<set _divineHornsChoice to _options["악마 - 기본"]>>
 		<<elseif _demon.horns is "succubus">>
-			<<set _divineHornsChoice to _options["Demon Succubus"]>>
+			<<set _divineHornsChoice to _options["악마 - 서큐버스"]>>
 		<<elseif _demon.horns is "classic">>
-			<<set _divineHornsChoice to _options["Demon Classic"]>>
+			<<set _divineHornsChoice to _options["악마 - 클래식"]>>
 		<</if>>
 	<</if>>
 	<<if !_divineHornsChoice>>
 		<<set _divineHornsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Divine Horns:
+		<label>신성 뿔:
 			<div class="tf-divine-horns">
 				<<listbox "_divineHornsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3448,27 +3448,27 @@
 
 	/* Horns */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _cowInitialCheck>>
-		<<set _options["Cow"] = ["cow", "default"]>>
+		<<set _options["젖소"] = ["cow", "default"]>>
 		<<if _cow.horns is "default">>
-			<<set _hornsChoice to _options["Cow"]>>
+			<<set _hornsChoice to _options["젖소"]>>
 		<</if>>
 	<</if>>
 	<<if _waterdragonAppearanceCheck>>
-		<<set _options["Water Dragon"] = ["waterdragon", "default"]>>
-		<<set _options["Water Dragon Short"] = ["waterdragon", "short"]>>
+		<<set _options["수룡"] = ["waterdragon", "default"]>>
+		<<set _options["수룡 - 짧은 형"] = ["waterdragon", "short"]>>
 		<<if _waterdragon.horns is "default">>
-			<<set _hornsChoice to _options["Water Dragon"]>>
+			<<set _hornsChoice to _options["수룡"]>>
 		<<elseif _waterdragon.horns is "short">>
-			<<set _hornsChoice to _options["Water Dragon Short"]>>
+			<<set _hornsChoice to _options["수룡 - 짧은 형"]>>
 		<</if>>
 	<</if>>
 	<<if !_hornsChoice>>
 		<<set _hornsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Horns:
+		<label>뿔:
 			<div class="tf-horns">
 				<<listbox "_hornsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3480,39 +3480,39 @@
 
 	/* Divine Tail */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _demonPartialCheck>>
-		<<set _options["Demon Default"] = ["demon", "default"]>>
-		<<set _options["Demon Imp"] = ["demon", "imp"]>>
-		<<set _options["Demon Classic"] = ["demon", "classic"]>>
-		<<set _options["Demon Succubus"] = ["demon", "succubus"]>>
+		<<set _options["악마 - 기본"] = ["demon", "default"]>>
+		<<set _options["악마 - 임프"] = ["demon", "imp"]>>
+		<<set _options["악마 - 클래식"] = ["demon", "classic"]>>
+		<<set _options["악마 - 서큐버스"] = ["demon", "succubus"]>>
 		<<if _demon.tail is "default">>
-			<<set _divineTailChoice to _options["Demon Default"]>>
+			<<set _divineTailChoice to _options["악마 - 기본"]>>
 		<<elseif _demon.tail is "imp">>
-			<<set _divineTailChoice to _options["Demon Imp"]>>
+			<<set _divineTailChoice to _options["악마 - 임프"]>>
 		<<elseif _demon.tail is "classic">>
-			<<set _divineTailChoice to _options["Demon Classic"]>>
+			<<set _divineTailChoice to _options["악마 - 클래식"]>>
 		<<elseif _demon.tail is "succubus">>
-			<<set _divineTailChoice to _options["Demon Succubus"]>>
+			<<set _divineTailChoice to _options["악마 - 서큐버스"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfFullCheck and _angelFullCheck>>
-		<<set _options["Okami"] = ["okami", "default"]>>
+		<<set _options["오카미"] = ["okami", "default"]>>
 		<<if _okami.tail is "default">>
-			<<set _divineTailChoice to _options["Okami"]>>
+			<<set _divineTailChoice to _options["오카미"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _foxFullCheck>>
-		<<set _options["Kitsune"] = ["kitsune", "default"]>>
+		<<set _options["키츠네"] = ["kitsune", "default"]>>
 		<<if _kitsune.tail is "default">>
-			<<set _divineTailChoice to _options["Kitsune"]>>
+			<<set _divineTailChoice to _options["키츠네"]>>
 		<</if>>
 	<</if>>
 	<<if !_divineTailChoice>>
 		<<set _divineTailChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Divine Tail:
+		<label>신성 꼬리:
 			<div class="tf-divine-tail">
 				<<listbox "_divineTailChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3525,78 +3525,78 @@
 
 	/* Tail */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _bearPartialCheck>>
-		<<set _options["Bear"] = ["bear", "default"]>>
+		<<set _options["곰"] = ["bear", "default"]>>
 		<<if _bear.tail is "default">>
-			<<set _tailChoice to _options["Bear"]>>
+			<<set _tailChoice to _options["곰"]>>
 		<</if>>
 	<</if>>
 	<<if _birdPartialCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.tail is "default">>
-			<<set _tailChoice to _options["Bird"]>>
+			<<set _tailChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if _bunnyFullCheck>>
-		<<set _options["Bunny"] = ["bunny", "default"]>>
+		<<set _options["토끼"] = ["bunny", "default"]>>
 		<<if _bunny.tail is "default">>
-			<<set _tailChoice to _options["Bunny"]>>
+			<<set _tailChoice to _options["토끼"]>>
 		<</if>>
 	<</if>>
 	<<if _catFullCheck>>
-		<<set _options["Cat"] = ["cat", "default"]>>
+		<<set _options["고양이"] = ["cat", "default"]>>
 		<<if _cat.tail is "default">>
-			<<set _tailChoice to _options["Cat"]>>
+			<<set _tailChoice to _options["고양이"]>>
 		<</if>>
 	<</if>>
 	<<if _cowFullCheck>>
-		<<set _options["Cow"] = ["cow", "default"]>>
-		<<set _options["Cow Black"] = ["cow", "black"]>>
+		<<set _options["젖소"] = ["cow", "default"]>>
+		<<set _options["젖소 - 검은색"] = ["cow", "black"]>>
 		<<if _cow.tail is "default">>
-			<<set _tailChoice to _options["Cow"]>>
+			<<set _tailChoice to _options["젖소"]>>
 		<<elseif _cow.tail is "black">>
-			<<set _tailChoice to _options["Cow Black"]>>
+			<<set _tailChoice to _options["젖소 - 검은색"]>>
 		<</if>>
 	<</if>>
 	<<if _foxFullCheck>>
-		<<set _options["Fox"] = ["fox", "default"]>>
+		<<set _options["여우"] = ["fox", "default"]>>
 		<<if _fox.tail is "default">>
-			<<set _tailChoice to _options["Fox"]>>
+			<<set _tailChoice to _options["여우"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfFullCheck>>
-		<<set _options["Wolf Default"] = ["wolf", "default"]>>
-		<<set _options["Wolf Feral"] = ["wolf", "feral"]>>
+		<<set _options["늑대 - 기본"] = ["wolf", "default"]>>
+		<<set _options["늑대 - 야생"] = ["wolf", "feral"]>>
 		<<if _wolf.tail is "default">>
-			<<set _tailChoice to _options["Wolf Default"]>>
+			<<set _tailChoice to _options["늑대 - 기본"]>>
 		<<elseif _wolf.tail is "feral">>
-			<<set _tailChoice to _options["Wolf Feral"]>>
+			<<set _tailChoice to _options["늑대 - 야생"]>>
 		<</if>>
 	<</if>>
 	<<if _waterdragonTraitsCheck>>
-		<<set _options["Water Dragon Long"] = ["waterdragon", "default"]>>
-		<<set _options["Water Dragon Short"] = ["waterdragon", "short"]>>
-		<<set _options["Water Dragon Long Purple"] = ["waterdragon", "purple"]>>
-		<<set _options["Water Dragon Long Gray"] = ["waterdragon", "gray"]>>
-		<<set _options["Water Dragon Short Gray"] = ["waterdragon", "sgray"]>>
+		<<set _options["수룡 - 긴 형"] = ["waterdragon", "default"]>>
+		<<set _options["수룡 - 짧은 형"] = ["waterdragon", "short"]>>
+		<<set _options["수룡 - 긴 보라색 형"] = ["waterdragon", "purple"]>>
+		<<set _options["수룡 - 긴 회색 형"] = ["waterdragon", "gray"]>>
+		<<set _options["수룡 - 짧은 회색 형"] = ["waterdragon", "sgray"]>>
 		<<if _waterdragon.tail is "default">>
-			<<set _tailChoice to _options["Water Dragon Long"]>>
+			<<set _tailChoice to _options["수룡 - 긴 형"]>>
 		<<elseif _waterdragon.tail is "short">>
-			<<set _tailChoice to _options["Water Dragon Short"]>>
+			<<set _tailChoice to _options["수룡 - 짧은 형"]>>
 		<<elseif _waterdragon.tail is "purple">>
-			<<set _tailChoice to _options["Water Dragon Long Purple"]>>
+			<<set _tailChoice to _options["수룡 - 긴 보라색 형"]>>
 		<<elseif _waterdragon.tail is "gray">>
-			<<set _tailChoice to _options["Water Dragon Long Gray"]>>
+			<<set _tailChoice to _options["수룡 - 긴 회색 형"]>>
 		<<elseif _waterdragon.tail is "sgray">>
-			<<set _tailChoice to _options["Water Dragon Short Gray"]>>
+			<<set _tailChoice to _options["수룡 - 짧은 회색 형"]>>
 		<</if>>
 	<</if>>
 	<<if !_tailChoice>>
 		<<set _tailChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Tail:
+		<label>꼬리:
 			<div class="tf-tail">
 				<<listbox "_tailChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3608,78 +3608,78 @@
 
 	/* Divine Wings */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _angelFullCheck>>
-		<<set _options["Angel Default"] = ["angel", "default"]>>
-		<<set _options["Angel Cherub"] = ["angel", "cherub"]>>
-		<<set _options["Angel Classic"] = ["angel", "classic"]>>
+		<<set _options["천사 - 기본"] = ["angel", "default"]>>
+		<<set _options["천사 - 케루브"] = ["angel", "cherub"]>>
+		<<set _options["천사 - 클래식"] = ["angel", "classic"]>>
 		<<if _angel.wings is "default">>
-			<<set _divineWingsChoice to _options["Angel Default"]>>
+			<<set _divineWingsChoice to _options["천사 - 기본"]>>
 		<<elseif _angel.wings is "cherub">>
-			<<set _divineWingsChoice to _options["Angel Cherub"]>>
+			<<set _divineWingsChoice to _options["천사 - 케루브"]>>
 		<<elseif _angel.wings is "classic">>
-			<<set _divineWingsChoice to _options["Angel Classic"]>>
+			<<set _divineWingsChoice to _options["천사 - 클래식"]>>
 		<</if>>
 	<</if>>
 	<<if _demonFullCheck>>
-		<<set _options["Demon Default"] = ["demon", "default"]>>
-		<<set _options["Demon Imp"] = ["demon", "imp"]>>
-		<<set _options["Demon Succubus"] = ["demon", "succubus"]>>
+		<<set _options["악마 - 기본"] = ["demon", "default"]>>
+		<<set _options["악마 - 임프"] = ["demon", "imp"]>>
+		<<set _options["악마 - 서큐버스"] = ["demon", "succubus"]>>
 		<<if _demon.wings is "default">>
-			<<set _divineWingsChoice to _options["Demon Default"]>>
+			<<set _divineWingsChoice to _options["악마 - 기본"]>>
 		<<elseif _demon.wings is "imp">>
-			<<set _divineWingsChoice to _options["Demon Imp"]>>
+			<<set _divineWingsChoice to _options["악마 - 임프"]>>
 		<<elseif _demon.wings is "succubus">>
-			<<set _divineWingsChoice to _options["Demon Succubus"]>>
+			<<set _divineWingsChoice to _options["악마 - 서큐버스"]>>
 		<</if>>
 	<</if>>
 	<<if _fallenFullCheck>>
-		<<set _options["Fallen Angel Default"] = ["fallenAngel", "default"]>>
-		<<set _options["Fallen Angel Torn"] = ["fallenAngel", "torn"]>>
-		<<set _options["Fallen Angel Cherub"] = ["fallenAngel", "cherub"]>>
-		<<set _options["Fallen Angel Dark Cherub"] = ["fallenAngel", "cherub-black"]>>
-		<<set _options["Fallen Angel Classic"] = ["fallenAngel", "classic"]>>
+		<<set _options["타락 천사 - 기본"] = ["fallenAngel", "default"]>>
+		<<set _options["타락 천사 - 찢어진 날개"] = ["fallenAngel", "torn"]>>
+		<<set _options["타락 천사 - 케루브"] = ["fallenAngel", "cherub"]>>
+		<<set _options["타락 천사 - 어두운 케루브"] = ["fallenAngel", "cherub-black"]>>
+		<<set _options["타락 천사 - 클래식"] = ["fallenAngel", "classic"]>>
 		<<if _fallen.wings is "default">>
-			<<set _divineWingsChoice to _options["Fallen Angel Default"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 기본"]>>
 		<<elseif _fallen.wings is "torn">>
-			<<set _divineWingsChoice to _options["Fallen Angel Torn"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 찢어진 날개"]>>
 		<<elseif _fallen.wings is "cherub">>
-			<<set _divineWingsChoice to _options["Fallen Angel Cherub"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 케루브"]>>
 		<<elseif _fallen.wings is "cherub-black">>
-			<<set _divineWingsChoice to _options["Fallen Angel Dark Cherub"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 어두운 케루브"]>>
 		<<elseif _fallen.wings is "classic">>
-			<<set _divineWingsChoice to _options["Fallen Angel Classic"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 클래식"]>>
 		<</if>>
 	<</if>>
 	<<if _fallenPlusFullCheck>>
-		<<set _options["Fallen Angel Feathered Cherub"] = ["fallenAngel", "cherub-fallenplus"]>>
-		<<set _options["Fallen Angel Feathered"] = ["fallenAngel", "fallenplus"]>>
-		<<set _options["Fallen Angel Classic Feathered"] = ["fallenAngel", "classic-fallenplus"]>>
+		<<set _options["타락 천사 - 깃털 달린 케루브"] = ["fallenAngel", "cherub-fallenplus"]>>
+		<<set _options["타락 천사 - 깃털 달린 형"] = ["fallenAngel", "fallenplus"]>>
+		<<set _options["타락 천사 - 클래식 깃털 달린 형"] = ["fallenAngel", "classic-fallenplus"]>>
 		<<if _fallen.wings is "cherub-fallenplus">>
-			<<set _divineWingsChoice to _options["Fallen Angel Feathered Cherub"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 깃털 달린 케루브"]>>
 		<<elseif _fallen.wings is "fallenplus">>
-			<<set _divineWingsChoice to _options["Fallen Angel Feathered"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 깃털 달린 형"]>>
 		<<elseif _fallen.wings is "classic-fallenplus">>
-			<<set _divineWingsChoice to _options["Fallen Angel Classic Feathered"]>>
+			<<set _divineWingsChoice to _options["타락 천사 - 클래식 깃털 달린 형"]>>
 		<</if>>
 	<</if>>
 	<<if _wolfFullCheck and _angelFullCheck>>
-		<<set _options["Okami"] = ["okami", "default"]>>
+		<<set _options["오카미"] = ["okami", "default"]>>
 		<<if _okami.wings is "default">>
-			<<set _divineWingsChoice to _options["Okami"]>>
+			<<set _divineWingsChoice to _options["오카미"]>>
 		<</if>>
 	<</if>>
 	<<if _angelFullCheck and _birdFullCheck>>
-		<<set _options["Seraphim"] = ["seraphim", "default"]>>
+		<<set _options["세라핌"] = ["seraphim", "default"]>>
 		<<if _seraphim.wings is "default">>
-			<<set _divineWingsChoice to _options["Seraphim"]>>
+			<<set _divineWingsChoice to _options["세라핌"]>>
 		<</if>>
 	<</if>>
 	<<if !_divineWingsChoice>>
 		<<set _divineWingsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Divine Wings:
+		<label>신성 날개:
 			<div class="tf-divine-wings">
 				<<listbox "_divineWingsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3692,18 +3692,18 @@
 
 	/* Wings */
 	<<set _options = {}>>
-	<<set _options["None"] = 0>>
+	<<set _options["없음"] = 0>>
 	<<if _birdFullCheck>>
-		<<set _options["Bird"] = ["bird", "default"]>>
+		<<set _options["새"] = ["bird", "default"]>>
 		<<if _bird.wings is "default">>
-			<<set _wingsChoice to _options["Bird"]>>
+			<<set _wingsChoice to _options["새"]>>
 		<</if>>
 	<</if>>
 	<<if !_wingsChoice>>
 		<<set _wingsChoice to 0>>
 	<</if>>
 	<<if Object.keys(_options).length > 1>>
-		<label>Wings:
+		<label>날개:
 			<div class="tf-wings">
 				<<listbox "_wingsChoice" autoselect>>
 					<<optionsfrom _options>>
@@ -3729,10 +3729,10 @@
 		<<set _chimeraEnabled to Object.values(_chimeraOptions).some(o => o) ? "" : " hide">>
 		<div class="chimera<<=_chimeraEnabled>>">
 			<<if _divine>><<tficon _divine>><</if>>
-			<span class="gold bold">Chimera</span><br>
+			<span class="gold bold">키메라</span><br>
 			<<if _chimeraOptions.demoncat_tail>>
 				/* Using demon cat chimera tail. */
-				<label>Demon cat tail:
+				<label>악마 고양이 꼬리:
 					<<listbox "$chimera.demoncat.tail" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3742,7 +3742,7 @@
 			<</if>>
 			<<if _chimeraOptions.demoncow_tail>>
 				/* Using demon cow chimera tail. */
-				<label>Demon cow tail:
+				<label>악마 소 꼬리:
 					<<listbox "$chimera.demoncow.tail" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3751,7 +3751,7 @@
 			<</if>>
 			<<if _chimeraOptions.demonwolf_tail>>
 				/* Using demon wolf chimera tail. */
-				<label>Demon wolf tail:
+				<label>악마 늑대 꼬리:
 					<<listbox "$chimera.demonwolf.tail" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3761,7 +3761,7 @@
 			<</if>>
 			<<if _chimeraOptions.demonfox_tail>>
 				/* Using demon fox chimera tail. */
-				<label>Demon fox tail:
+				<label>악마 여우 꼬리:
 					<<listbox "$chimera.demonfox.tail" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3771,7 +3771,7 @@
 			<</if>>
 			<<if _chimeraOptions.demonfox_ears>>
 				/* Using demon fox chimera ears. */
-				<label>Demon fox ears:
+				<label>악마 여우 귀:
 					<<listbox "$chimera.demonfox.ears" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3781,7 +3781,7 @@
 			<</if>>
 			<<if _chimeraOptions.demonharpy_wings>>
 				/* Using demon harpy chimera wings. */
-				<label>Demon harpy wings:
+				<label>악마 하피 날개:
 					<<listbox "$chimera.demonharpy.wings" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3791,7 +3791,7 @@
 			<</if>>
 			<<if _chimeraOptions.angelharpy_wings>>
 				/* Using angel harpy chimera wings. */
-				<label>Angel harpy wings:
+				<label>천사 하피 날개:
 					<<listbox "$chimera.angelharpy.wings" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3801,7 +3801,7 @@
 			<</if>>
 			<<if _chimeraOptions.fallenharpy_wings>>
 				/* Using fallen angel harpy chimera wings. */
-				<label>Fallen harpy wings:
+				<label>타락 천사 하피 날개:
 					<<listbox "$chimera.fallenharpy.wings" autoselect>>
 						<<option "표시" true>>
 						<<option "숨김" false>>
@@ -3814,7 +3814,7 @@
 
 	<<if ($traumatized isnot undefined)>>
 		__Trauma__<br>
-		<<link [[Set|$passage]]>><<set $traumaeyes to true>><<updatesidebarimg>><</link>> / <<link [[Clear|$passage]]>><<set $traumaeyes to false>><<updatesidebarimg>><</link>><br>
+		<<link [[설정한다|$passage]]>><<set $traumaeyes to true>><<updatesidebarimg>><</link>> / <<link [[해제한다|$passage]]>><<set $traumaeyes to false>><<updatesidebarimg>><</link>><br>
 		<br>
 	<</if>>
 	
@@ -3924,7 +3924,7 @@
 		<</if>>
 
 	<br>
-	<<link "Top of Page">>
+	<<link "맨 위로">>
 		<<script>>
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
@@ -4020,10 +4020,10 @@
 						<<set _chimeraEnabled to Object.values(_chimeraOptions).some(o => o) ? "" : " hide">>
 						<div class="chimera<<=_chimeraEnabled>>">
 							<<if _divine>><<tficon _divine>><</if>>
-							<span class="gold bold">Chimera</span><br>
+							<span class="gold bold">키메라</span><br>
 							<<if _chimeraOptions.demoncat_tail>>
 								/* Using demon cat chimera tail. */
-								<label>Demon cat tail:
+								<label>악마 고양이 꼬리:
 									<<listbox "$chimera.demoncat.tail" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4033,7 +4033,7 @@
 							<</if>>
 							<<if _chimeraOptions.demoncow_tail>>
 								/* Using demon cow chimera tail. */
-								<label>				Demon cow tail:
+								<label>				악마 소 꼬리:
 									<<listbox "$chimera.demoncow.tail" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4043,7 +4043,7 @@
 							<</if>>
 							<<if _chimeraOptions.demonwolf_tail>>
 								/* Using demon wolf chimera tail. */
-								<label>				Demon wolf tail:
+								<label>				악마 늑대 꼬리:
 									<<listbox "$chimera.demonwolf.tail" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4053,7 +4053,7 @@
 							<</if>>
 							<<if _chimeraOptions.demonfox_tail>>
 								/* Using demon fox chimera tail. */
-								<label>				Demon fox tail:
+								<label>				악마 여우 꼬리:
 									<<listbox "$chimera.demonfox.tail" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4063,7 +4063,7 @@
 							<</if>>
 							<<if _chimeraOptions.demonfox_ears>>
 								/* Using demon fox chimera ears. */
-								<label>				Demon fox ears:
+								<label>				악마 여우 귀:
 									<<listbox "$chimera.demonfox.ears" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4073,7 +4073,7 @@
 							<</if>>
 							<<if _chimeraOptions.demonharpy_wings>>
 								/* Using demon harpy chimera wings. */
-								<label>Demon harpy wings:
+								<label>악마 하피 날개:
 									<<listbox "$chimera.demonharpy.wings" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4083,7 +4083,7 @@
 							<</if>>
 							<<if _chimeraOptions.angelharpy_wings>>
 								/* Using angel harpy chimera wings. */
-								<label>				Angel harpy wings:
+								<label>				천사 하피 날개:
 									<<listbox "$chimera.angelharpy.wings" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4093,7 +4093,7 @@
 							<</if>>
 							<<if _chimeraOptions.fallenharpy_wings>>
 								/* Using fallen angel harpy chimera wings. */
-								<label>				Fallen harpy wings:
+								<label>				타락 천사 하피 날개:
 									<<listbox "$chimera.fallenharpy.wings" autoselect>>
 										<<option "표시" true>>
 										<<option "숨김" false>>
@@ -4110,43 +4110,43 @@
 <</widget>>
 
 <<widget "genomedump">>
-	<<link "Back">><<set $mirrorMenu to "transformation">><<replace #mirror>><<mirrorMenu>><</replace>><<numberify "#passages > .passage">><<unset $mirrorMenu>><</link>>
+	<<link "뒤로">><<set $mirrorMenu to "transformation">><<replace #mirror>><<mirrorMenu>><</replace>><<numberify "#passages > .passage">><<unset $mirrorMenu>><</link>>
 	<br><br>
-	<span class="red">Warning: This will reset your manifestation and transformation points for the specified transformation.
+	<span class="red">경고: 지정한 변이의 발현 수치와 변이 수치가 초기화됩니다.
 	<br><br>
-	<i>It is highly recommended you only do this after completing the transformation in its entirety.</i></span>
+	<i>변이를 완전히 마친 뒤에만 실행하는 것을 강력히 권장합니다.</i></span>
 	<br><br>
 	<<if $angelbuild gte 1>>
-	Angel Transform: <<link [[Reset|$passage]]>><<angelTransform 99>><<updatesidebarimg>><</link>><<if $angeltf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	천사 변이: <<link [[초기화한다|$passage]]>><<angelTransform 99>><<updatesidebarimg>><</link>><<if $angeltf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $fallenangel gte 1>>
-	Fallen Angel Transform: <<link [[Reset|$passage]]>><<fallenButNotOut 99>><<updatesidebarimg>><</link>><<if $fallenangelplustf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	타락 천사 변이: <<link [[초기화한다|$passage]]>><<fallenButNotOut 99>><<updatesidebarimg>><</link>><<if $fallenangelplustf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $demonbuild gte 1>>
-	Demon Transform: <<link [[Reset|$passage]]>><<demonTransform 99>><<updatesidebarimg>><</link>><<if $demontf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	악마 변이: <<link [[초기화한다|$passage]]>><<demonTransform 99>><<updatesidebarimg>><</link>><<if $demontf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $wolfbuild gte 1>>
-	Wolf Transform: <<link [[Reset|$passage]]>><<wolfTransform 99>><<updatesidebarimg>><</link>><<if $wolftf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	늑대 변이: <<link [[초기화한다|$passage]]>><<wolfTransform 99>><<updatesidebarimg>><</link>><<if $wolftf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $catbuild gte 1>>
-	Cat Transform: <<link [[Reset|$passage]]>><<catTransform 99>><<updatesidebarimg>><</link>><<if $cattf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	고양이 변이: <<link [[초기화한다|$passage]]>><<catTransform 99>><<updatesidebarimg>><</link>><<if $cattf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $cowbuild gte 1>>
-	Cow Transform: <<link [[Reset|$passage]]>><<cowTransform 99>><<updatesidebarimg>><</link>><<if $cowtf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	소 변이: <<link [[초기화한다|$passage]]>><<cowTransform 99>><<updatesidebarimg>><</link>><<if $cowtf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $bearbuild gte 1>>
-	Bear Transform: <<link [[Reset|$passage]]>><<bearTransform 99>><<updatesidebarimg>><</link>><<if $beartf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	곰 변이: <<link [[초기화한다|$passage]]>><<bearTransform 99>><<updatesidebarimg>><</link>><<if $beartf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $waterdragonbuild gte 1>>
-	Water Dragon Transform: <<link [[Reset|$passage]]>><<if $waterdragontf is 1>><<set $waterdragonCosmeticUnlocked to 1>><</if>><<waterdragonTransform 99>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>><<if $waterdragontf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	수룡 변이: <<link [[초기화한다|$passage]]>><<if $waterdragontf is 1>><<set $waterdragonCosmeticUnlocked to 1>><</if>><<waterdragonTransform 99>><<syncWaterDragonSkin>><<updatesidebarimg>><</link>><<if $waterdragontf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $birdbuild gte 1>>
-	Bird Transform: <<link [[Reset|$passage]]>><<harpyTransform 99>><<updatesidebarimg>><</link>><<if $harpytf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	새 변이: <<link [[초기화한다|$passage]]>><<harpyTransform 99>><<updatesidebarimg>><</link>><<if $harpytf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $foxbuild gte 1>>
-	Fox Transform: <<link [[Reset|$passage]]>><<foxTransform 99>><<updatesidebarimg>><</link>><<if $foxtf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	여우 변이: <<link [[초기화한다|$passage]]>><<foxTransform 99>><<updatesidebarimg>><</link>><<if $foxtf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $bunnybuild gte 1>>
-	Bunny Transform: <<link [[Reset|$passage]]>><<bunnyTransform 99>><<updatesidebarimg>><</link>><<if $bunnytf is 1>><span class="green">Safe</span><<else>><span class="red">Unsafe</span><</if>><br>
+	바니 변이: <<link [[초기화한다|$passage]]>><<bunnyTransform 99>><<updatesidebarimg>><</link>><<if $bunnytf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 <</widget>>

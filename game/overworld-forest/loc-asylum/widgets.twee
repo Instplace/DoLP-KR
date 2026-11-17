@@ -622,7 +622,7 @@
 
 		<<addinlineevent "asylum_exposure" 1>>
 			<<generatev1>><<person1>>
-			"Excuse me," says a voice to your side. It's a <<person>> wearing a patient's gown. "Doctor Harper gave me a task. I need to-" <<He>> looks away. "I need to expose myself to a dozen people before my next assessment. My b-body, I mean. C-can I show you?" <<He>> doesn't look happy.
+			"저기요." 당신의 곁에서 누군가 부른다. 환자복을 입은 <<person>>【이】네. "하퍼 선생님이 제게 과제를 주셨어요. 저는—" <<He>>【은는】 시선을 돌린다. "다음 평가 전까지 열두 명의 사람들에게 절 노출해야 해요. 제-제 몸을요. 다-당신한테 보여줘도 될까요?" <<He>>【은는】 행복해 보이지 않는다.
 			<br><br>
 
 			<<link [[승낙한다|Asylum Exposure Accept]]>><<handheldon>><<arousal 600>><</link>><<garousal>>

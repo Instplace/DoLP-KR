@@ -858,11 +858,11 @@
 		<<He>>【이가】 킥킥 웃는다. "어떻게 거절하겠어? 달콤하게 아프게 해줄게."
 	<<elseif $speechbeat is 1>>
 		<<print either(
-			`<<He>> frowns. "Stop resisting me, <<pcpetname 'Gwylan' 'naughty'>>."`,
-			`<<He>> frowns. "Just submit, and the pain will all go away."`,
-			`<<He>> frowns. "Why are you struggling? Isn't this what you wanted, dear?"`,
-			`<<He>> frowns. "I take no pleasure in this, dear, so please. Stop this senseless struggling."`,
-			`<<He>> frowns. "I'm sorry. I'll give you something for the pain when we're done."`,
+			`<<He>>【이가】 눈살을 찌푸린다. "그만 반항해, <<pcpetname 'Gwylan' 'naughty'>>【아야】."`,
+			`<<He>>【이가】 눈살을 찌푸린다. "그냥 복종해. 그럼 아픔은 전부 사라질 테니까."`,
+			`<<He>>【이가】 눈살을 찌푸린다. "왜 버둥거리는 거야? 이게 네가 원하던 거 아니었어, 얘야?"`,
+			`<<He>>【이가】 눈살을 찌푸린다. "나도 이러는 게 즐거운 건 아니야, 얘야, 그러니까 제발. 의미 없는 발버둥은 멈춰."`,
+			`<<He>>【이가】 눈살을 찌푸린다. "미안해. 다 끝나면 아프지 않게 뭐라도 줄게."`,
 		)>>
 	<<elseif $speechgrowl is 1>>
 		<<He>>【이가】 킥킥 웃는다. "오, 흥분되는 으르렁거림이네. 그 송곳니 다시 보여줘 봐." <<npcincr Gwylan lust 1>><<glust>><br>
@@ -906,9 +906,9 @@
 	<<elseif $speechvaginaflaunt is 1 and $gwylanComments.flaunt is 0>>
 		<<set $gwylanComments.flaunt to 3>>
 		<<print either(
-			`<<He>> blushes. "Enjoying the view?"`,
-			`<<He>> giggles. "I feel your eyes all over me, and I like it."`,
-			`<<He>> giggles. "Do I look good?"`
+			`<<He>>【이가】 얼굴을 붉힌다. "구경은 즐거워?"`,
+			`<<He>>【이가】 킥킥 웃는다. "네 눈길이 나를 훑고 다니는 게 느껴져, 난 그게 좋아."`,
+			`<<He>>【이가】 킥킥 웃는다. "나 예뻐 보여?"`
 		)>>
 	<<else>>
 		<<cleareventpool>>

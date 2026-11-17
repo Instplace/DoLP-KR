@@ -288,7 +288,7 @@
 <<effects>>
 
 <<set $pound.door += $physique>>
-You try to force the door open with all your might.
+당신은 온 힘을 다해 문을 억지로 열어 보려 한다.
 <<if currentSkillValue('physique') gte 14000>>
 	경첩이 덜컹거리며 삐걱거린다. 그리 어렵지는 않겠지만, 끈기가 필요할 것이다.
 <<elseif currentSkillValue('physique') gte 8000>>
@@ -1435,7 +1435,7 @@ You try to force the door open with all your might.
 
 다음은 터널이다.
 <<if $physiquesize gte 20000>>
-	<span class="red">It will be a miracle if you fit in there.</span><<large_text>>
+	<span class="red">그곳에 들어가는 건 기적일 것이다.</span><<large_text>>
 <<elseif $physiquesize gte 15000>>
 	<span class="pink">꽉 끼는 통과가 될 것이다.</span><<large_text>>
 <<elseif $physiquesize gte 12000>>
@@ -1467,7 +1467,7 @@ You try to force the door open with all your might.
 
 다음은 터널이다.
 <<if $physiquesize gte 20000>>
-	<span class="red">It will be a miracle if you fit in there.</span><<large_text>>
+	<span class="red">그곳에 들어가는 건 기적일 것이다.</span><<large_text>>
 <<elseif $physiquesize gte 15000>>
 	<span class="pink">꽉 끼는 통과가 될 것이다.</span><<large_text>>
 <<elseif $physiquesize gte 12000>>

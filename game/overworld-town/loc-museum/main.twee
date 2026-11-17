@@ -683,18 +683,18 @@
 
 윈터는 장갑 한 켤레를 끼고 물건들을 감정한다.
 <<if $phase is 1>>
-	"Aha," <<he>> says. "The mask. I'm glad you've decided to put it under my care." <<He>> places <<printmoney `_sale`>> on the table.
+	"아하." <<he>>【이가】 말한다. "가면이군. 내 관리 하에 두기로 결정했다니 기쁘군." <<He>>【은는】 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
 	<<glove>><<npcincr Winter love 1>>
 
 <<elseif $antiquemoney gte 1000>>
-	<<His>> scepticism fades as <<he>> works. "Where did you get this?" <<he>> asks. <<He>> doesn't wait for an answer, but places <<printmoney `_sale`>> on the table.
+	<<His>> 회의적인 태도는 <<he>>【이가】 작업하는 동안 사라진다. "이걸 어디서 구했습니까?" <<he>>【이가】 묻는다. <<He>>【은는】 대답을 기다리지 않고, 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
 	<<glove>><<npcincr Winter love 1>>
 
 <<elseif $antiquemoney gte 200>>
-	"Thank you," <<he>> says. "Your contribution is noted." <<He>> places <<printmoney `_sale`>> on the table.
+	"고마워." <<he>>【이가】 말한다. "네 기여는 기록되었어." <<He>>【은는】 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
 
 <<else>>
-	 Without a word, <<he>> places <<printmoney `_sale`>> on the table.
+	 말없이, <<he>>【은는】 테이블 위에 <<printmoney `_sale`>>【을를】 놓는다.
 <</if>>
 <br><br>
 

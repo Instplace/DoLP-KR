@@ -261,7 +261,7 @@
 				<br>
 			<</if>>
 			<<if $whitneyromance is 1 and $daily.whitney.parkSex is undefined and $location is "park" and $promiscuity gte 35>>
-				<<brothelicon>><<link [[Ask for sex (0:30)|Whitney Park Public Sex Intro]]>><<set $daily.whitney.parkSex to 1>><<pass 30>><<npcincr Whitney love 3>><<npcincr Whitney dom 3>><<handheldon 1>><</link>><<promiscuous3>><<glove>><<gdom>>
+				<<brothelicon>><<link [[섹스를 요청한다 (0:30)|Whitney Park Public Sex Intro]]>><<set $daily.whitney.parkSex to 1>><<pass 30>><<npcincr Whitney love 3>><<npcincr Whitney dom 3>><<handheldon 1>><</link>><<promiscuous3>><<glove>><<gdom>>
 				<br>
 			<</if>>
 			<<if $daily.whitney.chat is undefined>>
@@ -280,7 +280,7 @@
 			<br>
 			/* Water dragon TF reaction. Repeatable emote; the love/stress reward is daily-gated inside the passage. */
 			<<if ($waterdragon gte 7 or $waterdragontf is 1)>>
-				<<tficon "waterdragon">><<link [[Squeak at Whitney|Whitney Water Dragon]]>><</link>>
+				<<tficon "waterdragon">><<link [[휘트니에게 끽끽거린다|Whitney Water Dragon]]>><</link>>
 				<br>
 			<</if>>
 			<<if $location is "flats">>
@@ -304,7 +304,7 @@
 				<br>
 			<</if>>
 			<<if $whitneycollar is 1 and not ($worn.neck.name.includes("Whitney's collar")) and $location is "park">>
-				<<edenicon "collar">><<link [[Ask if your collar can be replaced|Whitney Collar Replace Dolp]]>><<handheldon 1>><</link>>
+				<<edenicon "collar">><<link [[목걸이를 교체할 수 있는지 묻는다|Whitney Collar Replace Dolp]]>><<handheldon 1>><</link>>
 				<br>
 			<</if>>
 			<<if $loft_known is 1 and $loft_whitney is undefined and $whitney_bailey_met gte 1>>

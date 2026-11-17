@@ -1317,7 +1317,7 @@
 			당신은 <<print window.KR.getCreatureTypeKr($struggle.creature)>>에 그물을 던질 준비를 하지만, <span class="pink">그들이 너무 가깝다.</span> 먼저 하나를 밀쳐내야 한다.
 		<</if>>
 		<<if _succ>>
-			<span class="green">The net lands true.</span> You pull the creature into your possession. <<control 2>><<gcontrol>>
+			<span class="green">그물이 정확하게 명중한다.</span> 당신은 생물을 잡아당겨 수중에 넣는다. <<control 2>><<gcontrol>>
 			<<if $struggle.enemy[_capture_creature].name is "lurker">>
 				<<set $lurkers_held += 1>>
 				<<set $stat_lurkers_captured += 1>>
@@ -1847,7 +1847,7 @@
 				<<else>>
 					<<if _left_guard_chance - _hit_chance gte 100 or _right_guard_chance - _hit_chance gte 100>>
 						<<struggle_defense_init "guard">>
-						<span class="teal">deflecting it away.</span>
+						<span class="teal">쳐내어 막아낸다.</span>
 						<<set _struggleDefenseResult to "dodge">><<control 1>><<gcontrol>>
 					<<else>>
 						<<struggle_defense_init "dodge">>

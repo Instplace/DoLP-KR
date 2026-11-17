@@ -877,7 +877,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 <<elseif $speech_attitude is "bratty">>
 	"정말 곤란한 상황에서 절 구해주셨어요. 신세 지고 싶지 않으니, 제대로 감사하게 해주시면 어떨까요?"
 <<else>>
-	"You really saved <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>my hide<<else>>me<</if>>. There must be some way I could thank you."
+	"정말 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>제 목숨을<<else>>저를<</if>> 구해주셨어요. 어떻게든 감사 인사를 드리고 싶은데요."
 <</if>>
 <br><br>
 
@@ -1303,7 +1303,7 @@ To get the previous major area passage, use: $safePassage (for links in the last
 <<effects>><<generate1>> <<person1>>
 <<set $outside to 0>><<set $location to "hospital">>
 
-The last thing you hear is a <<personssimple>> voice. "Wait, I know that face... people call <<phim>> `<<overworld_nickname_dolp>>`, right? We should get <<phim>> to a hospital." <<He>> scoops you up and places you in the backseat of a car. The car is warm, and you drift off.
+마지막으로 들리는 것은 어떤 <<personssimple>> 목소리다. "잠깐, 저 얼굴 아는데... 사람들이 <<overworld_nickname_dolp>>【이】라고 부르지 않나? 병원으로 데려가야겠어." <<He>>【은는】 당신을 안아 올려 차 뒷좌석에 태운다. 차 안은 따뜻하고, 당신은 스르르 잠이 든다.
 <br><br>
 <<link [[일어난다|Hospital Bed]]>><<set $passoutReason to "hypothermia">><<endevent>><</link>>
 
@@ -1543,7 +1543,7 @@ The last thing you hear is a <<personssimple>> voice. "Wait, I know that face...
 <<your_bird_text>>【을를】 따라, 당신은 <<bhis>> 헐떡이는 기술을 흉내 내며 빠르고 얕은 숨을 쉬어 열을 식힌다. 둘 다 빗물 웅덩이의 상쾌한 물에 계속 몸을 담그고 있는 동안 당신의 헐떡이는 리듬이 <<bhis>> 것과 일치한다. 비록 그렇게 하는 것이 꽤 바보 같다고 느끼지만 말이다. <<bHe>>【은는】 당신에게 시원한 바람을 불어주기 위해 부지런히 <<bhis>> 날개를 퍼덕인다.
 <br><br>
 
-After the refreshing bath, <<bhe>> guides you out and to the perch. <<bHe>> shakes off the excess water from <<bhis>> sleek feathers, and they poof up. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>Following <<bhis>> lead, you do the same.<</if>> In one fluid motion, <<bhe>> spreads <<bhis>> wings wide, catching a gentle breeze that rustles through the moor.
+상쾌한 목욕 후, <<bhe>>【은는】 당신을 밖으로 이끌어 횃대로 안내한다. <<bHe>>【은는】 <<bhis>> 매끄러운 깃털에서 물기를 털어내자, 깃털이 부풀어 오른다. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<bhis>> 행동을 따라, 당신도 똑같이 한다.<</if>> 유연한 동작으로, <<bhe>>【은는】 <<bhis>> 날개를 활짝 펴 황야를 스치는 부드러운 산들바람을 맞는다.
 <br><br>
 
 <<if $monster is 1>>
@@ -1553,7 +1553,7 @@ After the refreshing bath, <<bhe>> guides you out and to the perch. <<bHe>> shak
 <</if>>
 <br><br>
 
-You spread your <<= (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") ? "wings" : "arms">> wide, feeling the cool wind against your skin. The rustling leaves and the distant sound of flowing water create a tranquil atmosphere, allowing you to relax fully in the embrace of nature. <<ltrauma>><<trauma -3>>
+당신은 <<= (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") ? "날개" : "팔">>【을를】 활짝 펴고, 피부에 닿는 시원한 바람을 느낀다. 바스락거리는 나뭇잎 소리와 멀리서 들려오는 물 흐르는 소리가 평온한 분위기를 자아내, 자연의 품에서 완전히 긴장을 풀 수 있게 해준다. <<ltrauma>><<trauma -3>>
 <br><br>
 
 <<link [[다음|Passout Bird Heatstroke End]]>><<pass 5>><</link>>
@@ -2114,7 +2114,7 @@ You spread your <<= (($harpy gte 6 and $transformationParts.traits.activeTF is "
 
 <<link [[베리 허브티|Passout Gwylan Hot Cold Order]]>><<set $phase to 0>><</link>>
 <br>
-<<link [[Lemon honey tea|Passout Gwylan Hot Cold Order]]>><<set $phase to 1>><<transform bear 1>><</link>>
+<<link [[레몬 꿀차|Passout Gwylan Hot Cold Order]]>><<set $phase to 1>><<transform bear 1>><</link>>
 <br>
 <<if $gwylanTea gte 1 or $gwylanSeen.includes("butterfly_pea_flower_tea")>>
 	<<link [[나비콩 꽃차|Passout Gwylan Hot Cold Order]]>>

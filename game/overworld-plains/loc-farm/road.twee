@@ -46,11 +46,11 @@
 		<span class="blue">너무 노출이 심해 히치하이킹을 할 수 없습니다!</span>
 		<br>
 	<</if>>
-	<<roadicon>><<link [[Walk into the countryside (0:30)|Farm Road 2]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[시골로 더 들어간다 (0:30)|Farm Road 2]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog into the countryside (0:15)|Farm Road 2]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 조깅해 들어간다 (0:15)|Farm Road 2]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run into the countryside (0:05)|Farm Road 2]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 달려 들어간다 (0:05)|Farm Road 2]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 	<<if $farm>>
 		<<if $farm.steed>>
@@ -105,17 +105,17 @@
 		<span class="blue">너무 노출이 심해 히치하이킹을 할 수 없습니다!</span>
 		<br>
 	<</if>>
-	<<roadicon>><<link [[Walk deeper into the countryside (0:30)|Farm Road 3]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[시골로 더 들어간다 (0:30)|Farm Road 3]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog into the countryside (0:15)|Farm Road 3]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 조깅해 들어간다 (0:15)|Farm Road 3]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run into the countryside (0:05)|Farm Road 3]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 달려 들어간다 (0:05)|Farm Road 3]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Walk towards town (0:30)|Farm Road 1]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[마을 쪽으로 걷는다 (0:30)|Farm Road 1]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog towards town (0:15)|Farm Road 1]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 조깅한다 (0:15)|Farm Road 1]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run towards town (0:05)|Farm Road 1]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 달린다 (0:05)|Farm Road 1]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 <</if>>
 
@@ -157,17 +157,17 @@
 		<span class="blue">너무 노출이 심해 히치하이킹을 할 수 없습니다!</span>
 		<br>
 	<</if>>
-	<<roadicon>><<link [[Walk deeper into the countryside (0:30)|Farm Road 4]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[시골로 더 들어간다 (0:30)|Farm Road 4]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog into the countryside (0:15)|Farm Road 4]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 조깅해 들어간다 (0:15)|Farm Road 4]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run into the countryside (0:05)|Farm Road 4]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 달려 들어간다 (0:05)|Farm Road 4]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Walk towards town (0:30)|Farm Road 2]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[마을 쪽으로 걷는다 (0:30)|Farm Road 2]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog towards town (0:15)|Farm Road 2]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 조깅한다 (0:15)|Farm Road 2]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run towards town (0:05)|Farm Road 2]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 달린다 (0:05)|Farm Road 2]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 <</if>>
 
@@ -220,17 +220,17 @@
 		<span class="blue">너무 노출이 심해 히치하이킹을 할 수 없습니다!</span>
 		<br>
 	<</if>>
-	<<roadicon>><<link [[Walk deeper into the countryside (0:30)|Farm Road 5]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[시골로 더 들어간다 (0:30)|Farm Road 5]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog into the countryside (0:15)|Farm Road 5]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 조깅해 들어간다 (0:15)|Farm Road 5]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run into the countryside (0:05)|Farm Road 5]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 달려 들어간다 (0:05)|Farm Road 5]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Walk towards town (0:30)|Farm Road 3]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[마을 쪽으로 걷는다 (0:30)|Farm Road 3]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog towards town (0:15)|Farm Road 3]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 조깅한다 (0:15)|Farm Road 3]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run towards town (0:05)|Farm Road 3]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 달린다 (0:05)|Farm Road 3]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 <</if>>
 
@@ -272,17 +272,17 @@
 		<span class="blue">너무 노출이 심해 히치하이킹을 할 수 없습니다!</span>
 		<br>
 	<</if>>
-	<<roadicon>><<link [[Walk deeper into the countryside (0:30)|Farm Road 6]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[시골로 더 들어간다 (0:30)|Farm Road 6]]>><<pass 30>><<set $phase to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog into the countryside (0:15)|Farm Road 6]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 조깅해 들어간다 (0:15)|Farm Road 6]]>><<pass 15>><<set $phase to 1>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run into the countryside (0:05)|Farm Road 6]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[시골로 달려 들어간다 (0:05)|Farm Road 6]]>><<pass 5>><<set $phase to 1>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Walk towards town (0:30)|Farm Road 4]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[마을 쪽으로 걷는다 (0:30)|Farm Road 4]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog towards town (0:15)|Farm Road 4]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 조깅한다 (0:15)|Farm Road 4]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run towards town (0:05)|Farm Road 4]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 달린다 (0:05)|Farm Road 4]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 <</if>>
 
@@ -334,11 +334,11 @@
 	<</if>>
 	<<farmicon>><<link [[농장 지대로 들어간다 (0:05)|Farmland]]>><<pass 5>><</link>>
 	<br>
-	<<roadicon>><<link [[Walk towards town (0:30)|Farm Road 5]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
+	<<roadicon>><<link [[마을 쪽으로 걷는다 (0:30)|Farm Road 5]]>><<pass 30>><<set $phase to 2>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
-	<<roadicon>><<link [[Jog towards town (0:15)|Farm Road 5]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 조깅한다 (0:15)|Farm Road 5]]>><<pass 15>><<set $phase to 2>><<tiredness 6>><<athletics 2>><</link>><<ggtiredness>><<gathletics>>
 	<br>
-	<<roadicon>><<link [[Run towards town (0:05)|Farm Road 5]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
+	<<roadicon>><<link [[마을 쪽으로 달린다 (0:05)|Farm Road 5]]>><<pass 5>><<set $phase to 2>><<tiredness 12>><<athletics 3>><<physique 1>><</link>><<gggtiredness>><<gathletics>>
 	<br>
 <</if>>
 <<set $eventskip to 0>>
@@ -1330,7 +1330,7 @@
 당신은 머리 장식을 쫓아 길을 벗어나 언덕 능선을 따라 내려간다. 그것은 나뭇가지에 걸려 멈춘다.
 
 <<if $physiquesize gte 20000>>
-	You stand on your toes and reach it with ease. <<large_text>>
+	당신은 발끝으로 서서 손쉽게 닿는다. <<large_text>>
 <<elseif $physiquesize gte 15000>>
 	당신은 공중으로 뛰어올라, 간신히 손이 닿는다. <<large_text>>
 <<else>>

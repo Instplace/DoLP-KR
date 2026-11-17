@@ -714,7 +714,7 @@
 		<<link [[다음|Dance Studio Changing Room]]>><<money -2200 "danceStudioLessons">><<if $exposed gte 2>><<clotheson>><</if>><<endevent>><</link>>
 	<<else>>
 		<<if $money gte 2200>>
-			<<ind>><<link [[Take another yoga lesson (£22 1:00)|Yoga Classes Enter]]>><</link>><<gtiredness>><<gwillpower>><<llstress>><br>
+			<<ind>><<link [[요가 레슨을 한 번 더 받는다 (£22 1:00)|Yoga Classes Enter]]>><</link>><<gtiredness>><<gwillpower>><<llstress>><br>
 		<</if>>
 		<<link [[다음|Dance Studio Changing Room]]>><<money -2200 "danceStudioLessons">><<if $exposed gte 2>><<clotheson>><</if>><<endevent>><</link>>
 	<</if>>

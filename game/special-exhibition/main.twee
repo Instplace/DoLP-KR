@@ -766,11 +766,11 @@
 	<br><br>
 	<<if $bodysize lte -1>>
 		<<if $player.bodyshape is "soft" or $player.bottomsize gte 6>>
-			It goes well at first. You get your top half through, but your hips are a little too wide. After some additional wiggling, you manage to squish through.
+			처음에는 잘된다. 상체는 빠져나갔지만, 엉덩이가 조금 너무 넓다. 몸을 조금 더 비틀자 간신히 비집고 빠져나온다.
 			<<set $stripintegrity to 10>><<set $stripobject to "broken brick">><<stripobject>>
-			A few moments later and you're free on the other side and take a deep sigh of relief. <<if $trauma lte ($traumamax / 7)>>It was close, but that's the cost of not having a flat ass.<</if>>
+			잠시 후 당신은 반대편으로 빠져나와 안도의 깊은 한숨을 내쉰다. <<if $trauma lte ($traumamax / 7)>>아슬아슬했지만, 납작한 엉덩이가 아닌 대가다.<</if>>
 		<<else>>
-			You drop to your knees and look through the hole. You see another alley, similar to this one, on the other side. Hearing the voices grow louder, you start crawling through the hole. It's a tight fit and if you were even a little bigger, you couldn't fit, but you still manage.
+			당신은 무릎을 꿇고 구멍을 통해 내다본다. 반대편에 이곳과 비슷한 또 다른 골목이 보인다. 목소리가 점점 커지는 것을 듣고, 당신은 구멍을 통해 기어가기 시작한다. 꽉 끼는 크기라 조금만 더 컸더라면 들어가지 못했겠지만, 그래도 간신히 해낸다.
 			<<set $stripintegrity to 10>><<set $stripobject to "broken brick">><<stripobject>>
 			잠시 후 당신은 반대편으로 무사히 빠져나온다.
 		<</if>>

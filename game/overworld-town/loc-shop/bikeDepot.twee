@@ -10,7 +10,7 @@
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
 
-		<<lockicon "pick">><<link [[Pick it (0:10)|Bike Depot]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[딴다 (0:10)|Bike Depot]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 	<</if>>
 	<br>
 <<else>>
@@ -23,10 +23,10 @@
 :: Bike Depot
 <<set $outside to 0>><<set $location to "shopping_centre">><<effects>>
 
-You are in the Bike Depot. It has quite the stock of bikes.
+당신은 자전거 매장 안에 있다. 자전거 재고가 꽤 많다.
 <br><br>
 <<if $phase is 5>>
-	You purchase a repair kit, making your current carried amount <span class="yellow"><<print $bicycle.durability.repair>></span>. You <<if $bicycle.durability.repair lt 5>>think you can carry <<print (5 - $bicycle.durability.repair)>><<else>> can't carry<</if>> more.
+	당신은 수리 키트를 구입했고, 현재 소지량은 <span class="yellow"><<print $bicycle.durability.repair>></span>개가 되었다. <<if $bicycle.durability.repair lt 5>><<print (5 - $bicycle.durability.repair)>>개는 더 들고 다닐 수 있을 것 같다<<else>>더는 들고 다닐 수 없다<</if>>.
 	<br><br>
 	<<set $phase to 0>>
 <<elseif $phase is 4>>
@@ -42,7 +42,7 @@ You are in the Bike Depot. It has quite the stock of bikes.
 			<<set $bicycle.durability.current to Math.min($bicycle.durability.current + _repairAmount, 3000)>>
 		<<default>>
 	<</switch>>
-	Your bike has been given a tune-up, restoring _repairAmount minutes of usage time.
+	당신의 자전거는 정비를 받아 사용 가능 시간이 <<print _repairAmount>>분 회복되었다.
 	<br><br>
 	<<set $phase to 0>><<unset _repairAmount>>
 <<elseif $phase is 3>>
@@ -50,9 +50,9 @@ You are in the Bike Depot. It has quite the stock of bikes.
 	<<set $bicycle.own to true>><<set $bicycle.quality to 3>><<set $bicycle.durability.current to 12000>>
 	<<set $bicycle.durability.max to $bicycle.durability.current>><<set $bicycle.location to "high">>
 	<<if _own is not undefined>>
-		<span class="gold">The employee lets you trade in your <<if _own is 2>>intermediate<<set $money += 50000>><<else>>basic<<set $money += 10000>><</if>> bike for a small discount.</span><br>
+		<span class="gold">직원이 당신의 <<if _own is 2>>중급형<<set $money += 50000>><<else>>기본형<<set $money += 10000>><</if>> 자전거를 보상 판매로 받고 소정의 할인을 해 준다.</span><br>
 	<</if>>
-	<span class="gold">Your high-end bike has been purchased and put outside of the shopping centre.</span>
+	<span class="gold">당신의 고급형 자전거를 구입해 쇼핑센터 밖에 세워 두었다.</span>
 	<br><br>
 	<<set $phase to 0>>
 <<elseif $phase is 2>>
@@ -60,15 +60,15 @@ You are in the Bike Depot. It has quite the stock of bikes.
 	<<set $bicycle.own to true>><<set $bicycle.quality to 2>><<set $bicycle.durability.current to 6000>>
 	<<set $bicycle.durability.max to $bicycle.durability.current>><<set $bicycle.location to "high">>
 	<<if _own>>
-		<span class="gold">The employee lets you trade in your basic bike for a small discount.</span><br><<set $money += 10000>>
+		<span class="gold">직원이 당신의 기본형 자전거를 보상 판매로 받고 소정의 할인을 해 준다.</span><br><<set $money += 10000>>
 	<</if>>
-	<span class="gold">Your intermediate bike has been purchased and put outside of the shopping centre.</span>
+	<span class="gold">당신의 중급형 자전거를 구입해 쇼핑센터 밖에 세워 두었다.</span>
 	<br><br>
 	<<set $phase to 0>>
 <<elseif $phase is 1>>
 	<<set $bicycle.own to true>><<set $bicycle.quality to 1>><<set $bicycle.durability.current to 3000>>
 	<<set $bicycle.durability.max to $bicycle.durability.current>><<set $bicycle.location to "high">>
-	<span class="gold">Your basic bike has been purchased and put outside of the shopping centre.</span>
+	<span class="gold">당신의 기본형 자전거를 구입해 쇼핑센터 밖에 세워 두었다.</span>
 	<br><br>
 	<<set $phase to 0>>
 <</if>>
@@ -77,7 +77,7 @@ You are in the Bike Depot. It has quite the stock of bikes.
 	어둠 속에 당신 혼자 있다.
 	<br><br>
 <<elseif $exposed gte 1>>
-	You hide behind a rack of bikes to protect your dignity.
+	당신은 자존심을 지키려고 자전거 거치대 뒤에 숨는다.
 	<br><br>
 <</if>>
 
@@ -94,31 +94,31 @@ You are in the Bike Depot. It has quite the stock of bikes.
 			<<highicon>><<link [[밖으로 나간다|High Street]]>><</link>>
 			<br>
 		<<else>>
-			<<ind>><<link [["Hide until it's over (1:00)"|Bike Depot]]>><<pass 1 hour>><</link>>
+			<<ind>><<link [["끝날 때까지 숨는다 (1:00)"|Bike Depot]]>><<pass 1 hour>><</link>>
 		<</if>>
 	<<else>>
 		<<if Time.dayState is "night" and Time.hour isnot 21 and !$weekly.theft.bikeDepot>>
-			<<shopicon "register">><<link [[Examine the cash register|Bike Depot Register]]>><</link>>
+			<<shopicon "register">><<link [[계산대를 살펴본다|Bike Depot Register]]>><</link>>
 			<br><br>
 		<<elseif $exposed lte 0 and Time.dayState isnot "night" and Time.hour isnot 21>>
 
 			<<if $bicycle.durability.repair is undefined && $bicycle.own>><<generate1>><<person1>>
 				<<if currentSkillValue('skulduggery') gte 600 || currentSkillValue('science') gte 600>>
 					<<set $bicycle.durability.repair to 1>>
-					A <<person>> wearing an employee's smock studies you and your <<if $bicycle.durability.current < $bicycle.durability.max>>beat up <</if>>bike for a moment.
+					직원용 앞치마를 입은 <<person>>【이가】 당신과 당신의 <<if $bicycle.durability.current < $bicycle.durability.max>>낡아빠진 <</if>>자전거를 잠시 살핀다.
 					<br><br>
-					"You look like you might know your way around a tool or two. How about I sell you some kits so you can make small repairs yourself? Y'know, for emergencies."
+					"공구 한두 개쯤은 다룰 줄 아는 것 같네요. 작은 수리는 직접 할 수 있게 키트를 팔아 드릴까요? 왜, 비상시에 쓰라고요."
 					<br><br>
-					<<He>> hands you a small bundle before you can respond, <span class="green">"Here's a freebie on the house. Don't waste it."</span>
+					<<He>>【은는】 당신이 대답하기도 전에 작은 꾸러미를 건넨다. <span class="green">"이건 서비스로 드리는 거예요. 낭비하지 마세요."</span>
 					<br><br>
-					<span class="gold">The employees recognize your skill and have decided selling tools to you wouldn't be the biggest mistake in the world. Don't make them regret it.</span>
+					<span class="gold">직원들은 당신의 솜씨를 알아보고, 당신에게 공구를 파는 것이 세상에서 가장 큰 실수는 아닐 거라고 판단했다. 그들이 후회하게 만들지는 말자.</span>
 					<br><br>
 				<<else>>
-					You catch a <<person>> in an employee's smock studying you and your <<if $bicycle.durability.current < $bicycle.durability.max>>beat up <</if>>bike.
+					직원용 앞치마를 두른 <<person>>【이가】 당신과 당신의 <<if $bicycle.durability.current < $bicycle.durability.max>>낡아빠진 <</if>>자전거를 살펴보는 것이 눈에 들어온다.
 					<br>
-					<<He>> appears unimpressed and after a moment gets back to work. 
+					<<He>>【은는】 별 감흥이 없어 보이고, 잠시 후 다시 일하러 돌아간다.
 					<br>
-					<span class="blue">You might catch their eye if you knew more about science or were more deft with your hands.</span>
+					<span class="blue">과학을 더 알거나 손재주가 더 좋았다면 그들의 눈에 띌 수도 있었을 것이다.</span>
 					<br><br>
 				<</if>>
 				<<endevent>>
@@ -126,77 +126,77 @@ You are in the Bike Depot. It has quite the stock of bikes.
 
 			<<if $bicycle.quality lt 3 || $bicycle.own is false || !$bicycle.own>>
 				<<if $money gte 250000>>
-					<<bikeicon>><<link [[Purchase a high-end bike (£2500 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 3>><<set $money -= 250000>><</link>>
+					<<bikeicon>><<link [[고급형 자전거를 구입한다 (£2500 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 3>><<set $money -= 250000>><</link>>
 				<<else>>
-					<<ind>><span class="red">You don't have the £2500 to purchase a high-end bike.</span>
+					<<ind>><span class="red">고급형 자전거를 구입할 £2500이 없다.</span>
 				<</if>>
 				<br>
 			<<elseif $bicycle.quality is 3 && $bicycle.own>>
-				<<ind>>You already own a high-end bike.
+				<<ind>>이미 고급형 자전거를 가지고 있다.
 				<br>
 			<</if>>
 
 			<<if $bicycle.quality lt 2 || $bicycle.own is false || !$bicycle.own>>
 				<<if $money gte 100000>>
-					<<bikeicon>><<link [[Purchase an intermediate bike (£1000 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 2>><<set $money -= 100000>><</link>>
+					<<bikeicon>><<link [[중급형 자전거를 구입한다 (£1000 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 2>><<set $money -= 100000>><</link>>
 				<<else>>
-					<<ind>><span class="red">You don't have the £1000 to purchase an intermediate bike.</span>
+					<<ind>><span class="red">중급형 자전거를 구입할 £1000이 없다.</span>
 				<</if>>
 				<br>
 			<<elseif $bicycle.quality is 2 && $bicycle.own>>
-				<<ind>>You already own an intermediate bike.
+				<<ind>>이미 중급형 자전거를 가지고 있다.
 				<br>
 			<</if>>
 
 			<<if !$bicycle.own || $bicycle.own is false>>
 				<<if $money gte 50000>>
-					<<bikeicon>><<link [[Purchase a basic bike (£500 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 1>><<set $money -= 50000>><</link>>
+					<<bikeicon>><<link [[기본형 자전거를 구입한다 (£500 0:05)|Bike Depot]]>><<pass 5>><<set $phase to 1>><<set $money -= 50000>><</link>>
 				<<else>>
-					<<ind>><span class="red">You don't have the £500 to purchase a basic bike.</span>
+					<<ind>><span class="red">기본형 자전거를 구입할 £500이 없다.</span>
 				<</if>>
 				<br>
 			<<elseif $bicycle.quality is 1 && $bicycle.own>>
-				<<ind>>You already own a basic bike.
+				<<ind>>이미 기본형 자전거를 가지고 있다.
 				<br>
 			<</if>>
 
 			<<if $bicycle.own>>
 				<<if $bicycle.theftEnabled && $bicycle.security lt 0.99>>
-					<<lockicon>><<link [[Browse through the security gear (0:05)|Bike Depot Security Gear]]>><<pass 5>><</link>>
+					<<lockicon>><<link [[보안 장비를 둘러본다 (0:05)|Bike Depot Security Gear]]>><<pass 5>><</link>>
 					<br>
 				<<elseif $bicycle.security gte 0.99>>
-					<<ind>>You already own the best security gear available.
+					<<ind>>구할 수 있는 최고의 보안 장비를 이미 가지고 있다.
 					<br>
 				<</if>>
 
 				<<if $bicycle.upgrades.length lt 6>>
-					<<icon "wrench.png">><<link [[Browse through the off-road upgrades (0:05)|Bike Depot Off-Road]]>><<pass 5>><</link>>
+					<<icon "wrench.png">><<link [[오프로드 업그레이드를 둘러본다 (0:05)|Bike Depot Off-Road]]>><<pass 5>><</link>>
 					<br>
 				<<elseif $bicycle.upgrades.length gte 6>>
-					<<ind>>Your bike is already upgraded with what this shop has to offer.
+					<<ind>>당신의 자전거는 이 가게가 제공하는 것으로 이미 모두 업그레이드되어 있다.
 					<br>
 				<</if>>
 
 				<<if $bicycle.durability.current < $bicycle.durability.max>>
 					<<if $money gte 20000>>
-						<<birdicon "tools">><<link [[Repair your bike (£200 0:20)|Bike Depot]]>><<pass 20>><<set $bicycle.location to "high">><<set $phase to 4>><</link>><br>
+						<<birdicon "tools">><<link [[자전거를 수리한다 (£200 0:20)|Bike Depot]]>><<pass 20>><<set $bicycle.location to "high">><<set $phase to 4>><</link>><br>
 					<<else>>
-						<<ind>>You don't have the £200 to repair your bike.<br>
+						<<ind>>자전거를 수리할 £200이 없다.<br>
 					<</if>>
 				<<elseif $bicycle.durability.current >= $bicycle.durability.max>>
-					<<ind>>Your bike is in great condition and doesn't need any repairs.<br>
+					<<ind>>자전거 상태가 아주 좋아서 수리가 필요 없다.<br>
 				<</if>>
 					
 				<<if $bicycle.durability.repair isnot undefined>>
 					<<if $bicycle.durability.repair lt 5>>
 						<<if $money gte 5000>>
-							<<birdicon "tools">><<link [[Purchase a repair kit (£50 0:05)|Bike Depot]]>><<pass 5>><<set $bicycle.durability.repair++>><<set $money -= 5000>><<set $phase to 5>><</link>>
+							<<birdicon "tools">><<link [[수리 키트를 구입한다 (£50 0:05)|Bike Depot]]>><<pass 5>><<set $bicycle.durability.repair++>><<set $money -= 5000>><<set $phase to 5>><</link>>
 						<<else>>
-							<<ind>>You don't have the £50 to buy a repair kit.
+							<<ind>>수리 키트를 살 £50이 없다.
 						<</if>>
 						<br>
 					<<else>>
-						<<ind>>You can't carry any more repair kits.
+						<<ind>>수리 키트를 더는 들고 다닐 수 없다.
 						<br>
 					<</if>>
 				<</if>>
@@ -211,138 +211,138 @@ You are in the Bike Depot. It has quite the stock of bikes.
 :: Bike Depot Security Gear
 <<set $outside to 0>><<set $location to "shopping_centre">><<effects>>
 
-You browse through the selection of security gear.
+당신은 보안 장비를 둘러본다.
 <br><br>
 
 <<if $bicycle.security lt 0.99>>
 	<<if $money gte 100000>>
-		<<link [[Purchase U-Lock with Alarm (£1000)|Bike Depot]]>><<set $money -= 100000>><<set $bicycle.security to 0.99>><</link>><<note "99.9% theft prevention">>
+		<<link [[경보기 달린 U형 자물쇠를 구입한다 (£1000)|Bike Depot]]>><<set $money -= 100000>><<set $bicycle.security to 0.99>><</link>><<note "도난 방지율 99.9%">>
 	<<else>>
-		<span class="red">You don't have the £1000 to purchase a U-Lock with Alarm.</span>
+		<span class="red">경보기 달린 U형 자물쇠를 구입할 £1000이 없다.</span>
 	<</if>>
 	<br>
 <<elseif $bicycle.security is 0.99>>
-	You already own a U-Lock with Alarm.
+	이미 경보기 달린 U형 자물쇠를 가지고 있다.
 	<br>
 <</if>>
 <<if $bicycle.security lt 0.8>>
 	<<if $money gte 75000>>
-		<<link [[Purchase U-Lock (£750)|Bike Depot]]>><<set $money -= 75000>><<set $bicycle.security to 0.8>><</link>><<note "80% theft prevention">>
+		<<link [[U형 자물쇠를 구입한다 (£750)|Bike Depot]]>><<set $money -= 75000>><<set $bicycle.security to 0.8>><</link>><<note "도난 방지율 80%">>
 	<<else>>
-		<span class="red">You don't have the £750 to purchase a U-Lock.</span>
+		<span class="red">U형 자물쇠를 구입할 £750이 없다.</span>
 	<</if>>
 	<br>
 <<elseif $bicycle.security is 0.8>>
-	You already own a U-Lock.
+	이미 U형 자물쇠를 가지고 있다.
 	<br>
 <</if>>
 <<if $bicycle.security lt 0.5>>
 	<<if $money gte 50000>>
-		<<link [[Purchase Heavy-Duty Chain Lock with Hardened Steel (£500)|Bike Depot]]>><<set $money -= 50000>><<set $bicycle.security to 0.5>><</link>><<note "50% theft prevention">>
+		<<link [[강화강 중량 체인 자물쇠를 구입한다 (£500)|Bike Depot]]>><<set $money -= 50000>><<set $bicycle.security to 0.5>><</link>><<note "도난 방지율 50%">>
 	<<else>>
-		<span class="red">You don't have the £500 to purchase a heavy-duty chain lock with hardnened steel.</span>
+		<span class="red">강화강 중량 체인 자물쇠를 구입할 £500이 없다.</span>
 	<</if>>
 	<br>
 <<elseif $bicycle.security is 0.5>>
-	You already own a Heavy-Duty Chain Lock with Hardened Steel.
+	이미 강화강 중량 체인 자물쇠를 가지고 있다.
 	<br>
 <</if>>
 <<if $bicycle.security lt 0.3>>
 	<<if $money gte 25000>>
-		<<link [[Purchase Standard Chain Lock (£250)|Bike Depot]]>><<set $money -= 25000>><<set $bicycle.security to 0.3>><</link>><<note "30% theft prevention">>
+		<<link [[일반 체인 자물쇠를 구입한다 (£250)|Bike Depot]]>><<set $money -= 25000>><<set $bicycle.security to 0.3>><</link>><<note "도난 방지율 30%">>
 	<<else>>
-		<span class="red">You don't have the £250 to purchase a standard chain lock.</span>
+		<span class="red">일반 체인 자물쇠를 구입할 £250이 없다.</span>
 	<</if>>
 	<br>
 <<elseif $bicycle.security is 0.3>>
-	You already own a Standard Chain Lock.
+	이미 일반 체인 자물쇠를 가지고 있다.
 	<br>
 <</if>>
 <<if $bicycle.security lt 0.1>>
 	<<if $money gte 10000>>
-		<<link [[Purchase Wheel Lock (£100)|Bike Depot]]>><<set $money -= 10000>><<set $bicycle.security to 0.1>><</link>><<note "10% theft prevention">>
+		<<link [[바퀴 자물쇠를 구입한다 (£100)|Bike Depot]]>><<set $money -= 10000>><<set $bicycle.security to 0.1>><</link>><<note "도난 방지율 10%">>
 	<<else>>
-		<span class="red">You don't have the £100 to purchase a wheel lock.</span>
+		<span class="red">바퀴 자물쇠를 구입할 £100이 없다.</span>
 	<</if>>
 	<br>
 <<elseif $bicycle.security is 0.1>>
-	You already own a Wheel Lock.
+	이미 바퀴 자물쇠를 가지고 있다.
 	<br>
 <</if>>
 <br>
-<<getouticon>><<link [[Back|Bike Depot]]>><</link>>
+<<getouticon>><<link [[뒤로|Bike Depot]]>><</link>>
 
 :: Bike Depot Off-Road
 <<set $outside to 0>><<set $location to "shopping_centre">><<effects>>
 
-You browse through the selection of Off-Road upgrades.
+당신은 오프로드 업그레이드 목록을 둘러본다.
 <br><br>
 
 <<if !$bicycle.upgrades.includes("suspension")>>
 	<<if $money gte 60000>>
-		<<link [[Suspension fork (£600)|$passage]]>><<set $money -= 60000>><<set $bicycle.upgrades.pushUnique("suspension")>><</link>><<note "-10% travel time and -25% durability loss in Rough Terrain">>
+		<<link [[서스펜션 포크 (£600)|$passage]]>><<set $money -= 60000>><<set $bicycle.upgrades.pushUnique("suspension")>><</link>><<note "험지에서 이동 시간 -10%, 내구도 손실 -25%">>
 	<<else>>
-		<span class="red">You don't have the £600 to upgrade your suspension fork.</span>
+		<span class="red">서스펜션 포크로 업그레이드할 £600이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own a high-quality air fork.
+	이미 고품질 에어 포크를 가지고 있다.
 	<br>
 <</if>>
 <<if !$bicycle.upgrades.includes("tyres")>>
 	<<if $money gte 10000>>
-		<<link [[Wider tyres with tread (£100)|$passage]]>><<set $money -= 10000>><<set $bicycle.upgrades.pushUnique("tyres")>><</link>><<note "-5% travel time and -15% durability loss in Rough Terrain">>
+		<<link [[트레드가 있는 넓은 타이어 (£100)|$passage]]>><<set $money -= 10000>><<set $bicycle.upgrades.pushUnique("tyres")>><</link>><<note "험지에서 이동 시간 -5%, 내구도 손실 -15%">>
 	<<else>>
-		<span class="red">You don't have the £100 to upgrade your tyres.</span>
+		<span class="red">타이어를 업그레이드할 £100이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own durable off-road tyres.
+	이미 튼튼한 오프로드 타이어를 가지고 있다.
 	<br>
 <</if>>
 <<if !$bicycle.upgrades.includes("tubeless")>>
 	<<if $money gte 10000>>
-		<<link [[Tubeless Setup (£100)|$passage]]>><<set $money -= 10000>><<set $bicycle.upgrades.pushUnique("tubeless")>><</link>><<note "-5% travel time and -10% durability loss in Rough Terrain">>
+		<<link [[튜브리스 세팅 (£100)|$passage]]>><<set $money -= 10000>><<set $bicycle.upgrades.pushUnique("tubeless")>><</link>><<note "험지에서 이동 시간 -5%, 내구도 손실 -10%">>
 	<<else>>
-		<span class="red">You don't have the £100 to upgrade to a tubeless setup.</span>
+		<span class="red">튜브리스 세팅으로 업그레이드할 £100이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own a tubeless setup.
+	이미 튜브리스 세팅을 갖추고 있다.
 	<br>
 <</if>>
 <<if !$bicycle.upgrades.includes("brakes")>>
 	<<if $money gte 30000>>
-		<<link [[Hydraulic Disk Brakes (£300)|$passage]]>><<set $money -= 30000>><<set $bicycle.upgrades.pushUnique("brakes")>><</link>><<note "-5% durability loss in Rough Terrain">>
+		<<link [[유압 디스크 브레이크 (£300)|$passage]]>><<set $money -= 30000>><<set $bicycle.upgrades.pushUnique("brakes")>><</link>><<note "험지에서 내구도 손실 -5%">>
 	<<else>>
-		<span class="red">You don't have the £300 to upgrade your brakes.</span>
+		<span class="red">브레이크를 업그레이드할 £300이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own hydraulic disk brakes.
+	이미 유압 디스크 브레이크를 가지고 있다.
 	<br>
 <</if>>
 <<if !$bicycle.upgrades.includes("pedals")>>
 	<<if $money gte 8000>>
-		<<link [[Grippy pedals (£80)|$passage]]>><<set $money -= 8000>><<set $bicycle.upgrades.pushUnique("pedals")>><</link>><<note "-2.5% travel time and -5% durability loss in Rough Terrain">>
+		<<link [[접지력 좋은 페달 (£80)|$passage]]>><<set $money -= 8000>><<set $bicycle.upgrades.pushUnique("pedals")>><</link>><<note "험지에서 이동 시간 -2.5%, 내구도 손실 -5%">>
 	<<else>>
-		<span class="red">You don't have the £80 to upgrade your pedals.</span>
+		<span class="red">페달을 업그레이드할 £80이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own flat grippy pedals.
+	이미 평평하고 접지력 좋은 페달을 가지고 있다.
 	<br>
 <</if>>
 <<if !$bicycle.upgrades.includes("grips")>>
 	<<if $money gte 6000>>
-		<<link [[Ergonomic grips and bar ends (£60)|$passage]]>><<set $money -= 6000>><<set $bicycle.upgrades.pushUnique("grips")>><</link>><<note "-2.5% travel time and -5% durability loss in Rough Terrain">>
+		<<link [[인체공학 그립과 바 엔드 (£60)|$passage]]>><<set $money -= 6000>><<set $bicycle.upgrades.pushUnique("grips")>><</link>><<note "험지에서 이동 시간 -2.5%, 내구도 손실 -5%">>
 	<<else>>
-		<span class="red">You don't have the £60 to upgrade your cockpit.</span>
+		<span class="red">핸들 부위를 업그레이드할 £60이 없다.</span>
 	<</if>>
 	<br>
 <<else>>
-	You already own ergonomic grips and bar ends.
+	이미 인체공학 그립과 바 엔드를 가지고 있다.
 	<br>
 <</if>>
 <br>
-<<getouticon>><<link [[Back|Bike Depot]]>><</link>>
+<<getouticon>><<link [[뒤로|Bike Depot]]>><</link>>

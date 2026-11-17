@@ -130,12 +130,12 @@
 <</widget>>
 
 <<widget "furnitureUpdate">>
-	Home Target: <<link [[Orphanage|$passage]]>><<set $furnitureShopTarget to "bedroom">><</link>> | 
+	설치 대상: <<link [[고아원|$passage]]>><<set $furnitureShopTarget to "bedroom">><</link>> |
 	<<if $farm_stage gte 7>>
-		<<link [[Farm Cottage|$passage]]>><<set $furnitureShopTarget to "cottage">><</link>>
+		<<link [[농장 오두막|$passage]]>><<set $furnitureShopTarget to "cottage">><</link>>
 	<</if>>
 	<br>
-	Selected: <<if $furnitureShopTarget is "bedroom">>Orphanage<<else>>Farm Cottage<</if>>
+	선택: <<if $furnitureShopTarget is "bedroom">>고아원<<else>>농장 오두막<</if>>
 	<br>
 	<<if $boughtfurniturename isnot undefined>>
 		<<if $chosenFurnitureCategory is "poster">>
@@ -187,13 +187,13 @@
 			당신은 책상들을 둘러본다. 몇 개는 낡은 책상을 대체할 만큼 작아 보인다.
 			<br>
 		<<case "shelf">>
-			You browse through the shelving units. There's only one you can get but it'll give you space for some new decorations.
+			당신은 선반들을 둘러본다. 구할 수 있는 것은 하나뿐이지만, 새 장식품을 놓을 공간이 생길 것이다.
 			<br>
 		<<case "plush">>
-			You'll need a shelf if you want any of these items.
+			이 물건들을 놓으려면 선반이 필요하다.
 			<br>
 		<<case "radio">>
-			You browse the radios.
+			당신은 라디오를 둘러본다.
 			<br>
 		<<default>>
 			/* Do nothing */
@@ -226,11 +226,11 @@
 		{ id: 'chair', label: '의자' },
 		{ id: 'desk', label: '책상'},
 		{ id: 'wardrobe', label: '옷장' },
-		{ id: 'radio', label: "Radio"},
-		{ id: 'shelf', label: "Shelving Units"},
+		{ id: 'radio', label: "라디오"},
+		{ id: 'shelf', label: "선반"},
 		{ id: 'decoration', label: '장식품' },
-		{ id: 'plush', label: "Special"},
-		{ id: 'windowsill', label: 'Miscellaneous' },
+		{ id: 'plush', label: "특별"},
+		{ id: 'windowsill', label: '잡화' },
 	]>>
 	<<for _i = 0; _i < _furnitureLinks.length; _i++>>
 		<<set _furniLink = _furnitureLinks[_i]>>

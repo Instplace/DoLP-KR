@@ -813,8 +813,8 @@ function initSpecialClothes() {
 		},
 		// Modded
 		antiques: {
-			text: "antique jewellery",
-			hint: "find them all",
+			text: "골동품 장신구",
+			hint: "모두 찾아내기",
 			shop: [],
 			featCost: 50,
 			requirements: () => (V.museumAntiques.museumCount === V.museumAntiques.maxCount),
@@ -969,7 +969,7 @@ function specialClothesUnlockText(toUnlock, group) {
 					return output;
 				}
 				output +=
-					'<span class="teal">' + toUnlock[0].toUpperFirst() + '</span> <span class="gold">' + pluralText + " now available at the forest shop!</span><br><br>";
+					'<span class="gold">숲속 상점에 새로 </span><span class="teal">' + toUnlock[0].toUpperFirst() + '</span><span class="gold">【이가】 입고되었습니다!</span><br><br>';
 				return output;
 			}
 			const fullSetBeingUnlocked = group && setup.specialClothes.filter(clothes => clothes.sets.includes(group)).every(item => toUnlock.includes(item.name));
@@ -981,10 +981,10 @@ function specialClothesUnlockText(toUnlock, group) {
 					case "scarecrow":
 					case "skeleton":
 					case "pumpkin":
-						output += '<span class="orange">The ' + group + ' costume</span> <span class="gold">is now available at the forest shop!</span><br><br>';
+						output += '<span class="gold">숲속 상점에 </span><span class="orange">' + group + ' 코스튬</span><span class="gold">【이가】 해금되었습니다!</span><br><br>';
 						break;
 					case "future_suit":
-						output += '<span class="orange">The futuristic bodysuit costume</span> <span class="gold">is now available at the forest shop!</span><br><br>';
+						output += '<span class="gold">숲속 상점에 </span><span class="orange">미래형 바디수트 코스튬</span><span class="gold">이 해금되었습니다!</span><br><br>';
 						break;
 					case "foreign_school":
 						output += '<span class="gold">숲속 상점에 </span><span class="blue">외국 교복</span><span class="gold">이 해금되었습니다!</span><br><br>';
@@ -993,7 +993,7 @@ function specialClothesUnlockText(toUnlock, group) {
 						output += `<span class="gold">숲속 상점에 </span><span class="lewd">벨리댄서 세트와 하렘 세트</span><span class="gold">가 해금되었습니다!</span><br><br>`;
 						break;
 					case "underground_farm":
-						output += '<span class="lewd">Cow print clothes and a cow bell</span> <span class="gold">are now available at the forest shop.</span><br><br>';
+						output += '<span class="gold">숲속 상점에 </span><span class="lewd">소 무늬 의상과 소 방울</span><span class="gold">이 해금되었습니다.</span><br><br>';
 						break;
 					case "chain_tunic":
 						output += '<span class="gold">숲속 상점에 </span><span class="grey">고대 사슬 갑옷 세트</span><span class="gold">가 해금되었습니다!</span><br><br>';
@@ -1011,7 +1011,7 @@ function specialClothesUnlockText(toUnlock, group) {
 						output += `<span class="gold">숲속 상점에 </span><span class="black">고해 신부 로브</span><span class="gold">가 해금되었습니다...</span><br><br>`;
 						break;
 					case "temple_sexy":
-						output += '<span class="lewd">Sexy nun and priest outfits</span> <span class="gold">are now available at the forest shop!</span><br><br>';
+						output += '<span class="gold">숲속 상점에 </span><span class="lewd">섹시 수녀 및 신부 의상</span><span class="gold">이 해금되었습니다!</span><br><br>';
 						break;
 					case "butterfly":
 						output += '<span class="gold">숲속 상점에 </span><span class="teal">나비 코스튬</span><span class="gold">이 해금되었습니다!</span><br><br>';

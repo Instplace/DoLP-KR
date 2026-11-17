@@ -59,7 +59,7 @@
 								<<dancedifficulty 1 500 true>>
 								<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1 and $danceSuccess is 1>>
 									<<umbrellaDurability>>
-									<span class="green">You manage to react in time and use the umbrella as a shield</span> <<stress -5>><<lstress>>
+									<span class="green">제때 반응해 우산을 방패 삼아 막아낸다</span> <<stress -5>><<lstress>>
 								<<else>>
 									<span class="red">미처 반응하기도 전에 온몸을 흠뻑 적셔, 추위가 뼛속까지 스민다.</span>
 									<<if !$worn.upper.type.includes("swim") and !$worn.upper.type.includes("naked")>>
@@ -368,7 +368,7 @@
 							<<dancedifficulty 1 500 true>>
 							<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1 and $danceSuccess is 1>>
 								<<umbrellaDurability>>
-								<span class="green">You manage to react in time and use the umbrella as a shield</span> <<stress -5>><<lstress>>
+								<span class="green">제때 반응해 우산을 방패 삼아 막아낸다</span> <<stress -5>><<lstress>>
 							<<else>>
 								<span class="red">미처 반응하기도 전에 물이 당신을 흠뻑 적신다.</span>
 								<<if !$worn.upper.type.includes("swim") and !$worn.upper.type.includes("naked")>>
@@ -829,7 +829,7 @@
 					<<if Time.hour lt 6 or Time.hour gte 21>>
 						<<addinlineevent "spring_anyalley_2">>
 							<<beastNEWinit 3 cat>>
-							You hear <<beastsplural>> yowling and hissing as they contend for a mate. <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<arousal 10>><<garousal>><</if>>
+							짝짓기를 하려 다투는 <<beastsplural>>【이가】 울부짖고 하악거리는 소리를 듣는다. <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<arousal 10>><<garousal>><</if>>
 							<<endevent>>
 						<</addinlineevent>>
 						<<if $hallucinogen gt 0>>

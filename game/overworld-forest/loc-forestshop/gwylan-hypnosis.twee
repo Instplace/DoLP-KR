@@ -17,38 +17,38 @@
 			<<if !$gwylanSeen.includes("hypnosis_peace")>>
 				<<switch $speech_attitude>>
 					<<case "meek">>"이-이걸 도와줄 수 있다고 했잖아요." 당신은 자신의 특이한 부위를 가리키며 말한다.
-					<<case "bratty" "confident" "special">>"So, can you help me with all this?" you ask, gesturing to your unusual parts.
+					<<case "bratty" "confident" "special">>"그래서, 이 모든 걸 도와줄 수 있어요?" 당신은 자신의 특이한 부위를 가리키며 묻는다.
 					<<default>>"제 내면의 자아를 도와줄 수 있다고 하셨잖아요." 당신은 자신의 특이한 부위를 가리키며 말한다.
 				<</switch>>
 			<<else>>
 				<<switch $speech_attitude>>
 					<<case "meek">>"저, 제 내면의 자아를 다시 한번 도와줄 수 있을까요?" 하고 당신이 묻는다.
-					<<case "bratty" "confident">>"I need your help keeping my inner self under control again," you say.
+					<<case "bratty" "confident">>"제 내면의 자아를 다시 통제하는 데 당신의 도움이 필요해요." 하고 당신이 말한다.
 					<<default>>"제 내면의 자아를 다시 받아들이도록 도와주실 수 있나요?" 하고 당신이 묻는다.
 				<</switch>>
 			<</if>>
 		<<case "silence">>
 			<<switch $speech_attitude>>
 				<<case "meek">>"저, <<if numberOfEarSlime() gt 1>>귀에 있는 이것들<<else>>귀에 있는 이거<</if>> 좀 멈추게 해줄 수 있어요?" 하고 당신이 묻는다.
-				<<case "bratty" "special">>"Please, for the love of god, shut <<if numberOfEarSlime() gt 1>>these things in my ears<<else>>this thing in my ear<</if>> up," you say.
+				<<case "bratty" "special">>"제발, 제발 부탁이에요, <<if numberOfEarSlime() gt 1>>귀에 있는 이것들<<else>>귀에 있는 이거<</if>> 좀 닥치게 해줘요." 하고 당신이 말한다.
 				<<default>>"<<if numberOfEarSlime() gt 1>>귀에 있는 이것들<<else>>귀에 있는 이거<</if>> 좀 도와주실 수 있나요?" 하고 당신이 묻는다.
 			<</switch>>
 		<<case "slumber">>
 			<<switch $speech_attitude>>
 				<<case "meek">>"저, 잠을 잘 못 자고 있어요." 당신이 말한다. "도와줄 수 있나요?"
-				<<case "bratty" "flamboyant" "special">>"I need my beauty sleep, but it's not coming easy," you say. "Can you help?"
+				<<case "bratty" "flamboyant" "special">>"푹 자야 예뻐지는데, 잠이 쉽게 안 와요." 당신이 말한다. "도와줄 수 있나요?"
 				<<default>>"잠을 잘 못 자고 있어요. 도와줄 수 있나요?" 하고 당신이 묻는다.
 			<</switch>>
 		<<case "insight">>
 			<<switch $speech_attitude>>
-				<<case "meek" "shy">>"I-I've been seeing things," you say. "Can you help?"
+				<<case "meek" "shy">>"저, 저는 자꾸 이상한 것들이 보여요." 당신이 말한다. "도와줄 수 있나요?"
 				<<case "bratty">>"미쳐가고 있는 것 같아요. 현실일 리 없는 것들이 보여요." 당신이 말한다. "도와줄 수 있나요?"
 				<<default>>"헛것이 보여요. 도와줄 수 있나요?" 하고 당신이 묻는다.
 			<</switch>>
 		<<case "removal">>
 			<<switch $speech_attitude>>
 				<<case "meek">>"저, 머릿속에 다른 누군가가 있는 것 같아요." 당신이 말한다. "멈추게 해줄 수 있나요?"
-				<<case "bratty" "confident">>"Someone's got my brain in a twist, I think. Can you help?" you ask.
+				<<case "bratty" "confident">>"누가 제 머릿속을 뒤틀어 놓은 것 같아요. 도와줄 수 있나요?" 당신이 묻는다.
 				<<default>>"제가 제정신이 아닌 것 같아요. 이상한 충동이 들고, 다른 누군가가 저에게 최면을 건 것 같아요." 하고 당신이 설명한다.
 			<</switch>>
 		<<default>>
@@ -467,7 +467,7 @@
 <<if $phase is "attention">>
 	<<switch $speech_attitude>>
 		<<case "meek">>"다들 저를 이상하게 쳐다봐요." 당신은 말한다. "평소보다 더요."
-		<<case "bratty" "flamboyant" "special">>"Too many people get the wrong idea," you say.
+		<<case "bratty" "flamboyant" "special">>"너무 많은 사람들이 잘못된 생각을 해요." 당신이 말한다.
 		<<default>>"시선을 너무 많이 받아요." 당신은 말한다. "이런 일이 있기 전에도 그랬지만, 지금은 더 심해졌어요."
 	<</switch>>
 	<br><br>
@@ -484,7 +484,7 @@
 	<</if>>
 <<elseif $phase is "identity">>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I didn't want this," you say. "It just happened."
+		<<case "meek" "shy">>"이런 걸 원한 게 아니에요." 당신은 말한다. "그냥 일어난 일이에요."
 		<<case "bratty">>"제가 원한 게 아니에요." 당신은 말한다. "그냥 제게 일어난 일일 뿐, 이건 제가 아니에요."
 		<<default>>"이런 모습이 불편해요." 당신은 말한다. "이건 제가 아니에요."
 	<</switch>>
@@ -597,7 +597,7 @@
 <<elseif $phase is "cow">>
 	<<switch $speech_attitude>>
 		<<case "meek">>"너무... 비인간적이에요." 당신은 말한다. "그 농장에서 진짜 소 취급을 받았어요. 이런 모습으로는 앞으로 나아갈 수 없어요."
-		<<case "bratty" "special" "flamboyant">>"I hate it. I hate what that farm did to me. I hate feeling ashamed for wanting to act human."
+		<<case "bratty" "special" "flamboyant">>"정말 싫어요. 그 농장이 저한테 한 짓이 싫어요. 사람답게 굴고 싶어 하는 걸 부끄러워해야 하는 것도 싫어요."
 		<<default>>"농장 기억이 떠올라요. 견딜 수가 없어요."
 	<</switch>>
 	<br><br>
@@ -614,9 +614,9 @@
 	"지울 수 없어." <<he>>【이가】 재빨리 말한다. "절대로 지울 수 없어. 잊는 것도 불가능하지. 오직 수용, 아니면 비참함뿐이야." <<He>>【이가】 미소 짓는다. "전자를 위해 노력해 보지."
 <<else>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I... I'm in..." You can't muster the words.
+		<<case "meek" "shy">>"저... 저는 지금..." 당신은 말을 잇지 못한다.
 		<<case "bratty">>"괴로워요. 성적으로요. 짐승처럼요."
-		<<default>>"It's that time of year," you say, trying to hide your embarassment.
+		<<default>>"그럴 시기가 왔어요." 당신은 민망함을 감추려 애쓰며 말한다.
 	<</switch>>
 	<br><br>
 
@@ -2377,7 +2377,7 @@
 	<<set $gwylanSeen.pushUnique("hypnosis_removal_suggestion")>>
 <<elseif $phase is "scream">>
 	<<switch $speech_attitude>>
-		<<case "meek" "special" "shy">>"Whenever I... feel helpless, and like I want to scream for help, I end up hurting all over."
+		<<case "meek" "special" "shy">>"제가... 무력하다고 느끼고 도와달라고 소리치고 싶을 때마다, 결국 온몸이 아파요."
 		<<case "bratty">>"누군가에게 도와달라고 소리쳐야 할 것 같은 기분이 들 때가 있어요. 그럴 때마다 멍이 들어요."
 		<<default>>"도와달라고 소리쳐야 할 것 같을 때마다 온몸에 멍이 들어요."
 	<</switch>>
@@ -3285,7 +3285,7 @@
 			"저-저기, 제 강박적인 생각을 도와주실 수 있다고 하셨죠?"
 		<<case "bratty" "confident">>
 			<<if $speech_attitude_special is "cruel">>
-				"I heard that you can get <<if numberOfEarSlime(true) gte 2>>these things ou my ears<<else>>this thing out of my ear<</if>>."
+				"<<if numberOfEarSlime(true) gte 2>>이것들을<<else>>이것을<</if>> 제 귀에서 빼낼 수 있다고 들었어요."
 			<<else>>
 				"제발 <<if numberOfEarSlime(true) gte 2>>이것들을 제 귀에서 꺼내는<<else>>이것을 제 귀에서 꺼내는<</if>> 방법을 정말로 아신다고 말해주세요."
 			<</if>>
@@ -3297,7 +3297,7 @@
 
 <<He>>【은는】 고개를 끄덕이며 신발 상자를 뒤적인다. <<He>>【은는】 작은 금속 물체를 꺼낸 뒤 당신 주위를 돌아,
 <<if $bodysize gte 4>>
-	and stands on the box to look
+	상자 위에 올라서서
 <<elseif $bodysize gte 3>>
 	<<his>> 발끝으로 서서
 <<elseif $bodysize lte 0>>
@@ -3357,7 +3357,7 @@
 	<<set $gwylanSeen.pushUnique("ear_slime_intro")>><<set $gwylanSeen.pushUnique("ear_slime")>>
 	<<He>>【은는】 신발 상자를 뒤적여 금속 물체를 꺼낸다. <<He>>【은는】 당신 주위를 맴돌며,
 	<<if $bodysize gte 4>>
-		and stands on the box to look
+		상자 위에 올라서서
 	<<elseif $bodysize gte 3>>
 		<<his>> 발끝으로 서서
 	<<elseif $bodysize lte 0>>

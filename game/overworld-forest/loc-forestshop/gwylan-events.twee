@@ -654,10 +654,10 @@
 			<<set _noOptions to true>>
 			<<He>>【은는】 놓아주지 않는다. "제발, 조금만 더 안고 있게 해줘. 정말 이게 끝인 줄 알았어. 다시 혼자가 되는 줄 알았다고."
 			<<switch $bodysize>>
-				<<case -1 0 1>><<He>> withdraws only enough to look down into your eyes.
-				<<case 2 2.5>><<He>> nuzzles <<his>> head into the crook of your neck.
+				<<case -1 0 1>><<He>>【은는】 당신의 눈을 내려다볼 수 있을 만큼만 물러선다.
+				<<case 2 2.5>><<He>>【은는】 당신의 목덜미에 <<his>> 머리를 부빈다.
 				<<case 3>><<He>>【은는】 당신의 가슴에 <<his>> 머리를 기댄다.
-				<<case 4>><<He>> presses <<his>> head into your stomach.
+				<<case 4>><<He>>【은는】 당신의 배에 <<his>> 머리를 묻는다.
 			<</switch>>
 			"조금만 더."
 			<br><br>
@@ -772,10 +772,10 @@
 
 			"제발, 조금만 더 안고 있게 해줘. 정말 이게 끝인 줄 알았어. 다시 혼자가 되는 줄 알았다고."
 			<<switch $bodysize>>
-				<<case -1 0 1>><<He>> withdraws only enough to look down into your eyes.
-				<<case 2 2.5>><<He>> nuzzles <<his>> head into the crook of your neck.
+				<<case -1 0 1>><<He>>【은는】 당신의 눈을 내려다볼 수 있을 만큼만 물러선다.
+				<<case 2 2.5>><<He>>【은는】 당신의 목덜미에 <<his>> 머리를 부빈다.
 				<<case 3>><<He>>【은는】 당신의 가슴에 <<his>> 머리를 기댄다.
-				<<case 4>><<He>> presses <<his>> head into your stomach.
+				<<case 4>><<He>>【은는】 당신의 배에 <<his>> 머리를 묻는다.
 			<</switch>>
 			"조금만 더."
 			<br><br>
@@ -993,11 +993,11 @@
 		<br>
 	<</if>>
 	<<if (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") or ["monk","priest"].includes($temple_rank)>>
-		<<link [[Divine purpose|Gwylan Talk Struggles Divine]]>><</link>><<if (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>><<angel>><<elseif (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>><<fallenangel>><<else>><<note "Temple rank" "gold">><</if>>
+		<<link [[신성한 목적|Gwylan Talk Struggles Divine]]>><</link>><<if (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>><<angel>><<elseif (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>><<fallenangel>><<else>><<note "신전 계급" "gold">><</if>>
 		<br>
 	<</if>>
 	<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or $backgroundTraits.includes("lustful") or $auriga_scar>>
-		<<link [[Lust|Gwylan Talk Struggles Lust]]>><</link>><<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>><<demon>><<elseif $auriga_scar>><<note "Elk-scarred" "red">><<else>><<note "Lustful" "lewd">><</if>>
+		<<link [[욕정|Gwylan Talk Struggles Lust]]>><</link>><<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>><<demon>><<elseif $auriga_scar>><<note "엘크의 흉터" "red">><<else>><<note "호색한" "lewd">><</if>>
 		<br>
 	<</if>>
 	<<if $innocencestate is 1>>
@@ -2009,9 +2009,9 @@
 		당신은 <<person3>><<person>>에게 신호를 보낸다.
 		<<switch $speech_attitude>>
 			<<case "meek">>
-				"Hi... Err, could we have- um, order, some $phase please? F-for my friend, if it's not too much trouble?" you ask.
+				"저기... 어, 그러니까— 음, $phase 주문할 수 있을까요? 제, 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
 			<<case "special" "shy">>
-				"Hi... Err, could we have- um, some $phase please? For my friend, if it's not too much trouble?" you ask.
+				"저기... 어, 그러니까— 음, $phase 좀 주실 수 있을까요? 제 친구한테 줄 건데, 괜찮으시다면요?" 당신이 묻는다.
 			<<case "bratty">>
 				"여기 내 친구한테 $phase 하나 줘, 빨리." 당신이 말한다.
 			<<default>>
@@ -2211,7 +2211,7 @@
 			<<case "meek">>
 				"저-저기, 로빈. 내가 네 빚을 대신 내주고 있긴 하지만, 네 돈은 내 부담을 덜어주는 데 써야 하는 거잖아..." 당신이 중얼거린다.
 			<<case "polite" "special" "flamboyant">>
-				"Look, Robin. I understand that I'm paying for you and all, but your money's supposed to help ease that burden on me..." you admit.
+				"저기, 로빈. 내가 네 빚을 대신 내주고 있는 건 알지만, 네 돈은 내 부담을 덜어주는 데 써야 하는 거잖아..." 당신이 털어놓는다.
 			<<case "bratty">>
 				"지금 뭐 하는 짓이야? 난 우리 둘 다 먹여 살리려고 죽어라 일하는데, 넌 아무 생각 없이 돈을 펑펑 쓰고 있잖아!" 당신이 고함친다.
 			<<default>>
@@ -2222,7 +2222,7 @@
 			<<case "meek" "shy">>
 				"저기... 미안하지만, 너도 갚아야 할 빚이 있지 않아? 카페에서 이렇게 돈을 쓰면 베일리가 가만두지 않을 텐데." 당신이 말한다.
 			<<case "polite" "flamboyant">>
-				"Padon me, but don't you have a debt to cover too? I dare to say, that's dangerous, Bailey won't let you off easy.," you say.
+				"실례지만, 너도 갚아야 할 빚이 있지 않아? 감히 말하자면 이건 위험해. 베일리가 순순히 넘어가 주지 않을 거야." 당신이 말한다.
 			<<case "bratty" "special">>
 				"로빈, 이 바보야. 넌 갚아야 할 빚이 있다는 생각도 안 해? 여기서 돈 다 쓴 거 알면 베일리가 엄청 빡칠 텐데." 당신이 쏘아붙인다.
 			<<default>>
@@ -2233,7 +2233,7 @@
 			<<case "meek">>
 				"로빈, 진짜... 진짜 먹을 거야? 여기 음식은 별로... 건강에 안 좋잖아." 당신이 말한다.
 			<<case "polite" "flamboyant">>
-				"Robin, are you sure you want to buy that? The food here, is quite expensive." you say.
+				"로빈, 정말 그걸 사려고? 여기 음식은 꽤 비싸잖아." 당신이 말한다.
 			<<case "bratty">>
 				"관둬. 이런 바가지 씌운 쓰레기 음식 먹을 바엔 차라리 <<if Time.schoolDay>>학교<<else>>집<</if>>에서 먹는 게 나아." 당신이 쏘아붙인다.
 			<<default>>
@@ -2989,7 +2989,7 @@
 		<<case "bratty" "special">>
 			"누구에게도 제 비밀 레시피를 알려주지 않을 거예요." 당신은 팔짱을 끼며 말한다. "개인적인 감정은 없어요."
 		<<case "polite" "flamboyant">>
-			"It's a secret, and secrets are not to be revealed to anyone," you say. "It's nothing personal."
+			"비밀이에요. 비밀은 누구에게도 밝히는 게 아니죠." 당신이 말한다. "개인적인 감정은 없어요."
 		<<default>>
 			"맞아요, 비밀이에요. 밝힐 수 없어요." 당신이 말한다.
 	<</switch>>
@@ -3011,7 +3011,7 @@
 	<<case "bratty">>
 		"모자에 달린 여우 귀는 뭐예요?" 당신이 묻는다. "그렇게 꿰매 붙인 게 좀 뜬금없어 보이는데, 진짜 같아서 좀 기묘하기도 하고요."
 	<<case "polite" "flamboyant">>
-		"I wonder... What's with those fox ears on your hat?" you ask. "They look realistic, and they match your hair."
+		"궁금한데... 모자에 달린 여우 귀는 뭐야?" 당신이 묻는다. "진짜 같네, 네 머리색이랑도 어울리고."
 	<<default>>
 		"모자에 달린 여우 귀는 뭐야?" 당신이 묻는다. "진짜 같네, 네 머리색이랑도 어울리고."
 <</switch>>
@@ -3189,7 +3189,7 @@
 		<<case "bratty">>
 			"왜 나한테 숨겼어? 나 같은 여우가 또 있을 줄은 몰랐단 말이야. 나 혼자인 줄 알았는데," 당신은 말한다.
 		<<case "polite" "flamboyant">>
-			"Ah, right. I'm sorry, I didn't think there were other foxes like me," you say. "I'm at a loss for words."
+			"아, 그렇구나. 미안, 나 같은 여우가 또 있을 줄은 몰랐어." 당신은 말한다. "뭐라고 해야 할지 모르겠네."
 		<<default>>
 			"나 같은 여우가 또 있을 줄은 몰랐어." 당신은 말한다. "뭐라고 해야 할지 모르겠네."
 	<</switch>>
@@ -3200,7 +3200,7 @@
 		<<case "bratty">>
 			"뭐라고 해야 할지 모르겠네. 나 같은 존재가 또 있을 줄은 몰랐어." 당신은 말한다.
 		<<case "polite" "flamboyant">>
-			"Ah, right. I'm sorry, I didn't think there was anyone else like me," you say.
+			"아, 그렇구나. 미안, 나 같은 존재가 또 있을 줄은 몰랐어." 당신은 말한다.
 		<<default>>
 			"나 같은 존재가 또 있을 줄은 몰랐어." 당신은 말한다.
 	<</switch>>
@@ -3234,7 +3234,7 @@
 
 <<switch $speech_attitude>>
 	<<case "meek">>"귀-귀여워." 당신은 말한다.
-	<<case "bratty" "confident">>"They're so cute, though!" you say.
+	<<case "bratty" "confident">>"그래도 너무 귀여운걸!" 당신은 말한다.
 	<<default>>"정말 귀여워." 당신은 말한다.
 <</switch>>
 <br><br>
@@ -3456,7 +3456,7 @@
 <<effects>>
 <<if $phase is 1>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"Are you... okay? I've never known you to be a drinker," you say.
+		<<case "meek" "shy">>"괜찮아...? 네가 술 마시는 건 처음 보는데," 라고 당신은 말한다.
 		<<case "bratty">>"네가 취해 있을 줄은 몰랐네." 당신은 말한다. "괜찮아?"
 		<<default>>"괜찮아? 별로 좋아 보이진 않는데," 라고 당신은 말한다.
 	<</switch>>
@@ -3516,7 +3516,7 @@
 :: Gwylan Pub Sulking Apologise
 <<effects>>
 <<switch $speech_attitude>>
-	<<case "meek" "special" "shy">>"I'm really sorry for... kissing you," you say. "I didn't think it would upset you this much."
+	<<case "meek" "special" "shy">>"너한테... 키스한 거 정말 미안해." 라고 당신은 말한다. "그렇게까지 속상하게 할 줄은 몰랐어."
 	<<case "bratty">>"키스 한 번 했다고 이렇게까지 화내는 거야? 미안하다고, 됐어?"
 	<<default>>"미안해. 하도 나한테 키스하려는 사람들이 많아서, 너한테 키스하는 게 그렇게까지 속상하게 할 줄은 몰랐어."
 <</switch>>
@@ -3853,7 +3853,7 @@
 :: Gwylan Yearning Talk Cry
 <<effects>><<run statusCheck("Gwylan")>>
 <<switch $speech_attitude>>
-	<<case "meek" "special">>"Are you okay? You look so sad."
+	<<case "meek" "special">>"괜찮아요? 너무 슬퍼 보여요."
 	<<case "bratty">>"꼴이 말이 아니네." 당신이 말한다. "괜찮아?"
 	<<default>>"무슨 일 있어? 울었던 것 같은데."
 <</switch>>
@@ -3902,9 +3902,9 @@
 :: Gwylan Yearning Talk Clothes
 <<effects>>
 <<switch $speech_attitude>>
-	<<case "meek" "shy">>"Why are you wearing such old clothing?"
+	<<case "meek" "shy">>"왜 그렇게 낡은 옷을 입고 있어?"
 	<<case "bratty">>"꼭 시간을 잘못 찾아온 <<personsimple>> 같네."
-	<<case "flamboyant" "polite" "special">>"Oh my, those must be antique by now."
+	<<case "flamboyant" "polite" "special">>"어머, 그거 이제는 골동품이겠네."
 	<<default>>"그거 무슨 옷이야?"
 <</switch>>
 <br><br>
@@ -4252,7 +4252,7 @@
 <<effects>><<run statusCheck("Gwylan")>>
 <<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>
 	<<set $yearningScore += 3>>
-	Your fox instincts flare up, and you chase <<him>> around the park. <<if $bodyside gte 0>>You keep up with <<him>><<else>>Despite your short legs, you keep up with <<him>><</if>>, resisting the urge to chase on all fours.
+	당신의 여우 본능이 솟구쳐, 공원을 돌며 <<him>>【을를】 쫓는다. <<if $bodyside gte 0>><<him>>의 속도를 맞추며<<else>>다리가 짧은데도 <<him>>의 속도를 맞추며<</if>> 네 발로 달리고 싶은 충동을 억누른다.
 	<<if _gwylanTF.known>>
 		<<he>>【은는】 같은 충동을 참고 있다는 것을 알 수 있다.
 	<</if>>

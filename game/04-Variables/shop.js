@@ -107,7 +107,7 @@ setup.shopDetails = {
 	heels: {
 		name: "하이힐",
 		desc: "발이 튼튼하지 않으면 걷기 힘듭니다.",
-		details: "Improves kicking power during combat. Reduces travel speed. May cause fatigue and failed athletics checks in the farmlands, moor, and forest.",
+		details: "전투 중 발차기 위력을 높입니다. 이동 속도가 느려집니다. 농지, 황야, 숲에서 피로가 쌓이고 운동 판정에 실패할 수 있습니다.",
 	},
 	rugged: {
 		name: "튼튼함",
@@ -263,9 +263,9 @@ setup.shopDetails = {
 		details: "도둑질할 때 쌓이는 범죄 수치를 높입니다.",
 	},
 	antitransparent: {
-		name: "Anti-Transparent",
-		desc: "Opaque",
-		details: "Still gets wet but doesn't go transparent.",
+		name: "비침 방지",
+		desc: "불투명합니다.",
+		details: "젖어도 비치지 않습니다.",
 	},
 	heavy: {
 		name: "무거움",
@@ -306,24 +306,24 @@ setup.shopDetails = {
 		details: "없음",
 	},
 	jewelled: {
-		name: "Jewelled",
-		desc: "Eyecatching with sharp edges.",
-		details: "Improves punching power during combat slightly. Increases allure.",
+		name: "보석 장식",
+		desc: "날카로운 모서리가 시선을 끕니다.",
+		details: "전투 중 주먹 위력을 약간 높입니다. 매력이 올라갑니다.",
 	},
 	expensive: {
-		name: "Expensive",
-		desc: "Better not to lose it.",
-		details: "none",
+		name: "고가",
+		desc: "잃어버리지 않는 게 좋습니다.",
+		details: "없음",
 	},
 	luxurious: {
-		name: "Luxurious",
-		desc: "No regular person can afford it.",
-		details: "none",
+		name: "고급",
+		desc: "평범한 사람은 살 수 없습니다.",
+		details: "없음",
 	},
 	extravagant: {
-		name: "Extravagant",
-		desc: "More of a collector's item than a regular accessory.",
-		details: "none",
+		name: "호화",
+		desc: "평범한 장신구라기보다 수집품에 가깝습니다.",
+		details: "없음",
 	},
 };
 

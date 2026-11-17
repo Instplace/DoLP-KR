@@ -1318,11 +1318,11 @@
 			<<elseif ["Whitney's collar"].includes($worn.neck.name)>>
 				<<rng>>
 					<<if $rng gte 76>>
-						"You are whitney's <<girl>>?"
+						"너 휘트니의 <<girl>>【이】야?"
 					<<elseif $rng gte 51>>
 						"내가 당장 산책이라도 데리고 나가고 싶은데!"
 					<<elseif $rng gte 26>>
-						"Nice collar, Did your Master Whitney get it for you!?"
+						"목걸이 멋진데, 네 주인 휘트니가 사 준 거야!?"
 					<<else>>
 						"나한테도 <<master>>【이가】 있어!"
 					<</if>>

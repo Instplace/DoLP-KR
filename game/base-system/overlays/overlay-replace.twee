@@ -210,7 +210,7 @@
 			<<run $("#customOverlayContent").scrollTop(0);>>
 		<</button>>
 		<<if $farm_stage gte 2>>
-			<<button "Alex's Farm">>
+			<<button "알렉스의 농장">>
 				<<toggleTab>>
 				<<replace #cheatsShown>><<cheats-alex>><</replace>>
 				<<run $("#customOverlayContent").scrollTop(0);>>
@@ -422,7 +422,7 @@
 	<<setupTabs>>
 	<div id="overlayTabs" class="tab">
 		<<closeButtonMobile>>
-		<<button "DoLP Credits">>
+		<<button "DoLP 제작진">>
 			<<toggleTab>>
 			<<replace #customOverlayContent>><<DoLPCredits>><</replace>>
 		<</button>>

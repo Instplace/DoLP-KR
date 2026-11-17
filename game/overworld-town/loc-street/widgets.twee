@@ -3186,74 +3186,74 @@
 		가진 것은 별로 없었고, 단지 <<moneyGainDisplay 2 true true>> 상당의 잔돈뿐이다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<<elseif $rng gte 81>>
 		<<wearProp "wallet empty">>
 		가진 것은 별로 없었고, 단지 <<moneyGainDisplay 3 true true>> 상당의 잔돈뿐이다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<<elseif $rng gte 71>>
 		<<wearProp "wallet">>
 		비밀 칸에 숨겨져 있던 <<moneyGainDisplay 8 true true>>【을를】 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<<elseif $rng gte 61>>
 	<<wearProp "keycard" "black">>
 		검은색 신용카드를 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 8>><<crimeUp 8 "petty">><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<set $blackmoney += 8>><<crimeUp 8 "petty">><</link>><<crime "petty">>
 
 	<<elseif $rng gte 51>>
 		<<wearProp "wallet">>
 		안쪽에 쑤셔넣어져 있던 <<moneyGainDisplay 15 true true>>【을를】 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<<elseif $rng gte 41>>
 		<<wearProp "keycard" "silver">>
 		은색 신용카드를 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 15>><<crimeUp 15 "petty">><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<set $blackmoney += 15>><<crimeUp 15 "petty">><</link>><<crime "petty">>
 
 	<<elseif $rng gte 31>>
 		<<wearProp "wallet">>
 		안쪽에 쑤셔넣어져 있던 <<moneyGainDisplay 25 true true>>【을를】 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<<elseif $rng gte 21>>
 		<<wearProp "keycard" "gold">>
 		황금색 신용카드를 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 25>><<crimeUp 25 "petty">><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<set $blackmoney += 25>><<crimeUp 25 "petty">><</link>><<crime "petty">>
 
 	<<elseif $rng gte 11>>
 		<<wearProp "keycard" "silver">>
 		백금색 신용카드를 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 50>><<crimeUp 50 "petty">><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<set $blackmoney += 50>><<crimeUp 50 "petty">><</link>><<crime "petty">>
 
 	<<else>>
 		<<wearProp "wallet empty">>
 		안쪽에 쑤셔넣어져 있던 <<moneyGainDisplay 50 true true>>【을를】 발견한다.
 		<br><br>
 
-		<<link [[Take it|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
+		<<link [[가져간다|Connudatus Street]]>><<crimeUp `_money_gain / 100` "petty">><<money _money_gain>><</link>><<crime "petty">>
 
 	<</if>>
 	<br>
-	<<link [[Leave it|Connudatus Street]]>><</link>>
+	<<link [[그대로 둔다|Connudatus Street]]>><</link>>
 	<br>
 <</widget>>
 
@@ -3273,7 +3273,7 @@
 				<</if>>
 				당신 안의 _transformation【이가】 냄새에 반응해 입가에 침이 고이기 시작한다.<<lstress>><<stress -6>>
 			<<elseif (($waterdragon gte 7 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "waterdragon") or (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear")>>
-				The briny, fishy smell is pleasant to you, and you slow down to savour it.<<lstress>><<stress -3>>
+				짭짤하고 비린 냄새가 당신에게는 기분 좋게 느껴져, 음미하려고 걸음을 늦춘다.<<lstress>><<stress -3>>
 			<<else>>
 				당신은 불쾌한 냄새에서 벗어나려 걸음을 빨리 한다.<<gstress>><<stress 6>>
 			<</if>>
@@ -3473,18 +3473,18 @@
 					<</if>>
 				<</if>>
 			<<case 7>>
-				You encounter a bookseller hawking thick tomes. One in particular catches your eye, an oversized cookbook with a glossy cover. <span class="gold">You could teach yourself recipes from it in the orphanage kitchen.</span><br><br>
+				두꺼운 책을 외치며 파는 책 장수와 마주친다. 그중 한 권이 유독 눈길을 끈다. 반들거리는 표지의 커다란 요리책이다. <span class="gold">고아원 부엌에서 이 책으로 요리법을 독학할 수 있을 것이다.</span><br><br>
 				
 				<<if $cookbook is true>>
-					<span class="blue">You already have a cookbook.</span>
+					<span class="blue">당신은 이미 요리책을 가지고 있다.</span>
 					<br><br>
 				<<elseif $money lt 1000000>>
-					You ask the hawker why the cookbook is so expensive, and he mumbles something about game balance.
+					장수에게 요리책이 왜 이렇게 비싸냐고 묻자, 그는 게임 밸런스가 어쩌고 하며 중얼거린다.
 					<br><br>
-					<span class="blue">You can't afford it right now.</span>
+					<span class="blue">지금은 살 여유가 없다.</span>
 				<br><br>
 				<<else>>
-					<<link [[Buy cookbook (£10,000)|Connudatus Street]]>><<money -1000000>><<set $cookbook to true>><</link>>
+					<<link [[요리책을 산다 (£10,000)|Connudatus Street]]>><<money -1000000>><<set $cookbook to true>><</link>>
 				<</if>>
 			<<case 8>>
 				바나나를 파는 가판대에 들른다. 한다발에 <<printmoney 500>>【이】다.

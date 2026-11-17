@@ -10,106 +10,106 @@
 	<</if>>
 
 	<<if ($speechpenisvirgin is 1 and $player.virginity.penile is _virginityTarget) or ($speechvaginavirgin is 1 and $player.virginity.vaginal is _virginityTarget)>>
-		<<He>> gasps, then grins. "Saving yourself for me? I'm flattered, darling."<<npcincr Poppy lust 3>><<gglust>>
+		<<He>>【은는】 헉 하고 숨을 들이켜더니 씩 웃는다. "나를 위해 간직하고 있었다고? 영광인데, 자기야."<<npcincr Poppy lust 3>><<gglust>>
 		<<if _poppy and _poppy.isValid and _poppy.love gte 40>>
 			<<npcincr Poppy love 5>><<gglove>>
 		<</if>>
 
 	<<elseif $speechanusvirgin is 1 and $player.virginity.anal is _virginityTarget>>
-		<<He>> shivers, smiling like <<hes>> trying not to look too pleased. "You're full of surprises, my jewel."<<npcincr Poppy lust 2>><<gglust>>
+		<<He>>【은는】 몸을 부르르 떨며, 너무 기뻐 보이지 않으려 애쓰는 듯 미소 짓는다. "넌 놀라운 게 참 많네, 내 보석."<<npcincr Poppy lust 2>><<gglust>>
 
 	<<elseif $speechmouthvirgin is 1 and $player.virginity.oral is _virginityTarget>>
-		<<He>> strokes your cheek with <<his>> thumb. "Good. Keep going. You look lovely like this."<<npcincr Poppy lust 2>><<gglust>>
+		<<He>>【은는】 엄지로 당신의 뺨을 쓰다듬는다. "좋아. 계속해. 이러고 있는 네 모습, 사랑스러워."<<npcincr Poppy lust 2>><<gglust>>
 
 	<<elseif $speechkissvirgin is 1 and $player.virginity.kiss is _virginityTarget>>
-		<<He>> blinks, then laughs softly. "Your first kiss too? Now you're making me feel possessive."<<npcincr Poppy love 3>><<gglove>>
+		<<He>>【은는】 눈을 깜박이더니 나직이 웃는다. "첫 키스도 나랑 한 거야? 자꾸 소유욕이 생기잖아."<<npcincr Poppy love 3>><<gglove>>
 
 	<<elseif $speechnamedrop is 1>>
 		<<set $speechnamedrop to 0>>
 		<<switch _loveInterest>>
 			<<case "Whitney">>
-				<<He>> narrows <<his>> eyes. "Whitney? Seriously? That's who you're thinking about?"<<npcincr Poppy patience -1>><<lpatience>>
+				<<He>>【은는】 눈을 가늘게 뜬다. "휘트니? 정말? 지금 네가 생각하는 게 그 애야?"<<npcincr Poppy patience -1>><<lpatience>>
 			<<case "Gwylan">>
-				<<He>> makes a face. "That collar-witch? Hm. I suppose <<hes>> got decent taste."
+				<<He>>【은는】 얼굴을 찡그린다. "그 목줄 마녀? 흠. 그래도 보는 눈은 있나 보네."
 			<<case "Robin">>
-				<<He>> hums, though <<his>> smile tightens. "Robin seems sweet. Still, I'd rather you say my name."
+				<<He>>【은는】 흠, 하고 소리를 내지만 미소가 굳어진다. "로빈은 착해 보이던데. 그래도 난 네가 내 이름을 말해 줬으면 좋겠어."
 			<<case "Kylar">>
-				<<He>> stiffens. "Kylar. Right. Let's not talk about that person while you're with me."<<npcincr Poppy lust -15>><<lllust>><<npcincr Poppy patience -1>><<lpatience>>
+				<<He>>【은는】 몸이 뻣뻣하게 굳는다. "카일라. 그래. 나랑 있을 땐 그 사람 얘기는 하지 말자."<<npcincr Poppy lust -15>><<lllust>><<npcincr Poppy patience -1>><<lpatience>>
 			<<case "Avery">>
-				<<He>> gives a small, sharp laugh. "Avery? Careful, jewel. I might start feeling competitive."<<npcincr Poppy lust 2>><<gglust>>
+				<<He>>【은는】 짧고 날카롭게 웃는다. "에이버리? 조심해, 내 보석. 나도 경쟁심이 생길지 몰라."<<npcincr Poppy lust 2>><<gglust>>
 			<<case "Eden">>
-				<<He>> tilts <<his>> head. "Eden? You do find trouble in the strangest places."
+				<<He>>【은는】 고개를 갸웃한다. "에덴? 넌 참 별난 곳에서 골칫거리를 찾아내."
 			<<default>>
-				<<He>> presses closer. "Whoever you're thinking about, stop. Stay here with me, my jewel."
+				<<He>>【은는】 더 가까이 붙는다. "누구를 생각하고 있든, 그만해. 나랑 여기 있어, 내 보석."
 		<</switch>>
 
 	<<elseif $speechsextoy is 1>>
 		<<set $speechsextoy to 0>>
-		<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
-		<<He>> eyes your <<print $_sexToy>> and smiles. "Using toys too? You're really trying to spoil me."<<npcincr Poppy lust 2>><<gglust>>
+		<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
+		<<He>>【은는】 당신의 <<print $_sexToy>>【을를】 보며 미소 짓는다. "장난감도 쓰는 거야? 정말 날 버릇없게 만들려고 하네."<<npcincr Poppy lust 2>><<gglust>>
 
 	<<elseif $clothesspeech is 1 and $worn.neck and ($worn.neck.collared is 1 or _neckName is "familiar collar" or _neckName.includes("Whitney's collar"))>>
 		<<set $clothesspeech to 0>>
 
 		<<if _neckName.includes("Whitney's collar")>>
 			<<if typeof $poppyromance is "number" and $poppyromance gte 0>>
-				<<He>> notices the collar you're wearing and makes a weird expression. "Whitney's... toy?" <<He>> asks with judgement in <<his>> tone. "Seriously..."
+				<<He>>【은는】 당신이 하고 있는 목줄을 알아보고 묘한 표정을 짓는다. "휘트니의... 장난감?" <<He>>【이가】 비난 섞인 어조로 묻는다. "진짜야..."
 				<br><br>
-				Poppy sticks <<his>> hand into <<his>> pocket and pulls out a pocket knife. With a flick of <<his>> wrist, the collar is cut through.
+				포피가 주머니에 손을 넣어 주머니칼을 꺼낸다. 손목을 한 번 휙 꺾자 목줄이 끊어진다.
 				<br><br>
-				<<He>> yanks the collar off and stuffs it into <<his>> pocket. "Never wear that again, you hear me?"
+				<<He>>【은는】 목줄을 홱 잡아당겨 벗겨 내 주머니에 쑤셔 넣는다. "다시는 그거 하지 마. 알아들었어?"
 				<<run V.worn.neck = clone(setup.clothes.neck.find(c => c.name === "naked") || setup.clothes.neck[0])>>
 				<<npcincr Poppy patience -2>><<lpatience>>
 			<<else>>
-				<<He>> notices the collar you're wearing and makes a weird expression. "Whitney's... toy?" <<He>> asks with judgement in <<his>> tone. "I didn't know you were into that sort of thing, or that close to that... delinquent. Whatever makes you happy, I suppose."
+				<<He>>【은는】 당신이 하고 있는 목줄을 알아보고 묘한 표정을 짓는다. "휘트니의... 장난감?" <<He>>【이가】 비난 섞인 어조로 묻는다. "네가 그런 취향인 줄도, 그 문제아랑 그렇게 가까운 줄도 몰랐네. 네가 행복하다면 뭐, 어쩔 수 없지."
 				<br><br>
-				Poppy sticks <<his>> hand into <<his>> pocket and pulls out a pocket knife. With a flick of <<his>> wrist, the collar is cut through. <<He>> yanks the collar off and stuffs it into <<his>> pocket. "Never wear that again, you hear me?"
+				포피가 주머니에 손을 넣어 주머니칼을 꺼낸다. 손목을 한 번 휙 꺾자 목줄이 끊어진다. <<He>>【은는】 목줄을 홱 잡아당겨 벗겨 내 주머니에 쑤셔 넣는다. "다시는 그거 하지 마. 알아들었어?"
 				<<run V.worn.neck = clone(setup.clothes.neck.find(c => c.name === "naked") || setup.clothes.neck[0])>>
 				<<npcincr Poppy patience -2>><<lpatience>>
 			<</if>>
 
 		<<elseif _poppyStatus.includes("LowPatience")>>
-			<<He>> glares at the collar on your neck, clearly bothered by it. <<He>> grits <<his>> teeth and clenches <<his>> fists, as if ready to lash out, though it never comes.
+			<<He>>【은는】 당신 목의 목줄을 노려보며 확연히 불쾌해한다. <<He>>【은는】 이를 악물고 주먹을 쥔다. 당장이라도 달려들 것 같지만, 끝내 그러지는 않는다.
 			<br>
-			Poppy rolls <<his>> eyes with a scoff and looks away.
+			포피가 코웃음을 치며 눈을 굴리고 시선을 돌린다.
 			<<npcincr Poppy patience -6>><<lllpatience>>
 
 		<<elseif _neckName is "familiar collar">>
 			<<if typeof $poppyromance is "number" and $poppyromance gte 0>>
-				<<He>> notices the familiar collar you're wearing. "That collar you're wearing... could you tell Gwylan to remove it when you visit? That'd make me happy."<<npcincr Poppy patience -2>><<lpatience>>
+				<<He>>【은는】 당신이 하고 있는 사역마 목줄을 알아본다. "그 목줄... 우리 집에 올 때는 그윌란한테 풀어 달라고 말해 줄 수 있어? 그럼 기쁠 것 같아."<<npcincr Poppy patience -2>><<lpatience>>
 			<<else>>
-				<<He>> notices the familiar collar you're wearing. "Oh! You're Gwylan's? I'm happy for you. I've crossed paths with <<npc_him "Gwylan">> before. <<npc_Hes "Gwylan">> nice enough."
+				<<He>>【은는】 당신이 하고 있는 사역마 목줄을 알아본다. "어머! 그윌란 거야? 잘됐네. 나도 <<npc_him "Gwylan">>【을를】 전에 마주친 적 있어. <<npc_Hes "Gwylan">> 꽤 괜찮은 사람이야."
 			<</if>>
 
 		<<else>>
-			<<He>> notices the collar you're wearing and makes a weird expression. "I didn't know you were into that sort of thing." <<He>> manages to smile, albeit awkwardly.
+			<<He>>【은는】 당신이 하고 있는 목줄을 알아보고 묘한 표정을 짓는다. "네가 그런 취향인 줄은 몰랐네." <<He>>【은는】 어색하게나마 억지로 미소를 짓는다.
 		<</if>>
 
 	<<elseif _silent isnot 1>>
 		<<set $poppysexcycle to $poppysexcycle or 0>>
 		<<switch $poppysexcycle>>
 			<<case 0>>
-				"I love doing this with you. You feel so good," <<he>> murmurs.
+				"너랑 이러는 거 정말 좋아. 너무 좋아." <<he>>【이가】 속삭인다.
 			<<case 1>>
-				"The noises you make are adorable," <<he>> says, grinning.
+				"네가 내는 소리, 귀여워." <<he>>【이가】 씩 웃으며 말한다.
 			<<case 2>>
-				"Did I find your sweet spot, darling?" <<he>> asks.
+				"여기가 네가 제일 좋은 곳이야, 자기야?" <<he>>【이가】 묻는다.
 			<<case 3>>
-				"We could keep going until morning," <<he>> says, breathless and amused.
+				"아침까지도 계속할 수 있겠어." <<he>>【이가】 숨을 헐떡이며, 즐거운 듯 말한다.
 			<<case 4>>
 				<<if V.awareness gte 5>>
-					"If we have kits, I hope they're as cute as you," <<he>> says.
+					"우리한테 아기 여우가 생기면, 너만큼 귀여웠으면 좋겠어." <<he>>【이가】 말한다.
 				<<else>>
-					"If we have babies, I hope they're as cute as you," <<he>> says.
+					"우리한테 아기가 생기면, 너만큼 귀여웠으면 좋겠어." <<he>>【이가】 말한다.
 				<</if>>
 			<<case 5>>
-				"Stay close, my jewel. I want to feel every little reaction," <<he>> whispers.
+				"곁에 있어, 내 보석. 네 반응 하나하나 다 느끼고 싶어." <<he>>【이가】 속삭인다.
 			<<default>>
-				"I don't want this to stop," <<he>> breathes.
+				"이게 멈추지 않았으면 좋겠어." <<he>>【이가】 숨을 내쉬며 말한다.
 		<</switch>>
 		<<set $poppysexcycle to ($poppysexcycle + 1) % 6>>
 
 	<<else>>
-		Ah... ngh! <<he>> gasps.
+		아... 읏! <<he>>【이가】 헐떡인다.
 	<</if>>
 <</widget>>

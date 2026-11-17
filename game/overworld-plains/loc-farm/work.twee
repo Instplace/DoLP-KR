@@ -28,13 +28,13 @@
 	<<case "woodland 3">>
 		<span class="lblue">무성한 숲 일부를 둘러싸도록 울타리가 확장되고 있다.</span>
 	<<case "woodland 4">>
-		<span class="lblue">The fence is being extended around an expansive area of woodland.</span>
+		<span class="lblue">드넓은 숲 지대를 둘러싸도록 울타리가 확장되고 있다.</span>
 	<<case "woodland 5">>
-		<span class="lblue">The fence is being extended around a vast expanse of woodland.</span>
+		<span class="lblue">광활한 숲 지대를 둘러싸도록 울타리가 확장되고 있다.</span>
 	<<case "woodland 6">>
-		<span class="lblue">The fence is being extended around an immense tract of woodland.</span>
+		<span class="lblue">끝없이 펼쳐진 숲 지대를 둘러싸도록 울타리가 확장되고 있다.</span>
 	<<case "woodland 7">>
-		<span class="lblue">The fence is being extended around a colossal stretch of woodland.</span>
+		<span class="lblue">어마어마한 숲 지대를 둘러싸도록 울타리가 확장되고 있다.</span>
 	<<case "kennel 1">>
 		<span class="lblue">견사에 사나운 장치들이 설치되고 있다.</span>
 	<<case "barn 1">>
@@ -42,15 +42,15 @@
 	<<case "barn 2">>
 		<span class="lblue">축사 증축 공사가 진행되고 있다.</span>
 	<<case "barn 3">>
-		<span class="lblue">A spacious loft is being added above the barn to move the equipment into.</span>
+		<span class="lblue">장비를 옮겨 둘 넓은 다락이 헛간 위에 증축되고 있다.</span>
 	<<case "barn 4">>
-		<span class="lblue">Modern feeding systems are being installed to improve efficiency.</span>
+		<span class="lblue">효율을 높이기 위해 현대식 급식 시스템이 설치되고 있다.</span>
 	<<case "barn 5">>
-		<span class="lblue">An advanced ventilation system is being fitted to enhance animal comfort.</span>
+		<span class="lblue">동물의 편안함을 높이기 위해 고급 환기 시스템이 설치되고 있다.</span>
 	<<case "barn 6">>
-		<span class="lblue">A new wing is being constructed to house more livestock.</span>
+		<span class="lblue">더 많은 가축을 수용할 새 별동이 지어지고 있다.</span>
 	<<case "barn 7">>
-		<span class="lblue">Cutting-edge automation technology is being integrated into the barn.</span>
+		<span class="lblue">최첨단 자동화 기술이 헛간에 도입되고 있다.</span>
 	<<case "stable 1">>
 		<span class="lblue">마구간이 확장되고 있다.</span>
 	<<case "coop 1">>
@@ -58,15 +58,15 @@
 	<<case "coop 2">>
 		<span class="lblue">닭장이 확장되고 있다.</span>
 	<<case "coop 3">>
-		<span class="lblue">An outdoor run is being added for the chickens to explore.</span>
+		<span class="lblue">닭들이 돌아다닐 수 있도록 야외 사육장이 추가되고 있다.</span>
 	<<case "coop 4">>
-		<span class="lblue">An automatic feeding system is being set up in the coop.</span>
+		<span class="lblue">닭장에 자동 급이 시스템이 설치되고 있다.</span>
 	<<case "coop 5">>
-		<span class="lblue">Perches are being upgraded to improve chicken comfort.</span>
+		<span class="lblue">닭들의 편안함을 높이기 위해 횃대가 개량되고 있다.</span>
 	<<case "coop 6">>
-		<span class="lblue">A modern ventilation system is being installed in the coop.</span>
+		<span class="lblue">닭장에 현대식 환기 시스템이 설치되고 있다.</span>
 	<<case "coop 7">>
-		<span class="lblue">Security measures are being enhanced to protect the chickens from predators.</span>
+		<span class="lblue">포식자로부터 닭을 지키기 위해 보안 대책이 강화되고 있다.</span>
 	<<case "parasites 1">>
 		<span class="lblue">기생충 축사가 지어지고 있다.</span>
 	<<case "parasites 2">>
@@ -74,19 +74,19 @@
 	<<case "irrigation">>
 		<span class="lblue">밭에 관개 시설이 설치되고 있다.</span>
 	<<case "cooler 1">>
-		<span class="lblue">A larger refrigeration unit is being installed.</span>
+		<span class="lblue">더 큰 냉장 설비가 설치되고 있다.</span>
 	<<case "cooler 2">>
-		<span class="lblue">The insulation and efficiency of the refrigeration unit is being improved.</span>
+		<span class="lblue">냉장 설비의 단열 성능과 효율이 개선되고 있다.</span>
 	<<case "cooler 3">>
-		<span class="lblue">Advanced climate control technology is being installed on the refrigeration unit.</span>
+		<span class="lblue">냉장 설비에 첨단 온도 관리 기술이 설치되고 있다.</span>
 	<<case "water field 1">>
-		<span class="lblue">A fence is being build around the water field site.</span>
+		<span class="lblue">수경지 부지 둘레에 울타리가 세워지고 있다.</span>
 	<<case "water field 2">>
-		<span class="lblue">The water field is being excavated.</span>
+		<span class="lblue">수경지가 굴착되고 있다.</span>
 	<<case "water field 3">>
-		<span class="lblue">Synethetic liners is being installed on the water field.</span>
+		<span class="lblue">수경지에 합성 방수막이 설치되고 있다.</span>
 	<<case "water field 4">>
-		<span class="lblue">The water source and water control structures are being installed on the water field.</span>
+		<span class="lblue">수경지에 수원과 수량 조절 구조물이 설치되고 있다.</span>
 	<</switch>>
 	<<if Time.hour gte 6>>
 		<span class="blue">일꾼들이 농장을 가로질러 터벅터벅 오간다.</span>
@@ -155,39 +155,39 @@
 <<elseif $farm.waterField is 1 and !$farm.build_finished.includes("water field 2")>>
 	<<set _clearing to (1200 - $farm.clearing)>>
 	<<set _percent=Math.floor((_clearing/1200)*100)>>
-	The water field is being excavated and shaped,
+	수경지가 굴착되어 모양을 갖추어 가고 있으며,
 	<<if $farm.clearing lte 0>>
-		<span class="green">and is ready for the next phase!</span>
+		<span class="green">다음 단계를 진행할 준비가 되었습니다!</span>
 		<div class="meter">
 		<<print '<div class="greenbar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<elseif $farm.clearing lte 240>>
-		<span class="teal">and is almost fully excavated.</span>
+		<span class="teal">굴착이 거의 끝나 갑니다.</span>
 		<div class="meter">
 		<<print '<div class="tealbar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<elseif $farm.clearing lte 480>>
-		<span class="lblue">and significant progress has been made.</span>
+		<span class="lblue">상당한 진전이 있었습니다.</span>
 		<div class="meter">
 		<<print '<div class="lbluebar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<elseif $farm.clearing lte 720>>
-		<span class="blue">and the digging is well underway.</span>
+		<span class="blue">굴착이 한창 진행 중입니다.</span>
 		<div class="meter">
 		<<print '<div class="bluebar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<elseif $farm.clearing lte 960>>
-		<span class="purple">but there's still much earth to move.</span>
+		<span class="purple">하지만 옮겨야 할 흙이 아직 많습니다.</span>
 		<div class="meter">
 		<<print '<div class="purplebar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<elseif $farm.clearing lte 1199>>
-		<span class="pink">but progress is slow.</span>
+		<span class="pink">하지만 진전은 더딥니다.</span>
 		<div class="meter">
 		<<print '<div class="pinkbar" style="width:' + _percent + '%"></div>'>>
 		</div>
 	<<else>>
-		<span class="red">but the site remains untouched.</span>
+		<span class="red">하지만 부지는 손도 대지 못한 상태입니다.</span>
 		<div class="meter">
 		<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
 		</div>
@@ -466,7 +466,7 @@
 <<elseif $farm.build_finished.includes("woodland 4")>>
 	<<run $farm.build_finished.delete("woodland 4")>>
 	<<location "forest">>
-    <span class="gold">You enter the expanded woodland. The trees are taller, and the area feels more secluded.</span> The tranquility of the forest eases your mind.<<ltrauma>><<llstress>><<trauma -7>><<stress -14>>
+    <span class="gold">당신은 확장된 숲으로 들어선다. 나무는 더 키가 크고, 이곳은 한층 외진 느낌이다.</span> 숲의 고요함이 마음을 가라앉힌다.<<ltrauma>><<llstress>><<trauma -7>><<stress -14>>
     <br><br>
 
 	<<link [[다음|Farm Work]]>><</link>>
@@ -474,7 +474,7 @@
 <<elseif $farm.build_finished.includes("woodland 5")>>
 	<<run $farm.build_finished.delete("woodland 5")>>
 	<<location "forest">>
-	<span class="gold">The woodland has grown even larger. You notice new flora and hear the calls of distant wildlife.</span> The serenity here calms your nerves.<<ltrauma>><<llstress>><<trauma -8>><<stress -16>>
+	<span class="gold">숲이 더욱 넓어졌다. 처음 보는 식물들이 눈에 띄고 멀리서 들려오는 야생동물의 울음소리가 들린다.</span> 이곳의 평온함이 신경을 진정시킨다.<<ltrauma>><<llstress>><<trauma -8>><<stress -16>>
     <br><br>
 
 	<<link [[다음|Farm Work]]>><</link>>
@@ -482,7 +482,7 @@
 <<elseif $farm.build_finished.includes("woodland 6")>>
 	<<run $farm.build_finished.delete("woodland 6")>>
 	<<location "forest">>
-	<span class="gold">Your woodland now stretches far into the distance. The canopy overhead filters the sunlight, casting dappled shadows.</span> You feel deeply connected to nature here.<<ltrauma>><<llstress>><<trauma -9>><<stress -18>>
+	<span class="gold">당신의 숲은 이제 저 멀리까지 뻗어 있다. 머리 위의 우거진 가지가 햇빛을 걸러 얼룩덜룩한 그림자를 드리운다.</span> 이곳에서 자연과 깊이 이어져 있음을 느낀다.<<ltrauma>><<llstress>><<trauma -9>><<stress -18>>
     <br><br>
 
 	<<link [[다음|Farm Work]]>><</link>>
@@ -490,7 +490,7 @@
 <<elseif $farm.build_finished.includes("woodland 7")>>
 	<<run $farm.build_finished.delete("woodland 7")>>
 	<<location "forest">>
-	<span class="gold">The woodland has become vast and wild. You could spend hours exploring its depths.</span> The immensity of the forest brings you peace.<<ltrauma>><<llstress>><<trauma -10>><<stress -20>>
+	<span class="gold">숲은 광대하고 야생적으로 변했다. 그 깊은 곳을 탐험하며 몇 시간이고 보낼 수 있을 것 같다.</span> 숲의 광대함이 평화를 가져다준다.<<ltrauma>><<llstress>><<trauma -10>><<stress -20>>
     <br><br>
 
 	<<link [[다음|Farm Work]]>><</link>>
@@ -542,11 +542,11 @@
 <<elseif $farm.build_finished.includes("barn 3")>>
 	<<run $farm.build_finished.delete("barn 3")>>
 	<<npc Alex>><<person1>>
-    <span class="gold">You notice a new staircase inside the barn leading upwards.</span> Alex catches your eye and gestures toward it. "Come take a look at the new loft," <<he>> says.
+    <span class="gold">헛간 안에 위로 이어지는 새 계단이 눈에 들어온다.</span> 알렉스가 당신과 눈이 마주치더니 계단 쪽을 가리킨다. "와서 새 다락 좀 봐." <<he>>【이가】 말한다.
     <br><br>
-    You follow <<him>> up the stairs to the spacious loft. Sunlight filters through small windows, illuminating the area filled with neatly stacked hay bales and equipment. "With this additional space, we'll keep everything organized," Alex explains. "It makes things so much easier and lets us have more <<farm_text_many cattle>>!"
+    당신은 <<him>>【을를】 따라 계단을 올라 널찍한 다락에 이른다. 작은 창들로 햇빛이 스며들어, 가지런히 쌓인 건초 더미와 장비로 가득한 공간을 비춘다. "이 공간이 늘었으니 모든 걸 정리해 둘 수 있겠어." 알렉스가 설명한다. "일이 훨씬 편해지고, <<farm_text_many cattle>>【을를】 더 많이 키울 수도 있어!"
     <br><br>
-    <<He>> smiles. "Couldn't have done it without your help."
+    <<He>>【이가】 미소 짓는다. "네 도움 없이는 못 했을 거야."
     <br><br>
 	
     <<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -554,13 +554,13 @@
 <<elseif $farm.build_finished.includes("barn 4")>>
 	<<run $farm.build_finished.delete("barn 4")>>
 	<<npc Alex>><<person1>>
-    As you enter the barn, you notice sleek new machinery lining the feeding areas. <span class="gold">Modern feeding systems have been installed.</span>
+    헛간에 들어서자 급식 구역을 따라 늘어선 세련된 신식 기계들이 눈에 들어온다. <span class="gold">현대식 급식 시스템이 설치되었다.</span>
     <br><br>
-    Alex approaches with a satisfied look. "These new feeders will streamline our work," <<he>> says. "They dispense the right amount of feed automatically."
+    알렉스가 흡족한 표정으로 다가온다. "이 새 급식기가 일을 간소화해 줄 거야." <<he>>【이가】 말한다. "알아서 알맞은 양의 사료를 내보내거든."
     <br><br>
-    <<He>> nods. "More time for us to focus on other tasks or maybe even relax a bit."
+    <<He>>【이가】 고개를 끄덕인다. "다른 일에 집중하거나, 어쩌면 좀 쉴 시간도 생기겠지."
     <br><br>
-    "<<He>> pats a nearby <<farm_text cattle>> affectionately. "The herd will benefit from consistent feeding schedules."
+    "<<He>>【은는】 근처의 <<farm_text cattle>>【을를】 다정하게 쓰다듬는다. "꾸준한 급식 일정은 소 떼에게 도움이 될 거야."
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -568,17 +568,17 @@
 <<elseif $farm.build_finished.includes("barn 5")>>
 	<<run $farm.build_finished.delete("barn 5")>>
 	<<npc Alex>><<person1>>
-    Stepping into the barn, you're greeted by a refreshing flow of air. <span class="gold">An advanced ventilation system is now operational.</span>
+    헛간에 발을 들이자 상쾌한 공기의 흐름이 당신을 맞이한다. <span class="gold">고급 환기 시스템이 이제 가동 중이다.</span>
     <br><br>
-    Alex adjusts a control panel nearby and turns to you with a grin. "Feel the difference?"
+    알렉스가 근처의 제어판을 조정하고 씩 웃으며 당신을 돌아본다. "차이가 느껴져?"
     <br><br>
-    You nod appreciatively.
+    당신은 감탄하며 고개를 끄덕인다.
     <br><br>
-    "Better air quality means healthier animals," <<he>> says.
+    "공기가 좋아지면 동물들도 더 건강해져." <<he>>【이가】 말한다.
     <br><br>
-    <<He>> gestures around. "This system regulates temperature and humidity too. It's a big upgrade for the barn."
+    <<He>>【이가】 주위를 가리킨다. "이 시스템은 온도랑 습도도 조절해. 헛간에는 엄청난 업그레이드야."
     <br><br>
-    <<He>> seems pleased. "Thanks for making this possible."
+    <<He>>【은는】 흡족해 보인다. "이게 가능하게 해 줘서 고마워."
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -586,15 +586,15 @@
 <<elseif $farm.build_finished.includes("barn 6")>>
 	<<run $farm.build_finished.delete("barn 6")>>
 	<<npc Alex>><<person1>>
-    Alex meets you at the barn entrance. "Come see the new wing," <<he>> says, leading the way.
+    알렉스가 헛간 입구에서 당신을 맞이한다. "새 별동 좀 봐." <<he>>【이가】 말하며 앞장선다.
     <br><br>
-    <span class="gold">A new wing has been added to the barn, doubling its size.</span> Inside, spacious stalls await new livestock.
+    <span class="gold">헛간에 새 별동이 증축되어 크기가 두 배가 되었다.</span> 안에서는 널찍한 칸막이들이 새 가축을 기다리고 있다.
     <br><br>
-    "With this expansion, we can increase our herd significantly," Alex explains. "It's a big step forward for the farm."
+    "이렇게 확장했으니 가축을 대폭 늘릴 수 있어." 알렉스가 설명한다. "농장에는 큰 도약이야."
     <br><br>
-    <<He>> smiles warmly. "There's a lot of work ahead, but it's exciting."
+    <<He>>【이가】 따뜻하게 미소 짓는다. "앞으로 할 일이 많지만, 설레네."
     <br><br>
-    <<He>> adds, "I appreciate your support in making this happen."
+    <<He>>【이가】 덧붙인다. "이걸 해낼 수 있게 도와줘서 고마워."
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -602,15 +602,15 @@
 <<elseif $farm.build_finished.includes("barn 7")>>
 	<<run $farm.build_finished.delete("barn 7")>>
 	<<npc Alex>><<person1>>
-    "You've got to see the latest upgrade," Alex calls out as you approach.
+    "최신 업그레이드를 꼭 봐야 해." 당신이 다가가자 알렉스가 소리친다.
     <br><br>
-    Inside the barn, you find a series of monitors and control panels. <span class="gold">Cutting-edge automation technology has been integrated throughout the barn.</span>
+    헛간 안에는 모니터와 제어판이 줄지어 놓여 있다. <span class="gold">최첨단 자동화 기술이 헛간 곳곳에 도입되었다.</span>
     <br><br>
-    "We can monitor feeding, milking, and even the animals' health from here," <<he>> explains enthusiastically, pointing to various displays showing real-time data.
+    "여기서 급식, 착유, 심지어 동물들의 건강까지 확인할 수 있어." <<he>>【이가】 실시간 데이터가 뜬 여러 화면을 가리키며 신나게 설명한다.
     <br><br>
-    <<He>> nods. "It'll revolutionize how we manage the farm. More efficiency means better productivity."
+    <<He>>【이가】 고개를 끄덕인다. "농장 운영 방식이 완전히 바뀔 거야. 효율이 높아지면 생산성도 좋아지니까."
     <br><br>
-    <<He>> places a hand on your shoulder. "Couldn't have done it without you."
+    <<He>>【이가】 당신의 어깨에 손을 얹는다. "네가 없었다면 못 했을 거야."
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -659,52 +659,52 @@
 	<br>
 <<elseif $farm.build_finished.includes("coop 3")>>
 	<<run $farm.build_finished.delete("coop 3")>>
-	<span class="gold">You approach the coop and notice the new addition.</span>
+	<span class="gold">닭장에 다가가자 새로 생긴 시설이 눈에 들어온다.</span>
     <<if $farm_work.chickens_out is 1>>
-        The chickens are happily exploring their new outdoor run, pecking at the ground and flapping their wings.
+        닭들이 새 야외 사육장을 신나게 돌아다니며 땅을 쪼고 날개를 퍼덕이고 있다.
     <<else>>
-        The coop now features an outdoor run for the chickens to explore when they're let out.
+        닭장에 이제 풀어 놓은 닭들이 돌아다닐 수 있는 야외 사육장이 생겼다.
     <</if>>
-    The chickens seem more active and content.
+    닭들이 더 활발하고 만족스러워 보인다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("coop 4")>>
 	<<run $farm.build_finished.delete("coop 4")>>
-	<span class="gold">You notice new equipment installed inside the coop. An automatic feeding system has been set up.</span>
+	<span class="gold">닭장 안에 새 장비가 설치된 것이 눈에 띈다. 자동 급이 시스템이 마련되었다.</span>
     <<if $farm_work.chickens_out is 1>>
-        Some chickens wander back into the coop, attracted by the steady supply of feed.
+        일부 닭들이 끊임없이 공급되는 사료에 이끌려 닭장으로 되돌아온다.
     <<else>>
-        The chickens gather around the feeders, pecking at the fresh feed that is dispensed automatically.
+        닭들이 급이기 주위에 모여, 자동으로 나오는 신선한 사료를 쪼아 먹는다.
     <</if>>
-    This will make feeding them much more efficient.
+    이러면 먹이 주기가 훨씬 효율적일 것이다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("coop 5")>>
 	<<run $farm.build_finished.delete("coop 5")>>
-	<span class="gold">You step into the coop and see new perches installed throughout.</span>
-    The chickens are already making use of the upgraded perches, roosting comfortably.
+	<span class="gold">닭장에 들어서니 새 횃대가 곳곳에 설치되어 있다.</span>
+    닭들은 벌써 개량된 횃대를 이용해 편안하게 앉아 쉬고 있다.
     <<if $farm_work.chickens_out is 1>>
-        Some chickens perch on the outdoor structures, enjoying the view.
+        일부 닭들은 야외 구조물에 올라앉아 경치를 즐기고 있다.
     <<else>>
-        The coop feels more spacious and the chickens seem happier.
+        닭장이 더 넓게 느껴지고 닭들도 더 행복해 보인다.
     <</if>>
-    Improved comfort should lead to better egg production.
+    편안함이 나아졌으니 달걀 생산량도 늘어날 것이다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("coop 6")>>
 	<<run $farm.build_finished.delete("coop 6")>>
-	A gentle breeze flows through the coop as you enter. <span class="gold">A modern ventilation system has been installed.</span>
-    The air feels fresher, and the chickens appear more energetic.
+	닭장에 들어서자 산들바람이 부드럽게 흐른다. <span class="gold">현대식 환기 시스템이 설치되었다.</span>
+    공기가 한결 상쾌하게 느껴지고, 닭들도 더 활기차 보인다.
     <<if $farm_work.chickens_out is 1>>
-        Even when indoors, the chickens now enjoy better air quality.
+        실내에 있을 때도 닭들은 이제 더 좋은 공기를 마신다.
     <<else>>
-        The improved environment should keep the chickens healthier.
+        개선된 환경 덕에 닭들이 더 건강해질 것이다.
     <</if>>
     <br><br>
 
@@ -712,12 +712,12 @@
 	<br>
 <<elseif $farm.build_finished.includes("coop 7")>>
 	<<run $farm.build_finished.delete("coop 7")>>
-	<span class="gold">You notice new fencing and protective measures around the coop. Security measures have been enhanced to protect the chickens from predators and intruders.</span>
-    The coop feels secure, and you can rest easy knowing the chickens are safe.
+	<span class="gold">닭장 주변에 새 울타리와 보호 시설이 눈에 띈다. 포식자와 침입자로부터 닭을 지키도록 보안 대책이 강화되었다.</span>
+    닭장이 튼튼해 보여, 닭들이 안전하다는 걸 알고 마음 놓고 쉴 수 있다.
     <<if $farm_work.chickens_out is 1>>
-        The chickens roam freely within the secure area, undisturbed.
+        닭들은 안전한 구역 안을 방해받지 않고 자유롭게 돌아다닌다.
     <<else>>
-        The reinforced coop provides excellent shelter.
+        보강된 닭장이 훌륭한 보금자리가 되어 준다.
     <</if>>
     <br><br>
 
@@ -786,24 +786,24 @@
 	<<if $farm.compostReady is undefined>>
 		<<set $farm.compostReady to 0>>
 	<</if>>
-	<span class="gold">You approach the newly built compost bin.</span>
-	It has just about enough space for you to compost 1 batch of fertiliser.
+	<span class="gold">당신은 새로 지어진 퇴비통으로 다가간다.</span>
+	비료 1회분을 퇴비로 만들 만한 공간이 겨우 나온다.
 	<<composting1>>
 	<br><br>
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("compost bin 2")>>
 	<<run $farm.build_finished.delete("compost bin 2")>>
-	<span class="gold">You approach the expanded compost bin.</span>
-	It has enough space for you to compost 2 batches of fertiliser.
+	<span class="gold">당신은 확장된 퇴비통으로 다가간다.</span>
+	비료 2회분을 퇴비로 만들 공간이 충분하다.
 	<<composting2>>
 	<br><br>
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("compost bin 3")>>
 	<<run $farm.build_finished.delete("compost bin 3")>>
-	<span class="gold">You approach the expanded compost bin.</span>
-	It now has enough space for you to compost 4 batches of fertiliser.
+	<span class="gold">당신은 확장된 퇴비통으로 다가간다.</span>
+	이제 비료 4회분을 퇴비로 만들 공간이 충분하다.
 	<<composting3>>
 	<<composting4>>
 	<br><br>
@@ -811,62 +811,62 @@
 	<br>
 <<elseif $farm.build_finished.includes("extract 1")>>
 	<<run $farm.build_finished.delete("extract 1")>>
-	<span class="gold">You approach the newly built aphrodisiac extraction system.</span>
-	It can extract aphrodisiac from lurkers automatically but will require manual input.
+	<span class="gold">당신은 새로 지어진 최음제 추출 장치로 다가간다.</span>
+	럴커에게서 최음제를 자동으로 추출할 수 있지만, 직접 넣어 줘야 한다.
 	<br><br>
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("extract 2")>>
 	<<run $farm.build_finished.delete("extract 2")>>
-	<span class="gold">You approach the upgraded aphrodisiac extraction system.</span>
-	It will now automataically take lurkers from the cages, making it fully automated.
+	<span class="gold">당신은 업그레이드된 최음제 추출 장치로 다가간다.</span>
+	이제 우리에서 럴커를 알아서 꺼내 가므로 완전 자동이 되었다.
 	<br><br>
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("cooler 1")>>
 	<<run $farm.build_finished.delete("cooler 1")>>
-	<span class="gold">You enter the storage area and see the new refrigeration unit humming quietly.</span>
-    The larger cooler will help keep your produce fresh for longer, reducing spoilage.
+	<span class="gold">당신은 저장 구역에 들어가 새 냉장 설비가 조용히 웅웅대는 모습을 본다.</span>
+    더 큰 냉장고가 수확물을 더 오래 신선하게 유지해 상하는 양을 줄여 줄 것이다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("cooler 2")>>
 	<<run $farm.build_finished.delete("cooler 2")>>
-	<span class="gold">The upgraded cooling system is now operational.</span>
-    The improved insulation and efficiency will significantly extend the freshness of your produce.
+	<span class="gold">업그레이드된 냉각 시스템이 이제 가동 중이다.</span>
+    개선된 단열과 효율 덕에 수확물의 신선도가 크게 오래 유지될 것이다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("cooler 3")>>
 	<<run $farm.build_finished.delete("cooler 3")>>
-	<span class="gold">The advanced climate control system has been fully installed.</span>
-    Your produce preservation is now at peak efficiency, ensuring minimal loss due to spoilage.
+	<span class="gold">첨단 온도 관리 시스템이 완전히 설치되었다.</span>
+    이제 수확물 보존이 최고 효율에 이르러, 상해서 버려지는 양이 최소화된다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("water field 1")>>
 	<<run $farm.build_finished.delete("water field 1")>>
-	<span class="gold">You arrive at the construction site and see that a fence has been built around the water field area.</span>
-    The new fence secures the site, marking the beginning of your water field project.
+	<span class="gold">당신은 공사 현장에 도착해 수경지 구역 둘레에 울타리가 세워진 것을 본다.</span>
+    새 울타리가 부지를 지켜 주며, 수경지 프로젝트의 시작을 알린다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("water field 2")>>
 	<<run $farm.build_finished.delete("water field 2")>>
-	<span class="gold">The water field has been excavated.</span>
-    The land is now properly shaped and prepared for the next phase of development.
+	<span class="gold">수경지의 굴착이 끝났다.</span>
+    땅이 제대로 다듬어져 다음 개발 단계를 맞을 준비가 되었다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
 	<br>
 <<elseif $farm.build_finished.includes("water field 3")>>
 	<<run $farm.build_finished.delete("water field 3")>>
-	<span class="gold">Synthetic liners have been installed in the water field.</span>
-    These liners will help maintain water levels and prevent leakage.
+	<span class="gold">수경지에 합성 방수막이 설치되었다.</span>
+    이 방수막이 수위를 유지하고 물이 새는 것을 막아 줄 것이다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -874,8 +874,8 @@
 <<elseif $farm.build_finished.includes("water field 4")>>
 	<<run $farm.build_finished.delete("water field 4")>>
 	<<add_plot farm water 3 large>>
-	<span class="gold">The water source and control structures are now installed.</span>
-    With the water field fully operational, you can begin lotus cultivation.
+	<span class="gold">수원과 조절 구조물이 이제 설치되었다.</span>
+    수경지가 완전히 가동되니, 연꽃 재배를 시작할 수 있다.
     <br><br>
 
 	<<link [[다음|Farm Work]]>><<endevent>><</link>>
@@ -1138,7 +1138,7 @@
 					<<set _waterNeeded to 1>>
 				<</if>>
 			<</for>>
-			<<gardenicon "plot">><<link [[Fields (0:05)|Farm Fields]]>><<pass 5>><<set $eventskip to 1>><</link>> <<if _pickReady is 1>><<note "Ready to Harvest" "green">><</if>> <<if _waterNeeded is 1>><<note "Watering needed" "yellow">><</if>>
+			<<gardenicon "plot">><<link [[밭 (0:05)|Farm Fields]]>><<pass 5>><<set $eventskip to 1>><</link>> <<if _pickReady is 1>><<note "수확 가능" "green">><</if>> <<if _waterNeeded is 1>><<note "물 주기 필요" "yellow">><</if>>
 			<br>
 
 			<<if $farm_work.alex isnot "shower">>
@@ -1171,7 +1171,7 @@
 			<br>
 		<</if>>
 		<<if $farm.compostbin gte 1>>
-			<<farmicon "compostbin">><<link [[Compost Bin (0:03)|Farm Compost Bin]]>><<pass 3>><</link>>
+			<<farmicon "compostbin">><<link [[퇴비통 (0:03)|Farm Compost Bin]]>><<pass 3>><</link>>
 			<br>
 		<</if>>
 		<<if $farm.parasitebarn gte 1>>
@@ -1584,7 +1584,7 @@
 			<br><br>
 
 			<<if $farm.coop gte 4>>
-				You finish restocking the automatic feeding system.
+				당신은 자동 급이 시스템에 사료를 다시 채워 넣는 일을 마친다.
 			<<else>>
 				당신은 닭에게 먹이를 다 주고, 자루를 헛간에 돌려놓는다.
 			<</if>>
@@ -2299,7 +2299,7 @@
 	<br><br>
 
 	<<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-		<<link [[Next|Farm Horses Lewd]]>><</link>>
+		<<link [[다음|Farm Horses Lewd]]>><</link>>
 	<<else>>
 		<<link [[다음|Farm Work]]>><</link>>
 	<</if>>
@@ -2326,7 +2326,7 @@
 <br><br>
 
 <<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-	<<link [[Next|Farm Horses Lewd]]>><</link>>
+	<<link [[다음|Farm Horses Lewd]]>><</link>>
 <<else>>
 	<<link [[다음|Farm Work]]>><</link>>
 <</if>>
@@ -2365,7 +2365,7 @@
 	<br><br>
 
 	<<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-		<<link [[Next|Farm Horses Lewd]]>><</link>>
+		<<link [[다음|Farm Horses Lewd]]>><</link>>
 	<<else>>
 		<<link [[다음|Farm Work]]>><</link>>
 	<</if>>
@@ -2393,7 +2393,7 @@
 <br><br>
 
 <<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-	<<link [[Next|Farm Horses Lewd]]>><</link>>
+	<<link [[다음|Farm Horses Lewd]]>><</link>>
 <<else>>
 	<<link [[다음|Farm Work]]>><</link>>
 <</if>>
@@ -2465,7 +2465,7 @@
 	<<endcombat>>
 
 	<<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-		<<link [[Next|Farm Horses Lewd]]>><</link>>
+		<<link [[다음|Farm Horses Lewd]]>><</link>>
 	<<else>>
 		<<link [[다음|Farm Work]]>><</link>>
 	<</if>>
@@ -2483,7 +2483,7 @@
 	<<endcombat>>
 
 	<<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-		<<link [[Next|Farm Horses Lewd]]>><</link>>
+		<<link [[다음|Farm Horses Lewd]]>><</link>>
 	<<else>>
 		<<link [[다음|Farm Work]]>><</link>>
 	<</if>>
@@ -2505,7 +2505,7 @@
 	<<endcombat>>
 
 	<<if $farm_work.horses_satisfied lt 6 and $farm_work.horses_out lt 2>>
-		<<link [[Next|Farm Horses Lewd]]>><</link>>
+		<<link [[다음|Farm Horses Lewd]]>><</link>>
 	<<else>>
 		<<link [[다음|Farm Work]]>><</link>>
 	<</if>>
@@ -2580,7 +2580,7 @@
 	큰 착유기가 중앙에 놓여 있다.
 <</if>>
 <<if $farm.barn gte 7>>
-	The <<farm_text_many cattle>> prefer to be milked by hand, but the machine can milk twenty four at once.
+	<<farm_text_many cattle>>【은는】 손으로 짜는 것을 선호하지만, 기계는 한 번에 스물네 마리를 짤 수 있다.
 <<else>>
 	<<farm_text_many cattle>>은 손으로 짜는 것을 선호하지만, 기계는 한 번에 여섯 마리를 짤 수 있다.
 <</if>>
@@ -2725,8 +2725,8 @@
 
 당신은 <<tendingtext>> 쥐어짜고 문지른다.
 <<switch $phase>>
-	<<case 1>><<farm_count 1>> One minute later,
-	<<case 2>><<farm_count 2>> Two minutes later,
+	<<case 1>><<farm_count 1>> 1분 후,
+	<<case 2>><<farm_count 2>> 2분 후,
 	<<case 3>><<farm_count 3>> 3분 후,
 	<<case 4>><<farm_count 4>> 4분 후,
 	<<case 5>><<farm_count 5>> 5분 후,
@@ -2773,23 +2773,23 @@
 <<effects>>
 
 <<if $monster is 1>>
-	You lead the <<beastsplural>> into the barn and sit on a stool beside them. They kneel over the bucket and moos in anticipation.
+	당신은 <<beastsplural>>【을를】 헛간으로 이끌고 그 옆 의자에 앉는다. 그들은 양동이 위로 무릎을 꿇고 기대에 차 음메 하고 운다.
 
 	<<if $NPCList[0].pronoun is "m">>
 		<<if $NPCList[0].vagina isnot "none">>
-			You pinch one of their nipples with both hands and squeeze.
+			당신은 그들 중 한 마리의 젖꼭지를 양손으로 꼬집고 쥐어짠다.
 		<<else>>
-			You take one of their already-erect penis in both hands and get to work.<<for _i to 0; _i lt $massmilkamount; _i++>><<handstat>><<handejacstat>><</for>>
+			당신은 이미 발기한 자지 하나를 양손으로 잡고 일을 시작한다.<<for _i to 0; _i lt $massmilkamount; _i++>><<handstat>><<handejacstat>><</for>>
 		<</if>>
 	<<else>>
 		<<if $NPCList[0].penis isnot "none">>
-			You take one of their already-erect penis in one hand and a breast in the other, then get to work.<<for _i to 0; _i lt $massmilkamount; _i++>><<handstat>><<handejacstat>><</for>>
+			당신은 이미 발기한 자지 하나를 한 손으로, 다른 손으로는 가슴 하나를 잡고 일을 시작한다.<<for _i to 0; _i lt $massmilkamount; _i++>><<handstat>><<handejacstat>><</for>>
 		<<else>>
-			You grasp one of their breasts in both hands and squeeze.
+			당신은 가슴 하나를 양손으로 움켜쥐고 쥐어짠다.
 		<</if>>
 	<</if>>
 <<else>>
-	You lead the <<beastsplural>> into the barn and sit on a stool beside them. They moo in anticipation. You take one of their
+	당신은 <<beastsplural>>【을를】 헛간으로 이끌고 그 옆 의자에 앉는다. 그들은 기대에 차 음메 하고 운다. 당신은 그중 한 마리의
 	<<if $NPCList[0].penis isnot "none">>이미 발기한 자지<<else>>젖<</if>>
 	를 양손으로 잡고 일을 시작한다.
 <</if>>
@@ -2797,16 +2797,16 @@
 <<if $cattle_milked lte 6 or $deviancy lt 15>>
 	이렇게 직접 손을 대는 것이 이상하게 느껴진다. 당신은 이것이 이상한 일이 아니라고 되뇌지만, 그 느낌을 떨쳐버리기 어렵다.
 <<elseif $cattle_milked lte 1200 or $deviancy lt 35>>
-	You're used to milking cattle, and the <<beastsplural>> appreciates the attention.
+	당신은 소 젖 짜는 데 익숙하고, <<beastsplural>>【은는】 관심을 받는 것을 즐긴다.
 <<else>>
-	You daydream as you work, your practised hands moving on their own. The <<beastsplural>> appreciates the attention.
+	당신은 일하면서 몽상에 잠긴다. 당신의 숙련된 손은 저절로 움직인다. <<beastsplural>>【은는】 관심을 받는 것을 즐긴다.
 <</if>>
 <<deviancy1>>
 
 당신은 <<tendingtext>> 쥐어짜고 문지른다.
 <<switch $phase>>
-	<<case 1>><<farm_count 1>> One minute later,
-	<<case 2>><<farm_count 2>> Two minutes later,
+	<<case 1>><<farm_count 1>> 1분 후,
+	<<case 2>><<farm_count 2>> 2분 후,
 	<<case 3>><<farm_count 3>> 3분 후,
 	<<case 4>><<farm_count 4>> 4분 후,
 	<<case 5>><<farm_count 5>> 5분 후,
@@ -2814,8 +2814,8 @@
 	<<case 15>><<farm_count 15>> 15분 후,
 	<<case 20>><<farm_count 20>> 20분 후,
 	<<case 25>><<farm_count 25>> 25분 후,
-	<<case 30>><<farm_count 30>> Thirty minutes later,
-	<<default>><<farm_count $phase>> <<print $phase>> minutes later,
+	<<case 30>><<farm_count 30>> 30분 후,
+	<<default>><<farm_count $phase>> <<print $phase>>분 후,
 <</switch>>
 <<rng>>
 <<if $watersportsdisable is "f" and $NPCList[0].penis isnot "none" and $rng gte 96>>
@@ -2831,19 +2831,19 @@
 <<switch $farm_work.cattle_text>>
 <<case 0>>
 	<<set $farm_work.cattle_text += 1>>
-	The <<beastsplural>> trots away.
+	<<beastsplural>>【이가】 총총걸음으로 멀어진다.
 <<case 1>>
 	<<set $farm_work.cattle_text += 1>>
-	The <<beastsplural>> licks your hand before trotting away.<<lstress>><<stress -1>>
+	<<beastsplural>>【이가】 당신의 손을 핥고는 총총걸음으로 멀어진다.<<lstress>><<stress -1>>
 <<case 2>>
 	<<set $farm_work.cattle_text += 1>>
-	The <<beastsplural>> needs cajoling before they will return to the field.
+	<<beastsplural>>【을를】 달래야 들판으로 돌아가려 한다.
 <<case 3>>
 	<<set $farm_work.cattle_text += 1>>
-	The <<beastsplural>> leaves in a hurry, eager to return to the field.
+	<<beastsplural>>【이가】 서둘러 떠나, 들판으로 돌아가고 싶어 한다.
 <<case 4>>
 	<<set $farm_work.cattle_text to 0>>
-	The <<beastsplural>> has some trouble finding the exit but soon trots back to the field.
+	<<beastsplural>>【이가】 출구를 찾는 데 약간 어려움을 겪었지만, 곧 들판으로 총총걸음으로 돌아간다.
 <</switch>>
 
 <br><br>
@@ -2908,14 +2908,14 @@
 <<effects>>
 <<set $consensual to 1>>
 <<if $monster is 1>>
-	You lead the <<beastsplural>> into the barn. One of them starts to kneel, but you interrupt. Instead, <<bhe>> watches with a puzzled expression as you
+	당신은 <<beastsplural>>【을를】 헛간으로 이끈다. 그중 한 마리가 무릎을 꿇으려 하지만, 당신이 막는다. 대신, <<bhe>>【은는】 당신이
 
 	<!-- Milk Chest -->
 	<<if $pronoun is "f" or $NPCList[0].vagina isnot "none">>
-		lean down to <<bhis>> chest.
+		<<bhis>> 가슴으로 몸을 숙이는 것을 어리둥절한 표정으로 지켜본다.
 		<br><br>
 
-		You take <<bhis>> nipple into your mouth and suck on it. <<bHe>> moos in pleasure as sweet milk flows. You spit most into the bucket, but you can't help but swallow some.<<transform cat $massmilkamount>>
+		당신은 <<bhis>> 젖꼭지를 입에 물고 빤다. 달콤한 우유가 흘러나오자 <<bHe>>【이가】 쾌감에 음메 하고 운다. 당신은 대부분을 양동이에 뱉지만, 조금은 삼킬 수밖에 없다.<<transform cat $massmilkamount>>
 
 		<!-- DG cowgirls get both milked -->
 		<<if $NPCList[0].penis isnot "none">>
@@ -2933,7 +2933,7 @@
 		<<takeVirginity $NPCList[0].fullDescription "oral">><<for _i to 0; _i lt $massmilkamount; _i++>><<oralstat>><<oralejacstat>><<ejacstat>><<animalsemenswallowedstat 15>><</for>>
 		<br><br>
 
-		You grasp <<bhis>> thighs for purchase as you bob your head back and forth. Thick <<beastsplural>> cream surges into your mouth. You pull away from <<bhis>> cock and spit into the bucket, directing the rest of the flow the same way. The <<beastsplural>> moos in pleasure, and you soon have the bucket filled.
+		당신은 <<bhis>> 허벅지를 잡고 머리를 앞뒤로 흔든다. 진한 <<beastsplural>> 크림이 당신의 입안으로 솟구친다. 당신은 <<bhis>> 거시기에서 입을 떼고 양동이에 뱉어내며, 나머지 흐름도 같은 방향으로 유도한다. <<beastsplural>>【은는】 쾌감에 음메 하고 울고, 당신은 곧 양동이를 채운다.
 	<</if>>
 <<else>>
 	<<if $NPCList[0].penis isnot "none">>
@@ -2943,7 +2943,7 @@
 		당신은 그것의 뒷다리를 잡고 머리를 앞뒤로 흔든다. 진한 황소 크림이 당신의 입안으로 솟구친다. 당신은 그것의 거시기에서 입을 떼고 양동이에 뱉어내며, 나머지 흐름도 같은 방향으로 유도한다. 황소는 쾌감에 음메 하고 울고, 당신은 곧 양동이를 채운다.
 		<<for _i to 0; _i lt $massmilkamount; _i++>><<animalsemenswallowedstat 15>><</for>>
 	<<else>>
-		You lead a cow into the barn and kneel beneath it. You lean down and take one of its udders into your mouth. Thick, creamy milk flows into your mouth. You spit most into the bucket, but can't help but swallow some.<<transform cat $massmilkamount>>
+		당신은 소 한 마리를 헛간으로 데려가 그 아래에 무릎을 꿇는다. 허리를 숙이고 젖통 하나를 입에 문다. 걸쭉하고 크리미한 우유가 입안으로 흘러들어온다. 대부분은 양동이에 뱉어내지만, 참지 못하고 조금 삼키고 만다.<<transform cat $massmilkamount>>
 
 
 	<</if>>
@@ -2951,7 +2951,7 @@
 
 <<deviancy4>>
 
-This repeats until you've finished with all of them. The <<beastsplural>> trot away.
+이 과정은 모두 끝낼 때까지 반복된다. <<beastsplural>>【이가】 총총걸음으로 멀어진다.
 <br><br>
 
 <<endevent>>
@@ -3193,22 +3193,22 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 
 <<if $farm.waterField is 1>>
 	<<if Weather.precipitation is "rain">>
-        You endure the rain as you help Alex excavate the field, digging deep into the earth to shape the water field.
+        당신은 비를 견디며 알렉스를 도와 밭을 굴착하고, 땅속 깊이 파 들어가 수경지의 모양을 잡는다.
     <<elseif !Weather.isOvercast>>
         <<if Time.dayState is "night">>
-            The stars twinkle above you as you help Alex excavate the field, digging deep into the earth to shape the water field.
+            머리 위에서 별이 반짝이는 가운데 당신은 알렉스를 도와 밭을 굴착하고, 땅속 깊이 파 들어가 수경지의 모양을 잡는다.
         <<else>>
-            The sun beats down as you help Alex excavate the field, digging deep into the earth to shape the water field.
+            해가 내리쬐는 가운데 당신은 알렉스를 도와 밭을 굴착하고, 땅속 깊이 파 들어가 수경지의 모양을 잡는다.
         <</if>>
     <<elseif Weather.isSnow>>
-        You endure the cold as you help Alex excavate the field, breaking through the frozen ground to shape the water field.
+        당신은 추위를 견디며 알렉스를 도와 밭을 굴착하고, 얼어붙은 땅을 깨고 들어가 수경지의 모양을 잡는다.
     <<else>>
-        You help Alex excavate the field, digging deep into the earth to shape the water field.
+        당신은 알렉스를 도와 밭을 굴착하고, 땅속 깊이 파 들어가 수경지의 모양을 잡는다.
     <</if>>
     <<if $rng gte 51>>
-        You encounter large rocks that need to be removed, requiring extra effort.
+        치워야 할 커다란 바위가 나와 더 많은 힘이 든다.
     <<else>>
-        The soil is tough and compacted, making the excavation challenging.
+        흙이 단단하게 다져져 있어 굴착이 만만치 않다.
     <</if>>
 <<else>>
 	<<if Weather.precipitation is "rain">>
@@ -3217,15 +3217,15 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 		<<if Time.dayState is "night">>
 		별들이 당신 위에서 반짝이는 가운데, 당신은 알렉스가 침입성 잡초를 제거하는 것을 돕고, 그것들을 뿌리째 뽑아내어 경작을 위해 땅을 확보한다.
 		<<else>>
-		The sun beats down as you help Alex clear the invasive weeds, digging them up at the roots and freeing the land for cultivation.
+		해가 내리쬐는 가운데, 당신은 알렉스가 침입성 잡초를 제거하는 것을 돕고, 그것들을 뿌리째 뽑아내어 경작을 위해 땅을 확보한다.
 		<</if>>
 	<<elseif Weather.isSnow>>
-		You endure the cold as you help Alex clear the invasive weeds, digging them up at the roots and freeing the land for cultivation.
+		당신은 추위를 견디며 알렉스가 침입성 잡초를 제거하는 것을 돕고, 그것들을 뿌리째 뽑아내어 경작을 위해 땅을 확보한다.
 	<<else>>
-		You help Alex clear the invasive weeds, digging them up at the roots and freeing the land for cultivation.
+		당신은 알렉스가 침입성 잡초를 제거하는 것을 돕고, 그것들을 뿌리째 뽑아내어 경작을 위해 땅을 확보한다.
 	<</if>>
 	<<if $rng gte 51>>
-		There are young trees growing in places. Alex insists on digging them a new home near the surrounding woodland.
+		곳곳에 어린 나무들이 자라고 있다. 알렉스는 주변 숲 근처에 그것들의 새 보금자리를 파 주겠다고 고집한다.
 	<<else>>
 		일부 식물은 뿌리가 깊게 박혀 있어 파내야 한다.
 	<</if>>
@@ -3235,19 +3235,19 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 	<<if $farm.excavation gte 600>>
         당신은 상당한 진전을 이루지만, <span class="blue">아직 갈 길이 멀다.</span>
     <<elseif $farm.excavation gte 120>>
-        You make good progress. <span class="lblue">Half of the field has been excavated.</span>
+        당신은 상당한 진전을 이룬다. <span class="lblue">밭의 절반이 굴착되었다.</span>
     <<elseif $farm.excavation gte 1>>
-        You make good progress. <span class="teal">Most of the field has been excavated.</span>
+        당신은 상당한 진전을 이룬다. <span class="teal">밭의 대부분이 굴착되었다.</span>
     <<else>>
-        You make good progress, <span class="green">and finish excavating the field!</span>
+        당신은 상당한 진전을 이루어, <span class="green">밭 굴착을 마친다!</span>
     <</if>>
 <<else>>
 	<<if $farm.clearing gte 50>>
-		You make good progress, <span class="blue">but there's still a long way to go.</span>
+		당신은 상당한 진전을 이루지만, <span class="blue">아직 갈 길이 멀다.</span>
 	<<elseif $farm.clearing gte 10>>
-		You make good progress. <span class="lblue">Most of the field is clear.</span>
+		당신은 상당한 진전을 이룬다. <span class="lblue">밭의 대부분이 말끔해졌다.</span>
 	<<elseif $farm.clearing gte 1>>
-		You make good progress. <span class="teal">The field is almost cleared.</span>
+		당신은 상당한 진전을 이룬다. <span class="teal">밭이 거의 다 정리되었다.</span>
 	<<else>>
 		당신은 상당한 진전을 이루어, <span class="green">마지막 잡초까지 제거한다!</span>
 	<</if>>
@@ -3687,10 +3687,10 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 당신은 흡입관 두 개를 가져와 당신의 <<breasts>>에 부착한다.
 <br><br>
 <<if Time.dayState is "night">>
-	The machine comes alive, and sucks your chest. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>gasp<</if>> at the sensation, almost waking one of the <<farm_text cattle>>s.<<gggarousal>><<arousal 2000 "breasts">>
+	기계가 살아나 당신의 가슴을 빨아들인다. 당신은 그 감각에 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 울며<<else>>숨을 헐떡이며<</if>>, 하마터면 <<farm_text cattle>> 중 하나를 깨울 뻔한다.<<gggarousal>><<arousal 2000 "breasts">>
 	<br><br>
 <<else>>
-	The machine comes alive, and sucks your chest. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>gasp<</if>> at the sensation, causing one of the <<farm_text cattle>>s to turn their head in your direction<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>> and moo back<</if>>.<<gggarousal>><<arousal 2000 "breasts">>
+	기계가 살아나 당신의 가슴을 빨아들인다. 당신은 그 감각에 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 울며<<else>>숨을 헐떡이며<</if>>, <<farm_text cattle>> 중 하나가 당신 쪽으로 고개를 돌리게 만든다<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>. 그리고 음메 하고 화답한다<</if>>.<<gggarousal>><<arousal 2000 "breasts">>
 	<br><br>
 <</if>>
 
@@ -3800,10 +3800,10 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 <br><br>
 
 <<if Time.dayState is "night">>
-	The machine comes alive, and sucks at your penis. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>gasp<</if>> at the sensation, almost waking one of the <<farm_text cattle>>s.<<gggarousal>><<arousal 2000 "genitals">>
+	기계가 살아나 당신의 자지를 빨아들인다. 당신은 그 감각에 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 울며<<else>>숨을 헐떡이며<</if>>, 하마터면 <<farm_text cattle>> 중 하나를 깨울 뻔한다.<<gggarousal>><<arousal 2000 "genitals">>
 <br><br>
 <<else>>
-	The machine comes alive, and sucks at your penis. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>gasp<</if>> at the sensation, causing one of the <<farm_text cattle>>s to turn their head in your direction<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>> and moo back<</if>>.<<gggarousal>><<arousal 2000 "genitals">>
+	기계가 살아나 당신의 자지를 빨아들인다. 당신은 그 감각에 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 울며<<else>>숨을 헐떡이며<</if>>, <<farm_text cattle>> 중 하나가 당신 쪽으로 고개를 돌리게 만든다<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>. 그리고 음메 하고 화답한다<</if>>.<<gggarousal>><<arousal 2000 "genitals">>
 	<br><br>
 <</if>>
 
@@ -3947,80 +3947,80 @@ This repeats until you've finished with all of them. The <<beastsplural>> trot a
 
 :: Farm Compost Bin
 <<effects>>
-You approach the composting bin.
+당신은 퇴비통으로 다가간다.
 <br><br>
 <<if $farm.compostWaiting gt 3000>>
-	You have <<print ($farm.compostWaiting / 3000)>> bags worth of fertiliser waiting for their turn in the compost bin.
+	퇴비통에서 차례를 기다리는 비료가 <<print ($farm.compostWaiting / 3000)>>포대 분량 있다.
 	<br>
 <<elseif $farm.compostWaiting is 3000>>
-	You have <<print ($farm.compostWaiting / 3000)>> bag worth of fertiliser waiting for its turn in the compost bin.
+	퇴비통에서 차례를 기다리는 비료가 <<print ($farm.compostWaiting / 3000)>>포대 분량 있다.
 	<br>
 <<else>>
-	You don't have any green manure waiting to be composted.
+	퇴비로 만들려고 기다리는 녹비가 없다.
 	<br>
 <</if>>
 <<if $farm.compostProducing[0] gt 1>>
-	The first slot still needs <<print $farm.compostProducing[0]>> days.
+	첫 번째 칸은 아직 <<print $farm.compostProducing[0]>>일이 더 필요하다.
 	<br>
 <<elseif $farm.compostProducing[0] is 1>>
-	The first slot will finish composting <span class="blue">tomorrow</span>.
+	첫 번째 칸은 <span class="blue">내일</span> 퇴비화가 끝난다.
 	<br>
 <</if>>
 <<if $farm.compostProducing[1] gt 1>>
-	The second slot still needs <<print $farm.compostProducing[1]>> days.
+	두 번째 칸은 아직 <<print $farm.compostProducing[1]>>일이 더 필요하다.
 	<br>
 <<elseif $farm.compostProducing[1] is 1>>
-	The second slot will finish composting <span class="blue">tomorrow</span>.
+	두 번째 칸은 <span class="blue">내일</span> 퇴비화가 끝난다.
 	<br>
 <</if>>
 <<if $farm.compostProducing[2] gt 1>>
-	The third slot still needs <<print $farm.compostProducing[2]>> days.
+	세 번째 칸은 아직 <<print $farm.compostProducing[2]>>일이 더 필요하다.
 	<br>
 <<elseif $farm.compostProducing[2] is 1>>
-	The third slot will finish composting <span class="blue">tomorrow</span>.
+	세 번째 칸은 <span class="blue">내일</span> 퇴비화가 끝난다.
 	<br>
 <</if>>
 <<if $farm.compostProducing[3] gt 1>>
-	The fourth slot still needs <<print $farm.compostProducing[3]>> days.
+	네 번째 칸은 아직 <<print $farm.compostProducing[3]>>일이 더 필요하다.
 	<br>
 <<elseif $farm.compostProducing[3] is 1>>
-	The fourth slot will finish composting <span class="blue">tomorrow</span>.
+	네 번째 칸은 <span class="blue">내일</span> 퇴비화가 끝난다.
 	<br>
 <</if>>
 <<if $farm.compostReady gt 1>>
 	<<set $fertiliser.current+= $farm.compostReady>>
-	You pick up <span class="green"><<print $farm.compostReady>> fertilisers</span>.
+	당신은 <span class="green">비료 <<print $farm.compostReady>>포대</span>를 챙긴다.
 	<<set $farm.compostReady to 0>>
 	<br>
 <<elseif $farm.compostReady is 1>>
 	<<set $fertiliser.current++>>
-	You pick up <span class="green"><<print $farm.compostReady>> fertiliser</span>.
+	당신은 <span class="green">비료 <<print $farm.compostReady>>포대</span>를 챙긴다.
 	<<set $farm.compostReady to 0>>
 	<br>
 <</if>>
 <br>
 
-<<link [[Make compost|Farm Compost Bin Make]]>><</link>>
+<<link [[퇴비를 만든다|Farm Compost Bin Make]]>><</link>>
 <br>
-<<link [[Leave|Farm Work]]>><</link>>
+<<link [[떠난다|Farm Work]]>><</link>>
 
 :: Farm Compost Bin Make
 <<set $farm.compostToProduce to 0>>
 <<if $foodstuff.green_manure isnot undefined>>
 	<<if $foodstuff.green_manure.amount gte 3000>>
 		<<set _max to $foodstuff.green_manure.amount - ($foodstuff.green_manure.amount % 3000)>>
-		How much green manure to compost?
+		녹비를 얼마나 퇴비로 만들까?
 		<<numberslider "$farm.compostToProduce" $farm.compostToProduce 0 _max 3000>>
 
-		<<link [[Confirm|$passage]]>><<set $farm.compostWaiting += $farm.compostToProduce>><<set $foodstuff.green_manure.amount -= $farm.compostToProduce>><<composting>><</link>>
+		<<link [[확인|$passage]]>><<set $farm.compostWaiting += $farm.compostToProduce>><<set $foodstuff.green_manure.amount -= $farm.compostToProduce>><<composting>><</link>>
 	<<else>>
-		You don't have enough green manure.
+		녹비가 충분하지 않다.
 	<</if>>
 <<else>>
-	You don't have any green manure.
+	녹비가 없다.
 <</if>>
 <br><br>
-<<getouticon>><<link [[Leave|Farm Compost Bin]]>><<set $farm.compostToProduce to 0>><</link>>
+<<getouticon>><<link [[나간다|Farm Compost Bin]]>><<set $farm.compostToProduce to 0>><</link>>
 
 :: Farm Alex Hungover
 <<effects>>
@@ -4200,7 +4200,7 @@ You approach the composting bin.
 	<<case 3>>
 		<<He>>【은는】 잘 닿지 않아, 당신의 어깨를 잡는 것으로 만족한다.
 	<<case 4>>
-		<<He>> can't quite reach, so <<he>> settles on patting your side.
+		<<He>>【은는】 손이 잘 닿지 않아, 당신의 옆구리를 토닥이는 것으로 때운다.
 <</switch>>
 <br><br>
 

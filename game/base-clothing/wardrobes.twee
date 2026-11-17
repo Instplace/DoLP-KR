@@ -432,12 +432,12 @@
 	<<if $DoLPSpools isnot undefined and _repairCount gt 0>>
 		<div class="wardrobe-action">
 			<<if $DoLPSpools gte _repairCount>>
-				<<link [["Repair all (_timeString)"|$passage]]>>
+				<<link [["모두 수선한다 (_timeString)"|$passage]]>>
 					<<set $repairAll to true>>
 					<<updatewardrobe>>
 				<</link>><<ghousekeeping 1000>>
 			<<else>>
-				<span class="red">You only have $DoLPSpools spools, you need _repairCount to repair all.</span>
+				<span class="red">실패가 모자란다. (보유 $DoLPSpools / 필요 _repairCount)</span>
 			<</if>>
 		</div> |
 	<</if>>
@@ -581,8 +581,8 @@
 		{ id: 'under_lower', label: '속옷 하의' },
 		{ id: 'hands', label: '장갑' },
 		{ id: 'handheld', label: '휴대품' },
-		{ id: 'earrings', label: 'Earrings', disabled: !$ears_pierced },
-		{ id: 'rings', label: 'Rings' },
+		{ id: 'earrings', label: '귀걸이', disabled: !$ears_pierced },
+		{ id: 'rings', label: '반지' },
 		{ id: 'legs', label: '다리' },
 		{ id: 'feet', label: '신발' },
 	]>>
@@ -779,11 +779,11 @@
 	<<if _eIndextem.integrity gt (_eIndexntegrityMax * 9 / 10)>>
 		<<set $_output to "(_eIndexntegrity/_eIndexntegrityMax)">>
 	<<elseif _eIndextem.integrity gt (_eIndexntegrityMax * 5 / 10)>>
-		<<set $_output to "<span>(frayed) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
+		<<set $_output to "<span>(해짐) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
 	<<elseif _eIndextem.integrity gt (_eIndexntegrityMax * 2 / 10)>>
-		<<set $_output to "<span>(torn) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
+		<<set $_output to "<span>(찢어짐) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
 	<<else>>
-		<<set $_output to "<span>(tattered) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
+		<<set $_output to "<span>(너덜너덜함) (_eIndexntegrity/_eIndexntegrityMax)</span>">>
 	<</if>>
 <</silently>><<print $_output>><</widget>>
 
@@ -965,10 +965,10 @@
 				<</switch>>
 			<</if>>
 		<<case "rings">>
-			<<set _altLink to ["Put on right hand", "Put on left hand"]>>
+			<<set _altLink to ["오른손에 착용한다", "왼손에 착용한다"]>>
 		<<case "hands">>
 			<<switch $worn.hands.variable>>
-				<<default>><<set _altLink to ["Put on right wrist", "Put on left wrist"]>>
+				<<default>><<set _altLink to ["오른쪽 손목에 착용한다", "왼쪽 손목에 착용한다"]>>
 			<</switch>>
 		<<case "legs">>
 			<<switch $worn.legs.variable>>
@@ -1039,7 +1039,7 @@
 			<<if $DoLPSpools gte 1>>
 				<<set _timeNeeded to 10 - (1 * Math.round($housekeeping / 250))>>
 				<<set _timeString to getTimeString(_timeNeeded)>>
-				<<link [["Repair your _wornItem.name (_timeString)"|$passage]]>>
+				<<link [["당신의 _wornItem.name【을를】 수선한다 (_timeString)"|$passage]]>>
 					<<set $worn[_wardrobe_list].integrity to Math.min($worn[_wardrobe_list].integrity + 25, setup.clothes[_wardrobe_list][clothesIndex(_wardrobe_list,_wornItem)].integrity_max)>>
 					<<set _gain to Math.max(6 - (2 * Math.round($housekeeping / 200)), 2)>>
 					<<housekeeping _gain 1000>>
@@ -1048,7 +1048,7 @@
 					<<pass _timeNeeded>>
 				<</link>><<ghousekeeping 1000>>
 			<<else>>
-				You don't have any spools to repair your _wornItem.name with.
+				당신의 _wornItem.name【을를】 수선할 실패가 하나도 없다.
 			<</if>>
 		<</if>>
 	</div>
@@ -1160,7 +1160,7 @@
 				<<shoptraits>>
 			</div>
 			<<if $DoLPSpools isnot undefined>>
-				<<shopicon "tailor">> You have <span class="green">$DoLPSpools</span> spools.
+				<<shopicon "tailor">> 당신은 실패를 <span class="green">$DoLPSpools</span>개 가지고 있다.
 				<div class="no-numberify"><<repairClothing>></div>
 			<</if>>
 
@@ -1881,7 +1881,7 @@
 				<<link [[나간다|Mansion Party Quinn Change 2]]>><<cleanupOnWardrobeExit>><</link>>
 				<br>
 			<<elseif $phase is 446>>
-				<<link [[Exit|Mansion Clothing Wardrobe Exit]]>><<cleanupOnWardrobeExit>><</link>>
+				<<link [[나간다|Mansion Clothing Wardrobe Exit]]>><<cleanupOnWardrobeExit>><</link>>
 			<<elseif $avery_mansion_skyscraper_wardrobe>>
 				<<link [[나간다|Mansion Skyscraper Wardrobe Exit]]>><<cleanupOnWardrobeExit>><</link>>
 				<br>

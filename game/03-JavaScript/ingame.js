@@ -3464,9 +3464,9 @@ function hasSharpSenses(sense = "any") {
 		if (currentSkillValue("skulduggery") >= 600) return "숙련된 귀";
 	}
 	if (["instincts"].includes(sense)) {
-		if (V.wolfgirl >= 6 || (V.transformationParts.wolf.tail !== "disabled" && V.transformationParts.wolf.tail !== "hidden")) return "wolf instincts";
-		if (V.cat >= 6 || (V.transformationParts.cat.tail !== "disabled" && V.transformationParts.cat.tail !== "hidden")) return "cat instincts";
-		if (V.fox >= 6 || (V.transformationParts.fox.tail !== "disabled" && V.transformationParts.fox.tail !== "hidden")) return "fox instincts";
+		if (V.wolfgirl >= 6 || (V.transformationParts.wolf.tail !== "disabled" && V.transformationParts.wolf.tail !== "hidden")) return "늑대의 본능";
+		if (V.cat >= 6 || (V.transformationParts.cat.tail !== "disabled" && V.transformationParts.cat.tail !== "hidden")) return "고양이의 본능";
+		if (V.fox >= 6 || (V.transformationParts.fox.tail !== "disabled" && V.transformationParts.fox.tail !== "hidden")) return "여우의 본능";
 		if (V.dryad >= 6 || currentSkillValue("tending") >= 900) return "자연에 단련된 본능";
 	}
 	return false;

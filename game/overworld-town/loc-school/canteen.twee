@@ -135,9 +135,9 @@
 							<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Robin Whitney]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 							<br>
 						<<elseif $rng gte 80 and C.npc.Robin.trauma gte 10>>
-							You see Robin eating lunch alone like normal but today <<npc Robin>><<person1>><<he>> looks especially upset.
+							로빈이 평소처럼 혼자 점심을 먹고 있는 것이 보이지만, 오늘은 <<npc Robin>><<person1>><<he>>【이가】 유난히 속상해 보인다.
 							<br>
-							<<foodicon "eat">><<link [[Eat with Robin (0:20)|Canteen Lunch Robin Dolp]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<ltrauma>><<lstress>>
+							<<foodicon "eat">><<link [[로빈과 함께 식사한다 (0:20)|Canteen Lunch Robin Dolp]]>><<stress -6>><<trauma -2>><<pass 20>><<set $daily.school.lunchEaten to 1>><<npcincr Robin love 1>><</link>><<ltrauma>><<lstress>>
 							<br>
 						<<else>>
 							로빈이 점심을 먹고 있는 것이 보인다.

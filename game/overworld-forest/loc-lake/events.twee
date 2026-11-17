@@ -839,7 +839,7 @@
 	<br>
 <<elseif dangerEvent()>>
 	<<if $cool gte 160>>
-		A <<generatev1>><<person1>><<person>> approaches you. "H-hi," <<he>> says. "Umm, c-can I ask you something?" <<He>> takes a deep breath. "Will you kiss me? They said they'd leave me alone if I could get a kiss from you." <<He>> looks down and blushes. The students <<hes>> referring to watch from a rock not far away. You've seen them bully the <<person>> before.
+		<<generatev1>><<person1>><<person>>【이가】 당신에게 다가온다. "아, 안녕," <<he>>【이가】 말한다. "저, 저기, 뭐 좀 물어봐도 돼?" <<He>>【은는】 심호흡을 한다. "나한테 키스해 줄래? 네 키스를 받아 오면 날 내버려 두겠다고 했어." <<He>>【은는】 고개를 숙이고 얼굴을 붉힌다. <<he>>【이가】 말한 학생들이 멀지 않은 바위 위에서 지켜본다. 당신은 그들이 전에도 그 <<person>>【을를】 괴롭히는 것을 본 적이 있다.
 		<br><br>
 
 		<<link [[키스한다|Lake Kiss]]>><<status -10>><</link>><<promiscuous1>><<lcool>><<kissvirginitywarning>>

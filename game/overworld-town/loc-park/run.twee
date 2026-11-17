@@ -93,13 +93,13 @@
 			<br><br>
 			<<if $speech_attitude is "bratty">>
 				<<if currentSkillValue('physique') gte ($physiquesize / 7) * 4>>
-					Sure, you're tough, trim, and pretty much fearless,
+					물론 당신은 강인하고 탄탄하며 거의 두려움을 모르지만,
 				<<else>>
-					Sure, you're not one to back down from a fight,
+					물론 당신은 싸움에서 물러서는 사람이 아니지만,
 				<</if>>
-				but you're also not stupid. You're not going alone into the shadows to investigate a 'funny noise.'
+				바보도 아니다. 혼자 어둠 속으로 들어가 '이상한 소리'를 조사하러 갈 생각은 없다.
 				<br><br>
-				"Noooope." You mutter to yourself as you run on.
+				"싫어어어." 당신은 계속 달리며 혼잣말로 중얼거린다.
 			<<elseif $speech_attitude is "meek">>
 				심장이 쿵쾅거리고, 위험을 감지한 탓에 호기심은 자취를 감춘다. 눈동자가 빠르게 주변을 훑는다. 당신은 무슨 일이 생기기 전에 자리를 뜨기로 한다.
 			<<else>>

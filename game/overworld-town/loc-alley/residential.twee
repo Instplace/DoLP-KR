@@ -53,11 +53,11 @@
 	<<elseif $town_projects.thicket is 1 || ($historytrait gte 3 && ($town_projects.thicket lt 2 || $town_projects.thicket is undefined))>>
 		작지만 빽빽한 나무 군락 옆을 지나간다. 예전에는 휴식 공간이었지만, 오랫동안 방치되어 야생 가시덤불만 무성하게 자랐다. 사람들은 매일 아무 생각 없이 그곳을 지나친다.
 		<br><br>
-		You keep your distance. The brambles sway in the wind, and the large thorns look sharp. Juicy-looking blackberries crown their tops, far out of reach.
+		당신은 거리를 둔다. 가시덤불이 바람에 흔들리고, 커다란 가시들은 날카로워 보인다. 먹음직스러워 보이는 블랙베리가 꼭대기에 달려 있지만, 손이 닿지 않는 곳에 있다.
 		<<if $town_projects.thicket is 1>>
-			They remind you of the eyes beneath the pool in the hookah parlour.
+			물담배 가게의 연못 아래에 있던 눈들이 떠오른다.
 		<</if>>
-		<span class="green">An idea strikes you.</span> This could be a pleasant place if it were properly maintained.
+		<span class="green">좋은 생각이 떠오른다.</span> 제대로 관리만 한다면 쾌적한 장소가 될 수 있을 것이다.
 		<br><br>
 		<i>시청에 덤불에 대해 문의해 볼 수 있다.</i>
 		<br><br>
@@ -417,7 +417,7 @@
 		<<elseif Time.hour gte 9>>
 			바람이 불 때마다 나뭇잎이 땅으로 떨어진다.
 		<<else>>
-			You see a squirrel run up a trunk. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>You resist the urge to give chase and pounce at it.<</if>>
+			당신은 다람쥐 한 마리가 나무 몸통을 타고 달려 올라가는 것을 본다. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>쫓아가 덮치고 싶은 충동을 억누른다.<</if>>
 		<</if>>
 	<<elseif Weather.isSnow>>
 		<<if Time.schoolDay and Time.hour gte 16>>
@@ -425,7 +425,7 @@
 		<<elseif Time.hour is 12>>
 			노부부가 추위에 대비해 두툼하게 껴입고 벤치에서 함께 점심을 먹고 있다.
 		<<else>>
-			You see a squirrel run up a trunk. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>You resist the urge to give chase and pounce at it.<</if>>
+			당신은 다람쥐 한 마리가 나무 몸통을 타고 달려 올라가는 것을 본다. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>쫓아가 덮치고 싶은 충동을 억누른다.<</if>>
 		<</if>>
 	<<else>>
 		<<if Time.schoolDay and Time.hour gte 16>>
@@ -433,7 +433,7 @@
 		<<elseif Time.hour is 12>>
 			노부부가 벤치에서 함께 점심을 먹고 있다.
 		<<else>>
-			You see a squirrel run up a trunk. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>You resist the urge to give chase and pounce at it.<</if>>
+			당신은 다람쥐 한 마리가 나무 몸통을 타고 달려 올라가는 것을 본다. <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") or (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>>쫓아가 덮치고 싶은 충동을 억누른다.<</if>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -485,7 +485,7 @@
 	<span class="green">당신은 즙이 많아 보이는 열매들을 꽤 많이 모았다.</span>
 	<<tending_pick blackberry 60 180>>
 	<br><br>
-	<<link [[Pop some in your mouth|Residential Thicket]]>><<transform fox 1>><<set $foodstuff.blackberry.amount -= random(2,8)>><<endevent>><<stress -3>><</link>><<lstress>>
+	<<link [[입에 몇 개 넣는다|Residential Thicket]]>><<transform fox 1>><<set $foodstuff.blackberry.amount -= random(2,8)>><<endevent>><<stress -3>><</link>><<lstress>>
 	<br>
 	<<link [[다음|Residential Thicket]]>><<set $eventskip to 1>><</link>>
 	<br>

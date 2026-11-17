@@ -151,7 +151,7 @@
 				<br><br>
 
 				당신은 물러나려 하지만, <span class="pink">뺄 수 없다</span>. 아래를 내려다본다. 당신의 자지가 <<him>> 안에서 이상하게 느껴진다.
-				<span class="lewd">It looks different, like that of a <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>wolf<<else>>fox<</if>>, complete with a knot. And it's stuck.</span>
+				<span class="lewd">그것은 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>늑대<<else>>여우<</if>>의 것처럼 달라져 있고, 혹까지 달려 있다. 그리고 빠지지 않는다.</span>
 				<br><br>
 
 				<<if _gwylanStatus.includes("heat")>>
@@ -263,7 +263,7 @@
 				<br><br>
 
 				당신은 물러나려 하지만, <span class="pink">뺄 수 없다</span>. 아래를 내려다본다. 당신의 자지가 <<him>> 안에서 이상하게 느껴진다.
-				<span class="lewd">It looks different, like that of a <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>wolf<<else>>fox<</if>>, complete with a knot. And it's stuck.</span>
+				<span class="lewd">그것은 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>늑대<<else>>여우<</if>>의 것처럼 달라져 있고, 혹까지 달려 있다. 그리고 빠지지 않는다.</span>
 				<br><br>
 
 				<<if _gwylanStatus.includes("wantsPregnancy") and $settings.pregnancySpeechEnabled and !npcIsPregnant("Gwylan") and $internalejac>>
@@ -496,7 +496,7 @@
 			<</if>>
 			<br><br>
 
-			You try to withdraw, <span class="pink">but you can't</span>. You look down. <span class="lewd"><<His>> penis looks different, like that of a <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>wolf<<else>>fox<</if>>, complete with a knot. And it's stuck.</span>
+			당신은 빼내려 하지만, <span class="pink">빠지지 않는다</span>. 아래를 내려다본다. <span class="lewd"><<His>> 자지는 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>늑대<<else>>여우<</if>>의 것처럼 달라져 있고, 혹까지 달려 있다. 그리고 빠지지 않는다.</span>
 			<br><br>
 
 			<<if _gwylanStatus.includes("wantsPregnancy") and $settings.pregnancySpeechEnabled and !playerIsPregnant()>>
@@ -609,7 +609,7 @@
 			<</if>>
 			<br><br>
 
-			You try to withdraw, <span class="pink">but you can't</span>. You look down. <span class="lewd"><<His>> penis looks different, like that of a <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>wolf<<else>>fox<</if>>, complete with a knot. And it's stuck.</span>
+			당신은 빼내려 하지만, <span class="pink">빠지지 않는다</span>. 아래를 내려다본다. <span class="lewd"><<His>> 자지는 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>늑대<<else>>여우<</if>>의 것처럼 달라져 있고, 혹까지 달려 있다. 그리고 빠지지 않는다.</span>
 			<br><br>
 
 			<<if _gwylanStatus.includes("heat")>>
@@ -742,7 +742,7 @@
 			<br><br>
 
 			당신은 물러나려 하지만, <span class="pink">뺄 수 없다</span>. 아래를 내려다본다. 당신의 자지가 <<him>> 안에서 이상하게 느껴진다.
-			<span class="lewd">It looks different, like that of a <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>wolf<<else>>fox<</if>>, complete with a knot. And it's stuck.</span>
+			<span class="lewd">그것은 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>늑대<<else>>여우<</if>>의 것처럼 달라져 있고, 혹까지 달려 있다. 그리고 빠지지 않는다.</span>
 			<br><br>
 
 			<<if _gwylanStatus.includes("heat")>>

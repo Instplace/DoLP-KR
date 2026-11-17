@@ -462,3 +462,27 @@
 - 밈 위업(feat): 원문 수위를 넘기지 않고 옮기되, 인종을 비하하는 뉘앙스는 덧붙이지 않는다. 뜻이 통하지 않는 말장난은 풀어 쓴다.
 - 정리 이벤트의 욕설: GLOSSARY-body-combat.md 표준(새끼, 걸레, 씨발)을 따른다.
 - 민감도 단계와 Brawling: 기반 게임 용어가 있으면 그것을 쓰고, 없으면 이 표의 제안(난투 등)을 쓴다.
+
+## 18. 번역하며 정한 표기 (2026-11-17, 1차 번역)
+
+| 영어 | 한국어 | 비고 |
+| --- | --- | --- |
+| Tribal tattoos | 부족 문양 문신 | |
+| Whitening salon | 미백 살롱 | |
+| Jewellery Boutique / Store | 보석 부티크 / 보석상 | |
+| HBSC Bank Branch | HBSC 은행 지점 | |
+| MMA Gym | MMA 체육관 | MMA는 로마자 유지 |
+| Lockpick Training Set (Basic/Intermediate/Advanced/Master/Lockpick Lawyer) | 자물쇠 따기 연습 세트 (기본/중급/고급/마스터/락픽 로이어) | |
+| spools (수선 실) | 실패 | |
+| Stability (전투 균형) | 균형 | |
+| reverse rape | 역강간 | |
+| feint / haymaker / hook punch | 페인트 동작 / 대포알 같은 주먹 / 훅 펀치 | |
+| cocksleeve / cumdump | 육변기 / 정액받이 | 기존 번역과 같음 |
+| kit / vixen (여우) | 새끼 여우 / 암여우 | |
+| Okami / Kitsune / Seraphim / Cherub | 오카미 / 키츠네 / 세라핌 / 케루브 | |
+| Bunny / Bear girl | 바니<<girl>> / 곰<<girl>>, 무리는 바니걸과 바니보이들 | |
+| Poppy endearments (darling, love, sweet thing, my jewel, pretty thing) | 자기야, 내 사랑, 귀염둥이, 내 보석, 예쁜이 | `_poppyTerm` 값 |
+| Some Orphan (기본 칭호) | 평범한 고아 | nicknames.twee와 fame.twee 비교문을 함께 바꿈 |
+| Moor Castle / Forest Outskirts / Farmlands | 황야의 성 / 숲 외곽 / 농지 | |
+| Amazoom | 아마줌 | |
+| crimson hound / silver fox / high elk (NPC 칭호) | 진홍빛 사냥개 / 은여우 / 고귀한 엘크 | getNpcTitleKr |

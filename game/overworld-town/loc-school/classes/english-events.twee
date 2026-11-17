@@ -436,7 +436,7 @@
 				<br><br>
 				도렌은 슬픈 듯 고개를 젓는다. "더 잘해야 한단다." <<detention 1>><<gdelinquency>>
 			<<elseif $speech_attitude is "polite" or $speech_attitude is "flamboyant">>
-				"I apologize <<sir>>." I tried to experiment and failed. <<status -4>><<lcool>>
+				"죄송해요, <<sir>>." 실험을 해 보려다 실패했다. <<status -4>><<lcool>>
 				<br><br>
 				도렌은 슬픈 듯 고개를 젓는다. "더 잘해야 한단다." <<detention 1>><<gdelinquency>>
 			<<elseif $speech_attitude is "bratty">>

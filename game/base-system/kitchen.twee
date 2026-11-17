@@ -851,25 +851,25 @@ Should probably be removed once said feature has been implemented
                 <<if !$weekly.theft[$location][_keyObject]>>
                     <<foodstufficon _keyObject>>
                     <<set _resultPassage = $location + " Kitchen Steal Result">>
-                    <<link "Steal <<recipe_name _keyObject 'plural'>>" _resultPassage>>
+                    <<link "<<recipe_name _keyObject 'plural'>>【을를】 훔친다" _resultPassage>>
                         <<set $phase = _keyObject.toString()>>
                         <<set $weekly.theft[$location][_keyObject] = true>>
                     <</link>><br>
                 <<else>>
-                    <span class="blue">If you steal any more <<recipe_name _keyObject 'plural'>>, 
+                    <span class="blue"><<recipe_name _keyObject 'plural'>>【을를】 더 훔치면,
 					<<switch $location>>
 					<<case "home">>
-						Bailey will surely notice.
+						베일리가 분명 알아챌 것이다.
 					<<case "temple">>
-						River will surely notice.
+						리버가 분명 알아챌 것이다.
 					<<case "school">>
-						the teachers will know it was you.
+						선생님들이 당신의 짓인 줄 알게 될 것이다.
 					<<case "avery_mansion">>
-						Avery will notice too many ingredients are missing.
+						에이버리가 재료가 너무 많이 사라진 것을 알아챌 것이다.
 					<<case "cabin">>
-						Eden will realize too much <<recipe_name _keyObject>> is missing.
+						에덴이 <<recipe_name _keyObject>>【이가】 너무 많이 사라졌다는 걸 알아챌 것이다.
 					<<default>>
-						you will surely be noticed.
+						분명 들키고 말 것이다.
 					<</switch>>
 					</span>
 					<br>
@@ -879,17 +879,17 @@ Should probably be removed once said feature has been implemented
     <<else>>
 		<<switch $location>>
 		<<case "home">>
-			<span class="purple">Bailey is keeping a close eye on you. Stealing anything would be a suicide.</span><br>
+			<span class="purple">베일리가 당신을 예의주시하고 있다. 지금 뭔가를 훔치는 건 자살행위일 것이다.</span><br>
 		<<case "temple">>
-			<span class="purple">The monks are keeping a close eye on you. Stealing anything now would be stupid.</span><br>
+			<span class="purple">수도사들이 당신을 예의주시하고 있다. 지금 뭔가를 훔치는 건 어리석은 짓이다.</span><br>
 		<<case "school">>
-			<span class="purple">The teachers know of your misbehaviour. Stealing anything now would be stupid.</span><br>
+			<span class="purple">선생님들이 당신의 못된 짓을 알고 있다. 지금 뭔가를 훔치는 건 어리석은 짓이다.</span><br>
 		<<case "avery_mansion">>
-			<span class="purple">Avery caught you red-handed. Taking anything more would be suspicious.</span><br>
+			<span class="purple">에이버리가 당신을 현행범으로 붙잡았다. 더 가져가면 의심을 살 것이다.</span><br>
 		<<case "cabin">>
-			<span class="purple">Eden is keeping a close eye on you. Stealing anything would be stupid.</span><br>
+			<span class="purple">에덴이 당신을 예의주시하고 있다. 지금 뭔가를 훔치는 건 어리석은 짓이다.</span><br>
 		<<default>>
-			<span class="purple">You were caught red-handed. Stealing anything would be stupid.</span><br>
+			<span class="purple">당신은 현행범으로 걸렸다. 지금 뭔가를 훔치는 건 어리석은 짓이다.</span><br>
 		<</switch>>
     <</if>>
     <br>

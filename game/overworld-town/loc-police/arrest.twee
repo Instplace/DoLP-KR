@@ -278,7 +278,7 @@ Caught with crime lt 2500 while already performing community service: Pillory. *
 	당신은 따른다. <<him>>【이가】 허리띠에서 무언가를 빼는 소리가 들린다. <<He>>【은는】 그것을 당신의 목에 두르고, 딸깍 잠그는 소리가 들린다. "이 목걸이에는 충격 기능이 있다. 네가 계속 협조하도록 보장하기 위해서지. 형기를 다 채우면 풀어줄 거다."
 	<br><br>
 <<elseif $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-	You comply. "Oh," <<he>> says. "You're already collared, wait what does it say" <<he>> looks puzzled "Whitney huh" <<he>> smirks. "Makes sense that you hang out <<nnpc_his "Whitney">>"
+	당신은 따른다. "어라." <<he>>【이가】 말한다. "이미 목걸이를 차고 있네. 잠깐, 뭐라고 적혀 있지?" <<he>>【은는】 어리둥절한 표정을 짓는다. "휘트니라... 그렇군." <<he>>【은는】 씩 웃는다. "네가 <<nnpc_his "Whitney">> 곁에서 어울려 다닌다는 게 이해가 되는군."
 <<else>>
 	<<set $worn.neck.collaredpolice to 1>>
 	당신은 따른다. "어라." <<he>>【이가】 말한다. "이미 목걸이를 차고 있군." <<He>>【은는】 당신 바로 뒤로 걸어와 목걸이를 더 자세히 살핀다. "충격 기능도 작동하는 것 같군." <<He>>【은는】 목줄을 채운다. "모든 게 제대로 되어 있군. 형기를 다 채우면 풀어줄 거다."

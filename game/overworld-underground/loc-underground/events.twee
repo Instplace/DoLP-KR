@@ -1550,7 +1550,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "special")>>
 	"에-에이버리! 제-제발 절 구해주세요!" 당신은 울부짖는다.
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"A-Avery! Please help me!" you plead.
+	"에-에이버리! 제발 도와주세요!" 당신이 애원한다.
 <<elseif $speech_attitude is "bratty">>
 	"에이버리! 여기서 꺼내줘!" 당신은 소리친다.
 <<else>>

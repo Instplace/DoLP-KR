@@ -5,19 +5,19 @@
 		<<if ($consensual isnot 1 or $combatExtended.reverseRapeStart is 1) and ($fightTargets is undefined or $fightTargets.includes($lefttarget))>>
 			<<set _leftaction["때린다"] to "lefthit">>
 			<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1>>
-				<<set _leftaction["Umbrella"] to "leftumbrella">>
+				<<set _leftaction["우산으로 막는다"] to "leftumbrella">>
 			<</if>>
 			<<if $combatExtended.blocking is 1>>
-				<<set _leftaction["Block"] to "leftblock">>
+				<<set _leftaction["막는다"] to "leftblock">>
 			<</if>>
 			<<if $combatExtended.countering is 1>>
-				<<set _leftaction["Counter"] to "leftcounter">>
+				<<set _leftaction["받아친다"] to "leftcounter">>
 			<</if>>
 			<<if $combatExtended.feinting is 1>>
-				<<set _leftaction["Feint"] to "leftfeint">>
+				<<set _leftaction["페이크를 건다"] to "leftfeint">>
 			<</if>>
 			<<if $combatExtended.hookpunching is 1 and $combatExtended.stabilityLost is 0>>
-				<<set _leftaction["Hook Punch"] to "lefthookpunch">>
+				<<set _leftaction["훅을 날린다"] to "lefthookpunch">>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -25,8 +25,8 @@
 		<<set _leftaction["뒤로 감춘다"] to "behind">>
 		<<leftcoverface>>
 		<<if $orgasmCum gte 1>>
-			<<set _leftaction["Fold"] to "leftfold">>
-			<<set _leftaction["Grip"] to "leftgrip">>
+			<<set _leftaction["접는다"] to "leftfold">>
+			<<set _leftaction["움켜쥔다"] to "leftgrip">>
 		<</if>>
 
 	<</if>>
@@ -353,8 +353,8 @@
 
 <<widget "leftstoporal">>
 	<<if $lefttarget isnot "self" and $NPCList[$lefttarget].mouth and ($NPCList[$lefttarget].mouth.startsWith("penis") or $NPCList[$lefttarget].mouth.startsWith("vagina"))>>
-		<<set $_actionText to ($consensual == 1 ? "Take " : "Push ") + $NPCList[$lefttarget].pronouns.his + " face off your " + 
-			($NPCList[$lefttarget].mouth.startsWith("penis") ? "penis" : "pussy")>>
+		<<set $_actionText to ($consensual == 1 ? "" : "밀어서 ") + KR.getPronounKr("his", $NPCList[$lefttarget].pronouns.his) + " 얼굴을 당신의 " +
+			($NPCList[$lefttarget].mouth.startsWith("penis") ? "자지" : "보지") + "에서 떼어낸다">>
 		<<set _leftaction[$_actionText] to "stoporal">>
 	<</if>>
 <</widget>>
@@ -420,19 +420,19 @@
 		<<if ($consensual isnot 1 or $combatExtended.reverseRapeStart is 1) and ($fightTargets is undefined or $fightTargets.includes($righttarget))>>
 			<<set _rightaction["때린다"] to "righthit">>
 			<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1>>
-				<<set _rightaction["Umbrella"] to "rightumbrella">>
+				<<set _rightaction["우산으로 막는다"] to "rightumbrella">>
 			<</if>>
 			<<if $combatExtended.blocking is 1>>
-				<<set _rightaction["Block"] to "rightblock">>
+				<<set _rightaction["막는다"] to "rightblock">>
 			<</if>>
 			<<if $combatExtended.countering is 1>>
-				<<set _rightaction["Counter"] to "rightcounter">>
+				<<set _rightaction["받아친다"] to "rightcounter">>
 			<</if>>
 			<<if $combatExtended.feinting is 1>>
-				<<set _rightaction["Feint"] to "rightfeint">>
+				<<set _rightaction["페이크를 건다"] to "rightfeint">>
 			<</if>>
 			<<if $combatExtended.hookpunching is 1 and $combatExtended.stabilityLost is 0>>
-				<<set _rightaction["Hook Punch"] to "righthookpunch">>
+				<<set _rightaction["훅을 날린다"] to "righthookpunch">>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -440,8 +440,8 @@
 		<<set _rightaction["뒤로 감춘다"] to "behind">>
 		<<rightcoverface>>
 		<<if $orgasmCum gte 1>>
-		<<set _rightaction["Fold"] to "rightfold">>
-		<<set _rightaction["Grip"] to "rightgrip">>
+		<<set _rightaction["접는다"] to "rightfold">>
+		<<set _rightaction["움켜쥔다"] to "rightgrip">>
 	<</if>>
 
 	<</if>>
@@ -767,8 +767,8 @@
 
 <<widget "rightstoporal">>
 	<<if $righttarget isnot "self" and $NPCList[$righttarget].mouth and ($NPCList[$righttarget].mouth.startsWith("penis") or $NPCList[$righttarget].mouth.startsWith("vagina"))>>
-		<<set $_actionText to ($consensual == 1 ? "Take " : "Push ") + $NPCList[$righttarget].pronouns.his + " face off your " + 
-			($NPCList[$righttarget].mouth.startsWith("penis") ? "penis" : "pussy")>>
+		<<set $_actionText to ($consensual == 1 ? "" : "밀어서 ") + KR.getPronounKr("his", $NPCList[$righttarget].pronouns.his) + " 얼굴을 당신의 " +
+			($NPCList[$righttarget].mouth.startsWith("penis") ? "자지" : "보지") + "에서 떼어낸다">>
 		<<set _rightaction[$_actionText] to "stoporal">>
 	<</if>>
 <</widget>>
@@ -893,7 +893,7 @@
 		<</if>>
 		
 		<<if ($choketrait or ($chokeorgasm gte 1) or ($awarelevel gte 2)) and !$neckuse>>
-			<<set _handGuideOptions["your neck"] to "neck">>
+			<<set _handGuideOptions["목"] to "neck">>
 		<</if>>
 
 		<<if Object.keys(_handGuideOptions).length gt 0>>

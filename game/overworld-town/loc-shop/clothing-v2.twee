@@ -718,7 +718,7 @@
 			<</if>>
 			<<shopBuyItemStatus _wardrobeSlots>>
 			<<if ["earrings"].includes($clothingShopSlot) and !$ears_pierced>>
-				<span class="purple">You can't wear earrings without your ears pierced.</span>
+				<span class="purple">귀를 뚫지 않으면 귀걸이를 착용할 수 없습니다.</span>
 			<<elseif _spaceLeft < 1>>
 				<span class="red">옷장이 꽉 찼습니다.</span>
 				<br>

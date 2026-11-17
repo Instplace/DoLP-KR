@@ -8,19 +8,19 @@
 <<switch $speech_attitude>>
 	<<case "meek" "shy">>
 		<<if $speech_attitude_special is "docile">>
-			"I-it was in a maze out in the farmland, <<sir>>" you say. "V-very scary place..."
+			"농-농장 지대에 있는 미로에서요, <<sir>>." 당신은 말한다. "무-무서운 곳이었어요..."
 		<<else>>
 			"농장 지대에 있는 미로에서요." 당신은 말한다. "무서운 곳이었어요."
 		<</if>>
 	<<case "bratty">>
 		<<if $speech_attitude_special is "cruel">>
-			"It was in a maze out in the farmland, somewhere almost as old as you." You smirk, ignoring the glare Winter gives you.
+			"농장 지대에 있는 미로에서요. 거의 선생님만큼이나 오래된 곳이었죠." 당신은 윈터가 쏘아보는 시선을 무시하고 씩 웃는다.
 		<<else>>
 			"농장 지대에 있는 미로에서요. 거의... 만큼이나 오래된 곳이었죠." 당신은 그 말을 끝내지 않는 게 낫겠다고 생각한다.
 		<</if>>
 		"농장 지대에 있는 미로에서요. 거의... 만큼이나 오래된 곳이었죠." 당신은 그 말을 끝내지 않는 게 낫겠다고 생각한다.
 	<<case "polite" "flamm">>
-		"It was in a maze out in the farmland, <<sir>> Winter" you say. "Very old place."
+		"농장 지대에 있는 미로에서요, 윈터 <<sir>>." 당신은 말한다. "아주 오래된 곳이에요."
 	<<default>>
 		"농장 지대에 있는 미로에서요." 당신은 말한다. "뱀도 엄청 많았어요."
 <</switch>>

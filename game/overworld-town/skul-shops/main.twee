@@ -209,13 +209,13 @@
 	<<wearProp "lockpick">>
 	<span class="green">자물쇠는 쉽게 딸 수 있어 보인다.</span>
 	<br><br>
-	<<lockicon "pick">><<link [[Pick it (0:10)|Bike Depot Register Sneak]]>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
+	<<lockicon "pick">><<link [[딴다 (0:10)|Bike Depot Register Sneak]]>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
 	<br>
 <<else>>
 	<span class="red">이 자물쇠는 당신 실력으로는 딸 수 없어 보인다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<getouticon>><<link [[Leave|Bike Depot]]>><</link>>
+<<getouticon>><<link [[떠난다|Bike Depot]]>><</link>>
 <br>
 
 :: Bike Depot Register Sneak
@@ -235,9 +235,9 @@
 <<if $rng gte 86>>
 	<<skulshopevents>>
 <<else>>
-	<<link [[Take it|Bike Depot]]>><<set $money += $tip>><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Bike Depot]]>><<set $money += $tip>><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
 	<br>
-	<<link [[Leave it|Bike Depot]]>><</link>>
+	<<link [[놔둔다|Bike Depot]]>><</link>>
 <</if>>
 <br>
 
@@ -815,14 +815,14 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있어 보인다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[Pick it (0:10)|MMA Gym Register Sneak]]>><<handheldon>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
+		<<lockicon "pick">><<link [[딴다 (0:10)|MMA Gym Register Sneak]]>><<handheldon>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">이 자물쇠는 당신 실력으로는 딸 수 없어 보인다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<getouticon>><<link [[Leave|MMA Gym]]>><<handheldon>><</link>>
+<<getouticon>><<link [[떠난다|MMA Gym]]>><<handheldon>><</link>>
 <br>
 
 :: MMA Gym Register Sneak
@@ -843,9 +843,9 @@
 <<if $rng gte 86>>
 	<<skulshopevents>>
 <<else>>
-	<<link [[Take it|MMA Gym]]>><<money $tip "thievery">><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|MMA Gym]]>><<money $tip "thievery">><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
 	<br>
-	<<link [[Leave it|MMA Gym]]>><</link>>
+	<<link [[놔둔다|MMA Gym]]>><</link>>
 	<br>
 <</if>>
 
@@ -862,14 +862,14 @@
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있어 보인다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[Pick it (0:10)|Jewellery Store Register Sneak]]>><<handheldon>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
+		<<lockicon "pick">><<link [[딴다 (0:10)|Jewellery Store Register Sneak]]>><<handheldon>><<pass 10>><<crimeUp 10 "thievery">><</link>><<crime "thievery">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">이 자물쇠는 당신 실력으로는 딸 수 없어 보인다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<getouticon>><<link [[Leave|Jewellery Store]]>><<handheldon>><</link>>
+<<getouticon>><<link [[떠난다|Jewellery Store]]>><<handheldon>><</link>>
 <br>
 
 :: Jewellery Store Register Sneak
@@ -886,7 +886,7 @@
 <<if $rng gte 86>>
 	<<skulshopevents>>
 <<else>>
-	<<link [[Take it|Jewellery Store]]>><<money $tip "thievery">><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
+	<<link [[가져간다|Jewellery Store]]>><<money $tip "thievery">><<crimeUp `$tip / 100` "thievery">><</link>><<crime "thievery">>
 	<br>
-	<<link [[Leave it|Jewellery Store]]>><</link>>
+	<<link [[놔둔다|Jewellery Store]]>><</link>>
 <</if>>

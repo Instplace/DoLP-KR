@@ -146,7 +146,7 @@
 	<label><<radiobutton "$pubfameLower" false autocheck>> 높임</label>
 	<br><br>
 
-	Boost:
+	부스트:
 	<label><<radiobutton "$pubfameMoney" 0 autocheck>> £0</label>
 	<<if $money gte 50000>> |
 		<label><<radiobutton "$pubfameMoney" 1 autocheck>> £500 (x1.5)</label>
@@ -597,7 +597,7 @@
 			)>>
 		<</if>>
 		<<silently>>
-			<<overworld_nickname_dolp>><<if !_text_output.includes("some orphan")>><<set _hello.pushUnique("Hello again, <span class='teal'><<overworld_nickname_dolp>></span>.")>><</if>>
+			<<overworld_nickname_dolp>><<if !_text_output.includes("평범한 고아")>><<set _hello.pushUnique('"또 만났네, <span class="teal"><<overworld_nickname_dolp>></span>."')>><</if>>
 			<<if $fame.scrap gte 400>><<set _hello.pushUnique('"또 만났네, <span class="pink"><<underworld_nickname>></span>."')>><</if>>
 		<</silently>>
 		<<print _hello.random()>>
@@ -877,9 +877,9 @@
 <<if $phase is 1>>
 	당신은 미키에게 이번 부탁은 그만두겠다고 말한다.
 <</if>>
-"Shame," Mickey 
+"아쉽네." 미키
 <<if $pubfameMoney gte 1>>
-	says, handing you your
+	【이가】 말하며 당신이 맡긴
 	<<if $pubfameMoney is 1>>
 		<<printmoney 50000>><<money 50000 "pubFameBoost">>
 	<<elseif $pubfameMoney is 2>>
@@ -887,13 +887,13 @@
 	<<elseif $pubfameMoney is 4>>
 		<<printmoney 200000>><<money 200000 "pubFameBoost">>
 	<</if>>
-	등에 댄다.
+	【을를】 돌려준다.
 <<else>>
 	【이가】 말한다.
 <</if>>
 
 <<set $pubfameMoney to 0>>
-"If that's all, I have things to do."
+"볼일 다 봤으면 난 바빠서 이만."
 <br><br>
 
 <<if !$pubfame.declined and $phase is 0>>
@@ -907,7 +907,7 @@
 	<<link [[다음|Pub Fame]]>><<run delete $pubfame.timer>><<set $pubfame.status to "ready">><<set $phase to 1>><</link>>
 <<else>>
 	<<if $pubfameMoney gte 1>>
-		They hand you your
+		그들이 당신이 맡긴
 		<<if $pubfameMoney is 1>>
 			<<printmoney 50000>><<money 50000 "pubFameBoost">>
 		<<elseif $pubfameMoney is 2>>
@@ -916,11 +916,11 @@
 			<<printmoney 200000>><<money 200000 "pubFameBoost">>
 		<</if>>
 		<<set $pubfameMoney to 0>>
-		back before closing 
+		【을를】 돌려주고
 	<<else>>
-		They close 
+		그들이
 	<</if>>
-	the door. You walk back to Landry's table. "What's your plan now?" <<he>> asks.
+	문을 닫는다. 당신은 랜드리의 테이블로 돌아간다. "이제 어쩔 셈이야?" <<he>>【이가】 묻는다.
 	<br><br>
 
 	<<endevent>><<npc Landry>><<person1>>

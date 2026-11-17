@@ -191,15 +191,15 @@
 		<</if>>
 		당신은 간판을 들고 해변을 따라 걷는다.
 		<br><br>
-		You see people read the 
+		사람들이 표지판을 읽는 것이 보인다.
 		<<if 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 6>>
-			but it's your charm and reputation that really pull the crowd. A large group gathers around Robin's Lemonade stand, drawn in by your presence.
+			하지만 정말로 사람들을 끌어모으는 건 당신의 매력과 명성이다. 당신의 존재에 이끌린 많은 사람이 로빈의 레모네이드 가판대 주위로 모여든다.
 		<<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 4>>
-			sign, but it's clear your looks and growing fame are what turn heads. A steady stream of customers heads toward Robin's stand.
+			하지만 시선을 끄는 건 분명 당신의 외모와 커져 가는 명성이다. 꾸준한 손님의 행렬이 로빈의 가판대로 향한다.
 		<<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 2>>
-			sign, and a few people glance your way with interest. Your appearance and name seem to give them the nudge they need to check out the stand.
+			몇몇은 흥미롭게 당신 쪽을 힐끗 쳐다본다. 당신의 외모와 이름이 그들이 가판대를 구경해 보도록 등을 떠미는 듯하다.
 		<<else>>
-			but don't know if any are convinced by it.
+			하지만 그걸 보고 마음이 움직인 사람이 있는지는 알 수 없다.
 		<</if>>
 		<<famebusiness 1>><<set $robinmoney += Math.round(5 * (1 + (($beauty / 5000) + (fameTotal() / 2000))))>>
 		<br><br>
@@ -463,19 +463,19 @@
 
 <<if $seductionrating gte $seductionrequired>>
 	<<if 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 6>>
-		You command attention with every step, flirtation flowing like magic. The crowd practically stampedes to Robin's stand. When you return, Robin's eyes sparkle with adoration.
+		당신은 걸음마다 시선을 사로잡고, 추파가 마법처럼 흘러나온다. 군중이 사실상 로빈의 가판대로 몰려간다. 당신이 돌아오자 로빈의 눈이 흠모로 반짝인다.
 		<br><br>
-		"You're unbelievable," <<he>> says softly, stepping close. "I don't even care how you did it—I'm just glad you're here." <<He>> plants a lingering kiss on your cheek.
+		"넌 정말 믿기지 않아." <<he>>【이가】 가까이 다가서며 부드럽게 말한다. "어떻게 했는지는 상관도 없어—그냥 네가 여기 있어서 기뻐." <<He>>【은는】 당신의 뺨에 오래도록 입을 맞춘다.
 		<<glove>><<npcincr Robin love 6>>
 	<<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 4>>
-		You dazzle the crowd with playful charm, every word and glance landing perfectly. People can't resist following your lead to Robin's stand. When you return, <<hes>> flushed and flustered.
+		당신은 장난기 어린 매력으로 군중을 사로잡고, 말과 눈빛 하나하나가 완벽하게 꽂힌다. 사람들은 당신을 따라 로빈의 가판대로 향하는 걸 거부하지 못한다. 당신이 돌아오자 <<hes>> 얼굴이 붉어진 채 어쩔 줄 몰라 한다.
 		<br><br>
-		"That was... wow." <<He>> leans in, giving you a warm kiss on the cheek. "I've never seen anything like that. You're amazing."
+		"방금 그건... 와." <<He>>【은는】 몸을 기울여 당신의 뺨에 따뜻하게 입을 맞춘다. "그런 건 처음 봤어. 넌 정말 대단해."
 		<<glove>><<npcincr Robin love 4>>
 	<<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 2>>
-		You slip into the crowd with a confident sway, weaving compliments and flirtation like a natural. When you return to Robin, the stand is bustling. <<He>> watches you with awe.
+		당신은 자신감 넘치는 걸음걸이로 군중 속에 섞여 들어가, 타고난 사람처럼 칭찬과 추파를 엮어 낸다. 로빈에게 돌아오자 가판대는 북적이고 있다. <<He>>【은는】 경외감 어린 눈으로 당신을 바라본다.
 		<br><br>
-		"You're incredible," <<he>> murmurs, then quickly kisses your cheek. "I couldn't have done this without you."
+		"넌 정말 굉장해." <<he>>【이가】 중얼거리고는 재빨리 당신의 뺨에 입을 맞춘다. "네가 없었으면 이렇게 못 했을 거야."
 		<<glove>><<npcincr Robin love 2>>
 	<<else>>
 		당신은 좀 더 적극적으로 해 보기로 하고, 잠재 고객에게 추파를 던지며 매력으로 경계를 허문다. 로빈에게 돌아오자 줄이 생겨 있다. <<He>>【은는】 당신에게 미소 짓는다.
@@ -487,23 +487,23 @@
 	<br><br>
 	<<lemonade_stand_options>>
 <<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 6>>
-	Your looks and fame do more than turn heads—they magnetize them. You barely have to do anything as people flock toward Robin's stand, clearly drawn by your presence.
+	당신의 외모와 명성은 시선을 끄는 정도를 넘어 자석처럼 끌어당긴다. 사람들이 당신의 존재에 이끌려 로빈의 가판대로 몰려들기 때문에, 당신은 거의 아무것도 할 필요가 없다.
 	<br><br>
-	Robin's eyes widen as <<he>> scrambles to serve the growing crowd. "This is amazing!" <<he>> says breathlessly. "How did you do this by just <b>standing</b> there?"
+	로빈은 눈이 휘둥그레져서 늘어나는 손님들을 상대하느라 허둥댄다. "이거 굉장해!" <<he>>【이가】 숨을 헐떡이며 말한다. "그냥 거기 <b>서 있기만</b> 했는데 어떻게 이런 거야?"
 	<<glove>><<npcincr Robin love 3>><<ltrauma>><<lstress>><<trauma -3>><<stress -6>>
 	<br><br>
 	<<lemonade_stand_options>>
 <<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 4>>
-	You don't need to say a word. People glance at you, then drift toward the stand as if compelled. Your charm and growing reputation speak for themselves.
+	당신은 한마디도 할 필요가 없다. 사람들은 당신을 힐끗 보더니 무언가에 홀린 듯 가판대 쪽으로 흘러간다. 당신의 매력과 커져 가는 명성이 모든 걸 말해 준다.
 	<br><br>
-	Robin glances at you in amazement. "You're like a walking signpost," <<he>> says with a small laugh. "No, better than that. Thank you."
+	로빈이 놀란 얼굴로 당신을 힐끗 본다. "넌 걸어 다니는 표지판 같아." <<he>>【이가】 작게 웃으며 말한다. "아니, 그보다 더 나아. 고마워."
 	<<glove>><<npcincr Robin love 2>><<ltrauma>><<lstress>><<trauma -3>><<stress -6>>
 	<br><br>
 	<<lemonade_stand_options>>
 <<elseif 1 + (($beauty / 5000) + (fameTotal() / 2000)) gte 2>>
-	You draw a few looks—enough to pique some curiosity. A couple of people wander over to Robin's stand, their interest clearly sparked by your appeal.
+	당신은 몇몇 시선을 끈다. 약간의 호기심을 불러일으키기엔 충분하다. 두어 명이 로빈의 가판대 쪽으로 어슬렁어슬렁 다가가는데, 당신의 매력에 관심이 생긴 게 분명하다.
 	<br><br>
-	Robin gives you a small smile. "Hey, every bit helps, right? I saw the way they looked at you."
+	로빈이 작게 미소 짓는다. "있잖아, 조금이라도 도움이 되잖아, 그렇지? 사람들이 널 쳐다보는 거 봤어."
 	<<glove>><<npcincr Robin love 1>><<ltrauma>><<lstress>><<trauma -3>><<stress -6>>
 	<br><br>
 	<<lemonade_stand_options>>

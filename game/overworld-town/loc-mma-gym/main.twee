@@ -1,6 +1,6 @@
 :: MMA Gym
 <<set $outside to 0>><<set $location to "mma_gym">><<effects>>
-You are in the MMA Gym.
+당신은 MMA 체육관 안에 있다.
 /* Here you can pay for lessons to improve your fighting skill. They also offer classes on footwork, striking, kicking and conditioning. The instructor is a grizzled veteran who grew up in town, hardened by years of street brawls and cage fights. Their teaching style is all about tough love—no hand-holding, no sugarcoating, just brutal honesty and hard-earned wisdom. */
 <br><br>
 
@@ -11,7 +11,7 @@ You are in the MMA Gym.
 		<<orgasmLocation "mmaGym">>
 	<</if>>
     <<if Time.hour is $closinghour>>
-		It's closing time. The receptionist is herding everyone outside.<<if $exposed gte 1>>Panic swells within you as you realise how exposed you'll be should you be found in this state of dress.<</if>>
+		폐점 시간이다. 접수원이 모두를 밖으로 내몰고 있다.<<if $exposed gte 1>>이런 옷차림으로 발각된다면 얼마나 노출될지 깨닫자 공포가 밀려온다.<</if>>
 		<br>
 	<<elseif !Time.openingHours()>>
 		어둠 속에 당신 혼자 있다.
@@ -20,7 +20,7 @@ You are in the MMA Gym.
 	<<if Time.openingHours() and $exposed lt 1>>
 		<!-- <<if $mma_job_intro>>
 			<<if $weekly.mmaJob is "done">>
-				<span class="blue">Riley will have another job for you next week.</span>
+				<span class="blue">라일리는 다음 주에 또 일을 줄 것이다.</span>
 				<br>
 			<<else>>
 				<<socialiseicon "ask">><<link [[Ask for work|MMA Job Ask]]>><</link>>
@@ -30,42 +30,42 @@ You are in the MMA Gym.
 		<<if $exposed lt 1>>
 			<<if $combatExtended.standingFights is 1 and $combatExtended.footworkToggle is 1>>
 				<<if $money gte 1200>>
-					<<mmagymicon>><<link [[Take a footwork lesson (£12 1:00)|Footwork Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1200 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + Footwork Skill" "green">>
+					<<mmagymicon>><<link [[풋워크 수업을 받는다 (£12 1:00)|Footwork Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1200 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + 풋워크 스킬" "green">>
 					<br>
 				<<else>>
-					<span class="blue">You can't afford a footwork lesson.</span>
+					<span class="blue">풋워크 수업을 받을 돈이 없다.</span>
 					<br>
 				<</if>>
 			<</if>>
 			<<if $combatExtended.strikingToggle is 1>>
 				<<if $money gte 1800>>
-					<<mmagymicon>><<link [[Take a striking lesson (£18 1:00)|Striking Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1800 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + Striking Skill" "green">>
+					<<mmagymicon>><<link [[타격 수업을 받는다 (£18 1:00)|Striking Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1800 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + 타격 스킬" "green">>
 					<br>
 				<<else>>
-					<span class="blue">You can't afford a striking lesson.</span>
+					<span class="blue">타격 수업을 받을 돈이 없다.</span>
 					<br>
 				<</if>>
 			<</if>>
 			<<if $combatExtended.kickingToggle is 1>>
 				<<if $money gte 1800>>
-					<<mmagymicon>><<link [[Take a kicking lesson (£18 1:00)|Kicking Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1800 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + Kicking Skill" "green">>
+					<<mmagymicon>><<link [[발차기 수업을 받는다 (£18 1:00)|Kicking Lesson]]>><<set $phase to 0>><<set $gymstage to 0>><<set $usedEvents = []>><<money -1800 "mmaGymLessons">><</link>><<gtiredness>><<note "+ + 발차기 스킬" "green">>
 					<br>
 				<<else>>
-					<span class="blue">You can't afford a kicking lesson.</span>
+					<span class="blue">발차기 수업을 받을 돈이 없다.</span>
 					<br>
 				<</if>>
 			<</if>>
             <<if $money gte 1000>>
-                <<mmagymicon>><<link [[Take a conditioning lesson (£10 1:00)|Conditioning Lesson 1]]>><<set $phase to 0>><<money -1000 "mmaGymLessons">><</link>><<ggtiredness>><<ggphysique>><<gathletics>><<gwillpower>>
+                <<mmagymicon>><<link [[컨디셔닝 수업을 받는다 (£10 1:00)|Conditioning Lesson 1]]>><<set $phase to 0>><<money -1000 "mmaGymLessons">><</link>><<ggtiredness>><<ggphysique>><<gathletics>><<gwillpower>>
                 <br>
 			<<else>>
-				<span class="blue">You can't afford a conditioning lesson.</span>
+				<span class="blue">컨디셔닝 수업을 받을 돈이 없다.</span>
 				<br>
 			<</if>>
 		<</if>>
 	<</if>>
 	<<if !Time.openingHours() and Time.hour isnot $closinghour and !$weekly.theft.mmaGym>>
-		<<shopicon "register">><<link [[Examine the cash register|MMA Gym Register]]>><</link>>
+		<<shopicon "register">><<link [[계산대를 살펴본다|MMA Gym Register]]>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -84,14 +84,14 @@ You are in the MMA Gym.
 		<<wearProp "lockpick">>
 		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
-		<<lockicon "pick">><<link [[Pick it (0:10)|MMA Gym]]>><<handheldon>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
+		<<lockicon "pick">><<link [[딴다 (0:10)|MMA Gym]]>><<handheldon>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 		<br>
 	<</if>>
 <<else>>
 	<span class="red">이 자물쇠는 당신 실력으로는 딸 수 없어 보인다.</span><<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<getouticon>><<link [[Leave|Nightingale Street]]>><<handheldon>><</link>>
+<<getouticon>><<link [[나간다|Nightingale Street]]>><<handheldon>><</link>>
 <br>
 
 :: MMA Gym Introduction
@@ -117,4 +117,4 @@ You are in the MMA Gym.
     The air shifts immediately—your little game just bounced off a brick wall. Riley doesn't react further, already focused on the lesson. */
 <</if>>
 <br><br>
-<<link [[Next|$mmaGymIntroExit]]>><<unset $mmaGymIntroExit>><<endevent>><</link>>
+<<link [[다음|$mmaGymIntroExit]]>><<unset $mmaGymIntroExit>><<endevent>><</link>>

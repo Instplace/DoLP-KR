@@ -320,7 +320,7 @@
 	<</if>>
 <</if>>
 <<if !$machineVaginalBought or !$machineAnalBought>>
-	<<sextoysicon "dildo">><<link [[Ask about buying a fuck machine (0:01)|Adult Shop Machine]]>><<pass 1>><</link>>
+	<<sextoysicon "dildo">><<link [[섹스 머신 구매에 대해 묻는다 (0:01)|Adult Shop Machine]]>><<pass 1>><</link>>
 	<br>
 <</if>>
 <<getouticon>><<link [[뒤로|Adult Shop]]>><</link>>

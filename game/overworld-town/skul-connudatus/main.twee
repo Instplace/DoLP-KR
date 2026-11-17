@@ -6,7 +6,7 @@
 <</if>>
 <<if $rng gte 81>>
 	<<if Time.dayState is "night">>
-		<<generatev1>><<person1>> A <<person>> staggers and falls to the ground in front of you. "I'm sho clumsy," <<he>> slurs, trying and failing to stand.
+		<<generatev1>><<person1>> <<person>>【이가】 비틀거리다 당신 앞에서 바닥에 넘어진다. "나 진짜 덤벙대네에." <<he>>【이가】 일어나려 애쓰다 실패하며 혀 꼬인 소리로 말한다.
 		<<if $pronoun is "m">>
 			<<he>>【은는】 어딘가에 <<his>> 셔츠를 잃어버린 것 같지만, <<he>>【은는】 신경 쓰거나 알아차리지도 못하는 것 같다.
 		<<else>>

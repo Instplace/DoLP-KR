@@ -50,44 +50,44 @@
 <<if $fame.business gte 500>>
 	<<if $stallDepositIntro is undefined>>
 		<<if $produce_sold lt 100>>
-			"Welcome, I heard you're here to put down a deposit? <span class="green">We wouldn't mind making an exception for an entrepreneur like you.</span>" <<he>> says.
+			"어서 오세요, 보증금을 내러 오셨다고 들었어요. <span class="green">당신 같은 기업가라면 예외를 두어도 괜찮죠.</span>" <<he>>【이가】 말한다.
 		<<else>>
-			"Now that you've made a name for yourself, <span class="green">we're allowing you to put down a deposit for long-term renting.</span>" <<he>> says.
+			"이름을 알리셨으니, <span class="green">장기 임대를 위한 보증금을 내시는 것을 허용해 드리고 있어요.</span>" <<he>>【이가】 말한다.
 		<</if>>
 		<<set $stallDepositIntro to 1>>
 	<<elseif $stallDeposit lt 30>>
 		<<if $produce_sold lt 100>>
-			"Have you considered putting down a deposit?" <<he>> inquires.
+			"보증금을 내는 건 생각해 보셨어요?" <<he>>【이가】 묻는다.
 		<<else>>
-			"Are you sure you don't want to put down a deposit?" <<he>> inquires.
+			"정말 보증금을 내지 않으시겠어요?" <<he>>【이가】 묻는다.
 		<</if>>
 	<<else>>
-		"Welcome back, are you here to make another deposit?" <<he>> inquires.
+		"다시 오셨네요, 보증금을 또 내러 오셨나요?" <<he>>【이가】 묻는다.
 	<</if>>
-	"The rate is <span class="gold">£30</span> per day."
+	"요금은 하루에 <span class="gold">£30</span>예요."
 	<br><br>
 
 	<<if $money gte 3000>>
-		<<link [[Make a deposit|Stall Rental Deposit]]>><<endevent>><</link>>
+		<<link [[보증금을 낸다|Stall Rental Deposit]]>><<endevent>><</link>>
 		<br>
 	<<else>>
-		You don't have enough money to put down a deposit.
+		보증금을 낼 돈이 충분하지 않다.
 	<</if>>
 <<else>>
-	"I understand that you'd like to make a deposit for long-term rent? I must apologize, <span class="red">we do not allow just anyone to put down a deposit</span>, please come back after making a name for yourself as an entrepreneur."
+	"장기 임대를 위한 보증금을 내고 싶으시다고요? 죄송하지만 <span class="red">아무에게나 보증금을 받지는 않아요</span>. 기업가로서 이름을 알리시고 다시 오세요."
 	<br><br>
 <</if>>
 <<connudatusicon>><<link [[떠난다|Connudatus Street]]>><<endstall>><<endevent>><<clotheson>><</link>>
 <br>
 
 :: Stall Rental Deposit
-How much are you going to deposit? (£)
+보증금을 얼마나 내시겠습니까? (£)
 <br>
 <<numberbox "_depositAmount" 1>>
 <br><br>
 
 <div id="depositExit">
-	<<link "Deposit">>
+	<<link "보증금을 낸다">>
 		<<set _depositAmount = Math.clamp(_depositAmount * 100, 1, $money)>>
 		<<replace #depositExit>><<depositStallExitConfirm>><</replace>>
 	<</link>>

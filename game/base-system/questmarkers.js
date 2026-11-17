@@ -69,8 +69,8 @@ const events = [
 		starthour: 20,
 		endhour: 20,
 		priority: 4,
-		text: "You have a <span class='pink'>Valentine's date</span> with Poppy at the flat on Barb Street from <<ampm 20 00>>.",
-		failuretext: "You have missed your Valentine's date with Poppy.",
+		text: "바브 가 아파트에서 <<ampm 20 00>>부터 포피와 <span class='pink'>발렌타인 데이트</span> 약속이 있습니다.",
+		failuretext: "포피와의 발렌타인 데이트를 놓쳤습니다.",
 	},
 	{
 		name: "사회봉사",
@@ -91,8 +91,8 @@ const events = [
 		starthour: 7,
 		endhour: 19,
 		priority: 2,
-		text: "The bait shop owner have requested that you bring back a <<print V.daily.fishing.baitShopRequestFish>>",
-		failuretext: "You were not able to complete the bait shop owner's request.",
+		text: "미끼 가게 주인이 <<print V.daily.fishing.baitShopRequestFish>>【을를】 가져다 달라고 부탁했습니다.",
+		failuretext: "미끼 가게 주인의 부탁을 완수하지 못했습니다.",
 	},
 	{
 		name: "하퍼 진료",

@@ -27,7 +27,7 @@
 			다시 <<bhis>> 시선을 당신에게 고정시킨다.
 			<br><br>
 			<<if $monster is 1>>
-				"I found <<wife>> again," <<bhe>> says. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>> should learn to fly before <<pshe>> leaves the nest<<else>><<Wife>> shouldn't <<if $birdescaped gte 2>>keep running<<else>>run<</if>> away<</if>>."
+				"또 <<wife>>【을를】 찾았어." <<bhe>>【이가】 말한다. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>>【은는】 둥지를 떠나기 전에 나는 법부터 배워야 해<<else>><<Wife>>【은는】 <<if $birdescaped gte 2>>계속 도망치면<<else>>도망치면<</if>> 안 돼<</if>>."
 			<<else>>
 				<<beasttype>>【은는】 <<bhis>> 고개를 옆으로 갸웃거리며 떨리는 소리로 지저귄다.
 			<</if>>
@@ -224,9 +224,9 @@
 <</if>>
 끌려가는 동안
 <<if $birdescaped gte 1>>
-	towards <<bhis>> nest. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>Flying through the sky, you feel at peace. <<lstress>><<stress -6>><</if>>
+	<<bhis>> 둥지를 향해. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>하늘을 날며, 당신은 평온함을 느낀다. <<lstress>><<stress -6>><</if>>
 	<<if $monster is 1>>
-		"<<Wife>> shouldn't worry," <<bhe>> says. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>> will soon learn to ride the winds upon <<pher>> own wings<<else>>I would never drop <<wife>><</if>>."
+		"<<Wife>>【은는】 걱정할 필요 없어." <<bhe>>【이가】 말한다. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>>【은는】 곧 <<pher>> 자신의 날개로 바람을 타는 법을 배우게 될 거야<<else>>절대 <<wife>>【을를】 떨어뜨리지 않을 거야<</if>>."
 	<<else>>
 		<<bHe>>【은는】 당신을 내려다보며 눈을 맞추고는 <<if understandsBirdBehaviour()>><<if C.npc["Great Hawk"].love gte 60>>사랑스럽게<<else>>다정하게<</if>><</if>> 지저귄다.
 	<</if>>
@@ -312,20 +312,20 @@
 	<<switch $speech_attitude>>
 		<<case "meek">>
 			<<if $speech_attitude_special is "docile">>
-				"N-No! Please! No!" You fail to form any coherent sentence.
+				"아-안 돼! 제발! 안 돼!" 당신은 앞뒤가 맞는 말을 하나도 만들어 내지 못한다.
 			<<else>>
-				"P-Please don't hurt me," you beg.
+				"제-제발 해치지 마세요." 당신은 애원한다.
 			<</if>>
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"Don't touch me," you say. "Or I'll make my touch hurt."
+				"만지지 마." 당신은 말한다. "안 그러면 내 손길이 아프게 만들어 줄 테니까."
 			<<else>>
-				"Don't touch me," you say. "I'm warning you."
+				"만지지 마." 당신은 말한다. "경고했어."
 			<</if>>
 		<<case "confident" "flamboyant" "special">>
-			"Don't touch me," you say. "Please."
+			"만지지 마." 당신은 말한다. "제발."
 		<<default>>
-			"S-Stay away," you say. "Please."
+			"오-오지 마." 당신은 말한다. "제발."
 	<</switch>>
 	<br><br>
 
@@ -348,19 +348,19 @@
 <<else>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>
-			"<<if $speech_attitude_special is "docile">>I-I'm... P-please... <</if>>L-Let me go," you say.
+			"<<if $speech_attitude_special is "docile">>저-저는... 제-제발... <</if>>나-날 보내 줘." 당신은 말한다.
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"Get me down from this tower," you say. "Or I'll make sure you will never be able to fly again."
+				"이 탑에서 내려줘." 당신은 말한다. "안 그러면 다시는 날지 못하게 만들어 주지."
 			<<else>>
-				"Get me down from this tower," you say. "Or else."
+				"이 탑에서 내려줘." 당신은 말한다. "안 그러면."
 			<</if>>
 		<<case "confident">>
-			"Get me down from this tower," you say.
+			"이 탑에서 내려줘." 당신은 말한다.
 		<<case "flamboyant" "special" "polite">>
-			"Let me go," you say. "Please."
+			"날 보내줘." 당신은 말한다. "제발."
 		<<default>>
-			"Let me go," you say.
+			"날 보내줘." 당신은 말한다.
 	<</switch>>
 	<br><br>
 
@@ -556,7 +556,7 @@
 
 	<<if $monster is 1>>
 		<<if $birdescaped gte 1>>
-			"<<Wife>> should be more careful," <<bhe>> says. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>"<<Wife>> doesn't know how to fly yet."<<elseif $moor lte 20>>"I don't often fly this far from the nest."<</if>>
+			"<<Wife>>【은는】 더 조심해야 해." <<bhe>>【이가】 말한다. <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>"<<Wife>>【은는】 아직 나는 법을 모르잖아."<<elseif $moor lte 20>>"나는 둥지에서 이렇게 멀리 날아오지 않는데."<</if>>
 		<<else>>
 			"걱정 마, 난 잡은 걸 절대 떨어뜨리지 않아." <<bhe>>【이가】 말한다.
 		<</if>>
@@ -661,7 +661,7 @@
 
 <<if $monster is 1>>
 	<<if $birdescaped gte 1>>
-		"<<Wife>> shouldn't run away," <<bhe>> chides. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $birdFly isnot 1>><<Wife>> can't fly on <<pher>> own yet<<else>>Safer at the nest<</if>>."
+		"<<Wife>>【은는】 도망치면 안 돼." <<bhe>>【이가】 꾸짖는다. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $birdFly isnot 1>>아직 <<Wife>>【은는】 혼자서는 날 수 없잖아<<else>>둥지가 더 안전해<</if>>."
 	<<else>>
 		"떨어뜨리지 않을 거야." <<bhe>>【이가】 말한다. "믿어봐."
 	<</if>>
@@ -774,7 +774,7 @@
 <<if $monster is 1>>
 	<<bHe>>【이가】 당신의 어깨에 손을 얹고 눈을 들여다본다. "나는 언제나 <<wife>> 곁에 있을 거야." <<bhe>>【이가】 엄숙하게 말하고는, 당신을 다시 한번 껴안는다.
 <<else>>
-	<<bHe>> lets out a low trill, and nuzzles <<bhis>> face into your <<if $bodysize gte 4>>chest<<elseif $bodysize gte 3>>shoulder<<else>>cheek<</if>>. <<bHe>> continues to snuggle up to you, letting all your worries fall away.
+	<<bHe>>【이가】 나지막이 지저귀고는, 당신의 <<if $bodysize gte 4>>가슴<<elseif $bodysize gte 3>>어깨<<else>>뺨<</if>>에 <<bhis>> 얼굴을 비빈다. <<bHe>>【은는】 계속해서 당신에게 바싹 몸을 붙여, 모든 걱정이 사라지게 한다.
 <</if>>
 <br><br>
 
@@ -830,7 +830,7 @@
 
 :: Bird Rescue No Syndrome Tower Silent
 <<effects>>
-You don't say anything, just looking at the <<beasttype>><<if ($speech_attitude is "meek" or $speech_attitude is "shy")>> fearfully<<else>> distrustfully<</if>>.
+당신은 아무 말도 하지 않고, 그저 <<beasttype>>【을를】 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>두려운 듯이<<else>>불신에 찬 눈으로<</if>> 바라볼 뿐이다.
 
 <<if $monster is 1>>
 	<<bhis>> 날개가 당신이 반응하지 않자 약간 축 처지고, <<bhis>> 표정은 우울해 보인다.
@@ -1804,7 +1804,7 @@ You don't say anything, just looking at the <<beasttype>><<if ($speech_attitude 
 <<setTowerTemp>><<effects>>
 <<if $phase is 0>>
 	당신은 일어나서 <<bhim>>【을를】 껴안는다.
-	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>"Thank you for caring about me so much. But I'm alright," you say.
+	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>"그렇게 신경 써 줘서 고마워. 하지만 난 괜찮아." 당신은 말한다.
 	<<elseif $speech_attitude is "bratty">>"그렇게 걱정 안 해도 돼, 바보야." 당신은 말한다.
 	<<else>>"나 정말 괜찮아. 그래도 확인해줘서 고마워." 당신은 말한다.
 	<</if>>
@@ -1827,7 +1827,7 @@ You don't say anything, just looking at the <<beasttype>><<if ($speech_attitude 
 	<</if>>
 	당신은 <<bhim>>에게 미소 짓고, 둥지 밖으로 나선다.
 <<else>>
-	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>"I-I'm fine, really," you say as you stand up.
+	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>"나-나는 괜찮아, 정말이야." 당신은 일어서며 말한다.
 	<<elseif $speech_attitude is "bratty">>"이미 말했잖아, 난 괜찮다고." 당신은 일어서며 말한다.
 	<<else>>"난 괜찮아." 당신은 일어서며 말한다.
 	<</if>>
@@ -3038,7 +3038,7 @@ You don't say anything, just looking at the <<beasttype>><<if ($speech_attitude 
 			<<set $eggLayNumber to $harpyEggs.count>>
 		<</if>>
 
-		You awaken feeling disoriented, and feel a building pressure in your abdomen. A bestial instinct washes over you. You <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>ruffle your feathers and <</if>>get on your hands and knees.
+		정신이 멍한 채로 깨어나자, 배 속에 압박감이 차오르는 것이 느껴진다. 짐승 같은 본능이 당신을 덮친다. 당신은 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>깃털을 부풀리고 <</if>>네 발로 엎드린다.
 		<br><br>
 
 		<<if $bird.state is "hunting">>
@@ -4181,7 +4181,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 			잠시 동안, <<beasttypes>> 멜로디는 당신에게 <span class="teal">바닷새의 자장가</span>를 떠올리게 한다.
 		<<else>>
 			<<set $seabird_lullaby to 1>>
-			<span class="teal">There's something familiar about the <<beasttypes>> melody,</span> but you can't quite put your <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>wing<<else>>finger<</if>> on it.
+			<span class="teal"><<beasttypes>> 멜로디에는 뭔가 익숙한 것이 있지만,</span> 정확히 무엇인지 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>날개<<else>>손가락<</if>>【으로로】 짚어낼 수 없다.
 		<</if>>
 		<br><br>
 		<<bird_perch_options>>
@@ -4511,7 +4511,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	서로를 껴안고 있는 동안 시간 가는 줄 모른다. "땅에서의 애정 표현이라니, 참 이상하군." <<bhe>>【이가】 갑자기 말한다. "<<wife>>에게서만 받아들일 거야." <<glove>>
 <<else>>
 	당신은 고개를 돌려 <<bhim>>의 부리 옆에 키스한다. <<bHe>>【은는】 기운을 차리더니, <<if understandsBirdBehaviour()>>깃털을 손질하기<<else>>부리를 움직여<</if>> 시작한다. <<if $transformationParts.bird.plumage isnot "disabled">>당신 목 주위의 깃털을<<else>>당신의 머리카락을<</if>>.
-	You <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>giggle<<elseif $speech_attitude is "bratty">>chuckle<<else>>laugh<</if>> at the sensation, then return the favour, gently combing your fingers through your partner's plumage, and softly kissing <<bhis>> cheeks and the side of <<bhis>> beak.
+	당신은 그 감각에 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>킥킥거리고<<elseif $speech_attitude is "bratty">>킬킬거리고<<else>>웃고<</if>>, 보답으로 부드럽게 손가락으로 짝의 깃털을 빗어 주고, <<bhis>> 뺨과 부리 옆에 부드럽게 키스한다.
 	<<takeKissVirginity "Great Hawk" `($syndromebird is 1?"loveInterest":"romantic")`>>
 	<br><br>
 	서로를 손질해 주며 시간 가는 줄 모른다. 마침내 서로 떨어지자, <<bhe>>【이가】 <<if understandsBirdBehaviour()>>만족스럽게<<else>>부드럽게<</if>> 지저귄다..
@@ -4884,7 +4884,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <</if>>
 <<bHe>>【은는】 날개 하나를 당신 주위로 감싸고, 당신은 <<bhis>> 깃털 속으로 파고든다. <br><br>
 <<if $bodysize is -1 and $monster is 1>>
-	<<bHe>> leans over and rests <<bhis>> head atop yours.
+	<<bHe>>【은는】 몸을 숙여 <<bhis>> 머리를 당신 머리 위에 얹는다.
 <<elseif $bodysize lte 1 and $monster is 1>>
 	<<bHe>>【은는】 약간 몸을 기울여 <<bhis>> 머리를 당신 머리 위에 얹는다.
 <<elseif $monster isnot 1 and $bodysize gte 3>>
@@ -5287,8 +5287,8 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	당신은 <<bhim>>【을를】 부드럽게 흔들어 깨운다.
 <</if>>
 <<switch $speech_attitude>>
-	<<case "meek">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>C-can we make it softer? It's kind of... rough," you say.
-	<<case "flamboyant" "special" "polite">>"Can we please make it softer? I don't have as many feathers as you, so it's a little rough on me," you say.
+	<<case "meek">>"<<if $speech_attitude_special is "docile">>ㅁ-미안... 그런데... <</if>>ㅈ-좀 더 부드럽게 만들 수 있을까? 좀... 거칠어서." 당신이 말한다.
+	<<case "flamboyant" "special" "polite">>"좀 더 부드럽게 만들면 안 될까? 난 너처럼 깃털이 많지 않아서, 나한텐 좀 거칠어." 당신이 말한다.
 	<<case "bratty">>"나뭇가지에 찔리는 거 지긋지긋해." 당신이 말한다. "더 편안하게 만들 거야."
 	<<default>>"여기, 내가 도와줄게." 당신이 말한다. "난 너처럼 깃털이 많지 않아서, 나한테는 좀 거칠어."
 <</switch>>
@@ -5328,8 +5328,8 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <br><br>
 
 <<switch $speech_attitude>>
-	<<case "meek">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>I think we need to start over," you say. "I-if that's not too much to ask."
-	<<case "special" "flamboyant" "polite">>"I think we need to start over," you say. "I think it will be better this way."
+	<<case "meek">>"<<if $speech_attitude_special is "docile">>ㅁ-미안해... 그런데... <</if>>처음부터 다시 해야 할 것 같아." 당신이 말한다. "ㅂ-부탁이 너무 과하지 않다면 말이야."
+	<<case "special" "flamboyant" "polite">>"처음부터 다시 해야 할 것 같아." 당신이 말한다. "그게 더 나을 것 같아."
 	<<case "bratty">>"이건 인간한테는 최악이야." 당신이 말한다. "다시 만들 거야."
 	<<default>>"처음부터 다시 시작해야 해." 당신이 말한다. "날 믿어, 이게 더 나을 거야."
 <</switch>>
@@ -5396,9 +5396,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 당신은 천천히 <<beasttypes>> 깃털을 따라 손을 내려, <<bhis>> <<nnpc_genitals "Great Hawk">> 쪽으로 향한다.
 <<switch $speech_attitude>>
 	<<case "meek">>"우리가... 하는 동안 무너지지 않을지 확인해야 해." 당신이 말을 시작한다. 당신은 <<bhim>>에게 더 가까이 다가간다.
-	<<case "bratty" "confident">><<if $speech_attitude_special is "cruel">>"Well, now we ough to break it in," you say and throw one leg over <<bhim>>, giving <<bhim>> little choice but to agree.<<else>>"How about we break it in?" you ask. You throw one leg over <<bhim>>, giving <<bhim>> little choice.<</if>>
-	<<case "flam">>"We need to make sure it won't fall apart on us while we'r having fun" you say. You throw one leg over <<bhim>>, giving <<bhim>> little choice.
-	<<case "polite" "special">>"I think we should test how durable it is," you say, spreading your legs with a smile.
+	<<case "bratty" "confident">><<if $speech_attitude_special is "cruel">>"자, 이제 한번 써 봐야지." 당신은 말하고는 <<bhim>> 위로 한쪽 다리를 걸치며, <<bhim>>에게 동의하는 것 말고는 선택지를 거의 남겨 주지 않는다.<<else>>"우리 한번 써 볼까?" 당신이 묻는다. 당신은 <<bhim>> 위로 한쪽 다리를 걸쳐, <<bhim>>에게 별다른 선택지를 주지 않는다.<</if>>
+	<<case "flam">>"우리가 즐기는 동안 이게 무너지지 않는지 확인해야 해." 당신이 말한다. 당신은 <<bhim>> 위로 한쪽 다리를 걸쳐, <<bhim>>에게 별다른 선택지를 주지 않는다.
+	<<case "polite" "special">>"얼마나 튼튼한지 시험해 봐야 할 것 같아." 당신은 미소를 지으며 다리를 벌린다.
 	<<default>>"얼마나 튼튼한지 시험해 봐야 해." 당신은 미소를 지으며 다리를 벌린다.
 <</switch>>
 <<deviancy1>>
@@ -6648,7 +6648,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<br><br>
 
 	<<switch $speech_attitude>>
-		<<case "meek" "special">><<if $speech_attitude_special is "docile">>"W-What... Wh-why?" you try to yell, but only a shaky voice comes out. Your expression terrified enough to tell though.<<else>>"W-What... Why did you do that!?" you yell with a shaky voice.<</if>>
+		<<case "meek" "special">><<if $speech_attitude_special is "docile">>"무-뭐... 왜... 왜?" 당신은 소리치려 하지만 떨리는 목소리만 새어 나온다. 그래도 겁에 질린 표정만으로 충분히 전해진다.<<else>>"무-뭐... 왜 그랬어!?" 당신은 떨리는 목소리로 소리친다.<</if>>
 		<<case "bratty">>"야! 씨발 왜 날 칠 뻔한 건데?!" 당신이 짜증 섞인 목소리로 외친다.
 		<<default>>"왜 그런 거야?! 날 칠 뻔했잖아!" 당신이 외친다.
 	<</switch>>
@@ -6727,9 +6727,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<br><br>
 
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"I-I've got very scared there but... I-it was also... exciting. Maybe you could show me what a big, fearsome <<beasttype>> like you can really do?" you chirp."<<else>>"You had me really scared back there. But it was also... exciting. How about you show me what a big, fearsome <<beasttype>> like you can really do?" you chirp."<</if>>
-		<<case "flamboyant" "polite">>"I-I'm sure you'll have children one day," you say.
-		<<case "bratty" "confident" "framboyant" "special">><<if $speech_attitude_special is "cruel">>"You really took me by surprise earlier. And it wasn't a pleasant one. You're going to properly apologise for what happened, right?" you coo, licking your lips.<<else>>"You really took me by surprise earlier. And it wasn't a pleasant one. You're going to properly apologise for what happened, right?" you coo, licking your lips.<</if>>
+		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"ㅁ-많이 무서웠는데... 그, 그런데... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여줄래?" 당신이 지저귀듯 말한다.<<else>>"아깐 정말 무서웠어. 하지만... 흥분되기도 했어. 너처럼 크고 사나운 <<beasttype>>【이가】 정말 무엇을 할 수 있는지 내게 보여주는 건 어때?" 당신이 지저귀듯 말한다.<</if>>
+		<<case "flamboyant" "polite">>"부-분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
+		<<case "bratty" "confident" "framboyant" "special">><<if $speech_attitude_special is "cruel">>"아까 정말 깜짝 놀랐다고. 그것도 별로 유쾌하지 않은 쪽으로. 아까 일은 제대로 사과할 거지?" 당신이 입술을 핥으며 달콤하게 속삭인다.<<else>>"아까 정말 깜짝 놀랐다고. 그것도 별로 유쾌하지 않은 쪽으로. 아까 일은 제대로 사과할 거지?" 당신이 입술을 핥으며 달콤하게 속삭인다.<</if>>
 		<<default>>"분명 언젠가는 너만의 아이를 가질 수 있을 거야." 당신은 말한다.
 	<</switch>>
 	<<deviancy1>>
@@ -6747,7 +6747,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 
 	<<switch $speech_attitude>>
 		<<case "meek">>"공중에서 서로를 붙잡고 있던 게 너무... 애틋했어. 지금 너를 훨씬 더 많이 느끼고 싶어. 부탁이야."
-		<<case "bratty" "confident" "special">>"Holding on to you mid-air was really exciting. You got me really aroused. I can't wait any longer to have you."
+		<<case "bratty" "confident" "special">>"공중에서 널 붙잡고 있던 건 정말 짜릿했어. 나 완전히 흥분해 버렸다고. 너를 안는 걸 더는 못 기다리겠어."
 		<<default>>"공중에서 서로 얽혀 있던 게 정말 은밀하고 애틋했어. 당신의 남은 온몸도 내 몸에 맞닿게 느끼고 싶어졌는걸."
 	<</switch>>
 	<br><br>
@@ -6766,15 +6766,15 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<switch $speech_attitude>>
 		<<case "meek" "shy">>
 			<<if $speech_attitude_special is "docile">>
-				"You know, you were really great flying like that... I would be very happy if I could... see a bit more?" Your words are quiet, yet seductive.
+				"있잖아, 그렇게 나는 모습이 정말 멋있었어... 조금... 더 볼 수 있다면 정말 기쁠 텐데?" 당신의 목소리는 작지만, 매혹적이다.
 			<<else>>
-				"I really liked seeing you fly. And I want to see more of you." Your words are quiet, yet seductive.
+				"네가 나는 모습을 보는 게 정말 좋았어. 그리고 너의 모습을 더 보고 싶어." 당신의 목소리는 작지만, 매혹적이다.
 			<</if>>
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"I'm feeling tired after all that flying. I really need some good mating session right now to get the energy back," you say in a sultry tone.
+				"그렇게 날아다녔더니 피곤하네. 기운을 되찾으려면 지금 당장 제대로 된 짝짓기 한 판이 꼭 필요해," 당신이 요염한 어조로 말한다.
 			<<else>>
-				"I'm feeling tired after all that flying. I think a good mating session would bring back some energy," you say in a sultry tone.
+				"그렇게 날아다녔더니 피곤하네. 제대로 짝짓기 한 판 뛰면 기운이 다시 날 것 같은데," 당신이 요염한 어조로 말한다.
 			<</if>>
 		<<default>>"그렇게 날아다녔더니 정말 달아올랐어. 날 이렇게 잔뜩 달아오르게 해두고 그냥 둘 건 아니지, 응?" 흥분으로 물든 목소리로 당신이 묻는다.
 	<</switch>>
@@ -7234,7 +7234,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 		<</if>>
 		<<bhis>> 몸이 당신의 손길에 평소보다 더 민감하게 떨린다.
 		<<if $syndromebird gte 1>>
-			You <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>coo<<else>>whisper<</if>> softly into <<bhis>> ear to comfort <<bhim>>.
+			당신은 <<bhim>>【을를】 위로하기 위해 <<bhis>> 귀에 부드럽게 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>쿠우 소리를 내며 달래듯 속삭인다<<else>>속삭인다<</if>>.
 		<<else>>
 			그 밖에 뭘 해야 할지 잘 모르겠다.
 		<</if>>
@@ -7396,9 +7396,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<setTowerTemp>><<effects>>
 <<if $syndromebird gte 1>>
 	<<switch $speech_attitude>>
-		<<case "meek">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>"W-we can always try again," you say.
+		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"ㅇ-언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<case "bratty">>"그렇게 풀 죽어 있지 마, 그냥 더 열심히 해야 한다는 뜻이잖아." 당신은 말한다.
-		<<case "flamboyant" "special" "polite">>"Please don't be upset, we can always try again," you say.
+		<<case "flamboyant" "special" "polite">>"제발 속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<default>>"속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 	<</switch>>
 	<br><br>
@@ -7420,9 +7420,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<specialClothesUnlock "set" "bird">>
 <<else>>
 	<<switch $speech_attitude>>
-		<<case "meek" "special">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>I-I'm sure you'll have children one day," you say.
-		<<case "flamboyant" "polite">>"Please don't worry. I'm sure you'll have children one day," you say.
-		<<case "bratty">><<if $speech_attitude_special is "cruel">>"No need for complaining, you get to try a lot more often than humans do," you say.<<else>>"You're lucky, you get to try a lot more often than humans do," you say.<</if>>
+		<<case "meek" "special">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>부-분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
+		<<case "flamboyant" "polite">>"걱정하지 마. 분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
+		<<case "bratty">><<if $speech_attitude_special is "cruel">>"불평할 것 없어. 넌 인간보다 훨씬 더 자주 시도할 수 있잖아." 당신은 말한다.<<else>>"넌 운이 좋은 거야. 인간보다 훨씬 더 자주 시도할 수 있으니까." 당신은 말한다.<</if>>
 		<<default>>"분명 언젠가는 너만의 아이를 가질 수 있을 거야." 당신은 말한다.
 	<</switch>>
 	<br><br>
@@ -7628,9 +7628,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<setTowerTemp>><<effects>>
 <<if $syndromebird gte 1>>
 	<<switch $speech_attitude>>
-		<<case "meek">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>"W-we can always try again," you say.
+		<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>"ㅇ-언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<case "bratty">>"그렇게 풀 죽어 있지 마, 그냥 더 열심히 해야 한다는 뜻이잖아." 당신은 말한다.
-		<<case "flamboyant" "special" "polite">>"Please don't be upset, we can always try again," you say.
+		<<case "flamboyant" "special" "polite">>"제발 속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 		<<default>>"속상해하지 마, 언제든 다시 시도할 수 있잖아." 당신은 말한다.
 	<</switch>>
 	<br><br>
@@ -7652,9 +7652,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<specialClothesUnlock "set" "bird">>
 <<else>>
 	<<switch $speech_attitude>>
-		<<case "meek" "special">>"<<if $speech_attitude_special is "docile">>I-I'm sorry... but... <</if>>I-I'm sure you'll have children one day," you say.
-		<<case "flamboyant" "polite">>"Please don't worry. I'm sure you'll have children one day," you say.
-		<<case "bratty">><<if $speech_attitude_special is "cruel">>"No need for complaining, birds get to try a lot more often than humans do," you say.<<else>>"You're lucky, birds get to try a lot more often than humans do," you say.<</if>>
+		<<case "meek" "special">>"<<if $speech_attitude_special is "docile">>미-미안해... 하지만... <</if>>부-분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
+		<<case "flamboyant" "polite">>"걱정하지 마. 분명 언젠가는 아이를 가질 수 있을 거야." 당신은 말한다.
+		<<case "bratty">><<if $speech_attitude_special is "cruel">>"불평할 것 없어. 새는 인간보다 훨씬 더 자주 시도할 수 있으니까." 당신은 말한다.<<else>>"넌 운이 좋은 거야. 새는 인간보다 훨씬 더 자주 시도할 수 있으니까." 당신은 말한다.<</if>>
 		<<default>>"분명 언젠가 당신만의 아이를 가질 수 있을 거예요." 당신은 말한다.
 	<</switch>>
 	<br><br>
@@ -7920,7 +7920,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <</if>>
 <<bHe>>【은는】 날개 하나를 당신 주위로 감싸고, 당신은 <<bhis>> 깃털 속으로 파고든다. <br><br>
 <<if $bodysize is -1 and $monster is 1>>
-	<<bHe>> leans over and rests <<bhis>> head atop yours.
+	<<bHe>>【은는】 몸을 기울여 <<bhis>> 머리를 당신 머리 위에 얹는다.
 <<elseif $bodysize lte 1 and $monster is 1>>
 	<<bHe>>【은는】 약간 몸을 기울여 <<bhis>> 머리를 당신 머리 위에 얹는다.
 <<elseif $monster isnot 1 and $bodysize gte 3>>

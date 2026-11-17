@@ -2,8 +2,8 @@
 <<effects>><<run statusCheck("Gwylan")>>
 <<if $gwylan.requestDone>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I-is there anything else I can do?" you ask.
-		<<case "bratty" "confident">>"Do you have anything else for me to do?" you ask.
+		<<case "meek" "shy">>"저-저기, 제가 도울 일이 더 있을까요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저한테 시킬 일이 더 있어요?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 더 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -11,8 +11,8 @@
 	<<He>>【이가】 당신을 보며 고개를 갸웃한다. "제안은 고맙지만, <span class="green">이미 당신에게 빚을 졌는걸</span>." <<He>>【이가】 킥킥 웃는다. "조심해. 그렇게 돕고 싶어 하면, 내가 그걸 이용하기 시작할지도 몰라."
 <<elseif $gwylan.request.event>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I-is there anything else I can do?" you ask.
-		<<case "bratty" "confident">>"Do you have anything else for me to do?" you ask.
+		<<case "meek" "shy">>"저-저기, 제가 도울 일이 더 있을까요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저한테 시킬 일이 더 있어요?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 더 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -30,8 +30,8 @@
 	<<He>>【이가】 당신을 보며 고개를 갸웃한다. "제안은 고맙지만, 계속 이러면 네가 나한테 감정이 생길까 봐 걱정되는걸, 얘야. 그렇게 간절하다면 내일 다시 와."
 <<elseif !$gwylanSeen.includes("request_intro")>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I-is there anything I can help with?" you ask.
-		<<case "bratty" "confident">>"Hey, you look busy. Do you need anything?" you ask.
+		<<case "meek" "shy">>"저-저기, 제가 도울 일이 있을까요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저기, 바빠 보이네요. 필요한 거 있어요?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -48,8 +48,8 @@
 	<<gwylanRequestText>>
 <<else>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"I-is there anything I can help with?" you ask.
-		<<case "bratty" "confident">>"Hey, you look busy. Do you need anything?" you ask.
+		<<case "meek" "shy">>"저-저기, 제가 도울 일이 있을까요?" 당신이 묻는다.
+		<<case "bratty" "confident">>"저기, 바빠 보이네요. 필요한 거 있어요?" 당신이 묻는다.
 		<<default>>"제가 도울 일이 있을까요?" 당신이 묻는다.
 	<</switch>>
 	<br><br>
@@ -413,7 +413,7 @@
 				<<He>>【이가】 당신에게 아주 가까이 다가와 뺨을 어루만진다. "우리 작은 고양이는 상을 원하나? 날 위해 가르랑거려 줄래?" <<His>> 손길에 쾌감의 전율이 온몸을 훑고 지나간다. <<arousal 500>><<garousal>>
 				<br><br>
 
-				<<link [[Purr|Gwylan Request Clothes Kitty]]>><<set $phase to 1>><<transform cat 1>><</link>><<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<cat>><<else>><<deviant1>><</if>>
+				<<link [[가르랑거린다|Gwylan Request Clothes Kitty]]>><<set $phase to 1>><<transform cat 1>><</link>><<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>><<cat>><<else>><<deviant1>><</if>>
 				<br>
 				<<link [[고개를 끄덕인다|Gwylan Request Clothes Kitty]]>><<set $phase to 2>><</link>>
 				<br>
@@ -853,7 +853,7 @@
 	<<addinlineevent "gwylan_sample_fox_2">>
 		"여우들이 너무 애먹이진 않았으면 좋겠군. 쫓아다니는 건 항상 골치 아픈 일이라서."
 		<<if _gwylanTF.tail is "revealed">>
-			<<His>> tail beats behind <<him>>. "Although, part of me enjoys the chase.<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>> I'm sure you understand.<</if>>"
+			<<His>> 꼬리가 뒤에서 탁탁 흔들린다. "그래도 쫓는 걸 즐기는 나도 있긴 해.<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox")>> 너도 이해하겠지.<</if>>"
 		<</if>>
 	<</addinlineevent>>
 <</if>>
@@ -1298,7 +1298,7 @@
 	<<if _gwylanTF.tail is "revealed">>
 		<<His>>【이가】 떠날 때 <<His>> 꼬리가 빠르게 좌우로 흔들린다.
 	<</if>>
-	You hear the rustling of cloth, followed by the sound of compressed air and a dull thud. After a moment, you hear <<his>> voice again. <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>"Alright. Here, kitty, kitty."<<else>>"Alright, come here, you."<</if>>
+	천이 바스락거리는 소리에 이어 압축 공기 소리와 둔탁한 소리가 들린다. 잠시 뒤 <<his>> 목소리가 다시 들린다. <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>"좋아. 이리 와, 야옹아, 야옹아."<<else>>"좋아, 이리 와."<</if>>
 	<br><br>
 
 	당신은 문간으로 걸어간다. 방은 어둡고, 바깥의 빛은 조금도 새어 들어오지 않는 것 같다. 당신은 조심스럽게 한 걸음 내디딘다. "내 목소리만 따라와." <<he>>【이가】 어둠 속 어딘가에서 속삭인다.
@@ -1491,7 +1491,7 @@
 <<elseif $phase is "cuddle">>
 	당신은 그윌란에게 매달리고, 두 사람은 천천히 담요 위로 눕는다. <<He>>【은는】 당신을 더 가까이 끌어당겨 안고는, 머리카락을 쓰다듬는다. "<<pcPetname "Gwylan" "good">>." <<he>>【이가】 속삭인다.
 	<<if $bodysize gte 4>>
-		<<He>> buries <<his>> face in your chest.
+		<<He>>【은는】 <<his>> 얼굴을 당신의 가슴에 묻는다.
 	<<elseif $bodysize gte 3>>
 		<<He>>【은는】 <<his>> 얼굴을 당신의 어깨에 묻는다.
 	<<else>>
@@ -1688,7 +1688,7 @@
 	<<else>>
 		<<switch $speech_attitude>>
 			<<case "meek" "shy" "special">>
-				"<<if $speech_attitude_special is "docile">>I'm... fairly nervous actually...<<else>>I'm a bit nervous.<</if>> Plus, I've got this thing stuck on me."
+				"<<if $speech_attitude_special is "docile">>사실... 꽤 긴장돼요...<<else>>조금 긴장돼요.<</if>> 게다가 이 물건이 몸에 붙어 있고요."
 			<<case "bratty">>
 				"당신 제안에 정말 관심 있지만, 이 빌어먹을 게 제게 붙어있어서요."
 			<<default>>
@@ -2230,7 +2230,7 @@
 			<<case "meek">>
 				"산?! 나한테 산을 쓰겠다고? 난 거의 벌거벗고 있단 말이야!" 당신이 소리친다.
 			<<case "special">>
-				"Acid?! You're going to use acid on me? On my practically naked!? Noononononono!" you yell.
+				"산?! 나한테 산을 쓰겠다고? 거의 벌거벗은 몸에!? 안 돼 안 돼 안 돼 안 돼!" 당신이 소리친다.
 			<<case "bratty">>
 				"미쳤어. 내가 거의 벌거벗고 있는데 산을 다루다니." 당신이 말한다.
 			<<default>>
@@ -2351,7 +2351,7 @@
 		<<case "meek" "shy">>
 			"저-저기, 그게..." 당신은 망설인다. <<He>>【이가】 당신을 올려다본다. <<he>>【이가】 웃고 있는 게 거의 확실하다. 당신은 긴장을 풀고 그것에 대해 이야기한다.
 		<<case "bratty">>
-			You snort. "What are you, my <<father>>?" Silence follows. You decide to be <<if $speech_attitude_special is "cruel">>slightly <</if>>less snarky and chat about it normally.
+			당신은 코웃음을 친다. "무슨 제 <<father>>【이】라도 돼요?" 침묵이 흐른다. 당신은 <<if $speech_attitude_special is "cruel">>조금 <</if>>덜 비꼬기로 하고, 평범하게 그 이야기를 나누기로 한다.
 		<<default>>
 			"모르겠어요, 그게..." 당신은 망설인다. <<He>>【이가】 당신을 올려다본다. <<he>>【이가】 웃고 있는 게 거의 확실하다. 당신은 긴장을 풀고 그것에 대해 이야기한다.
 	<</switch>>
@@ -2646,12 +2646,12 @@
 :: Gwylan Familiar Collar Lock
 <<effects>><<run statusCheck("Gwylan")>>
 <<switch $speech_attitude>>
-	<<case "meek" "polite" "flamboyant" "special" "shy">>"Gwylan, could you please lock my collar?"
+	<<case "meek" "polite" "flamboyant" "special" "shy">>"그윌란, 제 목줄을 잠가줄 수 있을까요?"
 	<<case "bratty">>
 		<<if $speech_attitude_special is "cruel">>
-			"Gwylar, do your fancy trick on my collar."
+			"그윌란, 내 목줄에 그 신기한 재주 좀 부려 봐."
 		<<else>>
-			Could you do your fancy trick on my collar?"
+			목줄에 그 신기한 재주 좀 부려줄 수 있어?"
 		<</if>>
 	<<default>>"목줄 잠가줄 수 있어?"
 <</switch>>
@@ -2732,14 +2732,14 @@
 :: Gwylan Familiar Collar Unlock
 <<effects>><<run statusCheck("Gwylan")>>
 <<switch $speech_attitude>>
-	<<case "meek" "polite" "flamboyant" "special" "shy">>"Gwylan, could you please unlock my collar?"
+	<<case "meek" "polite" "flamboyant" "special" "shy">>"그윌란, 제 목줄을 풀어줄 수 있을까요?"
 	<<case "bratty">>
 		<<if $speech_attitude_special is "cruel">>
-			"Gwylar, get this thing off me."
+			"그윌란, 이 빌어먹을 것 좀 떼 줘."
 		<<else>>
-			"Could you let me take this thing off?"
+			"이것 좀 벗게 해줄 수 있어?"
 		<</if>>
-	<<case "polite" "flamboyant" "special">>"Can you unlock my collar, please?"
+	<<case "polite" "flamboyant" "special">>"목줄 풀어줄 수 있어? 부탁해."
 	<<default>>"목줄 풀어줄 수 있어?"
 <</switch>>
 <br><br>
@@ -2779,7 +2779,7 @@
 <<if !$gwylanSeen.includes("doggy_bed")>>
 	<<set $gwylanSeen.pushUnique("doggy_bed")>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"Gwylan, I..." you hesitate. Gwylan gives you a patient smile. "I feel comfortable here, and I'm really tired. Do you have somewhere I could rest?"
+		<<case "meek" "shy">>"그윌란, 저기..." 당신은 망설인다. 그윌란이 참을성 있게 미소 짓는다. "여기는 편안하고, 정말 피곤해요. 혹시 쉴 만한 곳이 있을까요?"
 		<<case "bratty">>"너무 지쳤어요. 눈 좀 붙일 곳이 있을까요? 지금은 의자라도 괜찮아요."
 		<<default>>"그윌란, 저 너무 지쳤어요. 쉴 만한 곳이 있을까요? 여기는 안전하게 느껴져요."
 	<</switch>>
@@ -2805,13 +2805,13 @@
 <<else>>
 	<<if $gwylan.timer.petBed>>
 		<<switch $speech_attitude>>
-			<<case "meek" "polite" "flamboyant" "shy">>"I like sleeping here. Could you keep that bed out for me for a while longer?"
+			<<case "meek" "polite" "flamboyant" "shy">>"여기서 자는 게 좋아요. 침대를 좀 더 꺼내 놔주실 수 있을까요?"
 			<<case "bratty">>"제 침대를 좀 더 꺼내 놔주실래요? 여기 있으니 편해서요."
 			<<default>>"일주일 더 침대를 꺼내 놔주실 수 있나요?"
 		<</switch>>
 	<<else>>
 		<<switch $speech_attitude>>
-			<<case "meek" "polite" "flamboyant" "shy">>"Gwylan, could you... drag my bed out again, please?"
+			<<case "meek" "polite" "flamboyant" "shy">>"그윌란, 저기... 제 침대를 다시 꺼내 주실 수 있을까요?"
 			<<case "bratty">>"제 침대는 어디 있어요? 쉬어야 해요."
 			<<default>>"제 애완동물 침대를 다시 돌려주세요."
 		<</switch>>

@@ -56,7 +56,7 @@
 	<</if>>
 	<<socialiseicon "ask">><<link [[농산물 판매에 대해 문의한다|Farmers Centre Produce Sale]]>><</link>>
 	<br>
-	<<socialiseicon "ask">><<link [[Enquire about improving rates|Farmers Centre Upgrades]]>><</link>>
+	<<socialiseicon "ask">><<link [[처리 비율 개선에 대해 문의한다|Farmers Centre Upgrades]]>><</link>>
 	<br>
 	<<harvesticon>><<link [[떠난다|Harvest Street]]>><<endevent>><</link>>
 
@@ -99,7 +99,7 @@
 
 :: Farmers Centre Upgrades
 <<if $factoryUpgradesIntro isnot undefined and $factoryUpgradesIntro is 1>>
-	The <<person>> turns the laptop to you. "Back for more upgrades? Take your pick."
+	그 <<person>>【이가】 노트북 화면을 당신 쪽으로 돌린다. "업그레이드하러 또 왔어? 골라 봐."
 	<br><br>
 
 	<<farmUpgradeOptions>>
@@ -108,27 +108,27 @@
 	<<getouticon>><<link [[떠난다|Farmers Centre]]>><</link>>
 <<else>>
 	<<if $factoryUpgradesIntro is undefined>>
-		The <<person>> raises an eyebrow and sizes you up for a moment.
+		그 <<person>>【이가】 한쪽 눈썹을 치켜올리더니 잠시 당신을 위아래로 훑어본다.
 	<<else>>
-		The <<person>> considers it for a moment.
+		그 <<person>>【이가】 잠시 생각에 잠긴다.
 	<</if>>
 	<<if $factoryUpgradesIntro is undefined>>
 		<<if $fame.business gte 500>><<set $factoryUpgradesIntro to 1>>
-			"<span class="green">Alright.</span> You're a worthy supplier to make special accommodations for." <<he>> turns the laptop to you. "Take your pick."
+			"<span class="green">좋아.</span> 특별 편의를 봐 줄 만한 납품업자로군." <<he>>【이가】 노트북을 당신 쪽으로 돌린다. "골라 봐."
 			<br><br>
 
 			<<farmUpgradeOptions>>
 		<<else>><<set $factoryUpgradesIntro to 0>>
-			"<span class="red">No.</span> We're not providing special accommodations for just anyone. Come back when you're more well-known in the business world."
+			"<span class="red">안 돼.</span> 아무한테나 특별 편의를 봐 주진 않아. 업계에서 이름을 좀 더 알린 뒤에 다시 와."
 		<</if>>
 	<<else>>
 		<<if $fame.business gte 500>><<set $factoryUpgradesIntro to 1>>
-			"<span class="green">Alright.</span> You're worth the effort now." <<he>> turns the laptop to you. "Take your pick."
+			"<span class="green">좋아.</span> 이제 공들일 만한 가치가 있군." <<he>>【이가】 노트북을 당신 쪽으로 돌린다. "골라 봐."
 			<br><br>
 
 			<<farmUpgradeOptions>>
 		<<else>><<set $factoryUpgradesIntro to 0>>
-			"<span class="red">Still no.</span> Come back when you're more well-known in the business world."
+			"<span class="red">역시 안 돼.</span> 업계에서 이름을 좀 더 알린 뒤에 다시 와."
 		<</if>>
 	<</if>>
 	<br><br>
@@ -367,177 +367,177 @@
 <<widget "farmUpgradeOptions">>
 	<<if $factoryUpgrades.qualityControl is undefined>>
 		<<if $money gte 250000>>
-			<<link [[Basic Quality Assurance (£2500)|Farmers Centre Upgrades]]>><<money -250000>><<set $factoryUpgrades.qualityControl to 1>><</link>> <<note "+5% Price" "green">>
+			<<link [[기본 품질 보증 (£2500)|Farmers Centre Upgrades]]>><<money -250000>><<set $factoryUpgrades.qualityControl to 1>><</link>> <<note "+5% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 250000>> to purchase Basic Quality Assurance.</span>
+			<span class="blue">기본 품질 보증【을를】 구매하려면 <<printmoney 250000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.qualityControl is 1>>
 		<<if $money gte 600000>>
-			<<link [[Advanced Inspections (£6000)|Farmers Centre Upgrades]]>><<money -600000>><<set $factoryUpgrades.qualityControl to 2>><</link>> <<note "+10% Price" "green">>
+			<<link [[고급 검수 (£6000)|Farmers Centre Upgrades]]>><<money -600000>><<set $factoryUpgrades.qualityControl to 2>><</link>> <<note "+10% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 600000>> to purchase Advanced Inspections.</span>
+			<span class="blue">고급 검수【을를】 구매하려면 <<printmoney 600000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.qualityControl is 2>>
 		<<if $money gte 1200000>>
-			<<link [[Precision Sorting System (£12000)|Farmers Centre Upgrades]]>><<money -1200000>><<set $factoryUpgrades.qualityControl to 3>><</link>> <<note "+15% Price" "green">>
+			<<link [[정밀 선별 시스템 (£12000)|Farmers Centre Upgrades]]>><<money -1200000>><<set $factoryUpgrades.qualityControl to 3>><</link>> <<note "+15% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 1200000>> to purchase Precision Sorting System.</span>
+			<span class="blue">정밀 선별 시스템【을를】 구매하려면 <<printmoney 1200000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.qualityControl is 3>>
 		<<if $money gte 2000000>>
-			<<link [[Automated Grading Machines (£20000)|Farmers Centre Upgrades]]>><<money -2000000>><<set $factoryUpgrades.qualityControl to 4>><</link>> <<note "+20% Price" "green">>
+			<<link [[자동 등급 분류기 (£20000)|Farmers Centre Upgrades]]>><<money -2000000>><<set $factoryUpgrades.qualityControl to 4>><</link>> <<note "+20% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 2000000>> to purchase Automated Grading Machines.</span>
+			<span class="blue">자동 등급 분류기【을를】 구매하려면 <<printmoney 2000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.qualityControl is 4>>
 		<<if $money gte 3500000>>
-			<<link [[Premium Certification (£35000)|Farmers Centre Upgrades]]>><<money -3500000>><<set $factoryUpgrades.qualityControl to 5>><</link>> <<note "+25% Price" "green">>
+			<<link [[프리미엄 인증 (£35000)|Farmers Centre Upgrades]]>><<money -3500000>><<set $factoryUpgrades.qualityControl to 5>><</link>> <<note "+25% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 3500000>> to purchase Premium Certification.</span>
+			<span class="blue">프리미엄 인증【을를】 구매하려면 <<printmoney 3500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<else>>
-		<span class="green">The Quality Control is as good as it can be.</span>
+		<span class="green">품질 관리는 더 올릴 수 없을 만큼 훌륭하다.</span>
 	<</if>>
 	<br>
 	<<if $factoryUpgrades.packaging is undefined>>
 		<<if $money gte 300000>>
-			<<link [[Simple Packaging (£3000)|Farmers Centre Upgrades]]>><<money -300000>><<set $factoryUpgrades.packaging to 1>><</link>> <<note "+5% Price" "green">>
+			<<link [[단순 포장 (£3000)|Farmers Centre Upgrades]]>><<money -300000>><<set $factoryUpgrades.packaging to 1>><</link>> <<note "+5% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 300000>> to purchase Simple Packaging.</span>
+			<span class="blue">단순 포장【을를】 구매하려면 <<printmoney 300000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.packaging is 1>>
 		<<if $money gte 750000>>
-			<<link [[Enhanced Packaging Design (£7500)|Farmers Centre Upgrades]]>><<money -750000>><<set $factoryUpgrades.packaging to 2>><</link>> <<note "+10% Price" "green">>
+			<<link [[개선된 포장 디자인 (£7500)|Farmers Centre Upgrades]]>><<money -750000>><<set $factoryUpgrades.packaging to 2>><</link>> <<note "+10% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 750000>> to purchase Enhanced Packaging Design.</span>
+			<span class="blue">개선된 포장 디자인【을를】 구매하려면 <<printmoney 750000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.packaging is 2>>
 		<<if $money gte 1500000>>
-			<<link [[Reinforced Materials (£15000)|Farmers Centre Upgrades]]>><<money -1500000>><<set $factoryUpgrades.packaging to 3>><</link>> <<note "+15% Price" "green">>
+			<<link [[강화 자재 (£15000)|Farmers Centre Upgrades]]>><<money -1500000>><<set $factoryUpgrades.packaging to 3>><</link>> <<note "+15% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 1500000>> to purchase Reinforced Materials.</span>
+			<span class="blue">강화 자재【을를】 구매하려면 <<printmoney 1500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.packaging is 3>>
 		<<if $money gte 2500000>>
-			<<link [[Eco-Friendly Packaging (£25000)|Farmers Centre Upgrades]]>><<money -2500000>><<set $factoryUpgrades.packaging to 4>><</link>> <<note "+20% Price" "green">>
+			<<link [[친환경 포장 (£25000)|Farmers Centre Upgrades]]>><<money -2500000>><<set $factoryUpgrades.packaging to 4>><</link>> <<note "+20% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 2500000>> to purchase Eco-Friendly Packaging.</span>
+			<span class="blue">친환경 포장【을를】 구매하려면 <<printmoney 2500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.packaging is 4>>
 		<<if $money gte 4000000>>
-			<<link [[Luxury Presentation (£40000)|Farmers Centre Upgrades]]>><<money -4000000>><<set $factoryUpgrades.packaging to 5>><</link>> <<note "+25% Price" "green">>
+			<<link [[고급 연출 (£40000)|Farmers Centre Upgrades]]>><<money -4000000>><<set $factoryUpgrades.packaging to 5>><</link>> <<note "+25% 가격" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 4000000>> to purchase Luxury Presentation.</span>
+			<span class="blue">고급 연출【을를】 구매하려면 <<printmoney 4000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<else>>
-		<span class="green">The Packaging is as good as it can be.</span>
+		<span class="green">포장은 더 올릴 수 없을 만큼 훌륭하다.</span>
 	<</if>>
 	<br>
 	<<if $factoryUpgrades.distribution is undefined>>
 		<<if $money gte 400000>>
-			<<link [[Basic Distribution Routes (£4000)|Farmers Centre Upgrades]]>>
+			<<link [[기본 유통 경로 (£4000)|Farmers Centre Upgrades]]>>
 				<<money -400000>>
 				<<set $factoryUpgrades.distribution to 1>>
 			<</link>>
-			<<note "+10% Quantity" "green">>
+			<<note "+10% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 400000>> to purchase Basic Distribution Routes.</span>
+			<span class="blue">기본 유통 경로【을를】 구매하려면 <<printmoney 400000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.distribution is 1>>
 		<<if $money gte 1000000>>
-			<<link [[Regional Freight Hubs (£10000)|Farmers Centre Upgrades]]>>
+			<<link [[지역 화물 거점 (£10000)|Farmers Centre Upgrades]]>>
 				<<money -1000000>>
 				<<set $factoryUpgrades.distribution to 2>>
 			<</link>>
-			<<note "+20% Quantity" "green">>
+			<<note "+20% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 1000000>> to purchase Regional Freight Hubs.</span>
+			<span class="blue">지역 화물 거점【을를】 구매하려면 <<printmoney 1000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.distribution is 2>>
 		<<if $money gte 2000000>>
-			<<link [[National Logistics Coordination (£20000)|Farmers Centre Upgrades]]>>
+			<<link [[전국 물류 조율 (£20000)|Farmers Centre Upgrades]]>>
 				<<money -2000000>>
 				<<set $factoryUpgrades.distribution to 3>>
 			<</link>>
-			<<note "+30% Quantity" "green">>
+			<<note "+30% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 2000000>> to purchase National Logistics Coordination.</span>
+			<span class="blue">전국 물류 조율【을를】 구매하려면 <<printmoney 2000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.distribution is 3>>
 		<<if $money gte 3500000>>
-			<<link [[Global Shipping Lines (£35000)|Farmers Centre Upgrades]]>>
+			<<link [[글로벌 해운 노선 (£35000)|Farmers Centre Upgrades]]>>
 				<<money -3500000>>
 				<<set $factoryUpgrades.distribution to 4>>
 			<</link>>
-			<<note "+40% Quantity" "green">>
+			<<note "+40% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 3500000>> to purchase Global Shipping Lines.</span>
+			<span class="blue">글로벌 해운 노선【을를】 구매하려면 <<printmoney 3500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.distribution is 4>>
 		<<if $money gte 6000000>>
-			<<link [[Elite Worldwide Partnership (£60000)|Farmers Centre Upgrades]]>>
+			<<link [[엘리트 세계 제휴 (£60000)|Farmers Centre Upgrades]]>>
 				<<money -6000000>>
 				<<set $factoryUpgrades.distribution to 5>>
 			<</link>>
-			<<note "+50% Quantity" "green">>
+			<<note "+50% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 6000000>> to purchase Elite Worldwide Partnership.</span>
+			<span class="blue">엘리트 세계 제휴【을를】 구매하려면 <<printmoney 6000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<else>>
-		<span class="green">Your Distribution is as good as it can be.</span>
+		<span class="green">유통은 더 올릴 수 없을 만큼 훌륭하다.</span>
 	<</if>>
 	<br>
 	<<if $factoryUpgrades.marketing is undefined>>
 		<<if $money gte 300000>>
-			<<link [[Local Promo Ads (£3000)|Farmers Centre Upgrades]]>>
+			<<link [[지역 홍보 광고 (£3000)|Farmers Centre Upgrades]]>>
 				<<money -300000>>
 				<<set $factoryUpgrades.marketing to 1>>
 			<</link>>
-			<<note "+10% Quantity" "green">>
+			<<note "+10% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 300000>> to purchase Local Promo Ads.</span>
+			<span class="blue">지역 홍보 광고【을를】 구매하려면 <<printmoney 300000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.marketing is 1>>
 		<<if $money gte 750000>>
-			<<link [[Regional Marketing Push (£7500)|Farmers Centre Upgrades]]>>
+			<<link [[지역 마케팅 강화 (£7500)|Farmers Centre Upgrades]]>>
 				<<money -750000>>
 				<<set $factoryUpgrades.marketing to 2>>
 			<</link>>
-			<<note "+20% Quantity" "green">>
+			<<note "+20% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 750000>> to purchase Regional Marketing Push.</span>
+			<span class="blue">지역 마케팅 강화【을를】 구매하려면 <<printmoney 750000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.marketing is 2>>
 		<<if $money gte 1500000>>
-			<<link [[National Branding Campaign (£15000)|Farmers Centre Upgrades]]>>
+			<<link [[전국 브랜딩 캠페인 (£15000)|Farmers Centre Upgrades]]>>
 				<<money -1500000>>
 				<<set $factoryUpgrades.marketing to 3>>
 			<</link>>
-			<<note "+30% Quantity" "green">>
+			<<note "+30% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 1500000>> to purchase National Branding Campaign.</span>
+			<span class="blue">전국 브랜딩 캠페인【을를】 구매하려면 <<printmoney 1500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.marketing is 3>>
 		<<if $money gte 2500000>>
-			<<link [[Influencer & Media Partnerships (£25000)|Farmers Centre Upgrades]]>>
+			<<link [[인플루언서·미디어 제휴 (£25000)|Farmers Centre Upgrades]]>>
 				<<money -2500000>>
 				<<set $factoryUpgrades.marketing to 4>>
 			<</link>>
-			<<note "+40% Quantity" "green">>
+			<<note "+40% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 2500000>> to purchase Influencer & Media Partnerships.</span>
+			<span class="blue">인플루언서·미디어 제휴【을를】 구매하려면 <<printmoney 2500000>>【이가】 필요하다.</span>
 		<</if>>
 	<<elseif $factoryUpgrades.marketing is 4>>
 		<<if $money gte 4000000>>
-			<<link [[Global Brand Outreach (£40000)|Farmers Centre Upgrades]]>>
+			<<link [[글로벌 브랜드 확장 (£40000)|Farmers Centre Upgrades]]>>
 				<<money -4000000>>
 				<<set $factoryUpgrades.marketing to 5>>
 			<</link>>
-			<<note "+50% Quantity" "green">>
+			<<note "+50% 수량" "green">>
 		<<else>>
-			<span class="blue">You need <<printmoney 4000000>> to purchase Global Brand Outreach.</span>
+			<span class="blue">글로벌 브랜드 확장【을를】 구매하려면 <<printmoney 4000000>>【이가】 필요하다.</span>
 		<</if>>
 	<<else>>
-		<span class="green">Your Marketing is as good as it can be.</span>
+		<span class="green">마케팅은 더 올릴 수 없을 만큼 훌륭하다.</span>
 	<</if>>
 <</widget>>

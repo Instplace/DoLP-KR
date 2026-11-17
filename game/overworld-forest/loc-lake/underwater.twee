@@ -426,7 +426,7 @@
 		<br>
 	<</if>>
 	<<if $museumAntiques.antiques.antiqueivorynecklace is "found">>
-		<<link [[Return the necklace|Lake Ruin Ivory Return]]>><<set $antiquemoney -= 2000>><<set $museumAntiques.antiques["antiqueivorynecklace"] to "notFound">><<set $necklaceThief to "">><</link>>
+		<<link [[목걸이를 돌려놓는다|Lake Ruin Ivory Return]]>><<set $antiquemoney -= 2000>><<set $museumAntiques.antiques["antiqueivorynecklace"] to "notFound">><<set $necklaceThief to "">><</link>>
 		<br>
 	<</if>>
 	<<swimicon "back">><<link [[떠난다|Lake Ruin Deep]]>><<set $phase to 0>><</link>>
@@ -852,11 +852,11 @@
 	<</if>>
 	<<if _goldnecklace>>
 		<<set _goldnecklace to false>>
-		<<antiqueicon "gold_necklace">><<link [[Wear it|Lake Gold Necklace]]>><<wateraction>><</link>><<loxygen>>
+		<<antiqueicon "gold_necklace">><<link [[착용한다|Lake Gold Necklace]]>><<wateraction>><</link>><<loxygen>>
 	<</if>>
 	<<if _silverRing>>
 		<<set _silverRing to false>>
-		<<antiqueicon "silver_ring">><<link [[Wear it|Lake Silver Ring]]>><<wateraction>><</link>><<loxygen>>
+		<<antiqueicon "silver_ring">><<link [[착용한다|Lake Silver Ring]]>><<wateraction>><</link>><<loxygen>>
 	<</if>>
 	<<wateraction>><</link>><<loxygen>>
 	<br>
@@ -864,7 +864,7 @@
 		<<antiqueicon "chastity">><<link [[착용한다|Lake Gold Chastity Belt]]>><<wateraction>><</link>><<loxygen>>
 		<br>
 	<</if>>
-	<<swimicon "back">><<link [[Swim towards exit|Lake Ruin]]>>
+	<<swimicon "back">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>>
 	<<if _goldchastity>>
 		<<set $gold_chastity_held to true>>
 		<<set $gold_chastity_count ??= 0>>
@@ -1273,15 +1273,15 @@
 
 :: Lake Ruin Ivory Return
 <<underwater>><<effects>><<lakeeffects>>
-You place the necklace back onto the plinth. <<if $wraith.seen gte 1>>You decided that the money would simply not be worth it.<<else>>You have a bad feeling about the necklace.<</if>>
+당신은 목걸이를 받침대 위에 도로 올려놓는다. <<if $wraith.seen gte 1>>그 돈은 도저히 그만한 값어치가 없다고 마음먹는다.<<else>>목걸이에서 불길한 느낌이 든다.<</if>>
 <br><br>
 <<if C.npc["Ivory Wraith"].init is 1>>
 	<<set C.npc["Ivory Wraith"].lust to 0>>
 <</if>>
 <<if Time.isBloodMoon()>>
-	You suddenly hear crying from the walls all around you. <<if $wraith.seen gte 1>>A familiar<<else>>An unfamiliar<</if>> voice cries out, but it sounds like cries of relief and happiness instead of despair or anger. <<trauma -12>><<lltrauma>>
+	갑자기 사방의 벽에서 흐느끼는 소리가 들려온다. <<if $wraith.seen gte 1>>귀에 익은<<else>>낯선<</if>> 목소리가 울부짖지만, 절망이나 분노가 아니라 안도와 기쁨의 울음처럼 들린다. <<trauma -12>><<lltrauma>>
 	<br><br>
-	It dies down after a few moments, leaving you puzzled.
+	잠시 뒤 소리가 잦아들고, 당신은 어리둥절해진다.
 	<<if $wraith.hunt>>
 		두려움이 서서히 사라지고, 당신을 쫓던 존재의 기척이 더는 느껴지지 않는다. <span class="blue"><i>다음 블러드문까지는 안전합니다.</i></span>
 		<br><br>
@@ -1291,13 +1291,13 @@ You place the necklace back onto the plinth. <<if $wraith.seen gte 1>>You decide
 		<<clearWraith>>
 		<<set $wraithSkip to true>>
 	<</if>>
-	You exit the room.
+	당신은 방을 나선다.
 <<elseif $wraith.state>>
-	You feel curious as you look at your reflection in the blue gemstones. You look happy. <<stress -6>><<lstress>>
+	파란 보석에 비친 자신의 모습을 보며 호기심이 인다. 행복해 보인다. <<stress -6>><<lstress>>
 	<br><br>
-	You linger for a bit, and leave the room with the necklace in its rightful place.
+	당신은 잠시 머물다가, 목걸이를 제자리에 둔 채 방을 나선다.
 <<else>>
-	You can see your reflection in the blue gemstones. This would fetch a high price.
+	파란 보석에 비친 자신의 모습이 보인다. 비싼 값에 팔릴 것 같다.
 <</if>>
 <br><br>
 <<link [[다음|Lake Ruin Deep]]>><</link>>
@@ -1308,12 +1308,12 @@ You place the necklace back onto the plinth. <<if $wraith.seen gte 1>>You decide
 <<set $outside to 0>><<set $location to "lake_ruin">><<underwater>><<effects>><<lakeeffects>>
 <<set $antiquemoney -= 250>>
 
-You take the gold necklace and carefully put it on.
-<<if $worn.neck.name isnot "naked">><br>You didn't notice at first, but you dropped your <span class="red">$worn.neck.name</span>, which disappeared in the depths.<</if>>
+당신은 금목걸이를 집어 조심스럽게 목에 건다.
+<<if $worn.neck.name isnot "naked">><br>처음엔 알아채지 못했지만, 당신은 <span class="red">$worn.neck.name</span>【을를】 떨어뜨렸고, 그것은 심연 속으로 사라졌다.<</if>>
 <br><br>
 <<neckwear setup.clothes.neck.length-1>>
 
-<<lakeicon "pots">><<link [[Search pots|Lake Pots]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
+<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br>
 <<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br>
@@ -1322,12 +1322,12 @@ You take the gold necklace and carefully put it on.
 <<set $outside to 0>><<set $location to "lake_ruin">><<underwater>><<effects>><<lakeeffects>>
 <<set $antiquemoney -= 20>>
 
-You take the silver ring and carefully put it on your finger.
-<<if $worn.rings.name isnot "naked">><br>You didn't notice at first, but it seems your <span class="red">$worn.rings.name</span> slipped from your finger.<</if>>
+당신은 은반지를 집어 조심스럽게 손가락에 낀다.
+<<if $worn.rings.name isnot "naked">><br>처음엔 알아채지 못했지만, 당신의 <span class="red">$worn.rings.name</span>【이가】 손가락에서 빠진 모양이다.<</if>>
 <br><br>
 <<ringswear 11>>
 
-<<lakeicon "pots">><<link [[Search pots|Lake Pots]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
+<<lakeicon "pots">><<link [[항아리를 뒤진다|Lake Pots]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br>
 <<swimicon "up">><<link [[출구 쪽으로 헤엄친다|Lake Ruin]]>><<wateraction>><<clotheson>><</link>><<loxygen>>
 <br>

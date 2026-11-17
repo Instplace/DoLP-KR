@@ -26,7 +26,7 @@
 
 		<<if $combatExtended.reverseRapeStart is 1>>
 			<span class="green">파트너가 순순히 따른다. 당신이 주도할 수 있다. [이번 만남에서는 음란도 요구 사항이 무시됩니다]</span>
-			<span class="yellow">You can stop the reverse rape by opening the Combat Menu. </span>
+			<span class="yellow">전투 메뉴를 열면 역강간을 그만둘 수 있다.</span>
 		<</if>>
 
 		/* Player CE Actions Reset */
@@ -174,7 +174,7 @@
 			<<set $leftaction to 0>><<set $leftactiondefault to "lefthandholdnew">>
 			<<if $combatExtended.reverseRapeStart is 1 or combatSkillCheck("hand", $lefttarget)>>
 				<<set $NPCList[$lefttarget].righthand to "handhold">>
-				You take <<someones $lefttarget>> right hand in your own.
+				당신은 <<someones $lefttarget>> 오른손을 마주 잡는다.
 				<<set $leftarm to "handheld">><<set $leftactiondefault to "lefthandholdkeep">>
 				<<submission 1>>
 				<<if isLoveInterest($NPCList[$lefttarget].fullDescription)>>
@@ -183,7 +183,7 @@
 					<<takeHandholdingVirginity $NPCList[$lefttarget] null null true>>
 				<</if>>
 			<<else>>
-				You reach for <<someones $lefttarget>> right hand, but <<he>> moves away.
+				당신은 <<someones $lefttarget>> 오른손을 잡으려 손을 뻗지만, <<he>>【이가】 피한다.
 			<</if>>
 		<</if>>
 
@@ -210,7 +210,7 @@
 			<<if $combatExtended.reverseRapeStart is 1 or combatSkillCheck("hand", $righttarget)>>
 				<<set $NPCList[$righttarget].lefthand to "handhold">>
 				<<set $rightarm to "handheld">>
-				You take <<hisselect $righttarget>> left hand in your own.
+				당신은 <<hisselect $righttarget>> 왼손을 마주 잡는다.
 				<<set $rightarm to "handheld">><<set $rightactiondefault to "righthandholdkeep">>
 				<<submission 1>>
 				<<if isLoveInterest($NPCList[$righttarget].fullDescription)>>
@@ -219,7 +219,7 @@
 					<<takeHandholdingVirginity $NPCList[$righttarget] null null true>>
 				<</if>>
 			<<else>>
-				You reach for <<someones $righttarget>> left hand, but <<he>> moves away.
+				당신은 <<someones $righttarget>> 왼손을 잡으려 손을 뻗지만, <<he>>【이가】 피한다.
 			<</if>>
 		<</if>>
 
@@ -259,7 +259,7 @@
 						당신은 <<someones $lefttarget>> 손을 당신의 <<bottom>>에 밀착시킨다.
 						<<set $NPCList[$lefttarget].righthand to "anusentrance">><<set $anususe to "handentrance">><<set $anusstate to "handentrance">>
 					<<case "neck">>
-						You press <<someones $lefttarget>> hand against your neck.
+						당신은 <<someones $lefttarget>> 손을 당신의 목에 밀착시킨다.
 						<<set $NPCList[$lefttarget].righthand to "throat">><<set $neckuse to "hand">>
 					<<default>>
 				<</switch>>
@@ -289,21 +289,21 @@
 			<<if $combatExtended.reverseRapeStart is 1 or combatSkillCheck("hand", $righttarget)>>
 				<<switch $handGuideRight>>
 					<<case "penis">>
-						You lower <<someones $righttarget>> hand to your <<penis>>.
+						당신은 <<someones $righttarget>> 손을 당신의 <<penis>> 쪽으로 가져간다.
 						<<set $NPCList[$righttarget].lefthand to "penisentrance">><<set $penisuse to 1>><<set $penisstate to "otherhandentrance">>
 					<<case "pussy">>
-						Your lower <<someones $righttarget>> hand to your <<pussy>>.
+						당신은 <<someones $righttarget>> 손을 당신의 <<pussy>> 쪽으로 가져간다.
 						<<set $NPCList[$righttarget].lefthand to "vaginaentrance">><<set $vaginause to 1>><<set $vaginastate to "otherhandentrance">>
 					<<case "ass">>
-						You press <<someones $righttarget>> hand against your <<bottom>>.
+						당신은 <<someones $righttarget>> 손을 당신의 <<bottom>>에 밀착시킨다.
 						<<set $NPCList[$righttarget].lefthand to "anusentrance">><<set $anususe to "handentrance">><<set $anusstate to "handentrance">>
 					<<case "neck">>
-						You press <<someones $righttarget>> hand against your neck.
+						당신은 <<someones $righttarget>> 손을 당신의 목에 밀착시킨다.
 						<<set $NPCList[$righttarget].lefthand to "throat">><<set $neckuse to "hand">>
 				<</switch>>
 				<<set $rightactiondefault to "rest">><<set $rightarm to 0>><<submission 1>>
 			<<else>>
-				You try to guide <<someones $righttarget>> hand to
+				당신은 <<someones $righttarget>> 손을
 				<<switch $handGuideRight>>
 					<<case "penis">>당신의 <<penis>> 쪽으로 이끌려고 하지만,
 					<<case "pussy">>당신의 <<pussy>> 쪽으로 이끌려고 하지만,
@@ -421,14 +421,14 @@
 				<<elseif $combatExtended.reverseRapeStart is 1 or combatSkillCheck("hand", $_target)>>
 					<<set $NPCList[$_target].penis to "mouthentrance">> <<set $mouthactiondefault to "lick">> <<set $mouthuse to "penis">> <<set $mouthstate to "entrance">>
 					<<set $NPCList[$_target].location.genitals to "head">>
-					<span class="blue">You move <<hisselect $_target>> penis towards your mouth.</span>
+					<span class="blue">당신은 <<hisselect $_target>> 자지를 당신의 입 쪽으로 가져간다.</span>
 					<<handskilluse>>
 				<<else>>
 					<<set $NPCList[$_target].penis to 0>><<handskilluse>>
-					You try to move into a position where your mouth can take <<hisselect $_target>> penis, but <<he>> has other ideas.
+					당신은 <<hisselect $_target>> 자지를 입에 담을 수 있는 자세로 옮기려 하지만, <<he>>【은는】 다른 생각이 있는 듯하다.
 				<</if>>
 			<<else>>
-				<span class="blue">You try to move <<hisselect $_target>> penis towards your mouth, but the entrance is already occupied.</span>
+				<span class="blue">당신은 <<hisselect $_target>> 자지를 입 쪽으로 가져가려 하지만, 입구는 이미 차지되어 있다.</span>
 			<</if>>
 		<</if>>
 
@@ -446,17 +446,17 @@
 				<<set $chestactiondefault to "rub">><<set $chestuse to "penis">><<cheststat>><<set $mouthactiondefault to "peniskiss">>
 				<<set $NPCList[$_target].penis to "chest">><<set $chesttarget to $_target>>
 				<<if $breastcup is "none">>
-					<span class="lblue">You <<handtext>> put <<his>> $NPCList[$_target].penisdesc between your <<breasts>> and squeeze them together as best as you can.
+					<span class="lblue">당신은 <<handtext>> <<his>> <<= window.KR.getPenisDescKr($NPCList[$_target].penisdesc)>>【을를】 <<breasts>> 사이에 넣고 최대한 모아 쥔다.
 					당신의 가슴은 너무 작아서 효과가 없지만, 그 귀여운 시도는 <<him>>【을를】 매혹하는 데 성공한다.</span> <<He>>【은는】 <<his>> 자지를 당신의 가슴에 비벼댄다.
 				<<else>>
-					<span class="lblue">You <<handtext>> put <<his>> $NPCList[$_target].penisdesc between your <<breasts>>.</span>
+					<span class="lblue">당신은 <<handtext>> <<his>> <<= window.KR.getPenisDescKr($NPCList[$_target].penisdesc)>>【을를】 <<breasts>> 사이에 넣는다.</span>
 				<</if>>
 			<<else>>
 				<<set $NPCList[$_target].penis to 0>>
 				<<if $player.breastsize is 0>>
-					You squeeze your <<breasts>> together as best you can and try to put <<his>> penis between them, to no avail.
+					당신은 최대한 <<breasts>>【을를】 모아 쥐고 <<his>> 자지를 그 사이에 끼우려 하지만, 소용이 없다.
 				<<else>>
-					You try to put <<his>> penis between your <<breasts>>, but fail.
+					당신은 <<his>> 자지를 <<breasts>> 사이에 끼우려 하지만 실패한다.
 				<</if>>
 			<</if>>
 		<</if>>
@@ -611,68 +611,68 @@
 					<<defiance 5 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 2>><<combatExtendedStability -5>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 0.75 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.375 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.25 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.155 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<<else>>
 					<<defiance 3 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 2>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 0.45 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.225 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.15 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.075 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<</if>>
 			<<else>>
 				<<defiance 5 $lefttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 2>>
 				<<if $worn.rings.type.includes("jewelled")>>
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen the blow! The jewels leave
+						당신의 반지들이 타격을 강화한다! 보석들이
 						<<defiance 0.75 $lefttarget>>
 					<<else>>
-					ring strengthens the blow! The jewel leaves
+					당신의 반지가 타격을 강화한다! 보석이
 						<<defiance 0.375 $lefttarget>>
 					<</if>>
-					 small cuts on <<hisselect $lefttarget>> body.
+					 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 				<<elseif $worn.rings.name isnot "naked">>
 					당신의
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen 
+						반지들이
 						<<defiance 0.25 $lefttarget>>
 					<<else>>
-						ring strengthens 
+						반지가
 						<<defiance 0.155 $lefttarget>>
 					<</if>>
-					 the blow!
+					 타격을 강화한다!
 				<</if>>
 			<</if>>
 		<</if>>
@@ -700,10 +700,10 @@
 							<<defiance 2 $lefttarget>><<violence 5>><<set $speechPlayerHits to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.3 $lefttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.1 $lefttarget>>
 								<</if>>
 							<</if>>
@@ -711,10 +711,10 @@
 							<<defiance 1 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.15 $lefttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.05 $lefttarget>>
 								<</if>>
 							<</if>>
@@ -723,10 +723,10 @@
 						<<defiance 2 $lefttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -743,10 +743,10 @@
 						<<defiance 2 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -754,10 +754,10 @@
 						<<defiance 1 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -766,10 +766,10 @@
 					<<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 					<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.3 $lefttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-						Your rings strengthen the blow!
+						당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $lefttarget>>
 						<</if>>
 					<</if>>
@@ -800,10 +800,10 @@
 							<<defiance 2 $righttarget>><<violence 5>><<set $speechPlayerHits to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.3 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.1 $righttarget>>
 								<</if>>
 							<</if>>
@@ -811,10 +811,10 @@
 							<<defiance 1 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.15 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.05 $righttarget>>
 								<</if>>
 							<</if>>
@@ -823,10 +823,10 @@
 						<<defiance 2 $righttarget>><<set $speechPlayerHits to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $righttarget>>
 							<</if>>
 						<</if>>
@@ -843,10 +843,10 @@
 						<<defiance 2 $righttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $righttarget>>
 							<</if>>
 						<</if>>
@@ -854,10 +854,10 @@
 						<<defiance 1 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $righttarget>>
 							<</if>>
 						<</if>>
@@ -866,10 +866,10 @@
 					<<defiance 2 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 					<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.3 $righttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-							Your rings strengthen the blow!
+							당신의 반지가 타격을 강화한다!
 							<<defiance 0.1 $righttarget>>
 						<</if>>
 					<</if>>
@@ -900,10 +900,10 @@
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
 					당신은 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<personselect $lefttarget>><<person>>【을를】<</if>> 향해
-					with your umbrella, <span class="red">but the slime immobilises your limb.</span>
+					우산을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your left arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 왼팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsumbrella $lefttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -942,10 +942,10 @@
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
 					당신은 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<person>>【을를】<</if>> 향해
-					with your umbrella, <span class="red">but the slime immobilises your limb.</span>
+					우산을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your right arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 오른팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsumbrella $righttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -987,11 +987,11 @@
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftblock">>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to defend yourself
+					당신은 스스로를 지키려고
 					왼손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your left arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 왼팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsguard $lefttarget>><<set $combatExtended.blockingActive to 1>>
 				<</if>>
 			<<else>>
@@ -1003,11 +1003,11 @@
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightblock">><<personselect $righttarget>>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to defend yourself
+					당신은 스스로를 지키려고
 					오른손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your right arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 오른팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsguard $righttarget>><<set $combatExtended.blockingActive to 1>>
 				<</if>>
 			<<else>>
@@ -1023,11 +1023,11 @@
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftcounter">>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to defend yourself
+					당신은 스스로를 지키려고
 					왼손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your left arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 왼팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsguard $lefttarget>><<set $combatExtended.counteringActive to 1>>
 				<</if>>
 			<<else>>
@@ -1039,11 +1039,11 @@
 			<<set $rightaction to 0>><<set $rightactiondefault to "rightcounter">><<personselect $righttarget>>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to defend yourself
+					당신은 스스로를 지키려고
 					오른손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your right arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 오른팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsguard $righttarget>><<set $combatExtended.counteringActive to 1>>
 				<</if>>
 			<<else>>
@@ -1063,68 +1063,68 @@
 					<<defiance 2 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 2>><<combatExtendedStability -5>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 0.3 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.15 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.1 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.05 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<<else>>
 					<<defiance 1 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 2>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 0.15 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.075 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.05 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.025 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<</if>>
 			<<else>>
 				<<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 2>>
 				<<if $worn.rings.type.includes("jewelled")>>
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen the blow! The jewels leave
+						당신의 반지들이 타격을 강화한다! 보석들이
 						<<defiance 0.3 $lefttarget>>
 					<<else>>
-					ring strengthens the blow! The jewel leaves
+					당신의 반지가 타격을 강화한다! 보석이
 						<<defiance 0.15 $lefttarget>>
 					<</if>>
-					 small cuts on <<hisselect $lefttarget>> body.
+					 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 				<<elseif $worn.rings.name isnot "naked">>
 					당신의
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen 
+						반지들이
 						<<defiance 0.1 $lefttarget>>
 					<<else>>
-						ring strengthens 
+						반지가
 						<<defiance 0.05 $lefttarget>>
 					<</if>>
-					 the blow!
+					 타격을 강화한다!
 				<</if>>
 			<</if>>
 		<</if>>
@@ -1133,11 +1133,11 @@
 			<<set $leftaction to 0>><<set $leftactiondefault to "leftfeint">><<set $combatExtended.feintingActive to 1>><<set $striking to 1>><<combatExtendedEnemyCheck $lefttarget>>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to launch a feint at the <<if $enemytype is "beast">><<beasttype>><<else>><<personselect $lefttarget>><<person>><</if>>
+					당신은 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<personselect $lefttarget>><<person>>【을를】<</if>> 향해 페인트를 걸며
 					왼손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your left arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 왼팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsfeint $lefttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -1148,10 +1148,10 @@
 							<<defiance 1 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.15 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.05 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1159,10 +1159,10 @@
 							<<defiance 0.5 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.075 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.025 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1171,10 +1171,10 @@
 						<<defiance 1 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1191,10 +1191,10 @@
 						<<defiance 1 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1202,10 +1202,10 @@
 						<<defiance 0.5 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.075 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.025 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1214,10 +1214,10 @@
 					<<defiance 1 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 					<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.15 $righttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-							Your rings strengthen the blow!
+							당신의 반지가 타격을 강화한다!
 							<<defiance 0.05 $righttarget>>
 						<</if>>
 					<</if>>
@@ -1229,11 +1229,11 @@
 			<<set $rightaction to 0>><<set $leftactiondefault to "rightfeint">><<set $combatExtended.feintingActive to 1>><<set $striking to 1>><<combatExtendedEnemyCheck $righttarget>>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to launch a feint a the <<if $enemytype is "beast">><<beasttype>><<else>><<personselect $righttarget>><<person>><</if>>
+					당신은 <<if $enemytype is "beast">><<beasttype>>【을를】<<else>><<personselect $righttarget>><<person>>【을를】<</if>> 향해 페인트를 걸며
 					오른손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your right arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 오른팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsfeint $righttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -1244,10 +1244,10 @@
 							<<defiance 1 $righttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.15 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.05 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1255,10 +1255,10 @@
 							<<defiance 0.5 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.075 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.025 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1267,10 +1267,10 @@
 						<<defiance 1 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1287,10 +1287,10 @@
 						<<defiance 1 $righttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.15 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.05 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1298,10 +1298,10 @@
 						<<defiance 0.5 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.075 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.025 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1310,10 +1310,10 @@
 					<<defiance 1 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 					<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.15 $righttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-							Your rings strengthen the blow!
+							당신의 반지가 타격을 강화한다!
 							<<defiance 0.05 $righttarget>>
 						<</if>>
 					<</if>>
@@ -1333,68 +1333,68 @@
 					<<defiance 10 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 2>><<combatExtendedStability -5>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 1.5 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.5 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.75 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.25 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<<else>>
 					<<defiance 5 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 2>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen the blow! The jewels leave
+							당신의 반지들이 타격을 강화한다! 보석들이
 							<<defiance 0.75 $lefttarget>>
 						<<else>>
-						ring strengthens the blow! The jewel leaves
+						당신의 반지가 타격을 강화한다! 보석이
 							<<defiance 0.25 $lefttarget>>
 						<</if>>
-						 small cuts on <<hisselect $lefttarget>> body.
+						 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 					<<elseif $worn.rings.name isnot "naked">>
 						당신의
 						<<if $worn.rings.name.includes("rings")>>
-							rings strengthen 
+							반지들이
 							<<defiance 0.374 $lefttarget>>
 						<<else>>
-							ring strengthens 
+							반지가
 							<<defiance 0.125 $lefttarget>>
 						<</if>>
-						 the blow!
+						 타격을 강화한다!
 					<</if>>
 				<</if>>
 			<<else>>
 				<<defiance 10 $lefttarget>><<set $speechhit to 1>><<set $hookpunchStat += 2>>
 				<<if $worn.rings.type.includes("jewelled")>>
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen the blow! The jewels leave
+						당신의 반지들이 타격을 강화한다! 보석들이
 						<<defiance 1.5 $lefttarget>>
 					<<else>>
-					ring strengthens the blow! The jewel leaves
+					당신의 반지가 타격을 강화한다! 보석이
 						<<defiance 0.5 $lefttarget>>
 					<</if>>
-					 small cuts on <<hisselect $lefttarget>> body.
+					 <<hisselect $lefttarget>> 몸에 작은 상처를 남긴다.
 				<<elseif $worn.rings.name isnot "naked">>
 					당신의
 					<<if $worn.rings.name.includes("rings")>>
-						rings strengthen 
+						반지들이
 						<<defiance 0.75 $lefttarget>>
 					<<else>>
-						ring strengthens 
+						반지가
 						<<defiance 0.25 $lefttarget>>
 					<</if>>
-					 the blow!
+					 타격을 강화한다!
 				<</if>>
 			<</if>>
 		<</if>>
@@ -1407,7 +1407,7 @@
 					왼손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your left arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 왼팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionshookpunch $lefttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -1418,10 +1418,10 @@
 							<<defiance 4 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.6 $lefttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.2 $lefttarget>>
 								<</if>>
 							<</if>>
@@ -1429,10 +1429,10 @@
 							<<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.3 $lefttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.1 $lefttarget>>
 								<</if>>
 							<</if>>
@@ -1441,10 +1441,10 @@
 						<<defiance 4 $lefttarget>><<set $speechhit to 1>><<set $hookpunchStat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.6 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.2 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -1461,10 +1461,10 @@
 						<<defiance 4 $lefttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.6 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.2 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -1472,10 +1472,10 @@
 						<<defiance 2 $lefttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $lefttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $lefttarget>>
 							<</if>>
 						<</if>>
@@ -1484,10 +1484,10 @@
 					<<defiance 4 $lefttarget>><<set $speechhit to 1>><<set $hookpunchStat += 1>>
 					<<if $worn.rings.altposition is "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.6 $lefttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-							Your rings strengthen the blow!
+							당신의 반지가 타격을 강화한다!
 							<<defiance 0.2 $lefttarget>>
 						<</if>>
 					<</if>>
@@ -1503,7 +1503,7 @@
 					오른손을 휘두르려 하지만, <span class="red">슬라임이 당신의 사지를 고정시켜 버린다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your right arm, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 오른팔을 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionshookpunch $righttarget>>
 					<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 						<<if $combatExtended.enemyCounterSuccess is 2>>
@@ -1514,10 +1514,10 @@
 							<<defiance 4 $righttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>><<combatExtendedStability -5>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.6 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.2 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1525,10 +1525,10 @@
 							<<defiance 2 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 							<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 								<<if $worn.rings.type.includes("jewelled")>>
-									Your rings strengthen the blow! The jewel leaves small cuts on their body.
+									당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 									<<defiance 0.3 $righttarget>>
 								<<elseif $worn.rings.name isnot "naked">>
-									Your rings strengthen the blow!
+									당신의 반지가 타격을 강화한다!
 									<<defiance 0.1 $righttarget>>
 								<</if>>
 							<</if>>
@@ -1537,10 +1537,10 @@
 						<<defiance 4 $righttarget>><<set $speechhit to 1>><<set $hookpunchStat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.6 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.2 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1557,10 +1557,10 @@
 						<<defiance 4 $righttarget>><<violence 5>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.6 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.2 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1568,10 +1568,10 @@
 						<<defiance 2 $righttarget>><<set $speechhit to 1>><<set $attackstat += 1>>
 						<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 							<<if $worn.rings.type.includes("jewelled")>>
-								Your rings strengthen the blow! The jewel leaves small cuts on their body.
+								당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 								<<defiance 0.3 $righttarget>>
 							<<elseif $worn.rings.name isnot "naked">>
-								Your rings strengthen the blow!
+								당신의 반지가 타격을 강화한다!
 								<<defiance 0.1 $righttarget>>
 							<</if>>
 						<</if>>
@@ -1580,10 +1580,10 @@
 					<<defiance 4 $righttarget>><<set $speechhit to 1>><<set $hookpunchStat += 1>>
 					<<if $worn.rings.altposition isnot "alt" or $worn.rings.name.includes("rings")>>
 						<<if $worn.rings.type.includes("jewelled")>>
-							Your rings strengthen the blow! The jewel leaves small cuts on their body.
+							당신의 반지가 타격을 강화한다! 보석이 상대의 몸에 작은 상처를 남긴다.
 							<<defiance 0.6 $righttarget>>
 						<<elseif $worn.rings.name isnot "naked">>
-							Your rings strengthen the blow!
+							당신의 반지가 타격을 강화한다!
 								<<defiance 0.2 $righttarget>>
 						<</if>>
 					<</if>>
@@ -2305,18 +2305,18 @@
 				<<set _handsCount to 2>><<set $rightaction to 0>><<set $rightactiondefault to "stoporal">>
 			<</if>>
 			
-			<<if ($penisuse is "othermouth" and $NPCList[$lefttarget].mouth.startsWith("penis")) or 
+			<<if ($penisuse is "othermouth" and $NPCList[$lefttarget].mouth.startsWith("penis")) or
 				($vaginause is "othermouth" and $NPCList[$lefttarget].mouth.startsWith("vagina"))>>
 				<<set _success to 0>>
-				You grab <<combatpersons>> head with <<= _handsCount is 2 ? "both hands" : "your left hand">> and <<= ($consensual == 1 ? "gently push" : "try to shove")>> <<him>> away from your crotch.
+				당신은 <<combatpersons>>의 머리를 <<= _handsCount is 2 ? "양손으로" : "왼손으로">> 붙잡고 사타구니에서 <<= ($consensual == 1 ? "살며시 밀어낸다" : "밀쳐내려 한다")>>.
 				<<if $consensual is 1>>
-					<<He>> doesn't resist.
+					<<He>>【은는】 저항하지 않는다.
 					<<set _success to 1>><<brat 1 $lefttarget>>
 				<<elseif currentSkillValue("physique") gte random(1, 150 * $NPCList[$lefttarget].healthmax)/_handsCount>>
-					<span class="teal">You manage to do so.</span>
+					<span class="teal">당신은 해낸다.</span>
 					<<set _success to 1>><<defiance _handsCount $lefttarget>>
 				<<else>>
-					<span class="purple"><<His>> face remains on your crotch.</span>
+					<span class="purple"><<His>> 얼굴은 여전히 당신의 사타구니에 있다.</span>
 					<<defiance _handsCount $lefttarget>>
 				<</if>>
 				<<if _success>>
@@ -2340,18 +2340,18 @@
 		
 		<<if $rightaction is "stoporal" and !($leftaction is "stoporal" and $lefttarget is $righttarget)>>
 			<<set $rightaction to 0>><<set $rightactiondefault to "stoporal">><<personselect $righttarget>>
-			<<if ($penisuse is "othermouth" and $NPCList[$righttarget].mouth.startsWith("penis")) or 
+			<<if ($penisuse is "othermouth" and $NPCList[$righttarget].mouth.startsWith("penis")) or
 				($vaginause is "othermouth" and $NPCList[$righttarget].mouth.startsWith("vagina"))>>
 				<<set _success to 0>>
-				You grab <<combatpersons>> head with your right hand and <<= ($consensual == 1 ? "gently push" : "try to shove")>> <<him>> away from your crotch.
+				당신은 <<combatpersons>>의 머리를 오른손으로 붙잡고 사타구니에서 <<= ($consensual == 1 ? "살며시 밀어낸다" : "밀쳐내려 한다")>>.
 				<<if $consensual is 1>>
-					<<He>> doesn't resist.
+					<<He>>【은는】 저항하지 않는다.
 					<<set _success to 1>><<brat 1 $righttarget>>
 				<<elseif currentSkillValue("physique") gte random(1, 150 * $NPCList[$righttarget].healthmax)>>
-					<span class="teal">You manage to do so.</span>
+					<span class="teal">당신은 해낸다.</span>
 					<<set _success to 1>><<defiance 1 $righttarget>>
 				<<else>>
-					<span class="purple"><<His>> face remains on your crotch.</span>
+					<span class="purple"><<His>> 얼굴은 여전히 당신의 사타구니에 있다.</span>
 					<<defiance 1 $righttarget>>
 				<</if>>
 				<<if _success>>
@@ -3654,10 +3654,10 @@
 									당신의 하이힐이 타격을 강화한다!
 									<<defiance 2 $feettarget>>
 								<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-									Your boots strengthen the blow!
+									당신의 부츠가 타격을 강화한다!
 									<<defiance 2 $feettarget>>
 								<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-									Your rabbit feet strengthen the blow!
+									당신의 토끼 발이 타격을 강화한다!
 									<<defiance 2 $feettarget>>
 								<</if>>
 							<<else>>
@@ -3666,10 +3666,10 @@
 									당신의 하이힐이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-									Your boots strengthen the blow!
+									당신의 부츠가 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-									Your rabbit feet strengthen the blow!
+									당신의 토끼 발이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<</if>>
 							<</if>>
@@ -3682,10 +3682,10 @@
 									당신의 하이힐이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-									Your boots strengthen the blow!
+									당신의 부츠가 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-									Your rabbit feet strengthen the blow!
+									당신의 토끼 발이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<</if>>
 							<<else>>
@@ -3694,10 +3694,10 @@
 									당신의 하이힐이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-									Your boots strengthen the blow!
+									당신의 부츠가 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-									Your rabbit feet strengthen the blow!
+									당신의 토끼 발이 타격을 강화한다!
 									<<defiance 1 $feettarget>>
 								<</if>>
 							<</if>>
@@ -3710,10 +3710,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<</if>>
 						<<else>>
@@ -3722,10 +3722,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<</if>>
 						<</if>>
@@ -3746,10 +3746,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 2 $feettarget>>
 							<</if>>
 						<<else>>
@@ -3758,10 +3758,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<</if>>
 						<</if>>
@@ -3773,10 +3773,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<</if>>
 						<<else>>
@@ -3785,10 +3785,10 @@
 								당신의 하이힐이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-								Your boots strengthen the blow!
+								당신의 부츠가 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-								Your rabbit feet strengthen the blow!
+								당신의 토끼 발이 타격을 강화한다!
 								<<defiance 1 $feettarget>>
 							<</if>>
 						<</if>>
@@ -3801,10 +3801,10 @@
 							당신의 하이힐이 타격을 강화한다!
 							<<defiance 2 $feettarget>>
 						<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-							Your boots strengthen the blow!
+							당신의 부츠가 타격을 강화한다!
 							<<defiance 2 $feettarget>>
 						<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-							Your rabbit feet strengthen the blow!
+							당신의 토끼 발이 타격을 강화한다!
 							<<defiance 2 $feettarget>>
 						<</if>>
 					<<else>>
@@ -3813,10 +3813,10 @@
 							당신의 하이힐이 타격을 강화한다!
 							<<defiance 1 $feettarget>>
 						<<elseif $worn.feet.name.includes("combat boots") or $worn.feet.name.includes("work boots")>>
-							Your boots strengthen the blow!
+							당신의 부츠가 타격을 강화한다!
 							<<defiance 1 $feettarget>>
 						<<elseif $transformationParts.traits.strongFeet isnot "disabled">>
-							Your rabbit feet strengthen the blow!
+							당신의 토끼 발이 타격을 강화한다!
 							<<defiance 2 $feettarget>>
 						<</if>>
 					<</if>>
@@ -3829,11 +3829,11 @@
 			<<set $feetaction to 0>><<set $feetactiondefault to "dodge">>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to stay light-footed
+					당신은 가볍게 발을 놀리려 하지만
 					<span class="red">슬라임이 당신의 다리를 움직이지 못하게 한다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your legs, <span class="green">but you wrestle control away from it.</span>
+					슬라임이 당신의 다리를 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
 					<<actionsdodge>><<set $combatExtended.activeDodgingActive to 1>>
 				<</if>>
 			<<else>>
@@ -3845,21 +3845,21 @@
 			<<set $feetaction to 0>><<set $feetactiondefault to "plant">>
 			<<if $parasite.left_ear.name is "slime" and random(1, 3) is 3 or $parasite.right_ear.name is "slime" and random(1, 3) is 3>>
 				<<if $earSlime.corruption gte (currentSkillValue('willpower') / 10)>>
-					You try to regain your footing
+					당신은 자세를 바로잡으려 하지만
 					<span class="red">슬라임이 당신의 다리를 움직이지 못하게 한다.</span>
 					<<gwillpower>><<willpower 1>>
 				<<else>>
-					The slime tries to immobilise your legs, <span class="green">but you wrestle control away from it.</span>
-					You steady your footing.<<combatExtendedStability 15>><<set $enemyanger += 10>>
+					슬라임이 당신의 다리를 붙들어 고정하려 하지만, <span class="green">당신은 몸부림쳐 슬라임에게서 통제권을 되찾는다.</span>
+					당신은 자세를 가다듬는다.<<combatExtendedStability 15>><<set $enemyanger += 10>>
 				<</if>>
 			<<else>>
-				You steady your footing.<<combatExtendedStability 15>><<set $enemyanger += 10>>
+				당신은 자세를 가다듬는다.<<combatExtendedStability 15>><<set $enemyanger += 10>>
 			<</if>>
 		<</if>>
 
 		<<if $feetaction is "submit">>
 			<<set $feetaction to 0>><<set $feetactiondefault to "submit">>
-			You drop down to your knees.<<set $combatExtended.stability to 0>><<set $enemytrust += 100>>
+			당신은 무릎을 꿇는다.<<set $combatExtended.stability to 0>><<set $enemytrust += 100>>
 		<</if>>
 
 		<<if $feetaction is "rub">>
@@ -4666,7 +4666,7 @@
 		<<if $mouthaction is "ask" and $askAction is "askoral">>
 			<<set $mouthaction to 0>><<unset $askAction>><<set _sound to 1>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "ask for oral service" 1>>
+				<<wheeze "구강 봉사를 해 달라고 부탁한다" 1>>
 			<<else>>
 				<<set $mouthactiondefault to 0>><<brat 2>>
 				<<set $_target to $NPCList[$mouthtarget]>><<personselect $mouthtarget>>
@@ -4683,7 +4683,7 @@
 						<span class="red"><<if $enemyno gte 2>>그들은<<else>><<He>>【은는】 <</if>> 당신의 말을 이해하지 못하고,</span> 그것을 <<if $enemyno gte 2>>무시한다<<else>>무시한다<</if>>.
 					<<else>>
 						<<if $mouthstate is "kissentrance" && $_target.mouth is "kissentrance">><<set $mouthuse to 0>><<set $mouthstate to 0>><</if>>
-						<<He>> complies.
+						<<He>>【이가】 순순히 따른다.
 						<<set $_target.location.head to "genitals">>
 						<<if $_target.vagina is 0>><<set $_target.vagina to "othermouth">><<elseif $_target.penis is 0>><<set $_target.penis to "othermouth">><</if>>
 						<<if $_PorV is "P">>
@@ -4695,7 +4695,7 @@
 						<</if>>
 					<</if>>
 				<<else>>
-					<span class="red"><<He>> refuses.</span>
+					<span class="red"><<He>>【은는】 거절한다.</span>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -5032,7 +5032,7 @@
 			<<set $mouthaction to 0>><<set _sound to 1>>
 			<<set _unforgiver to $NPCList.find(npc => npc.traits.includes("unforgiving"))>>
 			<<if $neckuse is "hand" and $oxygen lt $oxygenmax and $settings.asphyxiaLevel gte 2>>
-				<<wheeze "apologise">>
+				<<wheeze "사과한다">>
 				<<set $speechChokedAction to "apologise">>
 			<<elseif $enemytype is "beast">>
 				당신은 <<him>>에게 나쁘게 굴어서 미안하다고 말한다.
@@ -5146,12 +5146,12 @@
 				<<set $fallenangelretribution to 1>>
 				<<if random(1, 100) gt 1>>
 					<<if $enemytype is "beast">>
-						<span class="red">"Begone <<beasttype>>!"</span> you declare.
+						<span class="red">"물러가라, <<beasttype>>【아야】!"</span> 당신이 선언한다.
 					<<else>>
-						<span class="red">"You will pay for your sins!"</span> you declare.
+						<span class="red">"네 죄값을 치르게 될 거야!"</span> 당신이 선언한다.
 					<</if>>
 				<<else>>
-					<span class="red"><span class="bold">"BEGONE THOT!!!"</span></span>
+					<span class="red"><span class="bold">"꺼져라, 걸레야!!!"</span></span>
 					<<set $begoneThot to 1>>
 					<<defiance 9999>>
 				<</if>>
@@ -5170,9 +5170,9 @@
 				<</if>>
 				<<set $demonseduce to 1>><<seductionskillusecombat>>
 				<<if $enemytype is "beast">>
-					<span class="pink">"Cum for me <<beasttype>>~" you purr.</span>
+					<span class="pink">"날 위해 사정해, <<beasttype>>【아야】~" 당신이 가르랑거린다.</span>
 				<<else>>
-					<span class="pink">"Cum for me~" you purr.</span>
+					<span class="pink">"날 위해 사정해~" 당신이 가르랑거린다.</span>
 				<</if>>
 			<</if>>
 		<</if>>
@@ -5995,13 +5995,13 @@
 									/* Custom LI (mod) optional flavor lines. Uses default pregnancyAvoidance logic above. */
 								<<switch $_speech>>
 									<<case "accept">>
-										<<He_Short>> smiles. "<span class="green">Sure.</span> I'd rather keep you safe, my jewel."
+										<<He_Short>>【은는】 미소 짓는다. "<span class="green">물론이지.</span> 난 널 안전하게 지키고 싶거든, 내 보석."
 									<<case "acceptGive">>
-										<<He_Short>> nods. "<span class="blue">If you have one.</span>"
+										<<He_Short>>【은는】 고개를 끄덕인다. "<span class="blue">네가 갖고 있다면.</span>"
 									<<case "acceptHas">>
-										<<He_Short>> grins. "<span class="teal">I brought one.</span>"
+										<<He_Short>>【은는】 씩 웃는다. "<span class="teal">내가 챙겨 왔어.</span>"
 									<<case "reject">>
-										<<He_Short>> shakes <<his>> head. "<span class="lewd">No.</span>"
+										<<He_Short>>【은는】 고개를 젓는다. "<span class="lewd">아니.</span>"
 								<</switch>>
 							<<default>>
 								/*Need a case for Wren*/
@@ -7592,19 +7592,19 @@
 			<<if $player.condom>>
 				<<if $combatExtended.reverseRapeStart is 1 or combatSkillCheck("penile", $penistarget)>>
 					<<if [$player.condom.state].includesAny("defective", "sabotaged")>>
-						<span class="blue">You try to wear out your condom, but realize it is already broken.</span>
+						<span class="blue">당신은 콘돔을 닳게 하려 하지만, 이미 망가져 있다는 것을 깨닫는다.</span>
 					<<else>>
-						<span class="lblue">You <<peniletext>> wear out the condom.</span>
+						<span class="lblue">당신은 콘돔을 <<peniletext>> 닳게 한다.</span>
 						<<if $rng lte currentSkillValue("penileskill")/10 - 10>>
-							<span class="lewd">You feel the tip rip open.</span>
+							<span class="lewd">끝부분이 찢어지는 것이 느껴진다.</span>
 							<<set $player.condom.state to "defective">>
 						<</if>>
 					<</if>>
 				<<else>>
-					You try to wear out your condom, but <span class="red">you're unable to move your way.</span>
+					당신은 콘돔을 닳게 하려 하지만, <span class="red">자세 때문에 움직일 수가 없다.</span>
 				<</if>>
 			<<else>>
-				You try to wear out your condom, but have no condom on.
+				당신은 콘돔을 닳게 하려 하지만, 콘돔을 끼고 있지 않다.
 			<</if>>
 		<</if>>
 

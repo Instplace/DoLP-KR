@@ -430,7 +430,7 @@
 		<</if>>
 		<<if $bear gte 4>>
 			<<run _speakPool.pushUnique(
-				"growl","snort","huff"
+				"으르렁거린다","콧김을 내뿜는다","숨을 몰아쉰다"
 			)>>
 		<</if>>
 		<<if $harpy gte 4>>

@@ -210,7 +210,7 @@
 :: Livestock Barn Hay
 <<effects>>
 
-You take a mouthful of hay. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>You miss the taste of grass, but this will do in a pinch.<<else>>It tastes horrible. You're not sure it's edible.<</if>>
+건초를 한입 가득 물었다. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>풀 맛이 그립지만, 아쉬운 대로 이걸로 버틸 만하다.<<else>>끔찍한 맛이다. 이게 먹을 수 있는 건지 모르겠다.<</if>>
 <br><br>
 
 <<livestockFieldGrassEvents>>
@@ -225,7 +225,7 @@ You take a mouthful of hay. <<if (($cow gte 6 and $transformationParts.traits.ac
 축사는 비좁았지만, 돌아다닐 만한 길은 찾을 수 있었다. 농장 인부들이 재미있다는 듯 당신을 지켜보고 있다. 그들은 당신을 막지 않는다.
 <br><br>
 
-Sometimes the <<livestock_cows>> moo at you as you pass them. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>You moo back.<<else>>You pause to pat a few on the head.<</if>>
+가끔 당신이 지나갈 때 <<livestock_cows>>【이가】 당신을 향해 음메 하고 운다. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>당신도 음메 하고 화답한다.<<else>>당신은 잠시 멈춰서 몇 마리의 머리를 쓰다듬어 준다.<</if>>
 <br><br>
 
 <<physique 6>><<athletics 6>>
@@ -244,7 +244,7 @@ Sometimes the <<livestock_cows>> moo at you as you pass them. <<if (($cow gte 6 
 당신은 난방기 옆에 누워있는 <<livestock_cows>> 무리에 합류한다.
 <br><br>
 
-The warm air feels nice.<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>> You feel lucky that the farmers take such good care of you.<</if>>
+따뜻한 공기가 기분 좋다.<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>> 농부들이 이렇게 잘 돌봐주니 운이 좋다고 느낀다.<</if>>
 <br><br>
 
 <<if $rng gte 81>>

@@ -55,7 +55,7 @@
 		/* <<if $cheatsEnabled is true>> */
 			구석에 밴 한 대가 주차되어 있다. 뒷문은 열려 있고 엔진도 켜져 있지만, 주위에는 아무도 없다.
 			<br><br>
-			<<investigateicon>><<link [[Investigate the van|Bus Station Livestock]]>><</link>><<dangerousText>> | <i>/*Cheat option. */Triggers livestock bad end.</i> <!-- Appears even with blind stats enabled. Intentional -->
+			<<investigateicon>><<link [[밴을 조사한다|Bus Station Livestock]]>><</link>><<dangerousText>> | <i>/*Cheat option. */가축 배드 엔딩을 유발합니다.</i> <!-- Appears even with blind stats enabled. Intentional -->
 			<br><br>
 		/* <</if>> */
 	<</if>>

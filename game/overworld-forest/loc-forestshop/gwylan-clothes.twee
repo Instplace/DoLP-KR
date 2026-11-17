@@ -7,7 +7,7 @@
 		<<case "meek" "shy">>
 			당신이 말한다. "이 가게는 아늑하지만 좀 이상해요. 커다란 미로 같아요."
 		<<case "polite" "flamboyant">>
-			"This shop is cosy, but a little strange," you say. "It's homely, but it's so hard to keep track of anything. Why?"
+			"이 가게는 아늑하지만 좀 이상해요." 당신이 말한다. "정겹긴 한데, 뭐가 어디 있는지 파악하기가 너무 힘들어요. 왜 그런 거예요?"
 		<<case "bratty">>
 			당신이 묻는다. "이 가게는 뭐예요? 귀엽긴 한데, 뭐가 어디 있는지 전혀 모르겠어요."
 		<<default>>
@@ -18,7 +18,7 @@
 		<<case "meek" "shy">>
 			당신이 말한다. "가게가 아늑하지만 이상해요. 커다란 미로 같아요."
 		<<case "polite" "flamboyant">>
-			"Your shop is cosy, but a little strange," you say. "It's homely, but it's so hard to keep track of anything. Why?"
+			"가게가 아늑하지만 좀 이상해요." 당신이 말한다. "정겹긴 한데, 뭐가 어디 있는지 파악하기가 너무 힘들어요. 왜 그런 거예요?"
 		<<case "bratty">>
 			당신이 묻는다. "가게가 왜 이래요? 귀엽긴 한데, 뭐가 어디 있는지 전혀 모르겠어요."
 		<<default>>
@@ -319,7 +319,7 @@
 	<<case "meek" "shy">>
 		"재-재미있었어?" 당신이 묻는다. "의상에 뭐 문제라도 있었어?"
 	<<case "bratty" "confident" "special" "flamboyant">>
-		"Done playing dressup with me?" you ask. "Were the costumes all to your liking?"
+		"나랑 옷 갈아입히기 놀이는 다 했어?" 당신이 묻는다. "의상은 다 마음에 들었고?"
 	<<default>>
 		"나를 충분히 살펴봤어?" 당신이 묻는다. "의상은 다 괜찮았어?"
 <</switch>>
@@ -771,7 +771,7 @@
 		<<case "meek" "shy">>
 			"제가... 도움이 필요한 가족에게 돈을 좀 남겨두고 왔더니 이걸 발견했어요." 당신은 말한다. "아-아니, 좀이 아니에요. 꽤 많았어요. 저보다 그분들에게 더 필요할 것 같았거든요. 침대도 거의 없었는데, 그런 분들 걸 훔칠 수는 없었어요."
 		<<case "flamboyant" "special">>
-			"I found these here after I left some money for a family in need," you say. "Well, it was more than some. It was a lot. I think they needed it more than I did. They barely even had beds, I couldn't steal from them."
+			"도움이 필요한 가족에게 돈을 남겨두고 왔더니 여기서 이걸 발견했어요." 당신은 말한다. "음, 조금보다는 많았어요. 아주 많이요. 저보다 그분들에게 더 필요할 것 같았거든요. 침대도 거의 없는 사람들이라, 그 집에서 훔칠 수는 없었어요."
 		<<case "bratty">>
 			"역-강도질을 하고 났더니 이걸 발견했어요." 당신은 말한다. "뭔가 훔치려고 들어갔는데, 그냥... 그럴 수가 없었어요. 그 사람들은 아무것도 없었거든요. 저보다 그분들에게 돈이 더 필요했어요."
 		<<default>>
@@ -912,7 +912,7 @@
 	<<case "meek" "shy">>
 		"그-그렇지 않아요." 당신이 말한다. "인생이 그렇게 비참하기만 한 건 아니에요."
 	<<case "polite" "flamboyant" "special">>
-		"I'm sorry something made you feel this way, but you are wrong," you say. "There is good around us. We just need to find it."
+		"그런 기분이 들게 한 일이 있었다니 안타깝지만, 그건 틀린 생각이에요." 당신이 말한다. "우리 주변에는 좋은 것이 있어요. 찾기만 하면 돼요."
 	<<case "bratty">>
 		"인생에 치이고 내쳐진 게 너 혼자만은 아니거든. 나쁜 일 속에서도 좋은 점을 찾는 법을 좀 배워봐."
 	<<default>>
@@ -925,7 +925,7 @@
 	<<case "meek" "shy">>
 		"내가 사랑하는 사람들이 없었다면, 진작에 다 포기했을 거예요. 물-물론 이 마을은 너무 버겁지만, 그래도......
 	<<case "polite" "flamboyant">>
-		"If it wasn't for the people I love, I would have given up a long time ago. Sure, this town takes its toll, but...
+		"제가 사랑하는 사람들이 없었다면, 진작에 다 포기했을 거예요. 물론 이 마을은 너무 버겁지만, 그래도...
 	<<case "bratty" "special">>
 		"나를 사랑해 주는 사람들이 없었으면, 난 진작 여기 없었을걸. 그래, 이 빌어먹을 곳이 지옥 같긴 하지만......
 	<<default>>
@@ -950,7 +950,7 @@
 	<<case "meek" "shy">>
 		"어...... 갑-갑자기 왜 그래요?" 당신이 묻는다. "평소엔 그렇게 밝았는데, 무슨 일 있었어요?"
 	<<case "polite" "special" "flamboyant">>
-		"That was unexpected." you say. "You're usually so cheery, what happened?"
+		"갑작스럽네요." 당신이 말한다. "평소엔 그렇게 밝았는데, 무슨 일 있었어요?"
 	<<case "bratty">>
 		"말이 좀 무겁네." 당신이 말한다. "그 밝던 그윌란은 어디 간 거야?"
 	<<default>>
@@ -1014,7 +1014,7 @@
 		<<case "meek" "shy">>
 			"사... 사랑해."
 		<<case "polite" "flamboyant" "special">>
-			"I love you."
+			"사랑해."
 		<<case "bratty" "confident">>
 			"내 마음은 변하지 않아. 난 계속 널 사랑할 거야."
 		<<default>>
@@ -1027,7 +1027,7 @@
 
 	당신은 <<him>>【을를】 꽉 껴안는다. "괜찮아. 익숙해질 시간은 영원히 있으니까." <<He>>【은는】 당신의 포옹에 열심히 화답하며,
 	<<if $bodysize gte 4>>
-		pushing <<his>> head into your chest.
+		<<his>> 머리를 당신의 가슴에 파묻는다.
 	<<elseif $bodysize gte 2>>
 		당신 목덜미에 <<his>> 머리를 파묻는다.
 	<<else>>
@@ -1045,7 +1045,7 @@
 		<<case "meek" "shy" "special">>
 			"하지만... 난 당신을 사랑해요."
 		<<case "polite" "flamboyant">>
-			"I love you, though."
+			"그래도 전 당신을 사랑해요."
 		<<case "bratty">>
 			"그렇게 극적으로 굴지 마. 당신을 사랑하는 사람이 바로 여기 서 있잖아."
 		<<default>>
@@ -1061,7 +1061,7 @@
 		<<case "meek" "shy">>
 			"그럼, 당신을 소중히 여길게요." 당신은 말한다. "진... 진심이에요."
 		<<case "flamboyant" "special" "polite">>
-			"Then, I cherish you," you say. "I mean it."
+			"그럼, 당신을 소중히 여길게요." 당신은 말한다. "진심이에요."
 		<<case "bratty">>
 			"내 감정은 내 거야. 당신이 듣기 불편하다고 해서 참지는 않을 거야." 당신은 말한다. "진심이야, 이 불안에 찬 꼬맹아."
 		<<default>>
@@ -1193,7 +1193,7 @@
 		<<case "bratty">>
 			"당신네 멍청한 가게가 날 공격했어요." 당신은 말한다. "내 옷을 뺏고는... 이걸로 날 감쌌다고요!" 당신은 엉망으로 엉킨 선물 포장지 뭉치를 그윌란에게 내민다.
 		<<case "polite" "flamboyant">>
-			"I was sneaking around, and your shop attacked me," you say. "It left me wearing nothing but that."
+			"제가 몰래 돌아다니다가 당신 가게한테 공격당했어요." 당신은 말한다. "저것만 입혀 놓고 날 쫓아냈어요."
 		<<default>>
 			"제가 몰래 돌아다녔는데, 당신 가게가 그걸 싫어했나 봐요." 당신은 말한다. "날 쫓아내고는 저것만 입혀 놨어요."
 	<</switch>>
@@ -1241,7 +1241,7 @@
 <<elseif _uBrothelStats?.reasonStart is "soldBaileyRobin">>
 	"빚을 갚지 못했어." 당신은 마치 그 말로 모든 게 설명된다는 듯이 말한다. <span class="purple">그윌란이 주먹을 꽉 쥔다.</span> "내 친구 로빈과 나는 성노예로 팔려갔어.
 <<elseif _uBrothelStats?.reasonStart is "soldPoppy">>
-	"I... angered a fox who has been very patient with me," you explain. "<<nnpc_He "Poppy">> couldn't stand me anymore, and I was sold off into sex slavery.
+	"나는... 나한테 아주 참을성 있게 대해 준 여우를 화나게 했어." 당신이 설명한다. "포피는 더 이상 날 견디지 못했고, 난 성노예로 팔려갔어.
 <<else>>
 	"빚을 갚지 못했어." 당신은 마치 그 말로 모든 게 설명된다는 듯이 말한다. <span class="purple">그윌란이 주먹을 꽉 쥔다.</span> "나는 성노예로 팔려갔어.
 <</if>>
@@ -1251,7 +1251,7 @@
 <<if _uBrothelStats?.reasonStart is "soldBaileyRobin" or _uBrothelStats?.reasonStart is "soldBailey">>
 	<<His>>【은는】 고개를 숙인다. "그 말을 들으니... 말로 다 할 수 없을 정도로 속이 안 좋아지는군. 그런 곳에서 돌아오는 사람은 거의 없어. 어떻게 탈출한 거지?"
 <<elseif _uBrothelStats?.reasonStart is "soldPoppy">>
-	<<He>> puts <<his>> hands over <<his>> mouth. "That's not what I expected. I think I know this little kit that you spoke of. I never knew that <<nnpc_he "Poppy">> could be so... impulsive. Perhaps caused by the bad influence from those around <<nnpc_him "Poppy">>. Most don't return from such places. How did you escape?"
+	<<He>>【은는】 두 손으로 입을 가린다. "예상 밖이네. 네가 말한 그 어린 여우, 내가 아는 아이인 것 같아. 포피가 그렇게... 충동적일 수 있다는 건 몰랐어. 주변 사람들에게 나쁜 영향을 받았는지도 모르지. 그런 곳에서 돌아오는 사람은 거의 없어. 어떻게 탈출한 거야?"
 <<else>>
 	<<He>>【은는】 손으로 입을 가린다. "예상했던 것과는 다르군. 그런 곳에서 돌아오는 사람은 거의 없어. 어떻게 탈출한 거지?"
 <</if>>
@@ -1315,7 +1315,7 @@
 <br><br>
 
 "어딘지 알 것 같아. 숲에서 희생자들을 데리고 역겨운 사냥 흉내를 내는 놈들이지. 재미로 말이야." <<He>>【은는】 고통스러운 기억이라도 떠오른 듯 움찔거린다.
-"Hounds and foxes. I'm glad you got away.<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") and _gwylanTF.known or $brownFoxRevealed>> Us foxes need to look out for one another.<</if>>"
+"사냥개와 여우라니. 네가 빠져나와서 다행이야.<<if (($fox gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "fox") and _gwylanTF.known or $brownFoxRevealed>> 우리 여우들은 서로를 챙겨야 하니까.<</if>>"
 <br><br>
 
 <<gwylanOptions>>
@@ -1470,7 +1470,7 @@
 		<<case "meek">>
 			"분-분명 <<nnpc_he "Eden">>【은는】 나쁜 사람이 되려고 그러는 게 아닐 거예요." 당신은 말한다. "전 알아요. <<nnpc_hes "Eden">>【은는】 마음속 깊은 곳은 좋은 사람이에요."
 		<<case "meek" "shy">>
-			"I'm sure <<nnpc_he "Eden">> isn't doing it to be a bad person," you say. "Sometimes people have to fight to survive."
+			"<<nnpc_he "Eden">>【은는】 나쁜 사람이 되려고 그러는 게 아닐 거예요." 당신은 말한다. "때로는 사람이 살아남으려고 싸워야 하니까요."
 		<<case "bratty">>
 			"<<nnpc_his "Eden">> 입장이 되어 생각해 보세요. 모두가 당신처럼 깊이 생각할 여유가 있는 건 아니에요. 어떤 사람들은 도덕과 상관없이 살아남아야만 해요."
 		<<default>>
@@ -2012,7 +2012,7 @@
 	<<case "bratty">>
 		"이걸 전부 여기 두는 게 윈터의 심기를 건드리는 거라고 생각 안 해?" 당신이 묻는다.
 	<<case "flamboyant">>
-		"One would thing they belong to the museum?" you ask," you say. "You should donate them there."
+		"이것들은 박물관에 있어야 하는 게 아닐까요?" 당신이 묻는다," 당신이 말한다. "거기에 기증하는 게 좋겠어요."
 	<<default>>
 		"윈터가 이 물건들 중 일부를 원할 것 같아요." 당신이 말한다. "박물관에요."
 <</switch>>
@@ -2039,7 +2039,7 @@
 	<<case "bratty">>
 		"사실, 이건 내가 박물관에서 윈터의 고문 집착을 시연하는 걸 도와준 뒤에 나타났어." 당신이 설명한다.
 	<<case "polite" "flamboyant" "special">>
-		"Actually, these showed up after I helped Winter demonstrate torture methods over at the museum," you explain.
+		"사실 이건 박물관에서 윈터가 고문 방법을 시연하는 걸 도운 뒤에 나타났어요." 당신이 설명한다.
 	<<default>>
 		"아뇨, 사실 이건 박물관에서 윈터의 시연을 좀 도와준 뒤에 나타났어요." 당신이 설명한다.
 <</switch>>
@@ -2328,7 +2328,7 @@
 		<<case "bratty" "special">>
 			"누구에게도 제 비밀 레시피를 알려주지 않을 거예요." 당신은 팔짱을 끼며 말한다. "개인적인 감정은 없어요."
 		<<case "polite" "flamboyant">>
-			"It's a secret, and secrets are not to be revealed to anyone," you say. "It's nothing personal."
+			"비밀이에요. 비밀은 누구에게도 밝히는 게 아니죠." 당신이 말한다. "개인적인 감정은 없어요."
 		<<default>>
 			"맞아요, 비밀이에요. 밝힐 수 없어요." 당신이 말한다.
 	<</switch>>
@@ -4130,7 +4130,7 @@
 <<unset $gwylanPassTime>>
 <<switch $speech_attitude>>
 	<<case "meek" "polite" "flamboyant" "special">>
-		"I... I don't remember, sorry," you say.
+		"저... 기억이 안 나요, 죄송해요." 당신이 말한다.
 	<<case "bratty">>
 		"모르겠어, 이 모든 걸 기억하는 건 불가능해." 당신은 말한다.
 	<<default>>

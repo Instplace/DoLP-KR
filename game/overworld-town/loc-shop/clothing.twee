@@ -16,11 +16,11 @@
 
 	<<if $phase is 1>>
 		<<set $phase to 0>>
-		You've bought an umbrella! <span class="yellow">Make sure to toggle it in the journal!</span>
+		우산을 구입했습니다! <span class="yellow">저널에서 꼭 켜 두십시오!</span>
 		<br><br>
 	<<elseif $phase is 2>>
 		<<set $phase to 0>>
-		You replaced your umbrella.
+		우산을 교체했습니다.
 		<br><br>
 	<</if>>
 

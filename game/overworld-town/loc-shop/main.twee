@@ -65,9 +65,9 @@
 					<<shopicon "toy">><<link [[장난감 가게로 숨어든다 (0:01)|Toy Shop Lock]]>><<pass 1>><</link>>
 					<br>
 					<<if $clothingShop.ban gt 0 and $clothingShop.banExtension is true>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
 					<<else>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Jewellery Store Sneak]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Jewellery Store Sneak]]>><<pass 1>><</link>>
 					<</if>>
 					<br>
 					<<shopicon "closed">><<link [[빈 가게로 숨어든다 (0:01)|EmptyStore]]>><<pass 1>><</link>>
@@ -107,9 +107,9 @@
 					<<shopicon "toy">><<link [[장난감 가게 (0:01)|Toy Shop]]>><<pass 1>><</link>>
 					<br>
 					<<if $clothingShop.ban gt 0 and $clothingShop.banExtension is true>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
 					<<else>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Jewellery Store]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Jewellery Store]]>><<pass 1>><</link>>
 					<</if>>
 					<br>
 					<<shopicon "closed">><<link [[빈 가게 (0:01)|EmptyStore]]>><<pass 1>><<set $shopFloor to "top">><</link>>
@@ -157,9 +157,9 @@
 					<<shopicon "toy">><<link [[장난감 가게 (0:01)|Toy Shop Lock]]>><<pass 1>><</link>>
 					<br>
 					<<if $clothingShop.ban gt 0 and $clothingShop.banExtension is true>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Clothing Shop Sneak Guard]]>><<pass 1>><</link>>
 					<<else>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Jewellery Store Sneak]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Jewellery Store Sneak]]>><<pass 1>><</link>>
 					<</if>>
 					<br>
 					<<shopicon "closed">><<link [[빈 가게 (0:01)|EmptyStore]]>><<pass 1>><<set $shopFloor to "top">><</link>>
@@ -178,9 +178,9 @@
 					<<shopicon "toy">><<link [[장난감 가게 (0:01)|Toy Shop]]>><<pass 1>><</link>>
 					<br>
 					<<if $clothingShop.ban gt 0 and $clothingShop.banExtension is true>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Clothing Shop Guard]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Clothing Shop Guard]]>><<pass 1>><</link>>
 					<<else>>
-						<<shopicon "jewellery">><<link [[Jewellery Store (0:01)|Jewellery Store]]>><<pass 1>><</link>>
+						<<shopicon "jewellery">><<link [[보석 가게 (0:01)|Jewellery Store]]>><<pass 1>><</link>>
 					<</if>>
 					<br>
 					/*Comment out when a new shop is added in its place, uncomment when required*/
@@ -215,7 +215,7 @@
 <<if dangerEvent()>>
 	<<switch random(1, 2)>>
 		<<case 1>>
-			<<link [[Wake up|Abduction Shop]]>><<set $phase to 0>><</link>>
+			<<link [[일어난다|Abduction Shop]]>><<set $phase to 0>><</link>>
 		<<case 2>>
 			<<link [[일어난다|Molestation Shop]]>><<set $molestationstart to 1>><</link>>
 	<</switch>>
@@ -547,7 +547,7 @@
 			<br>
 			<<wardrobeicon>><<link [[가구점 (0:01)|Furniture Shop Lock]]>><<pass 1>><</link>>
 			<br>
-			<<bikeicon>><<link [[Bike Depot (0:01)|Bike Depot Lock]]>><<pass 1>><</link>>
+			<<bikeicon>><<link [[자전거 매장 (0:01)|Bike Depot Lock]]>><<pass 1>><</link>>
 			<br>
 			<<supermarketicon>><<link [[슈퍼마켓 (0:01)|Supermarket Lock]]>><<pass 1>><</link>>
 			<br>
@@ -609,7 +609,7 @@
 				<br>
 			<</if>>
 			<<if $christmas_gift_poppy is undefined and $christmas is 1 and modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1 and !poppyDismissed() and Number($poppyromance) gte 0>>
-				<<gifticon "love">><<link [[Find a gift for Poppy (0:10)|Shop Poppy Gift]]>><<pass 10>><</link>>
+				<<gifticon "love">><<link [[포피에게 줄 선물을 찾는다 (0:10)|Shop Poppy Gift]]>><<pass 10>><</link>>
 				<br>
 			<</if>>
 			<<if ($christmas_gift_robin isnot undefined or $christmas_gift isnot undefined or $christmas_gift_poppy isnot undefined) and $christmas_wrap is undefined>>
@@ -640,7 +640,7 @@
 			<br>
 			<<wardrobeicon>><<link [[가구점 (0:01)|Furniture Shop]]>><<pass 1>><</link>>
 			<br>
-			<<bikeicon>><<link [[Bike Depot (0:01)|Bike Depot]]>><<pass 1>><</link>>
+			<<bikeicon>><<link [[자전거 매장 (0:01)|Bike Depot]]>><<pass 1>><</link>>
 			<br>
 			<<supermarketicon>><<link [[슈퍼마켓 (0:01)|Supermarket]]>><<pass 1>><</link>>
 			<br>
@@ -1184,7 +1184,7 @@
 :: Shopping Centre Valentines Ask
 <<effects>>
 
-"Oh," the <<person>> says in a less vibrant tone, kicking the poster further out of sight with one leg. "The first plan was to advertise special Valentines chocolate, but we couldn't find any pears. Advising people to go into the forest to find their own was a no-go, apparently. It's not safe." <<He>> kicks the poster again. "But regular chocolate, made with the finest cocoa powder available only here, is just as good."
+"아." <<person>>【이가】 활기 없는 목소리로 말하며 포스터를 보이지 않게 더 안쪽으로 발로 차버린다. "원래는 특별한 발렌타인 초콜릿을 광고할 계획이었는데 배를 구할 수가 없었어. 사람들에게 숲에 가서 직접 찾아보라고 하는 것도 분명 안 될 일이고. 안전하지 않잖아." <<He>>【은는】 포스터를 다시 한번 발로 찬다. "하지만 오직 여기서만 구할 수 있는 최고급 코코아 가루로 만든 이 일반 초콜릿도 그만큼 훌륭해."
 <br><br>
 
 <<He>>【은는】 당신 뒤에 있는 고객에게 무료 샘플을 건넨다.

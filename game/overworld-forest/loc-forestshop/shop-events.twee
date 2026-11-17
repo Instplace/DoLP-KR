@@ -696,7 +696,7 @@
 <br><br>
 
 <<switch $speech_attitude>>
-	<<case "meek" "special" "shy">>"Please... please stay away from me!" Your voice quivers.
+	<<case "meek" "special" "shy">>"제발... 제발 나한테서 떨어져!" 당신의 목소리가 떨린다.
 	<<case "bratty">>"저리 꺼져!" 당신은 소리치지만, 목소리에는 두려움이 묻어난다.
 	<<default>>"제발... 저리 가줘." 당신의 목소리는 부드럽지만 떨리고 있다.
 <</switch>>
@@ -1337,11 +1337,11 @@
 <<He>>【은는】 당신에게 성큼성큼 다가와 코를 툭 친 뒤 팔짱을 낀다. "무례하긴. 이 가게는 내 집인데, 넌 무단 침입했어. 예의 좀 배워야겠군."
 당신과 나이가 비슷해 보임에도 불구하고, 그윌란의 말투는 마치 <<pher>> 부모에게 가볍게 꾸중을 듣는 아이가 된 듯한 기분을 느끼게 하고, 그에 따르는 수치심까지 안겨준다. 베일리의 꾸지람과는 전혀 다르다. 그윌란의 목소리는 단호하지만 다정하다. 어떤 면에서는 따뜻하기까지 하다.
 <<switch $bodysize>>
-	<<case -1 0>>It doesn't help that you have to look up to meet <<his>> gaze.
+	<<case -1 0>>고개를 들어 <<his>> 시선을 마주해야 하는 것도 상황을 더 나쁘게 만든다.
 	<<case 1 2>>
-	<<case 2.5>>Even though you're a bit taller than <<him>>, it makes you feel small.
+	<<case 2.5>>당신이 <<him>>보다 조금 큰데도, 작아지는 기분이 든다.
 	<<case 3>>당신이 <<him>>보다 훨씬 큰데도, 작아지는 기분이 든다.
-	<<case 4>>Even though you're a much taller than <<him>>, it makes you feel small.
+	<<case 4>>당신이 <<him>>보다 훨씬 큰데도, 작아지는 기분이 든다.
 <</switch>>
 <<stress 4>><<gstress>>
 <br><br>
@@ -1397,7 +1397,7 @@
 		<<case "meek" "shy">>
 			"저-정확히 뭘 하게 되는 건가요?" 당신이 묻는다.
 		<<case "polite" "flamboyant">>
-			"Are you going to tell me what will we be doing?" you ask.
+			"우리가 뭘 하게 될지 말해 줄 건가요?" 당신이 묻는다.
 		<<case "bratty" "special">>
 			"적어도 우리가 뭘 할지는 먼저 말해줘야지." 당신이 말한다.
 		<<default>>
@@ -2003,7 +2003,7 @@
 		<<case "meek" "shy">>
 			"마-말하고 싶지 않으면 괜찮아, 아무것도 못 본 척할 수 있어,"
 		<<case "special" "polite" "flamboyant">>
-			"If you don't want to talk about it, that's alright, I can pretend I never saw anything,"
+			"말하고 싶지 않으면 괜찮아, 아무것도 못 본 걸로 해 줄 수 있어."
 		<<case "bratty">>
 			"그렇게 울상 짓지 마, 이 마을에 얼마나 맛이 간 인간들이 많은지 알아? 내가 본 것들에 비하면 이건 꽤 순한 맛이야,"
 		<<default>>
@@ -2015,7 +2015,7 @@
 		<<case "meek" "shy">>
 			"이-이해할 것 같아, 여기서 혼자 있으면 외롭겠지." 당신은 씩 웃으며 말한다. "<<beastsplural 1>>【은는】 좋은 친구가 되어주나?"
 		<<case "polite" "flamboyant">>
-			"I suppose I understand. It must get lonely out here by yourself," you say with a grin. "Do <<beastsplural 1>> make for good company?"
+			"이해할 것 같아. 여기서 혼자 지내면 외롭겠지." 당신은 씩 웃으며 말한다. "<<beastsplural 1>>【은는】 좋은 친구가 되어주나?"
 		<<case "bratty">>
 			"그윌란이 웨일스 이름인 건 알았지만, 이럴 줄은 몰랐네." 당신은 씩 웃으며 말한다.
 		<<default>>
@@ -2124,10 +2124,10 @@
 
 당신과 나이가 비슷해 보임에도 불구하고, 그윌란의 말투는 마치 <<pher>> 부모에게 가볍게 꾸지람을 듣는 아이가 된 듯한 기분과 함께 그에 따르는 수치심을 느끼게 한다. 베일리의 꾸지람과는 전혀 다르다. 그윌란의 목소리는 단호하지만, 다정함이 배어 있다.
 <<switch $bodysize>>
-	<<case -1 0>>It doesn't help that you have to look up to meet <<his>> gaze.
+	<<case -1 0>>고개를 들어 <<his>> 시선을 마주해야 하는 게 도움이 되지 않는다.
 	<<case 1 2>>
 	<<case 3>>당신이 <<him>>보다 꽤 큰데도 불구하고, 스스로가 작게 느껴진다.
-	<<case 4>>Even though you're a much taller than <<him>>, it makes you feel small.
+	<<case 4>>당신이 <<him>>보다 훨씬 큰데도 불구하고, 스스로가 작게 느껴진다.
 <</switch>>
 <<stress 4>><<gstress>>
 <br><br>
@@ -2183,7 +2183,7 @@
 		<<case "meek" "shy">>
 			"저-정확히 뭘 하게 되는 건가요?" 당신이 묻는다.
 		<<case "polite" "flamboyant">>
-			"Are you going to tell me what will we be doing?" you ask.
+			"우리가 뭘 하게 될지 말해 줄 건가요?" 당신이 묻는다.
 		<<case "bratty" "special">>
 			"적어도 우리가 뭘 할지는 먼저 말해줘야지." 당신이 말한다.
 		<<default>>
@@ -2348,10 +2348,10 @@
 
 	"제발, 조금만 더 안고 있게 해줘. 정말 이게 끝인 줄 알았어. 다시 혼자가 되는 줄 알았다고."
 	<<switch $bodysize>>
-		<<case -1 0 1>><<He>> withdraws only enough to look down into your eyes.
-		<<case 2 2.5>><<He>> nuzzles <<his>> head into the crook of your neck.
+		<<case -1 0 1>><<He>>【은는】 당신의 눈을 내려다볼 수 있을 만큼만 물러선다.
+		<<case 2 2.5>><<He>>【은는】 당신의 목덜미에 <<his>> 머리를 부빈다.
 		<<case 3>><<He>>【은는】 당신의 가슴에 <<his>> 머리를 기댄다.
-		<<case 4>><<He>> presses <<his>> head into your stomach.
+		<<case 4>><<He>>【은는】 당신의 배에 <<his>> 머리를 묻는다.
 	<</switch>>
 	"조금만 더."
 	<br><br>

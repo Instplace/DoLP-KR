@@ -79,7 +79,7 @@
 	<<if $settings.analDoubleEnabled and $awareness gt 300 and $anususe is "penis" and !playerChastity("anus") and $NPCList[$anustarget].penissize gte 2 and $NPCList[$penistarget].penissize gte 2 and !["legLock","legLocked"].includes($feetuse)>>
 		<<set _penisaction["항문 이중 삽입으로 대신 유도한다"] to "penisanusdouble">>
 	<</if>>
-	<<set _penisaction["Move towards "+$NPCList[$penistarget].pronouns.his+" anus"] to "moveHole">>
+	<<set _penisaction["상대의 항문 쪽으로 옮긴다"] to "moveHole">>
 <</widget>>
 
 <<widget "actionspenisPenisImminent">>
@@ -174,7 +174,7 @@
 		<<set _penisaction["박는다"] to "othermouthcooperate">>
 	<</if>>
 	<<if ($consensual is 0 or ($enemytype is "man" ? $promiscuity : $deviancy) gte 55) and currentSkillValue("penileskill") gte 800>>
-		<<set _penisaction["Edge " + $NPCList[$penistarget].pronouns.him] to "mouthEdging">>
+		<<set _penisaction["상대를 애태운다"] to "mouthEdging">>
 	<</if>>
 	<<set _penisaction["빼낸다"] to "pullOut">>
 <</widget>>
@@ -185,7 +185,7 @@
 	<<else>>
 		<<set _penisaction["클리토리스에 비빈다"] to "bay">>
 	<</if>>
-	<<set _penisaction["Move towards " + $NPCList[$penistarget].pronouns.his + " anus"] to "moveHole">>
+	<<set _penisaction["상대의 항문 쪽으로 옮긴다"] to "moveHole">>
 	<<set _penisaction["애태운다"] to "tease">>
 <</widget>>
 
@@ -212,7 +212,7 @@
 		<<set _penisaction["절정 직전에 애태운다"] to "vaginaEdging">>
 	<</if>>
 	<<if $player.condom and currentSkillValue("penileskill") gte 800>>
-		<<set _penisaction["Damage Condom"] to "damageCondom">>
+		<<set _penisaction["콘돔을 망가뜨린다"] to "damageCondom">>
 	<</if>>
 	<<set _penisaction["빼낸다"] to "pullOut">>
 <</widget>>
@@ -240,9 +240,9 @@
 	<</if>>
 	<<set $_target to $NPCList[$penistarget]>>
 	<<if $_target.vagina is "otheranusentrance">>
-		<<set _penisaction["Move towards " + $_target.pronouns.his + " vagina"] to "moveHole">>
+		<<set _penisaction["상대의 보지 쪽으로 옮긴다"] to "moveHole">>
 	<<elseif $_target.penis is "otheranusentrance">>
-		<<set _penisaction["Move towards " + $_target.pronouns.his + " penis"] to "moveHole">>
+		<<set _penisaction["상대의 자지 쪽으로 옮긴다"] to "moveHole">>
 	<</if>>
 	<<set _penisaction["애태운다"] to "otheranustease">>
 <</widget>>
@@ -267,7 +267,7 @@
 		<<set _penisaction["절정 직전에 애태운다"] to "otheranusEdging">>
 	<</if>>
 	<<if $player.condom and currentSkillValue("penileskill") gte 800>>
-		<<set _penisaction["Damage Condom"] to "damageCondom">>
+		<<set _penisaction["콘돔을 망가뜨린다"] to "damageCondom">>
 	<</if>>
 	<<set _penisaction["빼낸다"] to "pullOut">>
 <</widget>>
@@ -502,7 +502,7 @@
 		<<set $_target to $NPCList[$penistarget]>><<personselect $penistarget>>
 		<<if [$_target.vagina, $_target.penis].includesAny("penisentrance", "otheranusentrance", "otheranusimminent")>>
 			<<if $combatExtended.reverseRapeStart is 1 or combatSkillCheck("thigh", $penistarget)>>
-				<span class="lblue">You <<thightext>> move your <<penis>> against <<combatpersons>>
+				<span class="lblue">당신이 <<thightext>> <<penis>>【을를】 옮겨 맞댄 곳은 <<combatpersons>>의
 				<<if $_target.vagina is "penisentrance" or $_target.penis is "penisentrance">>
 					<<set $penisuse to "otheranus">><<set $penisstate to "otheranusentrance">>
 					<<set $penisactiondefault to "otheranustease">>
@@ -525,7 +525,7 @@
 				<</if>>
 				</span>
 			<<else>>
-				<span class="blue">You try to move your <<penis>> towards <<combatpersons>>
+				<span class="blue">당신은 <<penis>>【을를】 <<combatpersons>>의
 				<<if $_target.vagina is "otheranusentrance">>
 					<<npcVagina $penistarget>>
 				<<elseif $_target.penis is "otheranusentrance">>
@@ -533,10 +533,10 @@
 				<<elseif $_target.vagina is "penisentrance" or $_target.penis is "otherpenis">>
 					<<npcAnus $penistarget>>
 				<</if>>
-				but you're unable to move your way.</span>
+				쪽으로 옮기려 하지만, 자세 때문에 움직일 수가 없다.</span>
 			<</if>>
 		<<else>>
-			<span class="blue">You try to change the target of your <<penisSimple>> but your position doesn't allow you to.</span>
+			<span class="blue">당신은 <<penisSimple>>【을를】 다른 곳으로 향하게 하려 하지만, 자세가 허락하지 않는다.</span>
 		<</if>>
 	<</if>>
 <</widget>>

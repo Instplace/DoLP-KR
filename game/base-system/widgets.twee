@@ -1735,7 +1735,7 @@
 	<div id="combatExtendedStabilityCaption">
 		<<if _args[0] is true>>
 			<div @class="($options.showCaptionText is true ? '' : 'rightMeterText')">
-				Stability:
+				안정성:
 			</div>
 			<<set _showCaptionText to !$options.showCaptionText>>
 		<<else>>
@@ -2382,7 +2382,7 @@
 		<</if>>
 	<</if>>
 	<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity lte 0>>
-		<span class="red">Your $worn.handheld.name breaks from the abuse.</span>
+		<span class="red">당신의 $worn.handheld.name【이가】 혹사를 견디지 못하고 부서진다.</span>
 		<br>
 		<<handheldruined>><<set $umbrellaStat += 1>>
 	<</if>>
@@ -3207,7 +3207,7 @@
 			<br>
 		<</if>>
 		<<if $christmas_gift_poppy isnot undefined and $christmas_gift_poppy.endsWith("_unwrapped")>>
-			<<gifticon "love">><<link [[Wrap Poppy's gift (0:10)|Bedroom Poppy Wrap]]>><<pass 10>><<set $christmas_gift_poppy to $christmas_gift_poppy.replace("_unwrapped", "")>><<set $christmas_gift_poppy_wrapped to 1>><</link>>
+			<<gifticon "love">><<link [[포피의 선물을 포장한다 (0:10)|Bedroom Poppy Wrap]]>><<pass 10>><<set $christmas_gift_poppy to $christmas_gift_poppy.replace("_unwrapped", "")>><<set $christmas_gift_poppy_wrapped to 1>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -3614,14 +3614,14 @@
 					color: 'purple'
 				},
 				"patience" : {
-					name : "Patience",
+					name : "인내심",
 					value : (T.npcData?.patience ?? 0),
-					activeIcon : "img/ui/sym-patience-100.png",          
+					activeIcon : "img/ui/sym-patience-100.png",
 					inactiveIcon: "img/ui/sym-patience-empty.png",
 					color: "teal"
 				},
 				"anger" : {
-					name : "Anger",
+					name : "분노",
 					value : (T.npcData?.anger ?? 0),
 					activeIcon : "img/ui/sym-poppy-rage.png",
 					color: "red"
@@ -5844,23 +5844,23 @@
 <<widget "lockpickTrainingSet">>
 	<<if $lockpickTrainingSet gte 1>>
 		<<if $lockpickTrainingSet is 1>>
-			<<set _LTS to "Basic">>
+			<<set _LTS to "기본">>
 			<<set $skulduggerydifficulty to 200>>
 		<<elseif $lockpickTrainingSet is 2>>
-			<<set _LTS to "Intermediate">>
+			<<set _LTS to "중급">>
 			<<set $skulduggerydifficulty to 400>>
 		<<elseif $lockpickTrainingSet is 3>>
-			<<set _LTS to "Advanced">>
+			<<set _LTS to "고급">>
 			<<set $skulduggerydifficulty to 600>>
 		<<elseif $lockpickTrainingSet is 4>>
-			<<set _LTS to "Master">>
+			<<set _LTS to "달인">>
 			<<set $skulduggerydifficulty to 800>>
 		<<elseif $lockpickTrainingSet is 5>>
-			<<set _LTS to "Lockpick Lawyer">>
+			<<set _LTS to "락픽 로이어">>
 			<<set $skulduggerydifficulty to 900>>
 		<</if>>
 
-		<<link [["Train with your " + _LTS + " Lockpick Training Set (0:30)"|$passage]]>><<pass 30>><<stress 6>><<set $ltsUsed to 1>><</link>><<gstress>><<skulduggerydifficulty>>
+		<<link [["당신의 " + _LTS + " 자물쇠 따기 연습 세트로 훈련한다 (0:30)"|$passage]]>><<pass 30>><<stress 6>><<set $ltsUsed to 1>><</link>><<gstress>><<skulduggerydifficulty>>
 	<</if>>
 <</widget>>
 
@@ -6382,7 +6382,7 @@
 		<</if>>
 	<</for>>
 	<<if _flower_gift_found isnot true>>
-		You don't have <<if _flower_gift_enough is true>>enough of any cetain type<</if>>flowers to gift.
+		당신에게는 선물할 <<if _flower_gift_enough is true>>충분한 수량의 <</if>>꽃이 없다.
 	<</if>>
 	<br><br>
 <</widget>>
@@ -6399,7 +6399,7 @@
 		<</if>>
 	<</for>>
 	<<if _fish_gift_found isnot true>>
-		You don't have any fish to gift.
+		당신에게는 선물할 물고기가 없다.
 	<</if>>
 	<br><br>
 <</widget>>
@@ -6407,25 +6407,25 @@
 <<widget "foodstuff_find_tip">>
 	<<if _tempItem isnot undefined>>
 		<<if setup.foodstuff[_tempItem] is undefined>>
-			Error. Cannot find _tempItems.
+			오류. _tempItems【을를】 찾을 수 없습니다.
 		<<else>>
 			<<if setup.foodstuff[_tempItem].category is "seafood">>
 				<<set _fishloc to setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredLocation>>
 				<<if _fishloc.includes("fishingPier")>>
 					<<set _fishloc.pop("fishingPier")>>
-					<<set _fishloc.push("the pier")>>
+					<<set _fishloc.push("부두")>>
 				<</if>>
 				<<if _fishloc.includes("fishingCoastPath")>>
 					<<set _fishloc.pop("fishingCoastPath")>>
-					<<set _fishloc.push("the coast")>>
+					<<set _fishloc.push("해안")>>
 				<</if>>
 				<<if _fishloc.includes("fishingForestLake")>>
 					<<set _fishloc.pop("fishingForestLake")>>
-					<<set _fishloc.push("the forest lake")>>
+					<<set _fishloc.push("숲속 호수")>>
 				<</if>>
 				<<if _fishloc.includes("fishingMoor")>>
 					<<set _fishloc.pop("fishingMoor")>>
-					<<set _fishloc.push("the moor")>>
+					<<set _fishloc.push("황야")>>
 				<</if>>
 				<<if _fishloc.length gt 1>>
 					<<set _fishlocfin.map((e) => (e)).join(" and ")>>
@@ -6438,15 +6438,15 @@
 					<<set _fishlocfin to _fishloc>>
 				<</if>>
 				<<set _fishseason to setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredSeason>>
-				_tempItem.toUpperFirst() likes <<print setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredBait>> and can be found at _fishlocfin.
+				_tempItem.toUpperFirst()【은는】 <<print setup.fishing.lootTables.fish.find((fish) => T.tempItem).preferredBait>>【을를】 좋아하며 _fishlocfin 일대에서 찾을 수 있습니다.
 				<<if _fishseason.length is 4>>
-					You can find this fish all year round.
+					이 물고기는 일 년 내내 찾을 수 있습니다.
 				<<elseif _fishseason.length is 3>>
-					You can find this fish in any season but <<print ["spring","summer","autumn","winter"].filter(item => T.fishseason.indexOf(item)==-1).toUpperFirst()>>
+					이 물고기는 <<print ["spring","summer","autumn","winter"].filter(item => T.fishseason.indexOf(item)==-1).toUpperFirst()>>【을를】 제외한 어느 계절에나 찾을 수 있습니다.
 				<<else>>
-					You can find this fish in _fishseason[0].toUpperFirst()<<if _fishseason.length is 2>> and _fishseason[1].toUpperFirst()<<else>> only<</if>>.
+					이 물고기는 _fishseason[0].toUpperFirst()<<if _fishseason.length is 2>>【와과】 _fishseason[1].toUpperFirst()에<<else>>에만<</if>> 찾을 수 있습니다.
 				<</if>>
-				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>><br>They can also be bought from the Supermarket on High Street.<</if>>
+				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>><br>하이 가의 슈퍼마켓에서도 구입할 수 있습니다.<</if>>
 			<<elseif setup.foodstuff[_tempItem].category is "dish">>
 				<<if setup.foodstuff[_tempItem].knows_recipe>>
 					<<set _ingredientList to setup.foodstuff[_tempItem].recipe.ingredients.map((e) => (e)).join(" and ")>>
@@ -6455,56 +6455,56 @@
 							<<set _ingredientList.replace(" and",",")>>
 						<</for>>
 					<</if>>
-					You will need _ingredientList to make <<print setup.foodstuff[_tempItem].recipe.recipe_name>>.
+					<<print setup.foodstuff[_tempItem].recipe.recipe_name>>【을를】 만들려면 _ingredientList【이가】 필요합니다.
 				<<else>>
-					You don't know the recipe for this dish.
+					이 요리의 조리법을 모릅니다.
 				<</if>>
 			<<else>>
 				<<if setup.foodstuff[_tempItem].tending isnot undefined and setup.foodstuff[_tempItem].tending.has_seeds is true>>
 					<<if _tempItem is "carnation" and $town_projects.green gte 3>>
-						You can get _tempItems when socializing in the school's backyard or by planting.
+						_tempItems【을를】 학교 뒷마당에서 어울리다 보면 구할 수 있고, 심어서도 얻을 수 있습니다.
 					<<elseif _tempItem is "carnation">>
-						You can get _tempItems from foraging in the island or by planting.
+						_tempItems【을를】 섬에서 채집하거나 심어서 얻을 수 있습니다.
 					<<elseif _tempItem is "tulip">>
-						You can get _tempItems from the park or by planting.
+						_tempItems【을를】 공원에서 구하거나 심어서 얻을 수 있습니다.
 					<<elseif ["garlic","onion","broccoli","wild_carrot"].includes(_tempItem)>>
-						They can be found in the moor.
+						황야에서 찾을 수 있습니다.
 					<<elseif ["lily","red_rose","orchid"].includes(_tempItem)>>
-						You can get _tempItems from the forest or by planting.
+						_tempItems【을를】 숲에서 구하거나 심어서 얻을 수 있습니다.
 					<<elseif ["rice","potato"].includes(_tempItem)>>
-						You can get _tempItem through random event or by planting.
+						_tempItem【을를】 무작위 이벤트나 심기를 통해 얻을 수 있습니다.
 					<<else>>
-						You can only get _tempItems.toUpperFirst() via planting. Happy gardening!
+						_tempItems.toUpperFirst()【은는】 심어서만 얻을 수 있습니다. 즐거운 정원 가꾸기 되십시오!
 					<</if>>
-					<<if !setup.foodstuff[_tempItem].tending.seasons.includes(Time.season)>> Though this is not the correct season for it. How unfortunate.<</if>>
+					<<if !setup.foodstuff[_tempItem].tending.seasons.includes(Time.season)>> 다만 지금은 알맞은 계절이 아닙니다. 안타까운 일입니다.<</if>>
 				<</if>>
 
 				<<if _tempItem is "ghostshroom">>
-					You can find _tempItems while tending to the plants at Kylar's manor.
+					카일라의 저택에서 식물을 돌보다 보면 _tempItems【을를】 찾을 수 있습니다.
 				<<elseif _tempItem is "blood_lemon">>
-					You can find _tempItems in the Deep Forest on Blood Moon night.
+					붉은 달이 뜬 밤의 깊은 숲에서 _tempItems【을를】 찾을 수 있습니다.
 				<<elseif _tempItem is "orange">>
-					You can steal _tempItems when in Danube Street<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">> or in the temple's garden<</if>>.<<if $avery_mansion isnot undefined>> Avery can stock these sometimes.<</if>>
+					다뉴브 가<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>나 신전 정원<</if>>에서 _tempItems【을를】 훔칠 수 있습니다.<<if $avery_mansion isnot undefined>> 에이버리가 가끔 이 물건들을 들여놓기도 합니다.<</if>>
 				<<elseif _tempItem is "banana">>
-					You can find _tempItems when browsing the market in Connudatus Street.
+					콘누다투스 가의 시장을 둘러보면 _tempItems【을를】 찾을 수 있습니다.
 				<<elseif ["apple","blackberry","lemon","bird_egg","mushroom","wolfshroom","strawberry","pear"].includes(_tempItem)>>
-					You can find _tempItems when foraging in the forest
+					_tempItems【을를】 숲에서 채집하면 찾을 수 있습니다
 					<<switch _tempItem>>
 						<<case "blackberry">>
-							or in the thicket behind the Residental Alley.
+							. 거주 지구 골목 뒤쪽 덤불에서도 찾을 수 있습니다.
 						<<case "mushroom" "strawberry">>
-							<<if $farm isnot undefined and $farm.woodland gte 1>> or in the Farm's woodland area.<<else>>.<</if>>
+							<<if $farm isnot undefined and $farm.woodland gte 1>>. 농장의 삼림 지대에서도 찾을 수 있습니다.<<else>>.<</if>>
 						<<case "apple" "lemon" "pear">> 
-							<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>or in the temple garden.<<else>>.<</if>>
+							<<if $temple_rank isnot undefined and $temple_rank isnot "prospective">>. 신전 정원에서도 찾을 수 있습니다.<<else>>.<</if>>
 						<<default>>.
 					<</switch>>
 				<<elseif ["plum","peach","truffle"].includes(_tempItem)>>
-					You can find _tempItem when foraging in the Farm's woodland area.
+					_tempItem【을를】 농장의 삼림 지대에서 채집하면 찾을 수 있습니다.
 				<<elseif _tempItem is "lime" and $temple_rank isnot undefined and $temple_rank isnot "prospective">>
-					You can find _tempItems in the temple garden.
+					_tempItems【을를】 신전 정원에서 찾을 수 있습니다.
 				<</if>>
 
-				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>>_tempItems.toUpperFirst() can be bought at the Supermarket on High Street.<br><</if>>
+				<<if setup.foodstuff[_tempItem].shop.available_in isnot undefined and setup.foodstuff[_tempItem].shop.available_in?.includes("supermarket")>>_tempItems.toUpperFirst()【은는】 하이 가의 슈퍼마켓에서 구입할 수 있습니다.<br><</if>>
 			<</if>>
 		<</if>>
 	<</if>>

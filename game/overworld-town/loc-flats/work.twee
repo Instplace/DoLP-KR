@@ -23,14 +23,14 @@
 	<<if modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1 and _poppyRomanceVal lt 0 and _poppySafeHouseVal lt 1 and !Time.isBloodMoon() and $poppyFlat.home and Number(C.npc.Poppy.love) gte 50 and _poppyPatienceOkay>>
 		<<addinlineevent "flats_poppy_knock_work_intro" 2>>
 			<<npc Poppy>><<person1>>
-			You notice a flat with a poppy-shaped knob.<br>
-			You approach it, and knock on the door. It swings open to reveal <span class="purple">Poppy</span>, whose eyes widen in surprise.
+			양귀비 모양 손잡이가 달린 집이 눈에 들어온다.<br>
+			당신은 다가가 문을 두드린다. 문이 열리며 <span class="purple">포피</span>가 모습을 드러내고, 놀라 눈이 휘둥그레진다.
 			<br><br>
-			"Oh hello! I wasn't expecting you," <<he>> says. "It seems you've found where I live. What can I do for you?"
+			"어머, 안녕! 네가 올 줄은 몰랐는데." <<he>>【이가】 말한다. "내가 사는 데를 찾았네. 무슨 일이야?"
 			<br><br>
-			<<socialiseicon "ask">><<link [[Ask for work|Flats Poppy Knock Ask]]>><</link>>
+			<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Poppy Knock Ask]]>><</link>>
 			<br>
-			<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<handheldon>><<pass 1>><</link>>
+			<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<handheldon>><<pass 1>><</link>>
 			<br>
 			<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<</addinlineevent>>
@@ -58,7 +58,7 @@
 		<br><br>
 		<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Lecherous Ask]]>><</link>>
 		<br>
-		<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
+		<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<br>
@@ -72,7 +72,7 @@
 		<br><br>
 		<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Dog Ask]]>><</link>>
 		<br>
-		<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
+		<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<br>
@@ -84,7 +84,7 @@
 		<br><br>
 		<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Kitchen Ask]]>><</link>>
 		<br>
-		<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
+		<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<br>
@@ -96,7 +96,7 @@
 		<br><br>
 		<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Laundry Ask]]>><</link>>
 		<br>
-		<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
+		<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<br>
@@ -113,7 +113,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 묻는다|Flats Pair Ask]]>><</link>>
 		<br>
-		<<dooricon>><<link [[Excuse yourself and knock on another door (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
+		<<dooricon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Flats Knock]]>><<endevent>><<pass 1>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Flats]]>><<endevent>><</link>>
 		<br>

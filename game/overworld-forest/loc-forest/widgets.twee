@@ -1488,24 +1488,24 @@
 	<<else>>
 		공터에 도착했다. 부드러운 산들바람이 얼굴을 스치고, 작고 부드러운 풀들이 발밑에서 밟힌다.
 		<<if $forest lte 20>>
-			<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+			<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 		<<elseif $forest lte 50>>
 			<<if _forest_item is 1>>
-				<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+				<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 			<<else>>
-				<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+				<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 			<</if>>
 		<<else>>
 			<<if _forest_item is 1>>
-				<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+				<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 			<<elseif _forest_item is 2>>
-				<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+				<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 			<<elseif _forest_item is 3>>
-				<span class="pulse-glow pulse-deep-pink">Soft pink petals emerge from the undergrowth, their delicate hues blending with the dappled light of the forest floor. Sunlight filters through the canopy, casting a gentle glow on their slender, graceful stems.</span>
+				<span class="pulse-glow pulse-deep-pink">부드러운 분홍빛 꽃잎이 덤불 사이로 고개를 내밀고, 여린 빛깔이 숲 바닥에 드는 얼룩진 햇빛과 어우러진다. 햇살이 나뭇잎 지붕 사이로 스며들어 가늘고 우아한 줄기 위에 은은한 빛을 드리운다.</span>
 			<<elseif _forest_item is 4>>
-				<span class="pulse-glow pulse-warm-gold">A dense cluster of ruffled mushrooms clings to the roots of an ancient oak, its layered caps resembling the plumage of a resting bird. The scent of damp earth and wood lingers in the air.</span>
+				<span class="pulse-glow pulse-warm-gold">주름진 버섯 무리가 오래된 참나무 뿌리에 빽빽하게 달라붙어 있다. 겹겹이 쌓인 갓이 쉬고 있는 새의 깃털을 닮았다. 공기 중에 젖은 흙과 나무 냄새가 감돈다.</span>
 			<<else>>
-				<span class="pulse-glow pulse-pale-blue">A cluster of pale, ghostly flowers emerges from the forest floor, its translucent petals seeming to glow in the dim light. The air around it feels eerily still, as if nature itself holds its breath.</span>
+				<span class="pulse-glow pulse-pale-blue">창백하고 유령 같은 꽃 무리가 숲 바닥에서 솟아 있다. 투명한 꽃잎이 어스름 속에서 빛나는 듯하다. 그 주위의 공기는 기이할 만큼 고요해, 마치 자연 자체가 숨을 죽인 것 같다.</span>
 			<</if>>
 		<</if>>
 		<<lstress>><<stress -2>>
@@ -1527,7 +1527,7 @@
 
 		<<if $forest lte 20>>
 			<<if currentSkillValue('tending') gte 100>>
-				<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+				<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 				<br>
 			<<else>>
 				<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1536,7 +1536,7 @@
 		<<elseif $forest lte 50>>
 			<<if _forest_item is 1>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1544,7 +1544,7 @@
 				<</if>>
 			<<else>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1554,7 +1554,7 @@
 		<<else>>
 			<<if _forest_item is 1>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1562,7 +1562,7 @@
 				<</if>>
 			<<elseif _forest_item is 2>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1570,7 +1570,7 @@
 				<</if>>
 			<<elseif _forest_item is 3>>
 				<<if currentSkillValue('tending') gte 600>>
-					<<foodstufficon "red_helleborine">> <<link [[Pick Red Helleborine (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
+					<<foodstufficon "red_helleborine">> <<link [[붉은 헬레보린을 꺾는다 (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1578,7 +1578,7 @@
 				<</if>>
 			<<elseif _forest_item is 4>>
 				<<if currentSkillValue('tending') gte 300>>
-					<<foodstufficon "hen_of_the_woods">> <<link [[Pick Hen of the Woods (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
+					<<foodstufficon "hen_of_the_woods">> <<link [[잎새버섯을 딴다 (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1586,7 +1586,7 @@
 				<</if>>
 			<<else>>
 				<<if currentSkillValue('tending') gte 900>>
-					<<foodstufficon "ghost_orchid">> <<link [[Pick Ghost Orchid (Epipogium Aphyllum) (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
+					<<foodstufficon "ghost_orchid">> <<link [[유령난초를 꺾는다 (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1642,18 +1642,18 @@
 	<<runeventpool>>
 
 	<<if _forest_item lte 0>>
-		You find a cluster of edible berries growing on a patch of bushes.
+		덤불에 먹을 수 있는 열매가 송이송이 열려 있는 것을 발견한다.
 		<br><br>
 
 		<<if _forest_berries is 1>>
-			<<icon "tending/blackberry.png">><<link [[Search for saleable specimens (0:20)|Forest Berries Pick]]>><<pass 20>><</link>><<tendingdifficulty 1 300>>
+			<<icon "tending/blackberry.png">><<link [[팔 수 있는 표본을 찾는다 (0:20)|Forest Berries Pick]]>><<pass 20>><</link>><<tendingdifficulty 1 300>>
 			<br>
 		<<else>>
 			<<if currentSkillValue('tending') gte 150>>
-				<<icon "tending/strawberry.png">><<link [[Search for saleable specimens (0:20)|Forest Berries2 Pick]]>><<pass 20>><</link>><<tendingdifficulty 150 450>>
+				<<icon "tending/strawberry.png">><<link [[팔 수 있는 표본을 찾는다 (0:20)|Forest Berries2 Pick]]>><<pass 20>><</link>><<tendingdifficulty 150 450>>
 				<br>
 			<<else>>
-				<span class="blue">You need a higher tending skill to pick saleable berries.</span>
+				<span class="blue">팔 만한 품질의 열매를 따려면 관리 스킬이 더 높아야 합니다.</span>
 				<br>
 			<</if>>
 		<</if>>
@@ -1663,24 +1663,24 @@
 	<<else>>
 		공터에 도착했다. 부드러운 산들바람이 얼굴을 스치고, 작고 부드러운 풀들이 발밑에서 밟힌다.
 		<<if $forest lte 20>>
-			<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+			<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 		<<elseif $forest lte 50>>
 			<<if _forest_item is 1>>
-				<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+				<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 			<<else>>
-				<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+				<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 			<</if>>
 		<<else>>
 			<<if _forest_item is 1>>
-				<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+				<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 			<<elseif _forest_item is 2>>
-				<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+				<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 			<<elseif _forest_item is 3>>
-				<span class="pulse-glow pulse-deep-pink">Soft pink petals emerge from the undergrowth, their delicate hues blending with the dappled light of the forest floor. Sunlight filters through the canopy, casting a gentle glow on their slender, graceful stems.</span>
+				<span class="pulse-glow pulse-deep-pink">부드러운 분홍빛 꽃잎이 덤불 사이로 고개를 내밀고, 여린 빛깔이 숲 바닥에 드는 얼룩진 햇빛과 어우러진다. 햇살이 나뭇잎 지붕 사이로 스며들어 가늘고 우아한 줄기 위에 은은한 빛을 드리운다.</span>
 			<<elseif _forest_item is 4>>
-				<span class="pulse-glow pulse-warm-gold">A dense cluster of ruffled mushrooms clings to the roots of an ancient oak, its layered caps resembling the plumage of a resting bird. The scent of damp earth and wood lingers in the air.</span>
+				<span class="pulse-glow pulse-warm-gold">주름진 버섯 무리가 오래된 참나무 뿌리에 빽빽하게 달라붙어 있다. 겹겹이 쌓인 갓이 쉬고 있는 새의 깃털을 닮았다. 공기 중에 젖은 흙과 나무 냄새가 감돈다.</span>
 			<<else>>
-				<span class="pulse-glow pulse-pale-blue">A cluster of pale, ghostly flowers emerges from the forest floor, its translucent petals seeming to glow in the dim light. The air around it feels eerily still, as if nature itself holds its breath.</span>
+				<span class="pulse-glow pulse-pale-blue">창백하고 유령 같은 꽃 무리가 숲 바닥에서 솟아 있다. 투명한 꽃잎이 어스름 속에서 빛나는 듯하다. 그 주위의 공기는 기이할 만큼 고요해, 마치 자연 자체가 숨을 죽인 것 같다.</span>
 			<</if>>
 		<</if>>
 		<<lstress>><<stress -2>>
@@ -1702,7 +1702,7 @@
 
 		<<if $forest lte 20>>
 			<<if currentSkillValue('tending') gte 100>>
-				<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+				<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 				<br>
 			<<else>>
 				<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1711,7 +1711,7 @@
 		<<elseif $forest lte 50>>
 			<<if _forest_item is 1>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1719,7 +1719,7 @@
 				<</if>>
 			<<else>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1729,7 +1729,7 @@
 		<<else>>
 			<<if _forest_item is 1>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1737,7 +1737,7 @@
 				<</if>>
 			<<elseif _forest_item is 2>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1745,7 +1745,7 @@
 				<</if>>
 			<<elseif _forest_item is 3>>
 				<<if currentSkillValue('tending') gte 600>>
-					<<foodstufficon "red_helleborine">> <<link [[Pick Red Helleborine (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
+					<<foodstufficon "red_helleborine">> <<link [[붉은 헬레보린을 꺾는다 (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1753,7 +1753,7 @@
 				<</if>>
 			<<elseif _forest_item is 4>>
 				<<if currentSkillValue('tending') gte 300>>
-					<<foodstufficon "hen_of_the_woods">> <<link [[Pick Hen of the Woods (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
+					<<foodstufficon "hen_of_the_woods">> <<link [[잎새버섯을 딴다 (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -1761,7 +1761,7 @@
 				<</if>>
 			<<else>>
 				<<if currentSkillValue('tending') gte 900>>
-					<<foodstufficon "ghost_orchid">> <<link [[Pick Ghost Orchid (Epipogium Aphyllum) (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
+					<<foodstufficon "ghost_orchid">> <<link [[유령난초를 꺾는다 (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2016,9 +2016,9 @@
 		<<if _forest_item is 1>>
 			백합이 풀 사이와 더 키 큰 식물의 그늘 아래에서 자라고 있다.
 		<<elseif _forest_item is 2>>
-			A patch of clovers sway gently in the breeze while ripe apples hang from the branches.
+			클로버 무리가 산들바람에 살랑이고, 가지에는 잘 익은 사과가 매달려 있다.
 		<<else>>
-			<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+			<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 		<</if>>
 	<<elseif $forest lte 50>>
 		<<if _forest_item is 1>>
@@ -2026,9 +2026,9 @@
 		<<elseif _forest_item is 2>>
 			나무에서 야생 배가 자라고 있다.
 		<<elseif _forest_item is 3>>
-			<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+			<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 		<<else>>
-			<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+			<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 		<</if>>
 	<<else>>
 		<<if _forest_item is 1>>
@@ -2040,15 +2040,15 @@
 				레몬들이 작은 나무 군락에서 자라고 있다.
 			<</if>>
 		<<elseif _forest_item is 3>>
-			<span class="pulse-glow pulse-fiery-red">Bright red mushrooms with white-spotted caps sprout in a loose ring around an old birch tree. They seem almost unreal, like something out of a fairy tale.</span>
+			<span class="pulse-glow pulse-fiery-red">하얀 반점이 박힌 선홍색 갓의 버섯들이 오래된 자작나무 둘레에 느슨한 고리를 이루며 돋아 있다. 동화 속에서 튀어나온 것처럼 거의 현실 같지 않다.</span>
 		<<elseif _forest_item is 4>>
-			<span class="pulse-glow pulse-royal-purple">Tall, regal stalks bear clusters of speckled purple flowers, their shapes resembling tiny, hooded figures. Their sweet fragrance carries on the wind, luring unseen visitors to their hidden corner of the woods.</span>
+			<span class="pulse-glow pulse-royal-purple">키 큰 기품 있는 줄기마다 얼룩덜룩한 보라색 꽃송이가 맺혀 있고, 그 모양이 두건을 쓴 작은 사람 같다. 달콤한 향기가 바람을 타고 퍼져, 보이지 않는 방문객들을 숲속 은밀한 구석으로 불러들인다.</span>
 		<<elseif _forest_item is 5>>
-			<span class="pulse-glow pulse-deep-pink">Soft pink petals emerge from the undergrowth, their delicate hues blending with the dappled light of the forest floor. Sunlight filters through the canopy, casting a gentle glow on their slender, graceful stems.</span>
+			<span class="pulse-glow pulse-deep-pink">부드러운 분홍빛 꽃잎이 덤불 사이로 고개를 내밀고, 여린 빛깔이 숲 바닥에 드는 얼룩진 햇빛과 어우러진다. 햇살이 나뭇잎 지붕 사이로 스며들어 가늘고 우아한 줄기 위에 은은한 빛을 드리운다.</span>
 		<<elseif _forest_item is 6>>
-			<span class="pulse-glow pulse-warm-gold">A dense cluster of ruffled mushrooms clings to the roots of an ancient oak, its layered caps resembling the plumage of a resting bird. The scent of damp earth and wood lingers in the air.</span>
+			<span class="pulse-glow pulse-warm-gold">주름진 버섯 무리가 오래된 참나무 뿌리에 빽빽하게 달라붙어 있다. 겹겹이 쌓인 갓이 쉬고 있는 새의 깃털을 닮았다. 공기 중에 젖은 흙과 나무 냄새가 감돈다.</span>
 		<<else>>
-			<span class="pulse-glow pulse-pale-blue">A cluster of pale, ghostly flowers emerges from the forest floor, its translucent petals seeming to glow in the dim light. The air around it feels eerily still, as if nature itself holds its breath.</span>
+			<span class="pulse-glow pulse-pale-blue">창백하고 유령 같은 꽃 무리가 숲 바닥에서 솟아 있다. 투명한 꽃잎이 어스름 속에서 빛나는 듯하다. 그 주위의 공기는 기이할 만큼 고요해, 마치 자연 자체가 숨을 죽인 것 같다.</span>
 		<</if>>
 	<</if>>
 	<<lstress>><<stress -2>>
@@ -2096,17 +2096,17 @@
 			<<if pcAreArmsBound("both")>>
 				<span class="red">두 팔이 묶여 있어</span>, 사과를 딸 수 없습니다.
 			<<else>>
-				<<icon "tending/clover.png">> <<link [[Pick clovers (0:10)|Forest Clover]]>><<pass 10>><</link>>
+				<<icon "tending/clover.png">> <<link [[클로버를 딴다 (0:10)|Forest Clover]]>><<pass 10>><</link>>
 				<br>
 				<<foodstufficon "apple">> <<link [[사과를 딴다 (0:20)|Forest Apple Pick]]>><<pass 20>><</link>><<tendingdifficulty 1 300>>
 			<</if>>
 			<br>
 		<<else>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick fly agarics.
+				<span class="red">두 팔이 묶여 있어</span>, 광대버섯을 딸 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2151,10 +2151,10 @@
 			<</if>>
 		<<elseif _forest_item is 3>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick fly agarics.
+				<span class="red">두 팔이 묶여 있어</span>, 광대버섯을 딸 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2163,10 +2163,10 @@
 			<</if>>
 		<<else>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick lady orchids.
+				<span class="red">두 팔이 묶여 있어</span>, 레이디 오키드를 꺾을 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2214,10 +2214,10 @@
 			<</if>>
 		<<elseif _forest_item is 3>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick fly agarics.
+				<span class="red">두 팔이 묶여 있어</span>, 광대버섯을 딸 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 100>>
-					<<foodstufficon "fly_agaric">> <<link [[Pick Fly Agarics (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
+					<<foodstufficon "fly_agaric">> <<link [[광대버섯을 딴다 (0:20)|Forest Fly Agaric Pick]]>><<pass 20>><</link>><<tendingdifficulty 100 300>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2226,10 +2226,10 @@
 			<</if>>
 		<<elseif _forest_item is 4>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick lady orchids.
+				<span class="red">두 팔이 묶여 있어</span>, 레이디 오키드를 꺾을 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 500>>
-					<<foodstufficon "lady_orchid">> <<link [[Pick Lady Orchids (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
+					<<foodstufficon "lady_orchid">> <<link [[레이디 오키드를 꺾는다 (0:20)|Forest Lady Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 500 800>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2238,10 +2238,10 @@
 			<</if >>
 		<<elseif _forest_item is 5>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick red helleborines.
+				<span class="red">두 팔이 묶여 있어</span>, 붉은 헬레보린을 꺾을 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 600>>
-					<<foodstufficon "red_helleborine">> <<link [[Pick Red Helleborine (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
+					<<foodstufficon "red_helleborine">> <<link [[붉은 헬레보린을 꺾는다 (0:20)|Forest Red Helleborine Pick]]>><<pass 20>><</link>><<tendingdifficulty 600 900>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2250,10 +2250,10 @@
 			<</if>>
 		<<elseif _forest_item is 6>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick hen of the woods.
+				<span class="red">두 팔이 묶여 있어</span>, 잎새버섯을 딸 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 300>>
-					<<foodstufficon "hen_of_the_woods">> <<link [[Pick Hen of the Woods (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
+					<<foodstufficon "hen_of_the_woods">> <<link [[잎새버섯을 딴다 (0:20)|Forest Hen of the Woods Pick]]>><<pass 20>><</link>><<tendingdifficulty 300 600>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>
@@ -2262,10 +2262,10 @@
 			<</if>>
 		<<else>>
 			<<if pcAreArmsBound("both")>>
-				<span class="red">Both of your arms are bound</span>, so you are unable to pick ghost orchids.
+				<span class="red">두 팔이 묶여 있어</span>, 유령난초를 꺾을 수 없습니다.
 			<<else>>
 				<<if currentSkillValue('tending') gte 900>>
-					<<foodstufficon "ghost_orchid">> <<link [[Pick Ghost Orchid (Epipogium Aphyllum) (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
+					<<foodstufficon "ghost_orchid">> <<link [[유령난초를 꺾는다 (0:20)|Forest Ghost Orchid Pick]]>><<pass 20>><</link>><<tendingdifficulty 900 1000>>
 					<br>
 				<<else>>
 					<span class="blue">팔 만한 품질의 작물을 따려면 관리 스킬이 더 높아야 합니다.</span>

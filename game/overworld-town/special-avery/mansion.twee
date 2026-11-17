@@ -386,7 +386,7 @@
 
 <<nightmareCheck "Mansion Sleep">>
 <<generateSleepLinks "Mansion Sleep">>
-<<link [[Climb out of bed|Mansion Bedroom]]>><<unset $bedGuest>><<storeon "Mansion Bed">><<set $wardrobe_location to "mansion_wardrobe">><<loadTempHairStyle>><<endevent>><</link>>
+<<link [[침대에서 나온다|Mansion Bedroom]]>><<unset $bedGuest>><<storeon "Mansion Bed">><<set $wardrobe_location to "mansion_wardrobe">><<loadTempHairStyle>><<endevent>><</link>>
 
 :: Mansion Sleep
 <<set _autosavehere to true>>
@@ -2679,7 +2679,7 @@
 		<<if ($wolfgirl gte 2 or ($transformationParts.wolf.ear isnot "hidden" and $transformationParts.wolf.ear isnot "disabled")) or ($cat gte 2 or ($transformationParts.cat.ear isnot "hidden" and $transformationParts.cat.ear isnot "disabled"))>>
 			<<He>>【은는】 잠시 당신을 빤히 쳐다보다가 이내 미소 짓는다. 당신에게 손을 뻗어, <<he>>【은는】 <<= C.npc.Avery.rage gte 40 ? `당신의 뾰족한 귀 한쪽을 당기더니, 그 뒤를 긁어준다` : `당신의 뾰족한 귀 뒤를 긁어준다`>>. 당신은 무심결에 가르랑거린다. <<arousal 50>><<garousal>>
 			<br><br>
-			"Why should I? It seems I have <<= ($cat gte 2 or ($transformationParts.cat.ear isnot "hidden" and $transformationParts.cat.ear isnot "disabled")) ? `one` : `a puppy`>> already," <<he>> teases.
+			"내가 왜? 여기 이미 <<= ($cat gte 2 or ($transformationParts.cat.ear isnot "hidden" and $transformationParts.cat.ear isnot "disabled")) ? `고양이` : `강아지`>> 한 마리가 있는 것 같은데." <<he>>【이가】 장난스레 말한다.
 			<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 20>>
 				"그나저나, 털 좀 사방에 날리지 않게 조심해." <<He>>【은는】 손을 털며 몇 가닥 묻은 털을 떼어낸다.<<if $avery_mansion.jobs.includes("mansion")>> "자기가 치울 거리를 더 만들고 싶진 않을 거 아니야?"<</if>>
 			<</if>>
@@ -2687,7 +2687,7 @@
 		<<else>>
 			"난 애완동물 키울 시간도 없고, 걔들은 너무 지저분해." <<he>>【이가】 콧방귀를 뀌며 설명한다.
 			<<if $averyragerevealed is 1 and C.npc.Avery.rage gte 20 and (($wolfgirl gte 2 or ($transformationParts.wolf.ear isnot "hidden" and $transformationParts.wolf.ear isnot "disabled")) or ($cat gte 2 or ($transformationParts.cat.ear isnot "hidden" and $transformationParts.cat.ear isnot "disabled")) or ($cow gte 2 or ($transformationParts.cow.ear isnot "hidden" and $transformationParts.cow.ear isnot "disabled")) or ($harpy gte 2 or ($transformationParts.bird.plumage isnot "hidden" and $transformationParts.bird.plumage isnot "disabled")))>>
-				"Speaking of which, be careful not to get <<= ($harpy gte 2 or ($transformationParts.bird.plumage isnot "hidden" and $transformationParts.bird.plumage isnot "disabled")) ? `feathers` : `fur`>> all over the place." <<He>> reaches over and plucks <<= ($harpy gte 2 or ($transformationParts.bird.plumage isnot "hidden" and $transformationParts.bird.plumage isnot "disabled")) ? `a loose feather` : `a few strands of fur`>> off your shoulder.<<if $avery_mansion.jobs.includes("lounge")>> "You don't want to make more of a mess for you to clean, do you?"<</if>>
+				"그나저나, <<= ($harpy gte 2 or ($transformationParts.bird.plumage isnot "hidden" and $transformationParts.bird.plumage isnot "disabled")) ? `깃털` : `털`>> 좀 사방에 날리지 않게 조심해." <<He>>【은는】 손을 뻗어 당신 어깨에 묻은 <<= ($harpy gte 2 or ($transformationParts.bird.plumage isnot "hidden" and $transformationParts.bird.plumage isnot "disabled")) ? `빠진 깃털 하나` : `털 몇 가닥`>>【을를】 떼어낸다.<<if $avery_mansion.jobs.includes("lounge")>> "자기가 치울 거리를 더 만들고 싶진 않을 거 아니야?"<</if>>
 			<<elseif $avery_mansion.jobs.includes("lounge")>>
 				"자기가 치울 거리를 더 만들고 싶진 않을 거 아니야?"
 			<</if>>
@@ -3925,7 +3925,7 @@
 
 <<He>>【은는】 한 손을 <<his>> 가슴에, 다른 손을 당신의 이마에 얹는다. "당신은 위험한 길을 걷고 있습니다. 하늘과 땅과 바다의 모든 행운이 함께하길."
 <<if $phase is 1>>
-	You reach the main streets, <<if currentSkillValue('physique') gte 11000>>and you put <<him>> down<<else>>and <<he>> starts to walk on <<his>> own<</if>>. <<He>> smiles at you brightly, before turning and hobbling to the east. "I hope to see you again."
+	당신은 큰길에 도착한다. <<if currentSkillValue('physique') gte 11000>>그리고 <<him>>【을를】 내려놓는다<<else>>그리고 <<he>>【은는】 스스로 걷기 시작한다<</if>>. <<He>>【은는】 당신에게 밝게 미소 지은 뒤, 몸을 절뚝이며 동쪽으로 향한다. "다시 만나길 바랍니다."
 <<else>>
 	<<He>>【은는】 몸을 절뚝이며 다뉴브 대로를 따라 걷기 시작한다. "다시 만나길 바랍니다."
 <</if>>
@@ -5552,9 +5552,9 @@
 :: Mansion Piano Demon 2
 <<effects>>
 <<if $phase is 1>>
-	You slowly kneel. Its sharp fingers follow you down.
+	당신은 천천히 무릎을 꿇는다. 그것의 날카로운 손가락이 당신을 따라 내려온다.
 	<<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-		You feel  small. Your horns feel like nubs compared to its glorious crown of antlers. <span class="red">This is something beyond a demon.</span>
+		당신은 한없이 작게 느껴진다. 당신의 뿔은 그 영광스러운 뿔 왕관에 비하면 작은 돌기처럼 느껴진다. <span class="red">이건 악마를 넘어선 무언가다.</span>
 	<<elseif (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel")>>
 		당신은 텅 빈 기분을 느낀다. 너무나 익숙한 무언가의 텅 빈 반영을, 마치 금이 간 거울을 보는 것 같다.
 	<<elseif (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>>

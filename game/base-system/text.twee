@@ -4897,7 +4897,7 @@
 
 <<widget "bear">>
 	<<if $statdisable is "f">> |
-		<span class="blue">Bear</span>
+		<span class="blue">곰</span>
 	<</if>>
 <</widget>>
 
@@ -5034,11 +5034,11 @@
 	<</switch>>
 	<<if _textOverrideDragon is true>>
 		<<if Skin.color.tan gte 66>>
-			blue
+			푸른
 		<<elseif Skin.color.tan gte 33>>
-			violet
+			보랏빛
 		<<else>>
-			light purple
+			연보랏빛
 		<</if>>
 		피부색
 	<<elseif _textOverride is true>>
@@ -5123,7 +5123,7 @@
 				<<case "doggirl" "dogboy">><<set _text_output to "개소녀와 개소년들">>
 				<<case "dolphingirl" "dolphinboy">><<set _text_output to "돌고래소녀와 돌고래소년들">>
 				<<case "beargirl" "bearboy">><<set _text_output to "곰소녀와 곰소년들">>
-				<<case "bunnygirl" "bunnyboy">><<set _text_output to "bunnygirls and bunnyboys">>
+				<<case "bunnygirl" "bunnyboy">><<set _text_output to "바니걸과 바니보이들">>
 				<<case "catgirl" "catboy">><<set _text_output to "고양이소녀와 고양이소년들">>
 				<<case "piggirl" "pigboy">><<set _text_output to "돼지소녀와 돼지소년들">>
 				<<case "boargirl" "boarboy">><<set _text_output to "멧돼지소녀와 멧돼지소년들">>
@@ -5531,7 +5531,7 @@
 <<widget "small_text">>
 	<<if !$settings.blindStatsEnabled>> |
 		<<if $physiquesize lte 3000>>
-			<span class="teal">Miniature Body</span>
+			<span class="teal">초소형 체형</span>
 		<<elseif $physiquesize lte 6000>>
 			<span class="teal">매우 작은 몸</span>
 		<<elseif $physiquesize lte 8000>>
@@ -5547,7 +5547,7 @@
 <<widget "large_text">>
 		<<if !$settings.blindStatsEnabled>> |
 		<<if $physiquesize gte 16000>>
-			<span class="teal">Giant Body</span>
+			<span class="teal">초대형 체형</span>
 		<<elseif $physiquesize gte 14000>>
 			<span class="teal">거대한 체형</span>
 		<<elseif $physiquesize gte 12000>>

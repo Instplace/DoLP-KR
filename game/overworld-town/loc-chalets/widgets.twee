@@ -8,7 +8,7 @@
 	당신은 일을 마치고 샬레를 떠난다.
 	<br><br>
 
-	<<link [[Next|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+	<<link [[다음|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 	<br>
 <</addinlineevent>>
 
@@ -18,9 +18,9 @@
 	주방 싱크대에는 더러운 접시들이 높이 쌓여 있고, 그 주위로 지저분한 유리잔들이 널려 있다. 다 치우려면 꽤 시간이 걸릴 것 같다.
 	<br><br>
 
-    <<link [[Ignore|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+    <<link [[무시한다|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
     <br>
-    <<link [[Leave a passive aggressive note making fun of the occupants|Chalets Work Plates Note]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<stress -6>><</link>><<lstress>>
+    <<link [[투숙객을 조롱하는 수동 공격적인 쪽지를 남긴다|Chalets Work Plates Note]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<stress -6>><</link>><<lstress>>
     <br>
     <<link [[청소한다 (0:30)|Chalets Work Plates Clean]]>><<pass 30>><<set $chalets_bags += 1>><<housekeeping 1 300>><</link>><<ghousekeeping 300>>
     <br>
@@ -45,7 +45,7 @@
 	당신은 그들이 말다툼하도록 내버려둔다.
 	<br><br>
 
-	<<link [[Next|Chalets]]>><<endevent>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+	<<link [[다음|Chalets]]>><<endevent>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 	<br>
 <</addinlineevent>>
 
@@ -55,9 +55,9 @@
 	침실에 있는 쓰레기통을 비우던 중, 당신은 매트리스 아래에 반쯤 쑤셔 박혀 있는 두꺼운 현금 다발을 발견한다.
 	<br><br>
 
-	<<link [[Count it|Chalets Work Cash Count]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+	<<link [[세어본다|Chalets Work Cash Count]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 	<br>
-	<<link [[Ignore|Chalets Work Cash Ignore]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+	<<link [[무시한다|Chalets Work Cash Ignore]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 	<br>
 <</addinlineevent>>
 
@@ -92,7 +92,7 @@
 			<br><br>
 			당신은 샬레를 떠난다.
 			<br><br>
-			<<link [[Next|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+			<<link [[다음|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 			<br>
 		<<else>>
 			<<person>>【은는】 텔레비전 앞에 앉아 있지만, 당신의 몸을 위아래로 훑어보며 일하는 모습을 지켜본다.
@@ -100,15 +100,15 @@
 			당신이 일을 끝마치고 이를 알리려 다가가자, <<he>>【은는】 손을 뻗어 당신의 <<bottom>>【을를】 움켜쥔다.<<gstress>><<garousal>><<stress 6>><<arousal 6>>
 			<br><br>
 
-			<<link [[Endure|Chalets Work One Endure]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<trauma 6>><<stress 6>><<arousal 1200>><</link>><<gtrauma>><<gstress>><<ggarousal>>
+			<<link [[참는다|Chalets Work One Endure]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<trauma 6>><<stress 6>><<arousal 1200>><</link>><<gtrauma>><<gstress>><<ggarousal>>
 			<br>
-			<<link [[Smack hand away|Chalets Work One Smack]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+			<<link [[손을 찰싹 때려 치운다|Chalets Work One Smack]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 			<br>
 			<<if hasSexStat("promiscuity", 3)>>
-				<<link [[Charge extra|Chalets Work One Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<arousal 1200>><</link>><<promiscuous3>><<ggarousal>>
+				<<link [[추가 요금을 청구한다|Chalets Work One Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<arousal 1200>><</link>><<promiscuous3>><<ggarousal>>
 				<br>
 			<<elseif $uncomfortable.prostituting is false>>
-				<<link [[Charge extra|Chalets Work One Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<arousal 1200>><<trauma 6>><<stress 6>><</link>><<promiscuous3>><<ggarousal>><<gtrauma>><<gstress>>
+				<<link [[추가 요금을 청구한다|Chalets Work One Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<arousal 1200>><<trauma 6>><<stress 6>><</link>><<promiscuous3>><<ggarousal>><<gtrauma>><<gstress>>
 				<br>
 			<</if>>
 		<</if>>
@@ -131,11 +131,11 @@
 			"발 좀 살짝 얹어도 상관없죠?" <<he>>【이가】 묻는다.
 			<br><br>
 
-			<<link [[Allow|Chalets Work Feet Allow]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<stress 6>><</link>><<gstress>>
+			<<link [[허락한다|Chalets Work Feet Allow]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<stress 6>><</link>><<gstress>>
 			<br>
-			<<link [[Charge extra|Chalets Work Feet Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<pain 4>><<stress 6>><</link>><<gpain>><<gstress>>
+			<<link [[추가 요금을 청구한다|Chalets Work Feet Charge]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<pain 4>><<stress 6>><</link>><<gpain>><<gstress>>
 			<br>
-			<<link [[Refuse|Chalets Work Feet Refuse]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+			<<link [[거절한다|Chalets Work Feet Refuse]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 			<br>
 		<<else>>
 			무릎을 꿇고 엎드린 채 작업해야 했지만, 당신은 쓰레기를 치우는 데 성공한다. 당신은 샬레를 떠난다.
@@ -165,12 +165,12 @@
 
 			<<link [[개목걸이를 착용한다 (0:05)|Chalets Work Collar]]>><<pass 5>><<set $chalets_bags += 1>><<pass 5>><</link>><<exhibitionist1>>
 			<br>
-			<<link [[Refuse|Chalets Work Collar Refuse]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+			<<link [[거절한다|Chalets Work Collar Refuse]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 			<br>
 		<<else>>
 			당신은 일을 마치고 샬레를 떠난다.
 			<br><br>
-			<<link [[Next|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<endevent>><</link>>
+			<<link [[다음|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<endevent>><</link>>
 			<br>
 		<</if>>
 	<</addinlineevent>>
@@ -282,7 +282,7 @@
 <<set _passString to getTimeString(Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2)))>>
 <<if currentSkillValue('housekeeping') gte 300>>
 	<<if $chalets_bags lt 5>>
-		<<link [["Clean a chalet (" + _passString + ")"|Chalets Knock]]>><</link>>
+		<<link [["샬레를 청소한다 (" + _passString + ")"|Chalets Knock]]>><</link>>
 		<br>
 	<<else>>
 		<span class="blue">쓰레기 봉투를 더 이상 들 수 없다.</span>
@@ -290,7 +290,7 @@
 	<</if>>
 <<elseif currentSkillValue('housekeeping') gte 200>>
 	<<if $chalets_bags lt 4>>
-		<<link [["Clean a chalet (" + _passString + ")"|Chalets Knock]]>><</link>>
+		<<link [["샬레를 청소한다 (" + _passString + ")"|Chalets Knock]]>><</link>>
 		<br>
 	<<else>>
 		<span class="blue">쓰레기 봉투를 더 이상 들 수 없다.</span>
@@ -298,7 +298,7 @@
 	<</if>>
 <<elseif currentSkillValue('housekeeping') gte 100>>
 	<<if $chalets_bags lt 3>>
-		<<link [["Clean a chalet (" + _passString + ")"|Chalets Knock]]>><</link>>
+		<<link [["샬레를 청소한다 (" + _passString + ")"|Chalets Knock]]>><</link>>
 		<br>
 	<<else>>
 		<span class="blue">쓰레기 봉투를 더 이상 들 수 없다.</span>
@@ -306,7 +306,7 @@
 	<</if>>
 <<else>>
 	<<if $chalets_bags lt 2>>
-		<<link [["Clean a chalet (" + _passString + ")"|Chalets Knock]]>><</link>>
+		<<link [["샬레를 청소한다 (" + _passString + ")"|Chalets Knock]]>><</link>>
 		<br>
 	<<else>>
 		<span class="blue">쓰레기 봉투를 더 이상 들 수 없다.</span>

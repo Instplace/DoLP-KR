@@ -260,13 +260,13 @@
 	당신은 <<person>>에게 £100를 건넨다. <<He>>【은는】 숨을 헐떡인다. "정말 고마워!" <<he>>【이가】 당신을 껴안으며 말한다.
 	<br><br>
 <<elseif $phase is 3>>
-	You hand the <<person>> £200. <<He>> gapes their mouth. "A-are you sure? Thank you so much!" <<he>> says, hugging you tight.
+	당신은 <<person>>에게 £200를 건넨다. <<He>>【은는】 입을 떡 벌린다. "저, 정말이야? 정말 고마워!" <<he>>【이가】 당신을 꼭 껴안으며 말한다.
 	<br><br>
 <<elseif $phase is 4>>
-	You hand the <<person>> £500. <<He>> blinks twice and then tears up. "Thank you so much... Thank you so so much..." <<he>> sobs, hugging you tightly.
+	당신은 <<person>>에게 £500를 건넨다. <<He>>【은는】 눈을 두 번 깜박이더니 눈물을 글썽인다. "정말... 정말 고마워..." <<he>>【이가】 흐느끼며 당신을 꼭 껴안는다.
 	<br><br>
 <<else>>
-	You hand the <<person>> £1000. <<He>> blinks thrice and holds the money close to their chest. "I'll use this for good, I'll help the other orphans, I swear." <<he>> nods, before turning away with a determined stride.
+	당신은 <<person>>에게 £1000를 건넨다. <<He>>【은는】 눈을 세 번 깜박이더니 돈을 가슴에 꼭 끌어안는다. "좋은 데 쓸게. 다른 고아들도 도울 거야, 맹세해." <<he>>【이가】 고개를 끄덕이고는 단호한 걸음으로 돌아선다.
 	<br><br>
 <</if>>
 
@@ -1055,13 +1055,13 @@
 		<br><br>
 
 		<<if hasSexStat("promiscuity", 2)>>
-			<<link [[Accept|Home Orphan Poster Sex Choice]]>><<set $phase to 1>><</link>><<promiscuous2>>
+			<<link [[수락한다|Home Orphan Poster Sex Choice]]>><<set $phase to 1>><</link>><<promiscuous2>>
 		<<else>>
 			<<insufficientStat "promiscuity" "그런 제안을 받아들이기에는">>
 		<</if>>
 		<br>
 
-		<<link [[Refuse|Home Orphan Poster Sex Choice]]>><<set $phase to 2>><</link>>
+		<<link [[거절한다|Home Orphan Poster Sex Choice]]>><<set $phase to 2>><</link>>
 
 	<<else>>
 		"도와줘서 고마워." <<he>>【이가】 말한다.

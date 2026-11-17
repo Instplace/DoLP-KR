@@ -310,10 +310,10 @@
 				<<wearProp "manila envelope">>
 			<</if>>
 		<<elseif $docks.dailyHours.overtime.total gte 1 and $docks.dailyHours.overtime.total gt $docks.dailyHours.overtime.unpaid>> /* worked during shift and overtime */
-			You make <span class="gold">£<<print _shift_wage_display>></span> for your shift, plus <span class="gold">£<<print _overtime_wage_display>></span> overtime pay<<if $docks.bonus gt 0>>, a <span class="gold">£<<print _dockbonus_display>></span> performance bonus<</if>><<if $christmas is 1>> and your <span class="gold">£<<print _bonus_display>></span> Christmas bonus<</if>>, totalling <span class="gold">£<<print _total_wage_display>></span>.
+			당신은 기본 근무 수당으로 <span class="gold">£<<print _shift_wage_display>></span>, 추가로 야근 수당 <span class="gold">£<<print _overtime_wage_display>></span><<if $docks.bonus gt 0>>, 성과 보너스 <span class="gold">£<<print _dockbonus_display>></span><</if>><<if $christmas is 1>>, 크리스마스 보너스 <span class="gold">£<<print _bonus_display>></span><</if>>까지 합쳐 총 <span class="gold">£<<print _total_wage_display>></span>【을를】 번다.
 			<<wearProp "manila envelope">>
 		<<else>> /* no overtime */
-			You make <span class="gold">£<<print _shift_wage_display>></span><<if $docks.bonus gt 0>>, plus a <span class="gold">£<<print _dockbonus_display>></span> performance bonus<</if>><<if $christmas is 1>>, plus your <span class="gold">£<<print _bonus_display>></span> Christmas bonus<</if>><<if $docks.bonus gt 0 or $christmas is 1>>, totalling <span class="gold">£<<print _total_wage_display>></span><</if>>.
+			당신은 <span class="gold">£<<print _shift_wage_display>></span><<if $docks.bonus gt 0>>, 성과 보너스 <span class="gold">£<<print _dockbonus_display>></span><</if>><<if $christmas is 1>>, 크리스마스 보너스 <span class="gold">£<<print _bonus_display>></span><</if>><<if $docks.bonus gt 0 or $christmas is 1>>까지 합쳐 총 <span class="gold">£<<print _total_wage_display>></span><</if>>【을를】 번다.
 			<<wearProp "manila envelope">>
 		<</if>>
 		<<money `_total_wage` "docksWage">>

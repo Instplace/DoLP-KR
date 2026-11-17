@@ -100,10 +100,10 @@
 		<<set _AMCmod to 1>>
 	<</if>>
 	<<switch Math.clamp($_trait,-1,4 * _AMCmod)>>
-		<<case 8>> an <span class="lustful">SSS</span>
-		<<case 7>> an <span class="gold">SS</span>
-		<<case 6>> an <span class="yellow">S+</span>
-		<<case 5>> an <span class="yellow">S</span>
+		<<case 8>> <<set _text_output to '<span class="lustful">SSS</span>'>><span></span>
+		<<case 7>> <<set _text_output to '<span class="gold">SS</span>'>><span></span>
+		<<case 6>> <<set _text_output to '<span class="yellow">S+</span>'>><span></span>
+		<<case 5>> <<set _text_output to '<span class="yellow">S</span>'>><span></span>
 		<<case 4>> <<set _text_output to '<span class="green">A+</span>'>>
 		<<case 3>> <<set _text_output to '<span class="teal">A</span>'>>
 		<<case 2>> <<set _text_output to '<span class="lblue">B</span>'>>
@@ -181,10 +181,10 @@
 		<<switch _args[0]>>
 			<<case "science">>
 				<<switch $_trait>>
-					<<case 8>> making pain almost a non-factor. <!-- Superlative Science -->
-					<<case 7>> making pain incredibly easy to cope with. <!-- Exemplary Science -->
-					<<case 6>> making pain very easy to cope with. <!-- Exceptional Science -->
-					<<case 5>> making pain easy to cope with. <!-- Outstanding Science -->
+					<<case 8>> 고통이 거의 문제가 되지 않게 된다. <!-- Superlative Science -->
+					<<case 7>> 고통을 믿기 어려울 만큼 쉽게 견딜 수 있게 된다. <!-- Exemplary Science -->
+					<<case 6>> 고통을 매우 쉽게 견딜 수 있게 된다. <!-- Exceptional Science -->
+					<<case 5>> 고통을 쉽게 견딜 수 있게 된다. <!-- Outstanding Science -->
 					<<case 4>> 고통을 훨씬 더 쉽게 견딜 수 있게 된다. <!-- Excellent Science -->
 					<<case 3>> 고통을 더 쉽게 견딜 수 있게 된다. <!-- Good Science -->
 					<<case 2>> 고통을 어느 정도 더 쉽게 견딜 수 있게 된다. <!-- Decent Science -->
@@ -192,10 +192,10 @@
 				<</switch>>
 			<<case "maths">>
 				<<switch $_trait>>
-					<<case 8>> letting you make 200% more from tips and negotiated fees. <!-- Superlative Maths -->
-					<<case 7>> letting you make 175% more from tips and negotiated fees. <!-- Exemplary Maths -->
-					<<case 6>> letting you make 150% more from tips and negotiated fees. <!-- Exceptional Maths -->
-					<<case 5>> letting you make 125% more from tips and negotiated fees. <!-- Outstanding Maths -->
+					<<case 8>> 팁과 협상한 대가로 받는 돈이 200% 증가한다. <!-- Superlative Maths -->
+					<<case 7>> 팁과 협상한 대가로 받는 돈이 175% 증가한다. <!-- Exemplary Maths -->
+					<<case 6>> 팁과 협상한 대가로 받는 돈이 150% 증가한다. <!-- Exceptional Maths -->
+					<<case 5>> 팁과 협상한 대가로 받는 돈이 125% 증가한다. <!-- Outstanding Maths -->
 					<<case 4>> 팁과 협상한 대가로 받는 돈이 100% 증가한다. <!-- Excellent Maths -->
 					<<case 3>> 팁과 협상한 대가로 받는 돈이 75% 증가한다. <!-- Good Maths -->
 					<<case 2>> 팁과 협상한 대가로 받는 돈이 50% 증가한다. <!-- Decent Maths -->
@@ -203,10 +203,10 @@
 				<</switch>>
 			<<case "english">>
 				<<switch $_trait>>
-					<<case 8>> making speech actions nine times as effective. <!-- Superlative English -->
-					<<case 7>> making speech actions eight times as effective. <!-- Exemplary English -->
-					<<case 6>> making speech actions seven times as effective. <!-- Exceptional English -->
-					<<case 5>> making speech actions six times as effective. <!-- Outstanding English -->
+					<<case 8>> 말하기 행동의 효과가 아홉 배가 된다. <!-- Superlative English -->
+					<<case 7>> 말하기 행동의 효과가 여덟 배가 된다. <!-- Exemplary English -->
+					<<case 6>> 말하기 행동의 효과가 일곱 배가 된다. <!-- Exceptional English -->
+					<<case 5>> 말하기 행동의 효과가 여섯 배가 된다. <!-- Outstanding English -->
 					<<case 4>> 말하기 행동의 효과가 다섯 배가 된다. <!-- Excellent English -->
 					<<case 3>> 말하기 행동의 효과가 네 배가 된다. <!-- Good English -->
 					<<case 2>> 말하기 행동의 효과가 세 배가 된다. <!-- Decent English -->
@@ -214,10 +214,10 @@
 				<</switch>>
 			<<case "history">>
 				<<switch $_trait>>
-					<<case 8>> teaching you more secret paths around town. <!-- Superlative History -->
-					<<case 7>> teaching you more secret paths around town. <!-- Exemplary History -->
-					<<case 6>> teaching you more secret paths around town. <!-- Exceptional History -->
-					<<case 5>> teaching you more secret paths around town. <!-- Outstanding History -->
+					<<case 8>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Superlative History -->
+					<<case 7>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Exemplary History -->
+					<<case 6>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Exceptional History -->
+					<<case 5>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Outstanding History -->
 					<<case 4>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Excellent History -->
 					<<case 3>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Good History -->
 					<<case 2>> 마을 곳곳의 비밀 통로를 더 많이 알게 된다. <!-- Decent History -->
@@ -636,21 +636,21 @@
 
 <<switch $phase>>
 	<<case 0>>
-		You focus on the exam, exerting yourself and ignoring the other students.<<set _swimdiff += 100>><<tiredness 4>>
+		당신은 시험에 집중하며 온 힘을 쏟고, 다른 학생들을 무시한다.<<set _swimdiff += 100>><<tiredness 4>>
 	<<case 1>>
 		당신은 심호흡을 하고, 압박감에 굴하지 않으려 노력한다.
 	<<case 2>>
 		<<skulduggerycheck>>
-		Mason has many students to watch, and there's some leeway for "accidents".
+		메이슨은 지켜봐야 할 학생이 많고, "사고"가 일어날 여지도 어느 정도 있다.
 
 
 		<<if $skulduggerysuccess is 1>>
-			You wait for your chances. There are moments, here and there, where the teacher's attention is taken. You sneak in a few splashes into the others' faces or sneakily get in their way, <span class="green">and manage to sabotage your competitors.</span>
+			당신은 기회를 기다린다. 교사의 주의가 다른 데로 쏠리는 순간이 여기저기서 생긴다. 당신은 다른 학생들의 얼굴에 몰래 물을 튀기거나 슬쩍 앞을 가로막고, <span class="green">결국 경쟁자들을 방해하는 데 성공한다.</span>
 			<<set _swimdiff += -200>>
 		<<else>>
-			You take the chance, and try to sabotage your competitors.
+			당신은 기회를 틈타 경쟁자들을 방해하려 한다.
 			<br><br>
-			<span class="red">"Stop that!"</span> Mason shouts. You flinch, shrinking under their intense glare.<<gstress>><<stress 6>><<set _swimdiff += 200>><<ggdelinquency>><<detention 5>>
+			<span class="red">"그만해!"</span> 메이슨이 소리친다. 당신은 움찔하며 매서운 눈초리 아래에서 몸을 움츠린다.<<gstress>><<stress 6>><<set _swimdiff += 200>><<ggdelinquency>><<detention 5>>
 		<</if>>
 		<br><br>
 
@@ -658,30 +658,30 @@
 <</switch>>
 <br><br>
 
-Mason keeps watch and writes down notes in <<his>> clipboard while the students swim. <<He>> whistles. "Stop!" <<he>> announces.
+학생들이 수영하는 동안 메이슨은 지켜보며 <<his>> 클립보드에 메모를 적는다. <<He>>【이가】 호루라기를 분다. "그만!" <<he>>【이가】 알린다.
 <br><br>
 
-You all gather around Mason as <<he>> reads out the results.
+<<he>>【이가】 결과를 읽어 주는 동안 모두가 메이슨 주위에 모인다.
 <br><br>
 
 <<set _swimmingdifficultymax to 1000 + _swimdiff>>
 <<swimmingdifficulty 900 _swimmingdifficultymax 0>>
 
 <<if $swimmingSuccess is 1>>
-	You puff your chest out in pride, <span class="green">you're easily the best among your class.</span><<stress -18>><<trauma -18>><<tiredness 4>><<lllstress>><<llltrauma>><<gtiredness>>
+	당신은 자랑스럽게 가슴을 편다. <span class="green">반에서 단연 최고다.</span><<stress -18>><<trauma -18>><<tiredness 4>><<lllstress>><<llltrauma>><<gtiredness>>
 <<else>>
 	<<set _swimmingdifficultymax to 800 + _swimdiff>>
 	<<swimmingdifficulty 500 _swimmingdifficultymax 0>>
 
 	<<if $swimmingSuccess is 1>>
-		You beam in happiness, <span class="green">you're among the best in class.</span><<stress -12>><<trauma -12>><<tiredness 4>><<llstress>><<lltrauma>><<gtiredness>>
+		당신은 기뻐서 활짝 웃는다. <span class="green">반에서 손꼽히는 실력이다.</span><<stress -12>><<trauma -12>><<tiredness 4>><<llstress>><<lltrauma>><<gtiredness>>
 	<<else>>
 		<<set _swimmingdifficultymax to 250 + _swimdiff>>
 		<<swimmingdifficulty 100 _swimmingdifficultymax 0>>
 		<<if $swimmingSuccess is 1>>
-			You're in the middle of the pack, not bad.<<stress -6>><<trauma -6>><<tiredness 4>><<lstress>><<ltrauma>><<gtiredness>>
+			당신은 중간쯤이다. 나쁘지 않다.<<stress -6>><<trauma -6>><<tiredness 4>><<lstress>><<ltrauma>><<gtiredness>>
 		<<else>>
-			<span class="red">You're among the worst.</span><<stress 6>><<trauma 6>><<tiredness 4>><<gstress>><<gtrauma>><<gtiredness>>
+			<span class="red">당신은 꼴찌권이다.</span><<stress 6>><<trauma 6>><<tiredness 4>><<gstress>><<gtrauma>><<gtiredness>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -689,14 +689,14 @@ You all gather around Mason as <<he>> reads out the results.
 
 <<if $swimall is 1>>
 	<<if playerBellyVisible()>>
-		The bell rings, signifying the end of the lesson. You climb out of the pool once Mason gives the go ahead, and <<nnpc_he "Mason">> sticks close by to assist you. Despite everyone being naked, no one seems concerned. A <<generatey1>><<person1>><<person>> hands out towels to the other students as they pass, trying to avoid eye contact.<<endevent>>
+		종이 울리며 수업 종료를 알린다. 메이슨이 허락하자 당신은 수영장에서 나오고, <<nnpc_he "Mason">>【이가】 도우려고 곁에 바짝 붙는다. 모두가 알몸임에도 아무도 신경 쓰지 않는 것 같다. <<generatey1>><<person1>><<person>>【이가】 지나가는 다른 학생들에게 수건을 나눠 주며 눈을 마주치지 않으려 애쓴다.<<endevent>>
 	<<else>>
 		종이 울리며 수업 종료를 알린다. 당신은 수영장에서 나온다. 모두가 알몸임에도 불구하고 아무도 신경 쓰지 않는 것 같다. 메이슨은 지나가는 각 학생에게 수건을 나눠주며 눈을 마주치지 않으려 애쓴다.
 	<</if>>
 	<br><br>
 <<elseif $exposed gte 1>>
 	<<if playerBellyVisible()>>
-		The bell rings, signifying the end of the lesson. You wait as the other students leave, climbing out of the pool once Mason gives the go ahead, and <<nnpc_he "Mason">> sticks close by to assist you. Some students linger, doubtlessly hoping to get a nice view when you climb out, but Mason herds them away, giving you some privacy.
+		종이 울리며 수업 종료를 알린다. 당신은 다른 학생들이 떠나기를 기다리다가 메이슨이 허락하자 수영장에서 나오고, <<nnpc_he "Mason">>【이가】 도우려고 곁에 바짝 붙는다. 몇몇 학생들이 남아 있다. 의심할 여지 없이 당신이 나올 때 좋은 구경을 하려는 속셈이지만, 메이슨이 그들을 몰아내 당신에게 사적인 공간을 마련해 준다.
 	<<else>>
 		종이 울리며 수업 종료를 알린다. 당신은 다른 학생들이 떠나기를 기다린다. 몇몇 학생들이 남아 있는데,
 		의심할 여지 없이 당신이 나올 때 좋은 구경을 하려는 속셈이다. 하지만 메이슨이 그들을 몰아내 당신에게 사적인 공간을 마련해 준다.
@@ -704,9 +704,9 @@ You all gather around Mason as <<he>> reads out the results.
 	<br><br>
 <<elseif $exposed lte 0>>
 	<<if playerBellyVisible()>>
-		The bell rings, signifying the end of the lesson. You climb out of the pool once Mason gives the go ahead, and <<nnpc_he "Mason">> sticks close by to assist you.
+		종이 울리며 수업 종료를 알린다. 메이슨이 허락하자 당신은 수영장에서 나오고, <<nnpc_he "Mason">>【이가】 도우려고 곁에 바짝 붙는다.
 	<<else>>
-		The bell rings, signifying the end of the lesson. You climb out of the pool.
+		종이 울리며 수업 종료를 알린다. 당신은 수영장에서 나온다.
 	<</if>>
 	<br><br>
 <</if>>
@@ -725,11 +725,11 @@ You all gather around Mason as <<he>> reads out the results.
 <<if Time.minute gte 5 and Time.minute lte 57>>
 <<else>>
 	<<if $player.gender_appearance is "m">>
-		<<loitericon>><<link [[Wait for the girls to leave (0:05)|School Pool]]>><<pass 5>><</link>>
+		<<loitericon>><<link [[여학생들이 나가기를 기다린다 (0:05)|School Pool]]>><<pass 5>><</link>>
 		<br><br>
 	<</if>>
 	<<if $player.gender_appearance is "f">>
-		<<loitericon>><<link [[Wait for the boys to leave (0:05)|School Pool]]>><<pass 5>><</link>>
+		<<loitericon>><<link [[남학생들이 나가기를 기다린다 (0:05)|School Pool]]>><<pass 5>><</link>>
 		<br><br>
 	<</if>>
 <</if>>

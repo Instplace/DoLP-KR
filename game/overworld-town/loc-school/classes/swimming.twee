@@ -324,7 +324,7 @@
 
 	<<exhibitionclassroom>>
 
-	<<swimicon>><<link [[Practise swimming (0:30)|School Pool]]>><<pass 30>><<stress -6>><<tiredness 6>><<set $poolswim to 0>><<physique 3>><<swimmingskilluse>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
+	<<swimicon>><<link [[수영을 연습한다 (0:30)|School Pool]]>><<pass 30>><<stress -6>><<tiredness 6>><<set $poolswim to 0>><<physique 3>><<swimmingskilluse>><<slimeEventEnd "swimming">><</link>><<gswimming>><<lstress>><<gtiredness>>
 	<br>
 
 	<<destinationpoolchangingroom>>
@@ -466,21 +466,21 @@
 <<else>>
 	<<if Time.weekDay is 6 and Time.minute gte 37>>
 		<<npc Mason>><<person1>>
-		"Time to show off your progress," Mason says, taking out a clipboard and a pen. "Take your positons. Any false starts will get a penalty."<<gstress>><<stress 6>>
+		"그동안의 성과를 보여 줄 시간이야." 메이슨이 클립보드와 펜을 꺼내며 말한다. "자리에 서. 부정 출발은 감점이야."<<gstress>><<stress 6>>
 		<br><br>
 		<<if $arousal gte $arousalmax>>
 			<<orgasmLocation "swimClassroom">>
 		<</if>>
 		<br><br>
-		You take your positon, and await Mason's signal. "Ready, set, go!"
+		당신은 자리에 서서 메이슨의 신호를 기다린다. "제자리에, 준비, 출발!"
 		<br><br>
 
 		<<endevent>>
-		<<link [[Focus|Swimming Exam]]>><<stress 6>><<set $phase to 0>><</link>><<gstress>>
+		<<link [[집중한다|Swimming Exam]]>><<stress 6>><<set $phase to 0>><</link>><<gstress>>
 		<br>
-		<<link [[Try to relax|Swimming Exam]]>><<set $phase to 1>><</link>>
+		<<link [[긴장을 풀려고 노력한다|Swimming Exam]]>><<set $phase to 1>><</link>>
 		<br>
-		<<link [[Cheat|Swimming Exam]]>><<set $phase to 2>><</link>><<set $skulduggerydifficulty to 500>><<skulduggerydifficulty>>
+		<<link [[부정행위를 한다|Swimming Exam]]>><<set $phase to 2>><</link>><<set $skulduggerydifficulty to 500>><<skulduggerydifficulty>>
 		<br>
 	<<else>>
 		<<if Time.minute lt 5>>
@@ -495,7 +495,7 @@
 			<<if $arousal gte $arousalmax>>
 				<<orgasmLocation "swimClassroom">>
 			<</if>>
-			The swimming lesson begins, how do you want to conduct yourself?
+			수영 수업이 시작된다. 어떻게 행동하시겠습니까?
 			<br>
 		<<else>>
 			<<if $swimall is 1 and $exposed gte 2>>
@@ -520,7 +520,7 @@
 			<<swimicon "back">><<link [[배영을 연습한다|Swimming Lesson Naked Backstroke]]>><</link>><<gswimming>><<gtiredness>><<exhibitionist5>>
 			<br>
 		<</if>>
-		<<daydreamicon>><<link [[Daydream|Swimming Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
+		<<daydreamicon>><<link [[공상에 잠긴다|Swimming Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
 		<br>
 		<<if hasSexStat("exhibitionism", 4)>>
 			<<skinicon "masturbate">><<link [[자위한다|Swimming Lesson Masturbate]]>><<set $masturbationstart to 1>><</link>><<exhibitionist4>>

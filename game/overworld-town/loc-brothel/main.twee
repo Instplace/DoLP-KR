@@ -567,16 +567,16 @@
 	<br>
 <<elseif $brotheljob is 1 and $gloryholestat gte 100 and $brothelExclusiveGloryholeIntro is 0>>
 	<<set $brothelExclusiveGloryholeIntro to 1>>
-	Briar is sprawled on the sofa, holding a glass of wine. <<He>> smiles as you enter. "Well well well, if it isn't everybody's favorite hole."
+	브라이어는 와인잔을 든 채 소파에 널브러져 있다. <<He>>【은는】 당신이 들어오자 미소 짓는다. "이런, 이런, 이게 누구야. 다들 제일 좋아하는 구멍이잖아."
 	<br><br>
 
-	You raise an eyebrow at the new nickname and Briar laughs "What? Did you think we wouldn't notice eventually? You've pleased quite a few customers..."
+	새 별명에 당신이 눈썹을 치켜올리자 브라이어가 웃는다. "뭐? 우리가 끝까지 눈치 못 챌 줄 알았어? 너, 꽤 많은 손님을 만족시켰더라고..."
 	<br><br>
 
-	"Don't worry, you're not in trouble. I'm here to give you good news, actually. I've set up an exclusive gloryhole for you, that way people who've been asking for you will come running. Downside is... Well, people will know it's you."
+	"걱정 마, 문제 생긴 거 아니니까. 사실 좋은 소식을 전해 주러 왔어. 널 위한 전용 글로리홀을 마련했거든. 그러면 널 찾던 사람들이 줄줄이 달려올 거야. 단점은... 뭐, 그게 너라는 걸 사람들이 알게 된다는 거지."
 	<br><br>
 
-	"You can set your own prices... Though of course, you can't set it at ridiculous prices if you're not famous, even those horndogs' wallets have a limit. Anyway, it's in the basement if you'd like to use it. Go on now." Briar says, waving you away as <<he>> takes a sip of <<his>> wine.
+	"가격은 네가 직접 정할 수 있어... 물론 유명하지도 않은 주제에 터무니없는 가격을 부를 수는 없지. 아무리 발정 난 놈들이라도 지갑에는 한도가 있으니까. 아무튼 지하에 있으니 쓰고 싶으면 써. 자, 이제 가 봐." 브라이어가 말하며 와인을 한 모금 마시고, 손을 휘휘 저어 당신을 내쫓는다.
 	<br><br>
 	<<endevent>>
 	<<link [[다음|Brothel]]>><</link>>
@@ -2571,18 +2571,18 @@
 		<<if $brothelVending.lubeSold>>
 			<<run _productsSold.push(`윤활제 $brothelVending.lubeSold<<pluralise $brothelVending.lubeSold "병" "병">>`)>>
 		<</if>>
-		You sold <<print _productsSold.join(" and ")>> over the past <<print $brothelVending.weeksRent is 1 ? "week" : $brothelVending.weeksRent + " weeks">>. I've already set aside the weekly rent 
+		지난 <<print $brothelVending.weeksRent is 1 ? "한 주" : $brothelVending.weeksRent + "주" >> 동안 <<print _productsSold.join(" 및 ")>>【을를】 팔았더군. 주간 임대료
 		<<set _productProfit to Math.max(0, _productProfit - $brothelVending.weeksRent * 5000)>>
 		<<if _productProfit>>
 			<<set _pcProfit to _productProfit * .4>>
 			<<set _pcProfit to _pcProfit + ((_productCost / 100) * C.npc.Briar.love)>>
 			<<set _briarCut to Math.round((60 * ((100 - C.npc.Briar.love) / 100)) * 100) / 100>>
 			<<if _briarCut gt 0>>
-				deposit and my _briarCut% cut.
+				보증금과 내 몫 _briarCut%는 이미 제해 뒀어.
 			<<else>>
-				deposit.
+				보증금은 이미 제해 뒀어.
 			<</if>>
-			Here's your profit of <span class="green"><<formatmoney _pcProfit>>_printmoney</span>, plus the <span class="blue"><<formatmoney _productCost>>_printmoney</span> you spent stocking the machine." <<He>> hands you your earnings. You make <<printmoney `_productCost + _pcProfit`>>. "Pleasure doing business with you."
+			자, 네 수익은 <span class="green"><<formatmoney _pcProfit>>_printmoney</span>. 그리고 기계를 채우느라 쓴 <span class="blue"><<formatmoney _productCost>>_printmoney</span>도 돌려줄게." <<He>>【이가】 당신에게 수익을 건넨다. 당신은 <<printmoney `_productCost + _pcProfit`>>【을를】 번다. "거래해서 즐거웠어."
 			<<famebusiness 2>>
 			<<money _pcProfit "brothelVendingMachine">>
 		<<else>>

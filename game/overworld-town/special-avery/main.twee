@@ -434,7 +434,7 @@
 <<npc Avery>>
 <<updatesidebarimg>>
 
-<<person1>>Avery looks up as you approach. <<He>> wears a <<if $pronoun is "m">>smart suit<<else>>fancy gown<</if>>. "There you are, <<pcpetname "Avery">>," <<he>>
+<<person1>>당신이 다가가자 에이버리가 고개를 든다. <<He>>【은는】 <<if $pronoun is "m">>깔끔한 정장<<else>>화려한 드레스<</if>>【을를】 입고 있다. "왔군요, <<pcpetname "Avery">>." <<he>>
 
 <<if $worn.over_upper.name isnot "naked" or $worn.over_lower.name isnot "naked">>
 	<<outfitChecks>>
@@ -998,9 +998,9 @@
 <<effects>>
 당신은 자세히 이야기하며, 에이버리에게 자신의 학교 성적이
 <<if $school gte 8000>>
-	<span class="gold">exceptional.</span> <<He>> is utterly amazed by your achievements. "You're a shining example of academic excellence. This is extraordinary!" <<npcincr Avery love 8>><<gglove>>
+	<span class="gold">탁월하다</span>고 말한다. <<He>>【은는】 당신의 성과에 완전히 감탄한다. "당신은 학업 우수성의 빛나는 본보기예요. 정말 대단해요!" <<npcincr Avery love 8>><<gglove>>
 <<elseif $school gte 6000>>
-	<span class="green">distinguished.</span> <<He>> smiles broadly, unable to hide his admiration. "You're really proving yourself. Keep it up, this is remarkable." <<npcincr Avery love 5>><<gglove>>
+	<span class="green">뛰어나다</span>고 말한다. <<He>>【은는】 감탄을 숨기지 못한 채 활짝 웃는다. "정말 실력을 증명하고 있네요. 계속 그렇게 해요. 대단해요." <<npcincr Avery love 5>><<gglove>>
 <<elseif $school gte 4000>>
 	<span class="green">모범적</span>이라고 말한다. <<He>>【은는】 자랑스러운 듯 환하게 웃는다. "그거 듣기 좋네요."<<npcincr Avery love 3>><<gglove>>
 <<elseif $school gte 2800>>
@@ -7782,7 +7782,7 @@
 	<<else>>
 		<<switch $speech_attitude>>
 			<<case "meek">>참지 못한 신음이 헐떡이는 숨 사이로 자유롭게 흘러나오고, 당신은 에이버리에게 매달린다. <<He>>【은는】 그 소리 하나하나가 꽤 마음에 드는 듯하다.
-			<<case "bratty" "special">>You bite your lip, smothering your moans in an effort to stay quiet. You're unable to hold back, and a gasp escapes you. Avery seems quite smug.
+			<<case "bratty" "special">>당신은 조용히 있으려 애쓰며 신음을 삼키려 입술을 깨문다. 하지만 참지 못하고, 숨 삼키는 소리가 새어 나온다. 에이버리는 꽤 우쭐한 듯하다.
 			<<default>>신음과 숨 삼키는 소리가 당신에게서 새어 나온다. 조용히 있으려 해도 소용없다. 에이버리는 꽤 우쭐한 듯하다.
 		<</switch>>
 		<br><br>
@@ -7790,7 +7790,7 @@
 		<br><br>
 		<<switch $speech_attitude>>
 			<<case "meek">>"그렇게 달콤하고 행복한 신음이라니... 사랑스럽군요."
-			<<case "bratty" "special">>"You're so adorable when you try to stifle your moans like this."
+			<<case "bratty" "special">>"그렇게 신음을 참으려고 애쓰는 모습이 정말 사랑스럽군요."
 			<<default>>"조용히 있으려고 하나요? 참 사랑스럽군요."
 		<</switch>>
 

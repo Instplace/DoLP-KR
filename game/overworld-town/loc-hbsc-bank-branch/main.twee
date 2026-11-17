@@ -1,29 +1,29 @@
 :: HBSC Bank Branch
 <<set $outside to 0>><<effects>><<location "hbsc">>
 
-You approach the town hall, a tall building in the heart of the town's commercial district. It stands between a bustling shopping centre and a sleek office building, its polished facade reflecting the steady movement of shoppers and professionals alike. The entire perimeter is constantly being monitored by a variety of security measures.
+당신은 마을 상업 지구 한복판에 있는 높은 건물, 시청으로 다가간다. 시청은 북적이는 쇼핑센터와 세련된 사무용 건물 사이에 서 있고, 윤이 나는 외벽은 쇼핑객과 직장인의 끊임없는 움직임을 그대로 비춘다. 건물 둘레 전체를 다양한 보안 장치가 쉴 새 없이 감시한다.
 <br><br>
 
 <<generate1>><<person1>><<generate2>>
-You enter a long waiting room, lined with wooden doors. A <<person1>><<person>> sits on the front desk. There's a queue.
+당신은 나무 문이 줄지어 늘어선 긴 대기실로 들어선다. <<person1>><<person>>【이가】 안내 데스크에 앉아 있다. 줄이 서 있다.
 <br><br>
 
 <<if hbscBank.account.level gte 2>>
-    <i>You're a priority customer, queues are for chumps.</i>
+    <i>당신은 우선 고객이다. 줄은 호구들이나 서는 것이다.</i>
 <<else>>
     <i>목표 없이 줄을 서서 기다리는 것은 무의미할 것이다.</i>
 <</if>>
 <br><br>
 
 <<if hbscBank.account.level gte 2>>
-    <<schoolicon "library desk">><<link [[Go straight to the priority desk (0:01)|HBSC Bank Priority]]>><<pass 1>><</link>>
+    <<schoolicon "library desk">><<link [[곧장 우선 창구로 간다 (0:01)|HBSC Bank Priority]]>><<pass 1>><</link>>
     <br>
 <<else>>
-    <<loitericon>><<link [[Wait in line (0:20)|HBSC Bank Wait]]>><<pass 20>><</link>>
+    <<loitericon>><<link [[줄을 서서 기다린다 (0:20)|HBSC Bank Wait]]>><<pass 20>><</link>>
     <br>
 <</if>>
 
-<<getouticon>><<link [[Leave|High Street]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|High Street]]>><<endevent>><</link>>
 <br>
 
 :: HBSC Bank Wait
@@ -31,99 +31,99 @@ You enter a long waiting room, lined with wooden doors. A <<person1>><<person>> 
 당신은 <<person2>><<person>> 뒤에서 줄을 기다린다.
 
 <<if $rng gte 91>>
-    <<He>> carries a locked briefcase, gripping the handle tightly. When <<his>> turn arrives, <<he>> places it on the counter and murmurs something under <<his>> breath.
+    <<He>>【은는】 잠긴 서류 가방을 들고 손잡이를 꽉 쥐고 있다. <<his>> 차례가 오자, <<he>>【은는】 가방을 카운터에 올려놓고 작은 소리로 뭔가 중얼거린다.
     <br><br>
-    The teller examines the briefcase before nodding. "You'll need to sign for a secure transfer. Let me get the paperwork."
+    창구 직원이 서류 가방을 살펴보더니 고개를 끄덕인다. "보안 이체에는 서명이 필요해요. 서류를 가져올게요."
     <br><br>
-    <<He>> relaxes slightly and steps aside to wait.
+    <<He>>【은는】 조금 안도한 듯 옆으로 비켜서서 기다린다.
     <br><br>
 <<elseif $rng gte 81>>
-    <<He>> fidgets, shifting <<his>> weight from foot to foot. When <<his>> turn arrives, <<he>> clears <<his>> throat. "Do you have any safety deposit boxes available?"
+    <<He>>【은는】 안절부절못하며 이쪽 발 저쪽 발로 체중을 옮긴다. <<his>> 차례가 오자, <<he>>【은는】 목을 가다듬는다. "대여 금고 남은 거 있나요?"
     <br><br>
-    The teller checks the system. "Yes, we have a few left. What size are you looking for?"
+    창구 직원이 시스템을 확인한다. "네, 몇 개 남아 있어요. 어떤 크기를 찾으세요?"
     <br>
-    <<He>> exhales in relief. "Small. Just for documents."
+    <<He>>【은는】 안도의 숨을 내쉰다. "작은 걸로요. 서류만 넣을 거예요."
     <br>
-    The teller nods and retrieves the necessary forms. "You'll need to sign here and provide identification."
+    창구 직원이 고개를 끄덕이며 필요한 양식을 꺼낸다. "여기에 서명하시고 신분증을 제시해 주세요."
     <br><br>
 <<elseif $rng gte 71>>
-    <<He>> adjusts the cuff of <<his>> jacket. When <<his>> turn arrives, <<he>> hands over a document. "There's been an issue with my last withdrawal."
+    <<He>>【은는】 재킷 소맷부리를 매만진다. <<his>> 차례가 오자, <<he>>【은는】 서류 한 장을 건넨다. "지난번 출금에 문제가 있었어요."
     <br><br>
-    The teller scans the document, then types into the system. "I see the discrepancy. Give me a moment."
+    창구 직원이 서류를 훑어보고 시스템에 입력한다. "불일치가 확인되네요. 잠시만 기다려 주세요."
     <br><br>
-    After a few seconds, the teller nods. "It looks like there was a delay, but it's processing now. You should see the funds by the end of the day."
+    몇 초 뒤, 창구 직원이 고개를 끄덕인다. "처리가 지연됐지만 지금은 진행 중이에요. 오늘 안에 입금된 걸 확인하실 수 있을 거예요."
     <br><br>
-    <<He>> lets out a breath. "Appreciate it."
+    <<He>>【은는】 숨을 내쉰다. "고마워요."
     <br><br>
 <<elseif $rng gte 61>>
-    <<He>> approaches with a thick ledger tucked under <<his>> arm. When <<his>> turn arrives, <<he>> places it on the counter. "I need to confirm an account transfer."
+    <<He>>【은는】 두꺼운 장부를 팔에 낀 채 다가온다. <<his>> 차례가 오자, <<he>>【은는】 장부를 카운터에 올려놓는다. "계좌 이체를 확인하고 싶은데요."
     <br><br>
-    The teller opens the ledger, comparing the numbers with what's in the system. "Yes, we received the transfer request. I can process it now if you'd like."
+    창구 직원이 장부를 펼쳐 숫자를 시스템의 내용과 대조한다. "네, 이체 요청이 접수됐어요. 원하시면 지금 처리해 드릴게요."
     <br><br>
-    <<He>> nods. "Please do."
+    <<He>>【은는】 고개를 끄덕인다. "부탁해요."
     <br><br>
-    The teller finalizes the transaction and hands over a confirmation slip. "All set."
+    창구 직원이 거래를 마무리하고 확인증을 건넨다. "다 됐어요."
     <br><br>
 <<elseif $rng gte 51>>
-    <<He>> rubs <<his>> forehead as <<he>> approaches the counter. "I lost my debit card. Can I get a replacement?"
+    <<He>>【은는】 이마를 문지르며 카운터로 다가온다. "체크카드를 잃어버렸어요. 재발급받을 수 있나요?"
     <br><br>
-    The teller types into the system. "I see your account. Do you want to freeze your old card?"
+    창구 직원이 시스템에 입력한다. "계좌가 확인되네요. 기존 카드는 정지할까요?"
     <br><br>
     "네, 좋아요."
     <br><br>
-    The teller presses a few keys and nods. "Done. A new card will be mailed to you within five business days. In the meantime, I can issue a temporary card if needed."
+    창구 직원이 키를 몇 번 누르고 고개를 끄덕인다. "처리됐어요. 새 카드는 영업일 기준 닷새 안에 우편으로 보내 드려요. 그동안 필요하시면 임시 카드를 발급해 드릴 수 있어요."
     <br><br>
-    <<He>> looks relieved. "That'd be great."
+    <<He>>【은는】 안심한 표정이다. "그럼 정말 좋죠."
     <br><br>
 <<elseif $rng gte 41>>
-    <<He>> places a stack of documents on the counter. "I need to file a dispute for an unauthorized charge."
+    <<He>>【은는】 서류 뭉치를 카운터에 올려놓는다. "승인하지 않은 결제에 이의를 제기하고 싶어요."
     <br><br>
-    The teller picks up the forms and scans them. "I see the issue. We'll start the investigation today."
+    창구 직원이 양식을 집어 들고 훑어본다. "문제가 보이네요. 오늘 바로 조사를 시작할게요."
     <br>
-    <<He>> crosses <<his>> arms. "How long will that take?"
+    <<He>>【은는】 팔짱을 낀다. "얼마나 걸리죠?"
     <br>
-    "We aim to resolve these within seven business days, but you'll get a provisional refund in the next 24 hours while we investigate."
+    "영업일 기준 7일 안에 처리하려 하지만, 조사하는 동안 24시간 안에 임시 환불은 받으실 수 있어요."
     <br>
-    <<He>> nods, looking satisfied. "Alright. Thanks."
+    <<He>>【은는】 만족한 듯 고개를 끄덕인다. "알겠어요. 고마워요."
     <br><br>
 <<elseif $rng gte 31>>
-    <<He>> clutches a small pouch of coins. When <<his>> turn arrives, <<he>> empties it onto the counter. "Can I exchange these for notes?"
+    <<He>>【은는】 작은 동전 주머니를 움켜쥐고 있다. <<his>> 차례가 오자, <<he>>【은는】 카운터 위에 동전을 쏟는다. "이거 지폐로 바꿀 수 있나요?"
     <br><br>
-    The teller sorts through the coins. "We can exchange most of these, but a few are out of circulation."
+    창구 직원이 동전을 골라낸다. "대부분은 바꿔 드릴 수 있지만, 몇 개는 더 이상 유통되지 않는 거예요."
     <br><br>
-    <<He>> frowns. "Can I at least deposit them?"
+    <<He>>【은는】 얼굴을 찌푸린다. "그럼 입금이라도 할 수 있나요?"
     <br><br>
-    The teller nods. "Of course. I'll process that now."
+    창구 직원이 고개를 끄덕인다. "물론이죠. 지금 처리할게요."
     <br><br>
 <<elseif $rng gte 21>>
-    <<He>> looks around, reading the signs on the walls. When <<his>> turn arrives, <<he>> steps up with a hesitant smile. "I'd like to open an account."
+    <<He>>【은는】 주위를 둘러보며 벽의 안내문을 읽는다. <<his>> 차례가 오자, <<he>>【은는】 쭈뼛쭈뼛한 미소를 띠고 앞으로 나선다. "계좌를 개설하고 싶은데요."
     <br><br>
-    The teller returns the smile. "Of course! Do you have identification?"
+    창구 직원이 미소로 답한다. "물론이죠! 신분증 있으세요?"
     <br><br>
-    <<He>> nods and slides a card across the counter.
+    <<He>>【은는】 고개를 끄덕이며 카드 한 장을 카운터 위로 밀어 보낸다.
     <br><br>
-    "Great. Have a seat, and an account specialist will call you shortly."
+    "좋아요. 앉아서 기다리세요. 곧 계좌 상담 담당자가 부를 거예요."
     <br><br>
 <<elseif $rng gte 11>>
-    <<He>> places an envelope on the counter. "I need to send a bank transfer."
+    <<He>>【은는】 봉투를 카운터에 올려놓는다. "계좌 이체를 하고 싶어요."
     <br><br>
-    The teller takes the envelope and enters the details. "Sending to an external account or within HBSC?"
+    창구 직원이 봉투를 받아 정보를 입력한다. "타 은행 계좌로 보내실 건가요, 아니면 HBSC 내로 보내실 건가요?"
     <br><br>
-    "External."
+    "타 은행이요."
     <br><br>
-    The teller nods. "It should go through within 24 hours."
+    창구 직원이 고개를 끄덕인다. "24시간 안에 처리될 거예요."
     <br><br>
-    <<He>> thanks the teller and steps aside.
+    <<He>>【은는】 창구 직원에게 감사 인사를 하고 옆으로 비켜선다.
     <br><br>
 <<else>>
-    <<He>> carries a stack of papers, sighing as <<he>> reaches the counter. "Here. Loan application, fully filled out."
+    <<He>>【은는】 서류 뭉치를 들고 한숨을 쉬며 카운터에 다다른다. "여기요. 대출 신청서, 전부 작성했어요."
     <br><br>
-    The teller glances over the forms. "Everything seems in order. I'll submit this to the loan officer. You'll hear back within a week."
+    창구 직원이 양식을 훑어본다. "모두 문제없어 보이네요. 대출 담당자에게 제출할게요. 일주일 안에 연락이 갈 거예요."
     <br><br>
-    <<He>> exhales in relief. "Finally."
+    <<He>>【은는】 안도의 숨을 내쉰다. "드디어."
     <br><br>
 <</if>>
-It's your turn. The teller looks up expectantly. "How can I help you, <<psir>>?"
+당신의 차례다. 창구 직원이 기대하는 표정으로 올려다본다. "무엇을 도와드릴까요, <<psir>>?"
 <br><br>
 
 <<hbscOptions>>
@@ -131,13 +131,13 @@ It's your turn. The teller looks up expectantly. "How can I help you, <<psir>>?"
 :: HBSC Bank Priority
 <<effects>>
 <<person2>>
-You sit down on the swivel chair and the <<person>> smiles to greet you. "Good
+당신이 회전의자에 앉자 <<person>>【이가】 미소로 맞이한다. "
 <<if Time.dayState is "day" or Time.dayState is "dawn">>
-    morning,
+    좋은 아침이에요,
 <<elseif Time.dayState is "night" or Time.dayState is "dusk">>
-    evening,
+    좋은 저녁이에요,
 <</if>>
-<<psir>>! How can I help you today?"
+<<psir>>! 오늘은 어떻게 도와드릴까요?"
 <br><br>
 
 <<hbscOptions>>
@@ -146,15 +146,15 @@ You sit down on the swivel chair and the <<person>> smiles to greet you. "Good
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-    "H-how does the savings account work..?" you ask.
+    "저, 저축 계좌는 어떻게 되는 건가요..?" 당신이 묻는다.
 <<elseif $speech_attitude is "bratty">>
-    "So how does the savings account work anyway?" you ask.
+    "그래서 저축 계좌가 대체 어떻게 돌아가는데?" 당신이 묻는다.
 <<else>>
-    "How does the savings account work?" you ask.
+    "저축 계좌는 어떻게 되나요?" 당신이 묻는다.
 <</if>>
 <br><br>
 
-The teller takes out a brochure and slides it over to you. "We offer a comprehensive savings account tier system and of course, your deposit will be gauranteed."
+창구 직원이 안내 책자를 꺼내 당신 쪽으로 밀어 준다. "저희는 다양한 단계로 나뉜 저축 계좌 제도를 운영하고 있고, 물론 예금은 안전하게 보장돼요."
 <br><br>
 
 **Basic**
@@ -196,15 +196,15 @@ The teller takes out a brochure and slides it over to you. "We offer a comprehen
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-    "H-how about the fixed-term deposits..?" you ask.
+    "저, 정기 예금은 어떻게 되나요..?" 당신이 묻는다.
 <<elseif $speech_attitude is "bratty">>
-    "How about the fixed-term deposits work?" you ask.
+    "정기 예금은 어떻게 돌아가는데?" 당신이 묻는다.
 <<else>>
-    "How does the fixed-term deposits work?" you ask.
+    "정기 예금은 어떻게 되나요?" 당신이 묻는다.
 <</if>>
 <br><br>
 
-The teller takes out a brochure and slides it over to you. "Ah, we offer a variety of term lengths as well as different interest rates at higher deposit amounts for 6 months and above though, of course, early withdrawals incur an earned interest penalty fee."
+창구 직원이 안내 책자를 꺼내 당신 쪽으로 밀어 준다. "아, 기간이 다양하고 6개월 이상은 예치 금액이 클수록 금리도 달라져요. 다만 중도 인출을 하면 그동안 번 이자에 위약 수수료가 붙어요."
 <br><br>
 
 **1 Month**
@@ -242,40 +242,40 @@ The teller takes out a brochure and slides it over to you. "Ah, we offer a varie
 
 <<if $hbsc.account.level lte 0>>
     <<if $speech_attitude is "meek">>
-        "I'd like to open an account please..." you say.
+        "계좌를 개설하고 싶은데요..." 당신이 말한다.
     <<elseif $speech_attitude is "bratty">>
-        "I want to open an account." you say.
+        "계좌 만들고 싶어." 당신이 말한다.
     <<else>>
-        "I'd like to open an account" you say.
+        "계좌를 개설하고 싶어요." 당신이 말한다.
     <</if>>
 <<else>>
     <<if $speech_attitude is "meek">>
-        "I'd like to upgrade my account please..." you say.
+        "계좌를 업그레이드하고 싶은데요..." 당신이 말한다.
     <<elseif $speech_attitude is "bratty">>
-        "I want to upgrade my account." you say.
+        "계좌 업그레이드하고 싶어." 당신이 말한다.
     <<else>>
-        "I'd like to upgrade my account" you say.
+        "계좌를 업그레이드하고 싶어요." 당신이 말한다.
     <</if>>
 <</if>>
 <br><br>
 
-<<He>> gives you smile. "Of course! Just let me check your eligibility..." <<He>> then makes few clicks on their keyboard before turning their monitor towards you. "Here's the options you have."
+<<He>>【은는】 미소를 지어 보인다. "물론이죠! 자격 요건을 확인해 볼게요..." <<He>>【은는】 이어서 키보드를 몇 번 두드리더니 모니터를 당신 쪽으로 돌린다. "선택하실 수 있는 옵션이에요."
 <br><br>
 
 <<if $hbsc.account.level lte 0>>
-    <<link [[Basic Tier|HBSC Bank Account Upgrade]]>><<set $phase to 1>><</link>>
+    <<link [[베이직 등급|HBSC Bank Account Upgrade]]>><<set $phase to 1>><</link>>
 <</if>>
 <<if $hbsc.account.level lte 1 and $money + $hbsc.account.deposit gte 1000000>>
-    <<link [[Silver Tier|HBSC Bank Account Upgrade]]>><<set $phase to 2>><</link>>
+    <<link [[실버 등급|HBSC Bank Account Upgrade]]>><<set $phase to 2>><</link>>
 <</if>>
 <<if $hbsc.account.level lte 2 and $money + $hbsc.account.deposit gte 10000000>>
-    <<link [[Gold Tier|HBSC Bank Account Upgrade]]>><<set $phase to 3>><</link>>
+    <<link [[골드 등급|HBSC Bank Account Upgrade]]>><<set $phase to 3>><</link>>
 <</if>>
 <<if $hbsc.account.level lte 3 and $money + $hbsc.account.deposit gte 50000000>>
-    <<link [[Platinum Tier|HBSC Bank Account Upgrade]]>><<set $phase to 4>><</link>>
+    <<link [[플래티넘 등급|HBSC Bank Account Upgrade]]>><<set $phase to 4>><</link>>
 <</if>>
 <<if $hbsc.account.level lte 4 and $money + $hbsc.account.deposit gte 250000000>>
-    <<link [[Black Tier|HBSC Bank Account Upgrade]]>><<set $phase to 5>><</link>>
+    <<link [[블랙 등급|HBSC Bank Account Upgrade]]>><<set $phase to 5>><</link>>
 <</if>>
 <<hbscOptions>>
 
@@ -283,89 +283,89 @@ The teller takes out a brochure and slides it over to you. "Ah, we offer a varie
 <<effects>>
 
 <<if $phase is 1>><<set $hbsc.account.level to 1>>
-    "Aha! I'd be happy to welcome you into the HBSC family, <<psir>>. This won't take long!" <<He>> gives you one last smile before making a few taps on their keyboard and leaving for the back room. After a few short minutes, <<he>> returns with a green card in hand and hands it to you. "Here you go sir, feel free to use the HBSC ATMs just outside of the branch or any around town to make deposits or withdrawals."
+    "아! HBSC 가족이 되신 걸 기꺼이 환영해요, <<psir>>. 오래 걸리지 않아요!" <<He>>【은는】 마지막으로 미소를 짓고 키보드를 몇 번 두드린 뒤 안쪽 방으로 사라진다. 잠시 후 <<he>>【은는】 초록색 카드를 들고 돌아와 건네준다. "여기 있어요. 지점 바로 밖이나 마을 곳곳에 있는 HBSC ATM에서 얼마든지 입출금하세요."
     <br><br>
 
     <<hbscOptions>>
 <<elseif $phase gte 2 and $phase lte 5>>
-    "Of course! Just give me a moment to check your account..." <<He>> makes a few taps on their keyboard and turns their monitor towards you.
+    "물론이죠! 잠시만 계좌를 확인할게요..." <<He>>【은는】 키보드를 몇 번 두드리고 모니터를 당신 쪽으로 돌린다.
     <<if $phase is 2>>
         <<if $hbsc.account.deposit gte 1000000>><<set $hbsc.account.level to 2>>
-            "Looks like you already have enough in the account for the upgrade! I'll get you sorted in a jiffy." <<He>> then leaves for the back room before shortly returning with a silver card. "Here you are, <<psir>>! Just as a reminder, your deposit limit has been increased to <<printmoney 25000000>> and your new interest rate is 2.00% AER."
+            "업그레이드에 필요한 금액이 이미 계좌에 있네요! 금방 처리해 드릴게요." <<He>>【은는】 이어서 안쪽 방으로 가더니 곧 은색 카드를 들고 돌아온다. "여기 있어요, <<psir>>! 참고로 예치 한도가 <<printmoney 25000000>>【으로로】 늘어났고, 새 금리는 연 2.00%(AER)예요."
             <br><br>
 
             <<hbscOptions>>
         <<else>>
             <<set _requiredAmount to 1000000 - $hbsc.account.deposit>>
-            "Looks like you'll need to deposit <<printmoney _requiredAmount>> to reach the minimum balance. Would you like to continue?"
+            "최소 잔액을 채우려면 <<printmoney _requiredAmount>>【을를】 예금하셔야 해요. 계속하시겠어요?"
 
-            <<link [[Continue|$passage]]>><<set $phase to 6>><</link>>
+            <<link [[계속한다|$passage]]>><<set $phase to 6>><</link>>
             <br>
-            <<getouticon>><<link [[Leave|High Street]]>><<endevent>><</link>>
+            <<getouticon>><<link [[떠난다|High Street]]>><<endevent>><</link>>
         <</if>>
     <<elseif $phase is 3>>
         <<if $hbsc.account.deposit gte 10000000>><<set $hbsc.account.level to 3>>
-            "Looks like you already have enough in the account for the upgrade! I'll get you sorted in a jiffy." <<He>> then leaves for the back room before shortly returning with a gold card. "Here you are, <<psir>>! Just as a reminder, your deposit limit has been increased to <<printmoney 100000000>> and your new interest rate is 1.25% AER."
+            "업그레이드에 필요한 금액이 이미 계좌에 있네요! 금방 처리해 드릴게요." <<He>>【은는】 이어서 안쪽 방으로 가더니 곧 금색 카드를 들고 돌아온다. "여기 있어요, <<psir>>! 참고로 예치 한도가 <<printmoney 100000000>>【으로로】 늘어났고, 새 금리는 연 1.25%(AER)예요."
             <br><br>
 
             <<hbscOptions>>
         <<else>>
             <<set _requiredAmount to 10000000 - $hbsc.account.deposit>>
-            "Looks like you'll need to deposit <<printmoney _requiredAmount>> to reach the minimum balance. Would you like to continue?"
+            "최소 잔액을 채우려면 <<printmoney _requiredAmount>>【을를】 예금하셔야 해요. 계속하시겠어요?"
 
-            <<link [[Continue|$passage]]>><<set $phase to 7>><</link>>
+            <<link [[계속한다|$passage]]>><<set $phase to 7>><</link>>
             <br>
-            <<getouticon>><<link [[Leave|High Street]]>><<endevent>><</link>>
+            <<getouticon>><<link [[떠난다|High Street]]>><<endevent>><</link>>
         <</if>>
     <<elseif $phase is 4>>
         <<if $hbsc.account.deposit gte 50000000>><<set $hbsc.account.level to 4>>
-            "Looks like you already have enough in the account for the upgrade! I'll get you sorted in a jiffy." <<He>> then leaves for the back room before shortly returning with a platinum card. "Here you are, <<psir>>! Just as a reminder, your deposit limit has been increased to <<printmoney 500000000>> and your new interest rate is 0.75% AER."
+            "업그레이드에 필요한 금액이 이미 계좌에 있네요! 금방 처리해 드릴게요." <<He>>【은는】 이어서 안쪽 방으로 가더니 곧 플래티넘 카드를 들고 돌아온다. "여기 있어요, <<psir>>! 참고로 예치 한도가 <<printmoney 500000000>>【으로로】 늘어났고, 새 금리는 연 0.75%(AER)예요."
             <br><br>
 
             <<hbscOptions>>
         <<else>>
             <<set _requiredAmount to 50000000 - $hbsc.account.deposit>>
-            "Looks like you'll need to deposit <<printmoney _requiredAmount>> to reach the minimum balance. Would you like to continue?"
+            "최소 잔액을 채우려면 <<printmoney _requiredAmount>>【을를】 예금하셔야 해요. 계속하시겠어요?"
 
-            <<link [[Continue|$passage]]>><<set $phase to 8>><</link>>
+            <<link [[계속한다|$passage]]>><<set $phase to 8>><</link>>
             <br>
-            <<getouticon>><<link [[Leave|High Street]]>><<endevent>><</link>>
+            <<getouticon>><<link [[떠난다|High Street]]>><<endevent>><</link>>
         <</if>>
     <<else>>
         <<if $hbsc.account.deposit gte 250000000>><<set $hbsc.account.level to 5>>
-            "Looks like you already have enough in the account for the upgrade! I'll get you sorted in a jiffy." <<He>> then leaves for the back room before shortly returning with a black card. "Here you are, <<psir>>! Just as a reminder, your deposit limit has been increased to <span class="gold">unlimited</span> and your new interest rate is 0.25% AER."
+            "업그레이드에 필요한 금액이 이미 계좌에 있네요! 금방 처리해 드릴게요." <<He>>【은는】 이어서 안쪽 방으로 가더니 곧 검은색 카드를 들고 돌아온다. "여기 있어요, <<psir>>! 참고로 예치 한도가 <span class="gold">무제한</span>으로 늘어났고, 새 금리는 연 0.25%(AER)예요."
             <br><br>
 
             <<hbscOptions>>
         <<else>>
             <<set _requiredAmount to 250000000 - $hbsc.account.deposit>>
-            "Looks like you'll need to deposit <<printmoney _requiredAmount>> to reach the minimum balance. Would you like to continue?"
+            "최소 잔액을 채우려면 <<printmoney _requiredAmount>>【을를】 예금하셔야 해요. 계속하시겠어요?"
 
-            <<link [[Continue|$passage]]>><<set $phase to 9>><</link>>
+            <<link [[계속한다|$passage]]>><<set $phase to 9>><</link>>
             <br>
-            <<getouticon>><<link [[Leave|High Street]]>><<endevent>><</link>>
+            <<getouticon>><<link [[떠난다|High Street]]>><<endevent>><</link>>
         <</if>>
     <</if>>
 <<else>>
     <<set $money -= _requiredAmount>><<set $hbsc.account.deposit += _requiredAmount>>
-    <<He>> puts the cash in the cash counter and confirms the amount before putting it away in the vault. <<He>> leaves for the back room before promptly returning with a 
+    <<He>>【은는】 현금을 현금 계수기에 넣고 금액을 확인한 뒤 금고에 넣어 둔다. <<He>>【은는】 안쪽 방으로 가더니 곧
     <<if $phase is 6>>
-        silver card in hand. "Here you go, <<psir>>. As a reminder, your deposit limit has been increased to <<printmoney 25000000>> and your new interest rate is 2.00% AER."
+        은색 카드를 들고 돌아온다. "여기 있어요, <<psir>>. 참고로 예치 한도가 <<printmoney 25000000>>【으로로】 늘어났고, 새 금리는 연 2.00%(AER)예요."
         <br><br>
 
         <<hbscOptions>>
     <<elseif $phase is 7>>
-        gold card in hand. "Here you go, <<psir>>. As a reminder, your deposit limit has been increased to <<printmoney 100000000>> and your new interest rate is 1.25% AER."
+        금색 카드를 들고 돌아온다. "여기 있어요, <<psir>>. 참고로 예치 한도가 <<printmoney 100000000>>【으로로】 늘어났고, 새 금리는 연 1.25%(AER)예요."
         <br><br>
 
         <<hbscOptions>>
     <<elseif $phase is 8>>
-        platinum card in hand. "Here you go, <<psir>>. As a reminder, your deposit limit has been increased to <<printmoney 500000000>> and your new interest rate is 0.75% AER."
+        플래티넘 카드를 들고 돌아온다. "여기 있어요, <<psir>>. 참고로 예치 한도가 <<printmoney 500000000>>【으로로】 늘어났고, 새 금리는 연 0.75%(AER)예요."
         <br><br>
 
         <<hbscOptions>>
     <<else>>
-        black card in hand. "Here you go, <<psir>>. As a reminder, your deposit limit has been increased to <span class="gold">unlimited</span> and your new interest rate is 0.25% AER."
+        검은색 카드를 들고 돌아온다. "여기 있어요, <<psir>>. 참고로 예치 한도가 <span class="gold">무제한</span>으로 늘어났고, 새 금리는 연 0.25%(AER)예요."
         <br><br>
 
         <<hbscOptions>>

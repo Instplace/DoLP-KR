@@ -829,7 +829,7 @@
 		당신은 나머지 <<wolf_cave_plural>>과 합류한다, 혹은 그렇게 생각한다. 당신의 본능이 앞서고, 당신의 하울링은 오히려 쾌활한 노래에 가깝다. 당신의 조화로운 멜로디는 동족들의 하울링과 충돌하여 그들을 약간 짜증나게 만든다.
 		<<stress -3>><<lstress>>
 	<<else>>
-		Despite your best efforts, your <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>yowling<<elseif (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>mooing<<else>>scratchy howling<</if>> doesn't seem to convince most of the <<wolf_cave_plural>>. Most don't seem to mind, but some of them are put off by your lacklustre attempts.
+		최선을 다했지만, 당신의 <<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>야옹거리는 소리<<elseif (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하는 울음<<else>>갈라진 하울링<</if>>【은는】 대부분의 <<wolf_cave_plural>>【을를】 납득시키지 못하는 것 같다. 대부분은 신경 쓰지 않는 듯하지만, 몇몇은 당신의 어설픈 시도에 흥이 깨진다.
 		<<stress -3>><<lstress>>
 	<</if>>
 <</if>>

@@ -601,11 +601,11 @@
 
 그윌란이
 <<switch $bodysize>>
-	<<case -1>>picks you up,
+	<<case -1>>당신을 들어 올리고,
 	<<case 0 1>>당신의 머리를 들어 올리고,
-	<<case 2 2.5>>leans in,
+	<<case 2 2.5>>몸을 숙이고,
 	<<case 3>><<his>> 발끝으로 서서,
-	<<case 4>>stands on the tips of <<his>> toes, pulls your shoulders lower,
+	<<case 4>><<his>> 발끝으로 서서 당신의 어깨를 끌어내리고,
 <</switch>>
 당신에게 키스한다. <<takeKissVirginity "Gwylan" "romantic">>
 <br><br>
@@ -1484,8 +1484,8 @@
 	<<if !$gwylanSeen.includes("requested_bondage")>>
 		<<run $gwylanSeen.pushUnique("requested_bondage")>>
 		<<switch $speech_attitude>>
-			<<case "meek" "shy">>"It felt really good."
-			<<case "bratty" "special">>"Not gonna lie, it was pretty hot."
+			<<case "meek" "shy">>"정말 좋았어."
+			<<case "bratty" "special">>"솔직히, 꽤 야했어."
 			<<default>>"생각보다 재밌었어."
 		<</switch>>
 		<br><br>
@@ -1711,7 +1711,7 @@
 
 <<if $phase is "oral">>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"L-let's just stick to oral," you barely manage to say.
+		<<case "meek" "shy">>"ㅇ-입으로만 해요." 당신은 간신히 말한다.
 		<<case "bratty">>"깨물지만 않으면... 입으로요." 당신은 간신히 말한다.
 		<<default>>"입으로... 부탁해요." 당신은 간신히 말한다.
 	<</switch>>
@@ -1724,9 +1724,9 @@
 	<</if>>
 <<elseif $phase is "virginity">>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">>"G-go ahead, I don't mind,"
-		<<case "polite" "special" "flamboyant">>"Go ahead, I don't mind,"
-		<<case "bratty" "confident">>"I know what I'm in for. Don't hold back,"
+		<<case "meek" "shy">>"ㅎ-해요, 상관없어요."
+		<<case "polite" "special" "flamboyant">>"해요, 상관없어요."
+		<<case "bratty" "confident">>"뭘 각오해야 하는지 알아요. 봐주지 마요."
 		<<default>>"제대로 해요."
 	<</switch>>
 	당신은 정신이 황홀한 안갯속으로 빠져들며 몽롱하게 말한다.
@@ -1754,9 +1754,9 @@
 <<elseif $phase is "virginityRequest">>
 	<<set $sexRitual.arousal += 5>>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"It's okay, losing my virginity to you... would be great, actually,"<<else>>"It's okay, I want you to take my virginity,"<</if>>
+		<<case "meek" "shy">><<if $speech_attitude_special is "docile">>"괜찮아요, 당신에게 순결을 잃는 건... 사실 좋을 것 같아요."<<else>>"괜찮아요, 당신이 제 순결을 가져갔으면 해요."<</if>>
 		<<case "bratty">>"당신보다 더 나쁜 사람에게 순결을 잃을 수도 있었겠죠. 해요."
-		<<case "polite" "flamboyant" "special">>"You may take my virginity. You can do it,"
+		<<case "polite" "flamboyant" "special">>"제 순결을 가져가도 좋아요. 당신이라면 돼요."
 		<<default>>"당신이 내 순결을 가져갔으면 해요."
 	<</switch>>
 	당신은 정신이 황홀한 안갯속으로 빠져들며 암시적으로 말한다.
@@ -1769,7 +1769,7 @@
 	<</if>>
 <<elseif $phase is "penetrationPlayer">>
 	<<switch $speech_attitude>>
-		<<case "meek" "special" "shy">>"I just need to... finish, right? It would be easier for me if you, you know...<<if $sexRitual.target is "playerAnal" and $player.vaginaExist>> Um, but in the other one...<</if>>"
+		<<case "meek" "special" "shy">>"저는 그냥... 끝내면 되는 거죠? 당신이, 그러니까... 해 주면 제겐 더 쉬울 것 같아요...<<if $sexRitual.target is "playerAnal" and $player.vaginaExist>> 음, 그런데 다른 쪽으로...<</if>>"
 		<<case "bratty">>"그냥... 사정하면 되는 거죠? 당신이... 알잖아요. 날 박아주면 제일 쉬울 거예요. <<if $sexRitual.target is "playerAnal" and $player.vaginaExist>>뒤로요.<</if>>"
 		<<default>>"직설적으로 말할게요. 그냥 사정만 하면 되는 거라면, <<if $sexRitual.target is "playerAnal" and $player.vaginaExist>>항문 <</if>>삽입이 더 쉬울 거예요."
 	<</switch>>
@@ -1783,7 +1783,7 @@
 	<</if>>
 <<elseif $phase is "noPen">>
 	<<switch $speech_attitude>>
-		<<case "meek" "shy" "special">>"No penetration... please," you barely manage to say.
+		<<case "meek" "shy" "special">>"삽입은... 안 돼요, 제발." 당신은 간신히 말한다.
 		<<case "bratty">>"안... 안에 넣는 건 안 돼요, 제발." 당신은 간신히 말한다.
 		<<default>>"삽입은 안 돼요, 제발." 당신은 간신히 말한다.
 	<</switch>>
@@ -3605,12 +3605,12 @@
 			"이-이거 어떻게 고쳐?"
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"You look stupid like that. Stop faking it," you say.<br>
+				"그런 꼴로 있으니 멍청해 보여. 연기하지 마." 당신이 말한다.<br>
 			<<else>>
 				"진심은 아니겠지. 장난치는 거지?" 당신은 말한다.<br>
 			<</if>>
 			"크르르릉!"<br>
-			"You're serious.<<= $sexRitual.bondage ? "Right, okay." : "Is that how I just looked too?">> How do I fix it?"
+			"진짜구나.<<= $sexRitual.bondage ? "그래, 알았어." : "나도 방금 저런 모습이었어?">> 이거 어떻게 고쳐?"
 		<<default>>
 			"괜찮아?"<br>
 			"크르르릉!"<br>

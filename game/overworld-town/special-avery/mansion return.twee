@@ -1383,7 +1383,7 @@
 몇몇이 에이버리를 힐끗 쳐다본다. <<His>> 보폭은 넓고,
 <<if currentSkillValue('physique') gte 6000>>
 	<<if currentSkillValue('physique')+$bodysize*1000 gte 8000>>
-		and your short legs make it hard to keep up with <<him>>.
+		그리고 당신의 짧은 다리로는 <<him>>의 속도를 따라가기가 어렵다.
 	<<else>>
 		하지만 당신은 <<him>>의 속도를 따라갈 수 있다.
 	<</if>>
@@ -4652,15 +4652,15 @@
 <<effects>>
 
 <<if $speech_attitude is "meek" or $speech_attitude_avery>>
-	"No thank you," you say. "It's a bit too late for it now."
+	"괜찮아요." 당신이 말한다. "지금은 좀 너무 늦었어요."
 <<elseif $speech_attitude is "bratty">>
-	"Aren't the shops closed already? I'm not going," you declare.
+	"가게들 벌써 닫지 않았어? 난 안 가." 당신이 선언한다.
 <<else>>
-	"It's too late for it now," you say.
+	"지금은 너무 늦었어요." 당신이 말한다.
 <</if>>
 <br><br>
 
-Avery curls <<his>> lips as if in a smile, but it evaporates at once. "Pity, but you're right. Another time."
+에이버리가 미소를 짓듯 입술을 말아 올리지만, 그 미소는 이내 사라진다. "유감이군. 하지만 네 말이 맞아. 다음 기회에 하지."
 <br><br>
 <<He>>【은는】 걸어가 버린다.
 <br><br>
@@ -4671,13 +4671,13 @@ Avery curls <<his>> lips as if in a smile, but it evaporates at once. "Pity, but
 <<effects>>
 
 <<if $speech_attitude is "bratty">>
-	"Aren't the shops closed already? I'm not going," you say.
+	"가게들 벌써 닫지 않았어? 난 안 가." 당신이 말한다.
 <<else>>
-	"It's too late for it now," you say.
+	"지금은 너무 늦었어요." 당신이 말한다.
 <</if>>
 <br><br>
 
-Avery breathes out through <<his>> nose. "Then why did you bring up being too shy in the first place. Seems you weren't such a good <<girl>> to begin with..."
+에이버리가 코로 숨을 내쉰다. "그럼 애초에 왜 너무 부끄럽다고 꺼낸 거지. 처음부터 그리 착한 <<girl>>【은는】 아니었나 보군..."
 <<npcincr Avery rage 1>><<garage>>
 <br><br>
 <<He>>【은는】 걸어가 버린다.
@@ -4691,9 +4691,9 @@ Avery breathes out through <<his>> nose. "Then why did you bring up being too sh
 
 <<if $exposed gte 2>>
 	<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-		"L-like this?" you say. "I can't go out without clothes!"
+		"이, 이런 차림으로요?" 당신이 말한다. "옷도 없이 밖에 나갈 순 없어요!"
 	<<elseif $speech_attitude is "bratty">>
-		"Naked? I think not," you say.
+		"알몸으로? 사양할게." 당신이 말한다.
 	<<else>>
 		"옷 없이는 밖에 나갈 수 없어요." 당신이 말한다. "이웃들이 뭐라고 생각하겠어요?"
 	<</if>>
@@ -4703,17 +4703,17 @@ Avery breathes out through <<his>> nose. "Then why did you bring up being too sh
 	<<elseif $speech_attitude is "bratty">>
 		"이런 차림으로는 밖에 안 나갈 거예요." 당신이 말한다. "사람들이 우릴 미쳤다고 생각할 거예요."
 	<<else>>
-		"I'm not dressed for going out," you say. "People will get the wrong idea."
+		"나갈 차림이 아니에요." 당신이 말한다. "사람들이 오해할 거예요."
 	<</if>>
 <</if>>
 <br><br>
 
-Avery frowns a moment, then smiles. "Go change then," <<he>> says. "I will wait here."
+에이버리는 잠시 얼굴을 찌푸리다가 미소 짓는다. "그럼 가서 갈아입어." <<he>>【이가】 말한다. "여기서 기다릴게."
 <br><br>
 
-<<link [[Change (0:05)|Mansion Shopping Change]]>><<pass 5>><</link>>
+<<link [[갈아입는다 (0:05)|Mansion Shopping Change]]>><<pass 5>><</link>>
 <br>
-<<link [[Refuse|Mansion Return Shopping Refuse 2]]>><</link>>
+<<link [[거절한다|Mansion Return Shopping Refuse 2]]>><</link>>
 
 :: Mansion Shopping Change
 <<effects>><<set $outside to 0>>
@@ -4721,24 +4721,24 @@ Avery frowns a moment, then smiles. "Go change then," <<he>> says. "I will wait 
 당신은 계단을 올라 에이버리의 침실에 있는 옷장으로 걸어간다.
 <br><br>
 
-<<link [[Next|Mansion Wardrobe]]>><<set $phase to 446 >><</link>>
+<<link [[다음|Mansion Wardrobe]]>><<set $phase to 446 >><</link>>
 <br>
 
 :: Mansion Clothing Wardrobe Exit
 <<effects>>
 
-You step  the wardrobe, and examine yourself in the mirror.
+당신은 옷장에서 나와 거울에 자신을 비춰 본다.
 <br><br>
 
 <<if $exposed gte 2>>
 	<<if hasSexStat("exhibitionism", 5)>>
-		Your nudity excites you, but you can't go outside like this.
+		알몸이라는 사실에 흥분되지만, 이런 차림으로 밖에 나갈 수는 없다.
 	<<else>>
 		벌거벗은 채로 밖에 나갈 수는 없다!
 	<</if>>
 	<br><br>
 <<else>>
-	<<link [[Go shopping (0:30)|Mansion Return Shopping]]>><<pass 5>><</link>>
+	<<link [[쇼핑하러 간다 (0:30)|Mansion Return Shopping]]>><<pass 5>><</link>>
 	<br>
 <</if>>
 <<link [[옷장으로 돌아간다|Mansion Wardrobe]]>><</link>>
@@ -4748,15 +4748,15 @@ You step  the wardrobe, and examine yourself in the mirror.
 <<set $outside to 1>>
 
 <<if $phase is 446>>
-You get down the stairs and meet Avery<<if Weather.precipitation is "rain">>, umbrella in hand<</if>>.
+당신은 계단을 내려가 에이버리를 만난다<<if Weather.precipitation is "rain">>. 에이버리는 손에 우산을 들고 있다<</if>>.
 <<else>>
-Avery <<if Weather.precipitation is "rain">>picks up an umbrella and <</if>>.opens the door.
+에이버리는 <<if Weather.precipitation is "rain">>우산을 집어 들고 <</if>>문을 연다.
 <</if>>
 
 <<if $boutiqueintro is 1>>
-	"The same place as the last time. You remember the place, right?"
+	"지난번과 같은 곳이야. 기억나지?"
 <<else>>
-	"It's a short walk from here," <<he>> says, taking your hand.
+	"여기서 금방이야." <<he>>【이가】 말하며 당신의 손을 잡는다.
 <</if>>
 <br><br>
 
@@ -4771,32 +4771,32 @@ Avery <<if Weather.precipitation is "rain">>picks up an umbrella and <</if>>.ope
 <</if>>
 <br><br>
 
-<<link [[Next|Mansion Return Shopping 2]]>><<pass 5>><</link>>
+<<link [[다음|Mansion Return Shopping 2]]>><<pass 5>><</link>>
 <br>
 
 :: Mansion Return Shopping 2
 <<set $location to "town">><<effects>>
 
-Avery leads you 
+에이버리가 당신을 이끌고
 <<if $boutiqueintro is 1>>
-	in the direction of the boutique. Soon enough, you find yourself in front of the entrance, the place as guarded as always.
+	부티크가 있는 쪽으로 걸어간다. 곧 당신은 입구 앞에 서 있고, 그곳은 변함없이 경비가 삼엄하다.
 <<else>>
-	in an opposite direction to the spa. Soon enough, the two of you approach a small boutique on the corner. The door is guarded by two security guards.
+	스파와 반대 방향으로 걸어간다. 곧 두 사람은 길모퉁이의 작은 부티크에 다가선다. 문은 경비원 두 명이 지키고 있다.
 <</if>>
 <br><br>
-You approach the door.
+당신은 문으로 다가간다.
 <<if $boutiqueintro is 1>>
 	<<if $fame.social gte 1000 + $fame.business gte 1000 gte 1000>>
-	The bodyguards nod to you two, clearly recognizing you.
+	경호원들이 두 사람에게 고개를 끄덕인다. 당신을 알아보는 게 분명하다.
 		<<else>>
-		The bodyguards look at you cautiously, but Avery's presence calms them down. It's clear they still don't recognize you.
+		경호원들이 경계하며 당신을 쳐다보지만, 에이버리가 곁에 있다는 사실에 긴장을 푼다. 아직 당신을 알아보지 못하는 게 분명하다.
 	<</if>>
 <<else>>
-	Avery nods at the bodyguards as they open the door.<br>
-	"It has very special pieces inside, " <<he>> explains. "The owner takes security very seriously."
+	경호원들이 문을 열자 에이버리가 그들에게 고개를 끄덕인다.<br>
+	"안에 아주 특별한 물건들이 있어." <<he>>【이가】 설명한다. "주인이 보안을 아주 중요하게 여기거든."
 <</if>>
 <br><br>
-<<link [[Next|Mansion Return Shopping 3]]>><<pass 5>><</link>>
+<<link [[다음|Mansion Return Shopping 3]]>><<pass 5>><</link>>
 
 :: Mansion Return Shopping 3
 <<set $location to "boutique">><<set $outside to 0>><<effects>>
@@ -4804,22 +4804,22 @@ You approach the door.
 <<generate2>><<person2>>
 
 <<if $boutiqueintro is 1>>
-	As soon as you enter, a <<person>> greets you two. <<if $fame.social gte 1000 + $fame.business gte 1000 lt 1000>>You are surprised <<he>> recognizes you, but Avery must have informed <<him>> in advance. <</if>> <<He>> greets you both and proceeds to show the most interesting pieces.
+	안으로 들어서자마자 <<person>>【이가】 두 사람에게 인사한다. <<if $fame.social gte 1000 + $fame.business gte 1000 lt 1000>><<he>>【이가】 당신을 알아봐서 놀랐지만, 에이버리가 미리 알려 두었을 것이다. <</if>> <<He>>【은는】 두 사람에게 인사하고 가장 흥미로운 작품들을 보여 주기 시작한다.
 <<else>>
-	As soon as you enter, a <<person>> greets Avery. <<He>> is well-dressed, but is clearly working here. A polite smile on <<his>> face.<br>
-	"It's wonderful to see you again, <<= C.npc.Avery.pronoun is "m" ? "mister" : "miss">> Avery. And this must be your companion?"<br>
-	After a short introduction, <<he>> leads the two of you to show the most inte~resting pieces.
+	안으로 들어서자마자 <<person>>【이가】 에이버리에게 인사한다. <<He>>【은는】 단정하게 차려입었지만 이곳에서 일하는 사람이 분명하다. <<his>> 얼굴에는 정중한 미소가 걸려 있다.<br>
+	"에이버리 님, 다시 뵙게 되어 정말 반갑습니다. 이분이 동행하신 분이시겠죠?"<br>
+	짧게 인사를 나눈 뒤, <<he>>【은는】 두 사람을 안내해 가장 흥미로운 작품들을 보여 준다.
 	<<set $boutiqueintro to 1>>
 <</if>>
 <br><br>
 
-<<link [[Next|Mansion Return Shopping 4]]>><<pass 10>><</link>>
+<<link [[다음|Mansion Return Shopping 4]]>><<pass 10>><</link>>
 
 :: Mansion Return Shopping 4
 <<effects>>
 
-You are encouraged by the <<person>> to try some of the pieces. <<He>> seems to have a good eye, but <<he>> takes Avery's feedback no less important than yours. Soon the choice boils down to only three pieces.<br>
-"You look great in these, "Avery says." They suit your eyes. Do you have any favourites?"
+<<person>>【이가】 몇 가지를 착용해 보라고 권한다. <<He>>【은는】 안목이 좋아 보이지만, 에이버리의 의견도 당신의 의견 못지않게 중요하게 받아들인다. 곧 선택지는 세 점으로 좁혀진다.<br>
+"이것들 다 잘 어울리네." 에이버리가 말한다. "네 눈이랑 잘 맞아. 마음에 드는 게 있어?"
 
 <<if $eyeselect is "purple" or $eyeselect is "dark blue" or $eyeselect is "light blue" or $eyeselect is "green" or $eyeselect is "grey" or $eyeselect is "light grey" or $eyeselect is "lime green">>
 	<<set $worn.rings.accessory_colour to "silver">>
@@ -4830,40 +4830,40 @@ You are encouraged by the <<person>> to try some of the pieces. <<He>> seems to 
 <</if>>
 <br><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/3_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/opal_3.png">>
-<<link [[Choose 3ct Opal Ring|Mansion Return Shopping 5]]>><<ringswear 238>><</link>><br>
+<<link [[3캐럿 오팔 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 238>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/10_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/topaz_10.png">>
-<<link [[Choose 10ct Topaz Ring|Mansion Return Shopping 5]]>><<ringswear 172>><</link>><br>
+<<link [[10캐럿 토파즈 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 172>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/10_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/aquamarine_10.png">>
-<<link [[Choose 10ct Aquamarine Ring|Mansion Return Shopping 5]]>><<ringswear 170>><</link>><br>
+<<link [[10캐럿 아쿠아마린 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 170>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/7_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/black_diamond_7.png">>
-<<link [[Choose 7ct Black Diamond Ring|Mansion Return Shopping 5]]>><<ringswear 146>><</link>><br>
+<<link [[7캐럿 블랙 다이아몬드 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 146>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/5_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/morganite_5.png">>
-<<link [[Choose 5ct Morganite Ring|Mansion Return Shopping 5]]>><<ringswear 144>><</link>><br>
+<<link [[5캐럿 모거나이트 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 144>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/4_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/spinel_4.png">>
-<<link [[Choose 4ct Spinel Ring|Mansion Return Shopping 5]]>><<ringswear 133>><</link>><br>
+<<link [[4캐럿 스피넬 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 133>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/2-5_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/sapphire_2-5.png">>
-<<link [[Choose 2.5ct Sapphire Ring|Mansion Return Shopping 5]]>><<ringswear 109>><</link>><br>
+<<link [[2.5캐럿 사파이어 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 109>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/2_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/emerald_2.png">>
-<<link [[Choose 2ct Emerald Ring|Mansion Return Shopping 5]]>><<ringswear 98>><</link>><br>
+<<link [[2캐럿 에메랄드 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 98>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/2_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/ruby_2.png">>
-<<link [[Choose 2ct Ruby Ring|Mansion Return Shopping 5]]>><<ringswear 97>><</link>><br>
+<<link [[2캐럿 루비 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 97>><</link>><br>
 <span @style="_iconFilter"><<icon "clothes/jewellery/1-5_carat_ring_acc.png" "infront">></span><<icon "clothes/jewellery/diamond_1-5.png">>
-<<link [[Choose 1.5ct Diamond Ring|Mansion Return Shopping 5]]>><<ringswear 85>><</link>>
+<<link [[1.5캐럿 다이아몬드 반지를 고른다|Mansion Return Shopping 5]]>><<ringswear 85>><</link>>
 
 :: Mansion Return Shopping 5
 <<effects>>
 
-"Good choice. We'll take this one, " Avery points at the rings, and soon you and <<person1>><<him>> are leaving the beautique with a new ring on your finger.
+"좋은 선택이야. 이걸로 하지." 에이버리가 반지를 가리키고, 곧 당신과 <<person1>><<him>>【은는】 손가락에 새 반지를 낀 채 부티크를 나선다.
 <br><br>
-<<link [[Next|Mansion Return Shopping 6]]>><<pass 3>><</link>>
+<<link [[다음|Mansion Return Shopping 6]]>><<pass 3>><</link>>
 
 :: Mansion Return Shopping 6
 <<effects>>
 
-You walk back to the mansion with Avery. The gates rattle open.
+당신은 에이버리와 함께 저택으로 돌아간다. 문이 덜컹거리며 열린다.
 <br><br>
-"I hope you enjoyed it," Avery says, planting a kiss on your hand. "Now to relax."
+"즐거웠길 바라." 에이버리가 당신의 손에 입을 맞추며 말한다. "이제 좀 쉬어야겠군."
 <br><br>
 
-<<link [[Next|Mansion Garden]]>><<pass 2>><<clotheson>><<endevent>><</link>>
+<<link [[다음|Mansion Garden]]>><<pass 2>><<clotheson>><<endevent>><</link>>
 <br>

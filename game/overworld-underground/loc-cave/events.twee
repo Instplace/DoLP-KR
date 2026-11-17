@@ -172,11 +172,11 @@
 <<if $speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "polite">>
 	"제-제발 쳐다보지 마세요." 당신이 말한다.
 <<elseif $speech_attitude is "flamboyant">>
-	"Please don't stare," you say.
+	"제발 쳐다보지 마세요." 당신이 말한다.
 <<elseif $speech_attitude is "bratty">>
 	"눈 깔아." 당신이 말한다.
 <<elseif $speech_attitude is "confident">>
-	"Don't stare," you say.
+	"쳐다보지 마세요." 당신이 말한다.
 <<else>>
 	"쳐-쳐다보지 마세요." 당신이 말한다.
 <</if>>

@@ -227,12 +227,12 @@
 		<<run poppySchedule()>>
 		<<if C.npc.Poppy and C.npc.Poppy.init is 1 and !poppyDismissed() and Array.isArray($poppySeen) and $poppySeen.includes("talk_intro") and Time.isWeekEnd() and Time.hour gte 13 and Time.hour lt 15 and Array.isArray(T.poppyStatus) and !T.poppyStatus.includes("LowPatience")>>
 			<<if !$daily.poppy.cafeEat and !$daily.poppy.cafeRefuse>>
-				<br>You see Poppy sitting at one of the tables enjoying a stack of pancakes alone.
+				<br>당신은 포피가 탁자 하나에 혼자 앉아 팬케이크 한 무더기를 즐기고 있는 것을 본다.
 				<br>
-				<<socialiseicon "ask">><<link [[Approach <<nnpc_him 'Poppy'>>|Ocean Breeze Poppy]]>><</link>>
+				<<socialiseicon "ask">><<link [[포피에게 다가간다|Ocean Breeze Poppy]]>><</link>>
 				<br>
 			<<elseif $daily.poppy.cafeRefuse is true>>
-				<br><span class="black">Poppy is eating alone, better not to disturb <<nnpc_him 'Poppy'>>.</span><br>
+				<br><span class="black">포피는 혼자 먹고 있다. 방해하지 않는 편이 좋겠다.</span><br>
 			<</if>>
 		<</if>>
 	<</if>>
@@ -310,7 +310,7 @@
 	<</if>>
 	<<if $money gte 5000>>
 		<<foodicon "honeychallah">>
-		<<link [[Buy honey challah (0:20 £50)|Cafe Honey Challah]]>><<set $daily.cafeEaten to 1>><<transform bear 1>><<money -5000 "cafe">><<pass 20>><<stress -18>><</link>><<llstress>>
+		<<link [[꿀 할라를 산다 (0:20 £50)|Cafe Honey Challah]]>><<set $daily.cafeEaten to 1>><<transform bear 1>><<money -5000 "cafe">><<pass 20>><<stress -18>><</link>><<llstress>>
 		<br>
 	<</if>>
 	<<if $money gte 5000>>
@@ -518,7 +518,7 @@
 					그들은 계속해서 속삭이듯 대화한다. 당신은 두 사람이 이야기를 나누도록 내버려 둔다. 이야기가 끝날 무렵, 로빈은 더 행복해 보인다. <<npcincr Robin trauma -5>><<llrtrauma>>
 					<br><br>
 
-					The rest of the shift passes uneventfully. You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+					남은 근무 시간은 별일 없이 지나간다. <<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 				<<else>>
 					<<set $gwylanSeen.pushUnique("robin_cafe")>>
 					<<gwylanRobin 1 25>>
@@ -588,7 +588,7 @@
 					그 <<person2>><<personsimple>>【은는】 당신 쪽으로 걸어오며 비웃는다. "이 근처엔 공짜로 먹으려는 놈들뿐이야. 불쌍한 척 연기해서 동정심을 유발하려 할 테니, 속지 마." <<He>>【은는】 당신을 지나쳐 주방으로 들어간다.
 					<br><br>
 
-					Before you can say anything Sam calls you to clean up another table. The rest of the shift passes uneventfully. You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+					당신이 뭐라고 말하기도 전에 샘이 다른 테이블을 치우라고 부른다. 남은 근무 시간은 별일 없이 지나간다. <<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 					<br><br>
 
 					<<link [[다음|Ocean Breeze]]>><<pass 60>><<endevent>><</link>>
@@ -620,11 +620,11 @@
 					<<if $robinmoney gte 5>>
 						<<set $tip to 500>>
 						<<set $robinmoney -= 5>>
-						The rest of the shift passes uneventfully. Robin left you a tip. You earn <<printmoney 1700>>.
+						남은 근무 시간은 별일 없이 지나간다. 로빈이 당신에게 팁을 남겼다. <<printmoney 1700>>【을를】 벌었다.
 						<<silently>><<money 1200 "cafeWaiter">><<tipreceive "cafeWaiter">><</silently>>
 
 					<<else>>
-						The rest of the shift passes uneventfully. You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+						남은 근무 시간은 별일 없이 지나간다. <<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 
 					<</if>>
 					<br><br>
@@ -740,7 +740,7 @@
 					<<set $tip += 500>>
 					그윌란이 당신에게 팁을 남겼다. <<tipreceive "cafeWaiter">>
 				<<else>>
-					You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+					<<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 				<</if>>
 				<<pass 1 hour>>
 				<br><br>
@@ -1529,7 +1529,7 @@
 당신은 보이지 않는 뒷방으로 달려간다. <<clotheson>> 남은 근무 시간은 아무 일 없이 지나가지만, 당신이 춤추는 것을 본 많은 손님들이 당신을 힐끗거린다.
 <br><br>
 
-You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+<<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 
 <<set _pass to 5 * Math.clamp($timer, 0, 12)>>
 <<pass _pass>>
@@ -2905,7 +2905,7 @@ $worn.under_lower.name【을를】 벗고 문을 열어, 당신의 접시와 아
 	누군가 당신에게 팁을 남겼다.
 	<<tipreceive "cafeWaiter">><<pass 1 hour>>
 <<else>>
-	You earn <<money 1200 "cafeWaiter">><<printmoney 1200>>.
+	<<money 1200 "cafeWaiter">><<printmoney 1200>>【을를】 벌었다.
 	<<pass 1 hour>>
 <</if>>
 <br><br>
@@ -3038,30 +3038,30 @@ $worn.under_lower.name【을를】 벗고 문을 열어, 당신의 접시와 아
 <<else>>
 	당신은
 <</if>>
-take a seat and order a honey, advertised on the menu as "baked fresh daily." It soon arrives.
+자리에 앉아, 메뉴에 "매일 갓 구움"이라고 광고된 꿀 할라를 주문한다. 빵은 곧 나온다.
 <br><br>
 
-The challah is warm and golden, with a delicate sheen of honey glazing its braided surface. As you pull apart a piece, the soft, fluffy bread reveals its rich, slightly sweet aroma. Each bite melts in your mouth, leaving a lingering warmth that spreads through your body.
+할라는 따뜻한 황금빛이고, 땋은 표면에 꿀이 은은한 윤기로 입혀져 있다. 한 조각을 뜯자 보드랍고 폭신한 빵에서 진하고 살짝 달콤한 향이 피어오른다. 한 입 먹을 때마다 입안에서 녹아내리며, 온몸으로 퍼지는 따스함이 오래 남는다.
 <br><br>
 
-<<link [[That's enough|Ocean Breeze]]>><</link>>
+<<link [[그만 먹는다|Ocean Breeze]]>><</link>>
 <br>
-<<link [[Lick the plate clean|Cafe Honey Lick]]>><<transform bear 1>><<stress -6>><</link>><<lstress>>
+<<link [[접시를 핥아 깨끗이 먹는다|Cafe Honey Lick]]>><<transform bear 1>><<stress -6>><</link>><<lstress>>
 <br>
 
 :: Cafe Honey Lick
 <<set $outside to 0>><<set $location to "cafe">><<effects>>
 
-You lift the plate and lap the honey off it directly.
+당신은 접시를 들어 올려 꿀을 직접 핥아 먹는다.
 
 <<set $danger to random(1, 10000)>><<set $dangerevent to 0>>
 <<if $danger gte (9900 - $allure)>>
 	<<generate1>><<person1>><<person>>【이가】 당신을 쳐다보는 것을 발견한다. <<his>> 숟가락이 <<his>> 입으로 가는 도중에 멈춰 있다.
 	<br><br>
 
-	<<link [[Show off|Cafe Honey Show]]>><</link>><<exhibitionist1>>
+	<<link [[과시한다|Cafe Honey Show]]>><</link>><<exhibitionist1>>
 	<br>
-	<<link [[Ignore|Cafe Honey Ignore]]>><</link>>
+	<<link [[무시한다|Cafe Honey Ignore]]>><</link>>
 	<br>
 
 <<else>>
@@ -3077,7 +3077,7 @@ You lift the plate and lap the honey off it directly.
 
 <<set $outside to 0>><<set $location to "cafe">><<effects>>
 그 <<person>>【와과】 눈을 마주치지만, 접시 핥는 것을 멈추지 않는다.
-You slow your pace and exaggerate your movements, letting <<him>> see the honey on your tongue from each lick before you take it into your mouth.
+속도를 늦추고 동작을 과장하며, <<he>>【이가】 핥을 때마다 혀에 묻은 꿀을 보고 나서야 입안으로 가져간다.
 황홀경에 빠진 척 눈을 반쯤 감고 접시가 완전히 깨끗해질 때까지 계속 핥는다.
 <<exhibitionism1>>
 만족하며 등을 기댄다. 그 <<person>>【은는】 얼굴이 새빨개진 채 시선을 돌린다.

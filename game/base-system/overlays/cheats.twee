@@ -17,9 +17,9 @@
 	<<set _type to _args[0]>>
 	<<set _id to `stats${_type}virginity`>>
 	<<capture _type _id>>
-		<span @id="_id"><<= ($player.virginity[_type] is true ? "Present" : "Taken by " + ($player.virginity[_type] is false ? "Frostberg" : $player.virginity[_type]))>></span> |
+		<span @id="_id"><<= ($player.virginity[_type] is true ? "보존됨" : "상실됨: " + ($player.virginity[_type] is false ? "프로스트버그" : ($player.virginity[_type] is "unknown" ? "알 수 없음" : window.KR.gatPersonNameDictKR($player.virginity[_type]))))>></span> |
 		
-		<span @id="_id + 'link'"><<link `($player.virginity[_type] is true ? "Take" : "Restore")`>>
+		<span @id="_id + 'link'"><<link `($player.virginity[_type] is true ? "상실 처리" : "복구")`>>
 			<<if $player.virginity[_type] is true>>
 
 				/* Auto-assign for penile */
@@ -28,8 +28,8 @@
 					<<if $player.virginity.temple isnot false and ["penile","vaginal"].includes(_type)>>
 						<<set $player.virginity.temple to "unknown">>
 					<</if>>
-					<<run $(`#${_id}link .link-internal`).html("Restore")>>
-					<<run $(`#${_id}`).html("Taken by unknown")>>
+					<<run $(`#${_id}link .link-internal`).html("복구")>>
+					<<run $(`#${_id}`).html("상실됨: 알 수 없음")>>
 
 				<<else>>
 					/* Close any other open choosers globally */
@@ -38,24 +38,24 @@
 					/* Build selector as a plain string and use it */
 					<<set _sel to "#" + _id + "chooser">>
 					<<replace _sel>>
-						Choose taker:
-						<<link "Frostberg">>
+						상대 선택:
+						<<link "프로스트버그">>
 							<<set $player.virginity[_type] to false>>
 							<<if $player.virginity.temple isnot false and ["penile","vaginal"].includes(_type)>>
 								<<set $player.virginity.temple to "Frostberg">>
 							<</if>>
-							<<run $(`#${_id}link .link-internal`).html("Restore")>>
-							<<run $(`#${_id}`).html("Taken by Frostberg")>>
+							<<run $(`#${_id}link .link-internal`).html("복구")>>
+							<<run $(`#${_id}`).html("상실됨: 프로스트버그")>>
 							<<set _sel to "#" + _id + "chooser">>
 							<<replace _sel>><</replace>>
 						<</link>> ·
-						<<link "Unknown">>
+						<<link "불명">>
 							<<set $player.virginity[_type] to "unknown">>
 							<<if $player.virginity.temple isnot false and ["penile","vaginal"].includes(_type)>>
 								<<set $player.virginity.temple to "unknown">>
 							<</if>>
-							<<run $(`#${_id}link .link-internal`).html("Restore")>>
-							<<run $(`#${_id}`).html("Taken by unknown")>>
+							<<run $(`#${_id}link .link-internal`).html("복구")>>
+							<<run $(`#${_id}`).html("상실됨: 알 수 없음")>>
 							<<set _sel to "#" + _id + "chooser">>
 							<<replace _sel>><</replace>>
 						<</link>>
@@ -68,8 +68,8 @@
 				<<if $player.virginity.temple isnot false and ["penile","vaginal"].includes(_type)>>
 					<<set $player.virginity.temple to true>>
 				<</if>>
-				<<run $(`#${_id}link .link-internal`).html("Take")>>
-				<<run $(`#${_id}`).html("Present")>>
+				<<run $(`#${_id}link .link-internal`).html("상실 처리")>>
+				<<run $(`#${_id}`).html("보존됨")>>
 				<<set _sel to "#" + _id + "chooser">>
 				<<replace _sel>><</replace>>
 			<</if>>
@@ -182,7 +182,7 @@
 				<<link "<<<">><<set $money -= 100000>><<set $moneyStats.cheats.earned -= 100000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>> |
 				<<link "<<">><<set $money -= 10000>><<set $moneyStats.cheats.earned -= 10000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>> |
 				<<link "<">><<set $money -= 1000>><<set $moneyStats.cheats.earned -= 1000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>> |
-				Money: <span id="statsmoney"><<print Math.trunc($money)>></span>
+				돈: <span id="statsmoney"><<print Math.trunc($money)>></span>
 				| <<link ">">><<set $money += 1000>><<set $moneyStats.cheats.earned += 1000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>>
 				| <<link ">>">><<set $money += 10000>><<set $moneyStats.cheats.earned += 10000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>>
 				| <<link ">>>">><<set $money += 100000>><<set $moneyStats.cheats.earned += 100000>><<clamp>><<replace "#statsmoney">><<print Math.trunc($money)>><</replace>><</link>>
@@ -375,12 +375,12 @@
 		</div>
 		<div class="settingsToggleItemWide">
 			<<if $godClothes is 0>>
-				<<link [[Enable Auto Repair|$passage]]>><<set $godClothes to 1>><</link>>
+				<<link [[자동 수리 활성화|$passage]]>><<set $godClothes to 1>><</link>>
 			<<elseif $godClothes is 1>>
-				<<link [[Disable Auto Repair|$passage]]>><<set $godClothes to 0>><</link>>
+				<<link [[자동 수리 비활성화|$passage]]>><<set $godClothes to 0>><</link>>
 			<</if>>
 			<br>
-			<span class="description">Clothing is still breakable, this feature only repairs your clothes integrity every ingame second that passes.</span>
+			<span class="description">의상은 여전히 망가질 수 있으며, 이 기능은 게임 내 1초가 지날 때마다 의상 내구도만 복구합니다.</span>
 			<br>
 		</div>
 		<<set _cl_slots to ["upper", "lower", "under_upper", "under_lower", "over_upper", "over_lower", "genitals"]>>
@@ -752,7 +752,7 @@
 
 		<div class="settingsToggleItem">
 			<<set _hypnosis to ["scream", "cover", "deviancy"]>>
-			<span class="gold">Hypnosis Traits</span>
+			<span class="gold">최면 특성</span>
 			<br>
 			<<link "모두 0으로 설정">>
 				<<for _i range _hypnosis>>
@@ -1072,43 +1072,43 @@
             피부색
         </div>
         <div class="settingsToggleItem">
-            <span class="gold">Neutral:</span><br>
-            <<link [[Light|$passage]]>><<set $player.skin.color to "light">><</link>> |
-            <<link [[Medium|$passage]]>><<set $player.skin.color to "medium">><</link>> |
-            <<link [[Dark|$passage]]>><<set $player.skin.color to "dark">><</link>> |
-            <<link [[Gyaru|$passage]]>><<set $player.skin.color to "gyaru">><</link>>
+            <span class="gold">뉴트럴:</span><br>
+            <<link [[밝은|$passage]]>><<set $player.skin.color to "light">><</link>> |
+            <<link [[중간|$passage]]>><<set $player.skin.color to "medium">><</link>> |
+            <<link [[어두운|$passage]]>><<set $player.skin.color to "dark">><</link>> |
+            <<link [[갸루|$passage]]>><<set $player.skin.color to "gyaru">><</link>>
         </div>
         <div class="settingsToggleItem">
-            <span class="gold">Warm:</span><br>
-            <<link [[Light|$passage]]>><<set $player.skin.color to "rlight">><</link>> |
-            <<link [[Medium|$passage]]>><<set $player.skin.color to "rmedium">><</link>> |
-            <<link [[Dark|$passage]]>><<set $player.skin.color to "rdark">><</link>> |
-            <<link [[Gyaru|$passage]]>><<set $player.skin.color to "rgyaru">><</link>>
+            <span class="gold">웜:</span><br>
+            <<link [[밝은|$passage]]>><<set $player.skin.color to "rlight">><</link>> |
+            <<link [[중간|$passage]]>><<set $player.skin.color to "rmedium">><</link>> |
+            <<link [[어두운|$passage]]>><<set $player.skin.color to "rdark">><</link>> |
+            <<link [[갸루|$passage]]>><<set $player.skin.color to "rgyaru">><</link>>
         </div>
         <div class="settingsToggleItem">
-            <span class="gold">Golden:</span><br>
-            <<link [[Light|$passage]]>><<set $player.skin.color to "glight">><</link>> |
-            <<link [[Medium|$passage]]>><<set $player.skin.color to "gmedium">><</link>> |
-            <<link [[Dark|$passage]]>><<set $player.skin.color to "gdark">><</link>> |
-            <<link [[Gyaru|$passage]]>><<set $player.skin.color to "ggyaru">><</link>>
+            <span class="gold">골든:</span><br>
+            <<link [[밝은|$passage]]>><<set $player.skin.color to "glight">><</link>> |
+            <<link [[중간|$passage]]>><<set $player.skin.color to "gmedium">><</link>> |
+            <<link [[어두운|$passage]]>><<set $player.skin.color to "gdark">><</link>> |
+            <<link [[갸루|$passage]]>><<set $player.skin.color to "ggyaru">><</link>>
         </div>
         <div class="settingsToggleItem">
-            <span class="gold">Olive:</span><br>
-            <<link [[Light|$passage]]>><<set $player.skin.color to "ylight">><</link>> |
-			<<link [[Medium|$passage]]>><<set $player.skin.color to "ymedium">><</link>> |
-            <<link [[Dark|$passage]]>><<set $player.skin.color to "ydark">><</link>> |
-            <<link [[Gyaru|$passage]]>><<set $player.skin.color to "ygyaru">><</link>>
+            <span class="gold">올리브:</span><br>
+            <<link [[밝은|$passage]]>><<set $player.skin.color to "ylight">><</link>> |
+			<<link [[중간|$passage]]>><<set $player.skin.color to "ymedium">><</link>> |
+            <<link [[어두운|$passage]]>><<set $player.skin.color to "ydark">><</link>> |
+            <<link [[갸루|$passage]]>><<set $player.skin.color to "ygyaru">><</link>>
         </div>
         <div class="settingsToggleItem">
-            <span class="gold">Cool:</span><br>
-            <<link [[Light|$passage]]>><<set $player.skin.color to "blight">><</link>> |
-            <<link [[Medium|$passage]]>><<set $player.skin.color to "bmedium">><</link>> |
-            <<link [[Dark|$passage]]>><<set $player.skin.color to "bdark">><</link>> |
-            <<link [[Gyaru|$passage]]>><<set $player.skin.color to "bgyaru">><</link>>
+            <span class="gold">쿨:</span><br>
+            <<link [[밝은|$passage]]>><<set $player.skin.color to "blight">><</link>> |
+            <<link [[중간|$passage]]>><<set $player.skin.color to "bmedium">><</link>> |
+            <<link [[어두운|$passage]]>><<set $player.skin.color to "bdark">><</link>> |
+            <<link [[갸루|$passage]]>><<set $player.skin.color to "bgyaru">><</link>>
         </div>
 		<<set _tan to Skin.totalTan>>
 		<div class="numberslider-inline">
-			<label><span class="gold">Initial tan:</span>
+			<label><span class="gold">초기 태닝:</span>
 			<<numberslider "_tan" _tan 0 100 1 {
 				onInputChange: value => {
 					Skin.color.setTan(value);
@@ -1335,16 +1335,16 @@
 			<br>
 			<<tficon "angel">>천사: <<link "설정">><<clearDivineTransformations>><<angelTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<angelTransform 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "fallenangel">>타락 천사: <<link "설정">><<clearDivineTransformations>><<set $specialTransform to 1>>
-			<<set $fallenangel to 2>><<set $fallenangeltf to 1>><<set $transformationParts.fallenAngel.halo to ($transformationParts.angel.halo is "traditional" ? "traditional" : "default")>><<set $transformationParts.fallenAngel.wings to ($transformationParts.angel.wings is "classic" ? "classic" : "default")>><<updatesidebarimg>><</link>> | <<link "Clear">><<fallenButNotOut 99>><<updatesidebarimg>><</link>><br>
+			<<set $fallenangel to 2>><<set $fallenangeltf to 1>><<set $transformationParts.fallenAngel.halo to ($transformationParts.angel.halo is "traditional" ? "traditional" : "default")>><<set $transformationParts.fallenAngel.wings to ($transformationParts.angel.wings is "classic" ? "classic" : "default")>><<updatesidebarimg>><</link>> | <<link "해제">><<fallenButNotOut 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "demon">>악마: <<link "설정">><<clearDivineTransformations>><<demonTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<demonTransform 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "wolf">>늑대: <<link "설정">><<clearAnimalTransformations>><<wolfTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<wolfTransform 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "cat">>고양이: <<link "설정">><<clearAnimalTransformations>><<catTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<catTransform 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "cow">>젖소: <<link "설정">><<clearAnimalTransformations>><<cowTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<cowTransform 99>><<updatesidebarimg>><</link>><br>
 			<<tficon "bird">>새: <<link "설정">><<clearAnimalTransformations>><<harpyTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<harpyTransform 99>><<updatesidebarimg>><</link>><br>
-			<<tficon "fox">>Fox: <<link "Set">><<clearAnimalTransformations>><<foxTransform>><<updatesidebarimg>><</link>> | <<link "Clear">><<foxTransform 99>><<updatesidebarimg>><</link>><br>
-			<<tficon "bear">>Bear: <<link "Set">><<clearAnimalTransformations>><<bearTransform>><<updatesidebarimg>><</link>> / <<link "Clear">><<bearTransform 99>><<updatesidebarimg>><</link>><br>
-			<<icon "tf_waterdragon.png">>Water Dragon: <<link "Set">><<clearAnimalTransformations>><<waterdragonTransform>><<updatesidebarimg>><</link>> / <<link "Clear">><<waterdragonTransform 99>><<updatesidebarimg>><</link>><br>
-			<<tficon "bunny">>Bunny: <<link "Set">><<clearAnimalTransformations>><<bunnyTransform>><<updatesidebarimg>><</link>> / <<link "Clear">><<bunnyTransform 99>><<updatesidebarimg>><</link>><br>
+			<<tficon "fox">>여우: <<link "설정">><<clearAnimalTransformations>><<foxTransform>><<updatesidebarimg>><</link>> | <<link "해제">><<foxTransform 99>><<updatesidebarimg>><</link>><br>
+			<<tficon "bear">>곰: <<link "설정">><<clearAnimalTransformations>><<bearTransform>><<updatesidebarimg>><</link>> / <<link "해제">><<bearTransform 99>><<updatesidebarimg>><</link>><br>
+			<<icon "tf_waterdragon.png">>수룡: <<link "설정">><<clearAnimalTransformations>><<waterdragonTransform>><<updatesidebarimg>><</link>> / <<link "해제">><<waterdragonTransform 99>><<updatesidebarimg>><</link>><br>
+			<<tficon "bunny">>토끼: <<link "설정">><<clearAnimalTransformations>><<bunnyTransform>><<updatesidebarimg>><</link>> / <<link "해제">><<bunnyTransform 99>><<updatesidebarimg>><</link>><br>
 		</div>
 	<div class="settingsToggleItem">
 		<span class="gold">변신 포인트</span>
@@ -1413,9 +1413,9 @@
 			<<numberStepper "<<symbol lust>> 욕정" `C.npc.Whitney.lust` { callback: value => { C.npc.Whitney.lust = value } }>>
 			<<numberStepper "<<symbol dominance>> 지배욕" `C.npc.Whitney.dom` { callback: value => { C.npc.Whitney.dom = value }, max: 20 }>>
 			<<if C.npc.Whitney.state is "dungeon" and $bullyevent gte 1 or C.npc.Whitney.state is "pillory" and $bullyevent gte 1>>
-			<<link [[Reclaim Whitney|$passage]]>><<reclaimWhitney>><</link>>
+			<<link [[휘트니를 복귀시킨다|$passage]]>><<reclaimWhitney>><</link>>
 			<<elseif $bullyevent gte 1 and C.npc.Whitney.state isnot "dungeon" and C.npc.Whitney.state isnot "pillory">>
-			<<link [[Dismiss Whitney|$passage]]>><<dismissWhitney>><</link>>
+			<<link [[휘트니를 퇴장시킨다|$passage]]>><<dismissWhitney>><</link>>
 			<</if>>
 		</div>
 		<div class="settingsToggleItem">
@@ -1431,14 +1431,14 @@
 			<<numberStepper "<<symbol jealousy>> 질투" `C.npc.Kylar.rage` { callback: value => { C.npc.Kylar.rage = value }, reverse: true }>>
 			<br>
 			<<if $kylar_mad isnot 1>>
-				<<link [[Enable Kidnapping|$passage]]>><<set $kylar_mad to 1>><</link>>
+				<<link [[납치 활성화|$passage]]>><<set $kylar_mad to 1>><</link>>
 			<<elseif $kylar_mad is 1>>
-				<<link [[Disable Kidnapping|$passage]]>><<set $kylar_mad to 0>><</link>>
+				<<link [[납치 비활성화|$passage]]>><<set $kylar_mad to 0>><</link>>
 			<</if>>
 			<<if C.npc.Kylar.state is "prison">>
-				<<link [[Reclaim Kylar|$passage]]>><<reclaimKylar>><</link>>
+				<<link [[카일라를 복귀시킨다|$passage]]>><<reclaimKylar>><</link>>
 			<<elseif C.npc.Kylar.state is "active">>
-				<<link [[Dismiss Kylar|$passage]]>><<dismissKylar>><</link>>
+				<<link [[카일라를 퇴장시킨다|$passage]]>><<dismissKylar>><</link>>
 			<</if>>
 		</div>
 		<div class="settingsToggleItem">
@@ -1449,26 +1449,26 @@
 			<br>
 			<<if !$avery_mansion>>
 				<<if C.npc.Avery.state is "dismissed">>
-					<<link [[Reclaim Avery|$passage]]>><<unDismissAvery>><</link>>
+					<<link [[에이버리를 복귀시킨다|$passage]]>><<unDismissAvery>><</link>>
 				<<elseif C.npc.Avery.state is "active">>
-					<<link [[Dismiss Avery|$passage]]>><<dismissAvery>><</link>>
+					<<link [[에이버리를 퇴장시킨다|$passage]]>><<dismissAvery>><</link>>
 				<</if>>
 			<<elseif $avery_fate is undefined>>
-				Avery cannot be dismissed at the moment.
+				지금은 에이버리를 퇴장시킬 수 없습니다.
 			<<else>>
-				Avery is currently <<print $avery_fate>>
+				에이버리의 현재 상태: <<print $avery_fate>>
 				<br>
-				<<linkreplace `(C.npc.Avery.state is "dismissed" ? "Reclaim Avery" : "Fell Avery")`>>
+				<<linkreplace `(C.npc.Avery.state is "dismissed" ? "에이버리를 복귀시킨다" : "에이버리를 몰락시킨다")`>>
 					<<if C.npc.Avery.state is "dismissed">>
-						Choose Avery's fate:
+						에이버리의 운명을 고르십시오:
 						<br>
 
-						<<link [[Rescue Avery|$passage]]>>
+						<<link [[에이버리를 구한다|$passage]]>>
 							<<set $avery_fate to "saved">>
 							<<unDismissAvery>>
-						<</link>> | This will <span class="lblue">give you the Avery's Saviour Trait.</span>
+						<</link>> | 이 선택은 <span class="lblue">'에이버리의 구원자' 특성을 부여합니다.</span>
 						<br>
-						<<link [[Ascend Avery|$passage]]>>
+						<<link [[에이버리를 승천시킨다|$passage]]>>
 							<<set $avery_fate to "ascended">>
 							<<set C.npc.Avery.title to "crimson hound">>
 							<<set C.npc.Harper.title to "silver fox">>
@@ -1479,15 +1479,15 @@
 							<<set $auriga_scar++>>
 							<<unDismissAvery>>
 						<</link>>
-						| This will<<if $auriga_scar is undefined or $auriga_scar lte 0>> <span class="red">give you the Elk-scarred Trait.</span><<else>> <span class="red">worsen your Elk Trait.</span><</if>>
+						| 이 선택은<<if $auriga_scar is undefined or $auriga_scar lte 0>> <span class="red">'엘크의 흉터' 특성을 부여합니다.</span><<else>> <span class="red">엘크 특성을 악화시킵니다.</span><</if>>
 
 						<<if $avery_mansion_fire_time gte 1>>
 							<<set $avery_mansion_fire_time to 0>>
 						<</if>>
 					<<else>>
-						Choose Avery's fate:
+						에이버리의 운명을 고르십시오:
 						<br>
-						<<link [[Let Avery fall|$passage]]>>
+						<<link [[에이버리를 타락하게 둔다|$passage]]>>
 							<<set _previousAveryFate to $avery_fate>>
 							<<set $avery_fate to "fallen">>
 							<<if _previousAveryFate is "saved" and $avery_injury isnot undefined>>
@@ -1504,13 +1504,13 @@
 						<</link>>
 
 						<<if $avery_fate is "ascended" and $auriga_scar isnot undefined and $auriga_scar gte 1>>
-							| This will<<if $auriga_scar is 1>> <span class="lblue">remove your Elk-scarred Trait.</span><<else>> <span class="lblue">weaken your Elk Trait.</span><</if>>
+							| 이 선택은<<if $auriga_scar is 1>> <span class="lblue">'엘크의 흉터' 특성을 제거합니다.</span><<else>> <span class="lblue">엘크 특성을 약화시킵니다.</span><</if>>
 						<</if>>
 						<<if $avery_fate is "saved">>
-							| This will <span class="red">remove your Avery's Saviour Trait.</span>
+							| 이 선택은 <span class="red">'에이버리의 구원자' 특성을 제거합니다.</span>
 						<</if>>
 						<br>
-						<<link [[Kick Avery|$passage]]>>
+						<<link [[에이버리를 쫓아낸다|$passage]]>>
 							<<set _previousAveryFate to $avery_fate>>
 							<<set $avery_fate to "kicked">>
 							<<if _previousAveryFate is "saved" and $avery_injury isnot undefined>>
@@ -1527,10 +1527,10 @@
 						<</link>>
 
 						<<if $avery_fate is "ascended" and $auriga_scar isnot undefined and $auriga_scar gte 1>>
-							| This will<<if $auriga_scar is 1>> <span class="lblue">remove your Elk-scarred Trait.</span><<else>> <span class="lblue">weaken your Elk Trait.</span><</if>>
+							| 이 선택은<<if $auriga_scar is 1>> <span class="lblue">'엘크의 흉터' 특성을 제거합니다.</span><<else>> <span class="lblue">엘크 특성을 약화시킵니다.</span><</if>>
 						<</if>>
 						<<if $avery_fate is "rescued">>
-							| This will <span class="red">remove your Avery's Saviour Trait.</span>
+							| 이 선택은 <span class="red">'에이버리의 구원자' 특성을 제거합니다.</span>
 						<</if>>
 					<</if>>
 				<</linkreplace>>
@@ -1565,9 +1565,9 @@
 			</span>
 		</div>
 		<<if modLISelected("Poppy")>><div class="settingsToggleItem">
-			<span class="gold">Poppy</span>
-			<<numberStepper "<<symbol love>> Love" `C.npc.Poppy.love` { callback: value => { C.npc.Poppy.love = value }, max: 100 }>>
-			<<numberStepper "<<symbol lust>> Lust" `C.npc.Poppy.lust` { callback: value => { C.npc.Poppy.lust = value }, max: 100 }>>
+			<span class="gold">포피</span>
+			<<numberStepper "<<symbol love>> 애정" `C.npc.Poppy.love` { callback: value => { C.npc.Poppy.love = value }, max: 100 }>>
+			<<numberStepper "<<symbol lust>> 욕정" `C.npc.Poppy.lust` { callback: value => { C.npc.Poppy.lust = value }, max: 100 }>>
 
 			<span id="poppytemper"><<poppyTemper>></span>
 			<span id="poppydesc" class="description"><<poppyTemperDesc>></span>
@@ -1616,22 +1616,22 @@
 			<<numberStepper "<<symbol love>> 레미 <<print setup.loveAlias.Remy()>>" `C.npc.Remy.love` { callback: value => { C.npc.Remy.love = value } }>>
 			<<numberStepper "<<symbol love>> 샘 <<print setup.loveAlias.Sam()>>" `C.npc.Sam.love` { callback: value => { C.npc.Sam.love = value }, max: 50 }>>
 			<<numberStepper "<<symbol love>> 렌 <<print setup.loveAlias.Wren()>>" `C.npc.Wren.love` { callback: value => { C.npc.Wren.love = value }, max: 50 }>>
-			<<numberStepper "<<symbol love>> Riley <<print setup.loveAlias.Riley()>>" `C.npc.Riley.love` { callback: value => { C.npc.Riley.love = value }, max: 50 }>>
+			<<numberStepper "<<symbol love>> 라일리 <<print setup.loveAlias.Riley()>>" `C.npc.Riley.love` { callback: value => { C.npc.Riley.love = value }, max: 50 }>>
 		</div>
 	</div>
 	<hr>
 	<div class="settingsGrid">
-		<div class="settingsHeader options">Hopeless Cycle Setting</div>
+		<div class="settingsHeader options">희망 없는 순환 설정</div>
 		<div class="settingsToggleItem">
-			<span class="gold">Suspicion and Loved</span>
+			<span class="gold">의심과 사랑받음</span>
 			<br>
-			<<link [[set loved to true|$passage]]>><<set $hc.loved to true>><</link>>
+			<<link [[사랑받음을 켠다|$passage]]>><<set $hc.loved to true>><</link>>
 			<br>
-			<<link [[set loved to false|$passage]]>><<set $hc.loved to false>><</link>>
+			<<link [[사랑받음을 끈다|$passage]]>><<set $hc.loved to false>><</link>>
 			<br>
-			<<link [[Reset suspicion level|$passage]]>><<set $_susPlus to 1>><<set $hc.suspicion to 0>><</link>>
+			<<link [[의심 수준을 초기화한다|$passage]]>><<set $_susPlus to 1>><<set $hc.suspicion to 0>><</link>>
 			<br>
-			<<link [[Max suspicion level|$passage]]>><<set $hc.suspicion to 100>><</link>>
+			<<link [[의심 수준을 최대로 올린다|$passage]]>><<set $hc.suspicion to 100>><</link>>
 		</div>
 	</div>
 		<hr>
@@ -1696,9 +1696,9 @@
 					<<policeicon>><span class="gold">감옥</span>
 					<<numberStepper "경비원" $prison.guards { callback: value => { V.prison.guards = value } }>>
 					<<numberStepper "수감자" $prison.inmates { callback: value => { V.prison.inmates = value } }>>
-					<<numberStepper "Inmates Hope" $prison.hope { callback: value => { V.prison.hope = value } }>>
-					<<numberStepper "Inmates Rebellion" $prison.reb { callback: value => { V.prison.reb = value } }>>
-					<<numberStepper "Watchers Friendship" $prison.watchers_friend { callback: value => { V.prison.watchers_friend = value } }>>
+					<<numberStepper "수감자 희망" $prison.hope { callback: value => { V.prison.hope = value } }>>
+					<<numberStepper "수감자 반란" $prison.reb { callback: value => { V.prison.reb = value } }>>
+					<<numberStepper "감시자 우호도" $prison.watchers_friend { callback: value => { V.prison.watchers_friend = value } }>>
 				<</if>>
 			</div>
 		<</if>>
@@ -1824,39 +1824,39 @@
 			<<elseif $farm.waterField is 1 and !$farm.build_finished.includes("water field 2")>>
 				<<set _clearing to (1200 - $farm.clearing)>>
 				<<set _percent=Math.floor((_clearing/1200)*100)>>
-				The water field is being excavated and shaped,
+				수경지를 굴착하고 모양을 잡는 중입니다.
 				<<if $farm.clearing lte 0>>
-					<span class="green">and is ready for the next phase!</span>
+					<span class="green">다음 단계로 넘어갈 준비가 되었습니다!</span>
 					<div class="meter">
 					<<print '<div class="greenbar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<elseif $farm.clearing lte 240>>
-					<span class="teal">and is almost fully excavated.</span>
+					<span class="teal">거의 다 파냈습니다.</span>
 					<div class="meter">
 					<<print '<div class="tealbar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<elseif $farm.clearing lte 480>>
-					<span class="lblue">and significant progress has been made.</span>
+					<span class="lblue">상당한 진전이 있었습니다.</span>
 					<div class="meter">
 					<<print '<div class="lbluebar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<elseif $farm.clearing lte 720>>
-					<span class="blue">and the digging is well underway.</span>
+					<span class="blue">굴착이 한창 진행 중입니다.</span>
 					<div class="meter">
 					<<print '<div class="bluebar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<elseif $farm.clearing lte 960>>
-					<span class="purple">but there's still much earth to move.</span>
+					<span class="purple">하지만 아직 옮겨야 할 흙이 많습니다.</span>
 					<div class="meter">
 					<<print '<div class="purplebar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<elseif $farm.clearing lte 1199>>
-					<span class="pink">but progress is slow.</span>
+					<span class="pink">하지만 진행이 더딥니다.</span>
 					<div class="meter">
 					<<print '<div class="pinkbar" style="width:' + _percent + '%"></div>'>>
 					</div>
 				<<else>>
-					<span class="red">but the site remains untouched.</span>
+					<span class="red">하지만 현장은 아직 손도 대지 않았습니다.</span>
 					<div class="meter">
 					<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
 					</div>
@@ -1998,31 +1998,31 @@
 				<hr>
 				<span class="gold">도시 가</span>
 				<br>
-				<u>Forest</u><br>
-				<<foresticon>><<link [[Forest Outskirts|Forest]]>><<set $forest = 0>><<cheats-teleport-function>><</link>><br>
-				<<foresticon>><<link [[Forest Sparse|Forest]]>><<set $forest = 20>><<cheats-teleport-function>><</link>><br>
-				<<foresticon>><<link [[Forest Lake|Forest]]>><<set $forest = 50>><<cheats-teleport-function>><</link>><br>
-				<<foresticon>><<link [[Forest Deep|Forest]]>><<set $forest = 99>><<cheats-teleport-function>><</link>><br>
+				<u>숲</u><br>
+				<<foresticon>><<link [[숲 외곽|Forest]]>><<set $forest = 0>><<cheats-teleport-function>><</link>><br>
+				<<foresticon>><<link [[성긴 숲|Forest]]>><<set $forest = 20>><<cheats-teleport-function>><</link>><br>
+				<<foresticon>><<link [[숲속 호수|Forest]]>><<set $forest = 50>><<cheats-teleport-function>><</link>><br>
+				<<foresticon>><<link [[깊은 숲|Forest]]>><<set $forest = 99>><<cheats-teleport-function>><</link>><br>
 				<br>
-				<u>Forest Lake Locations</u><br>
-				<<lakeicon>><<link [[Forest Lake: Shore|Lake Shore]]>><<cheats-teleport-function>><</link>><br>
-				<<lakeicon>><<link [[Forest Lake Firepit|Lake Firepit]]>><<cheats-teleport-function>><</link>><br>
-				<<lakeicon>><<link [[Forest Lake Waterfall|Lake Waterfall]]>><<cheats-teleport-function>><</link>><br>
-				<<lakeicon>><<link [[Forest Lake Fishing Rock|Lake Fishing Rock]]>><<cheats-teleport-function>><</link>><br>
-				<<lakeicon>><<link [[Forest Lake Campsite|Lake Campsite]]>><<cheats-teleport-function>><</link>><br>
+				<u>호수 지역</u><br>
+				<<lakeicon>><<link [[호수: 물가|Lake Shore]]>><<cheats-teleport-function>><</link>><br>
+				<<lakeicon>><<link [[호수: 모닥불 터|Lake Firepit]]>><<cheats-teleport-function>><</link>><br>
+				<<lakeicon>><<link [[호수: 폭포|Lake Waterfall]]>><<cheats-teleport-function>><</link>><br>
+				<<lakeicon>><<link [[호수: 낚시 바위|Lake Fishing Rock]]>><<cheats-teleport-function>><</link>><br>
+				<<lakeicon>><<link [[호수: 캠프장|Lake Campsite]]>><<cheats-teleport-function>><</link>><br>
 				<br>
-				<u>Plains</u><br>
-				<<farmicon "barn">><<link [[Farmland|Farmland]]>><<cheats-teleport-function>><</link>><br>
-				<<farmicon "meadow">><<link [[Meadow|Meadow]]>><<cheats-teleport-function>><</link>><br>
-				<<farmicon "horse">><<link [[Riding School|Riding School]]>><<cheats-teleport-function>><</link>><br>
-				<<mooricon "remy">><<link [[Remy's Estate (Gate)|Estate]]>><<estate_init gate>><<cheats-teleport-function>><</link>><br>
-				<<getinicon>><<link [[Remy's Estate (Secret)|Estate]]>><<estate_init secret>><<cheats-teleport-function>><</link>><br>
+				<u>평원</u><br>
+				<<farmicon "barn">><<link [[농지|Farmland]]>><<cheats-teleport-function>><</link>><br>
+				<<farmicon "meadow">><<link [[초원|Meadow]]>><<cheats-teleport-function>><</link>><br>
+				<<farmicon "horse">><<link [[승마 학교|Riding School]]>><<cheats-teleport-function>><</link>><br>
+				<<mooricon "remy">><<link [[레미 저택 (정문)|Estate]]>><<estate_init gate>><<cheats-teleport-function>><</link>><br>
+				<<getinicon>><<link [[레미 저택 (비밀 입구)|Estate]]>><<estate_init secret>><<cheats-teleport-function>><</link>><br>
 				<br>
-				<u>Moor</u><br>
-				<<mooricon>><<link [[Moor Plains|Moor]]>><<set $moor = 1>><<cheats-teleport-function>><</link>><br>
-				<<mooricon>><<link [[Moor Rocky|Moor]]>><<set $moor = 21>><<cheats-teleport-function>><</link>><br>
-				<<mooricon>><<link [[Moor Bubbles|Moor]]>><<set $moor = 51>><<cheats-teleport-function>><</link>><br>
-				<<mooricon>><<link [[Moor Castle|Moor]]>><<set $moor = 100>><<cheats-teleport-function>><</link>><br>
+				<u>황야</u><br>
+				<<mooricon>><<link [[황야: 평원|Moor]]>><<set $moor = 1>><<cheats-teleport-function>><</link>><br>
+				<<mooricon>><<link [[황야: 바위 지대|Moor]]>><<set $moor = 21>><<cheats-teleport-function>><</link>><br>
+				<<mooricon>><<link [[황야: 거품 지대|Moor]]>><<set $moor = 51>><<cheats-teleport-function>><</link>><br>
+				<<mooricon>><<link [[황야: 성|Moor]]>><<set $moor = 100>><<cheats-teleport-function>><</link>><br>
 			</div>
 			<div class="settingsToggleItem">
 				<span class="gold">도시 가</span>
@@ -2075,36 +2075,36 @@
 				<br>
 				<<sewericon>><<link [[Sewers Industrial]]>><<cheats-teleport-function>><</link>>
 				<hr>
-				<span class="gold">Sea</span>
+				<span class="gold">바다</span>
 				<br>
-				<<swimicon>><<link [[Sea Nearby Beach|Sea]]>><<set $sea = 0>><<cheats-teleport-function>><</link>><br>
-				<<swimicon>><<link [[Sea Nearby Town|Sea]]>><<set $sea = 20>><<cheats-teleport-function>><</link>><br>
-				<<swimicon>><<link [[Sea Distant Town|Sea]]>><<set $sea = 50>><<cheats-teleport-function>><</link>><br>
-				<<swimicon>><<link [[Sea Horizon Town|Sea]]>><<set $sea = 99>><<cheats-teleport-function>><</link>><br>
-				<<swimicon>><<link [[Sea Endless Deep|Sea]]>><<set $sea = 100>><<cheats-teleport-function>><</link>><br>
+				<<swimicon>><<link [[해변 근처 바다|Sea]]>><<set $sea = 0>><<cheats-teleport-function>><</link>><br>
+				<<swimicon>><<link [[마을 근처 바다|Sea]]>><<set $sea = 20>><<cheats-teleport-function>><</link>><br>
+				<<swimicon>><<link [[마을에서 먼 바다|Sea]]>><<set $sea = 50>><<cheats-teleport-function>><</link>><br>
+				<<swimicon>><<link [[수평선 쪽 바다|Sea]]>><<set $sea = 99>><<cheats-teleport-function>><</link>><br>
+				<<swimicon>><<link [[끝없는 심해|Sea]]>><<set $sea = 100>><<cheats-teleport-function>><</link>><br>
 				<hr>
-				<span class="gold">Unsafe Teleports</span>
+				<span class="gold">위험한 순간이동</span>
 				<br>
-				Caution: Teleporting to these locations may or may not break your save. Use after saving and at your own risk.
+				주의: 이 장소로 순간이동하면 세이브 파일이 손상될 수도 있고 아닐 수도 있습니다. 저장한 뒤에 사용하시고, 모든 책임은 본인에게 있습니다.
 				<br><br>
-				<u>Forest Locations</u><br>
-				<<edenicon>><<link [[Eden Cabin|Eden Cabin]]>><<cheats-teleport-function>><</link>><br>
-				<<foresticon "churchyard">><<link [[Churchyard|Churchyard]]>><<cheats-teleport-function>><</link>><br>
-				<<getinicon>><<link [[Wolf Cave|Wolf Cave]]>><<cheats-teleport-function>><</link>><br>
+				<u>숲 지역</u><br>
+				<<edenicon>><<link [[에덴의 오두막|Eden Cabin]]>><<cheats-teleport-function>><</link>><br>
+				<<foresticon "churchyard">><<link [[교회 묘지|Churchyard]]>><<cheats-teleport-function>><</link>><br>
+				<<getinicon>><<link [[늑대 동굴|Wolf Cave]]>><<cheats-teleport-function>><</link>><br>
 				<br>
-				<u>Others</u><br>
-				<<compoundicon>><<link [[Elk Compound|Elk Compound]]>><<cheats-teleport-function>><</link>><br>
-				<<asylumicon  "cell">><<link [[Asylum|Asylum Cell]]>><<cheats-teleport-function>><</link>><br>
-				<<link [[Underground Brothel|Underground Cell]]>><<cheats-teleport-function>><</link>><br>
+				<u>기타</u><br>
+				<<compoundicon>><<link [[엘크 가의 단지|Elk Compound]]>><<cheats-teleport-function>><</link>><br>
+				<<asylumicon  "cell">><<link [[정신병원|Asylum Cell]]>><<cheats-teleport-function>><</link>><br>
+				<<link [[지하 창관|Underground Cell]]>><<cheats-teleport-function>><</link>><br>
 				<<if $livestock_intro is undefined>>
-					<<link [[Underground Farm|Livestock Intro]]>><<cheats-teleport-function>><</link>><br>
+					<<link [[지하 농장|Livestock Intro]]>><<cheats-teleport-function>><</link>><br>
 				<<else>>
-					<<link [[Underground Farm|Livestock Cell]]>><<cheats-teleport-function>><</link>><br>
+					<<link [[지하 농장|Livestock Cell]]>><<cheats-teleport-function>><</link>><br>
 				<</if>>
-				<<link [[Tentacle Plains|Tentacle Plains]]>><<cheats-teleport-function>><</link>><br>
-				<<link [[Night Monster Lair|Monster Tower]]>><<cheats-teleport-function>><</link>><br>
-				<<link [[Great Hawk Tower|Bird Tower]]>><<cheats-teleport-function>><</link>><br>
-				<<prisonicon "cell">><<link [[Prison Cell|Prison Cell]]>><<prison_init>><<cheats-teleport-function>><</link>><br>
+				<<link [[촉수 평원|Tentacle Plains]]>><<cheats-teleport-function>><</link>><br>
+				<<link [[밤의 괴물 소굴|Monster Tower]]>><<cheats-teleport-function>><</link>><br>
+				<<link [[거대 매의 탑|Bird Tower]]>><<cheats-teleport-function>><</link>><br>
+				<<prisonicon "cell">><<link [[감옥 독방|Prison Cell]]>><<prison_init>><<cheats-teleport-function>><</link>><br>
 			</div>
 		<<else>>
 			<div class="settingsToggleItemWide">
@@ -2165,7 +2165,7 @@
 			<br>
 			<<for _i, _dy range [2, 3, 4, 5, 6, 7, 14, 28]>>
 				<<capture _dy, _i>>
-					<<link [[_dy + " days"|$passage]]>>
+					<<link [[_dy + "일"|$passage]]>>
 						<<set $timeSkip to 1>>
 						<<for _j to 0; _j lt _dy; _j++>>
 							<<pass 1 day>>
@@ -2244,11 +2244,11 @@
 	</div>
 
 	<br><br>
-	<<link "Unlock All Seeds">><<run unlockAllSeeds()>><</link>>
+	<<link "모든 씨앗 해금">><<run unlockAllSeeds()>><</link>>
 	<br>
-	<<link "Unlock All Recipes">><<learn_recipe_all>><</link>>
+	<<link "모든 조리법 해금">><<learn_recipe_all>><</link>>
 	<br>
-	<<link "Get 100 All Ingredients">>
+	<<link "모든 재료 100개 획득">>
 		<<for _ingredient range Object.keys($foodstuff)>>
 			<<set $foodstuff[_ingredient].amount += 100>>
 		<</for>>
@@ -2257,12 +2257,12 @@
 	<<link "<<<">><<set $swimnudecounter -= 100>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>> |
 	<<link "<<">><<set $swimnudecounter -= 10>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>> |
 	<<link "<">><<set $swimnudecounter -= 1>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>> |
-	School Pool Swim Nude Counter: <span id="statswimnudecounter"><<print Math.trunc($swimnudecounter)>></span>
+	학교 수영장 알몸 수영 횟수: <span id="statswimnudecounter"><<print Math.trunc($swimnudecounter)>></span>
 	| <<link ">">><<set $swimnudecounter += 1>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>>
 	| <<link ">>">><<set $swimnudecounter += 10>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>>
 	| <<link ">>>">><<set $swimnudecounter += 100>><<set $swimnudecounter = Math.clamp($swimnudecounter, 0, 100)>><<replace "#statswimnudecounter">><<print Math.trunc($swimnudecounter)>><</replace>><</link>>
 	<br><br>
-	Note: Greater than 10 will trigger the Pool Leighton Nude Punishment event.
+	참고: 10을 넘으면 수영장 레이튼 알몸 처벌 이벤트가 발생합니다.
 
 	<hr>
 	<div class="settingsGrid">
@@ -2776,13 +2776,13 @@
 <</widget>>
 
 <<widget "cheats-alex">>
-	<u>Animal Respect</u>
+	<u>동물 존중도</u>
 	<br>
 
 	<<link "<<<">><<set $farm.beasts.horses -= 20>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>> |
 	<<link "<<">><<set $farm.beasts.horses -= 5>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>> |
 	<<link "<">><<set $farm.beasts.horses -= 1>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>> |
-	Steeds' respect: <span id="horse_respect"><<print Math.trunc($farm.beasts.horses)>></span>
+	말의 존중도: <span id="horse_respect"><<print Math.trunc($farm.beasts.horses)>></span>
 	| <<link ">">><<set $farm.beasts.horses += 1>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>>
 	| <<link ">>">><<set $farm.beasts.horses += 5>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>>
 	| <<link ">>>">><<set $farm.beasts.horses += 20>><<set $farm.beasts.horses = Math.clamp($farm.beasts.horses, -30, 30)>><<replace "#horse_respect">><<print Math.trunc($farm.beasts.horses)>><</replace>><</link>>
@@ -2790,7 +2790,7 @@
 	<<link "<<<">><<set $farm.beasts.pigs -= 20>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>> |
 	<<link "<<">><<set $farm.beasts.pigs -= 5>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>> |
 	<<link "<">><<set $farm.beasts.pigs -= 1>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>> |
-	Pigs' respect: <span id="pig_respect"><<print Math.trunc($farm.beasts.pigs)>></span>
+	돼지의 존중도: <span id="pig_respect"><<print Math.trunc($farm.beasts.pigs)>></span>
 	| <<link ">">><<set $farm.beasts.pigs += 1>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>>
 	| <<link ">>">><<set $farm.beasts.pigs += 5>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>>
 	| <<link ">>>">><<set $farm.beasts.pigs += 20>><<set $farm.beasts.pigs = Math.clamp($farm.beasts.pigs, -30, 30)>><<replace "#pig_respect">><<print Math.trunc($farm.beasts.pigs)>><</replace>><</link>>
@@ -2798,7 +2798,7 @@
 	<<link "<<<">><<set $farm.beasts.cattle -= 20>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>> |
 	<<link "<<">><<set $farm.beasts.cattle -= 5>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>> |
 	<<link "<">><<set $farm.beasts.cattle -= 1>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>> |
-	Cattle respect: <span id="cattle_respect"><<print Math.trunc($farm.beasts.cattle)>></span>
+	소의 존중도: <span id="cattle_respect"><<print Math.trunc($farm.beasts.cattle)>></span>
 	| <<link ">">><<set $farm.beasts.cattle += 1>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>>
 	| <<link ">>">><<set $farm.beasts.cattle += 5>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>>
 	| <<link ">>>">><<set $farm.beasts.cattle += 20>><<set $farm.beasts.cattle = Math.clamp($farm.beasts.cattle, -30, 30)>><<replace "#cattle_respect">><<print Math.trunc($farm.beasts.cattle)>><</replace>><</link>>
@@ -2806,13 +2806,13 @@
 	<<link "<<<">><<set $farm.beasts.dogs -= 20>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>> |
 	<<link "<<">><<set $farm.beasts.dogs -= 5>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>> |
 	<<link "<">><<set $farm.beasts.dogs -= 1>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>> |
-	Dogs' respect: <span id="dog_respect"><<print Math.trunc($farm.beasts.dogs)>></span>
+	개의 존중도: <span id="dog_respect"><<print Math.trunc($farm.beasts.dogs)>></span>
 	| <<link ">">><<set $farm.beasts.dogs += 1>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>>
 	| <<link ">>">><<set $farm.beasts.dogs += 5>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>>
 	| <<link ">>>">><<set $farm.beasts.dogs += 20>><<set $farm.beasts.dogs = Math.clamp($farm.beasts.dogs, -30, 30)>><<replace "#dog_respect">><<print Math.trunc($farm.beasts.dogs)>><</replace>><</link>>
 	<br><br>
 
-	<u>Farm</u>
+	<u>농장</u>
 
 	<br>
 	<<if $farm_stage gte 6 and $farm_countdown is undefined and $wardrobes.alexFarm.unlocked is false>>
@@ -2822,10 +2822,10 @@
 	<</if>>
 
 	<<farmcheatsync>>
-	Farm Plots: <span id="farm_stage_cheat"><<print Math.trunc($farm_stage_cheat)>></span>
+	농장 밭 구획: <span id="farm_stage_cheat"><<print Math.trunc($farm_stage_cheat)>></span>
 	<<link ">">><<farmincrcheat>><<set $farm_stage_cheat = Math.clamp($farm_stage_cheat, 1, 9)>><<replace "#farm_stage_cheat">><<print Math.trunc($farm_stage_cheat)>><</replace>><</link>>
 	<br>
-	Note: The above may or may not break the farm.
+	참고: 위 설정은 농장을 망가뜨릴 수도 있고 아닐 수도 있습니다.
 	<br>
 	<<if $farm.clearing is undefined>>
 		<<set $farm.clearing to 0>>
@@ -2833,7 +2833,7 @@
 	<<link "<<<">><<set $farm.clearing -= 100>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>> |
 	<<link "<<">><<set $farm.clearing -= 50>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>> |
 	<<link "<">><<set $farm.clearing -= 1>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>> |
-	Farm Clearing: <span id="farm_clearing"><<print Math.trunc($farm.clearing)>></span>
+	농장 개간: <span id="farm_clearing"><<print Math.trunc($farm.clearing)>></span>
 	| <<link ">">><<set $farm.clearing += 1>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>>
 	| <<link ">>">><<set $farm.clearing += 50>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>>
 	| <<link ">>>">><<set $farm.clearing += 100>><<set $farm.clearing = Math.clamp($farm.clearing, 0, 100)>><<replace "#farm_clearing">><<print Math.trunc($farm.clearing)>><</replace>><</link>>
@@ -2845,7 +2845,7 @@
 		<<link "<<<">><<set $farm.wall -= 3>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.wall -= 2>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>> |
 		<<link "<">><<set $farm.wall -= 1>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>> |
-		Farm Wall: <span id="farm_wall"><<print Math.trunc($farm.wall)>></span>
+		농장 벽: <span id="farm_wall"><<print Math.trunc($farm.wall)>></span>
 		| <<link ">">><<set $farm.wall += 1>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.wall += 2>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.wall += 3>><<set $farm.wall = Math.clamp($farm.wall, 0, 4)>><<replace "#farm_wall">><<print Math.trunc($farm.wall)>><</replace>><</link>>
@@ -2861,7 +2861,7 @@
 		<</if>>
 		<<link "<<">><<set $farm.tower -= 2>><<set $farm.tower = Math.clamp($farm.tower, 0, 2)>><<replace "#farm_tower">><<print Math.trunc($farm.tower)>><</replace>><</link>> |
 		<<link "<">><<set $farm.tower -= 1>><<set $farm.tower = Math.clamp($farm.tower, 0, 2)>><<replace "#farm_tower">><<print Math.trunc($farm.tower)>><</replace>><</link>> |
-		Farm Tower: <span id="farm_tower"><<print Math.trunc($farm.tower)>></span>
+		농장 망루: <span id="farm_tower"><<print Math.trunc($farm.tower)>></span>
 		| <<link ">">><<set $farm.tower += 1>><<set $farm.tower = Math.clamp($farm.tower, 0, 2)>><<replace "#farm_tower">><<print Math.trunc($farm.tower)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.tower += 2>><<set $farm.tower = Math.clamp($farm.tower, 0, 2)>><<replace "#farm_tower">><<print Math.trunc($farm.tower)>><</replace>><</link>>
 		<br>
@@ -2871,7 +2871,7 @@
 		<<link "<<<">><<set $farm.woodland -= 3>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.woodland -= 2>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>> |
 		<<link "<">><<set $farm.woodland -= 1>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>> |
-		Farm Woodland: <span id="farm_woodland"><<print Math.trunc($farm.woodland)>></span>
+		농장 삼림 지대: <span id="farm_woodland"><<print Math.trunc($farm.woodland)>></span>
 		| <<link ">">><<set $farm.woodland += 1>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.woodland += 2>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.woodland += 3>><<set $farm.woodland = Math.clamp($farm.woodland, 0, 7)>><<replace "#farm_woodland">><<print Math.trunc($farm.woodland)>><</replace>><</link>>
@@ -2880,7 +2880,7 @@
 			<<set $farm.kennel to 0>>
 		<</if>>
 		<<link "<">><<set $farm.kennel -= 1>><<set $farm.kennel = Math.clamp($farm.kennel, 0, 1)>><<replace "#farm_kennel">><<print Math.trunc($farm.kennel)>><</replace>><</link>> |
-		Farm Kennel: <span id="farm_kennel"><<print Math.trunc($farm.kennel)>></span>
+		농장 개집: <span id="farm_kennel"><<print Math.trunc($farm.kennel)>></span>
 		| <<link ">">><<set $farm.kennel += 1>><<set $farm.kennel = Math.clamp($farm.kennel, 0, 1)>><<replace "#farm_kennel">><<print Math.trunc($farm.kennel)>><</replace>><</link>>
 		<br>
 		<<if $farm.barn is undefined>>
@@ -2889,7 +2889,7 @@
 		<<link "<<<">><<set $farm.barn -= 3>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.barn -= 2>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>> |
 		<<link "<">><<set $farm.barn -= 1>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>> |
-		Farm Barn: <span id="farm_barn"><<print Math.trunc($farm.barn)>></span>
+		농장 축사: <span id="farm_barn"><<print Math.trunc($farm.barn)>></span>
 		| <<link ">">><<set $farm.barn += 1>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.barn += 2>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.barn += 3>><<set $farm.barn = Math.clamp($farm.barn, 0, 7)>><<replace "#farm_barn">><<print Math.trunc($farm.barn)>><</replace>><</link>>
@@ -2898,7 +2898,7 @@
 			<<set $farm.stable to 0>>
 		<</if>>
 		<<link "<">><<set $farm.stable -= 1>><<set $farm.stable = Math.clamp($farm.stable, 0, 1)>><<replace "#farm_stable">><<print Math.trunc($farm.stable)>><</replace>><</link>> |
-		Farm Stable: <span id="farm_stable"><<print Math.trunc($farm.stable)>></span>
+		농장 마구간: <span id="farm_stable"><<print Math.trunc($farm.stable)>></span>
 		| <<link ">">><<set $farm.stable += 1>><<set $farm.stable = Math.clamp($farm.stable, 0, 1)>><<replace "#farm_stable">><<print Math.trunc($farm.stable)>><</replace>><</link>>
 		<br>
 		<<if $farm.coop is undefined>>
@@ -2907,7 +2907,7 @@
 		<<link "<<<">><<set $farm.coop -= 3>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.coop -= 2>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>> |
 		<<link "<">><<set $farm.coop -= 1>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>> |
-		Farm Coop: <span id="farm_coop"><<print Math.trunc($farm.coop)>></span>
+		농장 닭장: <span id="farm_coop"><<print Math.trunc($farm.coop)>></span>
 		| <<link ">">><<set $farm.coop += 1>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.coop += 2>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.coop += 3>><<set $farm.coop = Math.clamp($farm.coop, 0, 7)>><<replace "#farm_coop">><<print Math.trunc($farm.coop)>><</replace>><</link>>
@@ -2922,12 +2922,12 @@
 		<<link "<<<">><<set $farm.tractor -= 3>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.tractor -= 2>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>> |
 		<<link "<">><<set $farm.tractor -= 1>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>> |
-		Farm Tractor: <span id="farm_tractor"><<print Math.trunc($farm.tractor)>></span>
+		농장 트랙터: <span id="farm_tractor"><<print Math.trunc($farm.tractor)>></span>
 		| <<link ">">><<set $farm.tractor += 1>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.tractor += 2>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.tractor += 3>><<set $farm.tractor = Math.clamp($farm.tractor, 0, 3)>><<replace "#farm_tractor">><<print Math.trunc($farm.tractor)>><</replace>><</link>>
 		<br>
-		Farm Tractor Plough: <span id="farm_tractor_plough"><<print $farm.tractorplough>></span>
+		농장 트랙터 쟁기: <span id="farm_tractor_plough"><<print $farm.tractorplough>></span>
 		<<link "변경">>
 			<<if $farm.tractorplough isnot true>>
 				<<set $farm.tractorplough to true>>
@@ -2942,7 +2942,7 @@
 			<</if>>
 		<</link>>
 		<br>
-		Farm Tractor Seed Drill: <span id="farm_tractor_seeddrill"><<print $farm.tractorseeddrill>></span>
+		농장 트랙터 파종기: <span id="farm_tractor_seeddrill"><<print $farm.tractorseeddrill>></span>
 		<<link "변경">>
 			<<if $farm.tractorseeddrill isnot true>>
 				<<set $farm.tractorseeddrill to true>>
@@ -2957,7 +2957,7 @@
 			<</if>>
 		<</link>>
 		<br>
-		Farm Tractor Harvester: <span id="farm_tractor_harvester"><<print $farm.tractorharvester>></span>
+		농장 트랙터 수확기: <span id="farm_tractor_harvester"><<print $farm.tractorharvester>></span>
 		<<link "변경">>
 			<<if $farm.tractorharvester isnot true>>
 				<<set $farm.tractorharvester to true>>
@@ -2972,7 +2972,7 @@
 			<</if>>
 		<</link>>
 		<br>
-		Farm Tractor Loader: <span id="farm_tractor_loader"><<print $farm.tractorloader>></span>
+		농장 트랙터 로더: <span id="farm_tractor_loader"><<print $farm.tractorloader>></span>
 		<<link "변경">>
 			<<if $farm.tractorloader isnot true>>
 				<<set $farm.tractorloader to true>>
@@ -2999,7 +2999,7 @@
 		<<link "<<<">><<set $farm.compostbin -= 3>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.compostbin -= 2>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>> |
 		<<link "<">><<set $farm.compostbin -= 1>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>> |
-		Farm Compost Bin: <span id="farm_compostbin"><<print Math.trunc($farm.compostbin)>></span>
+		농장 퇴비통: <span id="farm_compostbin"><<print Math.trunc($farm.compostbin)>></span>
 		| <<link ">">><<set $farm.compostbin += 1>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.compostbin += 2>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.compostbin += 3>><<set $farm.compostbin = Math.clamp($farm.compostbin, 0, 3)>><<replace "#farm_compostbin">><<print Math.trunc($farm.compostbin)>><</replace>><</link>>
@@ -3011,7 +3011,7 @@
 		<</if>>
 		<<link "<<">><<set $farm.extract -= 2>><<set $farm.extract = Math.clamp($farm.extract, 0, 2)>><<replace "#farm_extract">><<print Math.trunc($farm.extract)>><</replace>><</link>> |
 		<<link "<">><<set $farm.extract -= 1>><<set $farm.extract = Math.clamp($farm.extract, 0, 2)>><<replace "#farm_extract">><<print Math.trunc($farm.extract)>><</replace>><</link>> |
-		Farm Aphrodisiac Extraction System: <span id="farm_extract"><<print Math.trunc($farm.extract)>></span>
+		농장 최음제 추출 장치: <span id="farm_extract"><<print Math.trunc($farm.extract)>></span>
 		| <<link ">">><<set $farm.extract += 1>><<set $farm.extract = Math.clamp($farm.extract, 0, 2)>><<replace "#farm_extract">><<print Math.trunc($farm.extract)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.extract += 2>><<set $farm.extract = Math.clamp($farm.extract, 0, 2)>><<replace "#farm_extract">><<print Math.trunc($farm.extract)>><</replace>><</link>>
 		<br>
@@ -3023,7 +3023,7 @@
 		<<link "<<<">><<set $farm.net -= 4>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.net -= 2>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>> |
 		<<link "<">><<set $farm.net -= 1>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>> |
-		Farm Net: <span id="farm_net"><<print Math.trunc($farm.net)>></span>
+		농장 그물: <span id="farm_net"><<print Math.trunc($farm.net)>></span>
 		| <<link ">">><<set $farm.net += 1>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.net += 2>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.net += 4>><<set $farm.net = Math.clamp($farm.net, 0, 4)>><<replace "#farm_net">><<print Math.trunc($farm.net)>><</replace>><</link>>
@@ -3036,7 +3036,7 @@
 		<<link "<<<">><<set $farm.cooler -= 3>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.cooler -= 2>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>> |
 		<<link "<">><<set $farm.cooler -= 1>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>> |
-		Farm Cooler: <span id="farm_cooler"><<print Math.trunc($farm.cooler)>></span>
+		농장 냉장고: <span id="farm_cooler"><<print Math.trunc($farm.cooler)>></span>
 		| <<link ">">><<set $farm.cooler += 1>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.cooler += 2>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.cooler += 3>><<set $farm.cooler = Math.clamp($farm.cooler, 0, 3)>><<replace "#farm_cooler">><<print Math.trunc($farm.cooler)>><</replace>><</link>>
@@ -3047,7 +3047,7 @@
 		<<link "<<<">><<set $farm.waterField -= 3>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.waterField -= 2>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>> |
 		<<link "<">><<set $farm.waterField -= 1>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>> |
-		Farm waterField: <span id="farm_waterField"><<print Math.trunc($farm.waterField)>></span>
+		농장 수경지: <span id="farm_waterField"><<print Math.trunc($farm.waterField)>></span>
 		| <<link ">">><<set $farm.waterField += 1>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.waterField += 2>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.waterField += 3>><<set $farm.waterField = Math.clamp($farm.waterField, 0, 4)>><<replace "#farm_waterField">><<print Math.trunc($farm.waterField)>><</replace>><</link>>
@@ -3058,7 +3058,7 @@
 		<<link "<<<">><<set $farm.irrigation -= 9>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.irrigation -= 3>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>> |
 		<<link "<">><<set $farm.irrigation -= 1>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>> |
-		Farm Irrigation: <span id="farm_irrigation"><<print Math.trunc($farm.irrigation)>></span>
+		농장 관개 시설: <span id="farm_irrigation"><<print Math.trunc($farm.irrigation)>></span>
 		| <<link ">">><<set $farm.irrigation += 1>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.irrigation += 3>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.irrigation += 9>><<set $farm.irrigation = Math.clamp($farm.irrigation, 0, 9)>><<replace "#farm_irrigation">><<print Math.trunc($farm.irrigation)>><</replace>><</link>>
@@ -3068,7 +3068,7 @@
 		<</if>>
 		<<link "<<">><<set $farm.parasitebarn -= 2>><<set $farm.parasitebarn = Math.clamp($farm.parasitebarn, 0, 2)>><<replace "#farm_parasitebarn">><<print Math.trunc($farm.parasitebarn)>><</replace>><</link>> |
 		<<link "<">><<set $farm.parasitebarn -= 1>><<set $farm.parasitebarn = Math.clamp($farm.parasitebarn, 0, 2)>><<replace "#farm_parasitebarn">><<print Math.trunc($farm.parasitebarn)>><</replace>><</link>> |
-		Farm Parasitebarn: <span id="farm_parasitebarn"><<print Math.trunc($farm.parasitebarn)>></span>
+		농장 기생충 축사: <span id="farm_parasitebarn"><<print Math.trunc($farm.parasitebarn)>></span>
 		| <<link ">">><<set $farm.parasitebarn += 1>><<set $farm.parasitebarn = Math.clamp($farm.parasitebarn, 0, 2)>><<replace "#farm_parasitebarn">><<print Math.trunc($farm.parasitebarn)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.parasitebarn += 2>><<set $farm.parasitebarn = Math.clamp($farm.parasitebarn, 0, 2)>><<replace "#farm_parasitebarn">><<print Math.trunc($farm.parasitebarn)>><</replace>><</link>>
 		<br>
@@ -3077,7 +3077,7 @@
 		<</if>>
 		<<link "<<">><<set $farm.greenhouse -= 2>><<set $farm.greenhouse = Math.clamp($farm.greenhouse, 0, 2)>><<replace "#farm.greenhouse">><<print Math.trunc($farm.greenhouse)>><</replace>><</link>> |
 		<<link "<">><<set $farm.greenhouse -= 1>><<set $farm.greenhouse = Math.clamp($farm.greenhouse, 0, 2)>><<replace "#farm.greenhouse">><<print Math.trunc($farm.greenhouse)>><</replace>><</link>> |
-		Farm Greenhouse: <span id="farm.greenhouse"><<print Math.trunc($farm.greenhouse)>></span>
+		농장 온실: <span id="farm.greenhouse"><<print Math.trunc($farm.greenhouse)>></span>
 		| <<link ">">><<set $farm.greenhouse += 1>><<set $farm.greenhouse = Math.clamp($farm.greenhouse, 0, 2)>><<replace "#farm.greenhouse">><<print Math.trunc($farm.greenhouse)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.greenhouse += 2>><<set $farm.greenhouse = Math.clamp($farm.greenhouse, 0, 2)>><<replace "#farm.greenhouse">><<print Math.trunc($farm.greenhouse)>><</replace>><</link>>
 		<br>
@@ -3087,14 +3087,14 @@
 		<<link "<<<">><<set $alex_greenhouse -= 3>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>> |
 		<<link "<<">><<set $alex_greenhouse -= 2>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>> |
 		<<link "<">><<set $alex_greenhouse -= 1>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>> |
-		Orphanage Greenhouse: <span id="alex_greenhouse"><<print Math.trunc($alex_greenhouse)>></span>
+		고아원 온실: <span id="alex_greenhouse"><<print Math.trunc($alex_greenhouse)>></span>
 		| <<link ">">><<set $alex_greenhouse += 1>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>>
 		| <<link ">>">><<set $alex_greenhouse += 2>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>>
 		| <<link ">>>">><<set $alex_greenhouse += 3>><<set $alex_greenhouse = Math.clamp($alex_greenhouse, 0, 3)>><<replace "#alex_greenhouse">><<print Math.trunc($alex_greenhouse)>><</replace>><</link>>
 		<br><br>
 	<</if>>
 	<<if $farm_stage gte 5>>
-		<u>Remy</u>
+		<u>레미</u>
 
 		<br>
 		<<if $farm.aggro is undefined>>
@@ -3103,7 +3103,7 @@
 		<<link "<<<">><<set $farm.aggro -= 100>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>> |
 		<<link "<<">><<set $farm.aggro -= 10>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>> |
 		<<link "<">><<set $farm.aggro -= 1>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>> |
-		Remy's Encroachment: <span id="farm_aggro"><<print Math.trunc($farm.aggro)>></span>
+		레미의 위협도: <span id="farm_aggro"><<print Math.trunc($farm.aggro)>></span>
 		| <<link ">">><<set $farm.aggro += 1>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>>
 		| <<link ">>">><<set $farm.aggro += 10>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>>
 		| <<link ">>>">><<set $farm.aggro += 100>><<set $farm.aggro = Math.clamp($farm.aggro, -100, 100)>><<replace "#farm_aggro">><<print Math.trunc($farm.aggro)>><</replace>><</link>>
@@ -3115,7 +3115,7 @@
 			<<link "<<<">><<set $estate.chaos -= 100>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>> |
 			<<link "<<">><<set $estate.chaos -= 10>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>> |
 			<<link "<">><<set $estate.chaos -= 1>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>> |
-			Remy Estate Chaos: <span id="estate_chaos"><<print Math.trunc($estate.chaos)>></span>
+			레미 저택 혼란도: <span id="estate_chaos"><<print Math.trunc($estate.chaos)>></span>
 			| <<link ">">><<set $estate.chaos += 1>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>>
 			| <<link ">>">><<set $estate.chaos += 10>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>>
 			| <<link ">>>">><<set $estate.chaos += 100>><<set $estate.chaos = Math.clamp($estate.chaos, 0, 1000)>><<replace "#estate_chaos">><<print Math.trunc($estate.chaos)>><</replace>><</link>>
@@ -3387,8 +3387,8 @@
 			<</if>>
 			<<numberStepper "고통" $pain { callback: value => { V.pain = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: 200, reverse: true}>>
 			<<numberStepper "흥분도" $arousal { callback: value => { V.arousal = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: 10000, reverse: true}>>
-			<<numberStepper "Fatigue" $tiredness { callback: value => { V.tiredness = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: C.tiredness.max, reverse: true}>>
-			<<numberStepper "Stress" $stress { callback: value => { V.stress = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: $stressmax, reverse: true}>>
+			<<numberStepper "피로도" $tiredness { callback: value => { V.tiredness = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: C.tiredness.max, reverse: true}>>
+			<<numberStepper "스트레스" $stress { callback: value => { V.stress = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: $stressmax, reverse: true}>>
 			<<numberStepper "트라우마" $trauma { callback: value => { V.trauma = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: 5000, reverse: true}>>
 			<<numberStepper "통제력" $control { callback: value => { V.control = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: 1000}>>
 			<<numberStepper "취기" $drunk { callback: value => { V.drunk = value; Wikifier.wikifyEval("<<updatesidebarimg>>") }, max: V.drunkmax, reverse: true}>>
@@ -3402,34 +3402,34 @@
 			<</for>>
 			<<unset _cr>>
 		<<case "negative">>
-			<<numberStepper "Sex" $fame.sex { callback: value => { V.fame.sex = value }, max: 2000 * $AMCTraits.sexFame, reverse: true, percentage: false}>>
-			<<numberStepper "Prostitution" $fame.prostitution { callback: value => { V.fame.prostitution = value }, max: 2000 * $AMCTraits.prostitutionFame, reverse: true, percentage: false}>>
-			<<numberStepper "Rape" $fame.rape { callback: value => { V.fame.rape = value }, max: 2000 * $AMCTraits.rapeFame, reverse: true, percentage: false}>>
-			<<numberStepper "Bestiality" $fame.bestiality { callback: value => { V.fame.bestiality = value }, max: 2000 * $AMCTraits.bestialityFame, reverse: true, percentage: false}>>
-			<<numberStepper "Pregnancy" $fame.pregnancy { callback: value => { V.fame.pregnancy = value }, max: Math.clamp(playerNormalPregnancyTotal() * $AMCTraits.pregnancyFame,1,8) * 250, step: 2000 / 100, percentage: false, reverse: true}>>
-			<<numberStepper "Impregnation" $fame.impreg { callback: value => { V.fame.impreg = value }, max: 2000 * $AMCTraits.impregFame, reverse: true, percentage: false}>>
-			<<numberStepper "Exhibitionism" $fame.exhibitionism { callback: value => { V.fame.exhibitionism = value }, max: 2000 * $AMCTraits.exhibitionismFame, reverse: true, percentage: false}>>
+			<<numberStepper "성적" $fame.sex { callback: value => { V.fame.sex = value }, max: 2000 * $AMCTraits.sexFame, reverse: true, percentage: false}>>
+			<<numberStepper "매춘" $fame.prostitution { callback: value => { V.fame.prostitution = value }, max: 2000 * $AMCTraits.prostitutionFame, reverse: true, percentage: false}>>
+			<<numberStepper "강간" $fame.rape { callback: value => { V.fame.rape = value }, max: 2000 * $AMCTraits.rapeFame, reverse: true, percentage: false}>>
+			<<numberStepper "수간" $fame.bestiality { callback: value => { V.fame.bestiality = value }, max: 2000 * $AMCTraits.bestialityFame, reverse: true, percentage: false}>>
+			<<numberStepper "임신" $fame.pregnancy { callback: value => { V.fame.pregnancy = value }, max: Math.clamp(playerNormalPregnancyTotal() * $AMCTraits.pregnancyFame,1,8) * 250, step: 2000 / 100, percentage: false, reverse: true}>>
+			<<numberStepper "수정" $fame.impreg { callback: value => { V.fame.impreg = value }, max: 2000 * $AMCTraits.impregFame, reverse: true, percentage: false}>>
+			<<numberStepper "노출" $fame.exhibitionism { callback: value => { V.fame.exhibitionism = value }, max: 2000 * $AMCTraits.exhibitionismFame, reverse: true, percentage: false}>>
 			<<if playerNormalPregnancyTotal() lt 8>>
 				<span class="description"><<set _pregsNeeded to Math.trunc(8-playerNormalPregnancyTotal())>>
 				당신의 임신 명성은 당신이 겪은 임신 횟수에 의해 제한됩니다. 최대 임신 명성에 도달하려면 <span class="gold"><<number _pregsNeeded>></span>번 더 임신해야 합니다.</span>
 			<</if>>
 		<<case "positive">>
-			<<numberStepper "Combat" $fame.scrap { callback: value => { V.fame.scrap = value }, max: 2000 * $AMCTraits.scrapFame, percentage: false}>>
-			<<numberStepper "Kindness" $fame.good { callback: value => { V.fame.good = value }, max: 2000 * $AMCTraits.goodFame, percentage: false}>>
-			<<numberStepper "Business" $fame.business { callback: value => { V.fame.business = value }, max: 2000 * $AMCTraits.businessFame, percentage: false}>>
-			<<numberStepper "Socialite" $fame.social { callback: value => { V.fame.social = value }, max: 2000 * $AMCTraits.socialFame, percentage: false}>>
-			<<numberStepper "Model" $fame.model { callback: value => { V.fame.model = value }, max: 2000 * $AMCTraits.modelFame, percentage: false}>>
+			<<numberStepper "전투" $fame.scrap { callback: value => { V.fame.scrap = value }, max: 2000 * $AMCTraits.scrapFame, percentage: false}>>
+			<<numberStepper "친절" $fame.good { callback: value => { V.fame.good = value }, max: 2000 * $AMCTraits.goodFame, percentage: false}>>
+			<<numberStepper "사업" $fame.business { callback: value => { V.fame.business = value }, max: 2000 * $AMCTraits.businessFame, percentage: false}>>
+			<<numberStepper "사교" $fame.social { callback: value => { V.fame.social = value }, max: 2000 * $AMCTraits.socialFame, percentage: false}>>
+			<<numberStepper "모델" $fame.model { callback: value => { V.fame.model = value }, max: 2000 * $AMCTraits.modelFame, percentage: false}>>
 		<<case "skills">>
-			<<numberStepper "Skulduggery" $skulduggery "skulduggery" {max: 1000 * $AMCTraits.skulduggery, percentage: false}>>
-			<<numberStepper "Dance" $danceskill "danceskill" {max: 1000 * $AMCTraits.dancing, percentage: false}>>
-			<<numberStepper "Swimming" $swimmingskill "swimmingskill" {max: 1000 * $AMCTraits.swimming, percentage: false}>>
-			<<numberStepper "Athletics" $athletics "athletics" {max: 1000 * $AMCTraits.athletics, percentage: false}>>
-			<<numberStepper "Tending" $tending "tending" {max: 1000 * $AMCTraits.tending, percentage: false}>>
-			<<numberStepper "Housekeeping" $housekeeping "housekeeping" {max: 1000 * $AMCTraits.housekeeping, percentage: false}>>
-			<<numberStepper "Brawling" $combatExtended.brawling { callback: value => { V.combatExtended.brawling = value },max: 1000 * $AMCTraits.brawling, percentage: false}>>
-			<<numberStepper "Footwork" $combatExtended.footwork { callback: value => { V.combatExtended.footwork = value },max: 1000 * $AMCTraits.footwork, percentage: false}>>
-			<<numberStepper "Striking" $combatExtended.striking { callback: value => { V.combatExtended.striking = value },max: 1000 * $AMCTraits.striking, percentage: false}>>
-			<<numberStepper "Kicking" $combatExtended.kicking { callback: value => { V.combatExtended.kicking = value },max: 1000 * $AMCTraits.kicking, percentage: false}>>
+			<<numberStepper "속임수" $skulduggery "skulduggery" {max: 1000 * $AMCTraits.skulduggery, percentage: false}>>
+			<<numberStepper "춤" $danceskill "danceskill" {max: 1000 * $AMCTraits.dancing, percentage: false}>>
+			<<numberStepper "수영" $swimmingskill "swimmingskill" {max: 1000 * $AMCTraits.swimming, percentage: false}>>
+			<<numberStepper "체육" $athletics "athletics" {max: 1000 * $AMCTraits.athletics, percentage: false}>>
+			<<numberStepper "관리" $tending "tending" {max: 1000 * $AMCTraits.tending, percentage: false}>>
+			<<numberStepper "가사" $housekeeping "housekeeping" {max: 1000 * $AMCTraits.housekeeping, percentage: false}>>
+			<<numberStepper "난투" $combatExtended.brawling { callback: value => { V.combatExtended.brawling = value },max: 1000 * $AMCTraits.brawling, percentage: false}>>
+			<<numberStepper "풋워크" $combatExtended.footwork { callback: value => { V.combatExtended.footwork = value },max: 1000 * $AMCTraits.footwork, percentage: false}>>
+			<<numberStepper "타격" $combatExtended.striking { callback: value => { V.combatExtended.striking = value },max: 1000 * $AMCTraits.striking, percentage: false}>>
+			<<numberStepper "발차기" $combatExtended.kicking { callback: value => { V.combatExtended.kicking = value },max: 1000 * $AMCTraits.kicking, percentage: false}>>
 		<<case "school">>
 			/* normally, school traits are adjusted by the widget "school_skill_change" */
 			<<numberStepper "<<scienceicon>> 과학" $science "science" {
@@ -3450,9 +3450,9 @@
 			}>>
 		<<case "characteristics">>
 			<<numberStepper "<<tficon angel>> 순결도" $purity "purity" {max: 1000}>>
-			<<numberStepper "<<symbol beauty>> Beauty" $beauty "beauty" {max: 10000 * $AMCTraits.beauty, percentage: false}>>
-			<<numberStepper "<<symbol physique>> Physique" $physique "physique" {max: $physiquesize * $AMCTraits.physique, percentage: false}>>
-			<<numberStepper "<<symbol willpower>> Willpower" $willpower "willpower" {max: 1000 * $AMCTraits.willpower, percentage: false}>>
+			<<numberStepper "<<symbol beauty>> 미모" $beauty "beauty" {max: 10000 * $AMCTraits.beauty, percentage: false}>>
+			<<numberStepper "<<symbol physique>> 체격" $physique "physique" {max: $physiquesize * $AMCTraits.physique, percentage: false}>>
+			<<numberStepper "<<symbol willpower>> 의지력" $willpower "willpower" {max: 1000 * $AMCTraits.willpower, percentage: false}>>
 			<<numberStepper "<<symbol awareness>> 인식" $awareness "awareness" {min: -200, max: 1000, reverse: true}>>
 			<<numberStepper "<<symbol promiscuity>> 음란도" $promiscuity "promiscuity" {reverse: true}>>
 			<<numberStepper "<<symbol exhibitionism>> 노출증" $exhibitionism "exhibitionism" {reverse: true}>>
@@ -3461,20 +3461,20 @@
 				<<numberStepper "<<symbol corruption>> 타락도" $earSlime.corruption { callback: value => {V.earSlime.corruption = value; Wikifier.wikifyEval("<<updatesidebarimg>>")}, reverse: true}>>
 			<</if>>
 		<<case "sex">>
-			<<numberStepper "Seduction" $seductionskill "seductionskill" {max: 1000 * $AMCTraits.seductionskill, percentage: false}>>
-			<<numberStepper "Chest" $chestskill "chestskill" {max: 1000 * $AMCTraits.chestskill, percentage: false}>>
-			<<numberStepper "Buttocks" $bottomskill "bottomskill" {max: 1000 * $AMCTraits.bottomskill, percentage: false}>>
-			<<if $player.vaginaExist>><<numberStepper "Vaginal" $vaginalskill "vaginalskill" {max: 1000 * $AMCTraits.vaginalskill, percentage: false}>><</if>>
-			<<if $player.penisExist>><<numberStepper "Penile" $penileskill "penileskill" {max: 1000 * $AMCTraits.penileskill, percentage: false}>><</if>>
-			<<numberStepper "Thighs" $thighskill "thighskill" {max: 1000 * $AMCTraits.thighskill, percentage: false}>>
-			<<numberStepper "Oral" $oralskill "oralskill" {max: 1000 * $AMCTraits.oralskill, percentage: false}>>
-			<<numberStepper "Hands" $handskill "handskill" {max: 1000 * $AMCTraits.handskill, percentage: false}>>
-			<<numberStepper "Anal" $analskill "analskill" {max: 1000 * $AMCTraits.analskill, percentage: false}>>
-			<<numberStepper "Feet" $feetskill "feetskill" {max: 1000 * $AMCTraits.feetskill, percentage: false}>>
+			<<numberStepper "유혹" $seductionskill "seductionskill" {max: 1000 * $AMCTraits.seductionskill, percentage: false}>>
+			<<numberStepper "가슴" $chestskill "chestskill" {max: 1000 * $AMCTraits.chestskill, percentage: false}>>
+			<<numberStepper "엉덩이" $bottomskill "bottomskill" {max: 1000 * $AMCTraits.bottomskill, percentage: false}>>
+			<<if $player.vaginaExist>><<numberStepper "보지" $vaginalskill "vaginalskill" {max: 1000 * $AMCTraits.vaginalskill, percentage: false}>><</if>>
+			<<if $player.penisExist>><<numberStepper "자지" $penileskill "penileskill" {max: 1000 * $AMCTraits.penileskill, percentage: false}>><</if>>
+			<<numberStepper "허벅지" $thighskill "thighskill" {max: 1000 * $AMCTraits.thighskill, percentage: false}>>
+			<<numberStepper "입" $oralskill "oralskill" {max: 1000 * $AMCTraits.oralskill, percentage: false}>>
+			<<numberStepper "손" $handskill "handskill" {max: 1000 * $AMCTraits.handskill, percentage: false}>>
+			<<numberStepper "애널" $analskill "analskill" {max: 1000 * $AMCTraits.analskill, percentage: false}>>
+			<<numberStepper "발" $feetskill "feetskill" {max: 1000 * $AMCTraits.feetskill, percentage: false}>>
 		<<case "hypnosis">>
-			<<numberStepper "Yearning" $hypnosis_traits.scream {callback: value => { V.hypnosis_traits.scream = value }, step: 1, max: 5, percentage: false}>>
-			<<numberStepper "Flaunting" $hypnosis_traits.cover {callback: value => { V.hypnosis_traits.cover = value }, step: 1, max: 5, percentage: false}>>
-			<<numberStepper "Deviancy" $hypnosis_traits.deviancy {callback: value => { V.hypnosis_traits.deviancy = value }, step: 1, max: 5, percentage: false}>>
+			<<numberStepper "갈망" $hypnosis_traits.scream {callback: value => { V.hypnosis_traits.scream = value }, step: 1, max: 5, percentage: false}>>
+			<<numberStepper "노출" $hypnosis_traits.cover {callback: value => { V.hypnosis_traits.cover = value }, step: 1, max: 5, percentage: false}>>
+			<<numberStepper "이상성욕" $hypnosis_traits.deviancy {callback: value => { V.hypnosis_traits.deviancy = value }, step: 1, max: 5, percentage: false}>>
 		<<default>>
 			에러: 스킬 문제.
 	<</switch>>

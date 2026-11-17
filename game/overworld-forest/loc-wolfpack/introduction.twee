@@ -134,7 +134,7 @@
 		<<getouticon "hole">><<link [[구멍으로 내려간다|Forest Wolf Cave Hole]]>><</link>><<small_text>>
 		<br>
 	<<elseif $wolfcavedig gte 1>>
-		<<getouticon "dig">><<link [[Dig at the back of the caves (1:00)|Forest Wolf Cave Dig]]>><<pass 1 hour>><<set $wolfcavedig += 1>><</link>>
+		<<getouticon "dig">><<link [[동굴 뒤쪽을 판다 (1:00)|Forest Wolf Cave Dig]]>><<pass 1 hour>><<set $wolfcavedig += 1>><</link>>
 		<br>
 	<<else>>
 		<<investigateicon>><<link [[동굴 뒤쪽을 조사한다|Forest Wolf Cave Examine]]>><<set $wolfcavedig to 1>><</link>>

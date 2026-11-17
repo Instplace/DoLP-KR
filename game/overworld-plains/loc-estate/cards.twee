@@ -35,9 +35,9 @@
 	<<elseif $wrenSeenLast is "catsuit">>
 		"이게 누구야." 렌이 말한다. "일하다가 우연히 만나니 재밌네."
 	<<elseif $estate_cards_end is "Dolp_Wren_Came" >>
-		"you better make sure you win so you don't end up like that too," Wren smirks.
+		"저렇게 되기 싫으면 반드시 이기는 게 좋을 거야." 렌이 씩 웃는다.
 	<<elseif $estate_cards_end is "Dolp_Wren_voyeurism" >>
-		"Seems that I might have double the fun today," Wren says.
+		"오늘은 재미가 두 배가 될지도 모르겠네." 렌이 말한다.
 	<<elseif $wrenSeenLast is "pregnancy">>
 		"이게 누구야." 렌이 말한다. "네가 그 동굴을 쑤시고 다닐 줄은 몰랐는데. 못된 <<girl>>【이】네." <<His>> 시선이 당신의 배에 닿는다.
 		<<if playerBellyVisible()>>
@@ -2851,206 +2851,206 @@
 <<effects>><<npc "Wren">><<person1>>
 <<generatev2>>
 
-Approaching the cottage door, You curiously glance through the nearby window. What you see catches you off guard:
-one of Wren's goons is on <<person2>><<his>> knees before <<person1>><<him>>. <<promiscuity4>>
+오두막 문에 다가가던 당신은 호기심에 가까운 창문 안을 슬쩍 들여다본다. 눈에 들어온 광경에 당신은 정신이 번쩍 든다:
+렌의 패거리 중 한 명이 <<person2>><<his>> 무릎을 꿇고 <<person1>><<him>> 앞에 있다. <<promiscuity4>>
 <br><br>
 
-Wren throws <<his>> head back in pleasure, emitting a loud groan that surprises you.
-You quickly duck below the window before any of them can catch you. <<arousal 300>> <<garousal>>
+렌이 쾌감에 <<his>> 고개를 뒤로 젖히며 당신을 놀라게 할 만큼 큰 신음을 내뱉는다.
+누구에게 들키기 전에 당신은 재빨리 창문 아래로 몸을 숙인다. <<arousal 300>> <<garousal>>
 <br><br>
 
-<<link [[Watch|Estate Voyeurism Watch Dolp]]>><</link>>	<<arousal 100>>
+<<link [[지켜본다|Estate Voyeurism Watch Dolp]]>><</link>> <<arousal 100>>
 <br>
 <<if $exhibitionism gte 35>>
-	<<link [[Masturbate|Estate Voyeurism Masturbate Dolp]]>><</link>><<exhibitionist3>>
+	<<link [[자위한다|Estate Voyeurism Masturbate Dolp]]>><</link>><<exhibitionist3>>
 <<else>>
-	You are too scared to mastubate out in the estate <<exhibitionist3>>
+	당신은 겁이 나서 저택 안에서는 자위할 엄두가 나지 않는다 <<exhibitionist3>>
 <</if>>
 <br>
-<<link [[Knock|Estate Voyeurism Knock Dolp]]>><</link>>
+<<link [[노크한다|Estate Voyeurism Knock Dolp]]>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Watch Dolp
 <<effects>><<person1>>
 
-You can't help but stare at the scene unfolding before you. You know you shouldn't look, it feels wrong, but you can't bring yourself turn away.
+당신은 눈앞에 펼쳐지는 광경을 멍하니 바라볼 수밖에 없다. 봐서는 안 된다는 걸, 잘못된 일이라는 걸 알지만 도저히 눈을 돌릴 수 없다.
 <br><br>
 
-You stand there, frozen, as the goon continues what you could only assume is <<person2>><<his>> punishment. Wren's satisfied grunts reach your
-ears even from outside. Your heart races from the thrill of spying on something you shouldn't be seeing. <<arousal 600>><<garousal>>
+당신은 얼어붙은 채 서 있고, 패거리는 <<person2>><<his>> 벌이라고밖에 볼 수 없는 일을 계속한다. 렌의 만족스러운 신음이 밖에 있는 당신의
+귀에까지 닿는다. 봐서는 안 될 것을 훔쳐보는 스릴에 심장이 뛴다. <<arousal 600>><<garousal>>
 <br><br>
 
-<<link [[Keep watching|Estate Voyeurism Keep Dolp]]>><</link>> /*small + to exhibion? stat */
+<<link [[계속 지켜본다|Estate Voyeurism Keep Dolp]]>><</link>> /*small + to exhibion? stat */
 <br>
-<<link [[Stop watching and knock|Estate Voyeurism Knock Dolp]]>><<set $phase to 1>><</link>>
+<<link [[그만 보고 노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Keep Dolp
 <<effects>><<person1>>
 
-As Wren's movements speed up, you feel yourself getting more and more excited. You're so caught up in what's happening that time seems to
-slip away. You're completely mesmerized by the whole thing. And there's this warmth spreading between your thighs, drawing you in even deeper.
-You can't help but bite your lip. Wren's actions become a blur, each one more intense than the last.  <<promiscuity3>>
+렌의 움직임이 빨라질수록 당신은 점점 더 흥분하는 자신을 느낀다. 눈앞의 일에 너무 빠져든 나머지 시간이
+흘러가는 줄도 모른다. 당신은 이 모든 광경에 완전히 홀려 있다. 게다가 허벅지 사이로 번지는 열기가 당신을 더 깊이 끌어들인다.
+당신은 저도 모르게 입술을 깨문다. 렌의 움직임은 하나하나가 앞선 것보다 더 격렬해지며 흐릿하게 뭉개진다.  <<promiscuity3>>
 <br><br>
 
-Wren seems to get completly lost in this moment. <<he>> lets out a moan that pulls you more into the scene unfolding infront of you.
-you catch the <<person2>><<lady>> under the table <<if C.npc.Wren.penis isnot "none">>bobbing <<person2>><<his>> head up and down on Wren's cock <<else>>lapping
-<<person2>><<his>> head up and down Wren's pussy,<</if>> you can hear a small moan from the goon <<himself>>, Wren puts <<person1>><<his>> hand on <<person2>><<his>>
-head and groans in pleasure.
+렌은 이 순간에 완전히 빠져든 듯하다. <<he>>【이가】 흘린 신음이 당신을 눈앞의 광경 속으로 더 끌어당긴다.
+당신은 탁자 밑의 <<person2>><<lady>>【이가】 <<if C.npc.Wren.penis isnot "none">>렌의 자지 위에서 <<person2>><<his>> 머리를 위아래로 움직이고<<else>>
+<<person2>><<his>> 혀로 렌의 보지를 핥고 있는 것을 본다<</if>>. 패거리 <<himself>>의 작은 신음이 들리고, 렌이 <<person1>><<his>> 손을 <<person2>><<his>>
+머리에 올리고 쾌감에 신음한다.
 <br><br>
 
-Just like wren you are also completely lost in the moment, forgetting about everything else around you. All that matters is what's happening right in front of you.
-The heat between your thighs keeps growing, a constant reminder of just how turned on you are, urging you to keep watching, even though you
-know you probably shouldn't.<<arousal 700>><<garousal>>
+렌처럼 당신도 이 순간에 완전히 빠져, 주변의 모든 것을 잊는다. 중요한 건 바로 눈앞에서 벌어지는 일뿐이다.
+허벅지 사이의 열기는 계속 커지며 당신이 얼마나 달아올랐는지 끊임없이 일깨우고, 계속 지켜보라고 부추긴다. 아마 그러면 안 된다는 걸
+알면서도 말이다.<<arousal 700>><<garousal>>
 <br><br>
 
-<<link [[Keep watching|Estate Voyeurism Keep 2 Dolp]]>><</link>> /*small + to exhibion? stat */
+<<link [[계속 지켜본다|Estate Voyeurism Keep 2 Dolp]]>><</link>> /*small + to exhibion? stat */
 <br>
 <<if $exhibitionism gte 35>>
-	<<link [[Masturbate|Estate Voyeurism Masturbate Dolp]]>><</link>><<exhibitionist3>>
+	<<link [[자위한다|Estate Voyeurism Masturbate Dolp]]>><</link>><<exhibitionist3>>
 <<else>>
-	You are too scared to mastubate out in the estate <<exhibitionist3>>
+	당신은 겁이 나서 저택 안에서는 자위할 엄두가 나지 않는다 <<exhibitionist3>>
 <</if>>
 <br>
-<<link [[Stop watching and knock|Estate Voyeurism Knock Dolp]]>><<set $phase to 2>><</link>>
+<<link [[그만 보고 노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 2>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Keep 2 Dolp
 <<effects>><<person1>>
 
-Part of you knows you should look away, that what you're witnessing is totally wrong. But another part of you revels in the taboo thrill
-of it all. In that moment, you feel more alive than ever.
+당신의 한구석은 눈을 돌려야 한다고, 지금 보고 있는 것이 완전히 잘못된 일이라고 알고 있다. 하지만 또 다른 한구석은 금기를 어기는 짜릿함을
+한껏 즐긴다. 그 순간, 당신은 그 어느 때보다 살아 있음을 느낀다.
 <br><br>
 
-Then, Wren lets out a loud moan, pulling you back from all the lewd thoughts racing in your head. You watch closely as Wren starts holding
-the goon's head in place, pushing them farther into him. The <<person2>><<lady>> sputters, presumably from the lack of air.
+그때 렌이 큰 신음을 내뱉고, 당신은 머릿속을 질주하던 음란한 생각에서 퍼뜩 돌아온다. 렌이
+패거리의 머리를 그 자리에 붙들고 더 깊숙이 밀어 넣기 시작하는 모습을 당신은 유심히 지켜본다. <<person2>><<lady>>【이가】 숨이 막히는지 켁켁거린다.
 <<if $masochism_level gte 4 and $sadism_level lt 4>>
-		You let out a quiet moan as you imagine yourself in the <<lady>>'s place, with Wren choking you instead.<<arousal 400>><<garousal>>
+		당신은 <<lady>>의 자리에 선 자신을 상상하며 낮게 신음한다. 대신 렌이 당신의 숨통을 막고 있다.<<arousal 400>><<garousal>>
 <<elseif $sadism_level gte 4 and $masochism_level lt 4>>
-		You let out a quiet groan as you imagine yourself as Wren, with your <<penis>> choking the <<lady>> instead.<<arousal 400>><<garousal>>
+		당신은 렌이 된 자신을 상상하며 낮게 신음한다. 대신 당신의 <<penis>>【이가】 <<lady>>의 숨통을 막고 있다.<<arousal 400>><<garousal>>
 <<elseif $sadism_level gte 4 and $masochism_level gte 4>>
-		You let out a loud ghaspy moan as you look at the scene infront of you, you cant decide what effects you more. being hurt or doing the hurting. <<arousal 600>><<ggarousal>>
+		당신은 눈앞의 광경을 바라보며 크게 헐떡이듯 신음한다. 괴롭힘을 당하는 것과 괴롭히는 것 중 어느 쪽에 더 흥분하는지 도저히 정할 수 없다. <<arousal 600>><<ggarousal>>
 <<else>>
 <</if>>
 <br><br>
-It feels like hours, though it couldn't have been more than 20 seconds. Quickly, Wren pulls the <<person2>><<lady>>'s face away, shivering from pleasure as
-he releases on the goon's face. The <<person2>><<lady>> emerges from under the table, quickly wiping their face with a napkin, while Wren observes <<him>> with <<his>>
-trademark smirk as <<he>> buttons up <<his>> pants. Finally tearing your gaze away from the intense scene, you glance over at the blackjack table.
-The <<person2>><<lady>> seems to have run out of luck, just like you when you made a bet you couldn't win.<<arousal 400>><<garousal>>
+몇 시간처럼 느껴지지만 20초도 채 안 됐을 것이다. 렌은 재빨리 <<person2>><<lady>>의 얼굴을 떼어 내고, 쾌감에 몸을 떨며
+패거리의 얼굴 위에 사정한다. <<person2>><<lady>>【은는】 탁자 밑에서 기어 나와 냅킨으로 얼굴을 서둘러 닦고, 렌은 <<him>>【을를】 지켜보며 <<his>>
+특유의 능글맞은 웃음을 지은 채 바지 단추를 잠근다. 강렬한 장면에서 마침내 시선을 뗀 당신은 블랙잭 테이블 쪽을 흘끗 본다.
+<<person2>><<lady>>【은는】 운이 다한 듯하다. 이길 수 없는 내기를 걸었던 당신처럼.<<arousal 400>><<garousal>>
 <br><br>
 
-<<link [[Next|Estate Voyeurism Watch End Dolp]]>><</link>>
+<<link [[다음|Estate Voyeurism Watch End Dolp]]>><</link>>
 
 :: Estate Voyeurism Watch End Dolp
 <<effects>><<person1>>
 <<if $orgasmcurrent gte 1>>
-	you can barely believe what you just looked at, but the cum dripping between your legs already tells you enough.
+	방금 본 것이 믿기지 않지만, 다리 사이로 흘러내리는 정액이 이미 모든 걸 말해 준다.
 <<else>>
-	you can barely believe what you just saw.
+	방금 본 것이 믿기지 않는다.
 <</if>>
-If you lose to Wren you might end up the same way that the <<person2>><<lady>> ended up in. You are not quite sure yet if that would be a good or bad
-situation for you. you head snaps back to the window as you head the sound of a chair scraping and footsteps.
+렌에게 지면 당신도 <<person2>><<lady>>【이가】 놓인 처지와 같은 꼴이 될지도 모른다. 그것이 당신에게 좋은 일일지 나쁜
+일일지는 아직 확신이 서지 않는다. 의자가 끌리는 소리와 발소리가 들리자 당신의 고개가 창문 쪽으로 홱 돌아간다.
 <br><br>
-<<link [[Next|Estate Voyeurism Knock Dolp]]>><<set $phase to 7>><</link>>
+<<link [[다음|Estate Voyeurism Knock Dolp]]>><<set $phase to 7>><</link>>
 <br>
 <<link [[다음|Estate Cards Intro]]>><</link>>
 
 :: Estate Voyeurism Masturbate Dolp
 <<effects>><<person1>>
 
-The scene unfolding before you stirs a powerful desire within you, an irresistible urge that pulls you in deeper and deeper. It's like a magnet,
-drawing you closer with each passing moment, making it impossible to look away. You feel yourself being drawn in, captivated by the intensity of
-it all.
+눈앞에 펼쳐지는 광경이 당신 안에서 강렬한 욕망을 일깨운다. 점점 더 깊이 빨아들이는 거부할 수 없는 충동이다. 마치 자석처럼
+순간순간 당신을 더 가까이 끌어당겨 눈을 돌릴 수 없게 만든다. 당신은 끌려 들어가는 자신을 느끼며, 그 모든 것의
+격렬함에 사로잡힌다.
 <br><br>
 
-As your hands slowly trail down to your <<bottoms>>, your breath hitches when you reach your <<penis>> as you graze over it. you begin to feel yourself
-<<if $player.penisExist and $player.vaginaExist>> being hard and wet <<elseif $player.penisExist>> being hard. <<elseif $player.vaginaExist>> being wet. <</if>>.
-You begin to slowly touch yourself, trying to syncing your movements with the rhythm of the scene before you. With each moan from Wren,
-blending seamlessly with your own, you feel yourself drawn deeper into the intensity of the moment as you speed up to match Wren <<arousal 500>><<ggarousal>>
+당신의 손이 천천히 <<bottoms>>【으로로】 내려가고, 손끝이 <<penis>>【을를】 스치자 숨이 턱 막힌다. 당신은 자신이
+<<if $player.penisExist and $player.vaginaExist>> 단단해지면서 젖어 드는 <<elseif $player.penisExist>> 단단해지는 <<elseif $player.vaginaExist>> 젖어 드는 <</if>> 것을 느끼기 시작한다.
+당신은 천천히 자신을 만지기 시작하며, 눈앞의 광경이 이루는 리듬에 손놀림을 맞추려 한다. 렌이 신음을 낼 때마다,
+그 소리가 당신의 신음과 매끄럽게 뒤섞이고, 당신은 렌에게 속도를 맞추며 그 순간의 격렬함 속으로 더 깊이 빨려 든다. <<arousal 500>><<ggarousal>>
 <br><br>
 
 <<if $exhibitionism gte 35>>
-	<<link [[Keep masturbating|Estate Voyeurism Keep Masturbate Dolp]]>><</link>><<exhibitionist3>>
+	<<link [[계속 자위한다|Estate Voyeurism Keep Masturbate Dolp]]>><</link>><<exhibitionist3>>
 	<br>
 <</if>>
-<<link [[Stop masturbating and knockk|Estate Voyeurism Knock Dolp]]>><<set $phase to 3>><</link>>
+<<link [[자위를 멈추고 노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 3>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Keep Masturbate Dolp
 <<effects>><<person1>>
 
-Your breath hitches with desire as you feel it pulse through your veins, your heart quickening with anticipation. Every touch, every sensation,
-adds to the growing intensity, like layers building up to a climax. You're caught in a whirlwind of pleasure, unable to resist the overwhelming pull.
+욕망이 혈관을 타고 뛰는 것이 느껴지며 숨이 턱 막히고, 기대감에 심장이 빨라진다. 모든 손길, 모든 감각이
+절정을 향해 겹겹이 쌓여 가듯 점점 커지는 격렬함에 더해진다. 당신은 쾌락의 소용돌이에 휘말려 압도적인 끌림에 저항하지 못한다.
 <br><br>
 
-The scene before you is impossible to tear your eyes away from. The way Wren moans in pleasure while <<person2>><<lady>> goes down on
-<<person1>><<him>> is utterly irresistible. You observe the <<person2>><<lady>> under the table, their hands inching up to their own crotch,
-slowly caressing themselves. As the <<lady>> touches <<his>>self more, they begin to moan into Wren, the vibrations causing Wren to throw
-<<person1>><<his>> head back in ecstasy. <<arousal 500>><<ggarousal>>
+눈앞의 광경에서는 도저히 눈을 뗄 수 없다. 렌이 쾌감에 신음하는 동안 <<person2>><<lady>>【이가】
+<<person1>><<him>>【을를】 입으로 애무하는 모습은 거부할 수 없을 만큼 매혹적이다. 당신은 탁자 밑의 <<person2>><<lady>>【이가】 손을 슬금슬금 자기 사타구니로 가져가
+천천히 스스로를 어루만지는 모습을 지켜본다. <<lady>>【이가】 <<his>>자신을 더 만질수록 렌에게 신음을 흘리기 시작하고, 그 진동에 렌이
+<<person1>><<his>> 고개를 황홀하게 뒤로 젖힌다. <<arousal 500>><<ggarousal>>
 <br><br>
 
 <<if $exhibitionism gte 35>>
-	<<link [[Keep masturbating|Estate Voyeurism Keep Masturbate 2 Dolp]]>><</link>><<exhibitionist3>>
+	<<link [[계속 자위한다|Estate Voyeurism Keep Masturbate 2 Dolp]]>><</link>><<exhibitionist3>>
 	<br>
 <</if>>
-<<link [[Stop masturbating and knock|Estate Voyeurism Knock Dolp]]>><<set $phase to 4>><</link>>
+<<link [[자위를 멈추고 노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 4>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Keep Masturbate 2 Dolp
 <<effects>><<person1>>
 
-Looking at the scene in front of you, you're torn between whose place you'd rather be, but deep down, you know you wish it ware you in that situation.
-Wren's firm grip on the <<person2>><<lady>>'s head, pushing <<him>> further into <<person1>><<his>> crotch, sends a thrill down your spine. Your own
-moans mingle with Wren's groans of pleasure, and for a moment, you forget where you are entirely. Wren's foot starts to rub against the <<person2>><<lady>>'s
-crotch, eliciting a low, guttural moan. The sound sends shivers down Wren's spine, and <<person1>><<he>> responds by pushing the <<person2>><<lady>> even further
-into <<person1>><<his>> crotch, making <<him>> completly lost in the pleasure of the moment. <<arousal 500>><<ggarousal>>
+눈앞의 광경을 보며 당신은 어느 쪽 자리에 서고 싶은지 갈팡질팡하지만, 마음 깊은 곳에서는 그 상황에 놓인 쪽이 당신이었으면 하고 바란다는 걸 안다.
+렌이 <<person2>><<lady>>의 머리를 단단히 붙잡고 <<person1>><<his>> 사타구니 쪽으로 더 깊이 밀어 넣는 모습에 등줄기로 짜릿함이 내달린다. 당신의
+신음이 렌의 쾌감 어린 신음과 뒤섞이고, 한순간 당신은 자신이 어디에 있는지조차 완전히 잊는다. 렌의 발이 <<person2>><<lady>>의
+사타구니를 문지르기 시작하고, 낮고 목구멍 깊은 신음을 끌어낸다. 그 소리에 렌의 등줄기에 전율이 흐르고, <<person1>><<he>>【은는】 <<person2>><<lady>>【을를】 더욱 깊이
+<<person1>><<his>> 사타구니로 밀어 넣어 쾌락 속에서 완전히 헤어나지 못하게 만든다. <<arousal 500>><<ggarousal>>
 <br><br>
 
 <<if $exhibitionism gte 35>>
-	<<link [[Keep masturbating|Estate Voyeurism Keep Masturbate 3 Dolp]]>><</link>><<exhibitionist3>>
+	<<link [[계속 자위한다|Estate Voyeurism Keep Masturbate 3 Dolp]]>><</link>><<exhibitionist3>>
 	<br>
 <</if>>
-<<link [[Stop masturbating and knock|Estate Voyeurism Knock Dolp]]>><<set $phase to 5>><</link>>
+<<link [[자위를 멈추고 노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 5>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 :: Estate Voyeurism Keep Masturbate 3 Dolp
 <<effects>><<person1>>
 
-Wren shuts <<his>> eyes tight, a loud groan of pleasure escaping <<his>> lips, as if <<he>>'s unafraid of any consequences. <<He>> firmly grips the <<person2>><<lady>>'s head, guiding <<him>> as <<person1>><<he>> starts to
-thrust <<his>> hips, lost in <<his>> own pleasure. Matching Wren's rhythm, you feel a growing heat within you, on the brink of reaching your own climax With one final thrust. Wren
-pushes the <<person2>><<lady>>'s face hard into <<person1>><<his>> crotch, signalling his impending release. You follow suit, matching <<his>> movements as you both reach the peak of pleasure together. Wren
-throws <<his>> head back, <<his>> eyes rolling in ecstasy as loud moans of release escape <<his>> lips. Your own moans join <<his>> <<set $arousal to 10000>><<orgasm>>
+렌은 어떤 결과도 두렵지 않다는 듯 눈을 질끈 감고 입술 사이로 큰 쾌감의 신음을 흘린다. <<He>>【은는】 <<person2>><<lady>>의 머리를 단단히 붙잡고 이끌며 <<person1>><<he>>【이가】
+허리를 움직이기 시작한다. 자신의 쾌락에 푹 빠져서. 렌의 리듬에 맞추자 당신 안에서 열기가 커지고, 당신도 절정 직전에 이른다. 마지막 한 번의 움직임과 함께 렌이
+<<person2>><<lady>>의 얼굴을 <<person1>><<his>> 사타구니에 세게 밀어붙이며 곧 사정할 것임을 알린다. 당신도 뒤따라 <<his>> 움직임에 맞추고, 둘은 함께 쾌락의 정점에 이른다. 렌이
+고개를 뒤로 젖히고 황홀경에 눈을 뒤집으며, 사정의 신음이 크게 터져 나온다. 당신의 신음이 <<his>> 신음에 합쳐진다 <<set $arousal to 10000>><<orgasm>>
 <br><br>
 
-<<link [[Next|Estate Voyeurism Masturbate End Dolp]]>><</link>>
+<<link [[다음|Estate Voyeurism Masturbate End Dolp]]>><</link>>
 
 :: Estate Voyeurism Masturbate End Dolp
 <<effects>><<person1>>
-You stand there sweaty and breating heavy after your orgasm, you can see wren
-<<if C.npc.Wren.penis isnot "none">>pushing the <<person2>><<lady>> more onto his cock while he cums, making sure <<he>> swallows it all. <<else>>pushing the <<person2>><<lady>> more into
-<<person1>><<his>> pussy making sure that <<person2>><<he>> laps it all up <</if>>
+당신은 오르가슴을 맞은 뒤 땀에 흠뻑 젖어 거친 숨을 몰아쉬며 서 있고, 렌의 모습이 눈에 들어온다.
+<<if C.npc.Wren.penis isnot "none">>렌은 사정하는 동안 <<person2>><<lady>>【을를】 자지 쪽으로 더 밀어붙이며 <<he>>【이가】 전부 삼키도록 한다. <<else>>렌은 <<person2>><<lady>>【을를】 더 깊이
+<<person1>><<his>> 보지에 밀어붙이며 <<person2>><<he>>【이가】 전부 핥아먹도록 한다 <</if>>
 <br><br>
-The fear of being caught is replaced by the overwhelming pleasure of the moment. After the intense moment passes, you find yourself
-scrambling to gather your thoughts, your mind a jumble of sensations and emotions. It's as if the world around you has shifted. You quickly
-duck away from the window and sit down for a moment, composing yourself after what just happened.
+들킬지 모른다는 두려움은 그 순간의 압도적인 쾌락에 밀려난다. 격렬한 순간이 지나가자 당신은
+감각과 감정이 뒤엉킨 머릿속을 추스르려 허둥대는 자신을 발견한다. 마치 주변 세상이 뒤바뀐 것만 같다. 당신은 재빨리
+창문에서 몸을 숨기고 잠시 주저앉아, 방금 있었던 일에서 마음을 가다듬는다.
 <br><br>
 
-<<link [[Knock|Estate Voyeurism Knock Dolp]]>><<set $phase to 6>><</link>>
+<<link [[노크한다|Estate Voyeurism Knock Dolp]]>><<set $phase to 6>><</link>>
 <br>
-<<link [[Leave|Estate Voyeurism Leave Dolp]]>><</link>>
+<<link [[떠난다|Estate Voyeurism Leave Dolp]]>><</link>>
 
 /*  :: Imagine yourself as one of them (not done)
 <<effects>><<person1>>
 <br><br>
-<<link [[Imagine yourself as Wren|Estate Voyeurism Imagine Wren Dolp]]>><</link>>
+<<link [[렌이 된 자신을 상상한다|Estate Voyeurism Imagine Wren Dolp]]>><</link>>
 <br>
-<<link [[Imagine yourself as the Goon|Estate Voyeurism Imagine Goon Dolp]]>><</link>>
+<<link [[패거리가 된 자신을 상상한다|Estate Voyeurism Imagine Goon Dolp]]>><</link>>
 :: Estate Voyeurism Imagine Wren Dolp
 <<effects>><<person1>>
 <<link [[다음|Estate Cards Intro]]>><</link>>
@@ -3063,169 +3063,169 @@ duck away from the window and sit down for a moment, composing yourself after wh
 
 <<if $phase is 1>>    /*watch 1*/
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you.
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다.
 	<<else>>
-	You stop your movements and duck away from the window, it's embarrasing to do this out in the open when anybody could catch you but that turns you
-	on too. Your hand is slightly damp from all the rubbing you have been doing, and you quickly wipe it on the grass below you.
+	당신은 움직임을 멈추고 창문에서 몸을 숨긴다. 누구에게든 들킬 수 있는 탁 트인 곳에서 이러는 건 창피하지만 그것도 당신을
+	흥분시킨다. 한참 문지른 탓에 손이 약간 축축해서, 재빨리 발밑의 풀에 닦는다.
 	<</if>>
-	A sudden sense of guilt washes over you, and you're torn between the desire to watch and the urge to intervene. "oh lord" you think to
-	yourself and with a shaky sigh, you muster up the courage to knock on the door. The sound startles Wren and <<person2>><<his>> goon,
-	and you can hear them quickly scramble to compose themselves.
+	갑작스러운 죄책감이 밀려와, 계속 지켜보고 싶은 욕망과 끼어들고 싶은 충동 사이에서 갈등한다. "세상에." 당신은 속으로
+	생각하고, 떨리는 한숨과 함께 용기를 내어 문을 두드린다. 그 소리에 렌과 <<person2>><<his>> 패거리가 깜짝 놀란다,
+	둘이 서둘러 몸가짐을 가다듬느라 허둥대는 소리가 들린다.
 	<br><br>
-	After a moment, Wren opens the door a little, slightly out of breath. Wren
-	<<if $bodysize lte 1>> looks down at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at you <</if>> and raises <<person1>><<his>> eyebrow, "You came to play?" <<person1>>
-	<<he>> says. "Couldn't have been at a better time." You hear him say under his breath.
+	잠시 후 렌이 숨을 조금 헐떡이며 문을 살짝 연다. 렌이
+	<<if $bodysize lte 1>> 당신을 내려다보고 <<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을 바라보고 <</if>> <<person1>><<his>> 눈썹을 치켜올린다. "한판 하러 왔어?" <<person1>>
+	<<he>>【이가】 말한다. "더없이 좋은 때에 왔네." 렌이 낮게 중얼거리는 소리가 들린다.
 
 <<elseif $phase is 2>>/*watch 2*/
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you. <br><br>
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다. <br><br>
 	<<else>>
-	You shake your head as a sudden sense of guilt washes over you, torn between the desire to watch and the urge to intervene.
+	갑작스러운 죄책감이 밀려와 고개를 젓는다. 계속 지켜보고 싶은 욕망과 끼어들고 싶은 충동 사이에서 갈등한다.
 	<</if>>
-	Taking a shaky breath, you compose yourself and knock on the door. The sound startles Wren out of his pleasure. You can hear <<person2>><<lady>> scrambles from
-	under the table, trying to compose <<him>>self quickly.
+	떨리는 숨을 들이쉬고 마음을 가다듬은 뒤 문을 두드린다. 그 소리에 렌이 쾌감에서 퍼뜩 깨어난다. <<person2>><<lady>>【이가】 탁자
+	밑에서 허둥지둥 기어 나와 서둘러 매무새를 가다듬는 소리가 들린다.
 	<br><br>
-	It takes a few moments for Wren to open the door, still breathing heavily. Wren<<if $bodysize lte 1>> looks down
-	at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at you <</if>> and raises <<person1>><<his>> eyebrow, "You came to play?" <<person1>>
-	<<he>> says. "Couldn't have been at a better time." You hear him mutter to <<him>>self.
+	렌이 문을 열기까지 몇 초가 걸린다. 여전히 숨을 거칠게 몰아쉬고 있다. 렌이<<if $bodysize lte 1>> 당신을 내려다보고
+	<<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을 바라보고 <</if>> <<person1>><<his>> 눈썹을 치켜올린다. "한판 하러 왔어?" <<person1>>
+	<<he>>【이가】 말한다. "더없이 좋은 때에 왔네." 렌이 혼잣말로 중얼거리는 소리가 들린다.
 
 <<elseif $phase is 3>>/*jerking it 1*/
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you. <br><br>
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다. <br><br>
 	<<else>>
-	You stop what you are doing and start second-guessing your depravity. Masturbating outside in the estate like this might be a bit too wild. A
-	sudden sense of embarrassment washes over you, and you shake your head.
+	당신은 하던 짓을 멈추고 자신의 타락을 되짚어 보기 시작한다. 이렇게 저택 밖에서 자위하는 건 좀 지나치게 과감한 짓일지도 모른다. 갑작스러운
+	창피함이 밀려와 당신은 고개를 젓는다.
 	<</if>>
-	but maybe alone or another time. With a defeated sigh, you compose yourself and knock on the door. You hear something fall behind it and Wren
-	muttering curse words.
+	하지만 혼자일 때나 다른 때라면 몰라도. 체념 섞인 한숨과 함께 마음을 가다듬고 문을 두드린다. 문 뒤에서 무언가 떨어지는 소리가 나고 렌이
+	욕설을 중얼거리는 소리가 들린다.
 	<br><br>
-	After a few seconds, <<person1>><<he>> opens the door with an annoyed expression. Wren<<if $bodysize lte 1>> looks down at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at
-	you <</if>> and raises <<person1>><<his>> eyebrow, "You came to play?" <<person1>><<he>> says. "Couldn't have been at a better time." You hear
-	him say sarcastically.
+	몇 초 뒤, <<person1>><<he>>【이가】 짜증 난 표정으로 문을 연다. 렌이<<if $bodysize lte 1>> 당신을 내려다보고 <<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을
+	바라보고 <</if>> <<person1>><<his>> 눈썹을 치켜올린다. "한판 하러 왔어?" <<person1>><<he>>【이가】 말한다. "더없이 좋은 때에 왔네." 렌이
+	비꼬듯 말하는 소리가 들린다.
 
 <<elseif $phase is 4>>/*jerking it 2*/
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you. <br><br>
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다. <br><br>
 	<<else>>
-	In the middle of your movements, you suddenly decide that you probably don't want to masturbate like this in the open. and quickly compose yourself
-	before anyone catches you. A wave of embarrassment washes over you, and you stand there in silence for a few moments.
+	한창 움직이던 중, 당신은 이렇게 탁 트인 곳에서 자위하는 건 아무래도 내키지 않는다고 문득 마음먹고는 누군가 들이닥치기 전에
+	재빨리 몸가짐을 가다듬는다. 창피함이 파도처럼 밀려오고, 당신은 잠시 말없이 그 자리에 서 있다.
 	<</if>>
-	 doing this out in the open is <<if $exhibitionism  gte 55>> exciting<<arousal 300>><<garousal>>. It makes your<<if $player.penisExist and $player.vaginaExist>>
-	pussy dripping wet and dick twitch hard <<elseif $player.penisExist>> dick twitch hard <<else>> pussy dripping wet <</if>> but you just can't
-	do it right now <<else>> excites you a lot but you can't do this right now<</if>>.
-	You let out a sigh and double check yourself before knocking on the door. You hear Wren's moan cut off with a cuss followed by a loud thunk as well.
+	 탁 트인 곳에서 이러는 건 <<if $exhibitionism  gte 55>> 짜릿하다<<arousal 300>><<garousal>>. 그 때문에 당신의<<if $player.penisExist and $player.vaginaExist>>
+	보지는 흠뻑 젖고 자지는 단단하게 꿈틀거린다 <<elseif $player.penisExist>> 자지는 단단하게 꿈틀거린다 <<else>> 보지는 흠뻑 젖는다 <</if>> 하지만 지금은 도저히
+	할 수가 없다 <<else>> 몹시 흥분되지만 지금은 이럴 수 없다<</if>>.
+	당신은 한숨을 내쉬고 다시 한번 몸가짐을 확인한 뒤 문을 두드린다. 렌의 신음이 욕설과 함께 뚝 끊기고, 이어 쿵 하는 큰 소리가 들린다.
 	<br><br>
-	After a few seconds <<person1>><<he>> opens the door with an annoyed expression. Wren<<if $bodysize lte 1>> looks down at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at you <</if>> and
-	raises <<person1>><<his>> eyebrow, "You came to play?" <<person1>><<he>> says. "Couldn't have been at a better time." You hear him mutter to <<him>>self.
+	몇 초 뒤 <<person1>><<he>>【이가】 짜증 난 표정으로 문을 연다. 렌이<<if $bodysize lte 1>> 당신을 내려다보고 <<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을 바라보고 <</if>>
+	<<person1>><<his>> 눈썹을 치켜올린다. "한판 하러 왔어?" <<person1>><<he>>【이가】 말한다. "더없이 좋은 때에 왔네." 렌이 혼잣말로 중얼거리는 소리가 들린다.
 
 <<elseif $phase is 5>>/*jerking it 3*/
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you.
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다.
 	<<else>>
-	You stop your movements and duck away from the window, it's embarrasing to do this out in the open when anybody could catch you but that turns you
-	on too. Your hand is slightly damp from all the rubbing you have been doing, and you quickly wipe it on the grass below you.
+	당신은 움직임을 멈추고 창문에서 몸을 숨긴다. 누구에게든 들킬 수 있는 탁 트인 곳에서 이러는 건 창피하지만 그것도 당신을
+	흥분시킨다. 한참 문지른 탓에 손이 약간 축축해서, 재빨리 발밑의 풀에 닦는다.
 	<</if>>
-	You let out a long sigh before standing up and composing yourself. You can hear Wren's moans ring thoughout the cottage getting louder and louder
-	by the second. Shaking your head to recompose yourself, you stand infront of the door and knock loudly. The sound of knocking makes wren mutter
-	cursewords under <<person1>><<his>> breath before <<he>> yells out, "just give me one second!" You can head the sound of a chair scraping and out
-	of nowhere there is a sputtering sound from what you assume is the <<person2>><<lady>>. You hold your ear to the door and hear Wren curse more under
-	<<person1>><<his>> breath, you can make out some of the words.
+	당신은 길게 한숨을 내쉬고 일어서서 몸가짐을 가다듬는다. 렌의 신음이 오두막 안에 울려 퍼지며 시시각각
+	점점 더 커진다. 고개를 저어 마음을 다잡고 문 앞에 서서 크게 노크한다. 노크 소리에 렌이
+	숨죽여 욕설을 중얼거리다가 <<he>>【이가】 소리친다. "잠깐만 기다려!" 의자가 끌리는 소리가 들리고 갑자기
+	<<person2>><<lady>>【이가】 내는 것으로 짐작되는 켁켁거림이 들린다. 당신은 문에 귀를 대고, 렌이 더 욕설을 내뱉는 것을 듣는다.
+	<<person1>><<his>> 낮은 중얼거림 속에서 몇 마디는 알아들을 수 있다.
 	<br><br>
-	"F--ck,<br>
-	Ke-- go--- a b-t --re, <br>
-	T--e it --l im al---- t--re, <br>
-	Yo- wan--d ---s now --u get---- it, <br>
-	Th--- it k--p ---ng, <br>
-	I'm al--st t--re, <br>
-	Fu-- m-" <br>
+	"씨-발,<br>
+	조-금만 더 계-해, <br>
+	다 -아, 나 거-- 다 -어, <br>
+	원-잖아, 이-- 받-- 잖아, <br>
+	그-, 계-해, <br>
+	나 거-- 다 -어, <br>
+	씨- 나-" <br>
 	<br><br>
-	All of the sudden you hear a low moan and wren yells out "Fuuuuucccckkkk!" The sound of the <<person2>><<lady>> Sputtering for air plays loudly
-	from the other side of the door. it takes wren a couple of seconds and opens the door still out of breath.
+	갑자기 낮은 신음이 들리더니 렌이 "씨이이이발!" 하고 외친다. <<person2>><<lady>>【이가】 숨을 쉬려고 켁켁거리는 소리가 크게
+	문 너머에서 울려 퍼진다. 렌이 몇 초 걸려 문을 열고, 아직도 숨이 차 있다.
 	<br><br>
-	Wren<<if $bodysize lte 1>> looks down at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at you <</if>> and raises <<person1>><<his>> eyebrow, "You came to play?"
-	<<person1>><<he>> says. "Couldn't have been at a better time." You hear him say sarcastically.
+	렌이<<if $bodysize lte 1>> 당신을 내려다보고 <<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을 바라보고 <</if>> <<person1>><<his>> 눈썹을 치켜올린다. "한판 하러 왔어?"
+	<<person1>><<he>>【이가】 말한다. "더없이 좋은 때에 왔네." 렌이 비꼬듯 말하는 소리가 들린다.
 
 <<elseif $phase is 6>>/*jerked off*/
-	You wait a few moments before knocking to make sure wren and the <<person2>><<lady>> are done. in the meantime check nobody saw you either,
-	you let out a sigh of relief before knocking on the door. it takes wren a couple of seconds to get to the door.
+	당신은 렌과 <<person2>><<lady>>【이가】 끝났는지 확인하려고 노크하기 전에 잠시 기다린다. 그동안 아무도 당신을 보지 않았는지도 확인하고,
+	안도의 한숨을 내쉰 뒤 문을 두드린다. 렌이 문까지 오는 데 몇 초가 걸린다.
 	<br><br>
-	When the door does opens Wren<<if $bodysize lte 1>> looks down at you <<elseif $bodysize gte 4>> looks up at you <<else>> looks at you <</if>> and raises <<person1>><<his>> eyebrow,
-	"You came to play?" <<person1>><<he>> says. "Couldn't have been at a better time."
+	마침내 문이 열리자 렌이<<if $bodysize lte 1>> 당신을 내려다보고 <<elseif $bodysize gte 4>> 당신을 올려다보고 <<else>> 당신을 바라보고 <</if>> <<person1>><<his>> 눈썹을 치켜올린다.
+	"한판 하러 왔어?" <<person1>><<he>>【이가】 말한다. "더없이 좋은 때에 왔네."
 <<elseif  $phase is 7>>
 	<<if $orgasmcurrent gte 1>>
-	You quickly duck away from the window after cumming, sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this but at the same time it turns you on alot too. Your hand is slightly damp from your cum and you quickly wipe it on the grass
-	below you. <br><br>
+	절정에 이른 뒤 당신은 재빨리 창문 밑으로 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다. 손이 정액으로 약간 축축해져서 재빨리 발밑에 있는
+	풀에 닦는다. <br><br>
 	<<else>>
-	You quickly duck away from the window. sliding down the side of the building untill you are sitting. it's embarrasing to do this
-	out in the open like this spying on someone but at the same time it turns you on alot too.
+	당신은 재빨리 창문에서 몸을 숨기고, 건물 벽을 타고 주저앉을 때까지 미끄러져 내려간다. 이런 짓을
+	탁 트인 곳에서 남을 훔쳐보며 하는 건 창피하지만, 동시에 몹시 흥분되기도 한다.
 	<</if>>
-	you let out a sigh and double check yourself before knocking on the door. The footsteps get louder and Wren opens the door with a pleased exspression on
-	<<person1>><<his>> face.
+	당신은 한숨을 내쉬고 다시 한번 몸가짐을 확인한 뒤 문을 두드린다. 발소리가 점점 커지더니 렌이 문을 연다. 만족스러운 표정이
+	<<person1>><<his>> 얼굴에 떠올라 있다.
 
 <<else>>
 <</if>>
 <br><br>
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
-	"a-am I i-interrupting s-s-something here?"
+	"제-제가 뭔가 방, 방해하고 있는 건가요?"
 <<elseif $speech_attitude is "bratty">>
-	You let out a chuckle. "Seems like you guys were having some fun," you say with a grin.
+	당신은 킥킥 웃는다. "다들 꽤 즐기고 있었나 보네." 당신이 씩 웃으며 말한다.
 <<else>>
-	"I didn't know I was interrupting."
+	"방해하는 줄 몰랐어요."
 <</if>>
 <br><br>
 
-Wren rolls <<person1>><<his>> eyes and sighs. You can see a slight blush creep up <<his>> cheeks. "You weren't interrupting anything, don't worry,"
+렌이 눈을 굴리며 한숨을 쉰다. <<his>> 뺨에 옅은 홍조가 번지는 것이 보인다. "방해한 거 없으니까 걱정하지 마."
 <<he>>【이가】 말한다.
 <<if $orgasmcurrent gte 1>>
-	Wren looks at the wet spot on your <<bottoms>> and grins "It seems like you had fun watching, maybe you want to join next time <<arousal 200>><<garousal>>
+	렌이 당신의 <<bottoms>> 위의 젖은 자국을 보고 씩 웃는다. "구경하는 게 즐거웠나 보네, 다음엔 같이하고 싶을지도 모르겠는데 <<arousal 200>><<garousal>>
 <<else>>
 <</if>>
 <br><br>
 
-<<He>> walks away from the door, returns to <<his>> spot, and lets out a cough. After a moment, the rest of the goons flood back into the room.
+<<He>>【은는】 문에서 물러나 제자리로 돌아가 헛기침을 한다. 잠시 후, 나머지 패거리들이 방 안으로 우르르 돌아온다.
 <br><br>
 <<if $orgasmcurrent gte 1>>
 	<<set $estate_cards_end to "Dolp_Wren_Came">>
 	<<else>>
 	<<set $estate_cards_end to "Dolp_Wren_voyeurism">>
 	<</if>>
-<<link [[Next|Estate Cards Intro]]>><<endevent>><</link>>
+<<link [[다음|Estate Cards Intro]]>><<endevent>><</link>>
 
 :: Estate Voyeurism Enter Dolp
 <<effects>><<person1>>
-As you step into the cottage, you catch Wren hastily pulling up <<his>> pants. One of Wren's goons emerges hurriedly from under the table.
+오두막 안으로 들어서자, 렌이 서둘러 바지를 끌어올리는 모습이 눈에 들어온다. 렌의 패거리 중 한 명이 탁자 밑에서 허둥지둥 기어 나온다.
 <br><br>
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
-	"I-I-I'm sorry, a-am I i-interrupting s-s-something here?"
+	"조-죄송해요, 제-제가 뭔가 방, 방해하고 있는 건가요?"
 <<elseif $speech_attitude is "bratty">>
-	You let out a chuckle. "Seems like you guys are having some fun," you say with a grin.
+	당신은 킥킥 웃는다. "다들 꽤 즐기고 있나 보네." 당신이 씩 웃으며 말한다.
 <<else>>
-	"Oh, sorry, I didn't know I was interrupting."
+	"아, 죄송해요. 방해하는 줄 몰랐어요."
 <</if>>
 <br><br>
-Wren rolls <<his>> eyes and sighs. You can see a slight blush creep up <<his>> cheeks. "You weren't interrupting something, don't worry,"
-<<he>> says. <<He>> lets out a cough, and after a second, the rest of the goons flood back into the room.
+렌이 눈을 굴리며 한숨을 쉰다. <<his>> 뺨에 옅은 홍조가 번지는 것이 보인다. "방해한 거 없으니까 걱정하지 마."
+<<he>>【이가】 말한다. <<He>>【은는】 헛기침을 하고, 잠시 후 나머지 패거리들이 방 안으로 우르르 돌아온다.
 <br><br>
-<<link [[Next|Estate Cards Intro]]>><<endevent>><</link>>
+<<link [[다음|Estate Cards Intro]]>><<endevent>><</link>>
 
 :: Estate Voyeurism Leave Dolp
 <<effects>>
 
-The scene unfolding before you is too much to handle, and you quickly avert your gaze. You turn on your heel and hurry away, trying
-to push the image out of your mind.
+눈앞에서 벌어지는 광경은 감당하기에 너무 벅차서, 당신은 재빨리 시선을 돌린다. 홱 돌아서서 서둘러 자리를 뜨며
+그 장면을 머릿속에서 몰아내려 애쓴다.
 <br>
-It's best to avoid getting involved in Wren's affairs, you remind yourself. You've got enough
-problems of your own to deal with.
+렌의 일에 휘말리지 않는 게 상책이라고 당신은 스스로에게 되뇐다. 당신에게도 감당해야 할
+문제가 충분히 많으니까.
 <br><br>
 <<link [[다음|Estate]]>><<endevent>><</link>>

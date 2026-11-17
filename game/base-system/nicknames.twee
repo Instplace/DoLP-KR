@@ -269,23 +269,23 @@
 					<</if>>
 				<<else>>
 					<<if $fame.scrap gte 4000>>
-						<<set _text_output to "The Undisputed">>
+						<<set _text_output to "무적의 챔피언">>
 					<<elseif $fame.scrap gte 3600>>
-						<<set _text_output to "The Champ">>
+						<<set _text_output to "챔피언">>
 					<<elseif $fame.scrap gte 3200>>
-						<<set _text_output to "Knockout King">>
+						<<set _text_output to "KO의 왕">>
 					<<elseif $fame.scrap gte 2800>>
-						<<set _text_output to "Iron Fist">>
+						<<set _text_output to "강철 주먹">>
 					<<elseif $fame.scrap gte 2400>>
-						<<set _text_output to "Bonebreaker">>
+						<<set _text_output to "뼈 부수는 자">>
 					<<elseif $fame.scrap gte 2000>>
-						<<set _text_output to "Street King">>
+						<<set _text_output to "길거리의 왕">>
 					<<elseif $fame.scrap gte 1600>>
-						<<set _text_output to "Heavy Hitter">>
+						<<set _text_output to "강타자">>
 					<<elseif $fame.scrap gte 1200>>
-						<<set _text_output to "Brawler">>
+						<<set _text_output to "난투꾼">>
 					<<elseif $fame.scrap gte 800>>
-						<<set _text_output to "Slugger">>
+						<<set _text_output to "주먹잡이">>
 					<<elseif $fame.scrap gte 400>>
 						<<if $fame.pimp gte 400>>
 							<<set _text_output to "그 쥐새끼">>
@@ -827,64 +827,64 @@
 <<widget "overworld_nickname_dolp">><<silently>>
 	<<set $fameTitles = {
 		"good": [
-			{ "level": 400, "title": "Kind Soul" },
-			{ "level": 800, "title": "Compassionate" },
-			{ "level": 1600, "title": "Saintly Figure" },
-			{ "level": 2400, "title": "Beacon of Hope" },
-			{ "level": 3200, "title": "Paragon" },
-			{ "level": 4000, "title": "Saintly Icon" }
+			{ "level": 400, "title": "마음씨 고운 사람" },
+			{ "level": 800, "title": "자비로운 사람" },
+			{ "level": 1600, "title": "성인 같은 인물" },
+			{ "level": 2400, "title": "희망의 등불" },
+			{ "level": 3200, "title": "귀감" },
+			{ "level": 4000, "title": "성스러운 상징" }
 		],
 		"business": [
-			{ "level": 400, "title": "Hustler" },
-			{ "level": 800, "title": "Entrepreneur" },
-			{ "level": 1600, "title": "Deal Maker" },
-			{ "level": 2400, "title": "Tycoon" },
-			{ "level": 3200, "title": "Kingpin" },
-			{ "level": 4000, "title": "The Empire Builder" }
+			{ "level": 400, "title": "수완가" },
+			{ "level": 800, "title": "기업가" },
+			{ "level": 1600, "title": "거래의 달인" },
+			{ "level": 2400, "title": "재벌" },
+			{ "level": 3200, "title": "업계의 거두" },
+			{ "level": 4000, "title": "제국의 건설자" }
 		],
 		"social": [
-			{ "level": 400, "title": "Social Butterfly" },
-			{ "level": 800, "title": "Trendsetter" },
-			{ "level": 1600, "title": "Influencer" },
-			{ "level": 2400, "title": "High Society" },
-			{ "level": 3200, "title": "The Charmer" },
-			{ "level": 4000, "title": "The Icon" }
+			{ "level": 400, "title": "사교계의 나비" },
+			{ "level": 800, "title": "유행의 선구자" },
+			{ "level": 1600, "title": "인플루언서" },
+			{ "level": 2400, "title": "상류 사회" },
+			{ "level": 3200, "title": "매력쟁이" },
+			{ "level": 4000, "title": "아이콘" }
 		],
 		"model": [
-			{ "level": 400, "title": "Pretty Face" },
-			{ "level": 800, "title": "Cover Star" },
-			{ "level": 1600, "title": "Runway Sensation" },
-			{ "level": 2400, "title": "Editorial Icon" },
-			{ "level": 3200, "title": "Supermodel Muse" },
-			{ "level": 4000, "title": "Photoshoot Legend" }
+			{ "level": 400, "title": "예쁜 얼굴" },
+			{ "level": 800, "title": "표지 모델" },
+			{ "level": 1600, "title": "런웨이의 돌풍" },
+			{ "level": 2400, "title": "화보의 아이콘" },
+			{ "level": 3200, "title": "슈퍼모델 뮤즈" },
+			{ "level": 4000, "title": "촬영장의 전설" }
 		],
 		"combinations": [
-			{ "levels": [400, 400], "categories": ["good", "business"], "title": "Compassionate Capitalist" },
-			{ "levels": [400, 400], "categories": ["good", "social"], "title": "Beloved Figure" },
-			{ "levels": [400, 400], "categories": ["good", "model"], "title": "Graceful Icon" },
-			{ "levels": [400, 400], "categories": ["business", "social"], "title": "Networking Guru" },
-			{ "levels": [400, 400], "categories": ["business", "model"], "title": "Corporate Star" },
-			{ "levels": [400, 400], "categories": ["social", "model"], "title": "Photogenic Charmer" },
+			{ "levels": [400, 400], "categories": ["good", "business"], "title": "자비로운 자본가" },
+			{ "levels": [400, 400], "categories": ["good", "social"], "title": "사랑받는 인물" },
+			{ "levels": [400, 400], "categories": ["good", "model"], "title": "우아한 아이콘" },
+			{ "levels": [400, 400], "categories": ["business", "social"], "title": "인맥의 달인" },
+			{ "levels": [400, 400], "categories": ["business", "model"], "title": "기업계의 스타" },
+			{ "levels": [400, 400], "categories": ["social", "model"], "title": "사진발 좋은 매력쟁이" },
 
-			{ "levels": [1600, 1600], "categories": ["good", "business"], "title": "Altruistic Mogul" },
-			{ "levels": [1600, 1600], "categories": ["good", "social"], "title": "Saint of the People" },
-			{ "levels": [1600, 1600], "categories": ["good", "model"], "title": "Elegance Embodied" },
-			{ "levels": [1600, 1600], "categories": ["business", "social"], "title": "Social Mogul" },
-			{ "levels": [1600, 1600], "categories": ["business", "model"], "title": "Marketable Beauty" },
-			{ "levels": [1600, 1600], "categories": ["social", "model"], "title": "Celebrity" },
+			{ "levels": [1600, 1600], "categories": ["good", "business"], "title": "이타적인 거물" },
+			{ "levels": [1600, 1600], "categories": ["good", "social"], "title": "민중의 성인" },
+			{ "levels": [1600, 1600], "categories": ["good", "model"], "title": "우아함의 화신" },
+			{ "levels": [1600, 1600], "categories": ["business", "social"], "title": "사교계의 거물" },
+			{ "levels": [1600, 1600], "categories": ["business", "model"], "title": "상품성 있는 미인" },
+			{ "levels": [1600, 1600], "categories": ["social", "model"], "title": "셀럽" },
 
-			{ "levels": [3200, 3200], "categories": ["good", "business"], "title": "Philanthropist Tycoon" },
-			{ "levels": [3200, 3200], "categories": ["good", "social"], "title": "Guiding Light" },
-			{ "levels": [3200, 3200], "categories": ["good", "model"], "title": "Divine Beauty" },
-			{ "levels": [3200, 3200], "categories": ["business", "social"], "title": "Power Broker" },
-			{ "levels": [3200, 3200], "categories": ["business", "model"], "title": "Media Mogul" },
-			{ "levels": [3200, 3200], "categories": ["social", "model"], "title": "Fashion Royalty" },
+			{ "levels": [3200, 3200], "categories": ["good", "business"], "title": "자선가 재벌" },
+			{ "levels": [3200, 3200], "categories": ["good", "social"], "title": "길을 밝히는 빛" },
+			{ "levels": [3200, 3200], "categories": ["good", "model"], "title": "신성한 미인" },
+			{ "levels": [3200, 3200], "categories": ["business", "social"], "title": "막후 실력자" },
+			{ "levels": [3200, 3200], "categories": ["business", "model"], "title": "미디어 거물" },
+			{ "levels": [3200, 3200], "categories": ["social", "model"], "title": "패션계의 왕족" },
 
-			{ "levels": [4000, 4000, 4000, 4000], "categories": ["good", "business", "social", "model"], "title": "The One and Only" }
+			{ "levels": [4000, 4000, 4000, 4000], "categories": ["good", "business", "social", "model"], "title": "단 하나뿐인 존재" }
 		]
 	} >>
 	<<set _fame_types = ["good", "business", "social", "model"]>>
-	<<set _text_output = "Some Orphan">>  <!-- Default title -->
+	<<set _text_output = "평범한 고아">>  <!-- Default title -->
 	<<set _highest_fame = {}>>  <!-- Track highest title per fame type -->
 
 	<!-- Get highest fame titles -->
@@ -913,7 +913,7 @@
 	<</for>>
 
 	<!-- If no combination title matched, use the highest individual one -->
-	<<if _text_output is "Some Orphan" and _highest_fame[Object.keys(_highest_fame)[0]] isnot undefined>>
+	<<if _text_output is "평범한 고아" and _highest_fame[Object.keys(_highest_fame)[0]] isnot undefined>>
 		<<set _text_output = _highest_fame[Object.keys(_highest_fame)[0]]>>
 	<</if>>
 

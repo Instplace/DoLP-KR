@@ -222,7 +222,7 @@
 				뒤에서 레미가 소리치는 것이 들리지만, <<steed_text>>【이가】 당신을 언덕 아래 숲이 우거진 작은 골짜기로 데려가면서 목소리는 점점 희미해진다. <<steed_He>>【이가】 뒷다리로 일어서며 당신을 땅으로 내동댕이친다.
 				<br><br>
 
-				<<steed_He>> turns to face you, a fierceness in <<steed_his>> eyes.<<gthighskill>><<thighskill 6>>
+				<<steed_He>>【이가】 당신을 향해 돌아선다. <<steed_his>> 눈에는 사나움이 번뜩인다.<<gthighskill>><<thighskill 6>>
 				<br><br>
 
 				<<link [[<<steed_him>>【을를】 진정시킨다|Riding School Lesson Calm]]>><</link>><<tendingdifficulty 600 1200>>
@@ -231,7 +231,7 @@
 				<br>
 			<<else>>
 				당신은 간신히 말을 통제하지만, 몇몇 신입생들은 통제력을 잃는다. 레미가 그들을 쫓아가 다른 이들에게로 몰아온다.
-				Your <<steed_text>> lurches aside, and gallops. You throw your arms around <<steed_his>> neck and cling as hard as you can, until Remy catches up and grasps the reins, pulling you to a stop.<<gstress>><<stress 6>><<gthighskill>><<thighskill 6>>
+				당신의 <<steed_text>>【이가】 옆으로 비틀거리더니 질주한다. 당신은 <<steed_his>> 목을 끌어안고 최대한 꽉 매달린다. 마침내 레미가 따라잡아 고삐를 잡고 당신을 멈춰 세운다.<<gstress>><<stress 6>><<gthighskill>><<thighskill 6>>
 				<br><br>
 
 				<<link [[다음|Riding School Lesson]]>><</link>>
@@ -340,7 +340,7 @@
 			당신은 언덕을 올라 빽빽한 덤불 속으로 들어간다. 나무 덮개가 당신의 옷을 긁고 찢는다.
 			<br><br>
 
-			You feel a tug at your waist. A thin branch has threaded itself through the fabric of your $worn.lower.name. Your <<steed_text>> continues to walk forward, but the branch is taut and threatens to pull you off the saddle.<<gthighskill>><<thighskill 6>>
+			허리에서 무언가 당기는 느낌이 든다. 가는 나뭇가지가 당신의 $worn.lower.name 천을 꿰뚫고 들어갔다. 당신의 <<steed_text>>【은는】 계속 앞으로 나아가지만, 나뭇가지는 팽팽하게 당겨져 당신을 안장에서 끌어내릴 기세다.<<gthighskill>><<thighskill 6>>
 			<br><br>
 
 			<<link [[말에게 멈추라고 말한다|Riding School Lesson Stop]]>><</link>><<tendingdifficulty 1 700>>
@@ -350,7 +350,7 @@
 			<<link [[그냥 끌려 내려간다|Riding School Lesson Pulled]]>><<pain 4>><<stress 6>><</link>><<gpain>><<gstress>>
 			<br>
 		<<else>>
-			A <<generate1>><<person1>><<person>> rides up to you. Seems <<he>> wants to chat.<<gthighskill>><<thighskill 6>>
+			<<generate1>><<person1>>한 <<person>>【이가】 당신에게 말을 타고 다가온다. <<he>>【이가】 대화를 나누고 싶어 하는 것 같다.<<gthighskill>><<thighskill 6>>
 			<br><br>
 
 			<<link [[대화한다|Riding School Lesson Proposition]]>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
@@ -383,13 +383,13 @@
 			<<link [[다음|Riding School Lesson]]>><<endevent>><</link>>
 			<br>
 		<<elseif $rng gte 41>>
-			Remy leads you across a tranquil meadow.<<lstress>><<stress -6>><<gthighskill>><<thighskill 6>>
+			레미가 당신을 고요한 초원으로 이끈다.<<lstress>><<stress -6>><<gthighskill>><<thighskill 6>>
 			<br><br>
 
 			<<link [[다음|Riding School Lesson]]>><</link>>
 			<br>
 		<<elseif $rng gte 21>>
-			<<generate1>><<person1>>A <<person>> rides alongside you. Seems <<he>> wants to chat.<<gthighskill>><<thighskill 6>>
+			<<generate1>><<person1>>한 <<person>>【이가】 당신 옆으로 말을 타고 온다. <<he>>【이가】 대화를 나누고 싶어 하는 것 같다.<<gthighskill>><<thighskill 6>>
 			<br><br>
 
 			<<link [[대화한다|Riding School Lesson Chat]]>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
@@ -398,7 +398,7 @@
 			<br>
 
 		<<else>>
-			You're led up a hill, into a dense copse of trees. Plump fruit hangs from overhanging branches. <<gthighskill>><<thighskill 6>>
+			당신은 언덕 위, 빽빽한 나무 숲으로 이끌려 들어간다. 머리 위 나뭇가지에는 통통한 과일이 매달려 있다. <<gthighskill>><<thighskill 6>>
 			<br><br>
 
 			<<link [[하나 잡는다|Riding School Lesson Grab]]>><</link>>

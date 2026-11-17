@@ -185,7 +185,7 @@
 				<<stallicon "open">><<link [[가판대를 관리한다 (0:20)|Stall]]>><<pass 20>><</link>>
 				<br>
 			<</if>>
-			<<icon "projectMaths.png">><<link [[Manage your stall|Stall Manage]]>><</link>>
+			<<icon "projectMaths.png">><<link [[가판대를 관리한다|Stall Manage]]>><</link>>
 			<br>
 		<</if>>
 		<<if (Time.dayState is "dawn" or $daily.stallRented is 1) and Time.dayState isnot "night" and $money gte 3000 and $exposed lte 0>>
@@ -194,7 +194,7 @@
 			<<else>>
 				<<set _string to "a">>
 			<</if>>
-			<<stallicon>><<link [["Put down a deposit for " + _string + " stall (0:05 £30)"|Stall Deposit]]>><<pass 5>><</link>>
+			<<stallicon>><<link [[""+(_string is "your" ? "자신의 " : "")+"가판대 보증금을 낸다 (0:05 £30)"|Stall Deposit]]>><<pass 5>><</link>>
 			<br>
 		<</if>>
 		<<if Time.hour gte 6 and Time.hour lte 20 and $exposed lte 0>>

@@ -1795,25 +1795,25 @@
 	<<if modLISelected("Poppy")>>
 		<<if isLoveInterest("Poppy")>>
 			<<addinlineevent 1>>
-				You wonder where Poppy is at.
+				당신은 포피가 지금 어디 있을지 궁금해진다.
 			<</addinlineevent>>
 			<<addinlineevent 1>>
-				You wonder if Poppy enjoys fresh fish.
+				당신은 포피가 신선한 생선을 좋아할지 궁금해진다.
 			<</addinlineevent>>
 			<<if $poppyFlat.kickedUntilDay gte Time.days>>
 				<<addinlineevent 1>>
-					You wince at the reminder that Poppy has not forgiven you for your recent behaviour.
+					포피가 최근 당신의 행동을 아직 용서하지 않았다는 사실이 떠올라 얼굴을 찌푸린다.
 				<</addinlineevent>>
 			<</if>>
 		<</if>>
 		<<if $valentines and $valentines_poppy_flat_accept is 1 and Time.hour lt 20>>
 			<<addinlineevent 1>>
-				You wonder what surprise Poppy has prepared for Valentine's.
+				당신은 포피가 발렌타인데이에 어떤 깜짝 선물을 준비했을지 궁금해진다.
 			<</addinlineevent>>
 		<</if>>
 		<<if $poppySeen.includes("dismissal_glare")>>
 			<<addinlineevent 1>>
-				Your thought turns to Poppy and <<nnpc_his "Poppy">> expression whenever <<nnpc_he "Poppy">> sees you. When did everything go wrong? <<stress 3>><<gstress>>
+				당신의 생각이 포피에게로, 그리고 당신을 볼 때마다 포피가 짓는 표정으로 향한다. 언제부터 모든 게 잘못된 걸까? <<stress 3>><<gstress>>
 			<</addinlineevent>>
 		<</if>>
 	<</if>>

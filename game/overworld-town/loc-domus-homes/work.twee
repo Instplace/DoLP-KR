@@ -50,7 +50,7 @@
 
 	<<socialiseicon>><<link [[고개를 끄덕인다|Domus Model Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -63,7 +63,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Errand Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -76,7 +76,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Shy Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -89,7 +89,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Gutters Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -102,7 +102,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Lounge Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -115,7 +115,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Tech Support Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [["주소를 잘못 찾았다고 말하고 떠난다"|Domus Street]]>><<endevent>><</link>>
 <</addinlineevent>>
@@ -127,7 +127,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Delivery Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -143,7 +143,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Babysitting Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 <</addinlineevent>>
@@ -176,7 +176,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Painting Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -189,7 +189,7 @@
 
 	<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Homework Intro]]>><</link>>
 	<br>
-	<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+	<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 	<br>
 	<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 	<br>
@@ -259,7 +259,7 @@
 
 			<<socialiseicon "ask">><<link [[일거리를 구한다|Domus Loft Intro]]>><</link>>
 			<br>
-			<<domusicon>><<link [[Excuse yourself and knock on another door (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
+			<<domusicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Domus House Knock]]>><<pass 1>><<endevent>><</link>>
 			<br>
 			<<domusicon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Domus Street]]>><<endevent>><</link>>
 			<br>
@@ -2263,7 +2263,7 @@
 <<lstress>><<stress -1>>
 <<money `(_payout)`>><<set $blackmoney += random(30,70)>>
 <br><br>
-<<link [[Next|Domus Street]]>><<endcombat>><</link>>
+<<link [[다음|Domus Street]]>><<endcombat>><</link>>
 <br>
 
 :: Domus Errand

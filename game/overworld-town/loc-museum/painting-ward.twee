@@ -18,19 +18,19 @@
 	<<switch $speech_attitude>>
 		<<case "meek" "special">>
 			<<if $speech_attitude_special is "docile">>
-				"S-someone we both know helped me," you say, putting your hands behind your back guiltily. "I-I'm sorry... I-is it wrong to steal back from thieves?"
+				"저-저희 둘 다 아는 분이 도와줬어요." 두 손을 등 뒤로 숨긴 채 죄책감 어린 표정으로 말한다. "죄-죄송해요... 도둑한테서 도로 훔쳐 오는 게 잘못인가요?"
 			<<else>>
 				"아는 친구가 도와줬어요." 두 손을 등 뒤로 숨긴 채 죄책감 어린 표정으로 말한다. "도둑한테서 물건을 되찾아오는 게... 나쁜 일인가요?"
 			<</if>>
 		<<case "bratty" "confident">>
 			<<if $speech_attitude_special is "cruel">>
-				"Little birdie told me. Distracted some idiots and got my hands on the painting. Nothing wrong with stealing from thieves," you say.
+				"작은 새가 알려 줬거든요. 멍청이 몇 놈 시선을 돌려 놓고 그림을 손에 넣었죠. 도둑한테서 훔치는 건 잘못이 아니에요." 당신이 말한다.
 			<<else>>
 				"전에 같이 일했던 사람이 시선을 끌어달라고 꼬시더라고요. 도둑한테서 훔치는 건 나쁜 게 아니죠." 대수롭지 않다는 듯 말한다.
 			<</if>>
 			"전에 같이 일했던 사람이 시선을 끌어달라고 꼬시더라고요. 도둑한테서 훔치는 건 나쁜 게 아니죠." 대수롭지 않다는 듯 말한다.
 		<<case "polite" "flamboyant">>
-			"One of our mutual friends helped me dig it out of a collection," you say plainly. "It was obviously stolen, so I figured its place is in the museum."
+			"우리 둘 다 아는 친구가 수집품 속에서 이걸 파내는 걸 도와줬어요." 담담하게 말한다. "명백히 도둑맞은 물건이니 제자리는 박물관이라고 생각했어요."
 		<<default>>
 			"아는 친구의 도움으로 수집품 속에서 파냈어요." 담담하게 말한다. "명백히 도둑맞은 물건이었으니 되찾아온 것뿐이에요. 여기에 있는 게 더 나으니까요."
 	<</switch>>
@@ -41,16 +41,16 @@
 	<<switch $speech_attitude>>
 		<<case "meek" "shy" "special">>
 			<<if $speech_attitude_special is "docile">>
-				"I-I though it was stolen," you mumble, putting your hands behind your back guiltily. "I-I'm sorry, was I wrong?"
+				"도-도둑맞은 물건인 줄 알았어요." 두 손을 등 뒤로 숨긴 채 죄책감 어린 표정으로 웅얼거린다. "죄-죄송해요, 제가 잘못한 건가요?"
 			<<else>>
 				"도둑맞은 물건이라는 걸 알았어요." 두 손을 등 뒤로 숨긴 채 죄책감 어린 표정으로 말한다. "도둑한테서 물건을 되찾아오는 게... 나쁜 일인가요?"
 			<</if>>
 			"도둑맞은 물건이라는 걸 알았어요." 두 손을 등 뒤로 숨긴 채 죄책감 어린 표정으로 말한다. "도둑한테서 물건을 되찾아오는 게... 나쁜 일인가요?"
 		<<case "polite" "flamboyant">>
-			"I could tell it was stolen," you say plainly. "Since it was stolen before, I figured it's proper place is in the museum."
+			"도둑맞은 물건이라는 걸 알 수 있었어요." 담담하게 말한다. "예전에 도둑맞은 물건이니 제자리는 박물관이라고 생각했어요."
 		<<case "bratty">>
 			<<if $speech_attitude_special is "cruel">>
-				"Stole it, what else?" you chuckle. "Don't worry, old <<personsimple>>, it had 'already stolen' written all over it. So I took it."
+				"훔쳤죠, 달리 뭐겠어요?" 당신이 낄낄댄다. "걱정 마요, 늙은 <<personsimple>>【아야】. 이마에 '이미 도둑맞음'이라고 써 있던걸요. 그래서 가져왔죠."
 			<<else>>
 				"훔쳤어요." 담담하게 말한다. "그렇다고 제가 범죄자인 건 아니지만요. '이미 도둑맞음'이라고 이마에 써 있는 걸요."
 			<</if>>
@@ -82,7 +82,7 @@
 <<switch $speech_attitude>>
 	<<case "meek">>
 		<<if $speech_attitude_special is "docile">>
-			"I-I just... sort of... found it rolled up in a collection," you mumble. "I don't think the owner will look for it."
+			"저-저는 그냥... 수집품 속에 말려 있는 걸... 발견했어요." 당신이 웅얼거린다. "주인이 찾지는 않을 것 같아요."
 		<<else>>
 			"그냥... 수집품 속에 말려 있던 걸 발견했어요." 당신이 말한다. "원주인도 잃어버린 줄 모를걸요."
 		<</if>>
@@ -1572,14 +1572,14 @@
 <<switch $speech_attitude>>
 	<<case "meek">>
 		<<if $speech_attitude_special is "docile">>
-			"I-I think I'd want to hear the rest of your story, <<= C.npc.Winter.pronoun is "m" ? "mister" : "miss">> Winter" you say quietly. "P-please..."
+			"저-저는 나머지 이야기를 듣고 싶어요, <<= C.npc.Winter.pronoun is "m" ? "윈터 선생님" : "윈터 선생님">>." 당신이 조용히 말한다. "제-제발요..."
 		<<else>>
 			"나-나머지 이야기 마저 들려주세요." 윈터에게 말한다.
 		<</if>>
 	<<case "shy">>
-			"I'd want to hear the rest," you say to Winter.
+			"나머지를 듣고 싶어요." 윈터에게 말한다.
 	<<case "polite" "flamboyant" "special">>
-			"Oh but please, I'd want to hear the rest of your story," you say to Winter.
+			"아, 제발요, 나머지 이야기도 꼭 듣고 싶어요." 윈터에게 말한다.
 	<<case "bratty">>
 		"시간 남으니까, 그 나머지 이야 마저 해줘요." 윈터에게 말한다.
 	<<default>>
@@ -1601,17 +1601,17 @@
 <<switch $speech_attitude>>
 	<<case "meek">>
 		<<if $speech_attitude_special is "docile">>
-			"I-I think I'd want to hear the rest, <<= C.npc.Winter.pronoun is "m" ? "mister" : "miss">> Winter" you say quietly and lean forward in your chair a bit. "P-please..."
+			"저-저는 나머지를 듣고 싶어요, <<= C.npc.Winter.pronoun is "m" ? "윈터 선생님" : "윈터 선생님">>." 당신이 조용히 말하며 의자에서 살짝 몸을 기울인다. "제-제발요..."
 		<<else>>
 			"나-나머지 이야기를 듣고 싶어요." 의자에 몸을 기울이며 말한다.
 		<</if>>
 	<<case "shy">>
-			"I'd want to hear the rest," you say, leaning forward in your chair.
+			"나머지를 듣고 싶어요." 의자에 몸을 기울이며 말한다.
 	<<case "polite" "flamboyant" "special">>
-			"Oh but please, I'd want to hear the rest," you say, leaning forward in your chair.
+			"아, 제발요, 나머지도 꼭 듣고 싶어요." 의자에 몸을 기울이며 말한다.
 	<<case "bratty">>
 		<<if $speech_attitude_special is "cruel">>
-			"No way you're ending the story right now!" you exclaim and lean forward in your chair. "Spit out the rest!"
+			"지금 이야기를 끝낼 순 없죠!" 당신은 소리치며 의자에서 몸을 앞으로 기울인다. "나머지도 뱉어 봐요!"
 		<<else>>
 			"그렇게 마음 아픈 곳에서 이야기를 끝내버리면 어떡해요!" 의자에 몸을 기울이며 말한다. "빨리 나머지도 뱉어봐요!"
 		<</if>>

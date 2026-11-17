@@ -544,7 +544,7 @@ function masturbationActionsHands(arm, { playerToys, selectedToy, toyDisplay, ge
 			result.options.push(stop("manusstopdildo"));
 			break;
 		case "mpenisentrancestroker":
-			result.text = `You tease your glans with the ${toyDisplay(selectedToy(arm))} in your ${arm} hand.`;
+			result.text = `당신은 ${armk}손에 든 ${toyDisplay(selectedToy(arm))}【으로로】 귀두를 희롱한다.`;
 			if (genitalsExposed()) {
 				result.options.push({
 					action: "mpenisstroker",

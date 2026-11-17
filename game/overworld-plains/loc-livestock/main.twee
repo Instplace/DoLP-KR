@@ -181,7 +181,7 @@
 :: Livestock Noise
 <<effects>>
 
-Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>yell<</if>> as loudly as possible<<if $worn.face.type.includes("gag")>> despite your $worn.face.name<</if>>, quickly waking up the other bovine from their slumber. You turn up your hay and smack against the metal lining your cell, causing a lot of noise.
+마치 우리에 갇힌 짐승처럼, 당신은 감옥 안에서 난동을 부린다. 가능한 한 크게 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메거리며 울부짖는다<<else>>소리친다<</if>><<if $worn.face.type.includes("gag")>>, $worn.face.name【을를】 쓰고 있는데도<</if>>. 잠자던 다른 소들이 금세 깨어난다. 당신은 건초를 뒤엎고 감옥의 금속 내벽을 두드려대며 엄청난 소음을 일으킨다.
 <br><br>
 곧 헛간 전체가 당신의 반항적인 행동에 동참하기 시작한다. 어떤 소는 짜증이 나서, 다른 소는 부당한 처우에 대한 불만으로 그런 듯하다.
 <br><br>
@@ -202,7 +202,7 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 <<if $phase is 1>>
 	감옥 문이 열리고, 농장 인부들이 달려들어 당신의 팔을 제압한다. 레미가 손수건을 든 채 걸어 들어온다. 손수건에는 플라스크가 거꾸로 기울여져 있다.
 	<<if ($speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "special")>>
-		Terrified, you <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>beg<</if>> for mercy<<if $worn.face.type.includes("gag")>> through your $worn.face.name<</if>>, but your cries are silenced as the cloth is pressed against your mouth.
+		겁에 질린 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메거리며 자비를 구하지만<<else>>자비를 애원하지만<</if>><<if $worn.face.type.includes("gag")>>, $worn.face.name 너머로<</if>> 당신의 외침은 천이 입에 눌리면서 멎는다.
 	<<elseif $speech_attitude is "bratty">>
 		당신은 팔을 마구 흔들고 고개를 돌리려 하지만, 천이 입에 눌리면서 저항은 멎는다.
 	<<else>>
@@ -227,13 +227,13 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 <<else>>
 	감옥 문이 열리고, 농장 인부들이 달려들어 당신의 팔을 제압한다. 레미가 <<his>> 채찍을 펼치며 걸어 들어온다.
 	<<if ($speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "special")>>
-		Terrified, you <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>beg<</if>> for mercy<<if $worn.face.type.includes("gag")>> through your $worn.face.name<</if>>, but your cries become interrupted as the whip meets your
+		겁에 질린 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메거리며 자비를 구한다<<else>>자비를 애원한다<</if>><<if $worn.face.type.includes("gag")>>, $worn.face.name 너머로<</if>>. 하지만 당신의 외침은 채찍이
 		<<if playerBellySize(true) gte 8>>
 			엉덩이를 때리면서 끊긴다. <<He>>【은는】 당신의 <<bellyDescription "pc">>【을를】 피하기 위해 특별히 조심한다.
 		<<else>>
 			배를 때리면서 끊긴다.
 		<</if>>
-		You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>gasp<</if>> in pain as Remy punishes you with all <<his>> fury. You hang your head in resignation and sob, every strike unleashing a fresh stream of tears.
+		레미가 온 힘을 다해 당신을 벌하자, 당신은 고통에 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메거리며<<else>>숨을 헐떡인다<</if>>. 당신은 체념한 채 고개를 떨구고 흐느낀다. 채찍이 한 대씩 내리쳐질 때마다 새로운 눈물 줄기가 터져 나온다.
 	<<elseif $speech_attitude is "bratty">>
 		당신은 거칠게 몸부림치지만 소용없다. 당신의 저항은 레미의 채찍이
 		<<if playerBellySize(true) gte 8>>
@@ -251,7 +251,7 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 			배를 후려친다.
 		<</if>>
 		당신은 비명을 지르지만<<if $worn.face.type.includes("gag")>> $worn.face.name 안으로<</if>>, 이게 끝이 아니라는 것을 안다.
-		You shut your eyes tight and brace yourself for more pain, and Remy delivers, each lash more agonising than the last. Tears stream down your eyes as you <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>gasp<<else>>writhe<</if>> at every strike.
+		당신은 눈을 질끈 감고 더 큰 고통에 대비한다. 레미는 그 기대를 저버리지 않고, 한 대 한 대가 전보다 더 고통스러운 채찍질을 가한다. 채찍이 내리쳐질 때마다 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>숨을 헐떡이며<<else>>몸부림치고<</if>>, 눈에서는 눈물이 쉴 새 없이 흘러내린다.
 	<</if>>
 	<<gggpain>><<pain 50>>
 	<br><br>
@@ -2021,7 +2021,7 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 		명령에 따라, 농장 인부가 당신에게 사과를 준다. 달콤한 과즙에 더 먹고 싶다는 갈망이 남는다.<<stress -10>><<lstress>>
 		<br><br>
 	<</if>>
-	레미는 옆으로 돌아가 말에서 내린다. <<He>>【은는】 문 자물쇠에 열쇠를 꽂고 밀어서 연다. <<livestock_cows>>이 당신을 지나쳐 달려가며 기쁨에 겨워 음메 소리를 낸다. 거의 뛰노는 것처럼 보인다. 당신은 문 앞에서 망설이며, 나머지 무리가 먼저 가도록 내버려 둔다.
+	레미는 옆으로 돌아가 말에서 내린다. <<He>>【은는】 문 자물쇠에 열쇠를 꽂고 밀어서 연다. <<livestock_cows>>【이가】 당신을 지나쳐 달려가며 기쁨에 겨워 음메 소리를 낸다. 거의 뛰노는 것처럼 보인다. 당신은 문 앞에서 망설이며, 나머지 무리가 먼저 가도록 내버려 둔다.
 	<br><br>
 	"어서 가, <<girl>>. 풀이 건초보다 맛이 좋을 거야." 레미가 말한다. 당신이 반응이 없자, <<he>>【은는】 당신의 <<bottomsimple>>【을를】 때리고, 당신은 <<he>>【이가】 문을 닫을 수 있을 만큼 앞으로 휘청거린다. 묵직한 철컥 소리와 함께, 문이 잠겨 당신은 안에 갇힌다.
 <<else>>
@@ -2070,9 +2070,9 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 	<!-- Modified for Monster People -->
 	<<if $remyEscapeSteed is "centaur">>
 		<<generate2>>
-		<<person1>><<He>> raises <<his>> arm above <<his>> head, but as <<he>> brings it down, <span class="green">a powerful hand catches it.</span>
+		<<person1>><<He>>【이가】 <<his>> 팔을 머리 위로 들어 올리지만, <<he>>【이가】 팔을 내리치는 순간, <span class="green">강력한 손이 그 팔을 붙잡는다.</span>
 		<br><br>
-		The centaur holds Remy's arm. Remy can only stare in shock as the centaur lifts <<him>> from the saddle and places <<him>> on the ground.
+		켄타우로스가 레미의 팔을 붙잡는다. 레미는 켄타우로스가 <<him>>【을를】 안장에서 들어 올려 땅에 내려놓는 동안 충격에 빠져 쳐다볼 뿐이다.
 		<br><br>
 		켄타우로스는 당신에게 총총 다가와 허리를 잡고 <<person2>><<his>> 등에 태운다. <<He>>【은는】 달리기 시작하더니, 이내 전속력으로 질주한다. 당신은 떨어질까 봐 <<his>> 가슴에 팔을 두른다.
 		<br><br>
@@ -2372,7 +2372,7 @@ Like a caged animal, you lash out inside of your cell. You <<if (($cow gte 6 and
 	<</silently>>
 <</if>>
 
-The farmhands form a circle around you. They struggle to hold back the dogs. Remy remains on <<nnpc_his "Remy">> <<print $remyEscapeSteed>>, looking thoughtful.
+농장 인부들이 당신 주위로 원을 그리며 둘러쌉니다. 그들은 개들을 붙잡고 있느라 안간힘을 씁니다. 레미는 <<nnpc_his "Remy">> <<print $remyEscapeSteed>> 위에 올라탄 채, 생각에 잠겨 있습니다.
 <<endevent>>
 
 <<set _remyPunishBeast to "dog">>

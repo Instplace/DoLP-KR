@@ -1360,11 +1360,11 @@
 <<endcombat>>
 <br>
 <<if isLoveInterest("Kylar") and $kylar_camera is 7>>
-	You look at the owl plushie on your wardrobe and wink.
+	당신은 옷장 위의 부엉이 인형을 바라보며 윙크한다.
 	<br><br>
 <</if>>
 
-<<link [[Next|Farm Bedroom]]>><<clotheson>><</link>>
+<<link [[다음|Farm Bedroom]]>><<clotheson>><</link>>
 <br>
 
 :: Farm Shower Masturbation

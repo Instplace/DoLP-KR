@@ -245,9 +245,9 @@
 					쾌락에 대한 생각이 마음을 스쳐 지나간다.
 				<</if>>
 			<<case "plain-white">>
-				Plain white wallpapers cover the walls.
+				벽은 무늬 없는 흰 벽지로 덮여 있다.
 			<<case "wavy-white">>
-				The white wallpapers gradient to black in a wavy pattern. Is there a lewd subtext?
+				흰 벽지가 물결 무늬를 그리며 검은색으로 번져 간다. 음란한 속뜻이라도 있는 걸까?
 			<<case "hearts">>
 				분홍색 하트가 벽을 뒤덮고 있다.
 			<<case "cow-girls">>
@@ -291,7 +291,7 @@
 <<if _radio and $bedroomUI.cottage.radio is true>>
 	<br><br>
 	<<run while (V.weatherObj.keypointsArr.length > 1 && V.weatherObj.keypointsArr[1].timestamp <= (new DateTime(Time.date)).timeStamp) {V.weatherObj.keypointsArr.shift();}>>
-	<<furnitureicon _radio.iconFile>>The radio buzzes. "There will be 
+	<<furnitureicon _radio.iconFile>>라디오가 지직거린다. "예상되는 날씨는
 	<<if V.weatherObj and V.weatherObj.keypointsArr and V.weatherObj.keypointsArr.length gt 1>>
 		<<set _forecastDate to new DateTime(V.weatherObj.keypointsArr[1].timestamp)>>
 	<<else>>
@@ -299,29 +299,29 @@
 	<</if>>
 	<<switch Weather.WeatherGeneration.getWeather(_forecastDate).name>>
 		<<case "clear">>
-			<span class="green">clear skies</span> 
+			<span class="green">맑음</span>
 		<<case "lightClouds">>
-			<span class="lblue">light clouds</span> 
+			<span class="lblue">약한 흐림</span>
 		<<case "lightPrecipitation">>
-			<span class="blue">light rain</span> 
+			<span class="blue">약한 비</span>
 		<<case "heavyPrecipitation">>
-			<span class="blue">heavy rain</span> 
+			<span class="blue">강한 비</span>
 		<<case "heavyClouds">>
-			<span class="lblue">heavy clouds</span>
+			<span class="lblue">짙은 흐림</span>
 		<<case "storm">>
-			<span class="yellow">storms</span>
+			<span class="yellow">폭풍</span>
 		<<case "thunderstorm">>
-			<span class="yellow">thunderstorms</span>
+			<span class="yellow">뇌우</span>
 		<<default>>
-			<span class="red">ERROR, please alert Frostberg.</span>
+			<span class="red">오류입니다. 프로스트버그에게 알려 주세요.</span>
 	<</switch>>
-	on the <<print ordinalSuffixOf(_forecastDate.day) + " of " + _forecastDate.monthName + ", ">> <<ampm _forecastDate.hour _forecastDate.minute>>, which is in 
+	, 일시는 <<print ordinalSuffixOf(_forecastDate.day) + " of " + _forecastDate.monthName + ", ">> <<ampm _forecastDate.hour _forecastDate.minute>>, 지금으로부터
 	<<if Time.date.compareWith(_forecastDate).days gt 0>>
-		<<print Time.date.compareWith(_forecastDate).days>> days."
+		<<print Time.date.compareWith(_forecastDate).days>>일 뒤입니다."
 	<<elseif Time.date.compareWith(_forecastDate).hours gt 0>>
-		<<print Time.date.compareWith(_forecastDate).hours>> hours and <<print Time.date.compareWith(_forecastDate).minutes>> minutes."
+		<<print Time.date.compareWith(_forecastDate).hours>>시간 <<print Time.date.compareWith(_forecastDate).minutes>>분 뒤입니다."
 	<<elseif Time.date.compareWith(_forecastDate).minutes gt 0>>
-		<<print Time.date.compareWith(_forecastDate).minutes>> minutes."
+		<<print Time.date.compareWith(_forecastDate).minutes>>분 뒤입니다."
 	<</if>>
 	<br>
 <</if>>
@@ -391,11 +391,11 @@
 
 	<<if $ltsUsed isnot undefined>>
 		<<unset $ltsUsed>>
-		You fiddle with your lockpick training set. <<skulduggerycheck>><<skulduggeryuse>><br>
+		당신은 자물쇠 따기 연습 세트를 만지작거린다. <<skulduggerycheck>><<skulduggeryuse>><br>
 	<</if>>
 
 	<<if $bedroomUI.cottage.lock is true>>
-		Lock your door: <<checkbox "$farmCottageLocked" 0 1 autocheck>><mouse class="tooltip linkBlue">(?)<span>Will stop Alex from interrupting your sleep unless Remy is attacking.</span></mouse><br><br>
+		문 잠그기: <<checkbox "$farmCottageLocked" 0 1 autocheck>><mouse class="tooltip linkBlue">(?)<span>레미가 습격 중이 아닌 한 알렉스가 당신의 잠을 방해하지 못하게 합니다.</span></mouse><br><br>
 	<</if>>
 
 	<<deskText "noicon">>
@@ -415,7 +415,7 @@
 		<br>
 		<<switch _owlplush.id>>
 			<<case "owlplushie">>
-				<<furnitureicon _owlplush.iconFile>>The _owlplush.name stares down from the wardrobe, blending into the gloom.
+				<<furnitureicon _owlplush.iconFile>><<print _owlplushNameKr>>【은는】 어둠 속에 녹아들 듯 옷장 위에서 내려다보고 있다.
 		<</switch>>
 	<</if>>
 	<<if _windowsill>>
@@ -432,13 +432,13 @@
 		<br>
 		<<switch _poster.name>>
 			<<case "cowgirl">>
-				<<furnitureicon _poster.iconFile>>A cowgirl poster hangs on a wall.
+				<<furnitureicon _poster.iconFile>>벽에 카우걸 포스터가 걸려 있다.
 			<<case "cat">>
-				<<furnitureicon _poster.iconFile>>A poster of a cat hangs on a wall. The text below reads, "Hang in there!"
+				<<furnitureicon _poster.iconFile>>벽에 고양이 포스터가 걸려 있다. 아래에는 "힘내!"라고 적혀 있다.
 			<<case "puppy">>
-				<<furnitureicon _poster.iconFile>>A puppy poster hangs on a wall.
+				<<furnitureicon _poster.iconFile>>벽에 강아지 포스터가 걸려 있다.
 			<<default>> /* Custom */
-				A poster of _poster.name hangs on a wall.
+				벽에 _poster.name 포스터가 걸려 있다.
 				<<if _poster is "poster_dol">>
 					이상한 친숙함이 느껴진다.
 				<<elseif _poster.name.startsWith('&lt;&lt;')>>
@@ -480,16 +480,16 @@
 		/* <<christmas_options>> */
 		<<if _deco>>
 			<<if _deco.name is "large bear plushie" and $bedroomUI.cottage.largeBearPlushie is true>>
-				<<furnitureicon _deco.iconFile>><<link [[Cuddle with the large bear plushie (0:10)|Farm Cottage Large Bear Plushie Cuddle]]>><<pass 10>><</link>><<ltrauma>><<lstress>>
+				<<furnitureicon _deco.iconFile>><<link [[대형 곰 인형을 끌어안는다 (0:10)|Farm Cottage Large Bear Plushie Cuddle]]>><<pass 10>><</link>><<ltrauma>><<lstress>>
 			<br><br>
 			<</if>>
 		<</if>>
 	<<if !($earSlime.event and $earSlime.noSleep)>>
-		<<furnitureicon _bed.iconFile>><<link [[Strip and get in bed|Farm Bed]]>><<undressSleep "Farm Bed">><</link>>
+		<<furnitureicon _bed.iconFile>><<link [[옷을 벗고 침대로 들어간다|Farm Bed]]>><<undressSleep "Farm Bed">><</link>>
 		<br>
 		<<listsleepoutfits "Farm Bed">>
 		<<if $bedroomUI.cottage.masturbation is true>>
-			<<furnitureicon _bed.iconFile>><<link [[Masturbate in bed|Farm Masturbation]]>><<set $masturbationstart to 1>><</link>>
+			<<furnitureicon _bed.iconFile>><<link [[침대에서 자위한다|Farm Masturbation]]>><<set $masturbationstart to 1>><</link>>
 			<br>
 		<</if>>
 		<<roomoptions>>
@@ -504,7 +504,7 @@
 		/* Fuck machines */
 		<<if _sexMachine and $bedroomUI.cottage.sexMachine is true>>
 			<br>
-			There's a <<= $machineVaginalBought and $machineAnalBought? "pair of discreet boxes": "discreet box">> hidden away within your _wardrobe.name.
+			당신의 _wardrobe.name 안쪽에 <<= $machineVaginalBought and $machineAnalBought? "눈에 안 띄는 상자 두 개": "눈에 안 띄는 상자 하나">>가 숨겨져 있다.
 			<br>
 			<<bedroom_machine>>
 		<</if>>
@@ -543,7 +543,7 @@
 		<<link [[태도|Attitudes]]>><<set $attitudesExitPassage to $passage>><</link>>
 	<</if>>
 	<br>
-	<<link [[Bedroom UI Settings|Cottage Bedroom UI]]>><</link>>
+	<<link [[침실 UI 설정|Cottage Bedroom UI]]>><</link>>
 <</if>>
 
 :: Farm Mirror
@@ -623,9 +623,9 @@
 		<<elseif !_wakingEffect>>
 			<<set _bed to Furniture.get('bed', $location)>>
 			<<if _bed and _bed.type.includes('comfy')>>
-				You sink into the soft, welcoming embrace of the bed, drifting off effortlessly.
+				당신은 부드럽고 포근한 침대의 품속으로 가라앉으며 힘들이지 않고 잠에 빠져든다.
 			<<elseif _bed and _bed.type.includes('starter')>>
-				You toss and turn throughout the night, barely finding any comfort.
+				당신은 밤새 뒤척이며 좀처럼 편안함을 찾지 못한다.
 			<<else>>
 				당신은 깊이 잠든다.
 			<</if>>
@@ -1777,7 +1777,7 @@
 		<<set _farmbed to ($loveInterest.primary is "Alex" or $loveInterest.secondary is "Alex") ? "alex" : "farm">>
 		<<set _bed to Furniture.get('bed', $location)>>
 		<<furnitureicon _bed.iconFile>>
-		<<link [[Your room (0:01)|Farm Bedroom]]>><<pass 1>><</link>>
+		<<link [[당신의 방 (0:01)|Farm Bedroom]]>><<pass 1>><</link>>
 	<</if>>
 	<br>
 	<<main_hall_icon>><<link [[아래층으로 내려간다 (0:01)|Farm Cottage]]>><<pass 1>><</link>>
@@ -2059,7 +2059,7 @@
 				<</if>>
 			<<elseif $worn.neck.collared is 1 and $worn.neck.type.includes("leash")>>
 				<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-					<<He>> glances at your collar, "Who's whitney?" <<npcincr Alex love -2>><<npcincr Alex dom 2>>
+					<<He>>【이가】 당신의 목줄을 흘끗 본다. "휘트니가 누구야?" <<npcincr Alex love -2>><<npcincr Alex dom 2>>
 				<<elseif _alex.dom gte 30>>
 					경고도 없이, 당신의 목줄이 너무 세게 당겨져서 음식에 얼굴을 박을 뻔한다. "미안, 그냥 몸풀기였어." <<He>>【이가】 씨익 웃는다.
 					"내가 나를 과소평가했나 보네."<<arousal 100>><<npcincr Alex lust 1>><<garousal>><<glust>>
@@ -2068,7 +2068,7 @@
 					<<arousal 100>><<npcincr Alex lust 1>><<garousal>><<glust>>
 				<<else>>
 					<<if _alex.dom gte 30>>
-						Without warning, your leash is yanked with such force that you nearly faceplant into the food. "Sorry, I was only getting warmed up." <<he>> grins.
+						경고도 없이, 당신의 목줄이 너무 세게 당겨져서 음식에 얼굴을 박을 뻔한다. "미안, 그냥 몸풀기였어." <<he>>【이가】 씨익 웃는다.
 						"내가 나를 과소평가했나 보네."<<arousal 100>><<npcincr Alex lust 1>><<garousal>><<glust>>
 					<<elseif _alex.dom lte -30>>
 						<<He>>【이가】 멋쩍게 당신의 목걸이를 쳐다본다. "경찰이 도와줄 수 있을 거야. 내가 더 잘할지도 모르지만. 한번 해봐." <<He>>【이가】 당신의 목줄을 당긴다.
@@ -2148,7 +2148,7 @@
 <<if $speech_attitude is "meek">>
 	"고맙다는 인사가 그-그건 좀 아니잖아." 당신이 말한다.
 <<elseif ($speech_attitude is "flamboyant" or $speech_attitude is "polite" or $speech_attitude is "shy")>>
-	"That's not a nice way to thank me," you say.
+	"그건 고맙다는 인사치고는 좀 너무하잖아." 당신이 말한다.
 <<elseif $speech_attitude is "bratty">>
 	"다음부턴 빌어먹을 차는 직접 타 마셔." 당신이 말한다.
 <<else>>
@@ -2216,7 +2216,7 @@
 <<effects>>
 
 <<if ($speech_attitude is "meek" or $speech_attitude is "flamboyant")>>
-	"O-oopsey," you say as you tip your own tea on <<his>> thigh. "I'm so clumsy. I hope you don't have to punish me."
+	"아-아이쿠." 당신은 <<his>> 허벅지에 자신의 차를 쏟으며 말한다. "제가 너무 칠칠치 못했네요. 저한테 벌을 주셔야 하는 건 아닌지 모르겠어요."
 <<elseif $speech_attitude is "bratty">>
 	"그게 때린 거예요?" 당신이 반대쪽 뺨을 내밀며 말한다. "계집애같이. 다시 해봐요."
 <<else>>
@@ -2949,7 +2949,7 @@
 "아-아니, 난—" 알렉스가 침을 삼킨다. "그런 생각은 안 해봤어." 당신은 <<he>>【이가】 거짓말하고 있다는 걸 안다.
 <br><br>
 
-<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>Frustrated<<elseif $speech_attitude is "bratty">>Determined<<else>>Focused<</if>>, you push <<him>> against the headrest and straddle <<him>>.
+<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>좌절한 채<<elseif $speech_attitude is "bratty">>단호하게<<else>>집중해서<</if>>, 당신은 <<him>>【을를】 머리 받침대로 밀어붙이고 <<him>> 위에 올라탄다.
 <<if $player.breastsize gte 5>>
 	당신의 <<breasts>>【이가】 <<his>> 얼굴 위로 다가오는 광경에 <<him>>【이가】 침 삼키는 소리가 선명하게 들린다.
 <<else>>
@@ -2992,7 +2992,7 @@
 <br><br>
 
 <<if $speech_attitude is "meek">>
-	"Th-that doesn't look right." You gently grab <<his>> wrists and look <<if $bodysize lt 3>>up <</if>>at <<him>>. "Please tell me."
+	"그-그건 아닌 것 같은데." 당신은 <<his>> 손목을 부드럽게 잡고 <<if $bodysize lt 3>>올려다<</if>>본다. "제발 말해줘."
 <<elseif $speech_attitude is "bratty">>
 	"네 얼굴은 다른 이야기를 하고 있는데, 이 거짓말쟁이야." 당신은 팔짱을 끼고 몸을 앞으로 숙인다. "불어. 지금 당장."
 <<else>>
@@ -5290,20 +5290,20 @@
 :: Farm Cottage Large Bear Plushie Cuddle
 <<effects>><<wearProp "large teddy bear">>
 <<if $trauma gte ($traumamax / 7) * 3 or $stress gte ($stressmax / 7) * 5>>
-	You desperately cling onto the large bear plushie with your entire body and almost wind up pulling it down onto the ground, whimpering and crying loudly into it.<<trauma -6>><<stress -6>>
+	당신은 온몸으로 대형 곰 인형에 필사적으로 매달리다 하마터면 바닥으로 끌어내릴 뻔하고, 인형에 얼굴을 묻은 채 훌쩍이며 크게 운다.<<trauma -6>><<stress -6>>
 <<elseif $trauma gte ($traumamax / 7) * 2 or $stress gte ($stressmax / 7) * 3>>
-	You cling to the large bear plushie and bury your head in it's back, silently crying into it.<<trauma -4>><<stress -4>>
+	당신은 대형 곰 인형에 매달려 그 등에 얼굴을 묻고 소리 없이 운다.<<trauma -4>><<stress -4>>
 <<elseif $trauma gte ($traumamax / 7) * 1 or $stress gte ($stressmax / 7) * 1>>
-	You wrap your arms around the large bear plushie from behind and rest your head against it's shoulder, hugging it quietly.<<trauma -2>><<stress -2>>
+	당신은 대형 곰 인형을 뒤에서 끌어안고 그 어깨에 머리를 기댄 채 조용히 안고 있다.<<trauma -2>><<stress -2>>
 <<else>>
-	You happily take the large bear plushie in your arms.<<trauma -1>><<stress -1>>
+	당신은 행복하게 대형 곰 인형을 품에 안는다.<<trauma -1>><<stress -1>>
 <</if>>
 <br><br>
 
 
-<<link [[Cuddle with the large bear plushie (0:10)|$passage]]>><<pass 10>><</link>><<ltrauma>><<lstress>>
+<<link [[대형 곰 인형을 끌어안는다 (0:10)|$passage]]>><<pass 10>><</link>><<ltrauma>><<lstress>>
 <br>
-<<link [[Next|Farm Bedroom]]>><</link>>
+<<link [[다음|Farm Bedroom]]>><</link>>
 
 :: Farm PC Ultrasound Pics Show
 <<effects>><<npc "Alex">><<person1>>
@@ -5375,10 +5375,10 @@
 	<br><br>
 	<<housekeeping_exam_select>>
 	<<if $chosen_recipe isnot "none">>
-		<span class="gold">You can teach yourself a recipe from your cookbook here.</span> You flip open the book and land on a recipe for <<print $chosen_recipe.replace(/_/g," ")>>.<br><br>
-		<<link [["Learn something new (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><</link>><<ghousekeeping 1000>>
+		<span class="gold">여기서 요리책으로 레시피를 독학할 수 있습니다.</span> 책을 펼치자 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 눈에 들어온다.<br><br>
+		<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><</link>><<ghousekeeping 1000>>
 	<<else>>
-		There's no more recipes you can learn.
+		더 이상 배울 수 있는 레시피가 없다.
 	<</if>>
 	<br><br>
 <</if>>
@@ -5387,21 +5387,21 @@
 <br>
 
 :: Cottage Bedroom UI
-<label>Radio UI <<checkbox "$bedroomUI.cottage.radio" false true autocheck>></label>
+<label>라디오 UI <<checkbox "$bedroomUI.cottage.radio" false true autocheck>></label>
 <br>
-<label>Lock UI <<checkbox "$bedroomUI.cottage.lock" false true autocheck>></label>
+<label>잠금 UI <<checkbox "$bedroomUI.cottage.lock" false true autocheck>></label>
 <br>
-<label>Project UI <<checkbox "$bedroomUI.cottage.project" false true autocheck>></label>
+<label>프로젝트 UI <<checkbox "$bedroomUI.cottage.project" false true autocheck>></label>
 <br>
-<label>Home Study UI <<checkbox "$bedroomUI.cottage.homeStudy" false true autocheck>></label>
+<label>자습 UI <<checkbox "$bedroomUI.cottage.homeStudy" false true autocheck>></label>
 <br>
-<label>Large Bear Plushie UI <<checkbox "$bedroomUI.cottage.largeBearPlushie" false true autocheck>></label>
+<label>대형 곰 인형 UI <<checkbox "$bedroomUI.cottage.largeBearPlushie" false true autocheck>></label>
 <br>
-<label>Masturbation UI <<checkbox "$bedroomUI.cottage.masturbation" false true autocheck>></label>
+<label>자위 UI <<checkbox "$bedroomUI.cottage.masturbation" false true autocheck>></label>
 <br>
-<label>Lockpick Training Set UI <<checkbox "$bedroomUI.cottage.lts" false true autocheck>></label>
+<label>자물쇠 따기 연습 세트 UI <<checkbox "$bedroomUI.cottage.lts" false true autocheck>></label>
 <br>
-<label>Sex Machine UI <<checkbox "$bedroomUI.cottage.sexMachine" false true autocheck>></label>
+<label>섹스 머신 UI <<checkbox "$bedroomUI.cottage.sexMachine" false true autocheck>></label>
 <br>
 <br>
-<<link [[Back|Farm Cottage]]>><</link>>
+<<link [[뒤로|Farm Cottage]]>><</link>>

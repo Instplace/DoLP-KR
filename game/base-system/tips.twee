@@ -143,7 +143,7 @@
 			"매력이 높으면 이벤트 발생 빈도가 증가합니다. 이는 위험하지만 동시에 야한 만남으로 돈을 벌 기회이기도 합니다.",
 			"접객 특성이 붙은 의상을 입으면 종업원이나 바텐더로 일할 때 팁을 포함한 추가 수익이 늘어납니다.",
 			"베일리에게 돈을 내지 않는 쪽이 이득일 수도 있지만, 그에 따른 대가가 따릅니다.",
-			"Reaching 200 VrelCoins will unlock the super cool golden banner! ITS TIME TO SACK UP BOIS.",
+			"브렐 코인 200개를 모으면 엄청나게 멋진 금 배너가 해금됩니다! 이제 각오를 다질 때입니다, 친구들!",
 		]>>
 
 		<!-- Weather tips -->
@@ -166,7 +166,7 @@
 
 		<!-- Animal TF tips -->
 		<<set setup.tips.animalTFs to [
-			"Ingesting wolf<<if !animalSexEnabledForType('wolf')>>person<</if>>, fox<<if !animalSexEnabledForType('fox')>>person<</if>>, or bunny<<if !animalSexEnabledForType('bunny')>>person<</if>> cum can have strange effects on the body.",
+			"늑대<<if !animalSexEnabledForType('wolf')>> 수인<</if>>, 여우<<if !animalSexEnabledForType('fox')>> 수인<</if>>, 토끼<<if !animalSexEnabledForType('bunny')>> 수인<</if>>의 정액을 섭취하면 신체에 기묘한 영향을 끼칠 수 있습니다.",
 			"여우<<if !animalSexEnabledForType('fox')>> 수인<</if>>【을를】 상대로 소리 지르기 시합을 하려 들지 마십시오.",
 		]>>
 

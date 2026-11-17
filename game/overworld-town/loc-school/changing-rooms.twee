@@ -651,7 +651,7 @@
 <<elseif $speech_attitude is "bratty">>
 	"잡혔네요." 당신이 말한다. "다시는 나쁜 짓 안 할게요."
 <<elseif $speech_attitude is "polite" or $speech_attitude is "flamboyant">>
-	"I apologize," you say. "I won't steal anymore."
+	"사과드려요." 당신이 말한다. "다시는 훔치지 않을게요."
 <<else>>
 	"죄송해요." 당신이 말한다. "다시는 훔치지 않을게요."
 <</if>>
@@ -708,9 +708,9 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"아-아무것도 안 훔쳤어요." 당신이 애원한다. "정-정말이에요."
 <<elseif $speech_attitude is "flamboyant">>
-	"Oh, but I'm not stealing anything," you pretend to be confused. "How dare you accuse me?"
+	"어머, 저는 아무것도 훔치지 않았는데요." 당신은 어리둥절한 척한다. "어떻게 감히 저를 의심하시죠?"
 <<elseif $speech_attitude is "polite">>
-	"Oh, but I'm not stealing anything," you pretend to be confused.
+	"어머, 저는 아무것도 훔치지 않았는데요." 당신은 어리둥절한 척한다.
 <<elseif $speech_attitude is "bratty">>
 	"증거 없잖아요." 당신이 말한다.
 <<else>>
@@ -945,7 +945,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"학생을 따라 사물함에 들어오다니," 당신이 놀린다. "그러고는 발기까지! 못된 선생님이네."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"Following a student into a locker," you tease. "Then getting hard! Oh, but that's so inappropriate."
+	"학생을 따라 사물함에 들어오다니." 당신이 놀린다. "그러고는 발기까지! 어머, 정말 부적절하네요."
 <<elseif $speech_attitude is "bratty">>
 	"학생한테 괴롭힘당하니까 발기하는 거야?" 당신이 놀린다. "정말 변태 같은 선생님이네."
 <<else>>
@@ -972,7 +972,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"<<he>>【이가】 당신이 학생을 성추행하는 걸 보면 뭐라고 생각할까?" 당신이 속삭인다. 그 <<person>>【은는】 당신의 사물함을 흘끗 보더니 옷을 계속 벗는다. "저-저는 착하게 있을게요."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"What would <<he>> think if <<he>> caught you molesting a student?" you whisper. The <<person>> glances at your locker, before continuing to undress. "Would it not put you in trouble too?"
+	"<<he>>【이가】 당신이 학생을 성추행하는 걸 보면 뭐라고 생각할까요?" 당신이 속삭인다. 그 <<person>>【은는】 당신의 사물함을 흘끗 보더니 옷을 계속 벗는다. "당신도 곤란해지지 않겠어요?"
 <<elseif $speech_attitude is "bratty">>
 	"착한 <<nnpc_gendery "Mason">>처럼 조용히 있는 게 좋을 거야." 당신이 속삭인다.
 <<else>>
@@ -1061,7 +1061,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"학생을 따라 라커까지 들어오다니," 당신은 놀린다. "그러고는 젖어버리고! 음란한 선생님이네."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"Following a student into a locker," you tease. "Then getting wet! Oh, but that's so inappropriate."
+	"학생을 따라 라커까지 들어오다니." 당신은 놀린다. "그러고는 젖어 버리고! 어머, 정말 부적절하네요."
 <<elseif $speech_attitude is "bratty">>
 	"학생한테 괴롭힘당하니까 젖는 거예요?" 당신은 놀린다. "정말 변태 같은 선생님이네."
 <<else>>
@@ -1087,7 +1087,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"<<he>>【이가】 당신이 학생을 성추행하는 걸 보면 뭐라고 생각할까?" 당신이 속삭인다. 그 <<person>>【은는】 당신의 사물함을 흘끗 보더니 옷을 계속 벗는다. "저-저는 착하게 있을게요."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"What would <<he>> think if <<he>> caught you molesting a student?" you whisper. The <<person>> glances at your locker, before continuing to undress. "Would it not put you in trouble too?"
+	"<<he>>【이가】 당신이 학생을 성추행하는 걸 보면 뭐라고 생각할까요?" 당신이 속삭인다. 그 <<person>>【은는】 당신의 사물함을 흘끗 보더니 옷을 계속 벗는다. "당신도 곤란해지지 않겠어요?"
 <<elseif $speech_attitude is "bratty">>
 	"착한 <<nnpc_gendery "Mason">>처럼 조용히 있는 게 좋을 거야." 당신이 속삭인다.
 <<else>>
@@ -1139,7 +1139,7 @@
 			당신은 <<his>> 엉덩이 사이에 자지를 비비며 계속해서 <<him>> 안에 손가락을 펌프질한다.
 			"엄청 젖었네요. 상상이 가요?
 		<</if>>
-		<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>this _huge thing<<elseif $speech_attitude is "bratty">>my _huge cock<<else>>this _huge dick<</if>>
+		<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>이 _huge 물건이<<elseif $speech_attitude is "bratty">>제 _huge 자지가<<else>>이 _huge 자지가<</if>>
 		안으로 들어가는 거요?<<if _isVirgin>> 전 한 번도 해본 적 없는데. 정말 학생의 처녀를 선생님 보지로 가져가고 싶어요?<</if>>"
 		<br><br>
 

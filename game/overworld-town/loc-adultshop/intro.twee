@@ -124,7 +124,7 @@
 	시드니의 미소가 더 넓어진다. "재미있는 일이에요." <<he>>【이가】 말한다. "많은 걸 배우고 있어요."
 	<br>
 	<<person1>>
-	Sirris nods. "Certainly nothing to be ashamed of," <<he>> says. "Still, it's up to <<phim>>." <<He>> turns back to you. "We'll be here Friday and Saturday afternoons or if its a school holiday. It'll take many weeks to get everything ready."
+	시리스가 고개를 끄덕인다. "부끄러워할 일은 전혀 아니란다." <<he>>【이가】 말한다. "그래도, <<phim>>에게 달렸단다." <<He>>【은는】 당신에게 다시 몸을 돌린다. "우리는 금요일과 토요일 오후, 아니면 학교 휴일에 여기 있을 거란다. 모든 걸 준비하려면 몇 주가 걸릴 거고."
 	<br><br>
 <<elseif _sydneyStatus.includes("pure")>>
 	시드니는 몹시 당황한 표정이다. "<<phim>>에게 보여주고 싶지 않아요—"

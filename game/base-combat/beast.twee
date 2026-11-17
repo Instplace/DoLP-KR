@@ -1255,7 +1255,7 @@
 							<<elseif $worn.under_lower.vagina_exposed is 1>>
 								<<if $rng gte 71>>
 									<<if $worn.genitals.name is "chastity parasite">>
-										<<bHe>> licks your $worn.genitals.name, <span class="lewd">the parasite parasite sends a wave of pleasure through your <<penis>>.</span> Your reaction causes <<bhim>> to continue.
+										<<bHe>>【이가】 당신의 $worn.genitals.name【을를】 핥고, <span class="lewd">기생충이 당신의 <<penis>>【으로로】 쾌감의 파도를 보낸다.</span> 당신의 반응에 <<bhim>>【은는】 계속하게 된다.
 										<<arousal 400 "genitals">><<if !$earSlime.defyCooldown and $earSlime.vibration lt 120>><<set $earSlime.vibration += 10>><</if>>
 										<<sex 30 "genital">>
 									<<elseif $nopenile is 0 and playerChastity("penis")>>
@@ -1557,7 +1557,7 @@
 							<</if>>
 						<<elseif $enemyanger + $rng lte 200>>
 							<<if $consensual is 1>>
-                                <<bHe>> gives a low, eager growl.
+                                <<bHe>>【이가】 낮고 간절한 으르렁 소리를 낸다.
                                 <<neutral 1>><<enemyarousal 2>>
                             <<else>>
                                 <<bHe>>【이가】 위협적으로 <<beast_growls_text>>.
@@ -1578,16 +1578,16 @@
 
                             <<if _faceMount is 1>>
                                 <<if $water is 0>>
-                                    <span class="pink"><<bHe>> pads closer, nudging you down until you let <<bhim>> settle over your face.</span>
+                                    <span class="pink"><<bHe>>【이가】 사뿐사뿐 다가와 당신을 밀어 눕히고, 결국 당신은 <<bhim>>【이가】 얼굴 위에 자리 잡게 둔다.</span>
                                 <<else>>
-                                    <span class="pink"><<bHe>> swims closer, guiding you beneath <<bhim>> until <<bhis>> body is above your face.</span>
+                                    <span class="pink"><<bHe>>【이가】 가까이 헤엄쳐 와 당신을 <<bhim>> 아래로 끌어당기고, 마침내 <<bhis>> 몸이 당신의 얼굴 위에 놓인다.</span>
                                 <</if>>
                                 <<set $NPCList[_n].stance to "topface">><<neutral 3>><<set $NPCList[_n].mouth to 0>>
                             <<else>>
                                 <<if $water is 0>>
-                                    <span class="pink"><<bHe>> crowds close, nosing you down until you settle beneath <<bhim>>.</span>
+                                    <span class="pink"><<bHe>>【이가】 바싹 다가와, 당신이 <<bhim>> 아래에 자리 잡을 때까지 코로 밀어 내린다.</span>
                                 <<else>>
-                                    <span class="pink"><<bHe>> swims close, pressing against you until you drift beneath <<bhim>>.</span>
+                                    <span class="pink"><<bHe>>【이가】 헤엄쳐 다가와 당신에게 몸을 바싹 붙이고, 당신이 <<bhim>> 아래로 떠밀려 들어가게 만든다.</span>
                                 <</if>>
                                 <<set $NPCList[_n].stance to "top">><<neutral 3>><<set $head to "grappled">><<set $NPCList[_n].mouth to 0>>
                             <</if>>
@@ -1596,21 +1596,21 @@
 								<<combatExtendedCheck>>
 								<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
 									<<if $NPCList[_n].claws is "claws">> <!-- Removed $claws -->
-										<<bHe>> tries to bite and claw at your thighs but
+										<<bHe>>【이가】 당신의 허벅지를 물고 할퀴려 하지만
 									<<else>>
-										<<bHe>> tries to bite your thighs but
+										<<bHe>>【이가】 당신의 허벅지를 물려 하지만
 									<</if>>
 									<<if $combatExtended.counterSuccess is 2>>
-										<span class="green">you stride into it and throw a knee into their face.</span>
+										<span class="green">당신은 성큼 파고들어 녀석의 얼굴에 무릎을 꽂는다.</span>
 										<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<elseif $combatExtended.dodgeSuccess is 2>>
-										<span class="green">you dodge.</span>
+										<span class="green">당신은 피한다.</span>
 										<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 									<<elseif $combatExtended.counterSuccess is 1>>
-										<span class="blue">you manage to pummel their head when they do.</span>
+										<span class="blue">그러는 틈에 용케 녀석의 머리를 마구 두들긴다.</span>
 										<<defiance 3>><<violence 20>><<bruise thigh>><<bruise thigh>><<set $worn.lower.integrity -= 20>><<set $worn.under_lower.integrity -= 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 									<<else>>
-										<span class="blue">you partially dodge.</span>
+										<span class="blue">당신은 일부만 피한다.</span>
 										<<violence 10>><<bruise thigh>><<bruise thigh>><<set $worn.lower.integrity -= 10>><<set $worn.under_lower.integrity -= 10>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 									<</if>>
 								<<else>>
@@ -1624,18 +1624,18 @@
 							<<else>>
 								<<combatExtendedCheck>>
 								<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-									<<bHe>> tries to bite and claw at your <<breasts>> but
+									<<bHe>>【이가】 당신의 <<breasts>>【을를】 물고 할퀴려 하지만
 									<<if $combatExtended.counterSuccess is 2>>
-										<span class="green">you stride into it and uppercut their neck.</span>
+										<span class="green">당신은 성큼 파고들어 녀석의 목에 어퍼컷을 날린다.</span>
 										<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<elseif $combatExtended.dodgeSuccess is 2>>
-										<span class="green">you dodge.</span>
+										<span class="green">당신은 피한다.</span>
 										<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 									<<elseif $combatExtended.counterSuccess is 1>>
-										<span class="blue">you manage to pummel their head when they do.</span>
+										<span class="blue">그러는 틈에 용케 녀석의 머리를 마구 두들긴다.</span>
 										<<defiance 3>><<violence 20>><<bruise chest>><<bruise chest>><<set $worn.upper.integrity -= 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 									<<else>>
-										<span class="blue">you partially dodge.</span>
+										<span class="blue">당신은 일부만 피한다.</span>
 										<<violence 10>><<bruise chest>><<bruise chest>><<set $worn.upper.integrity -= 10>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 									<</if>>
 								<<else>>
@@ -1658,9 +1658,9 @@
 								<</if>>
 							<<elseif $combatExtended.standingFights is 1 and $combatExtended.stabilityLost is 0 and $consensual isnot 1>>
 								<<if $water is 0>>
-									<span class="blue"><<bHe>> charges at you, trying to knock you down.</span>
+									<span class="blue"><<bHe>>【이가】 당신에게 돌진해 쓰러뜨리려 한다.</span>
 								<<else>>
-									<span class="blue"><<bHe>> surges toward you.</span>
+									<span class="blue"><<bHe>>【이가】 당신을 향해 밀려든다.</span>
 								<</if>>
 								<<combatExtendedStability -40>><<violence 5>>
 							<<else>>
@@ -1736,18 +1736,18 @@
 						<<elseif ($enemyanger + $rng) lte 140 and $position isnot "wall" and $NPCList[_n].location.head isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<bHe>> tries to bite your face but
+								<<bHe>>【이가】 당신의 얼굴을 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you throw a jab into their face.</span>
+									<span class="green">당신은 녀석의 얼굴에 잽을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to knee their gut in return.</span>
+									<span class="blue">당신도 용케 무릎으로 녀석의 배를 가격한다.</span>
 									<<defiance 3>><<violence 5>><<bruise face>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 3>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 								<</if>>
 							<<else>>
@@ -1757,18 +1757,18 @@
 						<<elseif ($enemyanger + $rng) lte 160 and $position isnot "wall" and $NPCList[_n].location.head isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<bHe>> tries to bite your neck but
+								<<bHe>>【이가】 당신의 목을 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you throw a jab into their neck.</span>
+									<span class="green">당신은 녀석의 목에 잽을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them away.</span>
+									<span class="blue">당신은 용케 녀석을 주먹으로 쳐낸다.</span>
 									<<defiance 3>><<violence 5>><<bruise neck>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 3>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 								<</if>>
 							<<else>>
@@ -1778,18 +1778,18 @@
 						<<elseif $position isnot "wall" and $NPCList[_n].location.head isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<bHe>> tries to grab your neck in <<bhis>> <<beast_teeth_text>> but
+								<<bHe>>【이가】 <<bhis>> <<beast_teeth_text>>【으로로】 당신의 목을 잡으려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you throw a hook onto their head.</span>
+									<span class="green">당신은 녀석의 머리에 훅을 꽂는다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them off.</span>
+									<span class="blue">당신은 용케 녀석을 주먹으로 떨쳐낸다.</span>
 									<<defiance 3>><<violence 5>><<bruise neck>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 3>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 								<</if>>
 							<<else>>
@@ -1799,18 +1799,18 @@
 						<<elseif $NPCList[_n].location.head isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<bHe>> tries to bite your waist but
+								<<bHe>>【이가】 당신의 허리를 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you throw a kick into their head.</span>
+									<span class="green">당신은 녀석의 머리에 발차기를 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage pummel their head in return.</span>
+									<span class="blue">당신도 용케 녀석의 머리를 마구 두들긴다.</span>
 									<<defiance 3>><<violence 5>><<bruise tummy>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 3>><<bruise tummy>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 								<</if>>
 							<<else>>
@@ -1984,7 +1984,7 @@
 					<</if>>
 				<</if>>
 			<<else>>
-				<span class="red"><<bHe>> recoils from the emotional damage</span>.
+				<span class="red"><<bHe>>【이가】 정서적 타격에 움찔 물러난다</span>.
 			<</if>>
 
 			<<set _bstindex to ($enemyno -2)>>

@@ -51,7 +51,7 @@
 	<span @class="$earSlime.startedThreats ? 'lewd' : 'lblue'">머릿속의 슬라임이 초원에서 쉬라고 명령하는 것이 느껴진다.</span> 따르면 보상을 약속하고<<if $earSlime.startedThreats>> 따르지 않으면 대가가 있을 것이라고 위협한다<</if>>.
 	<br><br>
 	/* Link decreases stress by both the ear slime and relaxing */
-	<<link [[Obey|Meadow Relax]]>><<set $phase to 1>><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<tiredness -12>><<sub 2>><</link>><<gcorruption>><<lpain>><<lltrauma>><<llstress>>
+	<<link [[따른다|Meadow Relax]]>><<set $phase to 1>><<corruption 1>><<pain -4>><<stress -12>><<trauma -12>><<tiredness -12>><<sub 2>><</link>><<gcorruption>><<lpain>><<lltrauma>><<llstress>>
 	<br>
 	<<if $earSlime.startedThreats>>
 		<<link [[거역한다|Meadow Relax Slime Defy]]>><<corruption -1>><<pain 8>><<stress 6>><<trauma 6>><<def 1>><</link>><<lcorruption>><<ggpain>><<ggtrauma>><<ggstress>>
@@ -74,7 +74,7 @@
 		<<coastalpathicon>><<link [[해안 길 (0:30)|Coast Path Meadow]]>><<pass 30>><</link>>
 		<br>
 	<</if>>
-	<<icon "tending/clover.png">> <<link [[Search for Clovers (0:10)|Meadow Clover]]>><<pass 10>><</link>>
+	<<icon "tending/clover.png">> <<link [[클로버를 찾는다 (0:10)|Meadow Clover]]>><<pass 10>><</link>>
 	<br>
 	<<farmicon>><<link [[농장으로 들어간다 (0:10)|Farmland]]>><<pass 10>><</link>>
 <</if>>
@@ -103,23 +103,23 @@
 <<effects>>
 
 <<if $rng gte 60>>
-	You had no luck finding a clover patch but the walk was relaxing.
+	클로버 군락을 찾지 못했지만 산책은 느긋하고 편안했다.
 	<<stress -3>><<lstress>>
 	<br><br>
 	<<link [[다음|Meadow]]>><</link>>
 <<else>>
 	<<set _tendingBonus to Math.floor(currentSkillValue('tending') / 200)>>
 	<<set _min to 1 + _tendingBonus>><<set _max to 3 + _tendingBonus * 2>>
-	You managed to find a clover patch. You spend some time combing through it, picking <<foodstufficon "clover">> three-leaf clovers as you search for something rarer.
+	클로버 군락을 찾아냈다. 당신은 한동안 더 희귀한 것을 찾으며 <<foodstufficon "clover">> 세잎클로버를 따면서 군락을 샅샅이 뒤진다.
 	<<tending_pick clover _min _max>><<transform bunny 1>>
 	<br><br>
 
 	<<if random(1, 100) lte 5>>
-		<span class="pulse-glow pulse-soft-green">Just as you're about to leave, a <<foodstufficon "four_leaf_clover">> four-leaf clover catches your eye.</span> Lucky.
+		<span class="pulse-glow pulse-soft-green">막 떠나려던 순간, <<foodstufficon "four_leaf_clover">> 네잎클로버가 눈에 들어온다.</span> 운이 좋다.
 		<<tending_pick four_leaf_clover 1 1>><<earnFeat "Stroke of Luck">><<trauma -3>><<ltrauma>>
 		<br><br>
 	<<else>>
-		You couldn't find a four-leaf clover, though.
+		하지만 네잎클로버는 찾지 못했다.
 		<br><br>
 	<</if>>
 	<<link [[다음|Meadow]]>><</link>>
@@ -232,7 +232,7 @@
 	<<link [[굴을 판다|Meadow Squeeze]]>><<transform fox 1>><<endevent>><</link>><<fox>>
 	<br>
 <<elseif $bunny gte 4>>
-    <<link [[Burrow|Meadow Squeeze]]>><<transform bunny 1>><<endevent>><</link>>
+    <<link [[굴을 판다|Meadow Squeeze]]>><<transform bunny 1>><<endevent>><</link>>
 <<elseif $physiquesize lte 9000>>
 	<<link [[비집고 들어간다|Meadow Squeeze]]>><<endevent>><</link>><<small_text>>
 	<br>

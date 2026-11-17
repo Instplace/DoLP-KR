@@ -1328,7 +1328,7 @@ _popcornIntro
 <br><br>
 당신은 상의를 벗어, <span class="pink">당신의 <<breasts>>【을를】 드러낸다.</span> <<He>>【은는】 힐끔 올려다보지만, 당신이 한 짓을 보자마자 <<his>> 고개를 휙 숙인다. <<exhibitionism5>>
 <<overupperstrip>><<upperstrip>><<underupperstrip>>
-You let out a <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo and <</if>>laugh, reminding Robin that <<hes>> seen you naked before. "I know," <<he>> says "But—" You cut <<him>> off, grabbing <<his>> hand and placing it on your left breast.
+당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음매 하고 <</if>>웃으며, 로빈에게 <<hes>> 당신의 알몸을 본 적이 있다는 걸 상기시킨다. "알아." <<he>>【이가】 말한다. "하지만—" 당신은 <<his>> 손을 붙잡아 당신의 왼쪽 가슴에 얹으며 <<him>>의 말을 끊는다.
 <br>
 "짜봐." 당신이 말한다. "부끄러워하지 말고." <<He>>【은는】 망설이다가, 지시대로 한다. 약간의 우유가 새어 나온다.
 <br><br>
@@ -1341,7 +1341,7 @@ You let out a <<if (($cow gte 6 and $transformationParts.traits.activeTF is "dis
 
 로빈은 깜짝 놀라 당신의 가슴에서 손을 뗀다. 당신은 웃는다. "괜찮아." 당신은 <<his>> 두 손을 붙잡으며 말한다. <<He>>【은는】 확신이 없어 보이지만, 당신이 다시 가슴 위에 올려놓아도 저항하지 않는다.
 <br><br>
-<<He>> squeezes harder this time. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>moan<</if>> as milk spurts from both. <<He>> releases <<his>> hands again, though <<he>> seems less shocked.
+이번에는 <<He>>【은는】 더 세게 쥔다. 양쪽에서 우유가 뿜어져 나오자 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음매 하고<<else>>신음하고<</if>> 만다. <<He>>【은는】 다시 <<his>> 손을 떼지만, 전보다는 덜 놀란 듯하다.
 <br><br>
 "마셔볼래?" 당신이 묻는다. 로빈은 할 말을 잃고 시선을 돌린다. "그러면 난 기쁠 것 같아." <<He>>【은는】 망설이다가 바구니에서 빈 잔을 꺼낸다. <<He>>【은는】 그것을 당신에게 내민다.
 <br><br>
@@ -1368,7 +1368,7 @@ You let out a <<if (($cow gte 6 and $transformationParts.traits.activeTF is "dis
 로빈은 당신의 얼굴을 보다가, 다시 당신의 <<breasts>>【을를】 본다. <<He>>【은는】 가까이 다가가면서 <<his>> 눈을 감는다.
 <br><br>
 <<if C.npc.Robin.dom lte 50>>
-	You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>moan<</if>> as Robin takes a nipple into <<his>> mouth.
+	로빈이 <<his>> 입에 젖꼭지를 물자, 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음매 하고<<else>>신음하고<</if>> 만다.
 	<br><br>
 	<<link [[쥔다|Robin Forest Milking Source]]>><</link>>
 <<else>>
@@ -1887,9 +1887,9 @@ You let out a <<if (($cow gte 6 and $transformationParts.traits.activeTF is "dis
 <br><br>
 
 <!-- <<if $submissive lte 850>> -->
-	<<link [[Protest|Robin Forest Crash Protest]]>><<def 1>><<npcincr Eden love -1>><<npcincr Eden dom -5>><</link>><<llove "Eden">><<lldom "Eden">><br>
+	<<link [[항의한다|Robin Forest Crash Protest]]>><<def 1>><<npcincr Eden love -1>><<npcincr Eden dom -5>><</link>><<llove "Eden">><<lldom "Eden">><br>
 /* <<elseif $submissive gte 1150>> */
-	<<link [[Plead|Robin Forest Crash Protest]]>><<npcincr Eden love -1>><<npcincr Eden dom 1>><</link>><<llove "Eden">><<gdom "Eden">><br>
+	<<link [[애원한다|Robin Forest Crash Protest]]>><<npcincr Eden love -1>><<npcincr Eden dom 1>><</link>><<llove "Eden">><<gdom "Eden">><br>
 /* <<else>> */
 	<<link [[로빈을 확인하게 해달라고 한다|Robin Forest Crash Protest]]>><<npcincr Eden love -1>><<npcincr Eden dom -1>><</link>><<llove "Eden">><<ldom "Eden">>
 /* <</if>> */

@@ -1380,9 +1380,9 @@ Groups littermates by pregnancyId.*/
 					<br>
 					<<link "<<childhim>>【이가】 나는 시늉을 하도록 돕는다 (0:15)" "Children Activity Events">><<pass 15>><<set $childActivityEvent to {event:"pretendFly", childid:_args[0]} >><</link>>
 				<<else>>
-					looks as if they are ready to take flight.
+					금방이라도 날아오를 준비가 된 것처럼 보인다.
 					<br>
-					<<link "Say farewell to <<childhim>> (0:30)" "Children Activity Events">><<pass 30>><<set $childActivityEvent to {event:"dismissChildHawk", childid:_args[0]}>><</link>>
+					<<link "<<childhim>>에게 작별 인사를 한다 (0:30)" "Children Activity Events">><<pass 30>><<set $childActivityEvent to {event:"dismissChildHawk", childid:_args[0]}>><</link>>
 				<</if>>
 			<<case "preen">>
 				<<childHe>>【은는】 불안한 듯 날개를 쪼아댄다.
@@ -1416,7 +1416,7 @@ Groups littermates by pregnancyId.*/
 					<</if>>
 				<</if>>
 			<<case "dismissed">>
-				<<childHe>>'s out in the world.
+				<<childHe>>【은는】 넓은 세상 어딘가에 있다.
 			<<case "swingToy">>
 				/* currently unreachable. credit writer as Anonymous when properly added */
 				<<silently>><<childtoy $location "hawk toys" "lowercase">><</silently>>

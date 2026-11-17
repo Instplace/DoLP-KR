@@ -1010,8 +1010,8 @@
 	<br><br>
 	<<set $antiquemoney += 1500>><<museumAntiqueStatus "antiquegoldring" "found">>
 	<<wearProp "antique gold ring">>
-	<<link [[Wear it|Moor Wear Gold Ring]]>><<handheldon>><</link>>
-	<<link [[Next|Moor Passage Swim 2]]>><<handheldon>><</link>>
+	<<link [[착용한다|Moor Wear Gold Ring]]>><<handheldon>><</link>>
+	<<link [[다음|Moor Passage Swim 2]]>><<handheldon>><</link>>
 	<br>
 
 <<else>>
@@ -1237,16 +1237,16 @@
 :: Moor Spiked Rampion
 <<effects>>
 
-You kneel beside the spiky flower, carefully pulling it free from the rocky ground.
+당신은 뾰족한 꽃 옆에 무릎을 꿇고, 바위투성이 땅에서 조심스레 뽑아낸다.
 <<if $tendingSuccess>>
-    <span class="green">and collect a handful of these rare, striking blooms.</span>
+    <span class="green">그리고 희귀하고 눈길을 끄는 꽃을 한 줌 거둔다.</span>
     <<tending_pick spiked_rampion 3 15>><<earnFeat "Thorned Crown">>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
     <br>
 <<else>>
-    <span class="red">but the plant proves too delicate, crumbling apart as you pull.</span><<gtending>><<tending 7>>
+    <span class="red">하지만 이 식물은 너무 연약해서 뽑는 순간 바스러진다.</span><<gtending>><<tending 7>>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
@@ -1256,16 +1256,16 @@ You kneel beside the spiky flower, carefully pulling it free from the rocky grou
 :: Moor Cloudberry
 <<effects>>
 
-You reach down, plucking the bright orange berries from the low-lying shrubs.
+당신은 몸을 숙여 낮게 자란 관목에서 선명한 주황색 열매를 딴다.
 <<if $tendingSuccess>>
-    <span class="green">and soon fill your hands with ripe, sweet fruit.</span>
+    <span class="green">그리고 곧 잘 익은 달콤한 열매로 손을 가득 채운다.</span>
     <<tending_pick cloudberry 60 320>><<earnFeat "Amber Harvest">>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
     <br>
 <<else>>
-    <span class="red">but most are either underripe or already spoiled.</span><<gtending>><<tending 4>>
+    <span class="red">하지만 대부분이 덜 익었거나 이미 상했다.</span><<gtending>><<tending 4>>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
@@ -1275,16 +1275,16 @@ You reach down, plucking the bright orange berries from the low-lying shrubs.
 :: Moor Scottish Bog Myrtle
 <<effects>>
 
-You brush your hands over the dense shrub, releasing its sharp, resinous scent.
+당신은 빽빽한 관목 위로 손을 쓸어, 날카롭고 송진 같은 향을 퍼뜨린다.
 <<if $tendingSuccess>>
-    <span class="green">and strip the branches of their valuable leaves and catkins.</span>
+    <span class="green">그리고 가지에서 값나가는 잎과 꽃이삭을 훑어 딴다.</span>
     <<tending_pick scottish_bog_myrtle 10 35>><<earnFeat "Scent of the Highlands">>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
     <br>
 <<else>>
-    <span class="red">but most of the branches you gather are too brittle for use.</span><<gtending>><<tending 6>>
+    <span class="red">하지만 따 모은 가지 대부분이 너무 부서지기 쉬워 쓸 수 없다.</span><<gtending>><<tending 6>>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
@@ -1294,16 +1294,16 @@ You brush your hands over the dense shrub, releasing its sharp, resinous scent.
 :: Moor Bog Orchid
 <<effects>>
 
-You crouch near the damp moss, carefully clipping the small, pale-green orchids.
+당신은 축축한 이끼 근처에 웅크리고 앉아 작고 연한 초록빛 난초를 조심스레 자른다.
 <<if $tendingSuccess>>
-    <span class="green">and manage to harvest a pristine handful of flowers.</span>
+    <span class="green">그리고 흠 없는 꽃을 한 줌 수확해 낸다.</span>
     <<tending_pick bog_orchid 3 20>><<earnFeat "Bog Whisperer">>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
     <br>
 <<else>>
-    <span class="red">but the delicate stems snap in your hands, ruining the harvest.</span><<gtending>><<tending 8>>
+    <span class="red">하지만 연약한 줄기가 손안에서 똑 부러져 수확을 망친다.</span><<gtending>><<tending 8>>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
@@ -1313,16 +1313,16 @@ You crouch near the damp moss, carefully clipping the small, pale-green orchids.
 :: Moor Marsh Saxifrage
 <<effects>>
 
-You carefully pluck the delicate yellow flowers, ensuring not to damage their fragile stems.
+당신은 연약한 줄기가 상하지 않게 조심하며 섬세한 노란 꽃을 따낸다.
 <<if $tendingSuccess>>
-    <span class="green">and soon gather a fine selection of vibrant blooms.</span>
+    <span class="green">그리고 곧 생기 넘치는 꽃을 잘 골라 모은다.</span>
     <<tending_pick marsh_saxifrage 2 9>><<earnFeat "Marshlight">>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
     <br>
 <<else>>
-    <span class="red">but they wilt before you can secure them.</span><<gtending>><<tending 7>>
+    <span class="red">하지만 갈무리하기도 전에 시들어 버린다.</span><<gtending>><<tending 7>>
     <br><br>
 
     <<link [[다음|Moor]]>><<set $eventskip to 1>><</link>>
@@ -2753,7 +2753,7 @@ You carefully pluck the delicate yellow flowers, ensuring not to damage their fr
 :: Moor Bird Screech Reassure 2
 <<effects>>
 <<switch $speech_attitude>>
-	<<case "meek" "polite" "flamboyant" "shy">>"I'm actually alright," you say softly. "Thank you for being so concerned for me."
+	<<case "meek" "polite" "flamboyant" "shy">>"나 정말 괜찮아." 당신이 부드럽게 말한다. "그렇게 걱정해줘서 고마워."
 	<<case "bratty">>"저기." 당신이 약간 부드러워진 어조로 말한다. "난 괜찮아. 너무 걱정하지 마."
 	<<default>>"정말 걱정할 필요 없어." 당신이 말하며, <<if $monster is 1>><<beasttype>>의 어깨에 손을 얹는다<<else>><<beasttype>>의 날개를 부드럽게 쓰다듬는다<</if>>. "난 괜찮아. 정말로."
 <</switch>>
@@ -3064,7 +3064,7 @@ You carefully pluck the delicate yellow flowers, ensuring not to damage their fr
 	<br><br>
 
 	<<person>>【이가】 당신에게서 물러나 하늘을 살피며 올려다본다.
-	"Damn it!" <<he>> snarls. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>Of course you'd be involved with the terror<<else>>Well, guess we'll have to do this some other time<</if>>."
+	"젠장!" <<he>>【이가】 으르렁거린다. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>>역시 그 공포의 존재와 관련이 있었군<<else>>음, 이건 다른 때에 해야겠네<</if>>."
 	<<He>>【이가】 땅속으로 파고들자, 당신을 둘러싼 덩굴들이 물러난다.
 	<<tearful>> 당신은 잠시 숨을 고른다.
 	<<clotheson>>
@@ -5124,7 +5124,7 @@ You carefully pluck the delicate yellow flowers, ensuring not to damage their fr
 
 <<if $stress gte $stressmax>>
 	<span class="red">모든 게 너무 벅차다.</span>
-	You try to say something to <<if $speech_attitude is "bratty">>brush the <<beasttype>> off<<elseif ($speech_attitude is "meek" or $speech_attitude is "shy")>>console the <<beasttype>><<else>>reassure the <<beasttype>><</if>>, but you feel your vision fading. The last thing you see is <<if $monster is 1>>your <<nnpc_wife "Great Hawk">> grabbing your shoulders<<else>>the <<beasttype>> fluttering towards you<</if>> as you pass out.
+	당신은 <<if $speech_attitude is "bratty">><<beasttype>>【을를】 떨쳐내기 위해<<elseif ($speech_attitude is "meek" or $speech_attitude is "shy")>><<beasttype>>【을를】 위로하기 위해<<else>><<beasttype>>【을를】 안심시키기 위해<</if>> 무언가 말하려 하지만, 시야가 흐려지는 것을 느낀다. 마지막으로 본 것은 당신이 기절할 때 <<if $monster is 1>>당신의 <<nnpc_wife "Great Hawk">>【이가】 당신의 어깨를 잡는 것<<else>><<beasttype>>【이가】 당신을 향해 날갯짓하는 것<</if>>【이】다.
 	<br><br>
 	<<link [[다음|Moor Bird Wake]]>><<passout>><<set $moor to 0>><<endevent>><<pass 30>><</link>>
 	<br>
@@ -5229,7 +5229,7 @@ You carefully pluck the delicate yellow flowers, ensuring not to damage their fr
 
 :: Bird Rescue Syndrome Comfort
 <<effects>>
-"I'm <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>alright<<else>>not hurt<</if>>," you say, before wrapping your arms around the <<beasttype>><<if $monster isnot 1>>'s <<if currentSkillValue('tending') gte 400>>mantle<<else>>shoulder area<</if>><</if>>.
+"난 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>괜찮아<<else>>다치지 않았어<</if>>." 당신은 말하고, <<beasttype>><<if $monster isnot 1>>의 <<if currentSkillValue('tending') gte 400>>외투막<<else>>어깨 부분<</if>><</if>>【을를】 팔로 감싼다.
 <<if $monster is 1>>
 	<<bHe>>【이가】 포옹에 답하며<<if C.npc["Great Hawk"].dom gte 20>>, 당신을 꽉 껴안는다<</if>>.
 <<else>>
@@ -5272,8 +5272,8 @@ You carefully pluck the delicate yellow flowers, ensuring not to damage their fr
 :: Moor Wear Gold Ring
 <<water>><<effects>>
 
-You put the ring on.
-<<if $worn.rings.name isnot "naked">><br> It replaces the $worn.rings.name you just lost neatly.<</if>>
+당신은 반지를 낀다.
+<<if $worn.rings.name isnot "naked">><br> 방금 잃어버린 $worn.rings.name【을를】 깔끔하게 대신한다.<</if>>
 <<set $antiquemoney -= 1500>>
 <<ringswear 10>>
 <br><br>

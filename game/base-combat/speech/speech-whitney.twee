@@ -395,21 +395,21 @@ $whitneycollar - if whitney ever put a collar on you
 		<<if $worn.neck.name.includes("Whitney's collar")>> /*Collared*/
 			<<if $worn.genitals.origin is "Whitney">> /*Collared and caged */
 				<<addSpeechLine "cagedAndCollared">>		 
-				"Remember who owns you," <<He>> smirks. "Sluts like you get locked and marked for their own good."
+				"누가 널 소유하고 있는지 기억해." <<He>>【이가】 능글맞게 웃는다. "너 같은 걸레들은 자기 좋으라고 잠기고 표시가 새겨지는 거야."
 				<</addSpeechLine>>
 			<<else>>									 	/*just collared */
 				<<addSpeechline "collared">>
-				<<He>> smirks, "You look so cute below me all begging."
+				<<He>>【이가】 능글맞게 웃는다. "내 밑에서 애원하는 꼴이 아주 귀엽네."
 				<</addSpeechLine>>
 			<</if>>
 		<<elseif $worn.neck.name isnot "naked">> 			/*wearing something else*/
 			<<addSpeechLine "notCollared">>
-				"What a bad little slut," <<He>> tuts. "Where is your collar? Tsk."
+				"못된 꼬마 걸레네." <<He>>【이가】 혀를 찬다. "네 목줄은 어디 갔어? 쯧."
 			<</addSpeechLine>>
 		<<else>> 											/*wearing nothing*/
 			<<addSpeechLine "nakedNeck">>
-				<<print `<<He>> traces your collarbone, "I should put your collar back on, ${
-					["can't trust you walking around unmarked.","everyone should know you are mine."][random(0,1)]
+				<<print `<<He>>【이가】 당신의 쇄골을 손끝으로 훑는다. "네 목줄을 다시 채워야겠어, ${
+					["표시도 없이 돌아다니게 두면 못 믿겠으니까.","다들 네가 내 거라는 걸 알아야 하니까."][random(0,1)]
 				}"`>>
 			<</addSpeechLine>>
 		<</if>>

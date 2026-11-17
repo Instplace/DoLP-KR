@@ -252,7 +252,7 @@
 		<<npc "Sydney">><<person1>>
 		등 뒤에서 발소리가 들리고, 어깨에 손이 닿는다. "타이밍 좋군." 레이튼이다. "넌 도무지 교훈을 얻지 못하는 것 같구나. 네가 우리 물건을 훔친 횟수를 생각하면 경찰을 불러야 마땅하지만, 좀 더... 가정적인 벌로 대신하지."
 		<br><br>
-		<<nnpc_He "Leighton">> begins to lead you towards the rental counter. "Your friend will be sharing in your punishment.<<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<unset $sydneyStolenKnown>> Oh, and I'll be taking that stolen <<if $studyBooks.stolen.count gt 1>>books<<else>>book<</if>> back.<<set $studyBooks.stolen.count to 0>><</if>>"
+		<<nnpc_He "Leighton">>【이가】 당신을 대여 카운터 쪽으로 이끈다. "네 친구도 네 벌을 함께 받게 될 거다.<<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<unset $sydneyStolenKnown>> 아, 그리고 훔친 <<if $studyBooks.stolen.count gt 1>>책들<<else>>책<</if>>【은는】 내가 도로 가져가겠다.<<set $studyBooks.stolen.count to 0>><</if>>"
 		<br><br>
 		몇몇 학생들이 남아있었지만, 레이튼이 쏘아보자 서둘러 나간다. 레이튼은 그들 뒤로 문을 잠근다.
 		<br><br>
@@ -914,9 +914,9 @@
 					"늦었군요." 시드니가 고개를 든다. "이러면 안 된다는 거 알잖아요." <<bookCriminal>>
 				<</if>>
 			<<elseif $book_rent_timer is 14>>
-				"That was... fast." Sydney fumbles around with the register for a moment, before handing you <<moneyGain _fullRefund>>.
+				"정말... 빠르네요." 시드니가 잠시 계산대를 만지작거리더니, 당신에게 <<moneyGain _fullRefund>>【을를】 건네준다.
 			<<elseif $book_rent_timer gt 7>>
-				"Done early?" Sydney fumbles around with the register for a moment, before handing you <<moneyGain _partialRefund>>.
+				"일찍 다 읽었나요?" 시드니가 잠시 계산대를 만지작거리더니, 당신에게 <<moneyGain _partialRefund>>【을를】 건네준다.
 			<<else>>
 				"시간 맞춰줘서 고마워요!" 시드니가 기쁘게 책을 받아 제자리에 꽂는다.
 			<</if>>
@@ -1003,13 +1003,13 @@
 		<br><br>
 		<<sydneyOptions>>
 	<<case "deposit">>
-		put down a deposit for your rented
+		대여한
 		<<if $studyBooks.rented.count gt 1>>
-			books.
+			책들에 대한 보증금을 맡깁니다.
 		<<else>>
-			book.
+			책에 대한 보증금을 맡깁니다.
 		<</if>>
-		Sydney smiles. "Thanks for depositing, it's definitely easy to forget renewing your books every 2 weeks.<<if $sydneyromance is 1 and _sydneyStatus.includes("corrupt")>> I'll make sure you never forget our nights though.<</if>>"
+		시드니가 미소 짓는다. "보증금을 맡겨 줘서 고마워요. 2주마다 책을 연장하는 걸 깜박하기 쉬우니까요.<<if $sydneyromance is 1 and _sydneyStatus.includes("corrupt")>> 우리의 밤은 절대 깜박하지 않게 해 줄게요.<</if>>"
 		<br><br>
 		<<sydneyOptions>>
 	<<case "steal">>
@@ -1041,7 +1041,7 @@
 		<<getouticon>><<link [[나간다|School Library]]>><<endevent>><<set $eventskip to 1>><<crimeUp 20 "thievery">><</link>><<crime "thievery">>
 		<br>
 	<<case "cancelDeposit">>
-		change your mind and decide to not put down a deposit. Sydney smiles. "That's okay, just let me know if you decide to deposit afterall."
+		마음을 바꿔 보증금을 맡기지 않기로 합니다. 시드니가 미소 짓는다. "괜찮아요, 나중에 맡기기로 하면 말해 줘요."
 		<br><br>
 		<<sydneyOptions>>
 	<<default>>
@@ -1065,7 +1065,7 @@
 	<<wearProp "scarlet">>
 	"라울과 자넷" 책을
 <<else>>
-	$studyBooks.stolen.last textbook.
+	<<= ({ "science": "과학", "maths": "수학", "English": "영어", "history": "역사" }[$studyBooks.stolen.last] || "")>> 교과서를
 <</if>>
 <<if _sydney_location is "library">>
 	<<if $bookStolenKnown isnot undefined>>
@@ -1138,18 +1138,18 @@
 <</if>>
 
 :: Book Rental Deposit
-How much are you going to deposit? (£)
+보증금을 얼마나 내시겠습니까? (£)
 <br>
 <<numberbox "_depositAmount" 1>>
 <br><br>
 
 <div id="depositExit">
-	<<link "Deposit">>
+	<<link "보증금을 낸다">>
 		<<set _depositAmount = Math.clamp(_depositAmount * 100, 1, $money)>>
 		<<replace #depositExit>><<depositLibraryExitConfirm>><</replace>>
 	<</link>>
 </div>
-<<link [[Back|Book Rental]]>><<set $phase2 to "cancelDeposit">><</link>>
+<<link [[뒤로|Book Rental]]>><<set $phase2 to "cancelDeposit">><</link>>
 
 :: Library Altar Research
 <<effects>><<sydneySchedule>>

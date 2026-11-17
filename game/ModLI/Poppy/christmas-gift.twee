@@ -8,35 +8,35 @@
 
 :: Shop Poppy Gift
 <<effects>>
-You walk between shops, looking for something Poppy would like. You find a few items you think would work.
+당신은 상점들을 돌아다니며 포피가 좋아할 만한 것을 찾는다. 괜찮을 법한 물건 몇 개를 발견한다.
 <br><br>
 <<if $money gte 1200>>
-	<<gifticon "christmas">><<link [[Detangler brush (Sensible <<printmoney 1200>>)|Shop Poppy Christmas]]>><<pass 10>><<money -1200>><<set $christmas_gift_poppy to "brush_unwrapped">><</link>>
+	<<gifticon "christmas">><<link [[엉킴 방지 브러시 (평상복 <<printmoney 1200>>)|Shop Poppy Christmas]]>><<pass 10>><<money -1200>><<set $christmas_gift_poppy to "brush_unwrapped">><</link>>
 	<br>
 <<else>>
-	You could buy a detangler brush here, <span class="blue">if you had more money (<<printmoney 1200>>).</span>
+	<span class="blue">돈이 더 있었다면 (<<printmoney 1200>>)</span> 이곳에서 엉킴 방지 브러시를 살 수 있었을 것이다.
 	<br>
 <</if>>
 <<if $money gte 3500>>
-	<<techicon "camera">><<link [[Polaroid camera (Sensible <<printmoney 3500>>)|Shop Poppy Christmas]]>><<pass 10>><<money -3500>><<set $christmas_gift_poppy to "camera_unwrapped">><</link>>
+	<<techicon "camera">><<link [[폴라로이드 카메라 (평상복 <<printmoney 3500>>)|Shop Poppy Christmas]]>><<pass 10>><<money -3500>><<set $christmas_gift_poppy to "camera_unwrapped">><</link>>
 	<br>
 <<else>>
-	You could buy a polaroid camera here, <span class="blue">if you had more money (<<printmoney 3500>>).</span>
+	<span class="blue">돈이 더 있었다면 (<<printmoney 3500>>)</span> 이곳에서 폴라로이드 카메라를 살 수 있었을 것이다.
 	<br>
 <</if>>
 <<if $money gte 10000>>
-	<<gifticon "christmas">><<link [[Perfume (Exotic <<printmoney 10000>>)|Shop Poppy Christmas]]>><<pass 10>><<money -10000>><<set $christmas_gift_poppy to "perfume_unwrapped">><</link>>
+	<<gifticon "christmas">><<link [[향수 (이국적 <<printmoney 10000>>)|Shop Poppy Christmas]]>><<pass 10>><<money -10000>><<set $christmas_gift_poppy to "perfume_unwrapped">><</link>>
 	<br>
 <<else>>
-	You could buy a bottle of perfume here, <span class="blue">if you had more money (<<printmoney 10000>>).</span>
+	<span class="blue">돈이 더 있었다면 (<<printmoney 10000>>)</span> 이곳에서 향수 한 병을 살 수 있었을 것이다.
 	<br>
 <</if>>
 <<if $money gte 42000>>
-	<<gifticon "tuxedo">><<link [[Tuxedo suit (Exotic <<printmoney 42000>>)|Shop Poppy Christmas]]>><<pass 10>><<money -42000>><<set $christmas_gift_poppy to "tuxedo_unwrapped">><</link>>
-	<<if C.npc?.Poppy?.pronoun is "f">><<note "Poppy might not be expecting something cut like this." "italic">><</if>>
+	<<gifticon "tuxedo">><<link [[턱시도 세트 (이국적 <<printmoney 42000>>)|Shop Poppy Christmas]]>><<pass 10>><<money -42000>><<set $christmas_gift_poppy to "tuxedo_unwrapped">><</link>>
+	<<if C.npc?.Poppy?.pronoun is "f">><<note "포피가 이런 재단의 옷을 기대하지 않을지도 모른다." "italic">><</if>>
 	<br>
 <<else>>
-	You could buy a tuxedo suit here, <span class="blue">if you had more money (<<printmoney 42000>>).</span>
+	<span class="blue">돈이 더 있었다면 (<<printmoney 42000>>)</span> 이곳에서 턱시도 세트를 살 수 있었을 것이다.
 	<br>
 <</if>>
 <br>
@@ -46,10 +46,10 @@ You walk between shops, looking for something Poppy would like. You find a few i
 :: Shop Poppy Christmas
 <<effects>>
 <<switch $christmas_gift_poppy>>
-	<<case "brush_unwrapped">>You buy the detangler brush. You think Poppy will like it.
-	<<case "camera_unwrapped">>You buy the polaroid camera. You think Poppy will like it.
-	<<case "perfume_unwrapped">>You buy the perfume. You think Poppy will like it.
-	<<case "tuxedo_unwrapped">>You buy the tuxedo suit. You think Poppy will like it.
+	<<case "brush_unwrapped">>엉킴 방지 브러시를 산다. 포피가 좋아할 것 같다.
+	<<case "camera_unwrapped">>폴라로이드 카메라를 산다. 포피가 좋아할 것 같다.
+	<<case "perfume_unwrapped">>향수를 산다. 포피가 좋아할 것 같다.
+	<<case "tuxedo_unwrapped">>턱시도 세트를 산다. 포피가 좋아할 것 같다.
 <</switch>>
 <<if $christmas_wrap is undefined>>이제 포장지만 있으면 된다.<<else>>방에 가서 포장하면 된다.<</if>>
 <br><br>
@@ -61,24 +61,24 @@ Reachable from any room; the orphanage version below covers players who can't ge
 <<set $location to "flats">><<set $outside to 0>>
 <<effects>><<wearProp "giftbox">><<run poppySchedule()>>
 <<if $poppyFlat.home>>
-	You slip into the quiet of the empty room and shut the door behind you, listening for Poppy moving about elsewhere in the flat.
+	당신은 텅 빈 방의 고요 속으로 슬며시 들어가 문을 닫고, 아파트 어딘가에서 움직이는 포피의 기척에 귀를 기울인다.
 <<else>>
-	With Poppy out, you have the flat to yourself.
+	포피가 나가 있어서, 아파트는 온전히 당신 차지다.
 <</if>>
 <br><br>
 <<switch $christmas_gift_poppy>>
 	<<case "brush">>
-		With the wrapping paper and marker in hand, you prepare Poppy's detangler brush.
+		포장지와 마커를 손에 들고 포피의 엉킴 방지 브러시를 준비한다.
 	<<case "camera">>
-		With the wrapping paper and marker in hand, you prepare Poppy's polaroid camera.
+		포장지와 마커를 손에 들고 포피의 폴라로이드 카메라를 준비한다.
 	<<case "perfume">>
-		With the wrapping paper and marker in hand, you prepare Poppy's perfume.
+		포장지와 마커를 손에 들고 포피의 향수를 준비한다.
 	<<case "tuxedo">>
-		With the wrapping paper and marker in hand, you prepare Poppy's tuxedo suit.
+		포장지와 마커를 손에 들고 포피의 턱시도를 준비한다.
 <</switch>>
-You wrap it as carefully as you can, keeping one ear on the door. The gift has a fetching look to it once done, with Poppy's name scrawled across one surface.
+문 쪽에 귀를 기울이며 최대한 조심스럽게 포장한다. 포장을 마치자 선물은 제법 근사해 보였고, 한쪽 면에는 포피의 이름이 휘갈겨 쓰여 있다.
 <br><br>
-You tuck the parcel out of sight until you're ready to hand it over.
+건넬 준비가 될 때까지 꾸러미를 눈에 띄지 않는 곳에 숨겨 둔다.
 <br><br>
 <<poppyFlatContents>>
 
@@ -86,17 +86,17 @@ You tuck the parcel out of sight until you're ready to hand it over.
 <<effects>><<wearProp "giftbox">>
 <<switch $christmas_gift_poppy>>
 	<<case "brush">>
-		With the wrapping paper and marker in hand, you prepare Poppy's detangler brush.
+		포장지와 마커를 손에 들고 포피의 엉킴 방지 브러시를 준비한다.
 	<<case "camera">>
-		With the wrapping paper and marker in hand, you prepare Poppy's polaroid camera.
+		포장지와 마커를 손에 들고 포피의 폴라로이드 카메라를 준비한다.
 	<<case "perfume">>
-		With the wrapping paper and marker in hand, you prepare Poppy's perfume.
+		포장지와 마커를 손에 들고 포피의 향수를 준비한다.
 	<<case "tuxedo">>
-		With the wrapping paper and marker in hand, you prepare Poppy's tuxedo suit.
+		포장지와 마커를 손에 들고 포피의 턱시도를 준비한다.
 <</switch>>
-You wrap it as carefully as you can. The gift has a fetching look to it once done, with Poppy's name scrawled across one surface.
+최대한 조심스럽게 포장한다. 포장을 마치자 선물은 제법 근사해 보였고, 한쪽 면에는 포피의 이름이 휘갈겨 쓰여 있다.
 <br><br>
-You tuck the parcel away where the other orphans won't get curious about it. You'll have to carry it to Poppy yourself.
+다른 고아들이 궁금해하지 않을 곳에 꾸러미를 숨겨 둔다. 포피에게는 당신이 직접 가져다줘야 한다.
 <br><br>
 <<link [[다음|Bedroom]]>><</link>>
 <br>
@@ -110,69 +110,69 @@ Reached from either menu; $location tells us which one, since the flat passages 
 <<set _poppyGiftLow to (T.poppyStatus and T.poppyStatus.includes("LowPatience"))>>
 <<run markPoppyInteraction()>>
 <<if $christmas_gift_poppy is "tuxedo" and _poppyGiftLow and C.npc.Poppy.pronoun is "f">>
-	"Merry Christmas," you say, and hand Poppy the Christmas gift.
+	"메리 크리스마스." 당신은 이렇게 말하며 포피에게 크리스마스 선물을 건넨다.
 	<br><br>
-	Poppy takes it from your hand without a word and opens it.
+	포피는 아무 말 없이 선물을 받아 열어 본다.
 	<br><br>
-	Poppy pauses when <<he>> sees the suit. <<He>> looks extremely disappointed. "Did you... get my gift mixed up with someone else's?" You shake your head.
+	포피는 양복을 보고 멈칫한다. 몹시 실망한 얼굴이다. "혹시... 내 선물이랑 다른 사람 선물이 바뀐 거 아니야?" 당신은 고개를 젓는다.
 	<br><br>
-	"Oh. Well, thanks..."
+	"아. 그래, 고마워..."
 	<<npcincr Poppy love -6>><<lllove>><<npcincr Poppy patience -8>><<lllpatience>>
 	<<poppyOpiumPulse>>
 	<<poppyChristmasGiftReturn>>
 <<else>>
-	"Merry Christmas," you say, and hand Poppy the Christmas gift.
+	"메리 크리스마스." 당신은 이렇게 말하며 포피에게 크리스마스 선물을 건넨다.
 	<br><br>
-	<<His>> face lights up with joy. "Merry Christmas to you too, my jewel!" Poppy takes the gift from your hand and opens it up with great care.
+	포피의 얼굴이 기쁨으로 환해진다. "너도 메리 크리스마스, 내 보석!" 포피는 당신의 손에서 선물을 받아 아주 조심스럽게 열어 본다.
 	<br><br>
 	<<switch $christmas_gift_poppy>>
 		<<case "brush">>
-			"Oh? A brush?" Poppy runs <<his>> fingers over the bristles. You nod.
+			"어? 브러시야?" 포피가 손가락으로 솔을 쓸어 본다. 당신은 고개를 끄덕인다.
 			<br><br>
-			"You have really nice <<if $awarelevel gte 5>>fur<<else>>hair<</if>>, I hope this brush can help you maintain it better." You glance at Poppy's crimson <<if $awarelevel gte 5>>fur<<else>>locks<</if>>.
+			"너 <<if $awarelevel gte 5>>털<<else>>머리카락<</if>> 정말 예쁘잖아, 이 브러시로 더 잘 관리할 수 있었으면 해." 당신은 포피의 진홍빛 <<if $awarelevel gte 5>>털<<else>>머리칼<</if>>을 힐끗 바라본다.
 			<br><br>
-			"That's very thoughtful, thank you!" Poppy smiles, but <<he>> glances over your shoulder as if hoping there are more gifts for <<him>>.
+			"정말 사려 깊네, 고마워!" 포피가 미소 짓지만, 자기 몫의 선물이 더 있기를 바라는 듯 당신의 어깨 너머를 흘끗 본다.
 			<<npcincr Poppy patience -2>><<lpatience>>
 			<<poppyOpiumPulse>>
 			<<poppyChristmasGiftReturn>>
 		<<case "camera">>
-			"Oh my!" Poppy exclaims as <<he>> pulls out the polaroid camera.
+			"어머!" 포피가 폴라로이드 카메라를 꺼내며 탄성을 지른다.
 			<br><br>
-			"I noticed how much you like to take photos," you say. "So I thought this gift would be fitting."
+			"네가 사진 찍는 걸 좋아하는 게 눈에 띄었어." 당신이 말한다. "그래서 이 선물이 어울릴 것 같았어."
 			<br><br>
-			"That's so sweet of you. I was just about to get a new camera too! This... would not be the one I'd usually buy, but it'll do!"
+			"정말 다정하네. 안 그래도 새 카메라를 사려던 참이었거든! 이건... 내가 평소에 살 만한 건 아니지만, 이거면 충분해!"
 			<<npcincr Poppy love 2>><<glove>><<npcincr Poppy patience 2>><<gpatience>>
 			<<poppyOpiumPulse>>
 			<<poppyChristmasGiftReturn>>
 		<<case "perfume">>
-			"Ooh!" Poppy's smile widens as <<he>> pulls out the bottle of perfume.
+			"오오!" 포피가 활짝 웃으며 향수병을 꺼낸다.
 			<br><br>
-			"When I smelt this perfume, I thought about you," you say.
+			"이 향수 냄새를 맡았을 때 네 생각이 났어." 당신이 말한다.
 			<br><br>
-			"What a flirt you are, my jewel." Poppy teases. You watch <<him>> spray the perfume on <<himself>> a few times.
+			"말 참 달콤하게 하네, 내 보석." 포피가 놀린다. 당신은 포피가 향수를 자기 몸에 몇 번 뿌리는 모습을 지켜본다.
 			<br><br>
-			"Mhm... it smells really nice, you have good taste. Thank you for this lovely gift." Poppy kisses you on the cheek.
+			"음... 향이 정말 좋네, 취향이 좋아. 이렇게 멋진 선물 고마워." 포피가 당신의 뺨에 입을 맞춘다.
 			<<npcincr Poppy love 2>><<glove>><<npcincr Poppy patience 4>><<ggpatience>><<garousal>><<arousal 600>>
 			<<poppyOpiumPulse>>
 			<<poppyChristmasGiftReturn>>
 		<<case "tuxedo">>
 			<<poppyChristmasTuxedoOpener>>
 			<<if _poppyGiftAtFlat>>
-				"I'll go put it on. You be a good <<girl>> and wait here."
+				"가서 입어 볼게. 착한 <<girl>>처럼 여기서 기다려."
 				<br><br>
-				Poppy enters <<his>> room. After a moment, <<he>> comes out wearing the suit. <<He>> gives you a little twirl. "So? What do you think?" <<He>> giggles.
+				포피는 자기 방으로 들어간다. 잠시 후 양복을 입고 나와 당신 앞에서 살짝 한 바퀴 돈다. "어때? 어떻게 생각해?" 포피가 킥킥 웃는다.
 				<br><br>
-				<<socialiseicon>><<link [[Compliment|Poppy Christmas Tuxedo Compliment]]>><<pass 5>><</link>><<glove>><<gggpatience>><<garousal>>
+				<<socialiseicon>><<link [[칭찬한다|Poppy Christmas Tuxedo Compliment]]>><<pass 5>><</link>><<glove>><<gggpatience>><<garousal>>
 				<br>
-				<<socialiseicon "angry">><<link [[Insult|Poppy Christmas Tuxedo Insult]]>><<pass 5>><</link>><<llove>><<llpatience>>
+				<<socialiseicon "angry">><<link [[모욕한다|Poppy Christmas Tuxedo Insult]]>><<pass 5>><</link>><<llove>><<llpatience>>
 			<<else>>
-				"Thank you for this lovely gift, my jewel. I will try it on when I get back home." Poppy gives you a big fat smooch on the lips.
+				"이렇게 멋진 선물 고마워, 내 보석. 집에 돌아가면 입어 볼게." 포피가 당신의 입술에 요란하게 쪽 입을 맞춘다.
 				<<npcincr Poppy love 3>><<glove>><<npcincr Poppy patience 6>><<gggpatience>><<garousal>><<arousal 600>>
 				<<poppyOpiumPulse>>
 				<<poppyChristmasGiftReturn>>
 			<</if>>
 		<<default>>
-			<<He>> thanks you warmly for it.
+			포피는 선물에 진심으로 고마워한다.
 			<<poppyOpiumPulse>>
 			<<poppyChristmasGiftReturn>>
 	<</switch>>
@@ -182,9 +182,9 @@ Reached from either menu; $location tells us which one, since the flat passages 
 :: Poppy Christmas Tuxedo Compliment
 <<set $location to "flats">><<set $bus to "poppy_living_room">>
 <<effects>><<run poppySchedule()>>
-"You look handsome." You take a step closer to admire Poppy's attire.
+"멋져 보여." 당신은 한 걸음 다가가 포피의 차림새를 감상한다.
 <br><br>
-"Hehe, I should wear it more often, since it's a gift from you. Thank you, my jewel. You're the best." Poppy gives you a big fat smooch on the lips.
+"헤헤, 네가 준 선물이니까 더 자주 입어야겠네. 고마워, 내 보석. 네가 최고야." 포피가 당신의 입술에 요란하게 쪽 입을 맞춘다.
 <<npcincr Poppy love 1>><<glove>><<npcincr Poppy patience 3>><<gggpatience>><<garousal>><<arousal 600>>
 <<poppyOpiumPulse>>
 <<poppyChristmasGiftReturn>>
@@ -193,9 +193,9 @@ Reached from either menu; $location tells us which one, since the flat passages 
 :: Poppy Christmas Tuxedo Insult
 <<set $location to "flats">><<set $bus to "poppy_living_room">>
 <<effects>><<run poppySchedule()>>
-"It didn't look as great as I thought..." You say with a shake of your head.
+"생각만큼 근사하진 않았어..." 당신이 고개를 저으며 말한다.
 <br><br>
-Poppy pouts. "I thought it looked really good..."
+포피가 입을 삐죽인다. "난 정말 잘 어울린다고 생각했는데..."
 <<npcincr Poppy love -3>><<llove>><<npcincr Poppy patience -3>><<llpatience>>
 <<poppyOpiumPulse>>
 <br>

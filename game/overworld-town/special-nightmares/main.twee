@@ -1100,7 +1100,7 @@
 	"실망스럽군요," 하퍼가 한숨을 쉰다. "아마 <<pshe>>【이가】 겁을 먹었나 봅니다. 결국 공포는 쾌감을 줄일 수 있으니까요."
 	<br><br>
 
-	<<He>> snaps <<his>> fingers. The orderlies come forward. "We'll try this again later." <<He>> pats your <<if $bodysize lte 3>>head<<else>>shoulder<</if>>. "Time to go back to your room."
+	<<He>>【은는】 손가락을 딱 튕긴다. 조무사들이 앞으로 나온다. "나중에 다시 시도하겠습니다." <<He>>【은는】 당신의 <<if $bodysize lte 3>>머리<<else>>어깨<</if>>를 두드린다. "방으로 돌아갈 시간입니다."
 <</if>>
 <br><br>
 
@@ -2559,7 +2559,7 @@
 <<set $phase to 0>>
 <br><br>
 
-<<link [[Next|Nightmare Gwylan End]]>><<endevent>><</link>>
+<<link [[다음|Nightmare Gwylan End]]>><<endevent>><</link>>
 <br>
 
 :: Nightmare Gwylan End
@@ -2737,7 +2737,7 @@
 	<br><br>
 <</if>>
 
-<<link [[Next|Nightmare Office End]]>><<endcombat>><<set $phase to 1>><</link>>
+<<link [[다음|Nightmare Office End]]>><<endcombat>><<set $phase to 1>><</link>>
 <br>
 
 :: Nightmare Office End

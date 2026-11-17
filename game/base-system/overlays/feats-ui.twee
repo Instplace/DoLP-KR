@@ -42,8 +42,8 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 		<option value="Discoveries-Other">발견 - 시외</option>
 		<option value="Special">특수</option>
 		<option value="Pregnancy">임신</option>
-		<option value="AMC Traits">AMC Traits</option>
-		<option value="Combat Extended">Combat Extended</option>
+		<option value="AMC Traits">애니 주인공 특성</option>
+		<option value="Combat Extended">확장 전투</option>
 		<option value="All">모두 보기</option>
 		<option value="General" hidden="hidden" selected="selected">일반</option>
 	</select>
@@ -294,13 +294,13 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 			<<case "housekeeping">>
 				<span class="gold">시작 가사 등급</span>
 			<<case "divineTFs">>
-				<span class="gold">Divine Transformation</span>
+				<span class="gold">신성한 변신</span>
 			<<case "animalTFs">>
-				<span class="gold">Animal Transformation</span>
+				<span class="gold">동물 변신</span>
 			<<case "sadism" "masochism">>
 			<span class="gold">일일 순결함 상승치 증가</span>
 			<<case "adaptiveGenes">>
-				<span class="gold">Adaptive Genes</span>
+				<span class="gold">적응형 유전자</span>
 			<<default>>
 				<span class="gold" style="text-transform: capitalize;">시작 _upgradeName 등급</span>
 		<</switch>>
@@ -394,22 +394,22 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 							섹스 토이가 <span class="red">없는</span> 상태로 게임을 시작합니다.
 						<</if>>
 					<<case "greenThumb">>
-						You will start the game with the <span class="green">Green Thumb</span> trait.
+						게임을 <span class="green">녹색의 손</span> 특성을 가진 채로 시작합니다.
 					<<case "divineTFs">>
-						You will start the game with a divine transformation.
+						게임을 신성한 변신 상태로 시작합니다.
 					<<case "animalTFs">>
-						You will start the game with an animal transformation.
+						게임을 동물 변신 상태로 시작합니다.
 					<<case "sadism">>
 						<<if ($featsBoosts.upgrades[_name] / _details.cost) is 0>>
-						Purchased sadism boosts will increase your daily sadism gain. <i>Actions you take can amplify your sadism gains.</i>
+						구매한 가학 성향 부스트는 일일 가학 성향 상승량을 늘립니다. <i>당신의 행동에 따라 가학 성향 상승이 증폭될 수 있습니다.</i>
 						<<else>>
-						You will gain <span class="green"><<print 1+$featsBoosts.upgrades[_name] / _details.cost>></span> points of sadism per day. <i>Actions you take can amplify your sadism gains.</i>
+						당신은 매일 <span class="green"><<print 1+$featsBoosts.upgrades[_name] / _details.cost>></span>점의 가학 성향을 얻습니다. <i>당신의 행동에 따라 가학 성향 상승이 증폭될 수 있습니다.</i>
 						<</if>>
 					<<case "masochism">>
 						<<if ($featsBoosts.upgrades[_name] / _details.cost) is 0>>
-						Purchased masochism boosts will increase your daily masochism gain. <i>Actions you take can amplify your masochism gains.</i>
+						구매한 피학 성향 부스트는 일일 피학 성향 상승량을 늘립니다. <i>당신의 행동에 따라 피학 성향 상승이 증폭될 수 있습니다.</i>
 						<<else>>
-						You will gain <span class="green"><<print 1+$featsBoosts.upgrades[_name] / _details.cost>></span> points of masochism per day. <i>Actions you take can amplify your masochism gains.</i>
+						당신은 매일 <span class="green"><<print 1+$featsBoosts.upgrades[_name] / _details.cost>></span>점의 피학 성향을 얻습니다. <i>당신의 행동에 따라 피학 성향 상승이 증폭될 수 있습니다.</i>
 						<</if>>
 					<<case "physique">>
 						<<switch $bodysize>>
@@ -421,7 +421,7 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 							<<case 3>><<set $physiquesize to 14000>>
 							<<case 4>><<set $physiquesize to 16000>>
 						<</switch>>
-						You will start the game with _name at 
+						게임 시작 시 _name 수치:
 						<<if ($physique + ($featsBoosts.upgrades[_name] / _details.cost * 1500)) gte ($physiquesize / 7) * 6>>
 							<span class="green"><<print $physique + ($featsBoosts.upgrades[_name] / _details.cost * 1500)>></span>.
 						<<elseif ($physique + ($featsBoosts.upgrades[_name] / _details.cost * 1500)) gte ($physiquesize / 7) * 5>>
@@ -438,7 +438,7 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 							<span class="red"><<print $physique + ($featsBoosts.upgrades[_name] / _details.cost * 1500)>></span>.
 						<</if>>
 					<<case "willpower">>
-						You will start the game with _name at 
+						게임 시작 시 _name 수치:
 						<<if ($willpower + ($featsBoosts.upgrades[_name] / _details.cost * 200)) gte ($willpowermax / 7) * 6>>
 							<span class="green"><<print $willpower + ($featsBoosts.upgrades[_name] / _details.cost * 200)>></span>.
 						<<elseif ($willpower + ($featsBoosts.upgrades[_name] / _details.cost * 1500)) gte ($willpowermax / 7) * 5>>
@@ -457,24 +457,24 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 					<<case "oral" "chest" "hands" "buttocks" "penile" "anal" "vaginal" "feet" "thighs">>
 						당신은
 						<<if $featsBoosts.upgrades[_name] / _details.cost is 1>>
-							_name at level <span class="purple">D</span>.
+							<span class="purple">D</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 						<<elseif $featsBoosts.upgrades[_name] / _details.cost is 2>>
-							_name at level <span class="blue">C</span>.
+							<span class="blue">C</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 						<<elseif $featsBoosts.upgrades[_name] / _details.cost is 3>>
-							_name at level <span class="lblue">B</span>.
+							<span class="lblue">B</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 						<<elseif $featsBoosts.upgrades[_name] / _details.cost is 4>>
-							_name at level <span class="teal">A</span>.
+							<span class="teal">A</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 						<<elseif $featsBoosts.upgrades[_name] / _details.cost is 5>>
-							_name at level <span class="green">S</span>.
+							<span class="green">S</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 						<<else>>
 							<<print _name>> 기술에 대한 숙련도가 <span class="red">없는</span> 상태로 게임을 시작합니다.
 						<</if>>
 					<<case "promiscuity" "exhibitionism" "deviancy">>
-						You will start the game with an additional <span class="blue"><<print $featsBoosts.upgrades[_name] / _details.cost * 15>></span> _name.
+						게임 시작 시 _name 수치에 <span class="blue"><<print $featsBoosts.upgrades[_name] / _details.cost * 15>></span>점이 추가됩니다.
 					<<case "transcend">>
-						You will gain <span class="gold"><<print $featsBoosts.upgrades[_name] / _details.cost * 50>>%</span> more when grinding skills.
+						스킬을 키울 때 <span class="gold"><<print $featsBoosts.upgrades[_name] / _details.cost * 50>>%</span> 더 많이 얻습니다.
 					<<case "adaptiveGenes">>
-						You will gain <span class="gold"><<print $featsBoosts.upgrades[_name] * 2>>%</span> more transformation points.
+						변신 포인트를 <span class="gold"><<print $featsBoosts.upgrades[_name] * 2>>%</span> 더 많이 얻습니다.
 					<<case "skulduggery">>
 						<<switch _purchasedUpgrades>>
 							<<case 1>><span class="pink">F+</span> 등급의 속임수 기술을 가지고 게임을 시작합니다.
@@ -577,25 +577,25 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 						당신은
 						<<switch _purchasedUpgrades>>
 							<<case 1>>
-								_name at level <span class="pink">F+</span>.
+								<span class="pink">F+</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 2>>
-								_name at level <span class="purple">D</span>.
+								<span class="purple">D</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 3>>
-								_name at level <span class="purple">D+</span>.
+								<span class="purple">D+</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 4>>
-								_name at level <span class="blue">C</span>.
+								<span class="blue">C</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 5>>
-								_name at level <span class="blue">C+</span>.
+								<span class="blue">C+</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 6>>
-								_name at level <span class="lblue">B</span>.
+								<span class="lblue">B</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 7>>
-								_name at level <span class="lblue">B+</span>.
+								<span class="lblue">B+</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 8>>
-								_name at level <span class="teal">A</span>.
+								<span class="teal">A</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 9>>
-								_name at level <span class="teal">A*</span>.
+								<span class="teal">A*</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<case 10>>
-								_name at level <span class="green">S</span>.
+								<span class="green">S</span> 등급의 _name 기술을 가지고 게임을 시작합니다.
 							<<default>>
 								<<print _name>> 기술에 대한 숙련도가 <span class="red">없는</span> 상태로 게임을 시작합니다.
 						<</switch>>
@@ -720,7 +720,7 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 					<<if _keys.count("Demon of Purity")>>
 						<<set _options["Virgin Demon"] = "virginDemon">>
 					<</if>>
-					<label>Divine Transformation:
+					<label>신성한 변신:
 						<<listbox "$featsBoosts.divineTFs" autoselect>>
 							<<optionsfrom _options>>
 						<</listbox>>
@@ -752,7 +752,7 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 					<<if _keys.count("Bunny") gt 0>>
 						<<set _options["Bunny"] = "bunny">>
 					<</if>>
-					<label>Animal Transformation:
+					<label>동물 변신:
 						<<listbox "$featsBoosts.animalTFs" autoselect>>
 							<<optionsfrom _options>>
 						<</listbox>>
@@ -884,19 +884,19 @@ Degrees of Lewdity를 플레이하며 다양한 임무를 완수함으로써 <sp
 		<<case "sexToys">>
 			각 업그레이드를 구매할 때마다 원하는 시작 섹스 토이 3개를 받습니다.
 		<<case "greenThumb">>
-			Purchase this upgrade to start with the <span class="green">Green Thumb</span> trait.
+			이 업그레이드를 구매하면 <span class="green">녹색의 손</span> 특성을 가진 채로 게임을 시작합니다.
 		<<case "divineTFs">>
-			Purchase this upgrade to start with a divine transformation.
+			이 업그레이드를 구매하면 신성한 변신 상태로 게임을 시작합니다.
 		<<case "animalTFs">>
-			Purchase this upgrade to start with an animal transformation.
+			이 업그레이드를 구매하면 동물 변신 상태로 게임을 시작합니다.
 		<<case "sadism">>
-			Each purchased upgrade will increase your daily sadism by one point per level.
+			업그레이드를 구매할 때마다 일일 가학 성향이 1점씩 늘어납니다.
 		<<case "masochism">>
-			Each purchased upgrade will increase your daily masochism by one point per level.
+			업그레이드를 구매할 때마다 일일 피학 성향이 1점씩 늘어납니다.
 		<<case "transcend">>
-			Each purchased upgrade will increase the amount of skill, grades, physique and willpower points gained by <span class=gold>50%</span>.
+			업그레이드를 구매할 때마다 스킬, 학점, 체격, 의지력 포인트 획득량이 <span class=gold>50%</span> 늘어납니다.
 		<<case "adaptiveGenes">>
-			Each purchased upgrade will increase the amount of transformation points gained by <span class=gold>100%</span>.
+			업그레이드를 구매할 때마다 변신 포인트 획득량이 <span class=gold>100%</span> 늘어납니다.
 		<<case "skulduggery">>각 업그레이드를 구매할 때마다 속임수 레벨이 한 등급씩 상승합니다.
 		<<case "dancing">>각 업그레이드를 구매할 때마다 춤 레벨이 한 등급씩 상승합니다.
 		<<case "tending">>각 업그레이드를 구매할 때마다 관리 레벨이 한 등급씩 상승합니다.

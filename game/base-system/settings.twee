@@ -229,7 +229,7 @@
 			/*Game Settings*/
 				<<settingsTabButton "게임 설정" "game">>
 			/*DoLP Settings*/
-				<<settingsTabButton "DoLP Settings" "dolp">>
+				<<settingsTabButton "DoLP 설정" "dolp">>
 			/*Feat Boosts*/
 				<<settingsTabButton _featTabName "feat">>
 			/*Gallery*/
@@ -298,7 +298,7 @@
 		<</button>>
 	</div>
 	<div @class="_selectedSettings is 'dolp' ? 'gold buttonStartSelected' : 'buttonStart'" >
-		<<button "DoLP Settings">>
+		<<button "DoLP 설정">>
 			<<set _selectedSettings to "dolp">>
 			<<set _dolp to "rebalance">>
 			<<replace #settingsOptions>><<settingsOptions>><</replace>>
@@ -411,12 +411,12 @@
 		<span class="red">무작위 생성 설정으로 인해 특정 업적을 얻을 수 없게 되었습니다.</span>
 		<ul>
 			<<if $settings.cheatsEnabledToggle is true>><li>치트 활성화: 모든 업적을 비활성화합니다.</li><</if>>
-			<<if $statGainMult gt 100>><li>Increased stat gain multiplier: disables all feats.</li><</if>>
-			<<if $npcHealthMult lt 100>><li>Decreased npc health multiplier: disables all feats.</li><</if>>
-			<<if $nnpcHealthMult lt 100>><li>Decreased nnpc health multiplier: disables all feats.</li><</if>>
-			<<if $beastHealthMult lt 100>><li>Decreased beast health multiplier: disables all feats.</li><</if>>
-			<<if $tentacleHealthMult lt 100>><li>Decreased tentacle health multiplier: disables all feats.</li><</if>>
-			<<if $struggleHealthMult lt 100>><li>Decreased struggle health multiplier: disables all feats.</li><</if>>
+			<<if $statGainMult gt 100>><li>능력치 상승 배율 증가: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $npcHealthMult lt 100>><li>NPC 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $nnpcHealthMult lt 100>><li>네임드 NPC 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $beastHealthMult lt 100>><li>짐승 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $tentacleHealthMult lt 100>><li>촉수 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $struggleHealthMult lt 100>><li>발버둥 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
 			<<if $settings.rentCostModifier lt 1>><li>상납금 감소: 모든 업적을 비활성화합니다.</li><</if>>
 			<<if $settings.tendingYieldModifier gt 5>><li>작물 수확량 증가: 모든 위업이 비활성화됩니다.</li><</if>>
 			<<if !$feats.soft and $gamemode is "soft">><li>이지 모드: 일부 업적을 비활성화합니다.</li><</if>>
@@ -481,12 +481,12 @@
 
 		<ul>
 			<<if $settings.cheatsEnabledToggle is true>><li>치트 활성화: 모든 업적을 비활성화합니다.</li><</if>>
-			<<if $statGainMult gt 100>><li>Increased stat gain multiplier: disables all feats.</li><</if>>
-			<<if $npcHealthMult lt 100>><li>Decreased npc health multiplier: disables all feats.</li><</if>>
-			<<if $nnpcHealthMult lt 100>><li>Decreased nnpc health multiplier: disables all feats.</li><</if>>
-			<<if $beastHealthMult lt 100>><li>Decreased beast health multiplier: disables all feats.</li><</if>>
-			<<if $tentacleHealthMult lt 100>><li>Decreased tentacle health multiplier: disables all feats.</li><</if>>
-			<<if $struggleHealthMult lt 100>><li>Decreased struggle health multiplier: disables all feats.</li><</if>>
+			<<if $statGainMult gt 100>><li>능력치 상승 배율 증가: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $npcHealthMult lt 100>><li>NPC 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $nnpcHealthMult lt 100>><li>네임드 NPC 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $beastHealthMult lt 100>><li>짐승 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $tentacleHealthMult lt 100>><li>촉수 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
+			<<if $struggleHealthMult lt 100>><li>발버둥 체력 배율 감소: 모든 업적을 비활성화합니다.</li><</if>>
 			<<if $settings.rentCostModifier lt 1>><li>상납금 감소: 모든 업적을 비활성화합니다.</li><</if>>
 			<<if $settings.tendingYieldModifier gt 5>><li>작물 수확량 증가: 모든 위업이 비활성화됩니다.</li><</if>>
 			<<if !$feats.soft and $gamemode is "soft">><li>이지 모드: 일부 업적을 비활성화합니다.</li><</if>>
@@ -983,13 +983,13 @@
 				<span class="gold">체격:</span> <mouse class="tooltip linkBlue">(?)<span>체격이 크면 더 강인한 체력을 기를 수 있어 전투가 수월해집니다. 체격이 작으면 좁은 틈새를 빠져나갈 수 있어, 위험한 상황에서 탈출하기 수월해집니다. </span></mouse>
 				<br>
 
-				<label><mouse class="tooltip">Miniature<span class="blue"><i>If you're really looking for a challenge.</i></span></mouse> <<radiobutton "$bodysize" -1 autocheck>></label> |
+				<label><mouse class="tooltip">초소형<span class="blue"><i>정말 도전을 원하는 경우에 권합니다.</i></span></mouse> <<radiobutton "$bodysize" -1 autocheck>></label> |
 				<label><mouse class="tooltip">조그마함<span class="blue"><i>초보자에게는 권장하지 않습니다.</i></span></mouse> <<radiobutton "$bodysize" 0 autocheck>></label> |
 				<label>작음 <<radiobutton "$bodysize" 1 autocheck>></label> |
 				<label>보통 <<radiobutton "$bodysize" 2 autocheck>></label> |
-				<label>Tall <<radiobutton "$bodysize" 2.5 autocheck>></label> |
-				<label>Large <<radiobutton "$bodysize" 3 autocheck>></label> |
-				<label>Giant <<radiobutton "$bodysize" 4 autocheck>></label><br>
+				<label>장신 <<radiobutton "$bodysize" 2.5 autocheck>></label> |
+				<label>큼 <<radiobutton "$bodysize" 3 autocheck>></label> |
+				<label>거대 <<radiobutton "$bodysize" 4 autocheck>></label><br>
 				<span class="small-description">체격이 클수록 최대 체력과 피해량이 증가합니다.</span>
 			</div>
 
@@ -1012,46 +1012,46 @@
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Breast size:</span><br>
+				<span class="gold">가슴 크기:</span><br>
 				<label>납작한 <<radiobutton "$player.breastsize" 0 autocheck>></label> |
 				<label>아주 작은 <<radiobutton "$player.breastsize" 1 autocheck>></label> |
 				<label>작은 <<radiobutton "$player.breastsize" 2 autocheck>></label> |
 				<label>봉긋한 <<radiobutton "$player.breastsize" 3 autocheck>></label> |
-				<label>Pert <<radiobutton "$player.breastsize" 4 autocheck>></label> |
-				<label>Modest <<radiobutton "$player.breastsize" 5 autocheck>></label> |
-				<label>Full <<radiobutton "$player.breastsize" 6 autocheck>></label> |
-				<label>Large <<radiobutton "$player.breastsize" 7 autocheck>></label> |
-				<label>Ample <<radiobutton "$player.breastsize" 8 autocheck>></label> |
-				<label>Massive <<radiobutton "$player.breastsize" 9 autocheck>></label> |
-				<label>Huge <<radiobutton "$player.breastsize" 10 autocheck>></label> |
-				<label>Gigantic <<radiobutton "$player.breastsize" 11 autocheck>></label> |
-				<label>Enormous <<radiobutton "$player.breastsize" 12 autocheck>></label>
+				<label>볼륨있는 <<radiobutton "$player.breastsize" 4 autocheck>></label> |
+				<label>탱탱한 <<radiobutton "$player.breastsize" 5 autocheck>></label> |
+				<label>풍만한 <<radiobutton "$player.breastsize" 6 autocheck>></label> |
+				<label>큰 <<radiobutton "$player.breastsize" 7 autocheck>></label> |
+				<label>커다란 <<radiobutton "$player.breastsize" 8 autocheck>></label> |
+				<label>큼지막한 <<radiobutton "$player.breastsize" 9 autocheck>></label> |
+				<label>거대한 <<radiobutton "$player.breastsize" 10 autocheck>></label> |
+				<label>엄청난 <<radiobutton "$player.breastsize" 11 autocheck>></label> |
+				<label>어마어마한 <<radiobutton "$player.breastsize" 12 autocheck>></label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Ass size:</span><br>
+				<span class="gold">엉덩이 크기:</span><br>
 				<label>납작한 <<radiobutton "$player.bottomsize" 0 autocheck>></label> |
 				<label>아담한 <<radiobutton "$player.bottomsize" 1 autocheck>></label> |
 				<label>둥근 <<radiobutton "$player.bottomsize" 2 autocheck>></label> |
-				<label>Cushioned <<radiobutton "$player.bottomsize" 3 autocheck>></label> |
-				<label>Soft <<radiobutton "$player.bottomsize" 4 autocheck>></label> |
-				<label>Round <<radiobutton "$player.bottomsize" 5 autocheck>></label> |
-				<label>Plump <<radiobutton "$player.bottomsize" 6 autocheck>></label> |
-				<label>Large <<radiobutton "$player.bottomsize" 7 autocheck>></label> |
-				<label>Huge <<radiobutton "$player.bottomsize" 8 autocheck>></label>
+				<label>푹신한 <<radiobutton "$player.bottomsize" 3 autocheck>></label> |
+				<label>부드러운 <<radiobutton "$player.bottomsize" 4 autocheck>></label> |
+				<label>둥근 <<radiobutton "$player.bottomsize" 5 autocheck>></label> |
+				<label>통통한 <<radiobutton "$player.bottomsize" 6 autocheck>></label> |
+				<label>큰 <<radiobutton "$player.bottomsize" 7 autocheck>></label> |
+				<label>거대한 <<radiobutton "$player.bottomsize" 8 autocheck>></label>
 			</div>
 
 			<<if $player.sex isnot "f">>
 				<div class="settingsToggleItem">
 					<span data-target="player.sex" data-disabledif="V.player.sex==='f'">
-					<span class="gold">Penis size - if applicable:</span><br>
-					<label>Micro <<radiobutton "$player.penissize" 0 autocheck>></label> |
-					<label>Mini <<radiobutton "$player.penissize" 1 autocheck>></label> |
+					<span class="gold">자지 크기 (해당하는 경우):</span><br>
+					<label>극소형 <<radiobutton "$player.penissize" 0 autocheck>></label> |
+					<label>초소형 <<radiobutton "$player.penissize" 1 autocheck>></label> |
 					<label>매우 작음 <<radiobutton "$player.penissize" 2 autocheck>></label> |
 					<label>작음 <<radiobutton "$player.penissize" 3 autocheck>></label> |
-					<label>Normal <<radiobutton "$player.penissize" 4 autocheck>></label> |
-					<label>Large <<radiobutton "$player.penissize" 5 autocheck>></label> |
-					<label>Enormous <<radiobutton "$player.penissize" 6 autocheck>></label>
+					<label>보통 <<radiobutton "$player.penissize" 4 autocheck>></label> |
+					<label>큼 <<radiobutton "$player.penissize" 5 autocheck>></label> |
+					<label>엄청남 <<radiobutton "$player.penissize" 6 autocheck>></label>
 					</span>
 				</div>
 			<</if>>
@@ -1093,7 +1093,7 @@
 				</div>
 			</div>
 			<div class="settingsToggleItemWide">
-				<span class="gold">Natural eye colour:</span><br>
+				<span class="gold">타고난 눈 색:</span><br>
 				<label><span class="purple">보라색</span> <<radiobutton "$eyeselect" "purple" autocheck>></label> |
 				<label><span class="blue">짙은 파란색</span> <<radiobutton "$eyeselect" "dark blue" autocheck>></label> |
 				<label><span class="lblue">밝은 파란색</span> <<radiobutton "$eyeselect" "light blue" autocheck>></label> |
@@ -1111,56 +1111,56 @@
 				<label><span>무작위</span> <<radiobutton "$eyeselect" "random" autocheck>></label>
 			</div>
 			<div class="settingsToggleItemWide">
-				<span class="gold">Natural hair colour:</span><br>
+				<span class="gold">타고난 머리 색:</span><br>
 				<label><span class="red">빨간색</span> <<radiobutton "$hairselect" "red" autocheck>></label> |
-				<label><span class="crimson">Crimson</span> <<radiobutton "$hairselect" "crimson" autocheck>></label> |
-				<label><span class="winehair">Wine</span> <<radiobutton "$hairselect" "wine" autocheck>></label> |
-				<label><span class="ebony">Ebony</span> <<radiobutton "$hairselect" "ebony" autocheck>></label> |
-				<label><span class="jetblack">Jet black</span> <<radiobutton "$hairselect" "jetblack" autocheck>></label> |
+				<label><span class="crimson">진홍색</span> <<radiobutton "$hairselect" "crimson" autocheck>></label> |
+				<label><span class="winehair">와인색</span> <<radiobutton "$hairselect" "wine" autocheck>></label> |
+				<label><span class="ebony">흑단색</span> <<radiobutton "$hairselect" "ebony" autocheck>></label> |
+				<label><span class="jetblack">칠흑색</span> <<radiobutton "$hairselect" "jetblack" autocheck>></label> |
 				<label><span class="black">검은색</span> <<radiobutton "$hairselect" "black" autocheck>></label> |
-				<label><span class="brown">Dark brown</span> <<radiobutton "$hairselect" "darkbrown" autocheck>></label> |
-				<label><span class="darkbrown">Brown</span> <<radiobutton "$hairselect" "brown" autocheck>></label> |
+				<label><span class="brown">어두운 갈색</span> <<radiobutton "$hairselect" "darkbrown" autocheck>></label> |
+				<label><span class="darkbrown">갈색</span> <<radiobutton "$hairselect" "brown" autocheck>></label> |
 				<label><span class="copperbrown">구리빛 갈색</span> <<radiobutton "$hairselect" "copperbrown" autocheck>></label> |
 				<label><span class="softbrown">부드러운 갈색</span> <<radiobutton "$hairselect" "softbrown" autocheck>></label> |
 				<label><span class="lightbrown">밝은 갈색</span> <<radiobutton "$hairselect" "lightbrown" autocheck>></label> |
-				<label><span class="burntorange">Burnt Orange</span> <<radiobutton "$hairselect" "burntorange" autocheck>></label> |
-				<label><span class="strawberry">Strawberry Blond</span> <<radiobutton "$hairselect" "strawberryblond" autocheck>></label> |
+				<label><span class="burntorange">진한 주황색</span> <<radiobutton "$hairselect" "burntorange" autocheck>></label> |
+				<label><span class="strawberry">스트로베리 블론드</span> <<radiobutton "$hairselect" "strawberryblond" autocheck>></label> |
 				<label><span class="tangerine">적갈색</span> <<radiobutton "$hairselect" "ginger" autocheck>></label> |
-				<label><span class="bloodorange">Blood Orange</span> <<radiobutton "$hairselect" "bloodorange" autocheck>></label> |
+				<label><span class="bloodorange">핏빛 주황색</span> <<radiobutton "$hairselect" "bloodorange" autocheck>></label> |
 				<label><span class="gold">금발</span> <<radiobutton "$hairselect" "blond" autocheck>></label> |
-				<label><span class="softblond">Soft Blond</span> <<radiobutton "$hairselect" "softblond" autocheck>></label> |
-				<label><span class="platinum">Platinum Blond</span> <<radiobutton "$hairselect" "platinumblond" autocheck>></label> |
-				<label><span class="ashy">Ashy Blond</span> <<radiobutton "$hairselect" "ashyblond" autocheck>></label> |
-				<label><span class="softpink">Soft pink</span> <<radiobutton "$hairselect" "softpink" autocheck>></label> |
-				<label><span class="blue">Blue</span> <<radiobutton "$hairselect" "blue" autocheck>></label> |
-				<label><span class="deepblue">Deep Blue</span> <<radiobutton "$hairselect" "deepblue" autocheck>></label> |
-				<label><span class="neonblue">Neon Blue</span> <<radiobutton "$hairselect" "neonblue" autocheck>></label> |
-				<label><span class="frostblue">Frost Blue</span> <<radiobutton "$hairselect" "frostblue" autocheck>></label> |
-				<label><span class="teal">Teal</span> <<radiobutton "$hairselect" "teal" autocheck>></label> |
-				<label><span class="aquamarine">Aquamarine</span> <<radiobutton "$hairselect" "aquamarine" autocheck>></label> |
-				<label><span class="green">Green</span> <<radiobutton "$hairselect" "green" autocheck>></label> |
-				<label><span class="darklime">Dark lime</span> <<radiobutton "$hairselect" "darklime" autocheck>></label> |
-				<label><span class="toxicgreen">Toxic green</span> <<radiobutton "$hairselect" "toxicgreen" autocheck>></label> |
-				<label><span class="purplehair">Purple</span> <<radiobutton "$hairselect" "purple" autocheck>></label> |
-				<label><span class="mediumpurple">Medium purple</span> <<radiobutton "$hairselect" "mediumpurple" autocheck>></label> |
-				<label><span class="brightpurple">Bright purple</span> <<radiobutton "$hairselect" "brightpurple" autocheck>></label> |
-				<label><span class="pink">Pink</span> <<radiobutton "$hairselect" "pink" autocheck>></label> |
-				<label><span class="brightpink">Bright pink</span> <<radiobutton "$hairselect" "brightpink" autocheck>></label> |
-				<label><span class="rosegold">Rose Gold</span> <<radiobutton "$hairselect" "rosegold" autocheck>></label> |
-				<label><span class="hotpink">Hot pink</span> <<radiobutton "$hairselect" "hotpink" autocheck>></label> |
-				<label><span class="grey">Grey</span> <<radiobutton "$hairselect" "grey" autocheck>></label> |
+				<label><span class="softblond">부드러운 금발</span> <<radiobutton "$hairselect" "softblond" autocheck>></label> |
+				<label><span class="platinum">플래티넘 블론드</span> <<radiobutton "$hairselect" "platinumblond" autocheck>></label> |
+				<label><span class="ashy">잿빛 금발</span> <<radiobutton "$hairselect" "ashyblond" autocheck>></label> |
+				<label><span class="softpink">연분홍색</span> <<radiobutton "$hairselect" "softpink" autocheck>></label> |
+				<label><span class="blue">파란색</span> <<radiobutton "$hairselect" "blue" autocheck>></label> |
+				<label><span class="deepblue">짙은 파란색</span> <<radiobutton "$hairselect" "deepblue" autocheck>></label> |
+				<label><span class="neonblue">네온 파란색</span> <<radiobutton "$hairselect" "neonblue" autocheck>></label> |
+				<label><span class="frostblue">서리빛 파란색</span> <<radiobutton "$hairselect" "frostblue" autocheck>></label> |
+				<label><span class="teal">청록색</span> <<radiobutton "$hairselect" "teal" autocheck>></label> |
+				<label><span class="aquamarine">아쿠아마린색</span> <<radiobutton "$hairselect" "aquamarine" autocheck>></label> |
+				<label><span class="green">초록색</span> <<radiobutton "$hairselect" "green" autocheck>></label> |
+				<label><span class="darklime">짙은 라임색</span> <<radiobutton "$hairselect" "darklime" autocheck>></label> |
+				<label><span class="toxicgreen">독초록색</span> <<radiobutton "$hairselect" "toxicgreen" autocheck>></label> |
+				<label><span class="purplehair">보라색</span> <<radiobutton "$hairselect" "purple" autocheck>></label> |
+				<label><span class="mediumpurple">중간 보라색</span> <<radiobutton "$hairselect" "mediumpurple" autocheck>></label> |
+				<label><span class="brightpurple">밝은 보라색</span> <<radiobutton "$hairselect" "brightpurple" autocheck>></label> |
+				<label><span class="pink">분홍색</span> <<radiobutton "$hairselect" "pink" autocheck>></label> |
+				<label><span class="brightpink">밝은 분홍색</span> <<radiobutton "$hairselect" "brightpink" autocheck>></label> |
+				<label><span class="rosegold">로즈 골드</span> <<radiobutton "$hairselect" "rosegold" autocheck>></label> |
+				<label><span class="hotpink">핫핑크</span> <<radiobutton "$hairselect" "hotpink" autocheck>></label> |
+				<label><span class="grey">회색</span> <<radiobutton "$hairselect" "grey" autocheck>></label> |
 				<label><span class="white">흰색</span> <<radiobutton "$hairselect" "white" autocheck>></label> |
 				<label><span class="snowwhite">순백색</span> <<radiobutton "$hairselect" "snowwhite" autocheck>></label> |
 				<label><span>무작위</span> <<radiobutton "$hairselect" "random" autocheck>></label>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Hair length:</span><br>
+				<span class="gold">머리 길이:</span><br>
 				<label>귀 <<radiobutton "$hairlength" 0 autocheck>></label> |
 				<label>목 <<radiobutton "$hairlength" 200 autocheck>></label> |
-				<label>Chest <<radiobutton "$hairlength" 400 autocheck>></label> |
-				<label>Navel <<radiobutton "$hairlength" 600 autocheck>></label> |
-				<label>Thighs <<radiobutton "$hairlength" 700 autocheck>></label> |
-				<label>Feet <<radiobutton "$hairlength" 900 autocheck>></label>
+				<label>가슴 <<radiobutton "$hairlength" 400 autocheck>></label> |
+				<label>배꼽 <<radiobutton "$hairlength" 600 autocheck>></label> |
+				<label>허벅지 <<radiobutton "$hairlength" 700 autocheck>></label> |
+				<label>발 <<radiobutton "$hairlength" 900 autocheck>></label>
 			</div>
 			<div class="settingsToggleItem">
 				<span class="gold">얼굴 주근깨:</span><br>
@@ -1231,32 +1231,32 @@
 			<div class="settingsToggleItem">
 				<span class="gold">입:</span><br>
 				<label>보통 <<radiobutton "$mouthsensitivity" 1 autocheck>></label> |
-				<label><span class="light-pink">Sensitive</span> <<radiobutton "$mouthsensitivity" 2 autocheck>></label> |
-				<label><span class="pink">Very sensitive</span> <<radiobutton "$mouthsensitivity" 3 autocheck>></label> |
-				<label><span class="red">Hyper sensitive</span> <<radiobutton "$mouthsensitivity" 4 autocheck>></label>
+				<label><span class="light-pink">민감함</span> <<radiobutton "$mouthsensitivity" 2 autocheck>></label> |
+				<label><span class="pink">매우 민감함</span> <<radiobutton "$mouthsensitivity" 3 autocheck>></label> |
+				<label><span class="red">극도로 민감함</span> <<radiobutton "$mouthsensitivity" 4 autocheck>></label>
 			</div>
 			<div class="settingsToggleItem">
 				<span class="gold">가슴:</span><br>
 				<label>보통 <<radiobutton "$breastsensitivity" 1 autocheck>></label> |
-				<label><span class="light-pink">Sensitive</span> <<radiobutton "$breastsensitivity" 2 autocheck>></label> |
-				<label><span class="pink">Very sensitive</span> <<radiobutton "$breastsensitivity" 3 autocheck>></label> |
-				<label><span class="red">Hyper sensitive</span> <<radiobutton "$breastsensitivity" 4 autocheck>></label>
+				<label><span class="light-pink">민감함</span> <<radiobutton "$breastsensitivity" 2 autocheck>></label> |
+				<label><span class="pink">매우 민감함</span> <<radiobutton "$breastsensitivity" 3 autocheck>></label> |
+				<label><span class="red">극도로 민감함</span> <<radiobutton "$breastsensitivity" 4 autocheck>></label>
 			</div>
 
 			<div class="settingsToggleItem">
 				<span class="gold">엉덩이:</span><br>
 				<label>보통 <<radiobutton "$bottomsensitivity" 1 autocheck>></label> |
-				<label><span class="light-pink">Sensitive</span> <<radiobutton "$bottomsensitivity" 2 autocheck>></label> |
-				<label><span class="pink">Very sensitive</span> <<radiobutton "$bottomsensitivity" 3 autocheck>></label> |
-				<label><span class="red">Hyper sensitive</span> <<radiobutton "$bottomsensitivity" 4 autocheck>></label>
+				<label><span class="light-pink">민감함</span> <<radiobutton "$bottomsensitivity" 2 autocheck>></label> |
+				<label><span class="pink">매우 민감함</span> <<radiobutton "$bottomsensitivity" 3 autocheck>></label> |
+				<label><span class="red">극도로 민감함</span> <<radiobutton "$bottomsensitivity" 4 autocheck>></label>
 			</div>
 
 			<div class="settingsToggleItem">
 				<span class="gold">생식기:</span><br>
 				<label>보통 <<radiobutton "$genitalsensitivity" 1 autocheck>></label> |
-				<label><span class="light-pink">Sensitive</span> <<radiobutton "$genitalsensitivity" 2 autocheck>></label> |
-				<label><span class="pink">Very sensitive</span> <<radiobutton "$genitalsensitivity" 3 autocheck>></label> |
-				<label><span class="red">Hyper sensitive</span> <<radiobutton "$genitalsensitivity" 4 autocheck>></label>
+				<label><span class="light-pink">민감함</span> <<radiobutton "$genitalsensitivity" 2 autocheck>></label> |
+				<label><span class="pink">매우 민감함</span> <<radiobutton "$genitalsensitivity" 3 autocheck>></label> |
+				<label><span class="red">극도로 민감함</span> <<radiobutton "$genitalsensitivity" 4 autocheck>></label>
 			</div>
 			<div class="settingsToggleItem">
 				<span class="gold">주량</span><br>
@@ -1287,29 +1287,29 @@
 			</div>
 			<div class="settingsToggleItemWide">
 				<span class="gold">배경:</span><br>
-				<label><span class="teal">Nerd</span> <<checkbox "$background.nerd" false true autocheck>> - Good at school. Picked on. <span class="red">(This will prevent the 'Unsocial Moth' feat from being earned)</span></label>
+				<label><span class="teal">범생이</span> <<checkbox "$background.nerd" false true autocheck>> - 학교 성적이 좋습니다. 괴롭힘을 당합니다. <span class="red">('사회성 없는 나방' 업적을 획득할 수 없게 됩니다)</span></label>
 				<br>
-				<label><span class="teal">Athlete</span> <<checkbox "$background.athlete" false true autocheck>> - Physically capable. Grades have suffered.</label>
+				<label><span class="teal">운동선수</span> <<checkbox "$background.athlete" false true autocheck>> - 신체적으로 능력이 좋습니다. 성적이 떨어졌습니다.</label>
 				<br>
-				<label><span class="teal">Delinquent</span> <<checkbox "$background.delinquent" false true autocheck>> - Your antics have made you popular with other students. Less so with the teachers.</label>
+				<label><span class="teal">불량배</span> <<checkbox "$background.delinquent" false true autocheck>> - 이런저런 사고 덕분에 다른 학생들에게 인기가 많습니다. 선생님들에게는 그렇지 않습니다.</label>
 				<br>
-				<label><span class="blue">Promiscuous</span> <<checkbox "$background.promiscuous" false true autocheck>> - You've experimented sexually.</label>
+				<label><span class="blue">난잡함</span> <<checkbox "$background.promiscuous" false true autocheck>> - 당신은 성적인 경험이 있습니다.</label>
 				<br>
-				<label><span class="blue">Exhibitionist</span> <<checkbox "$background.exhibitionist" false true autocheck>> - You have an affinity for exposing yourself in public places.</label>
+				<label><span class="blue">노출증</span> <<checkbox "$background.exhibitionist" false true autocheck>> - 공공장소에서 자신을 노출하는 것에 친밀감을 느낍니다.</label>
 				<br>
-				<label><span class="blue">Deviant</span> <<checkbox "$background.deviant" false true autocheck>> - You <i>really</i> like animals.</label>
+				<label><span class="blue">일탈자</span> <<checkbox "$background.deviant" false true autocheck>> - 당신은 동물을 <i>정말</i> 좋아합니다.</label>
 				<br>
-				<label><span class="lewd">Beautiful</span> <<checkbox "$background.beautiful" false true autocheck>> - You turn heads. <i>Not recommended for beginners.</i></label>
+				<label><span class="lewd">미모</span> <<checkbox "$background.beautiful" false true autocheck>> - 사람들의 시선을 끕니다. <i>초보자에게는 권장하지 않습니다.</i></label>
 				<br>
 				<<if $player.sex isnot "h">>
-					<label><span class="lewd"><<= $player.gender isnot $player.sex ? `\"Crossdresser\"` : "Crossdresser">></span> <<checkbox "$background.crossdresser" false true autocheck>> - You've taken a liking to the clothing of the opposite sex. Stress decays faster when you look like a <<= $player.sex is "f" ? "boy" : "girl">>, but slower when you look like a <<pcSex>>.</label>
+					<label><span class="lewd"><<= $player.gender isnot $player.sex ? `\"크로스드레서\"` : "크로스드레서">></span> <<checkbox "$background.crossdresser" false true autocheck>> - 이성의 옷을 입는 것을 좋아하게 되었습니다. <<= $player.sex is "f" ? "소년" : "소녀">>처럼 보일 때는 스트레스가 더 빨리 감소하지만, <<pcSex>>처럼 보일 때는 더 느리게 감소합니다.</label>
 					<br>
 				<</if>>
-				<label><span class="lewd">Lustful</span> <<checkbox "$background.lustful" false true autocheck>> - Arousal increases over time and needs to be managed.</label>
+				<label><span class="lewd">호색한</span> <<checkbox "$background.lustful" false true autocheck>> - 흥분도가 시간이 지남에 따라 증가하며 관리가 필요합니다.</label>
 				/*<br>
 				<label>Green Thumb <<checkbox "$background" "greenthumb" autocheck>> - More bountiful crops and no decay when using fertiliser. Start with ne unit of fertiliser.</label>*/
 				<br>
-				<label><mouse class="tooltip"><span class="lewd">Dendrophile</span> <<checkbox "$background.plantlover" false true autocheck>> - Plants are everything to you.<span class="green">You're addicted to nectar. You're more vulnerable to aphrodisiacs and alcohol. Plantpeople and plant-based tentacles no longer require hallucinations to encounter. You get a bonus to Tending as your Trauma increases.</span></mouse>
+				<label><mouse class="tooltip"><span class="lewd">나무성애자</span> <<checkbox "$background.plantlover" false true autocheck>> - 당신에게는 식물이 전부입니다.<span class="green">넥타르에 중독되었습니다. 최음제와 술에 더 취약합니다. 인간형 식물과 식물 기반 촉수를 만나기 위해 더 이상 환각이 필요하지 않습니다. 트라우마가 증가할수록 관리 스킬에 보너스를 받습니다.</span></mouse>
 				</label>
 			</div>
 		</div>
@@ -1572,19 +1572,19 @@
 	<<if _dolp is undefined>><<set _dolp to "rebalance">><</if>>
 	<div id="containerStart" class="containerWrap">
 		<div id="settingsRebalance">
-			<<dolpSettingsTabButton "Rebalance Settings" "rebalance">>
+			<<dolpSettingsTabButton "재조정 설정" "rebalance">>
 		</div>
 		<div id="settingsNPCDoLP">
-			<<dolpSettingsTabButton "NPC Settings" "npcDoLP">>
+			<<dolpSettingsTabButton "NPC 설정" "npcDoLP">>
 		</div>
 		<div id="settingsBeastDoLP">
-			<<dolpSettingsTabButton "Beast Settings" "beastDoLP">>
+			<<dolpSettingsTabButton "짐승 설정" "beastDoLP">>
 		</div>
 		<div id="settingsCombatExtended">
-			<<dolpSettingsTabButton "Combat Extended Settings" "combatExtended">>
+			<<dolpSettingsTabButton "확장 전투(CE) 설정" "combatExtended">>
 		</div>
 		<div id="settingsAMCTraits">
-			<<dolpSettingsTabButton "AMC Traits Settings" "amcTraits">>
+			<<dolpSettingsTabButton "애니 주인공 특성(AMC) 설정" "amcTraits">>
 		</div>
 	</div>
 <</widget>>
@@ -1760,9 +1760,9 @@
 					<</if>>
 				<</if>>
 				<div style="font-size:0.9em; margin-bottom: 1%">
-					<span class="gold">Percentage of women that have only a vagina:</span> <span id="numberslider-value-fregularchance">$fregularchance</span><br>
-					<span class="gold">Percentage of women that have both:</span> <span id="numberslider-value-fhermchance">$fhermchance</span><br>
-					<span class="gold">Percentage of women that have only a penis:</span> <span id="numberslider-value-settings.femaleNPCPenisChance">$settings.femaleNPCPenisChance</span><br>
+					<span class="gold">보지만 가진 여성의 비율:</span> <span id="numberslider-value-fregularchance">$fregularchance</span><br>
+					<span class="gold">둘 다 가진 여성의 비율:</span> <span id="numberslider-value-fhermchance">$fhermchance</span><br>
+					<span class="gold">자지만 가진 여성의 비율:</span> <span id="numberslider-value-settings.femaleNPCPenisChance">$settings.femaleNPCPenisChance</span><br>
 				</div>
 
 				<<doubleslider "fregularchance" "fhermchance" "$settings.femaleNPCPenisChance" "var(--pink)" "var(--purple-secondary)" "var(--blue)">>
@@ -1778,9 +1778,9 @@
 					<</if>>
 				<</if>>
 				<div style="font-size:0.9em; margin-bottom: 1%">
-					<span class="gold">Percentage of men that have only a penis:</span> <span id="numberslider-value-mregularchance">$mregularchance</span><br>
-					<span class="gold">Percentage of men that have both:</span> <span id="numberslider-value-mhermchance">$mhermchance</span><br>
-					<span class="gold">Percentage of men that have only a vagina:</span> <span id="numberslider-value-settings.maleNPCVaginaChance">$settings.maleNPCVaginaChance</span><br>
+					<span class="gold">자지만 가진 남성의 비율:</span> <span id="numberslider-value-mregularchance">$mregularchance</span><br>
+					<span class="gold">둘 다 가진 남성의 비율:</span> <span id="numberslider-value-mhermchance">$mhermchance</span><br>
+					<span class="gold">보지만 가진 남성의 비율:</span> <span id="numberslider-value-settings.maleNPCVaginaChance">$settings.maleNPCVaginaChance</span><br>
 				</div>
 
 				<<doubleslider "mregularchance" "mhermchance" "$settings.maleNPCVaginaChance" "var(--blue)" "var(--purple-secondary)" "var(--pink)">>
@@ -2783,7 +2783,7 @@
 				<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
 			<</link>>
 			|
-			<<link "Base max orgasms">>
+			<<link "기본 최대 절정 횟수">>
 				<<initNPCBaseMaxOrgasm "base max orgasms">>
 				<<updatePersistentNPCs "base max orgasms">>
 				<<replace #npcSettingsMenu>><<npcSettingsMenu>><</replace>>
@@ -3218,7 +3218,7 @@
 		</div>
 
 		<div class="settingsToggleItem">
-		<span class="gold">Base max orgasms:</span>
+		<span class="gold">기본 최대 절정 횟수:</span>
 		<br>
 		<<numberslider "$NPCName[_npcId].maxOrgasms" $NPCName[_npcId].maxOrgasms 1 5 1>>
 		</div>
@@ -3415,12 +3415,12 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Combat-Related Presets
+				전투 관련 프리셋
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Difficulty:</span>
+				<span class="gold">난이도:</span>
 				<br>
-				<<link "Very Easy">>
+				<<link "매우 쉬움">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3466,7 +3466,7 @@
 					<<set $beastHealthMult to 100>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
-				<<link "Easy">>
+				<<link "쉬움">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3512,7 +3512,7 @@
 					<<set $beastHealthMult to 100>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
-				<<link "Normal">>
+				<<link "보통">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3558,7 +3558,7 @@
 					<<set $beastHealthMult to 200>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
-				<<link "Hard">>
+				<<link "어려움">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3604,7 +3604,7 @@
 					<<set $beastHealthMult to 200>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
-				<<link "Very Hard">>
+				<<link "매우 어려움">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3651,7 +3651,7 @@
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 
-				<<link "Impossible">>
+				<<link "불가능">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3699,9 +3699,9 @@
 				<</link>><br>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Special:</span>
+				<span class="gold">특별:</span>
 				<br>
-				<<link "Frostberg Casual">>
+				<<link "프로스트버그 캐주얼">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3747,7 +3747,7 @@
 					<<set $beastHealthMult to 200>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
-				<<link "Frostberg Tryhard">>
+				<<link "프로스트버그 열혈">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 
@@ -3798,127 +3798,127 @@
 		<hr>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Encounter Reworks
+				조우 개편
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All">>
+				<<link "모두 전환">>
 					<<set $combatExtended.standingFights to 1>>
 					<<set $combatExtended.reverseRape to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.standingFights" 0 1 autocheck>> Enable Standing Fights
-					<mouse class="tooltip linkBlue">(?)<span>All non-consensual encounters that isn't stuck in a wall or a glory hole will start as a standing fight.</span></mouse>
+					<<checkbox "$combatExtended.standingFights" 0 1 autocheck>> 스탠딩 전투 활성화
+					<mouse class="tooltip linkBlue">(?)<span>벽이나 글로리홀에 끼어 있지 않은 모든 비동의 조우는 스탠딩 전투로 시작됩니다.</span></mouse>
 				</label><br>
-				Standing Fight Type: <mouse class="tooltip linkBlue">(?)<span>Normal will still allow undressing and groping. Hostile will cause enemies to immediately use hostile actions.</span></mouse> 
-				<label>Normal <<radiobutton "$combatExtended.standingFightsType" "normal" autocheck>></label> |
-				<label>Hostile <<radiobutton "$combatExtended.standingFightsType" "hostile" autocheck>></label>
+				스탠딩 전투 유형: <mouse class="tooltip linkBlue">(?)<span>일반은 여전히 옷 벗기기와 더듬기를 허용합니다. 적대는 적이 즉시 적대적 행동을 하게 만듭니다.</span></mouse>
+				<label>일반 <<radiobutton "$combatExtended.standingFightsType" "normal" autocheck>></label> |
+				<label>적대 <<radiobutton "$combatExtended.standingFightsType" "hostile" autocheck>></label>
 				<br>
 				<label>
-					<<checkbox "$combatExtended.reverseRape" 0 1 autocheck>> Enable Reverse Rape
-					<mouse class="tooltip linkBlue">(?)<span>If you've beaten the enemy, all encounters will set the enemy to submissive and not end until you end it yourself. 75+ Promiscuity is required for it to trigger.</span></mouse>
+					<<checkbox "$combatExtended.reverseRape" 0 1 autocheck>> 역강간 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적을 쓰러뜨렸다면 모든 조우에서 적이 복종 상태가 되며, 당신이 직접 끝낼 때까지 끝나지 않습니다. 발동하려면 음란 75 이상이 필요합니다.</span></mouse>
 				</label><br>
 			</div>
 		</div>
 		<hr>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Player CE Actions
+				플레이어 CE 행동
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Player Guarding:</span>
+				<span class="gold">플레이어 방어:</span>
 				<br>
-				<<link "Toggle All">>
+				<<link "모두 전환">>
 					<<set $combatExtended.blocking to 1>>
 					<<set $combatExtended.countering to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.blocking" 0 1 autocheck>> Enable Blocking
-					<mouse class="tooltip linkBlue">(?)<span>Reduces damage taken up to 80%. Damage reduction scales off of physique.</span></mouse>
+					<<checkbox "$combatExtended.blocking" 0 1 autocheck>> 방어 활성화
+					<mouse class="tooltip linkBlue">(?)<span>받는 피해를 최대 80%까지 줄입니다. 피해 감소량은 체격에 비례합니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.countering" 0 1 autocheck>> Enable Countering
-					<mouse class="tooltip linkBlue">(?)<span>A chance to deal damage instead of taking it when an enemy attacks. Success scales off of skulduggery.</span></mouse>
+					<<checkbox "$combatExtended.countering" 0 1 autocheck>> 반격 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적이 공격할 때 피해를 받는 대신 피해를 줄 확률이 있습니다. 성공률은 속임수에 비례합니다.</span></mouse>
 				</label>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Player Attacking:</span>
+				<span class="gold">플레이어 공격:</span>
 				<br>
-				<<link "Toggle All">>
+				<<link "모두 전환">>
 					<<set $combatExtended.feinting to 1>>
 					<<set $combatExtended.hookpunching to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.feinting" 0 1 autocheck>> Enable Feinting
-					<mouse class="tooltip linkBlue">(?)<span>Negates some enemy dodge chance in exchange for lower damage. Scales off of skulduggery.</span></mouse>
+					<<checkbox "$combatExtended.feinting" 0 1 autocheck>> 페인트 동작 활성화
+					<mouse class="tooltip linkBlue">(?)<span>피해량이 줄어드는 대신 적의 회피 확률을 일부 무효화합니다. 속임수에 비례합니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.hookpunching" 0 1 autocheck>> Enable Hook Punching
-					<mouse class="tooltip linkBlue">(?)<span>A chance to deal double damage in return for higher enemy dodge chance.</span></mouse>
+					<<checkbox "$combatExtended.hookpunching" 0 1 autocheck>> 훅 펀치 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적의 회피 확률이 높아지는 대신 두 배의 피해를 줄 확률이 있습니다.</span></mouse>
 				</label>
 			</div>
 		</div>
 		<hr>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Player Skills
+				플레이어 스킬
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Player Dodging:</span>
+				<span class="gold">플레이어 회피:</span>
 				<br>
-				<<link "Toggle All">>
+				<<link "모두 전환">>
 					<<set $combatExtended.passiveDodging to 1>>
 					<<set $combatExtended.activeDodging to 1>>
 					<<set $combatExtended.uncappedDodgeChance to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.passiveDodging" 0 1 autocheck>> Enable Passive Dodging
-					<mouse class="tooltip linkBlue">(?)<span>Passive dodges. Become the matrix.</span></mouse>
+					<<checkbox "$combatExtended.passiveDodging" 0 1 autocheck>> 수동 회피 활성화
+					<mouse class="tooltip linkBlue">(?)<span>수동 회피입니다. 매트릭스가 되어 보세요.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.activeDodging" 0 1 autocheck>> Enable Active Dodging
-					<mouse class="tooltip linkBlue">(?)<span>New feet action to dodge. A seperate, better dodge check compared to Passive Dodging but costs a feet action and will cause stability damage on failure.</span></mouse>
+					<<checkbox "$combatExtended.activeDodging" 0 1 autocheck>> 능동 회피 활성화
+					<mouse class="tooltip linkBlue">(?)<span>회피를 위한 새로운 발 행동입니다. 수동 회피와는 별개의 더 좋은 회피 판정이지만, 발 행동을 소모하고 실패하면 안정성 피해를 입습니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.uncappedDodgeChance" 0 1 autocheck>> Enable Uncapped Dodge Chance
-					<mouse class="tooltip linkBlue">(?)<span>Embrace your inner matrix.</span></mouse>
+					<<checkbox "$combatExtended.uncappedDodgeChance" 0 1 autocheck>> 회피 확률 상한 해제 활성화
+					<mouse class="tooltip linkBlue">(?)<span>내면의 매트릭스를 받아들이세요.</span></mouse>
 				</label><br>
-				<span class="gold">Dodge Chance Cap
-				<mouse class="tooltip linkBlue">(?)<span>The cap for dodge chance.</span></mouse>
+				<span class="gold">회피 확률 상한
+				<mouse class="tooltip linkBlue">(?)<span>회피 확률의 상한입니다.</span></mouse>
 				</span>
 				<<numberslider "$combatExtended.dodgeChanceCap" $combatExtended.dodgeChanceCap 0 100 1>>
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$combatExtended.brawlingToggle" 0 1 autocheck>> Enable Brawling
-					<mouse class="tooltip linkBlue">(?)<span>Brawling skill. It increases the more people you fight and scales better when you're fighting more people.</span></mouse>
+					<<checkbox "$combatExtended.brawlingToggle" 0 1 autocheck>> 난투 활성화
+					<mouse class="tooltip linkBlue">(?)<span>난투 스킬. 더 많은 사람과 싸울수록 오르며, 더 많은 상대와 싸울 때 효과가 더 크게 늘어납니다.</span></mouse>
 				</label><br>
 				<span data-target="combatExtended.standingFights" data-disabledif="V.combatExtended.standingFights===0">
 					<label>
-						<<checkbox "$combatExtended.footworkToggle" 0 1 autocheck>> Enable Footwork
-						<mouse class="tooltip linkBlue">(?)<span>Footwork skill. It decreases stability loss from all sources.</span></mouse>
+						<<checkbox "$combatExtended.footworkToggle" 0 1 autocheck>> 풋워크 활성화
+						<mouse class="tooltip linkBlue">(?)<span>풋워크 스킬. 모든 원인으로 인한 안정성 손실을 줄여 줍니다.</span></mouse>
 					</label><br>
 				</span>
 				<label>
-					<<checkbox "$combatExtended.strikingToggle" 0 1 autocheck>> Enable Striking
-					<mouse class="tooltip linkBlue">(?)<span>Striking skill. It increases the accuracy and power of your strikes.</span></mouse>
+					<<checkbox "$combatExtended.strikingToggle" 0 1 autocheck>> 타격 활성화
+					<mouse class="tooltip linkBlue">(?)<span>타격 스킬. 타격의 명중률과 위력을 높여 줍니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.kickingToggle" 0 1 autocheck>> Enable Kicking
-					<mouse class="tooltip linkBlue">(?)<span>Kicking skill. It increases the accuracy and power of your strikes.</span></mouse>
+					<<checkbox "$combatExtended.kickingToggle" 0 1 autocheck>> 발차기 활성화
+					<mouse class="tooltip linkBlue">(?)<span>발차기 스킬. 타격의 명중률과 위력을 높여 줍니다.</span></mouse>
 				</label>
 			</div>
 		</div>
 		<hr>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Enemy CE Actions
+				적의 확장 전투 행동
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All">>
+				<<link "모두 전환">>
 					<<set $combatExtended.enemyPassiveDodging to 1>>
 					<<set $combatExtended.enemyActiveDodging to 1>>
 					<<set $combatExtended.enemyBlocking to 1>>
@@ -3927,44 +3927,44 @@
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.enemyPassiveDodging" 0 1 autocheck>> Enable Enemy Passive Dodges
-					<mouse class="tooltip linkBlue">(?)<span>A chance for enemies to dodge your attacks.</span></mouse>
+					<<checkbox "$combatExtended.enemyPassiveDodging" 0 1 autocheck>> 적의 수동 회피 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적이 당신의 공격을 회피할 확률이 생깁니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.enemyActiveDodging" 0 1 autocheck>> Enable Enemy Active Dodges
-					<mouse class="tooltip linkBlue">(?)<span>A chance for the dodge chance to be doubled for that turn.</span></mouse>
+					<<checkbox "$combatExtended.enemyActiveDodging" 0 1 autocheck>> 적의 능동 회피 활성화
+					<mouse class="tooltip linkBlue">(?)<span>그 턴 동안 회피 확률이 두 배가 될 확률이 생깁니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.enemyBlocking" 0 1 autocheck>> Enable Enemy Blocking Attacks
-					<mouse class="tooltip linkBlue">(?)<span>A chance for enemies to block your attacks.</span></mouse>
+					<<checkbox "$combatExtended.enemyBlocking" 0 1 autocheck>> 적의 공격 막기 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적이 당신의 공격을 막을 확률이 생깁니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.enemyCountering" 0 1 autocheck>> Enable Enemy Counter-Attacks
-					<mouse class="tooltip linkBlue">(?)<span>A chance for enemies to counter your attacks.</span></mouse>
+					<<checkbox "$combatExtended.enemyCountering" 0 1 autocheck>> 적의 반격 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적이 당신의 공격에 반격할 확률이 생깁니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$combatExtended.enemyFeinting" 0 1 autocheck>> Enable Enemy Feinting Attacks
-					<mouse class="tooltip linkBlue">(?)<span>A chance for enemies to negate some of your dodge chance.</span></mouse>
+					<<checkbox "$combatExtended.enemyFeinting" 0 1 autocheck>> 적의 페인트 공격 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적이 당신의 회피 확률 일부를 상쇄할 확률이 생깁니다.</span></mouse>
 				</label>
 			</div>
 		</div>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Enemy Skills
+				적의 스킬
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Enemy base dodge/counter chance:</span>
+				<span class="gold">적의 기본 회피/반격 확률:</span>
 				<br>
-				<div class="small-description">Old enemy dodge/counter system. Will stack with enemy martial arts.</div>
+				<div class="small-description">예전 방식의 적 회피/반격 시스템입니다. 적의 무술과 중첩됩니다.</div>
 				<span data-target='["combatExtended.enemyPassiveDodging", "combatExtended.enemyActiveDodging", "combatExtended.enemyCountering"]' data-disabledif="V.combatExtended.enemyPassiveDodging===0&&V.combatExtended.enemyActiveDodging===0&&V.combatExtended.enemyCountering===0">
 					<label>
-						<<checkbox "$combatExtended.enemyBaseDodgeChance" 0 1 autocheck>> Enable Base Enemy Dodge Chance
-						<mouse class="tooltip linkBlue">(?)<span>Enemy base dodge chance independent of martial arts skill.</span></mouse>
+						<<checkbox "$combatExtended.enemyBaseDodgeChance" 0 1 autocheck>> 적의 기본 회피 확률 활성화
+						<mouse class="tooltip linkBlue">(?)<span>무술 스킬과 무관한 적의 기본 회피 확률입니다.</span></mouse>
 					</label><br>
 					<span data-target="combatExtended.enemyBaseDodgeChance" data-disabledif="V.combatExtended.enemyBaseDodgeChance===0">
 						<div class="solidBorderContainer settings-container">
-							<span class="gold">Base Dodge Chance Level Scaling (%)
-							<mouse class="tooltip linkBlue">(?)<span>How much the enemy's dodge chance increases by per level. Max level is 22. Old system was 2% per level.</span></mouse>
+							<span class="gold">기본 회피 확률 레벨 스케일링 (%)
+							<mouse class="tooltip linkBlue">(?)<span>레벨당 적의 회피 확률이 얼마나 오르는지 정합니다. 최대 레벨은 22입니다. 예전 방식은 레벨당 2%였습니다.</span></mouse>
 							</span>
 							<<numberbox "$combatExtended.enemyBaseDodgeChanceMult" $combatExtended.enemyBaseDodgeChanceMult>>
 						</div>
@@ -3972,126 +3972,126 @@
 				</span>
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Enemy Martial Arts:</span>
+				<span class="gold">적의 무술:</span>
 				<br>
 				<span data-target='["combatExtended.enemyPassiveDodging", "combatExtended.enemyActiveDodging", "combatExtended.enemyCountering"]' data-disabledif="V.combatExtended.enemyPassiveDodging===0&&V.combatExtended.enemyActiveDodging===0&&V.combatExtended.enemyCountering===0">
 					<label>
-						<<checkbox "$combatExtended.enemyMartialArts" 0 1 autocheck>> Enable Enemy Martial Arts
-						<mouse class="tooltip linkBlue">(?)<span>A skill to increase enemy dodge/counter chance.</span></mouse>
+						<<checkbox "$combatExtended.enemyMartialArts" 0 1 autocheck>> 적의 무술 활성화
+						<mouse class="tooltip linkBlue">(?)<span>적의 회피/반격 확률을 높이는 스킬입니다.</span></mouse>
 					</label><br>
 				</span>
 				<span data-target="combatExtended.enemyMartialArts" data-disabledif="V.combatExtended.enemyMartialArts===0">
-					<div class="small-description">Enabling both MA Random Scaling and MA Level Scaling will result in both stacking.</div>
-					Enemy Martial Arts Scaling: 
-					<label>Random <<radiobutton "$combatExtended.enemyMartialArtsScaling" "random" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>Enemy martial arts skill will be random.</span></mouse> |
-					<label>Level <<radiobutton "$combatExtended.enemyMartialArtsScaling" "level" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>Enemy martial arts skill will increase based on their level.</span></mouse> |
-					<label>Both <<radiobutton "$combatExtended.enemyMartialArtsScaling" "both" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>Random + Level Scaling.</span></mouse>
+					<div class="small-description">무술 무작위 스케일링과 무술 레벨 스케일링을 둘 다 활성화하면 두 효과가 중첩됩니다.</div>
+					적의 무술 스케일링:
+					<label>무작위 <<radiobutton "$combatExtended.enemyMartialArtsScaling" "random" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>적의 무술 스킬이 무작위로 정해집니다.</span></mouse> |
+					<label>레벨 <<radiobutton "$combatExtended.enemyMartialArtsScaling" "level" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>적의 무술 스킬이 레벨에 따라 오릅니다.</span></mouse> |
+					<label>둘 다 <<radiobutton "$combatExtended.enemyMartialArtsScaling" "both" autocheck>></label> <mouse class="tooltip linkBlue">(?)<span>무작위 + 레벨 스케일링입니다.</span></mouse>
 					<br>
 					<span data-target="combatExtended.enemyMartialArtsLevelScaling" data-disabledif="V.combatExtended.enemyMartialArtsLevelScaling==='level'||V.combatExtended.enemyMartialArtsLevelScaling==='both'">
 						<div class="solidBorderContainer settings-container">
-							<span class="gold">Martial Arts Level Scaling
-							<mouse class="tooltip linkBlue">(?)<span>How much enemy martial arts skill increases by per level. Max level is 22. Per 10 martial arts = 1% dodge/counter chance.</span></mouse>
+							<span class="gold">무술 레벨 스케일링
+							<mouse class="tooltip linkBlue">(?)<span>레벨당 적의 무술 스킬이 얼마나 오르는지 정합니다. 최대 레벨은 22입니다. 무술 10당 회피/반격 확률 1%입니다.</span></mouse>
 							</span>
 							<<numberbox "$combatExtended.enemyMartialArtsLevelScalingMult" $combatExtended.enemyMartialArtsLevelScalingMult>>
 						</div>
 					</span>
 					<label>
-						<<checkbox "$combatExtended.enemyMartialArtsBadass" 0 1 autocheck>> Enable Enemy Martial Arts Badass Mode
-						<mouse class="tooltip linkBlue">(?)<span>For every 500 enemy Martial Arts skill, the enemy can do another action under Enemy CE Actions at the same time. Example: A 500 Martial Arts skill enemy would be able to pick two actions from Dodging, Countering or Blocking. A 1000 Martial Arts skill enemy would be able to do all three at the same time.</span></mouse>
+						<<checkbox "$combatExtended.enemyMartialArtsBadass" 0 1 autocheck>> 적의 무술 강자 모드 활성화
+						<mouse class="tooltip linkBlue">(?)<span>적의 무술 스킬이 500 오를 때마다 적은 적의 확장 전투 행동 중 다른 행동을 동시에 하나 더 할 수 있습니다. 예: 무술 스킬 500인 적은 회피, 반격, 막기 중 두 가지를 고를 수 있습니다. 무술 스킬 1000인 적은 세 가지를 동시에 할 수 있습니다.</span></mouse>
 					</label><br>
 				</span>
 			</div>
 		</div>
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Enemy Buff Scaling
+				적 버프 스케일링
 			</div>
 			<div class="settingsToggleItem">
-				<span class="gold">Enemy Day Scaling:</span>
+				<span class="gold">적 일수 스케일링:</span>
 				<br>
-				<<link "Toggle Day Scaling">>
+				<<link "일수 스케일링 전환">>
 					<<set $combatExtended.enemyLevelDayScaling to 1>>
 					<<set $combatExtended.enemyHealthDayScaling to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.enemyLevelDayScaling" 0 1 autocheck>> Enable Enemy Level Scaling with ingame days
-					<mouse class="tooltip linkBlue">(?)<span>Every scaling buff increases all generic NPC's level .</span></mouse>
+					<<checkbox "$combatExtended.enemyLevelDayScaling" 0 1 autocheck>> 게임 내 일수에 따른 적 레벨 스케일링 활성화
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프가 적용될 때마다 모든 일반 NPC의 레벨이 오릅니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Level Buff Scaling (levels)
-					<mouse class="tooltip linkBlue">(?)<span>The level increase each scaling buff gives. 1 is a +1 modifier to the enemy's level each time the buff is applied. Max level is 22.</span></mouse>
+					<span class="gold">레벨 버프 스케일링 (레벨)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프 한 번에 오르는 레벨입니다. 1이면 버프가 적용될 때마다 적의 레벨이 +1 오릅니다. 최대 레벨은 22입니다.</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyLevelDayScalingMult" $combatExtended.enemyLevelDayScalingMult>>
 				</div>
 				<label>
-					<<checkbox "$combatExtended.enemyHealthDayScaling" 0 1 autocheck>> Enable Enemy Health Scaling with ingame days
-					<mouse class="tooltip linkBlue">(?)<span>Every scaling buff increases every NPC and Beast's health on top of the Health Multiplier.</span></mouse>
+					<<checkbox "$combatExtended.enemyHealthDayScaling" 0 1 autocheck>> 게임 내 일수에 따른 적 체력 스케일링 활성화
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프가 적용될 때마다 모든 NPC와 짐승의 체력이 체력 배율과 별개로 추가 상승합니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Health Percentage Buff Scaling (%)
-					<mouse class="tooltip linkBlue">(?)<span>The health percentage buff each scaling trigger gives. 5 is a +5% health modifier each time the buff is applied. Range 1 - 1000000</span></mouse>
+					<span class="gold">체력 비율 버프 스케일링 (%)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링이 발동할 때마다 얻는 체력 비율 버프입니다. 5이면 버프가 적용될 때마다 체력이 +5% 오릅니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyHealthDayScalingMult" $combatExtended.enemyHealthDayScalingMult>>
 				</div>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Scaling Interval (days)
-					<mouse class="tooltip linkBlue">(?)<span>The interval of days the scaling buff gets triggered. Range 1 - 1000000</span></mouse>
+					<span class="gold">스케일링 간격 (일)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프가 발동하는 일수 간격입니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyDayScaling" $combatExtended.enemyDayScaling>>
 				</div>
 				<label>
-					<<checkbox "$combatExtended.enemyInfiniteDayScaling" 0 1 autocheck>> Enable Infinite Buffs
-					<mouse class="tooltip linkBlue">(?)<span>No limits on amount of times the scaling buff can be applied.</span></mouse>
+					<<checkbox "$combatExtended.enemyInfiniteDayScaling" 0 1 autocheck>> 무한 버프 활성화
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프를 적용할 수 있는 횟수에 제한이 없습니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Scaling Limit (buffs)
-					<mouse class="tooltip linkBlue">(?)<span>The limit for amount of times the scaling buff can be applied. Range 1 - 1000000</span></mouse>
+					<span class="gold">스케일링 한도 (버프 횟수)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프를 적용할 수 있는 횟수의 한도입니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyDayScalingLimit" $combatExtended.enemyDayScalingLimit>>
 				</div>
 			</div>
 			<div class="settingsToggleItem" role="group" aria-labelledby="settingsScaling">
-				<span class="gold">Enemy Defeats Scaling:</span>
+				<span class="gold">적 패배 스케일링:</span>
 				<br>
-				<<link "Toggle Defeat Scaling">>
+				<<link "패배 스케일링 전환">>
 					<<set $combatExtended.enemyLevelDefeatScaling to 1>>
 					<<set $combatExtended.enemyHealthDefeatScaling to 1>>
 					<<set _subsection to "combatExtended">><<replace #subsectionDiv>><<combatExtendedSettings>><</replace>>
 				<</link>><br>
 				<label>
-					<<checkbox "$combatExtended.enemyLevelDefeatScaling" 0 1 autocheck>> Enable Enemy Level Scaling with defeats
-					<mouse class="tooltip linkBlue">(?)<span>Every defeated enemy increases all generic NPC's level .</span></mouse>
+					<<checkbox "$combatExtended.enemyLevelDefeatScaling" 0 1 autocheck>> 적 패배 수에 따른 적 레벨 스케일링 활성화
+					<mouse class="tooltip linkBlue">(?)<span>적을 한 명 쓰러뜨릴 때마다 모든 일반 NPC의 레벨이 오릅니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Level Buff Scaling (levels)
-					<mouse class="tooltip linkBlue">(?)<span>How many enemy defeats until a level buff is applied. 1 is a +1 modifier to the enemy's level each time the buff is applied. Max level is 22.</span></mouse>
+					<span class="gold">레벨 버프 스케일링 (레벨)
+					<mouse class="tooltip linkBlue">(?)<span>레벨 버프가 적용되기까지 필요한 적 패배 수입니다. 1이면 버프가 적용될 때마다 적의 레벨이 +1 오릅니다. 최대 레벨은 22입니다.</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyLevelDefeatScalingMult" $combatExtended.enemyLevelDefeatScalingMult>>
 				</div>
 				<label>
-					<<checkbox "$combatExtended.enemyHealthDefeatScaling" 0 1 autocheck>> Enable Enemy Health Scaling with defeats
-					<mouse class="tooltip linkBlue">(?)<span>Every scaling buff increases every NPC and Beast's health on top of the Health Multiplier.</span></mouse>
+					<<checkbox "$combatExtended.enemyHealthDefeatScaling" 0 1 autocheck>> 적 패배 수에 따른 적 체력 스케일링 활성화
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프가 적용될 때마다 모든 NPC와 짐승의 체력이 체력 배율과 별개로 추가 상승합니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Health Percentage Buff Scaling (%)
-					<mouse class="tooltip linkBlue">(?)<span>The health percentage buff each scaling trigger gives. 0.05 is a +5% health modifier each time the buff is applied. Range 1 - 1000000</span></mouse>
+					<span class="gold">체력 비율 버프 스케일링 (%)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링이 발동할 때마다 얻는 체력 비율 버프입니다. 0.05이면 버프가 적용될 때마다 체력이 +5% 오릅니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyHealthDefeatScalingMult" $combatExtended.enemyHealthDefeatScalingMult>>
 				</div>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Enemy Defeats Scaling Threshold (enemies)
-					<mouse class="tooltip linkBlue">(?)<span>The threshold of defeated enemies until the buff is applied. Range 1 - 1000000</span></mouse>
+					<span class="gold">적 패배 스케일링 기준 (적 수)
+					<mouse class="tooltip linkBlue">(?)<span>버프가 적용되기까지 필요한 적 패배 수의 기준입니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyDefeatScaling" $combatExtended.enemyDefeatScaling>>
 				</div>
 				<label>
-					<<checkbox "$combatExtended.enemyInfiniteDefeatScaling" 0 1 autocheck>> Enable Infinite Buffs
-					<mouse class="tooltip linkBlue">(?)<span>No limits on amount of times the scaling buff can be applied.</span></mouse>
+					<<checkbox "$combatExtended.enemyInfiniteDefeatScaling" 0 1 autocheck>> 무한 버프 활성화
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프를 적용할 수 있는 횟수에 제한이 없습니다.</span></mouse>
 				</label>
 				<div class="solidBorderContainer settings-container">
-					<span class="gold">Scaling Limit (buffs)
-					<mouse class="tooltip linkBlue">(?)<span>The limit for amount of times the scaling buff can be applied. Range 1 - 1000000</span></mouse>
+					<span class="gold">스케일링 한도 (버프 횟수)
+					<mouse class="tooltip linkBlue">(?)<span>스케일링 버프를 적용할 수 있는 횟수의 한도입니다. 범위 1 - 1000000</span></mouse>
 					</span>
 					<<numberbox "$combatExtended.enemyDefeatScalingLimit" $combatExtended.enemyDefeatScalingLimit>>
 				</div>
@@ -4125,10 +4125,10 @@
 				<<set _amcTogglePositiveFames to 0>>
 			<</if>>
 			<div class="settingsToggleItemWide">
-				<span class="gold">Anime Main Character Traits:</span><mouse class="tooltip linkBlue">(?)<span>These traits will halve your gains of the corresponding stat after you've reached the Vanilla max but will double the cap.</span></mouse><br>
+				<span class="gold">애니 주인공 특성:</span><mouse class="tooltip linkBlue">(?)<span>이 특성은 기본 게임의 최대치에 도달한 뒤 해당 능력치의 상승량을 절반으로 줄이는 대신 상한을 두 배로 늘립니다.</span></mouse><br>
 
-				<label><span class="green">Universal Half Gains Toggle</span> <<checkbox "$AMCTraits.halfGain" 0 1 autocheck>></label>  <mouse class = "tooltip linkBlue">(?)<span>Instead of halving after you've reached vanilla max, it will start halving immediately.</span></mouse><br>
-				<<link "Toggle All">>
+				<label><span class="green">전체 절반 상승 전환</span> <<checkbox "$AMCTraits.halfGain" 0 1 autocheck>></label>  <mouse class = "tooltip linkBlue">(?)<span>기본 게임의 최대치에 도달한 뒤가 아니라 처음부터 바로 절반으로 줄이기 시작합니다.</span></mouse><br>
+				<<link "모두 전환">>
 					<<if _amcToggle is 0>>
 						<<set $AMCTraits.beauty to 2>>
 						<<set $AMCTraits.physique to 2>>
@@ -4220,7 +4220,7 @@
 				<</link>><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Characteristics">>
+				<<link "모든 능력치 전환">>
 					<<if _amcToggleCharacteristics is 0>>
 						<<set $AMCTraits.beauty to 2>>
 						<<set $AMCTraits.physique to 2>>
@@ -4234,12 +4234,12 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="green">Tempered Beauty</span> <<checkbox "$AMCTraits.beauty" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Physique</span> <<checkbox "$AMCTraits.physique" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Willpower</span> <<checkbox "$AMCTraits.willpower" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 미모</span> <<checkbox "$AMCTraits.beauty" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 체격</span> <<checkbox "$AMCTraits.physique" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 의지력</span> <<checkbox "$AMCTraits.willpower" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Fluids">>
+				<<link "모든 체액 전환">>
 					<<if _amcToggleFluids is 0>>
 						<<set $AMCTraits.milk to 2>>
 						<<set $AMCTraits.semen to 2>>
@@ -4251,11 +4251,11 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="blue">Tempered Milk Volume</span> <<checkbox "$AMCTraits.milk" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Semen Volume</span> <<checkbox "$AMCTraits.semen" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 모유량</span> <<checkbox "$AMCTraits.milk" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 정액량</span> <<checkbox "$AMCTraits.semen" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Skills">>
+				<<link "모든 스킬 전환">>
 					<<if _amcToggleSkills is 0>>
 						<<set $AMCTraits.skulduggery to 2>>
 						<<set $AMCTraits.dancing to 2>>
@@ -4291,23 +4291,23 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="green">Tempered Skulduggery</span> <<checkbox "$AMCTraits.skulduggery" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Dancing</span> <<checkbox "$AMCTraits.dancing" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Swimming</span> <<checkbox "$AMCTraits.swimming" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Athletics</span> <<checkbox "$AMCTraits.athletics" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Tending</span> <<checkbox "$AMCTraits.tending" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Housekeeping</span> <<checkbox "$AMCTraits.housekeeping" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Brawling</span> <<checkbox "$AMCTraits.brawling" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Footwork</span> <<checkbox "$AMCTraits.footwork" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Striking</span> <<checkbox "$AMCTraits.striking" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Kicking</span> <<checkbox "$AMCTraits.kicking" 1 2 autocheck>></label><br>
-				<label><span class="teal">Tempered Science</span> <<checkbox "$AMCTraits.science" 1 2 autocheck>></label><br>
-				<label><span class="teal">Tempered Maths</span> <<checkbox "$AMCTraits.maths" 1 2 autocheck>></label><br>
-				<label><span class="teal">Tempered English</span> <<checkbox "$AMCTraits.english" 1 2 autocheck>></label><br>
-				<label><span class="teal">Tempered History</span> <<checkbox "$AMCTraits.history" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 속임수</span> <<checkbox "$AMCTraits.skulduggery" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 춤</span> <<checkbox "$AMCTraits.dancing" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 수영</span> <<checkbox "$AMCTraits.swimming" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 체육</span> <<checkbox "$AMCTraits.athletics" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 관리</span> <<checkbox "$AMCTraits.tending" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 가사</span> <<checkbox "$AMCTraits.housekeeping" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 난투</span> <<checkbox "$AMCTraits.brawling" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 풋워크</span> <<checkbox "$AMCTraits.footwork" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 타격</span> <<checkbox "$AMCTraits.striking" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 발차기</span> <<checkbox "$AMCTraits.kicking" 1 2 autocheck>></label><br>
+				<label><span class="teal">단련된 과학</span> <<checkbox "$AMCTraits.science" 1 2 autocheck>></label><br>
+				<label><span class="teal">단련된 수학</span> <<checkbox "$AMCTraits.maths" 1 2 autocheck>></label><br>
+				<label><span class="teal">단련된 영어</span> <<checkbox "$AMCTraits.english" 1 2 autocheck>></label><br>
+				<label><span class="teal">단련된 역사</span> <<checkbox "$AMCTraits.history" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Sex Skills">>
+				<<link "모든 성 스킬 전환">>
 					<<if _amcToggleSexSkills is 0>>
 						<<set $AMCTraits.seductionskill to 2>>
 						<<set $AMCTraits.oralskill to 2>>
@@ -4335,19 +4335,19 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="blue">Tempered Seduction Skill</span> <<checkbox "$AMCTraits.seductionskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Oral Skill</span> <<checkbox "$AMCTraits.oralskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Chest Skill</span> <<checkbox "$AMCTraits.chestskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Hands Skill</span> <<checkbox "$AMCTraits.handskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Buttocks Skill</span> <<checkbox "$AMCTraits.bottomskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Penile Skill</span> <<checkbox "$AMCTraits.penileskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Vaginal Skill</span> <<checkbox "$AMCTraits.vaginalskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Anal Skill</span> <<checkbox "$AMCTraits.analskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Thighs Skill</span> <<checkbox "$AMCTraits.thighskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">Tempered Feet Skill</span> <<checkbox "$AMCTraits.feetskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 유혹 스킬</span> <<checkbox "$AMCTraits.seductionskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 입 스킬</span> <<checkbox "$AMCTraits.oralskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 가슴 스킬</span> <<checkbox "$AMCTraits.chestskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 손 스킬</span> <<checkbox "$AMCTraits.handskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 엉덩이 스킬</span> <<checkbox "$AMCTraits.bottomskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 자지 스킬</span> <<checkbox "$AMCTraits.penileskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 보지 스킬</span> <<checkbox "$AMCTraits.vaginalskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 애널 스킬</span> <<checkbox "$AMCTraits.analskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 허벅지 스킬</span> <<checkbox "$AMCTraits.thighskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 발 스킬</span> <<checkbox "$AMCTraits.feetskill" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Negative Fames">>
+				<<link "모든 부정적 명성 전환">>
 					<<if _amcToggleNegativeFames is 0>>
 						<<set $AMCTraits.sexFame to 2>>
 						<<set $AMCTraits.prostitutionFame to 2>>
@@ -4369,16 +4369,16 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="red">Tempered Sex Fame</span> <<checkbox "$AMCTraits.sexFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Prostitution Fame</span> <<checkbox "$AMCTraits.prostitutionFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Rape Fame</span> <<checkbox "$AMCTraits.rapeFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Bestiality Fame</span> <<checkbox "$AMCTraits.bestialityFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Exhibitionism Fame</span> <<checkbox "$AMCTraits.exhibitionismFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Pregnancy Fame</span> <<checkbox "$AMCTraits.pregnancyFame" 1 2 autocheck>></label><br>
-				<label><span class="red">Tempered Impregnation Fame</span> <<checkbox "$AMCTraits.impregFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 섹스 명성</span> <<checkbox "$AMCTraits.sexFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 매춘 명성</span> <<checkbox "$AMCTraits.prostitutionFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 강간 명성</span> <<checkbox "$AMCTraits.rapeFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 수간 명성</span> <<checkbox "$AMCTraits.bestialityFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 노출 명성</span> <<checkbox "$AMCTraits.exhibitionismFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 임신 명성</span> <<checkbox "$AMCTraits.pregnancyFame" 1 2 autocheck>></label><br>
+				<label><span class="red">단련된 임신시킨 명성</span> <<checkbox "$AMCTraits.impregFame" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
-				<<link "Toggle All Positive Fames">>
+				<<link "모든 긍정적 명성 전환">>
 					<<if _amcTogglePositiveFames is 0>>
 						<<set $AMCTraits.scrapFame to 2>>
 						<<set $AMCTraits.goodFame to 2>>
@@ -4396,11 +4396,11 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="green">Tempered Combat Fame</span> <<checkbox "$AMCTraits.scrapFame" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Kindness Fame</span> <<checkbox "$AMCTraits.goodFame" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Business Fame</span> <<checkbox "$AMCTraits.businessFame" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Socialite Fame</span> <<checkbox "$AMCTraits.socialFame" 1 2 autocheck>></label><br>
-				<label><span class="green">Tempered Model Fame</span> <<checkbox "$AMCTraits.modelFame" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 전투 명성</span> <<checkbox "$AMCTraits.scrapFame" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 친절 명성</span> <<checkbox "$AMCTraits.goodFame" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 사업 명성</span> <<checkbox "$AMCTraits.businessFame" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 사교 명성</span> <<checkbox "$AMCTraits.socialFame" 1 2 autocheck>></label><br>
+				<label><span class="green">단련된 모델 명성</span> <<checkbox "$AMCTraits.modelFame" 1 2 autocheck>></label><br>
 			</div>
 		</div>
 	</div>
@@ -4412,8 +4412,8 @@
 	<<set _availableModLIs to getAvailableModLIs()>>
 	<div class="settingsToggleItemWide">
 		<<if $ModExclusiveLIEnabled is 1>>
-			<div class="small-description red">Warning: activating a Mod-exclusive love interest is permanent for this save. Once activated, that LI stays available in this playthrough.</div>
-			<label>Select a custom LI to activate for this save:</label><br>
+			<div class="small-description red">경고: 모드 전용 연애 대상을 활성화하면 이 세이브 파일에서는 되돌릴 수 없습니다. 한 번 활성화한 연애 대상은 이번 플레이 내내 등장할 수 있습니다.</div>
+			<label>이 세이브 파일에서 활성화할 커스텀 연애 대상을 고르십시오:</label><br>
 			<<if _availableModLIs.length gt 0>>
 				<<for _modLIName range _availableModLIs>>
 					<<button _modLIName>>
@@ -4423,20 +4423,20 @@
 					<<if _modLIName neq _availableModLIs[_availableModLIs.length - 1]>> | <</if>>
 				<</for>>
 			<<else>>
-				<div class="green">All Mod-exclusive love interests have already been activated for this save.</div>
+				<div class="green">모든 모드 전용 연애 대상이 이미 이 세이브 파일에서 활성화되어 있습니다.</div>
 			<</if>>
 			<br>
-			<span class="gold">Activated in this save</span><br>
+			<span class="gold">이 저장 파일에서 활성화됨</span><br>
 			<<if _enabledModLIs.length gt 0>>
 				<<for _enabledName range _enabledModLIs>>
 					<<print _enabledName>>
 					<<if _enabledName neq _enabledModLIs[_enabledModLIs.length - 1]>> | <</if>>
 				<</for>>
 			<<else>>
-				<span class="small-description">No Mod-exclusive love interests have been permanently activated for this save yet.</span>
+				<span class="small-description">이 세이브 파일에서 영구 활성화된 모드 전용 연애 대상이 아직 없습니다.</span>
 			<</if>>
 		<<else>>
-			<span class="small-description">Turn on Mod-exclusive love interests to open the permanent activation menu. Already-activated LIs remain locked into this save even if this menu is hidden again later.</span>
+			<span class="small-description">모드 전용 연애 대상을 켜면 영구 활성화 메뉴가 열립니다. 이미 활성화한 연애 대상은 나중에 이 메뉴를 다시 숨겨도 이 세이브 파일에 고정된 채로 남습니다.</span>
 		<</if>>
 	</div>
 <</widget>>
@@ -4445,114 +4445,114 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsToggleItem" id="modExclusiveLISetting">
-				<span class="gold">Mod-exclusive Love Interests</span>
+				<span class="gold">모드 전용 연애 대상</span>
 				<br>
-				<label><<checkbox "$ModExclusiveLIEnabled" 0 1 autocheck>> Show Mod-exclusive love interests</label>
+				<label><<checkbox "$ModExclusiveLIEnabled" 0 1 autocheck>> 모드 전용 연애 대상 표시</label>
 			</div>
 			<div id="modLISettingsPanel"><<modLISettingsSection>></div>
 			<<run $(() => {$('#modExclusiveLISetting input[type="checkbox"]').off('change.modli').on('change.modli', () => {Wikifier.wikifyEval('<<replace #modLISettingsPanel>><<modLISettingsSection>><</replace>>');});})>>
 			<<if $options.images is 1>>
 				<div class="settingsToggleItem">
-					<span class="gold">Banner Toggle</span> <mouse class = "tooltip linkBlue">(?)<span>Toggle which version of the banner you want to use.</span></mouse>
+					<span class="gold">배너 전환</span> <mouse class = "tooltip linkBlue">(?)<span>사용할 배너 버전을 전환합니다.</span></mouse>
 					<br>
-					<<link "No Banner">><<replace #bannerStyle>><</replace>><<set $bannerstyle to "none">><</link>>
-						| <<link "Default Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/banner.png"><</replace>><<set $bannerstyle to "default">><</link>>
+					<<link "배너 없음">><<replace #bannerStyle>><</replace>><<set $bannerstyle to "none">><</link>>
+						| <<link "기본 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/banner.png"><</replace>><<set $bannerstyle to "default">><</link>>
 					<<if $feats.allSaves.points isnot undefined and $feats.allSaves.points gte 25>>
-						| <<link "Alien Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerAlien.png"><</replace>><<set $bannerstyle to "alien">><</link>>
+						| <<link "외계 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerAlien.png"><</replace>><<set $bannerstyle to "alien">><</link>>
 					<<else>>
-						| <label><span class="red">25 VrelCoins</span></label>
+						| <label><span class="red">브렐 코인 25개</span></label>
 					<</if>>
 					<<if $feats.allSaves.points isnot undefined and $feats.allSaves.points gte 50>>
-						| <<link "Blood Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerBlood.png"><</replace>><<set $bannerstyle to "blood">><</link>>
+						| <<link "핏빛 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerBlood.png"><</replace>><<set $bannerstyle to "blood">><</link>>
 					<<else>>
-						| <label><span class="red">50 VrelCoins</span></label>
+						| <label><span class="red">브렐 코인 50개</span></label>
 					<</if>>
 					<<if $feats.allSaves.points isnot undefined and $feats.allSaves.points gte 100>>
-						| <<link "Bronze Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerBronze.png"><</replace>><<set $bannerstyle to "bronze">><</link>>
+						| <<link "청동 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerBronze.png"><</replace>><<set $bannerstyle to "bronze">><</link>>
 					<<else>>
-						| <label><span class="red">100 VrelCoins</span></label>
+						| <label><span class="red">브렐 코인 100개</span></label>
 					<</if>>
 					<<if $feats.allSaves.points isnot undefined and $feats.allSaves.points gte 150>>
-						| <<link "Silver Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerSilver.png"><</replace>><<set $bannerstyle to "silver">><</link>>
+						| <<link "은 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerSilver.png"><</replace>><<set $bannerstyle to "silver">><</link>>
 					<<else>>
-						| <label><span class="red">150 VrelCoins</span></label>
+						| <label><span class="red">브렐 코인 150개</span></label>
 					<</if>>
 					<<if $feats.allSaves.points isnot undefined and $feats.allSaves.points gte 200>>
-						| <<link "Golden Banner">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerGold.png"><</replace>><<set $bannerstyle to "gold">><</link>>
+						| <<link "금 배너">><<replace #bannerStyle>><img class="resize" src="img/misc/bannerGold.png"><</replace>><<set $bannerstyle to "gold">><</link>>
 					<<else>>
-						| <label><span class="red">200 VrelCoins</span></label>
+						| <label><span class="red">브렐 코인 200개</span></label>
 					<</if>>
 					<br>
 				</div>
 			<</if>>
 			<div class="settingsToggleItem">
-				<span class="gold">Enemy Stats Display</span> <mouse class = "tooltip linkBlue">(?)<span>As you enter an encounter, you will be given textual descriptions for the state of the enemy. The toggle here allows you to see exactly what number the enemy's stats are at.</span></mouse>
+				<span class="gold">적 능력치 표시</span> <mouse class = "tooltip linkBlue">(?)<span>조우에 들어서면 적의 상태가 글로 설명됩니다. 이 설정으로 적의 능력치가 정확히 몇인지 볼 수 있습니다.</span></mouse>
 				<br>
-				<label>Show exact numbers <<radiobutton "$enemystatstyle" "full" autocheck>></label> |
-				<label>Show only description <<radiobutton "$enemystatstyle" "default" autocheck>></label>
+				<label>정확한 수치 표시 <<radiobutton "$enemystatstyle" "full" autocheck>></label> |
+				<label>설명만 표시 <<radiobutton "$enemystatstyle" "default" autocheck>></label>
 				<br>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Meme Text expanded</span>
+				<span class="gold">밈 문구 확장</span>
 				<br>
 				<label>
-					<<checkbox "$dpctext" 0 1 autocheck>> Enable Additional Unofficial Dol+ Text  <mouse class = "tooltip linkBlue">(?)<span>Added scenes with favorite contributors from dol+ </span></mouse>
+					<<checkbox "$dpctext" 0 1 autocheck>> 비공식 DoL+ 추가 문구 활성화  <mouse class = "tooltip linkBlue">(?)<span>DoL+의 인기 기여자들이 만든 장면이 추가됩니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Realistic Clothing Transparency</span>
+				<span class="gold">현실적인 의상 투명도</span>
 				<br>
 				<label>
-					<<checkbox "$realisticTransparency" 0 1 autocheck>> Enable Realistic Clothing Transparency  <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, most clothes go transparent. This toggle changes it so it is based on the type of material it is usually made with.</span></mouse>
+					<<checkbox "$realisticTransparency" 0 1 autocheck>> 현실적인 의상 투명도 활성화  <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 대부분의 옷이 투명해집니다. 이 설정을 켜면 보통 그 옷을 만드는 소재의 종류에 따라 투명도가 정해집니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Wardrobe Capacity Multiplier</span>
+				<span class="gold">옷장 수용량 배율</span>
 				<br>
-				<div class="small-description">Modifies the capacity of wardrobes.</div>
+				<div class="small-description">옷장의 수용량을 조정합니다.</div>
 				<<numberslider "$wardrobeMult" $wardrobeMult 1 20 1>>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Bike Settings</span>
+				<span class="gold">자전거 설정</span>
 				<br>
 				<label>
-					<<checkbox "$bicycle.persistentLocation" false true autocheck>> Enable Persistent Bike Location  <mouse class = "tooltip linkBlue">(?)<span>When enabled, the game will keep track of where you left the bike and you'll only be able to use it again there. When disabled, you will be able to use it from any eligible location.</span></mouse>
+					<<checkbox "$bicycle.persistentLocation" false true autocheck>> 자전거 위치 유지 활성화  <mouse class = "tooltip linkBlue">(?)<span>활성화하면 자전거를 둔 위치를 게임이 기억하며, 그 위치에서만 다시 탈 수 있습니다. 비활성화하면 이용 가능한 어느 장소에서든 탈 수 있습니다.</span></mouse>
 				</label>
 				<br>
 				<label>
-					<<checkbox "$bicycle.theftEnabled" false true autocheck>> Enable Bike Security  <mouse class = "tooltip linkBlue">(?)<span>When enabled, your bike will have the risk of getting stolen every midnight and you will have access to security upgrades. When disabled, your bike will never get stolen.</span></mouse>
+					<<checkbox "$bicycle.theftEnabled" false true autocheck>> 자전거 보안 활성화  <mouse class = "tooltip linkBlue">(?)<span>활성화하면 자전거가 매일 자정마다 도난당할 위험이 있으며 보안 업그레이드를 이용할 수 있습니다. 비활성화하면 자전거는 절대 도난당하지 않습니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Combat Time Pass
-				<mouse class="tooltip linkBlue">(?)<span>How many seconds each turn of combat takes. Default is 10. Range 1 - 1000000</span></mouse>
+				<span class="gold">전투 경과 시간
+				<mouse class="tooltip linkBlue">(?)<span>전투 한 턴에 몇 초가 걸리는지 정합니다. 기본값은 10입니다. 범위 1 - 1000000</span></mouse>
 				</span><br>
 				<<numberbox "$combatTimePass" $combatTimePass>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Deposit Max Weeks</span>
+				<span class="gold">예금 최대 기간(주)</span>
 				<br>
-				<div class="small-description">How many weeks you can put down a deposit for. Setting it to 0 means unlimited.</div>
+				<div class="small-description">예금을 맡길 수 있는 최대 주 수입니다. 0으로 설정하면 무제한입니다.</div>
 				<<numberslider "$depositMax" $depositMax 0 12 1>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Deposit Withdrawal Fee (%)</span>
+				<span class="gold">예금 인출 수수료 (%)</span>
 				<br>
-				<div class="small-description">How much of your deposit is cut as withdrawal fees if you decide to withdraw.</div>
+				<div class="small-description">예금을 인출할 때 인출 수수료로 예금에서 얼마가 차감되는지 정합니다.</div>
 				<<numberslider "$depositWithdrawalFee" $depositWithdrawalFee 0 100 5>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Parasite Tank/Barn Capacity Multiplier</span>
+				<span class="gold">기생충 탱크·헛간 수용량 배율</span>
 				<br>
-				<div class="small-description">Modifies the capacity of parasite tank and barn.</div>
+				<div class="small-description">기생충 탱크와 헛간의 수용량을 조정합니다.</div>
 				<<numberslider "$parasiteCapMult" $parasiteCapMult 1 10 1>>
 			</div>
 		</div>
@@ -4565,7 +4565,7 @@
 		<<rebalanceSettings>>
 	</div>
 	<br>
-	<<link "Top of Page">>
+	<<link "맨 위로">>
 		<<script>>
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
@@ -4578,84 +4578,84 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Rebalancing Settings
+				재조정 설정
 			</div>
 
 			<div class="settingsToggleItem">
 				<span class="gold">핵심 특성</span>
 				<br>
 				<label>
-					<<checkbox "$tirednessMaxScalingToggle" 0 1 autocheck>> Enable Tiredness Max Scaling <mouse class = "tooltip linkBlue">(?)<span>Tiredness max will now increase with your physique.</span></mouse>
+					<<checkbox "$tirednessMaxScalingToggle" 0 1 autocheck>> 피로도 최대치 스케일링 활성화 <mouse class = "tooltip linkBlue">(?)<span>피로도 최대치가 체격에 따라 늘어납니다.</span></mouse>
 				</label>
 				<br>
 				<label>
-					<<checkbox "$stressMaxScalingToggle" 0 1 autocheck>> Enable Stress Max Scaling <mouse class = "tooltip linkBlue">(?)<span>Stress max will now increase with your willpower.</span></mouse>
+					<<checkbox "$stressMaxScalingToggle" 0 1 autocheck>> 스트레스 최대치 스케일링 활성화 <mouse class = "tooltip linkBlue">(?)<span>스트레스 최대치가 의지력에 따라 늘어납니다.</span></mouse>
 				</label>
 				<br>
 				<label>
-					<<checkbox "$athleticsFitnessToggle" 0 1 autocheck>> Enable Athletics Fitness <mouse class = "tooltip linkBlue">(?)<span>Athletics will now decrease tiredness gain.</span></mouse>
-				</label>
-			</div>
-
-			<div class="settingsToggleItem">
-				<span class="gold">Maths Trait buffs</span>
-				<br>
-				<label>
-					<<checkbox "$mathsTraitBuffs.antiques" 0 1 autocheck>> Enable Antique Price Buff  <mouse class = "tooltip linkBlue">(?)<span>Antique prices will now be affected by the maths trait buff.</span></mouse>
-				</label>
-				<br>
-				<label>
-					<<checkbox "$mathsTraitBuffs.stolen" 0 1 autocheck>> Enable Stolen Goods Price Buff  <mouse class = "tooltip linkBlue">(?)<span>Stolen goods prices will now be affected by the maths trait buff.</span></mouse>
-				</label>
-				<br>
-				<label>
-					<<checkbox "$mathsTraitBuffs.market" 0 1 autocheck>> Enable Market Stall Price Buff  <mouse class = "tooltip linkBlue">(?)<span>Market stall prices will now be affected by the maths trait buff.</span></mouse>
-				</label>
-				<br>
-				<label>
-					<<checkbox "$mathsTraitBuffs.aphrodisiacPhials" 0 1 autocheck>> Enable Aphrodisiac Phial Price Buff  <mouse class = "tooltip linkBlue">(?)<span>Aphrodisiac Phial prices will now be affected by the maths trait buff.</span></mouse>
+					<<checkbox "$athleticsFitnessToggle" 0 1 autocheck>> 체육 체력 활성화 <mouse class = "tooltip linkBlue">(?)<span>체육이 피로도 증가량을 줄여 줍니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">History Trait buffs</span>
+				<span class="gold">수학 특성 보너스</span>
 				<br>
 				<label>
-					<<checkbox "$historyTraitBuffs.improvedChances" 0 1 autocheck>> Enable Antique Chance Buff  <mouse class = "tooltip linkBlue">(?)<span>The chances to get antiques in certain locations will be buffed.</span></mouse>
+					<<checkbox "$mathsTraitBuffs.antiques" 0 1 autocheck>> 골동품 가격 보너스 활성화  <mouse class = "tooltip linkBlue">(?)<span>골동품 가격에 수학 특성 보너스가 적용됩니다.</span></mouse>
+				</label>
+				<br>
+				<label>
+					<<checkbox "$mathsTraitBuffs.stolen" 0 1 autocheck>> 장물 가격 보너스 활성화  <mouse class = "tooltip linkBlue">(?)<span>장물 가격에 수학 특성 보너스가 적용됩니다.</span></mouse>
+				</label>
+				<br>
+				<label>
+					<<checkbox "$mathsTraitBuffs.market" 0 1 autocheck>> 시장 가판대 가격 보너스 활성화  <mouse class = "tooltip linkBlue">(?)<span>시장 가판대 가격에 수학 특성 보너스가 적용됩니다.</span></mouse>
+				</label>
+				<br>
+				<label>
+					<<checkbox "$mathsTraitBuffs.aphrodisiacPhials" 0 1 autocheck>> 최음제 약병 가격 보너스 활성화  <mouse class = "tooltip linkBlue">(?)<span>최음제 약병 가격에 수학 특성 보너스가 적용됩니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Animal TF Buffs and Nerfs</span>
+				<span class="gold">역사 특성 보너스</span>
 				<br>
 				<label>
-					<<checkbox "$DoLPTFBuffs" 0 1 autocheck>> Enable Animal TF Buffs and Nerfs <mouse class = "tooltip linkBlue">(?)<span>Every animal TF will various buffs and nerfs to certain stats and skills. </span></mouse>
+					<<checkbox "$historyTraitBuffs.improvedChances" 0 1 autocheck>> 골동품 확률 보너스 활성화  <mouse class = "tooltip linkBlue">(?)<span>특정 장소에서 골동품을 얻을 확률이 상승합니다.</span></mouse>
+				</label>
+			</div>
+
+			<div class="settingsToggleItem">
+				<span class="gold">동물 변이 버프·너프</span>
+				<br>
+				<label>
+					<<checkbox "$DoLPTFBuffs" 0 1 autocheck>> 동물 변이 버프·너프 활성화 <mouse class = "tooltip linkBlue">(?)<span>모든 동물 변이는 특정 능력치와 스킬에 다양한 버프와 너프를 줍니다.</span></mouse>
 				</label><br>
 				<label>
-					<<checkbox "$DoLPTFTempTolerance" 0 1 autocheck>> Enable Animal TF Temperature Tolerance <mouse class = "tooltip linkBlue">(?)<span>Every animal TF will have their own temperature tolerance. </span></mouse>
+					<<checkbox "$DoLPTFTempTolerance" 0 1 autocheck>> 동물 변이 온도 내성 활성화 <mouse class = "tooltip linkBlue">(?)<span>모든 동물 변이는 각자 고유한 온도 내성을 갖습니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Vanilla Substance Rebalance</span>
+				<span class="gold">기본 게임 약물 재조정</span>
 				<br>
 				<label>
-					<<checkbox "$substanceRebalance" 0 1 autocheck>> Enable Vanilla Substance Rebalance  <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, the effects of alcohol, hallucinogens and aphrodisiacs are rather disappointing. This attempts to rebalance and extend their effects.</span></mouse>
+					<<checkbox "$substanceRebalance" 0 1 autocheck>> 기본 게임 약물 재조정 활성화  <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 술, 환각제, 최음제의 효과가 꽤 아쉽습니다. 이 설정은 그 효과를 재조정하고 확장합니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Dancing Rebalance</span>
+				<span class="gold">춤 재조정</span>
 				<br>
 				<label>
-					<<checkbox "$dancingRebalance" 0 1 autocheck>> Enable Dancing Rebalance  <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, dancing is rather difficult or a pain in the ass to manage and keep it profitable while still staying safe. The rebalance attempts to make it so it's viable to make dancing your main income with high enough skills.</span></mouse>
+					<<checkbox "$dancingRebalance" 0 1 autocheck>> 춤 재조정 활성화  <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 춤으로 안전하게 수익을 유지하며 꾸려 가기가 꽤 어렵고 골치 아픕니다. 이 재조정은 스킬이 충분히 높다면 춤을 주 수입원으로 삼아도 될 만큼 현실성 있게 만들려는 것입니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Produce Yield <mouse class = "tooltip linkBlue">(?)<span>Bottles of Milk, Truffles and Eggs.</span></mouse></span>
+				<span class="gold">수확량 <mouse class = "tooltip linkBlue">(?)<span>우유병, 송로버섯, 달걀.</span></mouse></span>
 				<br>
-				<div class="small-description">Modifies the amount of produce. 100% is balanced around 500% plot yield.
+				<div class="small-description">수확물의 양을 조정합니다. 100%는 밭 수확량 500%를 기준으로 균형이 맞춰져 있습니다.
 					<<numberslider "$produce_yield_factor" $produce_yield_factor 10 200 10>>
 				</div>
 			</div>
@@ -4665,29 +4665,29 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Grind Settings
+				반복 작업 설정
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$easyHousekeeping" 0 1 autocheck>> Enable Easy Housekeeping  <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, each housekeeping action has an upper cap where it will stop increasing housekeeping skill. Enabling this toggle disables this upper cap and you will always gain housekeeping skill.</span></mouse>
+					<<checkbox "$easyHousekeeping" 0 1 autocheck>> 쉬운 가사 활성화  <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 가사 행동마다 상한이 있어서 그 이상은 가사 스킬이 오르지 않습니다. 이 설정을 활성화하면 상한이 사라져 항상 가사 스킬이 오릅니다.</span></mouse>
 				</label>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">Stat Gain Multiplier</span>
+				<span class="gold">능력치 상승 배율</span>
 				<br>
-				<div class="small-description"><mouse class="tooltip red">Stat gain<span>Leaving the settings with stat gain multiplier above 100 will prevent you from earning feats in a save.</span></mouse> multiplier. 100% means normal stat gains.
+				<div class="small-description"><mouse class="tooltip red">능력치 상승<span>능력치 상승 배율을 100 초과로 둔 채로 두면 해당 세이브 파일에서 업적을 얻을 수 없습니다.</span></mouse> 배율. 100%는 평소와 같은 상승량을 뜻합니다.
 					<<numberslider "$statGainMult" $statGainMult 10 1000 10>>
 				</div>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Beauty Gain</span>
+				<span class="gold">미모 상승</span>
 				<br>
 				<label>
-					<<checkbox "$stressBeauty" 0 1 autocheck>> Enable Low Stress Beauty Gain  <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, only low trauma increases beauty. This makes it so low stress also increases beauty.</span></mouse>
+					<<checkbox "$stressBeauty" 0 1 autocheck>> 낮은 스트레스 미모 상승 활성화  <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 낮은 트라우마만 미모를 올립니다. 이 설정을 켜면 낮은 스트레스도 미모를 올립니다.</span></mouse>
 				</label>
-				<div class="small-description">Modifies your daily beauty gain.
+				<div class="small-description">하루 미모 상승량을 조정합니다.
 					<<numberslider "$beautyMult" $beautyMult 1 10 1>>
 				</div>
 			</div>
@@ -4699,22 +4699,22 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				NPC Multi-Orgasm
+				NPC 다중 오르가슴
 			</div>
 
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$multiOrgasmToggle" 0 1 autocheck>> Enable NPC multi-orgasm <mouse class = "tooltip linkBlue">(?)<span>Generic NPCs will be able to orgasm multiple times.</span></mouse>
+					<<checkbox "$multiOrgasmToggle" 0 1 autocheck>> NPC 다중 오르가슴 활성화 <mouse class = "tooltip linkBlue">(?)<span>일반 NPC가 여러 번 오르가슴에 도달할 수 있습니다.</span></mouse>
 				</label>
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$NNPCMultiOrgasmToggle" 0 1 autocheck>> Enable NNPC multi-orgasm <mouse class = "tooltip linkBlue">(?)<span>Named NPCs will be able to orgasm multiple times.</span></mouse>
+					<<checkbox "$NNPCMultiOrgasmToggle" 0 1 autocheck>> 네임드 NPC 다중 오르가슴 활성화 <mouse class = "tooltip linkBlue">(?)<span>네임드 NPC가 여러 번 오르가슴에 도달할 수 있습니다.</span></mouse>
 				</label>
 			</div>
 			<div class="settingsToggleItem">
 				<label>
-					<<checkbox "$multiOrgasmLustScaling" 0 1 autocheck>> Enable NNPC lust scaling <mouse class = "tooltip linkBlue">(?)<span>Named NPCs will get +1 to max orgasm per 20 lust.</span></mouse>
+					<<checkbox "$multiOrgasmLustScaling" 0 1 autocheck>> 네임드 NPC 욕정 스케일링 활성화 <mouse class = "tooltip linkBlue">(?)<span>네임드 NPC는 욕정 20마다 최대 오르가슴 횟수가 +1 오릅니다.</span></mouse>
 				</label>
 			</div>
 		</div>
@@ -4723,19 +4723,19 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				NNPC Multipliers
+				네임드 NPC 배율
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Named NPC Health Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the health max of named npcs enemies. Range 1 - 1000000.</span></mouse> <span class="red">Setting it below 100 will disable feats.</span>
+				<span class="gold">네임드 NPC 최대 체력 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>네임드 NPC 적의 최대 체력에 곱해집니다. 범위 1 - 1000000.</span></mouse> <span class="red">100 미만으로 설정하면 업적이 비활성화됩니다.</span>
 				</span>
 				<<numberbox "$nnpcHealthMult" $nnpcHealthMult>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Named NPC Arousal Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the arousal max of named npcs enemies. Range 1 - 1000000</span></mouse>
+				<span class="gold">네임드 NPC 최대 흥분 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>네임드 NPC 적의 최대 흥분에 곱해집니다. 범위 1 - 1000000</span></mouse>
 				</span>
 				<<numberbox "$nnpcArousalMult" $nnpcArousalMult>>
 			</div>
@@ -4745,19 +4745,19 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				NPC Multipliers
+				NPC 배율
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">NPC Health Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the health max of human enemies. Range 1 - 1000000.</span></mouse> <span class="red">Setting it below 100 will disable feats.</span>
+				<span class="gold">NPC 최대 체력 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>인간 적의 최대 체력에 곱해집니다. 범위 1 - 1000000.</span></mouse> <span class="red">100 미만으로 설정하면 업적이 비활성화됩니다.</span>
 				</span>
 				<<numberbox "$npcHealthMult" $npcHealthMult>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">NPC Arousal Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the arousal max of human enemies. Range 1 - 1000000</span></mouse>
+				<span class="gold">NPC 최대 흥분 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>인간 적의 최대 흥분에 곱해집니다. 범위 1 - 1000000</span></mouse>
 				</span>
 				<<numberbox "$npcArousalMult" $npcArousalMult>>
 			</div>
@@ -4767,22 +4767,22 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				NPCs Stealing Money Settings
+				NPC 금품 갈취 설정
 			</div>
 
 			<div class="settingsToggleItem">
-				<<checkbox "$npcStealMoneyToggle" 0 1 autocheck>> Enable NPCs stealing your money.
-				<mouse class="tooltip linkBlue">(?)<span>Will only happen if the NPC is angry.</span></mouse>
+				<<checkbox "$npcStealMoneyToggle" 0 1 autocheck>> NPC의 금품 갈취 활성화.
+				<mouse class="tooltip linkBlue">(?)<span>NPC가 화가 났을 때만 일어납니다.</span></mouse>
 			</div>
 
 			<div class="settingsToggleItem">
-				<<checkbox "$npcStealMoneyRandomToggle" 0 1 autocheck>> Randomize the percentage stolen.
-				<mouse class="tooltip linkBlue">(?)<span>This will override the slider below.</span></mouse>
+				<<checkbox "$npcStealMoneyRandomToggle" 0 1 autocheck>> 갈취 비율을 무작위로 정합니다.
+				<mouse class="tooltip linkBlue">(?)<span>아래 슬라이더보다 우선합니다.</span></mouse>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">NPC Stolen Money Percentage (%)
-				<mouse class="tooltip linkBlue">(?)<span>The percentage of your money NPCs will steal.</span></mouse>
+				<span class="gold">NPC 갈취 금액 비율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>NPC가 빼앗아 가는 당신의 돈의 비율입니다.</span></mouse>
 				</span>
 				<<numberslider "$npcStealMoneyPercentage" $npcStealMoneyPercentage 1 100 1>>
 			</div>
@@ -4792,33 +4792,33 @@
 		
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				NPC Flavor Generation Settings
+				NPC 분위기 생성 설정
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">NPC Description Generation</span> <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, their descriptions are tied to their levels which may cause every NPC to appear as Demons with really high level scaling. Randomized will completely randomize this.</span></mouse>
+				<span class="gold">NPC 묘사 생성</span> <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 묘사가 레벨에 묶여 있어서 레벨 스케일링이 매우 높으면 모든 NPC가 악마로 나타날 수 있습니다. 무작위를 고르면 이를 완전히 무작위로 정합니다.</span></mouse>
 				<br>
-				<label>Vanilla <<radiobutton "$npcDescGenType" "vanilla" autocheck>></label> |
-				<label>Randomized <<radiobutton "$npcDescGenType" "randomized" autocheck>></label>
+				<label>기본 게임 <<radiobutton "$npcDescGenType" "vanilla" autocheck>></label> |
+				<label>무작위 <<radiobutton "$npcDescGenType" "randomized" autocheck>></label>
 				<br>
-				<<checkbox "$npcDescDemonDisable" 0 1 autocheck>> Disable Demon descriptions.
-				<mouse class="tooltip linkBlue">(?)<span>Prevents Demon and lesser demon descriptions.</span></mouse>
-				<br>
-			</div>
-
-			<div class="settingsToggleItem">
-				<span class="gold">NPC Breast Generation</span> <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, their breast sizes are tied to their levels which may cause every NPC to have huge breast sizes with really high level scaling. Randomized will completely randomize this.</span></mouse>
-				<br>
-				<label>Vanilla <<radiobutton "$npcBreastGenType" "vanilla" autocheck>></label> |
-				<label>Randomized <<radiobutton "$npcBreastGenType" "randomized" autocheck>></label>
+				<<checkbox "$npcDescDemonDisable" 0 1 autocheck>> 악마 묘사 비활성화.
+				<mouse class="tooltip linkBlue">(?)<span>악마와 하급 악마 묘사가 나오지 않게 합니다.</span></mouse>
 				<br>
 			</div>
 
 			<div class="settingsToggleItem">
-				<span class="gold">NPC Penis Generation</span> <mouse class = "tooltip linkBlue">(?)<span>In Vanilla, level 19-20 NPCs are forced to have max size penises. Randomized will completely randomize this.</span></mouse>
+				<span class="gold">NPC 가슴 생성</span> <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 가슴 크기가 레벨에 묶여 있어서 레벨 스케일링이 매우 높으면 모든 NPC의 가슴이 거대해질 수 있습니다. 무작위를 고르면 이를 완전히 무작위로 정합니다.</span></mouse>
 				<br>
-				<label>Vanilla <<radiobutton "$npcPenisGenType" "vanilla" autocheck>></label> |
-				<label>Randomized <<radiobutton "$npcPenisGenType" "randomized" autocheck>></label>
+				<label>기본 게임 <<radiobutton "$npcBreastGenType" "vanilla" autocheck>></label> |
+				<label>무작위 <<radiobutton "$npcBreastGenType" "randomized" autocheck>></label>
+				<br>
+			</div>
+
+			<div class="settingsToggleItem">
+				<span class="gold">NPC 자지 생성</span> <mouse class = "tooltip linkBlue">(?)<span>기본 게임에서는 레벨 19-20의 NPC는 자지가 반드시 최대 크기입니다. 무작위를 고르면 이를 완전히 무작위로 정합니다.</span></mouse>
+				<br>
+				<label>기본 게임 <<radiobutton "$npcPenisGenType" "vanilla" autocheck>></label> |
+				<label>무작위 <<radiobutton "$npcPenisGenType" "randomized" autocheck>></label>
 				<br>
 			</div>
 		</div>
@@ -4829,12 +4829,12 @@
 	<div class="solidBorderContainer settings-container">
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Beast Multi-Orgasm
+				짐승 다중 오르가슴
 			</div>
 
 			<div class="settingsToggleItemWide">
 				<label>
-					<<checkbox "$beastMultiOrgasmToggle" 0 1 autocheck>> Enable beast multi-orgasm <mouse class = "tooltip linkBlue">(?)<span>Beasts will be able to orgasm multiple times.</span></mouse>
+					<<checkbox "$beastMultiOrgasmToggle" 0 1 autocheck>> 짐승 다중 오르가슴 활성화 <mouse class = "tooltip linkBlue">(?)<span>짐승이 여러 번 오르가슴에 도달할 수 있습니다.</span></mouse>
 				</label>
 			</div>
 		</div>
@@ -4843,11 +4843,11 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Beast Gangbangs
+				짐승 단체
 			</div>
 			<div class="settingsToggleItemWide">
 				<label>
-					<<checkbox "$beastGroupFight" 0 1 autocheck>> Enable Beast Gangbangs  <mouse class = "tooltip linkBlue">(?)<span>When enabled, multi-beast encounters will behave the same as gangbangs.</span></mouse>
+					<<checkbox "$beastGroupFight" 0 1 autocheck>> 짐승 단체 활성화  <mouse class = "tooltip linkBlue">(?)<span>활성화하면 여러 짐승과의 조우가 단체 성교와 같은 방식으로 진행됩니다.</span></mouse>
 				</label>
 			</div>
 		</div>
@@ -4856,19 +4856,19 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Beast Multipliers
+				짐승 배율
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Beast Health Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the health max of beast enemies. Range 1 - 1000000.</span></mouse> <span class="red">Setting it below 100 will disable feats.</span>
+				<span class="gold">짐승 최대 체력 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>짐승 적의 최대 체력에 곱해집니다. 범위 1 - 1000000.</span></mouse> <span class="red">100 미만으로 설정하면 업적이 비활성화됩니다.</span>
 				</span>
 				<<numberbox "$beastHealthMult" $beastHealthMult>>
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Beast Arousal Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the arousal max of beast enemies. Range 1 - 1000000</span></mouse>
+				<span class="gold">짐승 최대 흥분 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>짐승 적의 최대 흥분에 곱해집니다. 범위 1 - 1000000</span></mouse>
 				</span>
 				<<numberbox "$beastArousalMult" $beastArousalMult>>
 			</div>
@@ -4878,12 +4878,12 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Tentacle Multipliers
+				촉수 배율
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Tentacle Health Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the health max of each tentacle. Range 1 - 1000000.</span></mouse> <span class="red">Setting it below 100 will disable feats.</span>
+				<span class="gold">촉수 최대 체력 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>촉수 하나하나의 최대 체력에 곱해집니다. 범위 1 - 1000000.</span></mouse> <span class="red">100 미만으로 설정하면 업적이 비활성화됩니다.</span>
 				</span>
 				<<numberbox "$tentacleHealthMult" $tentacleHealthMult>>
 			</div>
@@ -4893,12 +4893,12 @@
 
 		<div class="settingsGrid">
 			<div class="settingsHeader">
-				Struggle (Lurkers, bees, etc.) Multipliers
+				발버둥(럴커, 벌 등) 배율
 			</div>
 
 			<div class="settingsToggleItem numberslider-inline">
-				<span class="gold">Struggle Health Max Multiplier (%)
-				<mouse class="tooltip linkBlue">(?)<span>Multiplies the health max of struggle enemies. Range 1 - 1000000.</span></mouse> <span class="red">Setting it below 100 will disable feats.</span>
+				<span class="gold">발버둥 최대 체력 배율 (%)
+				<mouse class="tooltip linkBlue">(?)<span>발버둥 적의 최대 체력에 곱해집니다. 범위 1 - 1000000.</span></mouse> <span class="red">100 미만으로 설정하면 업적이 비활성화됩니다.</span>
 				</span>
 				<<numberbox "$struggleHealthMult" $struggleHealthMult>>
 			</div>

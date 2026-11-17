@@ -573,7 +573,7 @@
 	<<link [[뛰어내린다|Bus Seat Rape Jump]]>><</link>>
 	<br>
 	/* <<if displayDefiantOption(500)>> */
-		<<link [[Punch the driver|Bus Seat Rape Punch]]>><<crimeUp 100 "assault">><<crimeUp 100 "destruction">><<wolfDefiant 500>><</link 500>><<crimes "assault" "destruction">>
+		<<link [[운전사를 때린다|Bus Seat Rape Punch]]>><<crimeUp 100 "assault">><<crimeUp 100 "destruction">><<wolfDefiant 500>><</link 500>><<crimes "assault" "destruction">>
 		<br>
 	/* <</if>> */
 <<elseif $enemyarousal gte $enemyarousalmax>>
@@ -976,7 +976,7 @@
 <<link [[애태운다|Bus Engine Breakdown Sex]]>><<set $sexstart to 1>><</link>>
 <br>
 <<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") or (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>
-	<<link [[Rub your head against <<his>> crotch|Bus Engine Breakdown Sex]]>><<set $sexstart to 1>><<set $phase to 0>><<stress -6>><</link>><<= (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") ? "<<wolfgirl>>" : "<<cat>>">><<lstress>>
+	<<link [[<<his>> 가랑이에 머리를 비빈다|Bus Engine Breakdown Sex]]>><<set $sexstart to 1>><<set $phase to 0>><<stress -6>><</link>><<= (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") ? "<<wolfgirl>>" : "<<cat>>">><<lstress>>
 	<br>
 <</if>>
 
@@ -1076,7 +1076,7 @@
 
 	<<maninit>>
 	<<if $phase is 0>> /* Rub head against crotch */
-		You <<= (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") ? "growl softly" : "purr">> and nuzzle your head into the <<person1>><<persons>> crotch.
+		당신은 <<= (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf") ? "부드럽게 으르렁거리며" : "가르랑거리며">> <<person1>><<persons>> 가랑이에 머리를 비빈다.
 		<<npcoral>>
 	<<elseif $speech_attitude is "meek">>
 		"제발... 살살해 줄래요?" 당신은 속삭인다.

@@ -271,7 +271,7 @@
 	<<if $consensual is 1 and (!hasSexStat("promiscuity", 4) and $enemytype is "man" or !hasSexStat("deviancy", 4) and $enemytype isnot "man") and !$promiscuityIgnore>>
 	<<else>>/*
 		<<if $thighuse is 0>>
-			<<set _vaginaaction["Try to keep it away with your thighs"] to "penisthighs">>
+			<<set _vaginaaction["허벅지로 막아낸다"] to "penisthighs">>
 		<</if>>*/
 	<</if>>
 	<<if $anususe is 0 and !playerChastity("anus")>>

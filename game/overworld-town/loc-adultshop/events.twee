@@ -2798,7 +2798,7 @@
 <<run statusCheck("Sydney")>>
 <<set $outside to 0>><<set $location to "adult_shop">><<effects>>
 
-You bound towards Sydney, straining against your bondage. <<He>> yelps and jumps back.
+당신은 구속에 맞서 몸부림치며 시드니에게 달려든다. <<He>>【이가】 비명을 지르며 펄쩍 뒤로 물러선다.
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	<<gagged_speech "제-제발, 시드니,">> 당신은 흐느낀다. <<gagged_speech "날 두고 가지 마!">>
 <<elseif $speech_attitude is "bratty">>

@@ -1152,7 +1152,7 @@
 	<<link [[다음|Bully Theft 2]]>><</link>>
 	<br>
 <<else>>
-	<<link [[Next|Bully Theft 2 Fail]]>><</link>>
+	<<link [[다음|Bully Theft 2 Fail]]>><</link>>
 	<br>
 <</if>>
 
@@ -1284,10 +1284,10 @@
 당신은 차량으로 걸어가 담배 상자 두어 개를 집어 든다.
 <br><br>
 
-You make it back to the wall without issue, and manage to crawl to the other side.
+당신은 별 탈 없이 담장까지 돌아와, 간신히 반대편으로 기어 넘어간다.
 <br><br>
 
-Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for the help."
+휘트니가 당신의 손에서 상자들을 낚아챈다. "나중에 보자, <<girl>>. 도와줘서 고마워."
 <br><br>
 	
 <<endevent>>
@@ -2558,7 +2558,7 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 
 	<<if $worn.neck.collared isnot 1 or $worn.neck.name is "familiar collar" and $worn.neck.cursed is 0>>
 		<<neckwear "Whitney's collar">><<set $whitneycollar to 1>>
-		"Alright, slut, hold still if you know what's good for you," <<he>> says, producing a collar that says Whitney's pet in bold letters. <<He>> places it around your neck, tightening it painfully. "Gotta keep it tight, so it reminds you of your place as a good doggie."
+		"좋아, 걸레야, 네 신상에 좋게 하려면 가만히 있어." <<he>>【이가】 말하며 굵은 글씨로 휘트니의 애완동물이라고 적힌 목걸이를 꺼낸다. <<He>>【은는】 그것을 당신의 목에 채우고 아플 만큼 조인다. "잘 조여놔야지. 착한 강아지로서 네 자리를 기억하게."
 		<br><br>
 	<</if>>
 
@@ -5723,20 +5723,20 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 			<<if ($worn.neck.name isnot "Whitney's collar with leash") and ($worn.neck.name isnot "Whitney's collar")>>
 				<<if $worn.neck.name is "familiar collar">>
 					<<if $whitneyFamiliarCollarKnown is 1>>
-						<<He>> grimaces at the collar. "I'm not touching that shit again..."
+						<<He>>【은는】 목걸이를 보고 얼굴을 찌푸린다. "그 좆같은 걸 다시는 안 만질 거야..."
 					<<else>>
-						<<He>> turns you around, you can feel <<him>> pull at your $worn.neck.name but immediately lets go with a pained yelp as <<his>> hand shoots back. "Ow! What the fuck? Who gave you this shit?"
+						<<He>>【은는】 당신을 돌려세우고, 당신은 <<him>>【이가】 당신의 $worn.neck.name【을를】 잡아당기는 걸 느끼지만, <<his>> 손이 튕겨 나가며 아파서 비명을 지르고는 곧바로 손을 놓는다. "아야! 씨발 뭐야? 누가 너한테 이딴 걸 줬어?"
 					<</if>>
 				<<else>>
-					<<He>> turns you around, you can feel <<him>> pull at your $worn.neck.name and lets out a tsk. <<He>> digs around in <<his>> pocket
-					and before you know it the $worn.neck.name falls to the ground and gets replaced by something else.
+					<<He>>【은는】 당신을 돌려세우고, 당신은 <<him>>【이가】 당신의 $worn.neck.name【을를】 잡아당기다 혀를 차는 걸 느낀다. <<He>>【은는】 주머니를 뒤적거리더니
+					어느새 $worn.neck.name【이가】 바닥에 떨어지고 다른 무언가가 그 자리를 대신한다.
 					<<set $worn.neck.type.push("broken")>>
 					<<neckruined>>
 					<<neckwear "Whitney's collar with leash">><<set $whitneycollar to 1>>
 				<</if>>
 			<</if>>
 		<<elseif ($worn.neck.name isnot "Whitney's collar with leash") and ($worn.neck.name isnot "Whitney's collar")>>
-			<<He>> lets out a loud sigh and turns you around, you can something get pulled around your neck and hear a lock click shut.
+			<<He>>【은는】 크게 한숨을 쉬며 당신을 돌려세우고, 당신은 무언가가 목에 둘러지는 것을 느끼며 자물쇠가 찰칵 잠기는 소리를 듣는다.
 				<<set $worn.neck.type.push("broken")>>
 				<<neckruined>>
 				<<neckwear "Whitney's collar with leash">><<set $whitneycollar to 1>>
@@ -5745,10 +5745,10 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 	휘트니가 당신을 노려본다. <<his>> 손아귀만이 당신이 넘어지지 않게 붙잡고 있다. 당신은 <<his>> 눈에 아주 희미한 눈물 자국이 스치는 것을 본 것 같다. 일이 더 커지기 전에, <<he>>【은는】 당신을 바닥에 떨어뜨린다.
 	<br><br>
 
-	Whitney's breathing is heavier. <<He>> speaks, "Only... I get to kidnap you. Got it?" <<He>> marches out of the park, sparing you one more glance over <<his>> shoulder.
+	휘트니의 숨이 거칠어진다. <<He>>【은는】 말한다. "너를 납치하는 건... 나뿐이야. 알겠어?" <<He>>【은는】 공원을 나서며, <<his>> 어깨너머로 당신을 한 번 더 흘끗 바라본다.
 	<br><br>
 	<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-		<<He>> points at you "AND DON'T TAKE THAT OFF! YOU ARE MINE!!"
+		<<He>>【은는】 당신을 가리킨다. "그거 벗지 마! 넌 내 거야!!"
 	<</if>>
 	<<npcincr Whitney dom 3>><<stress 6>><<gstress>><<ggdom>>
 		<br><br>
@@ -5976,7 +5976,7 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 
 <<else>>
 	/*PC doesn't know how to shotgun */
-	You lean in to kiss Whitney, but <<he>> stops you. "Hang on," <<he>> says, snatching the cigarette from your hand. <<He>> takes a drag  before sealing the distance between you once more.
+	당신은 휘트니에게 키스하려 몸을 기울이지만, <<he>>【이가】 당신을 제지한다. "잠깐." <<he>>【이가】 말하며 당신의 손에서 담배를 낚아챈다. <<He>>【은는】 한 모금 깊이 빤 뒤 다시 한번 당신과의 거리를 좁힌다.
 
 	입술이 닿기 직전, <<he>>【이가】 얇은 연기 줄기를 천천히 내뿜으며 당신의 허를 찌른다.
 	<<set $whitney_shotgun to 0>>
@@ -6091,7 +6091,7 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 	<<else>>
 		휘트니는 이미 흥분으로 번들거린다. 당신은 그 모습을 음미하며, <<his>> 미끈한 주름 사이로 혀를 놀려 <<oraltext>> <<his>> 입구를 핥는다. 휘트니는 쾌감에 한숨을 쉬며, <<his>> 손가락으로 당신의 머리카락을 빗는다. 당신은 <<him>>에게 느리고 달콤한 작별 키스를 한 후 더 북쪽으로 이동한다.
 		<br><br>
-		You take a moment to tease <<him>>, exhaling against the stiff bud of <<his>> clit. <<He>> twitches in annoyance, canting <<his>>  hips towards you and grumbling for you to get a move on. <<He>> glowers down at you, but <<his>> flushed face tells another story. You <<print $speech_attitude is "meek" ? "giggle" : $speech_attitude is "bratty" ? "snicker" : "smile">> and finally give <<him>> the direct stimulation <<he>> seeks.
+		당신은 잠시 <<him>>【을를】 놀리듯, 빳빳해진 <<his>> 클리토리스에 숨을 내쉰다. <<He>>【은는】 짜증스럽게 움찔하며 <<his>> 엉덩이를 당신 쪽으로 기울이고, 빨리 하라고 투덜댄다. <<He>>【은는】 당신을 매섭게 내려다보지만, <<his>> 붉어진 얼굴은 다른 이야기를 한다. 당신은 <<print $speech_attitude is "meek" ? "키득거리고" : $speech_attitude is "bratty" ? "낄낄대고" : "미소 짓고">>, 마침내 <<he>>【이가】 바라던 직접적인 자극을 준다.
 		<br><br>
 		당신은 부드러운 동작으로 <<him>>【을를】 감싸고, 혀를 납작하게 펴 <<his>> 클리토리스를 빤다. 휘트니의 다리 사이에서 머리를 오르내리며 <<him>>【을를】 섬기는 순간에 당신은 빠져든다. 무심코 쾌락의 신음이 새어 나오자, 휘트니의 평정이 완전히 무너진다. <<He>>【은는】 빈손으로 당신의 뒤통수를 붙잡고, <<he>>【은는】 <<print C.npc.Whitney.dom gte 10 ? "신음하며 절정한다. <<His>> 엉덩이가 불규칙하게 튀고, <<he>>【은는】 당신의 얼굴을 <<his>> 가랑이에 짓누른다" : "흐느끼며 절정한다. <<His>> 엉덩이가 불규칙하게 튀고, <<he>>【은는】 당신의 혀를 타고 절정에 이른다">>. 마침내 <<he>>【은는】 당신을 물러나게 한다. <<npcincr Whitney lust -20>><<llust>>
 		<<faceejacstat>><<ejacstat>><<set $hygiene += 500>><<bodyliquid "face" "goo">>
@@ -6175,13 +6175,13 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 		<<if ($rng gte 97) or ($rng lte 5)>>
 		<br><br>
 		<<if ($whitneycollar is 1) and ($worn.neck.name.includes("whitney's collar"))>>
-			<<He>> looks over at you and gives you a wide grin. <<He>> reaches forward and touches your collar. "Glad you are listening to me," <<He>> lets out a sigh.
+			<<He>>【은는】 당신을 쳐다보며 활짝 웃는다. <<He>>【은는】 손을 뻗어 당신의 목걸이를 만진다. "내 말 잘 듣고 있다니 다행이네." <<He>>【은는】 한숨을 내쉰다.
 		<<elseif ($whitneycollar is 1) and (!$worn.neck.name.includes("whitney's collar"))>>
-			<<He>> looks over at you and <<his>> expression turns to annoyance. <<He>> tsk's and rolls <<his>> eyes.
+			<<He>>【은는】 당신을 보더니 짜증 섞인 표정을 짓는다. <<He>>【은는】 쯧 하고 혀를 차며 눈을 굴린다.
 		<<else>>
-			<<He>> looks at you and gives you a grin, "Hey, come here for a bit. I got you a gift. Don't worry, I won't hurt you." You slowly walk up to <<him>> and <<he>> spins you around.
+			<<He>>【은는】 당신을 보며 씩 웃는다. "야, 잠깐 이리 와 봐. 선물 하나 가져왔어. 걱정 마, 안 아프게 해 줄 테니까." 당신이 천천히 <<him>>에게 다가가자 <<he>>【은는】 당신을 빙글 돌려세운다.
 			<br><br>
-			"Alright, now close your eyes for me." You do as <<he>> says and feel thick leather slowly encase your neck, hearing a lock click shut. <<He>> moves closely to your ear and whispers,<br><br> <span class="lewd">"This is for my favorite pet."</span>
+			"자, 이제 눈 감아 봐." 당신은 <<he>>【이가】 시키는 대로 하고, 두꺼운 가죽이 천천히 목을 감싸는 것을 느끼며 자물쇠가 찰칵 잠기는 소리를 듣는다. <<He>>【은는】 당신의 귀 가까이로 다가와 속삭인다.<br><br> <span class="lewd">"이건 내가 제일 아끼는 애완동물을 위한 거야."</span>
 			<<neckwear "Whitney's collar">>
 			<<set $whitneycollar to 1>>
 		<</if>>
@@ -6844,7 +6844,7 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 			<br><br>
 			<<whitneyOptions>>
 		<<else>>
-			You <span class="red">trip up, and <<he>> pushes you over the edge.</span> You fall right in, <<if Time.season is "winter">>breaking through the ice and<</if>> getting drenched.
+			당신은 <span class="red">발을 헛디디고, <<he>>【은는】 당신을 가장자리 너머로 밀어버린다.</span> 당신은 그대로 빠져, <<if Time.season is "winter">>얼음을 깨고 들어가 <</if>>흠뻑 젖는다.
 			<<water>>
 			<br><br>
 			"있잖아? 아무 문제 없어. 이제 기분 훨씬 나아졌어. 고마워, <<bitch>>." <<He>>【은는】 당신을 분수대에 남겨둔 채, <<he>>【이가】 공원을 나가며 웃는다.
@@ -10256,87 +10256,87 @@ Whitney takes the boxes from your hands. "See you later, <<girl>>. Thanks for th
 
 :: Whitney Park Public Sex Intro
 <<npc Whitney>><<person1>>
-"Hey, Whitney?" you say, a bit uncertainly, trying to get <<his>> attention. You glance over at <<him>>, taking a moment to gather your thoughts before deciding to speak up anyway.
+"저기, 휘트니?" 당신은 조금 자신 없는 목소리로 <<his>> 주의를 끌어 보려 말한다. 당신은 <<him>>【을를】 힐끗 보며 생각을 정리할 시간을 잠시 갖고는, 그래도 입을 열기로 한다.
 <br><br>
-"Hey, um... wanna..." you say, feeling your cheeks warm as you struggle to get the words out. Finally, you muster the nerve to finish your sentence, blurting out, "Want to do it?"
+"저기, 음... 하고 싶..." 당신은 뺨이 달아오르는 것을 느끼며 말을 꺼내려 애쓴다. 마침내 용기를 쥐어짜 말을 끝맺으며 불쑥 내뱉는다. "하고 싶어?"
 <br><br>
-Whitney, with <<his>> usual smirk of superiority, looks at you, a mix of amusement and arrogance in <<his>> eyes. <<He>> raises <<his>> eyebrow, clearly forcing you to say it again.
+휘트니는 특유의 우월감 어린 비웃음을 띠고 당신을 바라본다. <<his>> 눈에는 재미와 오만이 뒤섞여 있다. <<He>>【은는】 눈썹을 치켜올리며, 분명 당신에게 다시 말하라고 강요한다.
 <br><br>
 
 <<if $speech_attitude is "meek">>
-	You close your eyes and turn away slightly, feeling your cheeks heat up, whispering, "<span style="font-size: small">Do you want to... um... have s-s-s-sex...?</span>"
+	당신은 눈을 감고 몸을 살짝 돌린 채, 뺨이 달아오르는 것을 느끼며 속삭인다. "<span style="font-size: small">혹시... 음... 섹-섹-섹-섹스... 할래?</span>"
 <<elseif $speech_attitude is "bratty">>
-	With an exaggerated sigh, you close your eyes and turn away, muttering, "Ugh, do you want to fuck?"
+	당신은 과장되게 한숨을 쉬며 눈을 감고 고개를 돌린 채 중얼거린다. "으, 박고 싶어?"
 <<else>>
-	You close your eyes and turn away slightly, muttering, "Do you want to have sex with me?"
+	당신은 눈을 감고 몸을 살짝 돌린 채 중얼거린다. "나랑 섹스하고 싶어?"
 <</if>>
 <br><br>
 
-Whitney locks eyes with you, a smirk playing on <<his>> lips as <<he>> speaks. "You're quite the horny slut, aren't you?" <<he>> remarks, teasingly. "I have an idea. Let's do it right here, where everybody can see what a good slut you are."
+휘트니가 당신과 눈을 맞춘다. <<his>> 입가에 비웃음이 어른거리며 <<he>>【이가】 입을 연다. "꽤나 밝히는 걸레네, 안 그래?" <<he>>【이가】 놀리듯 말한다. "좋은 생각이 있어. 바로 여기서 하자. 네가 얼마나 훌륭한 걸레인지 모두가 볼 수 있게."
 <br><br>
-Glancing around, you realize there aren't many people nearby. You notice it's still pretty early, and the sun's still shining. While the risk of getting caught adds some excitement, you assume, with a bit of care, you might be able to keep things discreet and hidden.
+주위를 둘러보니 근처에 사람이 많지 않다. 아직 꽤 이른 시간이고 해도 여전히 떠 있다는 걸 알아챈다. 들킬 위험이 약간의 흥분을 더해 주지만, 조금만 조심하면 은밀하게 숨길 수 있을 것 같다고 생각한다.
 <br><br>
 
 <<if $exhibitionism gte 75>>
-	<<link [[Agree to do it out in the open|Whitney Park Public Sex Open]]>><</link>><<exhibitionist5>>
+	<<link [[탁 트인 곳에서 하는 데 동의한다|Whitney Park Public Sex Open]]>><</link>><<exhibitionist5>>
 	<br>
 <<else>>
-	You're not brave enough to do it in public.
+	당신은 공공장소에서 할 만큼 대담하지 못하다.
 	<br>
 <</if>>
-<<link [[Agree, but find somewhere hidden|Whitney Park Public Sex Hidden]]>><<set $phase to 1>><</link>>
+<<link [[동의하지만, 숨을 곳을 찾는다|Whitney Park Public Sex Hidden]]>><<set $phase to 1>><</link>>
 <br>
-<<link [[Refuse|Whitney Park Public Sex Refuse]]>><</link>>
+<<link [[거절한다|Whitney Park Public Sex Refuse]]>><</link>>
 
 :: Whitney Park Public Sex Open
 <<set $outside to 1>>
 <<if $speech_attitude is "meek">>
-	"Oh o-okay, i-i-if you say so,"
+	"아, 아, 알았어, 네가 그렇게 말한다면."
 <<elseif $speech_attitude is "bratty">>
-	"Okay, let's do it right here,"
+	"좋아, 바로 여기서 하자."
 <<else>>
-	"Fine, but only because I want to,"
+	"좋아, 근데 내가 하고 싶어서 하는 거야."
 <</if>>
-you agree, giving in to Whitney's proposition.<<exhibitionism5>>
+당신은 휘트니의 제안에 굴복해 동의한다.<<exhibitionism5>>
 
-Whitney's expression shifts from shock to amusement in a heartbeat, a brief laugh escaping <<his>> lips before <<he>> murmurs something under <<his>> breath. With a subtle gesture, <<he>> draws you closer, <<his>> arm wrapping around you as <<he>> leans in, <<his>> lips almost brushing against your ear. A shiver runs down your spine as you feel the warmth of <<his>> breath against your skin, sending tingles down your spine.
+휘트니의 표정이 순식간에 충격에서 즐거움으로 바뀌고, 짧은 웃음이 <<his>> 입술 사이로 새어 나오더니 <<he>>【은는】 숨죽여 무언가를 중얼거린다. 은근한 몸짓으로 <<he>>【은는】 당신을 가까이 끌어당기고, <<his>> 팔이 당신을 감싸는 가운데 몸을 기울여 <<his>> 입술이 당신의 귀에 닿을 듯 말 듯 스친다. 피부에 닿는 <<his>> 숨결의 온기가 느껴지자 등줄기를 따라 전율이 내달리고, 온몸이 짜릿해진다.
 <br><br>
-"Are you sure you want to do this outside, sweetheart?" <<he>> says, <<his>> tone dripping with mockery. "Are you that eager to get caught? Does the thought of being out in the open turn you on?" <<His>> words, whispered into your ear, send a thrill down your spine. You let out an involuntary moan, feeling your arousal grow stronger with each word <<he>> utters.
+"정말 밖에서 하고 싶은 거야, 자기야?" <<he>>【이가】 말한다. <<his>> 어조에는 조롱이 뚝뚝 묻어난다. "그렇게 들키고 싶어서 안달이야? 탁 트인 데서 한다고 생각하니까 흥분돼?" 귓가에 속삭이는 <<His>> 말에 등줄기가 짜릿해진다. 당신은 저도 모르게 신음을 흘리고, <<he>>【이가】 말을 내뱉을 때마다 흥분이 더 커지는 것을 느낀다.
 <br><br>
-<<He>> hovers <<his>> lips close to yours, pausing just before they make contact. In a low murmur, you catch <<his>> words this time, "What a good whore." Whitney inches closer, on the brink of kissing you.
+<<He>>【은는】 <<his>> 입술을 당신의 입술 가까이에 머물게 하고, 닿기 직전에 멈춘다. 낮은 속삭임 속에서 이번에는 당신도 <<his>> 말을 알아듣는다. "훌륭한 창녀네." 휘트니가 한 뼘 더 다가와, 막 당신에게 키스하려 한다.
 <br><br>
 
-<<link [[Kiss Whitney|Whitney Park Public Sex Open Kiss]]>><<set $phase to 1>><</link>>
+<<link [[휘트니에게 키스한다|Whitney Park Public Sex Open Kiss]]>><<set $phase to 1>><</link>>
 <br>
 <<if $promiscuity gte 15>>
-	<<link [[Kiss Whitney excitedly|Whitney Park Public Sex Open Kiss]]>><<set $phase to 2>><</link>><<promiscuous2>>
+	<<link [[들뜬 채 휘트니에게 키스한다|Whitney Park Public Sex Open Kiss]]>><<set $phase to 2>><</link>><<promiscuous2>>
 	<br>
 <</if>>
-<<link [[Pull away|Whitney Park Public Sex Open Kiss]]>><<set $phase to 3>><<npcincr Whitney love -1>><</link>><<llove>>
+<<link [[몸을 뺀다|Whitney Park Public Sex Open Kiss]]>><<set $phase to 3>><<npcincr Whitney love -1>><</link>><<llove>>
 
 :: Whitney Park Public Sex Open Kiss
 <<if $phase is 1>>
-	You close your eyes, and in an instant, Whitney's mouth is on yours. <<He>> grabs your hair and gives it a sharp tug, causing you to
+	당신이 눈을 감자 순식간에 휘트니의 입이 당신의 입을 덮친다. <<He>>【은는】 당신의 머리카락을 움켜쥐고 거칠게 잡아당겨, 당신은
 	<<if $masochism_level gte 1>>
-		moan out in pain and pleasure.<<arousal 600>><<garousal>>
+		고통과 쾌감에 신음을 흘린다.<<arousal 600>><<garousal>>
 	<<else>>
-		gasp in pain.
+		고통에 헉 하고 숨을 들이켠다.
 	<</if>>
 	<<violence 1>><<gpain>>
 <<elseif $phase is 2>>
-	You close your eyes and lean in towards Whitney. <<He>> grabs your hair, giving it a playful tug that sends a shiver down your spine.<<violence 1>><<gpain>><<if $masochism_level gte 1>><<arousal 200>><<garousal>><</if>>
+	당신은 눈을 감고 휘트니 쪽으로 몸을 기울인다. <<He>>【은는】 당신의 머리카락을 움켜쥐고 장난스럽게 잡아당기고, 그 느낌이 등줄기를 따라 전율을 보낸다.<<violence 1>><<gpain>><<if $masochism_level gte 1>><<arousal 200>><<garousal>><</if>>
 	<br><br>
-	"A desperate little slut, aren't we?" <<he>> teases, earning a soft moan from you. Without missing a beat, <<he>> dives in with <<his>> tongue, and you eagerly respond, matching <<his>> enthusiasm. <<His>> mouth tastes like cigarettes and alcohol, with a hint of sweetness you can't quite place.
+	"필사적인 작은 걸레네, 안 그래?" <<he>>【이가】 놀린다. 당신에게서 부드러운 신음이 새어 나온다. 지체 없이 <<he>>【은는】 혀를 밀어 넣고, 당신도 <<his>> 열기에 맞춰 열심히 응한다. <<His>> 입에서는 담배와 술 맛이 나고, 정체를 알 수 없는 달콤함이 희미하게 섞여 있다.
 	<br><br>
-	Your tongues dance together, fighting for dominance, but you're happy to let <<him>> take the lead.	Whitney explores your mouth thoroughly. <<He>> doesn't give you any time to breathe as <<he>> grabs you by the waist, grinding you more into <<him>>.
+	두 혀가 우위를 다투며 얽히지만, 당신은 기꺼이 <<him>>에게 주도권을 내준다. 휘트니는 당신의 입안을 구석구석 탐한다. <<He>>【은는】 당신의 허리를 붙잡아 더욱 바싹 밀착시키며 숨 쉴 틈도 주지 않는다.
 	<br><br>
-	Your moans are muffled by the soft rain and <<his>> mouth. All of this is getting too much for you. You try to pull back to catch your breath, but Whitney pulls you back by attacking your mouth once again, this time much deeper.
+	당신의 신음은 보슬비 소리와 <<his>> 입에 묻혀 흐려진다. 이 모든 것이 당신에게는 벅차다. 숨을 돌리려 몸을 빼 보지만, 휘트니는 다시 당신의 입을 덮쳐 당신을 끌어당기는데, 이번에는 훨씬 더 깊다.
 	<br><br>
 	<<promiscuity2>>
 <<else>>
-	You jerk back as Whitney leans in for a kiss, but <<he>> swiftly grabs your hair, tilting your head back. Before you can protest, <<he>>'s nipping and biting at your neck, leaving painful marks in <<his>> path.
+	휘트니가 키스하려 몸을 기울이자 당신은 움찔 물러서지만, <<he>>【은는】 재빨리 당신의 머리카락을 움켜쥐고 고개를 뒤로 젖힌다. 당신이 항의하기도 전에 <<he>>【은는】 당신의 목을 잘근잘근 깨물며 지나는 자리마다 아픈 자국을 남긴다.
 	<<if $mashochism_level gte 1>>
-		 The sharp stings send a jolt of both pain and pleasure coursing through you, a confusing mix of sensations that leaves you breathless.<<arousal 600>><<garousal>>
+		 날카로운 따끔거림이 고통과 쾌감을 함께 번개처럼 몸에 내달리게 하고, 뒤섞인 혼란스러운 감각에 숨이 막힌다.<<arousal 600>><<garousal>>
 	<</if>>
 	<<violence 2>><<gpain>>
 <</if>>
@@ -10347,180 +10347,180 @@ Whitney's expression shifts from shock to amusement in a heartbeat, a brief laug
 	<<generate2>>
 <</if>>
 <br><br>
-<span class="red">You hear the soft click of a camera behind you</span>, but before you can turn around to see who it is, Whitney grabs your head and holds it in place with both of <<person1>><<his>> hands. <<He>> whispers in your ear, "Be a good girl and let's give <<person2>><<him>> a show."<<fameexhibitionism 10 "pic">>
+<span class="red">등 뒤에서 카메라의 작은 찰칵 소리가 들린다</span>. 하지만 누구인지 확인하려고 돌아보기도 전에, 휘트니가 <<person1>><<his>> 두 손으로 당신의 머리를 붙잡아 제자리에 고정한다. <<He>>【은는】 당신의 귓가에 속삭인다. "착하지. <<person2>><<him>>에게 쇼를 보여 주자."<<fameexhibitionism 10 "pic">>
 <br><br>
 
 <<if $promiscuity gte 75>>
-	<<link [[Goad|Whitney Park Public Sex Goad]]>><<control 25>><</link>><<promiscuous4>><<ggcontrol>>
+	<<link [[부추긴다|Whitney Park Public Sex Goad]]>><<control 25>><</link>><<promiscuous4>><<ggcontrol>>
 	<br>
 <</if>>
-<<link [[Accept|Whitney Park Public Sex Accept]]>><<control 10>><</link>><<gcontrol>>
+<<link [[받아들인다|Whitney Park Public Sex Accept]]>><<control 10>><</link>><<gcontrol>>
 <br>
-<<link [[Ask to go somewhere else|Whitney Park Public Sex Hidden]]>><<set $phase to 2>><</link>>
+<<link [[다른 곳으로 가자고 한다|Whitney Park Public Sex Hidden]]>><<set $phase to 2>><</link>>
 
 :: Whitney Park Public Sex Goad
-You blush and nod your head, your body instinctively leaning in, silently inviting the <<person2>><<person>> taking pictures to join the embrace.
+당신은 얼굴을 붉히며 고개를 끄덕이고, 몸이 본능적으로 기울어 사진을 찍는 <<person2>><<person>>에게 포옹에 끼어들라고 말없이 청한다.
 <<if $speech_attitude is "meek">>
-	"I-I-I want you both," you stammer, your voice barely above a whisper, your cheeks flushing with embarrassment at your boldness.
+	"나, 나, 나 둘 다 원해." 당신이 더듬는다. 목소리는 속삭임보다 겨우 클 뿐이고, 자신의 대담함에 부끄러워 뺨이 달아오른다.
 <<elseif $speech_attiude is "bratty">>
-	"Come here!" you command, your tone dripping with confidence and entitlement.
+	"이리 와!" 당신이 명령한다. 어조에는 자신감과 당당한 권리 의식이 뚝뚝 묻어난다.
 <<else>>
-	"You can touch me too, if you want," you say shyly, offering an invitation with a soft smile.
+	"원하면 당신도 날 만져도 돼요." 당신이 수줍게 말하며, 부드러운 미소로 초대의 뜻을 내비친다.
 <</if>>
 <<promiscuity4>>
-The <<person>> seems hesitant.
+<<person>>【은는】 망설이는 듯하다.
 <br>
-"Didn't you hear <<pher>>? Get the fuck over here!" Whitney shouts with a smirk on <<person1>><<his>> face.
+"<<pher>> 말 못 들었어? 씨발, 얼른 이리 와!" 휘트니가 <<person1>><<his>> 얼굴에 비웃음을 띤 채 소리친다.
 <br><br>
-As you envelop Whitney in a hug, you adjust your stance to subtly make space for the <<person2>><<personsimple>>, a gesture that shows your welcoming nature. The <<person>> rushes over, a wide smile on <<his>> face.
-You feel the warmth of both their bodies pressing against yours. <<arousal 1000>><<ggarousal>>
+당신이 휘트니를 끌어안으면서 자세를 고쳐 <<person2>><<personsimple>>【을를】 위한 자리를 슬며시 마련하고, 그 몸짓이 당신의 환영하는 마음을 드러낸다. <<person>>【이가】 활짝 웃으며 서둘러 다가온다.
+두 사람의 몸에서 나오는 온기가 당신의 몸에 밀착되는 것이 느껴진다. <<arousal 1000>><<ggarousal>>
 <br><br>
 
-<<link [[Next|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 1>><</link>>
+<<link [[다음|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 1>><</link>>
 
 :: Whitney Park Public Sex Accept
 <<person1>>
-You blush and nod your head, surprised by the fact that <<he>> even allows you to hug <<him>>.
+당신은 얼굴을 붉히며 고개를 끄덕이고, <<he>>【이가】 당신이 안는 것을 허락해 준다는 사실에 놀란다.
 <br>
-You hug <<him>> close, feeling the warmth of <<his>> body against yours, and whisper in <<his>> ear,
+당신은 <<him>>【을를】 꼭 끌어안고 <<his>> 몸의 온기가 당신의 몸에 닿는 것을 느끼며, <<his>> 귓가에 속삭인다.
 <<if $speech_attitude is "meek">>
-	"O-O-Okay. I trust you."
+	"아, 아, 알았어. 널 믿어."
 <<elseif $speech_attiude is "bratty">>
-	Fine, whatever you say.
+	좋아, 네 맘대로 해.
 <<else>>
 	"알았어."
 <</if>>
 <br><br>
 
-Whitney gives your arm a tight squeeze before moving <<his>> mouth to your ear as <<he>> whispers, "Good <<girl>>."
+휘트니가 당신의 팔을 꽉 쥐었다가 입을 당신의 귀로 가져가며 속삭인다. "착한 <<girl>>【이】네."
 <br><br>
 
-<<link [[Next|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>>
+<<link [[다음|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 2>><<sub 1>><</link>>
 
 :: Whitney Park Public Sex Hidden
 <<person1>>
 <<set $outside to 1>>
 <<if $phase is 1>>
-	You glance around nervously, the sight of people walking around the park making you hesitant to go through with it right here in the open. You tell Whitney that you agree, but suggest finding a less exposed spot.
+	당신은 불안하게 주위를 둘러본다. 공원을 돌아다니는 사람들이 보이자 이렇게 탁 트인 곳에서 하는 것이 망설여진다. 당신은 휘트니에게 동의하지만 덜 드러난 곳을 찾자고 제안한다고 말한다.
 	<br><br>
-	Whitney takes a quick look around before flashing you a mischievous smile. "You really are a slut," <<he>> remarks, <<his>> tone teasing. "I should've known you'd come begging for it. Let's go, I know just the place."
+	휘트니는 재빨리 주위를 훑어본 뒤 당신에게 짓궂은 미소를 번뜩인다. "넌 정말 걸레야." <<he>>【이가】 놀리는 투로 말한다. "네가 달라고 빌러 올 줄 알았어야 했는데. 가자, 딱 좋은 데가 있어."
 	<br><br>
-	<<He>> grabs your arm and leads you down a less-maintained path of the park. The narrow path forces Whitney to walk in front of you, guiding you along. You notice scattered cigarette butts and beer bottles, evidence of <<his>> previous visits to this secluded spot.
+	<<He>>【은는】 당신의 팔을 붙잡고 공원에서 손길이 덜 닿는 길로 이끈다. 좁은 길 때문에 휘트니가 당신 앞에서 걸으며 길을 안내한다. 여기저기 흩어진 담배꽁초와 맥주병이 눈에 들어오는데, <<his>> 이 외진 곳을 전에도 찾았다는 증거다.
 	<br><br>
-	Suddenly, Whitney stops and pushes you into a bush, causing you to fall through and land in a small meadow you hadn't noticed before. As you catch your breath, you see <<him>> walk after you, planting <<his>> feet on both sides of your body. <<He>> smirks and says, "We're here," before pushing you fully down onto the grass.
+	갑자기 휘트니가 멈춰 서서 당신을 덤불 속으로 밀어 넣고, 당신은 덤불을 통과해 전에는 알아채지 못했던 작은 풀밭에 떨어진다. 숨을 고르는데 <<him>>【이가】 뒤따라 걸어와 당신 몸 양옆에 발을 딛는 것이 보인다. <<He>>【은는】 비웃으며 "다 왔어." 하고 말한 뒤 당신을 풀밭 위에 완전히 눕힌다.
 	<br><br>
 
 	<<if C.npc.Whitney.gender is "f">>
-		Whitney confidently straddles you, <<his>> weight pressing down on your hips as <<he>> leans in closer. <<His>> eyes darken with desire as <<he>> gazes down at you, <<his>> hands finding their way to your waist, holding you firmly in place. You feel a shiver run down your spine as <<his>> touch sends tingles of anticipation through your body.
+		휘트니가 자신만만하게 당신 위에 올라타고, <<he>>【이가】 몸을 더 가까이 기울이자 <<his>> 체중이 당신의 골반을 짓누른다. 당신을 내려다보는 <<His>> 눈이 욕망으로 어두워지고, <<his>> 손이 당신의 허리를 찾아 단단히 붙들어 고정한다. <<his>> 손길이 온몸에 기대감 어린 짜릿함을 퍼뜨리자 등줄기에 전율이 내달린다.
 	<<else>>
-		Whitney positions <<himself>> between your legs, <<his>> body hovering just above yours. You can feel the heat radiating from <<him>> as <<he>> leans in, <<his>> breath warm against your skin. <<His>> hands find support on the ground beside you, <<his>> gaze fixed on you.
+		휘트니가 당신의 다리 사이에 자리를 잡고, <<his>> 몸이 당신의 몸 바로 위에서 맴돈다. <<he>>【이가】 몸을 기울이자 <<him>>에게서 뿜어져 나오는 열기가 느껴지고, <<his>> 숨결이 피부에 따뜻하게 닿는다. <<His>> 두 손은 당신 옆 바닥을 짚어 몸을 지탱하고, <<his>> 시선은 당신에게 고정되어 있다.
 	<</if>>
 	<br><br>
-	<<He>> takes one last drag of <<his>> cigarette, then casually tosses it aside. After a moment, you feel <<his>> lips hovering just inches away from yours, teasingly close, as if <<he>>'s about to close the gap and kiss you.
+	<<He>>【은는】 담배를 마지막으로 한 모금 빤 뒤 무심하게 옆으로 던져 버린다. 잠시 뒤, 당신은 <<his>> 입술이 당신의 입술 바로 코앞에서 약 올리듯 맴도는 것을 느낀다. 금방이라도 거리를 좁혀 키스할 것만 같다.
 	<br><br>
 
-	<<link [[Kiss Whitney|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 1>><</link>>
+	<<link [[휘트니에게 키스한다|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 1>><</link>>
 	<br>
 	<<if $promiscuity gte 15>>
-		<<link [[Kiss Whitney excitedly|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 2>><</link>><<promiscuous2>>
+		<<link [[들뜬 채 휘트니에게 키스한다|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 2>><</link>><<promiscuous2>>
 		<br>
 	<</if>>
-	<<link [[Pull away|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 3>><<npcincr Whitney love -1>><</link>><<llove>>
+	<<link [[몸을 뺀다|Whitney Park Public Sex Hidden Kiss]]>><<set $phase to 3>><<npcincr Whitney love -1>><</link>><<llove>>
 <<else>>
 	<<if C.npc.Whitney.love gte 21>>
-		You shake your head in disagreement and hug Whitney close to you,
+		당신은 고개를 저어 거절하고 휘트니를 꼭 끌어안는다.
 		<<if $speech_attitude is "meek">>
-			"P-please, I don't want them to see me like this," you whisper into <<his>> warm skin.
+			"ㅈ-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 <<his>> 따뜻한 살결에 대고 속삭인다.
 		<<elseif $speech_attiude is "bratty">>
-			"He is looking at me weird," you murmur against <<his>> warm skin.
+			"저 새끼가 날 이상하게 쳐다봐." 당신이 <<his>> 따뜻한 살결에 대고 중얼거린다.
 		<<else>>
-			"I don't want to do this," you say against <<his>> warm skin.
+			"하기 싫어." 당신이 <<his>> 따뜻한 살결에 대고 말한다.
 		<</if>>
 		<br><br>
-		You feel <<his>> grip loosen around your waist before pushing you away. "Let's go then," <<he>> says, with a slightly worried expression on <<his>> face, grasping you by the arm. <<He>> walks to the creep that took your photo and kicks <<him>> hard in the shins before walking off with you in hand.<<takeHandholdingVirginity Whitney consensual>>
+		<<his>> 손아귀가 당신의 허리에서 느슨해지더니 당신을 떼어 놓는 것이 느껴진다. "그럼 가자." <<he>>【이가】 말한다. <<his>> 얼굴에 약간 걱정스러운 기색이 서려 있고, 당신의 팔을 붙잡는다. <<He>>【은는】 당신 사진을 찍은 변태에게 걸어가 정강이를 세게 걷어차고는, 당신의 손을 잡은 채 걸어 나간다.<<takeHandholdingVirginity Whitney consensual>>
 		<br><br>
-		<<He>> grabs your arm and leads you down a less-maintained path of the park. The narrow path forces Whitney to walk in front of you, guiding you along. You notice scattered cigarette butts and beer bottles, evidence of <<his>> previous visits to this secluded spot.
+		<<He>>【은는】 당신의 팔을 붙잡고 공원에서 손길이 덜 닿는 길로 이끈다. 좁은 길 때문에 휘트니가 당신 앞에서 걸으며 길을 안내한다. 여기저기 흩어진 담배꽁초와 맥주병이 눈에 들어오는데, <<his>> 이 외진 곳을 전에도 찾았다는 증거다.
 		<br><br>
-		Suddenly, Whitney stops and pushes you into a bush, causing you to fall through and land in a small meadow you hadn't noticed before. As you catch your breath, you see <<him>> walk after you, planting <<his>> feet on both sides of your body. <<He>> smirks and says, "We're here," before pushing you fully down onto the grass.
+		갑자기 휘트니가 멈춰 서서 당신을 덤불 속으로 밀어 넣고, 당신은 덤불을 통과해 전에는 알아채지 못했던 작은 풀밭에 떨어진다. 숨을 고르는데 <<him>>【이가】 뒤따라 걸어와 당신 몸 양옆에 발을 딛는 것이 보인다. <<He>>【은는】 비웃으며 "다 왔어." 하고 말한 뒤 당신을 풀밭 위에 완전히 눕힌다.
 		<br><br>
 
-		<<link [[Next|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 3>><</link>>
+		<<link [[다음|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 3>><</link>>
 	<<else>>
-		You shake your head in disagreement and firmly state,
+		당신은 고개를 저으며 단호하게 말한다.
 		<<if $speech_attitude is "meek">>
-			"P-please, I don't want them to see me like this,"  you whisper.
+			"ㅈ-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 속삭인다.
 		<<elseif $speech_attitude is "bratty">>
-			"He is looking at me weird," you murmur.
+			"저 새끼가 날 이상하게 쳐다봐." 당신이 중얼거린다.
 		<<else>>
-			"I don't want to do this," you say.
+			"하기 싫어." 당신이 말한다.
 		<</if>>
 		<br><br>
-		Whitney's expression twists into anger, and before you can react, <<he>> shoves you, causing you to hit your back against the grass, a sharp pang of pain shooting through you.<<violence 1>><<gpain>>
+		휘트니의 표정이 분노로 일그러지고, 당신이 반응하기도 전에 <<he>>【이가】 당신을 떠밀어 등이 풀밭에 부딪히며 날카로운 통증이 온몸을 훑는다.<<violence 1>><<gpain>>
 		<br><br>
-		Hovering over you, <<he>> holds your hands down, <<his>> voice laced with resentment as <<he>> declares, "You wanted this, so we're finishing this."
+		당신 위에 올라타 <<he>>【은는】 당신의 두 손을 눌러 고정하고, 원망이 서린 목소리로 선언한다. "네가 원한 거잖아, 그러니까 끝까지 가는 거야."
 		<br><br>
 
-		<<link [[Next|Whitney Park Public Sex Start]]>><<set $molestationstart to 1>><<set $phase to 4>><</link>>
+		<<link [[다음|Whitney Park Public Sex Start]]>><<set $molestationstart to 1>><<set $phase to 4>><</link>>
 	<</if>>
 <</if>>
 
 :: Whitney Park Public Sex Refuse
 <<if C.npc.Whitney.love gte 21>>
-	You glance around briefly, before turning back to Whitney. "Actually, I changed my mind."
+	당신은 잠깐 주위를 둘러보다가 다시 휘트니를 돌아본다. "사실 마음이 바뀌었어."
 	<br><br>
-	Whitney shoots you an annoyed look. "Fine, whatever, slut. Next time don't waste my time," <<he>> mutters, flicking <<his>> cigarette away.
+	휘트니가 짜증 섞인 눈길을 쏜다. "그래, 됐어, 걸레야. 다음엔 내 시간 낭비하지 마." <<he>>【이가】 중얼거리며 담배를 튕겨 버린다.
 	<br>
-	<<He>> gets up and walks off without another word, leaving you to wonder why <<he>> didn't push harder. <<His>> lack of force leaves you feeling a bit puzzled, but you shake it off and move on.<<npcincr Whitney love -1>><<llove>>
+	<<He>>【은는】 일어나 한마디도 없이 걸어가 버리고, 당신은 <<he>>【이가】 왜 더 밀어붙이지 않았는지 의아해한다. <<His>> 힘을 쓰지 않은 것이 조금 어리둥절하지만, 당신은 털어 내고 하던 일로 돌아간다.<<npcincr Whitney love -1>><<llove>>
 	<br><br>
-	As <<he>> disappears from view, you can't help but feel a rush of excitement mixed with the tension that still lingers. It's like a rollercoaster of emotions, leaving you a bit breathless but also kind of happy with how things turned out.<<arousal 600>><<npcincr Whitney lust 3>><<garousal>><<glust "Whitney">>
+	<<he>>【이가】 시야에서 사라지자, 아직 남아 있는 긴장에 뒤섞인 흥분이 밀려드는 것을 어쩔 수 없다. 감정의 롤러코스터를 탄 듯 숨이 조금 가쁘지만, 일이 이렇게 풀려서 어쩐지 기분도 좋다.<<arousal 600>><<npcincr Whitney lust 3>><<garousal>><<glust "Whitney">>
 	<br><br>
 	<<whitneyexit>>
 <<else>>
-	You shake your head, a hint of defiance in your eyes.
+	당신은 고개를 젓는다. 눈에는 반항기가 어려 있다.
 	<<if $speech_attitude is "meek">>
-		"Um…... I'm sorry... I can't do this."
+		"음...... 미안해... 못 하겠어."
 	<<elseif $speech_attitude is "bratty">>
-		"Nevermind, I don't want to do this."
+		"관둬, 하기 싫어졌어."
 	<<else>>
-		"I changed my mind. I don't want this."
+		"마음이 바뀌었어. 이건 싫어."
 	<</if>>
 	<br><br>
 
-	Whitney's face twists into a scowl, <<his>> frustration is evident as <<he>> brushes off your words.<<llove>><<npcincr Whitney love -1>>
+	휘트니의 얼굴이 찡그려지고, <<he>>【이가】 당신의 말을 무시해 버리는 데서 짜증이 역력히 드러난다.<<llove>><<npcincr Whitney love -1>>
 	<br>
-	With a sudden shove, you're knocked off balance, tumbling onto the grass with a painful thud. As you wince from the impact, a sharp pang shoots through your body.<<violence 1>><<gpain>>
+	갑작스러운 떠밀림에 균형을 잃은 당신은 풀밭에 쿵 하고 아프게 나뒹군다. 충격에 얼굴을 찡그리는 사이, 날카로운 통증이 온몸을 훑는다.<<violence 1>><<gpain>>
 	<br><br>
-	Whitney hovers above you, keeping your hands pinned down with a firm grip, before tying a piece of rope around them. <<He>> looks down with a sneer and says, "You asked for this, remember?" <<His>> words feel weighty, reminding you who is in charge.<<gstress>><<gdom Whitney>><<stress 6>><<npcincr Whitney dom 2>>
+	휘트니가 당신 위에서 두 손을 단단히 눌러 고정한 채, 그 위로 밧줄 한 가닥을 묶는다. <<He>>【은는】 비웃으며 내려다보고 말한다. "네가 해 달라고 한 거야, 기억하지?" <<His>> 말이 묵직하게 와닿으며, 누가 주도권을 쥐고 있는지 일깨워 준다.<<gstress>><<gdom Whitney>><<stress 6>><<npcincr Whitney dom 2>>
 	<br><br>
-	<<link [[Next|Whitney Park Public Sex Start]]>><<set $molestationstart to 1>><<set $phase to 5>><</link>>
+	<<link [[다음|Whitney Park Public Sex Start]]>><<set $molestationstart to 1>><<set $phase to 5>><</link>>
 <</if>>
 
 :: Whitney Park Public Sex Hidden Kiss
 <<if $phase is 1>>
-	You close your eyes and lean towards <<him>>, and suddenly, Whitney's kissing you. <<He>> grabs your hair, giving it a tug that makes you gasp a bit. Before you can even process it, <<hes>> diving in with <<his>> tongue, exploring your mouth with a low groan. Then <<he>> pulls back, lightly biting your lip, leaving you kind of breathless and definitely wanting more.<<violence 1>><<if $masochism_level gte 1>><<arousal 800>><<else>><<arousal 600>><</if>><<npcincr Whitney dom 1>><<gpain>><<garousal>><<gdom>>
+	당신은 눈을 감고 <<him>> 쪽으로 몸을 기울이고, 어느새 휘트니가 당신에게 키스하고 있다. <<He>>【은는】 당신의 머리카락을 움켜쥐고 잡아당겨 당신을 살짝 헉 하게 만든다. 미처 받아들이기도 전에 <<hes>> 혀를 밀어 넣어 낮은 신음과 함께 당신의 입안을 탐한다. 그러더니 <<he>>【은는】 몸을 빼며 당신의 입술을 가볍게 깨물고, 당신은 숨이 약간 차올라 더 원하게 된다.<<violence 1>><<if $masochism_level gte 1>><<arousal 800>><<else>><<arousal 600>><</if>><<npcincr Whitney dom 1>><<gpain>><<garousal>><<gdom>>
 <<elseif $phase is 2>>
-	You close your eyes and lean in towards Whitney. <<He>> grabs your hair, giving it a playful tug that sends a shiver down your spine.<<violence 1>><<gpain>><<if $masochism_level gte 1>><<arousal 200>><<garousal>><</if>>
+	당신은 눈을 감고 휘트니 쪽으로 몸을 기울인다. <<He>>【은는】 당신의 머리카락을 움켜쥐고 장난스럽게 잡아당기고, 그 느낌이 등줄기를 따라 전율을 보낸다.<<violence 1>><<gpain>><<if $masochism_level gte 1>><<arousal 200>><<garousal>><</if>>
 	<br><br>
-	"A desperate little kitten, aren't we?" <<he>> teases, earning a soft moan from you. Without hesitation, <<he>> dives in with <<his>> tongue, and you eagerly respond, matching <<his>> enthusiasm. <<His>> mouth tastes like cigarettes and alcohol, with a hint of sweetness you can't quite place.
+	"필사적인 작은 새끼 고양이네, 안 그래?" <<he>>【이가】 놀린다. 당신에게서 부드러운 신음이 새어 나온다. 망설임 없이 <<he>>【은는】 혀를 밀어 넣고, 당신도 <<his>> 열기에 맞춰 열심히 응한다. <<His>> 입에서는 담배와 술 맛이 나고, 정체를 알 수 없는 달콤함이 희미하게 섞여 있다.
 	<br><br>
-	Your tongues dance together, fighting for dominance, but you're happy to let <<him>> take the lead. Whitney explores your mouth thoroughly, leaving you breathless and a bit dizzy.
+	두 혀가 우위를 다투며 얽히지만, 당신은 기꺼이 <<him>>에게 주도권을 내준다. 휘트니가 당신의 입안을 구석구석 탐해 당신은 숨이 차고 약간 어지럽다.
 	<br><br>
-	<<He>> pulls back, lightly biting your lip. You let out one last moan before <<his>> lips leave yours. Now you're buzzing with excitement, craving more of <<his>> touch.<<violence 2>><<gpain>><<if $masochism_level gte 1>><<arousal 400>><<else>><<arousal 300>><</if>><<garousal>><<npcincr Whitney dom 2>><<gdom>>
+	<<He>>【은는】 몸을 빼며 당신의 입술을 가볍게 깨문다. <<his>> 입술이 당신의 입술에서 떨어지기 전에 당신은 마지막 신음을 흘린다. 이제 당신은 흥분으로 몸이 웅웅 울리고, <<his>> 손길을 더 갈망한다.<<violence 2>><<gpain>><<if $masochism_level gte 1>><<arousal 400>><<else>><<arousal 300>><</if>><<garousal>><<npcincr Whitney dom 2>><<gdom>>
 <<else>>
-	You jerk back as Whitney leans in, but <<he>> quickly grabs your hair, pulling you closer. Before you can say anything, <<he>> starts nipping and biting at your neck, leaving marks behind.<<if $mashochism_level gte 1>> The mix of pain and pleasure makes you shiver, feeling a rush of sensations that leave you a bit dizzy.<<arousal 800>><<garousal>><</if>><<violence 2>><<gpain>>
+	휘트니가 몸을 기울이자 당신은 움찔 물러서지만, <<he>>【은는】 재빨리 당신의 머리카락을 움켜쥐고 더 가까이 끌어당긴다. 당신이 무슨 말을 하기도 전에 <<he>>【은는】 당신의 목을 잘근잘근 깨물기 시작하며 자국을 남긴다.<<if $mashochism_level gte 1>> 고통과 쾌감이 뒤섞여 몸이 떨리고, 밀려드는 감각에 조금 어지럽다.<<arousal 800>><<garousal>><</if>><<violence 2>><<gpain>>
 <</if>>
 <br><br>
-You feel yourself getting
+당신은 자신이
 <<if $player.penisExist and $player.vaginaExist>>
-	harder and wetter.
+	점점 단단해지고 젖어 가는 것을 느낀다.
 <<elseif $player.penisExist>>
-	harder.
+	점점 단단해지는 것을 느낀다.
 <<elseif $player.vaginaExist>>
-	wetter.
+	점점 젖어 가는 것을 느낀다.
 <</if>>
-Whitney's weight on you makes it hard to get comfortable on the hard ground, but <<he>> doesn't let you move an inch. Instead, <<he>> grinds against you, amused by the reactions you give <<him>>. "Well," <<he>> says, "let's see how slutty you truly are."
+휘트니의 무게가 당신을 짓눌러 딱딱한 땅 위에서 편한 자세를 잡기 어렵지만, <<he>>【은는】 당신이 한 치도 움직이지 못하게 한다. 대신 <<he>>【은는】 당신에게 몸을 비비며, 당신이 보이는 반응을 재미있어한다. "어디 보자." <<he>>【이가】 말한다. "네가 진짜 얼마나 걸레인지 한번 보자고."
 <br><br>
-<<link [[Next|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 6>><</link>>
+<<link [[다음|Whitney Park Public Sex Start]]>><<set $sexstart to 1>><<set $phase to 6>><</link>>
 
 :: Whitney Park Public Sex Start
 <<if $sexstart is 1 or $molestationstart is 1>>
@@ -10588,9 +10588,9 @@ Whitney's weight on you makes it hard to get comfortable on the hard ground, but
 <<actionsman>>
 
 <<if _combatend>>
-    <span id="next"><<link [[Next|Whitney Park Public Sex Finish]]>><</link>></span><<nexttext>>
+    <span id="next"><<link [[다음|Whitney Park Public Sex Finish]]>><</link>></span><<nexttext>>
 <<else>>
-    <span id="next"><<link [[Next|Whitney Park Public Sex Start]]>><</link>></span><<nexttext>>
+    <span id="next"><<link [[다음|Whitney Park Public Sex Start]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Whitney Park Public Sex Finish
@@ -10607,14 +10607,14 @@ Whitney's weight on you makes it hard to get comfortable on the hard ground, but
 
 	<<unbindtemp>>
 	<<person1>>
-	Whitney unties the rope from your hands.
+	휘트니가 당신의 손에 묶인 밧줄을 푼다.
 	<br>
 	<<if $consensual is 1>> /* Consensual finish dialogue */
-		<<tearful>> <<he>> helps you up from the ground.
+		<<tearful>> <<he>>【이가】 당신을 땅에서 일으켜 세워 준다.
 		<br>
-		"Good job, slut. That was nice. Come find me if you want to do that again."
+		"잘했어, 걸레야. 좋았어. 또 하고 싶으면 찾아와."
 	<<else>> /* Non-consensual finish dialogue */
-		"That was nice, wasn't it? Next time don't come to me if you're not willing to go through with it."<<npcincr Whitney dom 1>><<npcincr Whitney love -1>><<gdom>><<llove>>
+		"좋았지? 다음엔 끝까지 갈 마음이 없으면 나한테 오지 마."<<npcincr Whitney dom 1>><<npcincr Whitney love -1>><<gdom>><<llove>>
 	<</if>>
 	<<llust>>
 	<br><br>
@@ -10630,7 +10630,7 @@ Whitney's weight on you makes it hard to get comfortable on the hard ground, but
 		<br><br>
 		<<link [[다음 (0:20)|Whitney Park Sex Exposed]]>><</link>>
 	<<else>>
-		After resting for a few minutes, you gather yourself and return to the park.
+		몇 분 쉬고 나서 당신은 몸을 추스르고 공원으로 돌아간다.
 		<br><br>
 		<<whitneyexit>>
 	<</if>>
@@ -10666,115 +10666,115 @@ Whitney's weight on you makes it hard to get comfortable on the hard ground, but
 <<set $location to "park">>
 <<set _neckName to $worn.neck.name>>
 
-<<He>> looks at you and lets out a laugh, "Of course I can slut, now come here and turn around."
+<<He>>【은는】 당신을 보며 웃음을 터뜨린다. "당연히 해 줄 수 있지, 걸레야. 자, 이리 와서 돌아서 봐."
 <br><br>
-You walk over and spin around in front of <<him>>.
+당신은 걸어가 <<him>> 앞에서 빙글 돈다.
 <<if $hairlength gte 200>>
-	You move your hair out of the way so <<he>> can put on your new collar.
+	당신은 <<he>>【이가】 새 목걸이를 채울 수 있도록 머리카락을 치운다.
 <<else>>
-	You shift your weight from foot to foot waiting on your new collar.
+	당신은 새 목걸이를 기다리며 발을 번갈아 디딘다.
 <</if>>
-You can hear Whitney grabbing something from <<his>> bag before you feel <<his>> warm hands on your back.
+휘트니가 가방에서 무언가를 꺼내는 소리가 들리고, 이어서 당신의 등에 <<his>> 따뜻한 손이 닿는 것이 느껴진다.
 
 <<if $worn.neck.name is "naked">>
-	"Where did your last one go? These are expensive, you slut."
+	"전에 하던 건 어디 갔어? 이거 비싼 거야, 이 걸레야."
 <<elseif $worn.neck.name is "collar" or $worn.neck.name is "collar with leash">>
-	<<He>> gives a sharp pull on your collar, "Who gave this to you?!"
+	<<He>>【은는】 당신의 목걸이를 홱 잡아당긴다. "누가 이걸 줬어?!"
 <<elseif $worn.neck.name.includes("free use collar")>>
-	<<He>> tugs your $worn.neck.name. "'Free use'? We all know you are my slut."
+	<<He>>【은는】 당신의 $worn.neck.name【을를】 잡아당긴다. "'마음대로 써'? 네가 내 걸레라는 건 다들 알아."
 <<elseif $worn.neck.name.includes("leather collar")>>
-	<<He>> smirks, "If you want a collar just come to me next time, slut."
+	<<He>>【은는】 비웃는다. "목걸이가 갖고 싶으면 다음엔 그냥 나한테 와, 걸레야."
 <<elseif $worn.neck.name.includes("spiked collar")>>
-	"Feisty little dog, huh? Don't worry, I'll sort that out real quick."
+	"성질 사나운 강아지네, 엉? 걱정 마, 금방 길들여 줄 테니까."
 <<elseif $worn.neck.name is "ringed collar">>
-	"Surprised you don't have a leash attached, slut."
+	"리드가 안 달려 있다니 의외네, 걸레야."
 <<elseif $worn.neck.name is "heart choker">>
-	"How cute, but let's give you something better."
+	"귀엽네, 근데 더 좋은 걸 채워 주지."
 <<elseif $worn.neck.name is "cow bell">>
-	"Don't worry, I'll be the one milking you."
+	"걱정 마, 널 짜 주는 건 내가 할 테니까."
 <<elseif $worn.neck.name is "bunny choker">>
-	"Bunny choker... mmh. Wanna mate like rabbits?"
+	"토끼 초커라... 음. 토끼처럼 짝짓기할래?"
 <<elseif $worn.neck.name is "gold choker">>
-	"Has someone been spoiling you? That better mean you will act like a 5-star slut."
+	"누가 널 오냐오냐해 줬어? 그럼 별 다섯 개짜리 걸레답게 굴어야지."
 <<elseif $worn.neck.name is "love locket">>
-	"It better be a picture of your master in there."
+	"그 안에 있는 건 네 주인 사진이어야 할 거야."
 <<elseif $worn.neck.name is "cat bell collar">>
-	"Don't worry, I'll make you purr all you want."
+	"걱정 마, 원하는 만큼 가르랑거리게 해 줄게."
 <<else>>
-	"Let's get this off you first," <<He>> says.
+	"우선 이것부터 벗기자." <<He>>【이가】 말한다.
 <</if>>
 
 <br><br>
 
 <<if ["free use collar","free use collar with leash","collar","collar with leash"].includes($worn.neck.name)>>
-	"Alright, let's see what I can do with this." You hear the jingle of keys as Whitney fishes something out of <<his>> bag. "I think I have just the thing."
+	"좋아, 이걸로 뭘 할 수 있나 보자." 휘트니가 가방에서 무언가를 뒤져 꺼내자 열쇠가 짤랑거리는 소리가 들린다. "딱 맞는 게 있을 것 같은데."
 	<br><br>
-	His warm hands reach for your $worn.neck.name, pulling it towards <<him>> and making you choke slightly from the pressure on your neck.
+	<<His>> 따뜻한 손이 당신의 $worn.neck.name【을를】 잡아 <<him>> 쪽으로 끌어당기자 목이 눌려 살짝 숨이 막힌다.
 	<br><br>
-	After a few seconds, you hear the sound of a lock clicking open and it falls to the ground along with the collar. "There you go, slut."
-	His hands travel up and down your neck, rubbing the marks left by the $worn.neck.name.
+	몇 초 뒤, 자물쇠가 찰칵 열리는 소리가 들리고 그것이 목걸이와 함께 땅에 떨어진다. "됐다, 걸레야."
+	<<His>> 손이 당신의 목을 위아래로 오가며 $worn.neck.name【이가】 남긴 자국을 문지른다.
 	<br><br>
-	"Now, kneel for me." The hairs on your body stand upright the moment Whitney speaks.
+	"이제 꿇어앉아 봐." 휘트니가 입을 여는 순간 온몸의 털이 곤두선다.
 	<<set $worn.neck.type.push("broken")>><<neckruined true>><<set $worn.neck.collaredpolice to 0>>
 	<br>
-	<<link [[Kneel down|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
-	<<link [[Run away|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
+	<<link [[무릎을 꿇는다|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
+	<<link [[도망친다|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
 
 <<elseif $worn.neck.name is "naked">>
-	<<He>> rubs your neck, leaving lingering touches everywhere. Moving closer, <<he>> licks the back of your neck slowly before biting down.
-	"<span class='lewd'>Now, kneel for me, pet.</span>"<<garousal>><<arousal 600>>
-	The hairs on your body stand upright the moment Whitney speaks.
+	<<He>>【은는】 당신의 목을 문지르며 곳곳에 길게 손길을 남긴다. 더 가까이 다가와, <<he>>【은는】 당신의 뒷목을 천천히 핥은 뒤 깨문다.
+	"<span class='lewd'>이제 내 앞에 꿇어앉아, 애완동물아.</span>"<<garousal>><<arousal 600>>
+	휘트니가 입을 여는 순간 온몸의 털이 곤두선다.
 	<br><br>
 	<<set $worn.neck.type.push("broken")>><<neckruined true>><<set $worn.neck.collaredpolice to 0>>
 	<br>
-	<<link [[Kneel down|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
-	<<link [[Run away|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
+	<<link [[무릎을 꿇는다|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
+	<<link [[도망친다|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
 
 <<elseif $worn.neck.name is "familiar collar">>
 	<<if $whitneyFamiliarCollarKnown is 1>>
-		But <<he>> grimaces when <<he>> recognizes the collar. "Wait... Is this a fucking joke to you? I'm not touching that shit!"
+		하지만 <<he>>【은는】 목걸이를 알아보고 얼굴을 찌푸린다. "잠깐... 지금 씨발 장난하냐? 그딴 건 안 만져!"
 		<<npcincr Whitney love -5>><<lllove>>
 	<<else>>
-		<<He>> touches your $worn.neck.name but immediately lets go with a pained yelp as <<his>> hand shoots back.
-		"Ow! What the fuck? Who gave you this shit? Forget it, I'm not touching that!"
+		<<He>>【은는】 당신의 $worn.neck.name【을를】 만지지만, <<his>> 손이 튕겨 나가자 아파서 비명을 지르며 곧바로 손을 뗀다.
+		"아야! 씨발 뭐야? 누가 너한테 이딴 걸 줬어? 됐어, 그건 안 만져!"
 	<</if>>
 	<br><br>
-	<<link [[Next|Whitney Collar Replace Kneel 3 Dolp]]>><</link>>
+	<<link [[다음|Whitney Collar Replace Kneel 3 Dolp]]>><</link>>
 
 <<else>>
-	"Let's take this off first." Whitney removes your $worn.neck.name with surprising care and places it in <<his>> bag. "I'm also keeping this as payment."
+	"우선 이것부터 벗기자." 휘트니가 놀랄 만큼 조심스럽게 당신의 $worn.neck.name【을를】 벗겨 가방에 넣는다. "이건 수고비로 내가 챙길 거야."
 	<br><br>
-	<<He>> rubs your neck, leaving lingering touches everywhere. Moving closer, <<he>> licks the back of your neck slowly before biting down.
-	"<span class='lewd'>Now, kneel for me, pet.</span>"<<garousal>><<arousal 600>>
-	The hairs on your body stand upright the moment Whitney speaks.
+	<<He>>【은는】 당신의 목을 문지르며 곳곳에 길게 손길을 남긴다. 더 가까이 다가와, <<he>>【은는】 당신의 뒷목을 천천히 핥은 뒤 깨문다.
+	"<span class='lewd'>이제 내 앞에 꿇어앉아, 애완동물아.</span>"<<garousal>><<arousal 600>>
+	휘트니가 입을 여는 순간 온몸의 털이 곤두선다.
 	<br><br>
 	<<set $worn.neck.type.push("broken")>><<neckruined true>><<set $worn.neck.collaredpolice to 0>>
-	<<link [[Kneel down|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
-	<<link [[Run away|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
+	<<link [[무릎을 꿇는다|Whitney Collar Replace Kneel Dolp]]>><</link>><br>
+	<<link [[도망친다|Whitney Collar Replace Run Dolp]]>><</link>><<athleticsdifficulty 650>>
 <</if>>
 
 :: Whitney Collar Replace Kneel Dolp
 <<effects>><<set $location to "park">>
-You lower yourself and get on your knees <<if $weather is "rain">>on the wet ground<<else>>in the snow<</if>> before Whitney. <<He>> pushes your head down to look at the ground.
+당신은 몸을 낮춰 휘트니 앞에서 <<if $weather is "rain">>젖은 땅 위에<<else>>눈 속에<</if>> 무릎을 꿇는다. <<He>>【은는】 당신의 머리를 눌러 땅을 보게 한다.
 <br><br>
-"Good <<girl>>," <<he>> says while trailing <<his>> fingers scratching your neck slightly.
+"착한 <<girl>>【이】네." <<he>>【이가】 말하며 <<his>> 손가락으로 당신의 목을 살살 긁는다.
 <br><br>
-"You will be a good pet, right? And do what your master asks you, right? I mean, of course you would, otherwise, you wouldn't be here on your knees in front of me, right, pet?"
+"착한 애완동물이 될 거지? 주인이 시키는 대로 할 거지? 하긴 당연히 그러겠지, 안 그랬으면 내 앞에서 무릎 꿇고 있지도 않을 테니까, 안 그래, 애완동물?"
 <br><br>
-You feel your <<genitals>> pulse with each word <<he>> says, a blush creeping up more with every single word.
+<<he>>【이가】 한마디 할 때마다 당신의 <<genitals>>【이가】 욱신거리고, 한마디 한마디마다 얼굴이 더 붉어진다.
 <br><br>
-"<span class='lewd'>Let's give you what you want. You've been a good pet, after all.</span>"<<garousal>><<arousal 600>>
+"<span class='lewd'>네가 원하는 걸 줄게. 넌 착한 애완동물이었으니까.</span>"<<garousal>><<arousal 600>>
 <br>
-<<link [[Next|Whitney Collar Replace Kneel 2 Dolp]]>><</link>>
+<<link [[다음|Whitney Collar Replace Kneel 2 Dolp]]>><</link>>
 
 :: Whitney Collar Replace Kneel 2 Dolp
 <<effects>><<set $location to "park">>
-	You close your eyes as you feel the heavy leather of a collar on your throat, pulled tightly against your skin. The sound of a lock clicking shut makes you open your eyes and sigh.
+	당신은 눈을 감고 목에 묵직한 가죽 목걸이가 살갗에 바싹 당겨지는 것을 느낀다. 자물쇠가 찰칵 잠기는 소리에 당신은 눈을 뜨고 한숨을 쉰다.
 	<br><br>
-	"Now don't lose this one, I will punish you next time." You stand back up and brush the <<print Weather.precipitation>> off you.
+	"이번엔 잃어버리지 마. 다음엔 벌줄 거야." 당신은 다시 일어나 몸에 묻은 <<print window.KR.getWeatherKr(Weather.precipitation)>>【을를】 털어 낸다.
 	<br><br>
 	<<neckwear "Whitney's collar">>
-	<<link [[Next|Whitney Collar Replace Kneel 3 Dolp]]>><</link>>
+	<<link [[다음|Whitney Collar Replace Kneel 3 Dolp]]>><</link>>
 
 :: Whitney Collar Replace Kneel 3 Dolp
 <<effects>><<set $location to "park">>
@@ -10782,31 +10782,31 @@ You feel your <<genitals>> pulse with each word <<he>> says, a blush creeping up
 
 :: Whitney Collar Replace Run Dolp
 <<effects>><<set $location to "park">>
-Before Whitney can say anything else you pull away hard from <<his>> hand on your neck.
+휘트니가 무슨 말을 더 하기도 전에, 당신은 목을 잡은 <<his>> 손에서 세차게 몸을 뺀다.
 <<if $athleticsSuccess>>
-	<<He>> lets go from your sudden movement and you start running.
+	<<He>>【은는】 당신의 갑작스러운 움직임에 손을 놓고, 당신은 달리기 시작한다.
 	<br><br>
-	You look behind you and Whitney is standing there with a grin on <<his>> face. <<He>> yells after you, "Don't worry slut, I will destroy you."
+	뒤를 돌아보니 휘트니가 <<his>> 얼굴에 능글맞은 웃음을 띤 채 서 있다. <<He>>【은는】 당신의 뒤에 대고 소리친다. "걱정 마, 걸레야, 널 박살 내 줄 테니까."
 	<br><br>
-	You see <<him>> pick up <<his>> bag and vanish from your sight.
+	<<him>>【이가】 가방을 집어 들고 시야에서 사라지는 것이 보인다.
 	<br><br>
 	<<whitneyexit>>
 <<else>>
-	<<He>> grips you harder. "What do you think you are doing, slut?" <<His>> grip gets even stronger. "Do you think you can leave, mmh?"
+	<<He>>【은는】 당신을 더 세게 움켜쥔다. "뭐 하는 짓이야, 걸레야?" <<His>> 손아귀 힘이 더욱 세진다. "네가 갈 수 있을 것 같아, 응?"
 	<br><br>
-	"What"
+	"이"
 	<br>
 	"A"
 	<br>
-	"Bad"
+	"못된"
 	<br>
 	<<set _text_output to "girl">>
 		"<<capitalise>>"
 	<br><br>
-	<<He>> kicks your legs from under you, making you fall to the ground with a thud. <<He>> kneels next to you, grabs a handful of your hair, and pulls it so you look <<him>> in the eyes. "Not so tough now, are you?"
-	<<He>> lets go and puts one of <<his>> knees on your back, forcing you onto your hands and knees.
+	<<He>>【은는】 당신의 다리를 걷어차 당신이 쿵 하고 바닥에 쓰러지게 한다. <<He>>【은는】 당신 옆에 무릎을 꿇고 머리카락을 한 움큼 움켜쥐어, 당신이 <<him>>의 눈을 똑바로 보게끔 잡아당긴다. "이젠 별로 안 세 보이네, 안 그래?"
+	<<He>>【은는】 손을 놓고 무릎 하나를 당신의 등에 올려, 당신을 억지로 엎드려 네 발로 기게 만든다.
 	<br><br>
-	You close your eyes as you feel the heavy leather of a collar on your throat, pulled tightly against your skin. A lock clicks in place and Whitney gives it a sharp tug, forcing you to stand back up. "Be good now." <<He>> gives you a slap on the ass.
+	당신은 눈을 감고 목에 묵직한 가죽 목걸이가 살갗에 바싹 당겨지는 것을 느낀다. 자물쇠가 찰칵 걸리고, 휘트니가 그것을 홱 잡아당겨 당신을 억지로 다시 일으켜 세운다. "이제 착하게 굴어." <<He>>【은는】 당신의 엉덩이를 찰싹 때린다.
 	<br><br>
 	<<neckwear "Whitney's collar">>
 	<<whitneyoptions>>

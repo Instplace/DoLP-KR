@@ -67,9 +67,9 @@
 		<</if>>
 		<br>
 		<<if $money gte _price>>
-			<<spaicon "massage">><<link [[Whitening salon (<<printmoney _price>> 1:00)|Spa Whitening]]>><<money `-_price` "spa">><</link>><<lstress>><<note "- - - Tan" "green">>
+			<<spaicon "massage">><<link [[미백 살롱 (<<printmoney _price>> 1:00)|Spa Whitening]]>><<money `-_price` "spa">><</link>><<lstress>><<note "- - - 태닝" "green">>
 		<<else>>
-			<<spaicon "massage">><span class="blue">You cannot afford to use the tanning salon right now.</span>
+			<<spaicon "massage">><span class="blue">지금은 미백 살롱을 이용할 돈이 없다.</span>
 		<</if>>
 		<br>
 	<</if>>
@@ -108,23 +108,23 @@
 <<person1>><<person>>【은는】 킁킁거리지만, 불평 없이 당신의 돈을 받는다.
 <<endevent>>
 <br><br>
-You enter a small room dominated by a bed. There's a large window, but it's already covered by a curtain.
+침대가 놓인 작은 방으로 들어간다. 큰 창문이 있지만, 이미 커튼으로 가려져 있다.
 <br><br>
 
-Once you've gotten comfortable on the table, an attendant enters, carrying a shallow wooden bowl filled with a creamy, grainy mixture that smells faintly of rice and milk.
+테이블 위에서 편안히 자리를 잡자, 직원 한 명이 들어온다. 직원은 쌀과 우유의 냄새가 은은하게 나는, 크림 같고 알갱이가 씹히는 혼합물이 담긴 얕은 나무 그릇을 들고 있다.
 <br><br>
 
-They begin to work the scrub into your skin with firm, methodical strokes, starting from your shoulders and moving down your arms, back, and legs. The texture is coarse but not unpleasant, and the warmth of their hands combined with the soft abrasiveness makes you feel like the dullness of your skin is being polished away.
+직원은 어깨에서 시작해 팔, 등, 다리로 내려가며, 단단하고 규칙적인 손놀림으로 스크럽을 당신의 피부에 문지르기 시작한다. 질감은 거칠지만 불쾌하지 않고, 손의 온기와 부드러운 마찰이 어우러져 피부의 칙칙함이 닦여 나가는 기분이 든다.
 <br><br>
 
-Grains of rice powder and bits of crushed fruit gently slough off layers of dead, tanned skin. A cooling sensation follows wherever they massage, leaving you feeling lighter and cleaner by the minute.
+쌀가루 알갱이와 으깬 과일 조각이 햇볕에 그을린 죽은 피부층을 부드럽게 벗겨 낸다. 문지르는 곳마다 시원한 감각이 뒤따라, 시간이 갈수록 몸이 가볍고 깨끗해지는 기분이다.
 <br><br>
 
-By the time they finish, your entire body feels silky smooth and a shade lighter. Your natural skin tone peeks through once more, glowing with a healthy brightness.
+직원이 끝낼 즈음에는 온몸이 비단처럼 매끄럽고 한 톤 밝아져 있다. 타고난 피부색이 다시 드러나며, 건강한 밝기로 빛난다.
 <br><br>
 <<run Skin.applyTanningLoss(5760)>>
 
-<<link [[Leave|Spa]]>><<pass 60>><</link>>
+<<link [[떠난다|Spa]]>><<pass 60>><</link>>
 
 :: Spa Tan Underwear
 <<effects>>

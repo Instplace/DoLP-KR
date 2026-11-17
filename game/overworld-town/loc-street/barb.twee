@@ -64,11 +64,11 @@
 <<if $stress gte $stressmax and !$possessed>>
 	<<passoutstreet>>
 <<elseif $town_projects.bridge is 1 || ($historytrait gte 1 && ($town_projects.bridge lt 2 || $town_projects.bridge is undefined))>>
-	You notice the remains of a bridge that once spanned the canal.
+	한때 운하를 가로질렀던 다리의 잔해가 눈에 들어온다.
 	<<if $town_projects.bridge is 1>>
-		You saw the same ruin in your hookah dream. It must have been removed after the canal was drained.
+		물담배 꿈에서 봤던 바로 그 폐허다. 운하의 물이 빠진 후에 철거된 것이 틀림없다.
 	<<else>>
-		You remember reading that it was removed after the canal was drained.
+		운하의 물이 빠진 뒤에 철거되었다는 글을 읽은 기억이 난다.
 	<</if>>
 	<<set $town_projects.bridge to 2>>
 	<br><br>

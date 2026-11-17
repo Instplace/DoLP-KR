@@ -1,28 +1,28 @@
 :: Downgrade Waiting Room
-Welcome back to Degrees of Lewdity Plus <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>.
+Degrees of Lewdity Plus <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>에 다시 오신 것을 환영합니다.
 <br><br>
 <<- $saveVersions.last()>>에서 더 오래된 게임 버전으로 되돌아왔습니다. 의도하신 작업이 맞는지 확인하고자 합니다.
 <br><br>
-<<link [[Confirm|$passagePrev]]>><<doVersionCheck>><</link>>
+<<link [[확인|$passagePrev]]>><<doVersionCheck>><</link>>
 <br>
 <span class="red">문제가 생기는 것을 피하려면 최신 버전으로 돌아가십시오.</span>
 
 :: Modded Waiting Room
 
-Welcome back to Degrees of Lewdity <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>.
+Degrees of Lewdity <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>에 다시 오신 것을 환영합니다.
 <br><br>
-You have switched from a modded version of the game, from <<- $saveVersions.last()>> back to Vanilla. <span class="red">This is dangerous, ''DO NOT'' report bugs to the Vanilla Developer Team.</span>.
+모드 버전 <<- $saveVersions.last()>>에서 기본 게임으로 되돌아왔습니다. <span class="red">이는 위험하므로, 버그를 기본 게임 개발팀에 신고하지 마십시오.</span>
 <br><br>
-<<link [[Confirm|$passagePrev]]>><<doVersionCheck>><</link>>
+<<link [[확인|$passagePrev]]>><<doVersionCheck>><</link>>
 <br>
-<span class="red">If you want to avoid potential issues, create a new save or stay with the mod.</span>
+<span class="red">문제가 생기는 것을 피하려면 새 세이브를 만들거나 모드를 계속 사용하십시오.</span>
 
 :: Vanilla Waiting Room
-Welcome to Degrees of Lewdity Plus <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>!
+Degrees of Lewdity Plus <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>에 오신 것을 환영합니다!
 <br><br>
-It seems you're transferring a save from Vanilla <<- $saveVersions.last()>> to DoLP. <span class="gold">Please check your game settings in a safe room like your bedroom to check DoLP Settings!</span> Not doing this will result in you missing out on 99% of DoLP's content! DoLP is built on the idea of player control so nearly everything is a setting the player can change.
+기본 게임 <<- $saveVersions.last()>>의 세이브를 DoLP로 옮기신 것 같습니다. <span class="gold">침실 같은 안전한 방에서 게임 설정을 열어 DoLP 설정을 확인해 주십시오!</span> 확인하지 않으면 DoLP 내용의 99%를 놓치게 됩니다. DoLP는 플레이어의 통제라는 생각 위에 만들어져 거의 모든 것이 플레이어가 바꿀 수 있는 설정입니다.
 <br><br>
 <<if $passagePrev is "Settings">><<set $passagePrev to $passagePrevv>><<unset $passagePrevv>><</if>>
-<<link [[Confirm|$passagePrev]]>><<doVersionCheck>><</link>>
+<<link [[확인|$passagePrev]]>><<doVersionCheck>><</link>>
 <br>
-<span class="red">Transferring your save from Vanilla to Modded is fine but Modded to Vanilla or Modded to Modded is almost always going to cause issues.</span>
+<span class="red">기본 게임의 세이브를 모드로 옮기는 것은 괜찮지만, 모드에서 기본 게임으로, 또는 모드에서 다른 모드로 옮기면 거의 항상 문제가 생깁니다.</span>

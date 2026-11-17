@@ -70,25 +70,25 @@
 					},
 				},
 				{
-					name: "Sadism boost",
+					name: "가학 성향 강화",
 					colour: "red",
 					has: $featsSadismBoost gt 0,
 					text: () => {
 						let dailySadism = 1;
-						if (dailySadism + V.featsSadismBoost > 0) return "You are gaining sadism daily.";
-						if (dailySadism + V.featsSadismBoost === 0) return "You are not gaining sadism daily.";
-						return "You are gaining sadism daily.";
+						if (dailySadism + V.featsSadismBoost > 0) return "매일 사디즘을 얻고 있습니다.";
+						if (dailySadism + V.featsSadismBoost === 0) return "매일 사디즘을 얻지 못하고 있습니다.";
+						return "매일 사디즘을 얻고 있습니다.";
 					},
 				},
 				{
-					name: "Masochism boost",
+					name: "피학 성향 강화",
 					colour: "pink",
 					has: $featsMasochismBoost gt 0,
 					text: () => {
 						let dailyMasochism = 1;
-						if (dailyMasochism + V.featsMasochismBoost > 0) return "You are gaining masochism daily.";
-						if (dailyMasochism + V.featsMasochismBoost === 0) return "You are not gaining masochism daily.";
-						return "You are gaining masochism daily.";
+						if (dailyMasochism + V.featsMasochismBoost > 0) return "매일 마조히즘을 얻고 있습니다.";
+						if (dailyMasochism + V.featsMasochismBoost === 0) return "매일 마조히즘을 얻지 못하고 있습니다.";
+						return "매일 마조히즘을 얻고 있습니다.";
 					},
 				},
 				{
@@ -239,16 +239,16 @@
 					text: '크림을 핥아먹고 싶은 충동을 느낍니다. 몸에 야한 체액을 묻힌 채 춤을 출 때 "치장한다" 행동이 해금됩니다. 귀와 꼬리가 당신을 더 눈에 띄게 만듭니다.',
 				},
 				{
-					name: "Bunny <<girl>>",
+					name: "바니 <<girl>>",
 					colour: "grey",
 					has: (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny"),
-					text: 'Your submissiveness increases over time. Your ears and tail make you more conspicuous.',
+					text: '시간이 지날수록 순종성이 높아집니다. 귀와 꼬리가 당신을 더 눈에 띄게 만듭니다.',
 				},
 				{
-					name: "Bear <<girl>>",
+					name: "곰 <<girl>>",
 					colour: "grey",
 					has: (($bear gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bear"),
-					text: 'You have an urge to eat honey and lazy around. Your ears and tail make you more conspicuous.',
+					text: '꿀을 먹고 빈둥거리고 싶은 충동이 듭니다. 귀와 꼬리가 당신을 더 눈에 띄게 만듭니다.',
 				},
 				{
 					name: () => {
@@ -291,22 +291,22 @@
 					text: "당신 것이 아닌 걸 가지고 싶은 충동이 듭니다. 귀와 꼬리 덕분에 더 매혹적이고 매력적으로 보입니다.",
 				},
 				{
-					name: "Prey Animal",
+					name: "피식자 동물",
 					colour: "def",
 					has: $transformationParts.traits.preyAnimal isnot "disabled",
-					text: "You are a prey animal.",
+					text: "당신은 피식자 동물입니다.",
 				},
 				{
-				    name: "Predatory Animal",
+				    name: "포식자 동물",
 					colour: "def",
 					has: $transformationParts.traits.predatoryAnimal isnot "disabled",
-					text: "You are a predatory animal.",
+					text: "당신은 포식자 동물입니다.",
 				},
 				{
-					name: "Strong Feet",
+					name: "튼튼한 발",
 					colour: "def",
 					has: $transformationParts.traits.strongFeet isnot "disabled",
-					text: "You are light and agile making dodging easier. Kicking is more effective. +5% dance and +5% athletics.",
+					text: "가볍고 민첩해서 회피하기 쉽습니다. 발차기가 더 효과적입니다. 춤 +5%, 체육 +5%.",
 				},
 				{
 					name: "송곳니",
@@ -315,22 +315,22 @@
 					text: "깨물기가 두 배로 효과적입니다.",
 				},
 				{
-					name: "Aquatic Lungs",
+					name: "수중 폐",
 					colour: "teal",
 					has: $transformationParts.traits.aquatic isnot "disabled",
-					text: "Oxygen drains 50% slower underwater.",
+					text: "물속에서 산소가 50% 더 느리게 소모됩니다.",
 				},
 				{
-					name: "Water Dragon",
+					name: "수룡",
 					colour: "navy",
 					has: ($waterdragon gte 7 or ($transformationParts.waterdragon.horns isnot "hidden" and $transformationParts.waterdragon.horns isnot "disabled") and $player.skin.color is "waterdragon"),
-					text: "The sea calls to you. Your skin and horns make you stand out.",
+					text: "바다가 당신을 부릅니다. 피부와 뿔이 당신을 눈에 띄게 만듭니다.",
 				},
 				{
-					name: "Dragon's Grace",
+					name: "용의 우아함",
 					colour: "blue",
 					has: ($TFWaterDragonBuffs is 1 or $transformationParts.traits.wdgrace isnot "disabled"),
-					text: "Your draconic build grants you increased athletics and swimming ability.",
+					text: "용의 체형 덕분에 체육과 수영 능력이 향상됩니다.",
 				},
 				{
 					name: "날카로운 눈",
@@ -339,10 +339,10 @@
 					text: "무언가 당신의 주의를 피해갈 확률이 낮아집니다. 속임수 +5%.",
 				},
 				{
-					name: "Dragon Eyes",
+					name: "용의 눈",
 					colour: "def",
 					has: !["disabled", "hidden"].includes($transformationParts.traits.dragonEyes),
-					text: "Water sharpens your senses to an unnatural degree. Little escapes your notice and you perceive what others can't. +5% skulduggery. You always hallucinate, regardless of awareness, trauma, or hallucinogens.",
+					text: "물이 당신의 감각을 부자연스러울 만큼 날카롭게 만듭니다. 거의 아무것도 당신의 눈을 피하지 못하고, 남들이 보지 못하는 것까지 알아차립니다. 속임수 +5%. 성지식, 트라우마, 환각제와 관계없이 항상 환각을 봅니다.",
 				},
 				{
 					name: "오드아이",
@@ -359,46 +359,46 @@
 					text: "박치기를 해도 더 이상 아프지 않습니다.",
 				},
 				{
-					name: "Spirit of the Wild",
+					name: "야생의 정령",
 					colour: "def",
 					has: $DoLPTFBuffs is 1 and $TFWolfBuffs is 1,
-					text: "The spirit of the wild courses through you, heightening your senses.",
+					text: "야생의 정령이 몸속을 흐르며 감각을 예민하게 만듭니다.",
 				},
 				{
-					name: "Felinous Mischief",
+					name: "고양이의 장난기",
 					colour: "pink",
 					has: $DoLPTFBuffs is 1 and $TFCatBuffs is 1,
-					text: "Agility and mischief blends within you, your movements fluid and stealthy.",
+					text: "민첩함과 장난기가 당신 안에서 섞여, 움직임이 유려하고 은밀합니다.",
 				},
 				{
-					name: "Nature's Nurturer",
+					name: "자연의 양육자",
 					colour: "green",
 					has: $DoLPTFBuffs is 1 and $TFCowBuffs is 1,
-					text: "Attuned to nature, you nurture it, and it blesses you.",
+					text: "자연과 교감하며 돌보는 당신에게, 자연이 축복을 내립니다.",
 				},
 				{
-					name: "Ursine Strength",
+					name: "곰의 힘",
 					colour: "def",
 					has: $DoLPTFBuffs is 1 and $TFBearBuffs is 1,
-					text: "The strength of the largest land carnivore flows through your muscles.",
+					text: "육지에서 가장 큰 육식동물의 힘이 근육을 타고 흐릅니다.",
 				},
 				{
-					name: "Sky's Embrace",
+					name: "하늘의 품",
 					colour: "lblue",
 					has: $DoLPTFBuffs is 1 and $TFBirdBuffs is 1,
-					text: "A pep in your step, the winds your friend and the sky your limits.",
+					text: "발걸음은 경쾌하고, 바람은 친구이며, 하늘은 한계가 아닙니다.",
 				},
 				{
-					name: "Vixen's Guile",
+					name: "암여우의 교활함",
 					colour: "gold",
 					has: $DoLPTFBuffs is 1 and $TFFoxBuffs is 1,
-					text: "Ever enticing, always within reach, but never within grasp, your guile eludes most.",
+					text: "언제나 유혹적이고 언제나 손닿는 곳에 있지만 결코 붙잡히지 않는 당신의 교활함은 대부분의 사람을 따돌립니다.",
 				},
 				{
-					name: "Lapine Celerity",
+					name: "토끼의 민첩함",
 					colour: "white",
 					has: $DoLPTFBuffs is 1 and $TFBunnyBuffs is 1,
-					text: "Light on your feet and swift as the wind, boundless energy propels you forward.",
+					text: "발걸음은 가볍고 바람처럼 빠르며, 끝없는 활력이 당신을 앞으로 밀어 줍니다.",
 				},
 				{
 					name: "평생의 반려자",
@@ -472,10 +472,10 @@
 				{
 					name: "복합 뿔",
 					colour: "def",
-					has: (($cow gte 2 or $transformationParts.cow.horns is "default") 
+					has: (($cow gte 2 or $transformationParts.cow.horns is "default")
 						or ($waterdragon gte 2 or !["disabled", "hidden"].includes($transformationParts.waterdragon.horns)))
 						and ($demon gte 2 or ($transformationParts.demon.horns isnot "disabled" and $transformationParts.demon.horns isnot "hidden")),
-					text: "Your headbutts are vicious. Headbutts are four times as powerful and no longer hurt you.",
+					text: "박치기가 사납습니다. 박치기의 위력이 네 배가 되고 더 이상 당신이 아프지 않습니다.",
 				},
 				{
 					name: () => V.plucked ? "완전히 다듬어진 날개" : "강인한 날개",
@@ -491,7 +491,7 @@
 					},
 				},
 				{
-					name: "Glide",
+					name: "활강",
 					colour: "grey",
 					has: !((($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and $birdFly gte 1) and ((($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") or (($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") or (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")),
 					text: "높은 곳에서 활강할 수 있습니다.",
@@ -744,10 +744,10 @@
 			title: "특별 특성",
 			traits: [
 				{
-					name: "Opium Addict",
+					name: "아편 중독자",
 					colour: "red",
 					has: $backgroundTraits.includes("opiumaddict"),
-					text: "You're more vulnerable to aphrodisiacs and alcohol. Inhaling opium helps you sleep better and suppresses your insomnia.",
+					text: "최음제와 술에 더 취약합니다. 아편을 흡입하면 잠을 더 잘 자고 불면증이 억제됩니다.",
 				},
 				{
 					name: () => V.submissive <= 850 ? "쾌락주의자" : "절정 중독",
@@ -804,175 +804,175 @@
 					text: "신선한 모유의 영양을 온전히 이용할 수 있습니다. 마시면 몸에 활력이 돌고 체력이 상승합니다.",
 				},
 				{
-					name: "Tempered Beauty",
+					name: "단련된 미모",
 					colour: "green",
 					has: $AMCTraits.beauty is 2 and $beauty gte $beautymax,
-					text: "Your beauty has reached the conceivable limits... But you can go further."
+					text: "당신의 미모는 상상할 수 있는 한계에 도달했습니다... 하지만 더 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Physique",
+					name: "단련된 체격",
 					colour: "green",
 					has: $AMCTraits.physique is 2 and currentSkillValue('physique') gte $physiquesize,
-					text: "Your body has reached the human limits... But you can go further."
+					text: "당신의 몸은 인간의 한계에 도달했습니다... 하지만 더 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Willpower",
+					name: "단련된 의지력",
 					colour: "green",
 					has: $AMCTraits.willpower is 2 and $willpower gte 1000,
-					text: "Your mental fortitude has reached its peak... But you can push beyond."
+					text: "당신의 정신력은 정점에 도달했습니다... 하지만 그 너머로 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Skulduggery",
+					name: "단련된 속임수",
 					colour: "green",
 					has: $AMCTraits.skulduggery is 2 and $skulduggery gte 1000,
-					text: "Your cunning and deceitfulness have reached a plateau... But you can surpass it."
+					text: "당신의 교활함과 기만이 정체기에 이르렀습니다... 하지만 넘어설 수 있습니다."
 				},
 				{
-					name: "Tempered Dancing",
+					name: "단련된 춤",
 					colour: "green",
 					has: $AMCTraits.dancing is 2 and $danceskill gte 1000,
-					text: "Your dancing skills have hit a ceiling... But you can break through."
+					text: "당신의 춤 실력이 한계에 부딪혔습니다... 하지만 돌파할 수 있습니다."
 				},
 				{
-					name: "Tempered Swimming",
+					name: "단련된 수영",
 					colour: "green",
 					has: $AMCTraits.swimming is 2 and $swimmingskill gte 1000,
-					text: "Your swimming abilities have maxed out... But you can strive for more."
+					text: "당신의 수영 실력이 한계에 이르렀습니다... 하지만 더 노력할 수 있습니다."
 				},
 				{
-					name: "Tempered Athletics",
+					name: "단련된 체육",
 					colour: "green",
 					has: $AMCTraits.athletics is 2 and $athletics gte 1000,
-					text: "Your athleticism has reached its zenith... But there's still room for improvement."
+					text: "당신의 운동 능력이 절정에 이르렀습니다... 하지만 아직 나아질 여지가 있습니다."
 				},
 				{
-					name: "Tempered Tending",
+					name: "단련된 관리",
 					colour: "green",
 					has: $AMCTraits.tending is 2 and $tending gte 1000,
-					text: "Your ability to tend to plants and animals has peaked... But there's more to achieve."
+					text: "식물과 동물을 돌보는 능력이 정점에 이르렀습니다... 하지만 이룰 것이 더 남아 있습니다."
 				},
 				{
-					name: "Tempered Housekeeping",
+					name: "단련된 가사",
 					colour: "green",
 					has: $AMCTraits.housekeeping is 2 and $housekeeping gte 1000,
-					text: "Your housekeeping and crafting skills have hit a wall... But you can break through."
+					text: "가사와 공예 실력이 벽에 부딪혔습니다... 하지만 돌파할 수 있습니다."
 				},
 				{
-					name: "Tempered Brawling",
+					name: "단련된 난투",
 					colour: "green",
 					has: $AMCTraits.brawling is 2 and $combatExtended.brawling gte 1000,
-					text: "Your brawling skills has peaked... But you can gain more experience."
+					text: "당신의 난투 실력이 정점에 이르렀습니다... 하지만 더 많은 경험을 쌓을 수 있습니다."
 				},
 				{
-					name: "Tempered Science",
+					name: "단련된 과학",
 					colour: "green",
 					has: $AMCTraits.science is 2 and $science gte 1000,
-					text: "Your scientific knowledge has stagnated... But there's more to discover."
+					text: "당신의 과학 지식이 정체되었습니다... 하지만 발견할 것이 더 남아 있습니다."
 				},
 				{
-					name: "Tempered Maths",
+					name: "단련된 수학",
 					colour: "green",
 					has: $AMCTraits.maths is 2 and $maths gte 1000,
-					text: "Your mathematical skills have reached their limits... But you can go further."
+					text: "당신의 수학 실력이 한계에 이르렀습니다... 하지만 더 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered English",
+					name: "단련된 영어",
 					colour: "green",
 					has: $AMCTraits.english is 2 and $english gte 1000,
-					text: "Your linguistic skills have hit a ceiling... But you can strive for mastery."
+					text: "당신의 언어 능력이 한계에 부딪혔습니다... 하지만 통달을 향해 노력할 수 있습니다."
 				},
 				{
-					name: "Tempered History",
+					name: "단련된 역사",
 					colour: "green",
 					has: $AMCTraits.history is 2 and $history gte 1000,
-					text: "Your knowledge of history has maxed out... But there's still more to learn."
+					text: "당신의 역사 지식이 한계에 이르렀습니다... 하지만 아직 배울 것이 남아 있습니다."
 				},
 				{
-					name: "Tempered Seduction Skill",
+					name: "단련된 유혹 기술",
 					colour: "green",
 					has: $AMCTraits.seductionskill is 2 and $seductionskill gte 1000,
-					text: "Your seduction skills have plateaued... But there's room for refinement."
+					text: "당신의 유혹 기술이 정체기에 접어들었습니다... 하지만 다듬을 여지가 있습니다."
 				},
 				{
-					name: "Tempered Oral Skill",
+					name: "단련된 입 기술",
 					colour: "green",
 					has: $AMCTraits.oralskill is 2 and $oralskill gte 1000,
-					text: "Your oral sex skills have hit a plateau... But you can push beyond."
+					text: "당신의 구강 성교 기술이 정체기에 접어들었습니다... 하지만 그 너머로 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Chest Skill",
+					name: "단련된 가슴 기술",
 					colour: "green",
 					has: $AMCTraits.chestskill is 2 and $chestskill gte 1000,
-					text: "Your chest-related skills have reached their limits... But you can strive for more."
+					text: "당신의 가슴 관련 기술이 한계에 이르렀습니다... 하지만 더 노력할 수 있습니다."
 				},
 				{
-					name: "Tempered Hands Skill",
+					name: "단련된 손 기술",
 					colour: "green",
 					has: $AMCTraits.handskill is 2 and $handskill gte 1000,
-					text: "Your hand-related skills have hit a ceiling... But you can break through."
+					text: "당신의 손 관련 기술이 한계에 부딪혔습니다... 하지만 돌파할 수 있습니다."
 				},
 				{
-					name: "Tempered Buttocks Skill",
+					name: "단련된 엉덩이 기술",
 					colour: "green",
 					has: $AMCTraits.bottomskill is 2 and $bottomskill gte 1000,
-					text: "Your buttocks-related skills have maxed out... But there's still room for improvement."
+					text: "당신의 엉덩이 관련 기술이 한계에 이르렀습니다... 하지만 아직 나아질 여지가 있습니다."
 				},
 				{
-					name: "Tempered Penile Skill",
+					name: "단련된 자지 기술",
 					colour: "green",
 					has: $AMCTraits.penileskill is 2 and $penileskill gte 1000,
-					text: "Your penile-related skills have reached their limits... But you can go further."
+					text: "당신의 자지 관련 기술이 한계에 이르렀습니다... 하지만 더 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Vaginal Skill",
+					name: "단련된 보지 기술",
 					colour: "green",
 					has: $AMCTraits.vaginalskill is 2 and $vaginalskill gte 1000,
-					text: "Your vaginal-related skills have stagnated... But there's more to achieve."
+					text: "당신의 보지 관련 기술이 정체되었습니다... 하지만 이룰 것이 더 남아 있습니다."
 				},
 				{
-					name: "Tempered Anal Skill",
+					name: "단련된 애널 기술",
 					colour: "green",
 					has: $AMCTraits.analskill is 2 and $analskill gte 1000,
-					text: "Your anal-related skills have hit a wall... But you can break through."
+					text: "당신의 애널 관련 기술이 벽에 부딪혔습니다... 하지만 돌파할 수 있습니다."
 				},
 				{
-					name: "Tempered Thighs Skill",
+					name: "단련된 허벅지 기술",
 					colour: "green",
 					has: $AMCTraits.thighskill is 2 and $thighskill gte 1000,
-					text: "Your thigh-related skills have maxed out... But there's still room for improvement."
+					text: "당신의 허벅지 관련 기술이 한계에 이르렀습니다... 하지만 아직 나아질 여지가 있습니다."
 				},
 				{
-					name: "Tempered Feet Skill",
+					name: "단련된 발 기술",
 					colour: "green",
 					has: $AMCTraits.feetskill is 2 and $feetskill gte 1000,
-					text: "Your feet-related skills have reached their limits... But you can strive for more."
+					text: "당신의 발 관련 기술이 한계에 이르렀습니다... 하지만 더 노력할 수 있습니다."
 				},
 				{
-					name: "Tempered Milk Volume",
+					name: "단련된 모유량",
 					colour: "green",
 					has: $AMCTraits.milk is 2 and $milk_volume gte 6000,
-					text: "Your milk volume has maxed out... But you can go even further beyond."
+					text: "당신의 모유량이 한계에 이르렀습니다... 하지만 훨씬 더 나아갈 수 있습니다."
 				},
 				{
-					name: "Tempered Semen Volume",
+					name: "단련된 정액량",
 					colour: "green",
 					has: $AMCTraits.semen is 2 and $milk_volume gte 6000,
-					text: "Your semen volume overflows... But you can do even more."
+					text: "당신의 정액량이 넘쳐흐릅니다... 하지만 더 많이 할 수 있습니다."
 				},
 				{
-                    name: "Transcendental Learning",
+                    name: "초월적 학습",
                     colour: "lustful",
                     has: $featsBoosts.upgrades.transcend gt 0,
                     text: () => {
-                        return "You gain " + ($featsBoosts.upgrades.transcend / 2) + "% more when grinding skills. ";
+                        return "스킬 반복 수련 시 " + ($featsBoosts.upgrades.transcend / 2) + "% 더 많이 얻습니다. ";
                     },
                 },
 				{
-					name: "Adaptive Genes",
+					name: "적응형 유전자",
                     colour: "lustful",
                     has: $featsBoosts.upgrades.adaptiveGenes gt 0,
                     text: () => {
-                        return "You gain " + ($featsBoosts.upgrades.adaptiveGenes * 2) + "% more transformation points.";
+                        return "변이 포인트를 " + ($featsBoosts.upgrades.adaptiveGenes * 2) + "% 더 많이 얻습니다.";
                     },
 				},
 			],
@@ -1005,28 +1005,28 @@
 					text: "고통에 훨씬 더 잘 대처합니다.",
 				},
 				{
-					name: "Outstanding Science",
+					name: "뛰어난 과학 성적",
 					colour: "green",
 					has: $sciencetrait is 5,
-					text: "Pain is easy to cope with.",
+					text: "고통에 쉽게 대처할 수 있습니다."
 				},
 				{
-					name: "Exceptional Science",
+					name: "탁월한 과학 성적",
 					colour: "green",
 					has: $sciencetrait is 6,
-					text: "Pain is very easy to cope with.",
+					text: "고통에 아주 쉽게 대처할 수 있습니다."
 				},
 				{
-					name: "Exemplary Science",
+					name: "모범적인 과학 성적",
 					colour: "green",
 					has: $sciencetrait is 7,
-					text: "Pain is incredibly easy to cope with.",
+					text: "고통에 믿기지 않을 만큼 쉽게 대처할 수 있습니다."
 				},
 				{
-					name: "Superlative Science",
+					name: "최상급 과학 성적",
 					colour: "green",
 					has: $sciencetrait is 8,
-					text: "Pain is almost a non-factor.",
+					text: "고통은 거의 문제가 되지 않습니다."
 				},
 				{
 					name: "나쁘지 않은 수학 성적",
@@ -1053,28 +1053,28 @@
 					text: "팁과 협상한 요금에서 100%의 수익을 추가로 받습니다.",
 				},
 				{
-					name: "Outstanding Maths",
+					name: "뛰어난 수학 성적",
 					colour: "green",
 					has: $mathstrait is 5,
-					text: "You make 125% more from tips and negotiated fees.",
+					text: "팁과 협상 수수료로 125% 더 벌어들입니다."
 				},
 				{
-					name: "Exceptional Maths",
+					name: "탁월한 수학 성적",
 					colour: "green",
 					has: $mathstrait is 6,
-					text: "You make 150% more from tips and negotiated fees.",
+					text: "팁과 협상 수수료로 150% 더 벌어들입니다."
 				},
 				{
-					name: "Exemplary Maths",
+					name: "모범적인 수학 성적",
 					colour: "green",
 					has: $mathstrait is 7,
-					text: "You make 175% more from tips and negotiated fees.",
+					text: "팁과 협상 수수료로 175% 더 벌어들입니다."
 				},
 				{
-					name: "Superlative Maths",
+					name: "최상급 수학 성적",
 					colour: "green",
 					has: $mathstrait is 8,
-					text: "You make 200% more from tips and negotiated fees.",
+					text: "팁과 협상 수수료로 200% 더 벌어들입니다."
 				},
 				{
 					name: "나쁘지 않은 영어 성적",
@@ -1101,28 +1101,28 @@
 					text: "대화 행동 (애원, 신음, 요구, 사과, 조롱, 놀리기, 더 거칠게 해달라고 부탁하기) 이 다섯 배로 효과적입니다.",
 				},
 				{
-					name: "Outstanding English",
+					name: "뛰어난 영어 성적",
 					colour: "green",
 					has: $englishtrait is 5,
-					text: "Speech actions (plead, moan, demand, apologise, mock, tease, ask to be more rough) are six times as effective.",
+					text: "대화 행동 (애원, 신음, 요구, 사과, 조롱, 놀리기, 더 거칠게 해달라고 부탁하기) 이 여섯배로 효과적입니다."
 				},
 				{
-					name: "Exceptional English",
+					name: "탁월한 영어 성적",
 					colour: "green",
 					has: $englishtrait is 6,
-					text: "Speech actions (plead, moan, demand, apologise, mock, tease, ask to be more rough) are seven times as effective.",
+					text: "대화 행동 (애원, 신음, 요구, 사과, 조롱, 놀리기, 더 거칠게 해달라고 부탁하기) 이 일곱배로 효과적입니다."
 				},
 				{
-					name: "Exemplary English",
+					name: "모범적인 영어 성적",
 					colour: "green",
 					has: $englishtrait is 7,
-					text: "Speech actions (plead, moan, demand, apologise, mock, tease, ask to be more rough) are eight times as effective.",
+					text: "대화 행동 (애원, 신음, 요구, 사과, 조롱, 놀리기, 더 거칠게 해달라고 부탁하기) 이 여덟배로 효과적입니다."
 				},
 				{
-					name: "Superlative English",
+					name: "최상급 영어 성적",
 					colour: "green",
 					has: $englishtrait is 8,
-					text: "Speech actions (plead, moan, demand, apologise, mock, tease, ask to be more rough) are nine times as effective.",
+					text: "대화 행동 (애원, 신음, 요구, 사과, 조롱, 놀리기, 더 거칠게 해달라고 부탁하기) 이 아홉배로 효과적입니다."
 				},
 				{
 					name: "나쁘지 않은 역사 성적",
@@ -1149,28 +1149,28 @@
 					text: "마을 곳곳의 수많은 비밀 통로들을 알고 있습니다.",
 				},
 				{
-					name: "Outstanding History",
+					name: "뛰어난 역사 성적",
 					colour: "green",
 					has: $historytrait is 5,
-					text: "You're sure you know more about the town than the mayor.",
+					text: "마을에 대해서는 시장보다 더 많이 안다고 확신합니다."
 				},
 				{
-					name: "Exceptional History",
+					name: "탁월한 역사 성적",
 					colour: "green",
 					has: $historytrait is 6,
-					text: "You're sure you can give Winter a run for their money.",
+					text: "윈터와도 겨뤄 볼 만하다고 확신합니다."
 				},
 				{
-					name: "Exemplary History",
+					name: "모범적인 역사 성적",
 					colour: "green",
 					has: $historytrait is 7,
-					text: "You are a walking encyclopedia.",
+					text: "당신은 걸어 다니는 백과사전입니다."
 				},
 				{
-					name: "Superlative History",
+					name: "최상급 역사 성적",
 					colour: "green",
 					has: $historytrait is 8,
-					text: "You are a living, breathing Google, for history.",
+					text: "당신은 역사 분야의 살아 숨 쉬는 구글입니다."
 				},
 				{
 					name: "나쁘지 않은 성적",
@@ -1197,28 +1197,28 @@
 					text: "학교에서의 성적이 자존감을 끌어올려 매일 트라우마 감소량이 크게 늘어났습니다.",
 				},
 				{
-					name: "Excellent Scholar",
+					name: "우수한 성적",
 					colour: "green",
 					has: $schooltrait is 5,
-					text: "Your enhanced academic performance has positively impacted your self-esteem, contributing to a notable increase in your daily trauma decay.",
+					text: "학업 성적 향상이 자존감에 긍정적인 영향을 주어, 매일 트라우마 감소량이 눈에 띄게 늘어났습니다."
 				},
 				{
-					name: "Outstanding Scholar",
+					name: "뛰어난 성적",
 					colour: "green",
 					has: $schooltrait is 6,
-					text: "Excelling in your studies has significantly boosted your self-esteem, leading to a substantial improvement in your daily trauma decay rate.",
+					text: "학업에서의 두드러진 성과가 자존감을 크게 끌어올려, 매일 트라우마 감소량이 상당히 개선되었습니다."
 				},
 				{
-					name: "Distinguished Scholar",
+					name: "출중한 성적",
 					colour: "green",
 					has: $schooltrait is 7,
-					text: "Outstanding achievements in school have greatly elevated your self-esteem, resulting in a remarkable acceleration of your daily trauma decay.",
+					text: "학교에서 거둔 뛰어난 성과가 자존감을 한껏 높여, 매일 트라우마 감소 속도가 놀라울 만큼 빨라졌습니다."
 				},
 				{
-					name: "Exceptional Scholar",
+					name: "비범한 성적",
 					colour: "green",
 					has: $schooltrait is 8,
-					text: "Your exceptional academic success has propelled your self-esteem to new heights, causing a phenomenal surge in your daily trauma decay, fostering resilience and well-being.",
+					text: "비범한 학업적 성공이 자존감을 새로운 경지로 끌어올려, 매일 트라우마 감소량이 경이로울 만큼 늘어나고 회복력과 안녕을 북돋웁니다."
 				},
 				{
 					name: "과학 경시대회 우승자",
@@ -1295,8 +1295,8 @@
 						const opiumSuppressed = Array.isArray(V.backgroundTraits)
 							&& V.backgroundTraits.includes("opiumaddict")
 							&& !!V.poppyDrug?.insomniaSuppress;
-						if (V.hypnosis_traits.slumber || opiumSuppressed) return "Suppressed Insomnia";
-						return V.controlled === 0 ? "Insomnia" : "Controlled Insomnia";
+						if (V.hypnosis_traits.slumber || opiumSuppressed) return "억제된 불면증";
+						return V.controlled === 0 ? "불면증" : "통제된 불면증";
 					},
 					colour: () => {
 						const opiumSuppressed = Array.isArray(V.backgroundTraits)
@@ -1396,10 +1396,10 @@
 					text: "로빈은 당신에게 의지하고 있습니다. 당신은 굳세어져야 합니다. 매일 트라우마 감소량이 증가합니다.",
 				},
 				{
-					name: "Pavlov: Poppy",
+					name: "파블로프: 포피",
 					colour: "lewd",
 					has: $backgroundTraits.includes("pavlovpoppy") and !poppyDismissed(),
-					text: "Poppy's presence fills a hole that you didn't realise existed. You find it difficult to resist Poppy's pull. Reduces daily opium decay and fatigue gain around Poppy.",
+					text: "포피의 존재가 당신조차 몰랐던 빈자리를 채웁니다. 포피의 이끌림을 뿌리치기 어렵습니다. 포피 곁에 있으면 아편 중독도의 일일 감소량과 피로 증가량이 줄어듭니다.",
 				},
 				{
 					name: "스톡홀름 신드롬: 에덴",

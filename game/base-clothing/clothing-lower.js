@@ -12304,7 +12304,7 @@ function initLower() {
 			fabric_strength: 30,
 			reveal: 100,
 			rearresize: 0,
-			word: "n",
+			word: "",
 			one_piece: 1,
 			skirt: 0,
 			skirt_down: 0,

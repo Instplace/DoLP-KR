@@ -3052,7 +3052,7 @@
 	<<silently>><<tending_pick wild_honeycomb 1 2>><</silently>>
 	<br><br>
 
-	<<link [[Have a taste|Eden Clearing]]>><<transform bear 1>><<endevent>><<stress -3>><</link>><<lstress>>
+	<<link [[맛을 본다|Eden Clearing]]>><<transform bear 1>><<endevent>><<stress -3>><</link>><<lstress>>
 	<br>
 	<<link [[다음|Eden Clearing]]>><<endevent>><</link>>
 <<else>>

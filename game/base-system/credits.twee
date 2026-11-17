@@ -1,80 +1,80 @@
 :: Widgets DoLP Credits [widget]
 <<widget "DoLPCredits">>
-	__''Degrees of Lewdity Plus:''__
+	__''디그리즈 오브 루드니티 플러스:''__
 	<br>
-	- Lead Developer | <span class="gold">Frostberg</span>
+	- 총괄 개발자 | <span class="gold">Frostberg</span>
 	<br>
-	- Super Contributor | <span class="gold">Mellow</span>
+	- 핵심 기여자 | <span class="gold">Mellow</span>
 	<br>
-	- Super Contributor | <span class="gold">Akoz</span>
+	- 핵심 기여자 | <span class="gold">Akoz</span>
 	<br>
-	- Contributor | <span class="gold">mamabear24</span>
+	- 기여자 | <span class="gold">mamabear24</span>
 	<br>
-	- Contributor | <span class="gold">the arcane elemental</span>
+	- 기여자 | <span class="gold">the arcane elemental</span>
 	<br>
-	- Contributor | <span class="gold">Hibiki</span>
+	- 기여자 | <span class="gold">Hibiki</span>
 	<br>
-	- Contributor | <span class="gold">MomoCat</span>
+	- 기여자 | <span class="gold">MomoCat</span>
 	<br>
-	- Contributor | <span class="gold">Pande (mamabear)</span>
+	- 기여자 | <span class="gold">Pande (mamabear)</span>
 	<br>
-	- Contributor | <span class="gold">Remy</span>
+	- 기여자 | <span class="gold">Remy</span>
 	<br>
-	- Contributor | <span class="gold">WinterPeach</span>
+	- 기여자 | <span class="gold">WinterPeach</span>
 	<br>
-	- Contributor | <span class="gold">vessel</span>
+	- 기여자 | <span class="gold">vessel</span>
 	<br>
-	- Contributor | <span class="gold">J-Side</span>
+	- 기여자 | <span class="gold">J-Side</span>
 	<br>
-	- Contributor | <span class="gold">Kane</span>
+	- 기여자 | <span class="gold">Kane</span>
 	<br>
-	- Contributor | <span class="gold">Chou Chou</span>
+	- 기여자 | <span class="gold">Chou Chou</span>
 	<br>
-	- Contributor | <span class="gold">gekkover</span>
+	- 기여자 | <span class="gold">gekkover</span>
 	<br>
-	- Contributor | <span class="gold">Corin</span>
+	- 기여자 | <span class="gold">Corin</span>
 	<br>
-	- Contributor | <span class="gold">Monay</span>
+	- 기여자 | <span class="gold">Monay</span>
 	<br>
-	- Contributor | <span class="gold">deadmeat</span>
+	- 기여자 | <span class="gold">deadmeat</span>
 	<br>
-	- Contributor | <span class="gold">ninimorolls</span>
+	- 기여자 | <span class="gold">ninimorolls</span>
 	<br>
-	- Contributor | <span class="gold">Dwarfblood</span>
+	- 기여자 | <span class="gold">Dwarfblood</span>
 	<br>
-	- Contributor | <span class="gold">WreckieRed</span>
+	- 기여자 | <span class="gold">WreckieRed</span>
 	<br>
-	- Contributor | <span class="gold">Isari</span>
+	- 기여자 | <span class="gold">Isari</span>
 	<br>
-	- Contributor | <span class="gold">D.N.A.</span>
+	- 기여자 | <span class="gold">D.N.A.</span>
 	<br>
-	- Contributor | <span class="gold">Karl/Sei</span>
+	- 기여자 | <span class="gold">Karl/Sei</span>
 	<br>
-	- Contributor | <span class="gold">Bec</span>
+	- 기여자 | <span class="gold">Bec</span>
 	<br>
-	- Contributor | <span class="gold">Llynkurin</span>
+	- 기여자 | <span class="gold">Llynkurin</span>
 	<br>
-	- Contributor | <span class="gold">citrusburst0</span>
+	- 기여자 | <span class="gold">citrusburst0</span>
 	<br>
-	- Contributor | <span class="gold">Grimace</span>
+	- 기여자 | <span class="gold">Grimace</span>
 	<br><br>
-	__''ModdedLI: Poppy (OPIUM):''__
+	__''ModdedLI: 포피 (OPIUM):''__
 	<br>
-	- Lead Writer | <span class="gold">Toaster</span>
+	- 총괄 작가 | <span class="gold">Toaster</span>
 	<br>
-	- Lead Coder | <span class="gold">D.N.A.</span>
+	- 총괄 프로그래머 | <span class="gold">D.N.A.</span>
 	<br>
-	- Contributor | <span class="gold">Kmagi</span> (sprite artist, beta reader)
+	- 기여자 | <span class="gold">Kmagi</span> (스프라이트 작가, 베타 리더)
 	<br>
-	- Contributor | <span class="gold">Lore_potato</span> (icon sprite artist, beta reader, co-writer)
+	- 기여자 | <span class="gold">Lore_potato</span> (아이콘 스프라이트 작가, 베타 리더, 공동 작가)
 	<br>
-	- Contributor | <span class="gold">Sakura</span> (co-writer)
+	- 기여자 | <span class="gold">Sakura</span> (공동 작가)
 	<br>
-	- Contributor | <span class="gold">Karl/Sei</span> (free labourer, vanilla code digger, constantly bullied by Toaster)
+	- 기여자 | <span class="gold">Karl/Sei</span> (공짜 일꾼, 기반 게임 코드 발굴 담당, Toaster에게 끊임없이 괴롭힘당하는 중)
 	<br>
-	- Contributor | <span class="gold">Tom</span> (beta reader)
+	- 기여자 | <span class="gold">Tom</span> (베타 리더)
 	<br><br>
-	__''Image Packs:''__
+	__''이미지 팩:''__
 	<br>
 	<<icon "chocolates.png">>BEEESSS | <span class="gold">BEEESSS</span>
 	<br><br>
@@ -88,35 +88,35 @@
 	<br><br>
 	<<icon "chocolates.png">>Aoki Utagi Graphics | <span class="gold">AokiUtage</span>
 	<br><br>
-	<<icon "chocolates.png">>BEEESSS Community Sprite Compilation | <span class="gold">Kaervek/Frostberg</span> BEEESSS Community Submission Creators | <br><span class="gold">
-	BEEESSS, ethanatortx, MatchaCrepeCakes, LedhaKuromi, Tommohas, Jessplayin690, SkyFall669/SomethingIsHuntingYou, AvinsXD, okbd321, cloversnipe, Elegant_Dress_5771, 
-	doseonseng, G259M, VanityDecay, Hikari, luoyin mengling, Tieba user_5CU79bt, Xiaochien, cheese shredded cake, artiste (the gayest man alive), Suqi eggplant stew, Paril, 
-	La Maritza, AD calcium, Isari, 森谷華子, aqua, superhydroxide, 再3棘, 567600, ToumanLin, Isopod, ◌/あきやま, Poop, SydNekoKawaii, Bunnyberry<3, Mizzy, 長門有栖☆, 七玳, 
+	<<icon "chocolates.png">>BEEESSS 커뮤니티 스프라이트 모음 | <span class="gold">Kaervek/Frostberg</span> BEEESSS 커뮤니티 제출자 | <br><span class="gold">
+	BEEESSS, ethanatortx, MatchaCrepeCakes, LedhaKuromi, Tommohas, Jessplayin690, SkyFall669/SomethingIsHuntingYou, AvinsXD, okbd321, cloversnipe, Elegant_Dress_5771,
+	doseonseng, G259M, VanityDecay, Hikari, luoyin mengling, Tieba user_5CU79bt, Xiaochien, cheese shredded cake, artiste (the gayest man alive), Suqi eggplant stew, Paril,
+	La Maritza, AD calcium, Isari, 森谷華子, aqua, superhydroxide, 再3棘, 567600, ToumanLin, Isopod, ◌/あきやま, Poop, SydNekoKawaii, Bunnyberry<3, Mizzy, 長門有栖☆, 七玳,
 	墮天使, Grey_scale_0904, Jacko, Zappa, momocat, Eldresh, πnanas™, ゴゴゴ 湮, Phreia, Killer Queen, Arl, Halpy, dumbling, MIZZ, scribblehead, Synepz, Kaervek, passingBy1025, SinnerPen
 	_hollow_circles_</span>
 	<br><br>
-	<<icon "chocolates.png">>Hikari Submissions | <br><span class="gold">
+	<<icon "chocolates.png">>Hikari 제출작 | <br><span class="gold">
 	MomoCat, Mizzy, aqua, okbd321, llly!!, Killer Queen, ellie, =.=喵喵, ゴゴゴ 湮, oketan, tboiggh, Kaya, jiagudadi, Whorticulture and The Little Butler</span>
 	<br><br>
- 	<<icon "chocolates.png">>Goose Community Sprite Compilation | <span class="gold">Snowy</span> Goose Community Submission Creators | <br><span class="gold">
-	Aile, AliceAray, AMR, Anonymous, Arkar1234, Art Of Heart, Baggy, Bam, Bea, Bellaireʕ •ᴥ•ʔ, Bibi, Birdy, Bowsni, Bunnylily, Chou Chou, Cottage, Could be a Dog, Cucumbermelon, Dalada, 
-	Dead, Deadmeat, Diachuu, DianaWinters, Drow, Drunked Owly, Dumbling, Dxmoni, En, ERRORCOFFIN, F4ll, Feral Fae, Fox Familiar, Froggy, Funkabunk, Gaia, Gaiamuxing, Gekkou, Germa, 
-	Ghostmortemm, Gwang, Hane, Halpy, Hayanwp, Hourglass, Hwachangful, Inori, Isari, Jiajiajiaxieelajiao, Jok3r, Jowo, Jaune, Kaer, KC, KeChap, Kmagi, Knpeo, Kio, Kitten, Kohi, Korrupt Xian, 
-	Koyo, Lark, Leni, Lily-Luc, Lilym4ido, Lore_potato, Lulang, Luos, Macca, M ghost, Maido, Mango, Mars, Maxinne, Mela, Minh Dollar, Mirrors_And_Mornings, MJ, Moisakuralol, 
-	Momo, Monibun, Morgueço, Moth, Mozumelody, Mundane Guy, Mysnow, MY, Naomi, Nath, Noanne, Noodle, Noufi, Novacyber, Nyain, PeachParfait, P0yomiN, Pink Prince, Poruda, Potato, 
-	Psyncer, Pudding, Pupu, Puyo, Puppycat, R_R_Rr, Racoonboi, Rasu, Reptilia, Rinnarunnn, Rita, Ruby, Rye, Sage, Sam Storiez, Samsung Fridge, Sansongjang, Sasha, Satori Komeji, 
-	Scrappy, Shadow, Sh1n, Shimadzu, Sixth, Sleepy_Lita, Snowconemonster, Snowy, Solace, SRK, Stampede, Stygian, Sucrose, Sugarpawzi, Süda_uffe, Swindle, Taechan, Tauuki, Ursulaskiss, 
+ 	<<icon "chocolates.png">>Goose 커뮤니티 스프라이트 모음 | <span class="gold">Snowy</span> Goose 커뮤니티 제출자 | <br><span class="gold">
+	Aile, AliceAray, AMR, Anonymous, Arkar1234, Art Of Heart, Baggy, Bam, Bea, Bellaireʕ •ᴥ•ʔ, Bibi, Birdy, Bowsni, Bunnylily, Chou Chou, Cottage, Could be a Dog, Cucumbermelon, Dalada,
+	Dead, Deadmeat, Diachuu, DianaWinters, Drow, Drunked Owly, Dumbling, Dxmoni, En, ERRORCOFFIN, F4ll, Feral Fae, Fox Familiar, Froggy, Funkabunk, Gaia, Gaiamuxing, Gekkou, Germa,
+	Ghostmortemm, Gwang, Hane, Halpy, Hayanwp, Hourglass, Hwachangful, Inori, Isari, Jiajiajiaxieelajiao, Jok3r, Jowo, Jaune, Kaer, KC, KeChap, Kmagi, Knpeo, Kio, Kitten, Kohi, Korrupt Xian,
+	Koyo, Lark, Leni, Lily-Luc, Lilym4ido, Lore_potato, Lulang, Luos, Macca, M ghost, Maido, Mango, Mars, Maxinne, Mela, Minh Dollar, Mirrors_And_Mornings, MJ, Moisakuralol,
+	Momo, Monibun, Morgueço, Moth, Mozumelody, Mundane Guy, Mysnow, MY, Naomi, Nath, Noanne, Noodle, Noufi, Novacyber, Nyain, PeachParfait, P0yomiN, Pink Prince, Poruda, Potato,
+	Psyncer, Pudding, Pupu, Puyo, Puppycat, R_R_Rr, Racoonboi, Rasu, Reptilia, Rinnarunnn, Rita, Ruby, Rye, Sage, Sam Storiez, Samsung Fridge, Sansongjang, Sasha, Satori Komeji,
+	Scrappy, Shadow, Sh1n, Shimadzu, Sixth, Sleepy_Lita, Snowconemonster, Snowy, Solace, SRK, Stampede, Stygian, Sucrose, Sugarpawzi, Süda_uffe, Swindle, Taechan, Tauuki, Ursulaskiss,
 	Vipi, Washabi, Willow_Kisser, Worldendunit, Yam Fox, Yhara, Yoon, Yuckyh, Yukiso, Yunyun, Yywkka, Zero_Otherian, Zombie, """(__=__=___)"""</span> /* triple double quotes necessary for the () to not break everything -Bec */
 	<br><br>
-	<<icon "chocolates.png">>Mysterious Community Sprite Compilation | <span class="gold">Frostberg</span> Mysterious Community Submission Creators | """[WIP]"""
+	<<icon "chocolates.png">>Mysterious 커뮤니티 스프라이트 모음 | <span class="gold">Frostberg</span> Mysterious 커뮤니티 제출자 | """[WIP]"""
 	<br><br>
-	<<icon "chocolates.png">>Named NPC Display Sprite Compilation | <span class="gold">Karl/Sei</span> Named NPC Display Sprite Creators | <br><span class="gold">
-	.satoshikomeji, anaxmii, ash, awakeyc_c, b9k4k, bluechiizu, cloversnipe, colorless green, cosmicspacemoth, cucumbermelon, dol_comix, eldresh, gardeniora, germa, HUNGRY, ignorance_bliss, 
+	<<icon "chocolates.png">>네임드 NPC 표시 스프라이트 모음 | <span class="gold">Karl/Sei</span> 네임드 NPC 표시 스프라이트 제작자 | <br><span class="gold">
+	.satoshikomeji, anaxmii, ash, awakeyc_c, b9k4k, bluechiizu, cloversnipe, colorless green, cosmicspacemoth, cucumbermelon, dol_comix, eldresh, gardeniora, germa, HUNGRY, ignorance_bliss,
 	ikan_busuk, illumihoti, inori_218176, k3nj_dih50cm, kkamikurisa, konpm, leni, lzbear, Mad.W.D, maganat, morguesuite, mozumelody, mxchinery, nessahoney, P0yomi, pang, pinkprince,
 	pot8tochip, raccoonboi, RazzPixel, Rei, rein4352, reisen, ryonanoia, samzstoriez, sasavirus, shibal070326, shio0326, sincerewords, snowconemonster, someborb, soup, SquidGunnn,
 	comptar, wamy, y2kanexp, zero</span>
 	<br><br>
-	__''Retired Imagepacks''__
+	__''종료된 이미지 팩''__
 	<br>
 	- Paril Old Sideview (Saver Meal) | <span class="gold">The Immortal Heaven-Ascended Sword God Paril, zubonko, Blaine, MIZZ, jackeloko, squirtacus and masada</span>
 	<br>
@@ -132,21 +132,21 @@
 	<br>
 	- Mellow's Visual Combat Rework | <span class="gold">Mellow</span>
 	<br>
-	- Submission Creators | <span class="gold">Yiou, πnanas™, meihwa, Nara, AHugeCat, Seaslug, Mechamuffin</span>
+	- 제출자 | <span class="gold">Yiou, πnanas™, meihwa, Nara, AHugeCat, Seaslug, Mechamuffin</span>
 	<br><br>
 	<span id="devNote3">
-		<<link "Dev Note">>
-			<<replace #devNote3>>Dev Note: I know its not part of my mod but I use it for any of my playthroughs and they're even included in my dolmods page so here you go! Just a small token of appreciation :)<</replace>>
+		<<link "개발자 메모">>
+			<<replace #devNote3>>개발자 메모: 제 모드의 일부는 아니지만 저는 어떤 플레이에서도 이걸 쓰고 있고, 심지어 제 dolmods 페이지에도 들어 있어서 이렇게 넣었어요! 작은 감사의 표시예요 :)<</replace>>
 		<</link>>
 	</span>
 	<br><br>
 	__''DOLMods:''__
 	<br>
-		- Everything | <span class="gold">Nameless Magician</span>
+		- 전부 | <span class="gold">Nameless Magician</span>
 	<br><br>
 	<span id="devNote4">
-		<<link "Dev Note">>
-			<<replace #devNote4>>Dev Note: Website hosting would've been a lot more annoying without dolmods xD<</replace>>
+		<<link "개발자 메모">>
+			<<replace #devNote4>>개발자 메모: dolmods가 없었다면 웹사이트 호스팅이 훨씬 더 귀찮았을 거예요 xD<</replace>>
 		<</link>>
 	</span>
 	<br><br>
@@ -250,9 +250,9 @@
 	Russell
 	<br><br>
 		<span id="devNote5">
-		<<link "Pssst">>
+		<<link "저기">>
 			<<replace #devNote5>>
-				Shameless Plug: Check out my Patreon page and be a Patron to have your name plastered here! :D
+				뻔뻔한 홍보: 제 Patreon 페이지를 확인하고 후원자가 되어 여기에 이름을 올려 보세요! :D
 				<br>
 				[[https://www.patreon.com/DegreesofLewdityPlus| "https://www.patreon.com/DegreesofLewdityPlus"]]
 			<</replace>>

@@ -200,7 +200,7 @@
 		<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 			"너-너한테 어울릴 거라고 생각했어." 당신이 말한다.
 		<<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-			"I thought it'd suit you," you say.
+			"네게 어울릴 것 같아서." 당신이 말한다.
 		<<elseif $speech_attitude is "bratty">>
 			"한번 입어봐." 당신이 말한다. "입은 모습이 마음에 들 거야."
 		<<else>>
@@ -270,7 +270,7 @@
 		<<if $speech_attitude is "meek">>
 			"너-너한테 어울릴 거라고 생각했어." 당신이 말한다.
 		<<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-			"I thought it'd suit you," you say.
+			"네게 어울릴 것 같아서." 당신이 말한다.
 		<<elseif $speech_attitude is "bratty">>
 			"한번 입어봐." 당신이 말한다. "입은 모습이 마음에 들 거야."
 		<<else>>

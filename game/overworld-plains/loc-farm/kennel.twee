@@ -32,7 +32,7 @@
         <<kennel_intro>>
 		<br><br>
 	<<elseif $bunny gte 5>>
-		It doesn't take long for the first <<beasttype>> to notice you. Your rabbit-like smell must be betraying your presence.
+		얼마 지나지 않아 첫 번째 <<beasttype>>【이가】 당신을 알아챈다. 당신의 토끼 같은 냄새가 존재를 들키게 하는 모양이다.
 		<br><br>
 
 		<<kennel_intro>>

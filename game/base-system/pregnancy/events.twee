@@ -1019,7 +1019,7 @@
 <<effects>><<run statusCheck("Gwylan")>>
 <<if $phase is 1>>
 	<<switch $speech_attitude>>
-		<<case "meek" "special" "shy">>"Shouldn't I be seeing a doctor?!" You ask.
+		<<case "meek" "special" "shy">>"병원에 가야 하는 거 아니에요?!" 당신이 묻는다.
 		<<case "bratty">>"그윌란, 제발 구급차 좀 불러줘. 아니면 경찰이라도. 병원에 데려다줄 사람이면 누구든."
 		<<default>>"그윌란, 왜 날 병원에 데려가지 않는 거야?"
 	<</switch>>
@@ -1419,7 +1419,7 @@
 	<<case "Farm Shed">>
 		당신은 임신 테스트기를 사용한다. 결과가 나오기를 기다리며, 감히 눈을 떼지 못한 채 손에 든 테스트기를 뚫어지게 쳐다본다.
 	<<case "Flats Poppy Bathroom">>
-		You take the pregnancy test in Poppy's bathroom. You stare at the test in your hand, not daring to look away, waiting for it to finish.
+		당신은 포피의 욕실에서 임신 테스트기를 사용한다. 결과가 나오기를 기다리며, 감히 눈을 떼지 못한 채 손에 든 테스트기를 뚫어지게 쳐다본다.
 	<<default>>
 		당신은 임신 테스트기를 사용한다. 결과가 나오기를 기다리며, 감히 눈을 떼지 못한 채 손에 든 테스트기를 뚫어지게 쳐다본다.
 <</switch>>

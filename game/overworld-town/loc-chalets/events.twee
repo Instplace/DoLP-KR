@@ -54,7 +54,7 @@
 	샬레 맨 끝 선반에서 옷을 찾는다.<<dry_full>> 이제 제대로 차려입고 청소한다. <<persons>> 음흉한 시선과 히죽거림만 아니었다면 평범한 일이었을 것이다.
 	<br><br>
 
-	<<link [[Next|Chalets]]>><<endevent>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
+	<<link [[다음|Chalets]]>><<endevent>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><</link>>
 	<br>
 <<else>>
 	당신은 기다린다. 1분이 지나고, 또 1분이, 그리고 또 1분이 흐른다. 불안감이 커져 문을 두드린다. 대답이 없다. <span class="pink">옷을 돌려받지 못할 것 같다.</span>
@@ -164,7 +164,7 @@
 마른 옷을 찾아 입는다. 이제 제대로 차려입고 샬레를 청소한다. 음흉한 시선과 히죽거림만 아니었다면 평범한 일이었을 것이다.
 <br><br>
 
-<<link [[Next|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<endevent>><</link>>
+<<link [[다음|Chalets]]>><<set _pass to Math.round(60 * Math.max(1 - ((currentSkillValue('housekeeping') / 1000) * 0.4), 0.2))>><<pass _pass>><<set $chalets_bags += 1>><<endevent>><</link>>
 <br>
 
 :: Chalets Work Cash Count

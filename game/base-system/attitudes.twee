@@ -31,29 +31,29 @@
 		<div class="settingsToggleItem">
 			<span class="gold bold">어떤 태도로 다른 사람들과 대화합니까?</span>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "docile" autocheck>> <span class="pink">Docile</span></label>
+			<label><<radiobutton "$speech_attitude_special" "docile" autocheck>> <span class="pink">온순한</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "meek" autocheck>> <span class="meek">Meek</span></label>
+			<label><<radiobutton "$speech_attitude_special" "meek" autocheck>> <span class="meek">순종적</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "shy" autocheck>> <span class="purple">Shy</span></label>
+			<label><<radiobutton "$speech_attitude_special" "shy" autocheck>> <span class="purple">수줍은</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "polite" autocheck>> <span class="blue">Polite</span></label>
+			<label><<radiobutton "$speech_attitude_special" "polite" autocheck>> <span class="blue">공손한</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "neutral" autocheck>> Neutral</label><<set $custom_demeanor = "neutral">>
+			<label><<radiobutton "$speech_attitude_special" "neutral" autocheck>> 중립적</label><<set $custom_demeanor = "neutral">>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "confident" autocheck>> <span class="gold">Confident</span></label>
+			<label><<radiobutton "$speech_attitude_special" "confident" autocheck>> <span class="gold">자신만만한</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "bratty" autocheck>> <span class="brat">Bratty</span></label>
+			<label><<radiobutton "$speech_attitude_special" "bratty" autocheck>> <span class="brat">반항적</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "cruel" autocheck>> <span class="red">Cruel</span></label>
+			<label><<radiobutton "$speech_attitude_special" "cruel" autocheck>> <span class="red">잔혹한</span></label>
 			<br><hr>
-			<label><<radiobutton "$speech_attitude_special" "flamboyant" autocheck>> <span class="pink">Flamboyant</span></label>
+			<label><<radiobutton "$speech_attitude_special" "flamboyant" autocheck>> <span class="pink">화려한</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "special" autocheck>> <span class="cyan">Special</span></label>
+			<label><<radiobutton "$speech_attitude_special" "special" autocheck>> <span class="cyan">특별한</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "capricious" autocheck>> <span class="lustful">Capricious</span></label>
+			<label><<radiobutton "$speech_attitude_special" "capricious" autocheck>> <span class="lustful">변덕스러운</span></label>
 			<br>
-			<label><<radiobutton "$speech_attitude_special" "fickle" autocheck>> <span class="lustful">Fickle</span></label>
+			<label><<radiobutton "$speech_attitude_special" "fickle" autocheck>> <span class="lustful">오락가락하는</span></label>
 			<br>
 			<<if $avery_mansion and $avery_fate isnot "fallen" and $avery_fate is not "kicked">>
 				<<if $attitudesControl.unlockAveryMeek>>
@@ -109,9 +109,9 @@
 			<</if>>
 			<br>
 			<<if $attitudesControl.unlockExhibitionismUnderwearPublic or $uncomfortable.underwearPublic is false>>
-				<label><<checkbox "$uncomfortable.underwearPublic" false true autocheck>> Having your underwear seen by others in public</label> <<note "Experimental" "red">>
+				<label><<checkbox "$uncomfortable.underwearPublic" false true autocheck>> 공공장소에서 남들이 내 속옷을 보는 것</label> <<note "실험적" "red">>
 			<<else>>
-				<input type="checkbox" checked disabled /> <span class="black">Having your underwear seen by others in public</span> <<note "Experimental" "red">>
+				<input type="checkbox" checked disabled /> <span class="black">공공장소에서 남들이 내 속옷을 보는 것</span> <<note "실험적" "red">>
 				<br>
 				<span class="blue small-description"><i>더 높은 노출증이 필요합니다.</i></span>
 			<</if>>
@@ -125,9 +125,9 @@
 			<</if>>
 			<br>
 			<<if $attitudesControl.unlockExhibitionismNudePublic or $uncomfortable.nudePublic is false>>
-				<label><<checkbox "$uncomfortable.nudePublic" false true autocheck>> Being nude in front of others in public</label> <<note "Experimental" "red">>
+				<label><<checkbox "$uncomfortable.nudePublic" false true autocheck>> 공공장소에서 남들 앞에서 나체가 되는 것</label> <<note "실험적" "red">>
 			<<else>>
-				<input type="checkbox" checked disabled /> <span class="black">Being nude in front of others in public</span> <<note "Experimental" "red">>
+				<input type="checkbox" checked disabled /> <span class="black">공공장소에서 남들 앞에서 나체가 되는 것</span> <<note "실험적" "red">>
 				<br>
 				<span class="blue small-description"><i>더 높은 노출증이 필요합니다.</i></span>
 			<</if>>
@@ -238,38 +238,38 @@
 
 	<hr>
 	<div class="settingsGrid">
-		<div class="settingsHeader">DoLP Attitudes Settings</div>
+		<div class="settingsHeader">DoLP 태도 설정</div>
 		<div class="settingsToggleItemWide">
 			<<if $attitudesControl.unlockSadoMaso>>
-				<label><<checkbox "$uncomfortable.sadoMaso" false true autocheck>> You're uncomfortable reflecting on your depravity. <i>If unchecked, sadism and masochism will not decay.</i></label>
+				<label><<checkbox "$uncomfortable.sadoMaso" false true autocheck>> 당신은 자신의 타락을 돌아보는 것이 불편합니다. <i>체크 해제하면 가학 성향과 피학 성향이 감소하지 않습니다.</i></label>
 			<<else>>
-				<input type="checkbox" checked disabled /> <span class="black">You're uncomfortable reflecting on your depravity.</span>
+				<input type="checkbox" checked disabled /> <span class="black">당신은 자신의 타락을 돌아보는 것이 불편합니다.</span>
 				<br>
-				<span class="black"><i>Unlock level 2 sadism or masochism.</i></span>
+				<span class="black"><i>가학 성향 또는 피학 성향 2단계가 필요합니다.</i></span>
 			<</if>>
 			<br>
 
 			<<if $attitudesControl.unlockWillpower>>
-				<label><<checkbox "$willpowerDecay" false true autocheck>> Your willpower wanes. <i>If unchecked, willpower will not decay.</i></label>
+				<label><<checkbox "$willpowerDecay" false true autocheck>> 당신의 의지력은 약해집니다. <i>체크 해제하면 의지력이 감소하지 않습니다.</i></label>
 			<<else>>
-				<input type="checkbox" checked disabled /> <span class="black"> Your willpower wanes.</span>
+				<input type="checkbox" checked disabled /> <span class="black"> 당신의 의지력은 약해집니다.</span>
 				<br>
-				<span class="black"><i>Unlock level 4 willpower.</i></span>
+				<span class="black"><i>의지력 4단계가 필요합니다.</i></span>
 			<</if>>
 			<br>
 
 			<<if $combatExtended.reverseRape is 1>>
 				<<if hasSexStat("promiscuity", 5)>>
-					<label><<checkbox "$reverseRapeOptOut" 0 1 autocheck>> You seek to turn the tables on everyone. <i>If unchecked, reverse rape will not initiate by default.</i></label>
+					<label><<checkbox "$reverseRapeOptOut" 0 1 autocheck>> 당신은 모든 사람에게 형세를 뒤집으려 합니다. <i>체크 해제하면 역강간이 기본적으로 시작되지 않습니다.</i></label>
 				<<else>>
-					<input type="checkbox" checked disabled /> <span class="black"> You can't fathom trying to turn the tables on your attackers.</span>
+					<input type="checkbox" checked disabled /> <span class="black"> 당신은 자신을 공격한 자들에게 형세를 뒤집는 일은 상상도 할 수 없습니다.</span>
 					<br>
-					<span class="black"><i>Unlock level 5 promiscuity.</i></span>
+					<span class="black"><i>음란 5단계가 필요합니다.</i></span>
 				<</if>>
 			<</if>>
 			<br>
 
-			<label><<checkbox "$willpowerCum" 0 1 autocheck>> You cum even if you resist the stun. <i>If unchecked, you will not cum if you succeed the willpower check during an orgasm.</i></label>
+			<label><<checkbox "$willpowerCum" 0 1 autocheck>> 기절 효과를 버텨내도 절정에 이릅니다. <i>체크 해제하면 절정 중 의지력 판정에 성공했을 때 절정에 이르지 않습니다.</i></label>
 		</div>
 <</widget>>
 
@@ -449,26 +449,26 @@
 	<<if _args[0] is true>>
 		<<set _leftHand["주먹질한다"] to "lefthit">>
 		<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1>>
-			<<set _leftHand["Umbrella"] to "leftumbrella">>
+			<<set _leftHand["우산으로 막는다"] to "leftumbrella">>
 		<</if>>
 		<<if $combatExtended.blocking is 1>>
-			<<set _leftHand["Block"] to "leftblock">>
+			<<set _leftHand["막는다"] to "leftblock">>
 		<</if>>
 		<<if $combatExtended.countering is 1>>
-			<<set _leftHand["Counter"] to "leftcounter">>
+			<<set _leftHand["받아친다"] to "leftcounter">>
 		<</if>>
 		<<if $combatExtended.feinting is 1>>
-			<<set _leftHand["Feint"] to "leftfeint">>
+			<<set _leftHand["페이크를 건다"] to "leftfeint">>
 		<</if>>
 		<<if $combatExtended.hookpunching is 1 and $combatExtended.stabilityLost is 0>>
-			<<set _leftHand["Hook Punch"] to "lefthookpunch">>
+			<<set _leftHand["훅을 날린다"] to "lefthookpunch">>
 		<</if>>
 		<<set _leftHand["목에서 손을 떼어낸다"] to "stopchokenoncon">>
-		<<set _leftHand["Pull their face off your crotch"] to "stoporalnoncon">>
+		<<set _leftHand["밀어서 얼굴을 당신의 사타구니에서 떼어낸다"] to "stoporalnoncon">>
 	<<else>>
 		<<set _leftHand["상대의 손을 목에 누른다"] to "keepchoke">>
 		<<set _leftHand["목에서 손을 치운다"] to "stopchoke">>
-		<<set _leftHand["Take their face off your crotch"] to "stoporal">>
+		<<set _leftHand["얼굴을 당신의 사타구니에서 떼어낸다"] to "stoporal">>
 	<</if>>
 	<<set _leftHand["얼굴을 가린다"] to "leftcoverface">>
 	<<set _leftHand["카메라를 향해 포즈를 취한다"] to "leftcamerapose">>
@@ -515,26 +515,26 @@
 	<<if _args[0] is true>>
 		<<set _rightHand["주먹질한다"] to "righthit">>
 		<<if $worn.handheld.type.includes("rainproof") and $worn.handheld.integrity gte 1>>
-			<<set _rightHand["Umbrella"] to "rightumbrella">>
+			<<set _rightHand["우산으로 막는다"] to "rightumbrella">>
 		<</if>>
 		<<if $combatExtended.blocking is 1>>
-			<<set _rightHand["Block"] to "rightblock">>
+			<<set _rightHand["막는다"] to "rightblock">>
 		<</if>>
 		<<if $combatExtended.countering is 1>>
-			<<set _rightHand["Counter"] to "rightcounter">>
+			<<set _rightHand["받아친다"] to "rightcounter">>
 		<</if>>
 		<<if $combatExtended.feinting is 1>>
-			<<set _rightHand["Feint"] to "rightfeint">>
+			<<set _rightHand["페이크를 건다"] to "rightfeint">>
 		<</if>>
 		<<if $combatExtended.hookpunching is 1 and $combatExtended.stabilityLost is 0>>
-			<<set _rightHand["Hook Punch"] to "righthookpunch">>
+			<<set _rightHand["훅을 날린다"] to "righthookpunch">>
 		<</if>>
 		<<set _rightHand["목에서 손을 떼어낸다"] to "stopchokenoncon">>
-		<<set _rightHand["Pull their face off your crotch"] to "stoporalnoncon">>
+		<<set _rightHand["밀어서 얼굴을 당신의 사타구니에서 떼어낸다"] to "stoporalnoncon">>
 	<<else>>
 		<<set _rightHand["상대의 손을 목에 누른다"] to "keepchoke">>
 		<<set _rightHand["목에서 손을 치운다"] to "stopchoke">>
-		<<set _rightHand["Take their face off your crotch"] to "stoporal">>
+		<<set _rightHand["얼굴을 당신의 사타구니에서 떼어낸다"] to "stoporal">>
 	<</if>>
 	<<set _rightHand["얼굴을 가린다"] to "rightcoverface">>
 	<<set _rightHand["카메라를 향해 포즈를 취한다"] to "rightcamerapose">>
@@ -576,9 +576,9 @@
 	}>>
 	<<if _args[0] is true>>
 		<<set _feet["발로 찬다"] to "kick">>
-		<<set _feet["Dodge"] to "dodge">>
-		<<set _feet["Plant"] to "plant">>
-		<<set _feet["Submit"] to "submit">>
+		<<set _feet["피한다"] to "dodge">>
+		<<set _feet["버틴다"] to "plant">>
+		<<set _feet["굴복한다"] to "submit">>
 	<</if>>
 	<<if hasSexStat("promiscuity", 3) or hasSexStat("deviancy", 3) or _args[0] is true>>
 		<<set _feet["상대의 자지를 움켜쥔다"] to "grab">>
@@ -616,10 +616,10 @@
 		<<set _mouth["용서한다"] to "forgive">>
 	<</if>>
 	<<if ((($fallenangel gte 2 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") or $fallenangeltf is 1 or $fallenangelplustf is 1) and $fallenangelretribution isnot 1>>
-		<<set _mouth["Retribution"] to "retribution">>
+		<<set _mouth["응징한다"] to "retribution">>
 	<</if>>
 	<<if ((($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon") or $demontf is 1) and $demonseduce isnot 1>>
-		<<set _mouth["Seduce"] to "seduce">>
+		<<set _mouth["유혹한다"] to "seduce">>
 	<</if>>
 	<<if (($fallenangel gte 4 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "fallenAngel") and $angelforgive isnot 1 and _args[0] is true>>
 		<<set _mouth["깎아내린다"] to "disparage">>
@@ -992,9 +992,9 @@
 		<<if $awarelevel gte 3>>
 			<<if $loveInterest.secondary is "None">>
 				<<set $loveInterest.tertiary to "None">>
-				<span class="black">You need to choose secondary love interest before you can choose a tertiary.</span>
+				<span class="black">세 번째 연인을 선택하기 전에 두 번째 연인을 선택해야 합니다.</span>
 			<<else>>
-			Who do you consider to be your tertiary love interest?
+			당신은 누구를 세 번째 연인으로 생각합니까?
 			<br>
 			<<listbox "$loveInterest.tertiary" autoselect>>
 				<<optionsfrom _formatLI(_potentialLoveInterests)>>
@@ -1013,9 +1013,9 @@
 		<<if $awarelevel gte 4>>
 			<<if $loveInterest.tertiary is "None">>
 				<<set $loveInterest.quarternary to "None">>
-				<span class="black">You need to choose tertiary love interest before you can choose a quarternary.</span>
+				<span class="black">네 번째 연인을 선택하기 전에 세 번째 연인을 선택해야 합니다.</span>
 			<<else>>
-			Who do you consider to be your quarternary love interest?
+			당신은 누구를 네 번째 연인으로 생각합니까?
 			<br>
 			<<listbox "$loveInterest.quarternary" autoselect>>
 				<<optionsfrom _potentialLoveInterests>>
@@ -1026,7 +1026,7 @@
 			<</if>>
 			<br>
 		<<elseif _awareChecked isnot 1>>
-			<span class="black">You don't consider it possible to have more than three love interests.</span>
+			<span class="black">연인이 네 명일 수 없다고 생각합니다.</span>
 			<<set $loveInterest.quarternary to "None">><<set _awareChecked to 1>>
 			<br>
 		<</if>>
@@ -1034,9 +1034,9 @@
 		<<if $awarelevel gte 5>>
 			<<if $loveInterest.quarternary is "None">>
 				<<set $loveInterest.quinary to "None">>
-				<span class="black">You need to choose quarternary love interest before you can choose a quinary.</span>
+				<span class="black">다섯 번째 연인을 선택하기 전에 네 번째 연인을 선택해야 합니다.</span>
 			<<else>>
-			Who do you consider to be your quinary love interest?
+			당신은 누구를 다섯 번째 연인으로 생각합니까?
 			<br>
 			<<listbox "$loveInterest.quinary" autoselect>>
 				<<optionsfrom _potentialLoveInterests>>
@@ -1047,7 +1047,7 @@
 			<</if>>
 			<br>
 		<<elseif _awareChecked isnot 1>>
-			<span class="black">You don't consider it possible to have more than four love interests.</span>
+			<span class="black">연인이 다섯 명일 수 없다고 생각합니다.</span>
 			<<set $loveInterest.quinary to "None">><<set _awareChecked to 1>>
 			<br>
 		<</if>>
@@ -1055,9 +1055,9 @@
 		<<if $awarelevel gte 6>>
 			<<if $loveInterest.quinary is "None">>
 				<<set $loveInterest.senary to "None">>
-				<span class="black">You need to choose quinary love interest before you can choose a senary.</span>
+				<span class="black">여섯 번째 연인을 선택하기 전에 다섯 번째 연인을 선택해야 합니다.</span>
 			<<else>>
-			Who do you consider to be your senary love interest?
+			당신은 누구를 여섯 번째 연인으로 생각합니까?
 			<br>
 			<<listbox "$loveInterest.senary" autoselect>>
 				<<optionsfrom _potentialLoveInterests>>
@@ -1065,7 +1065,7 @@
 			<</if>>
 			<br>
 		<<elseif _awareChecked isnot 1>>
-			<span class="black">You don't consider it possible to have more than five love interests.</span>
+			<span class="black">연인이 여섯 명일 수 없다고 생각합니다.</span>
 			<<set $loveInterest.senary to "None">><<set _awareChecked to 1>>
 			<br>
 		<</if>>
@@ -1108,7 +1108,7 @@
 			<<case "Sydney">><<nnpc_him "Sydney">>【을를】 순수하게 지킬 것인가요, 아니면 함께 타락할 것인가요?
 			<<case "Eden">>위험하다는 느낌은 지나갔고, 당신은 여기서 더 안전하다고 느낍니다.
 			<<case "Avery">>당신들은 세상에서 출세하고 있다는 느낌을 받습니다.
-			<<case "Poppy">>The thought of it makes your heart flutter.
+			<<case "Poppy">>그 생각만 해도 가슴이 두근거립니다.
 			<<case "Black Wolf">><<nnpc_He "Black Wolf">>【은는】 짝을 찾게 되어 기뻐하는 것 같습니다.
 			<<case "Great Hawk">>이런 식으로 <<if $monster is 1>><<nnpc_wife "Great Hawk">><<else>>짝을<</if>> 찾게 될 줄은 몰랐지만, 어쨌든 기분이 고양됩니다.
 			<<case "Alex">>어쨌든, 함께 살 수 있습니다.
@@ -1262,7 +1262,7 @@
 	That function rolls $speechDailyAttitude and queues a "Today you feel especially X." line via $speechDailyMessage / $speechDailyMessagePending
 	
 	This widget just READS $speechDailyAttitude; it does not roll or clear it
-	If it happens to be unset (fresh save, or the player switched to "fickle" mid-day before the next day pass runs), 
+	If it happens to be unset (fresh save, or the player switched to "fickle" mid-day before the next day pass runs),
 	we fall back to "neutral" for this call so the daily pick and its announcement stay in sync.
 -->
 <<widget "speechresolve">>

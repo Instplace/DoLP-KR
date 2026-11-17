@@ -352,7 +352,7 @@
 	시드니와 대화한다. "일하는 동안 잡담하면 안 되긴 하지만..." <<He>>【은는】 책 몇 권을 옆으로 밀고 당신을 바라본다. <<hes>> 당신과 제대로 눈을 마주친 건 처음이다. "휴식은 얻어낸 거니까요."
 <<elseif C.npc.Sydney.love gte 25 and $sydneyChatState is 3 and $sydneyromance isnot 1>>
 	<<set $sydneyChatState to 4>>
-	You chat with Sydney. "No one else has made such an effort to get to know me like this. Not in a long time, at least. I appreciate it." <<He>> holds up <<his>> holy pendant, kisses it, and places it against your forehead. "Blessings." <<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>><<stress 6>><<gstress>><<else>><<trauma -3>><<ltrauma>><</if>>
+	시드니와 대화한다. "이렇게 저를 알아가려 애써 준 사람은 아무도 없었어요. 적어도 아주 오랫동안은요. 고마워요." <<He>>【은는】 <<his>> 성스러운 펜던트를 들어 올려 입을 맞추고, 그것을 당신의 이마에 댄다. "축복을." <<if (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>><<stress 6>><<gstress>><<else>><<trauma -3>><<ltrauma>><</if>>
 <<elseif C.npc.Sydney.love gte 40 and !["early","first","late"].includes($schoolstate) and !$daily.sydney.SirrisLibrary and $rng gte 88>>
 	<<set $daily.sydney.SirrisLibrary to true>>
 	시드니와 대화한다.
@@ -660,12 +660,12 @@
 									<<npcincr Sydney lust 1>><<npcincr Sydney purity -2>><<gslust>><<lspurity>>
 								<</if>>
 							<<case "Whitney's collar" "Whitney's collar with leash">>
-								Sydney glares at your collar, "Why would you be wearing this, Did <<nnpc_his "Whitney">> force you"
+								시드니가 당신의 목에 걸린 것을 노려본다. "왜 이걸 하고 계신 거죠? 휘트니가 억지로 시켰나요?"
 								<<if _sydneyStatus.includes("corrupt") and $sydneyromance is 1>>
-									<<He>> clicks <<his>> tongue "Whitney's pet?, I though you were my pet?"
+									<<He>>【은는】 혀를 찬다. "휘트니의 애완동물? 넌 내 애완동물인 줄 알았는데?"
 									<<npcincr Sydney lust 2>><<npcincr Sydney purity -3>><<gslust>><<lspurity>>
 								<<else>>
-									<<he>> asks<<if _sydneyStatus.includes("Lust")>>, blushing<</if>>. <<He>> tugs on the leash. "You should take it off."
+									<<he>>【이가】 <<if _sydneyStatus.includes("Lust")>>얼굴을 붉히며 <</if>>묻는다. <<He>>【은는】 리드를 잡아당긴다. "그건 벗는 게 좋겠어요."
 									<<npcincr Sydney purity -2>><<lspurity>>
 								<</if>>
 							<<case "familiar collar">>
@@ -1266,9 +1266,9 @@
 			<<link [[거절한다|Sydney Flirt Book Refuse]]>><<npcincr Sydney love -1>><<npcincr Sydney purity 1>><</link>><<llove>><<gspurity>>
 			<br>
 			<<if $bodysize gte 4>>
-				You're definitely tall enough to just grab the book.
+				당신은 키가 충분히 커서 그냥 책을 잡을 수 있다.
 				<br>
-				<<link [[Reach up and grab it|Sydney Flirt Book Giant]]>><<npcincr Sydney love 1>><<npcincr Sydney lust 1>><</link>><<glove>><<glust>>
+				<<link [[손을 뻗어 책을 집는다|Sydney Flirt Book Giant]]>><<npcincr Sydney love 1>><<npcincr Sydney lust 1>><</link>><<glove>><<glust>>
 				<br>
 			<<elseif $bodysize gte 3>>
 				당신은 키가 커서 그냥 책을 잡을 수 있을 것 같다.
@@ -1398,7 +1398,7 @@
 
 :: Sydney Flirt Book Giant
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>><<run statusCheck("Sydney")>>
-You easily grab the book and hand it to Sydney.
+당신은 쉽게 책을 잡아 시드니에게 건넨다.
 <br><br>
 <<He>>【은는】 눈을 두 번 깜빡인다. "그렇게 해도 되네요." <<He>>【은는】 갑자기 당신 앞에서 작아진 듯한 기분이 든 모양이고, <<his>> 얼굴이 붉어지는 것이 보인다.
 <<if _sydneyStatus.includes("corrupt") and $sydneyromance is 1>>
@@ -1998,7 +1998,7 @@ You easily grab the book and hand it to Sydney.
 	<br><br>
 	"무슨 말씀이세요? 어떻게 그게 당신 잘못일 수가 있죠?"
 	<br><br>
-	"I'm the one that stole from the library." <<if $bookStolenKnown isnot undefined>><<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<set $studyBooks.stolen.RaulAndJanet to 0>><<set $studyBooks.stolen.pinch to 0>><<unset $sydneyStolenKnown>><<set $bookStolenKnown += 1>><<set $recentReturnTimer to 14>>You hand <<him>> the stolen <<if $studyBooks.stolen.count gte 2>>books<<else>>book<</if>>.<<set $studyBooks.stolen.count to 0>><</if>><</if>>
+	"도서관에서 훔친 건 저예요." <<if $bookStolenKnown isnot undefined>><<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<set $studyBooks.stolen.RaulAndJanet to 0>><<set $studyBooks.stolen.pinch to 0>><<unset $sydneyStolenKnown>><<set $bookStolenKnown += 1>><<set $recentReturnTimer to 14>>당신은 <<him>>에게 훔친 <<if $studyBooks.stolen.count gte 2>>책들<<else>>책<</if>>【을를】 건넨다.<<set $studyBooks.stolen.count to 0>><</if>><</if>>
 	<br><br>
 	<<if C.npc.Sydney.love gte 40>>
 		시드니는 충격받은 표정으로 당신을 보았지만, 이내 그 표정은 사라진다. "정말 못된 짓이었어요. 당신에게 실망했지만, 결국엔 솔직하게 말해줘서 고마워요. 당신은 착한 마음을 가졌군요." <<He>>【은는】 당신의 팔을 놓아준다.
@@ -2082,7 +2082,7 @@ You easily grab the book and hand it to Sydney.
 	<<case 1>>
 		"제가 했어요." 당신이 말한다. "제가 도둑이에요." 둘 다 얼어붙는다. 시드니는 배신당한 듯하면서도 안도하는 표정이다.
 		<br><br>
-		A smile creeps across Leighton's face. "Thank you for your candour. Instead of one severe punishment for one student, I'll be punishing both of you with less severe methods.<<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<set $studyBooks.stolen.RaulAndJanet to 0>><<set $studyBooks.stolen.pinch to 0>><<unset $sydneyStolenKnown>><<set $bookStolenKnown += 1>><<set $recentReturnTimer to 14>> Oh, and I'll be taking <<if $studyBooks.stolen.count is 1>>that stolen book back.<<else>>those stolen books back.<</if>><</if>>"
+		레이튼의 얼굴에 미소가 번진다. "솔직함에 감사하지. 학생 하나에게 가할 엄한 처벌 대신, 두 학생 모두에게 조금 덜 엄한 방식으로 처벌을 내리겠다.<<if $studyBooks.stolen.count gte 1>><<set $studyBooks.stolen.science to 0>><<set $studyBooks.stolen.maths to 0>><<set $studyBooks.stolen.english to 0>><<set $studyBooks.stolen.history to 0>><<set $studyBooks.stolen.RaulAndJanet to 0>><<set $studyBooks.stolen.pinch to 0>><<unset $sydneyStolenKnown>><<set $bookStolenKnown += 1>><<set $recentReturnTimer to 14>> 아, 그리고 <<if $studyBooks.stolen.count is 1>>그 훔친 책<<else>>그 훔친 책들<</if>>【을를】 돌려받겠다.<</if>>"
 		<<nnpc_He "Leighton">>【은는】 <<nnpc_his "Leighton">> 목소리를 높인다. "여러분, 즉시 도서관에서 나가십시오. 학생 두 명이 곧 징계를 받을 예정입니다." 도서관 곳곳의 학생들이 그 말에 따라 짐을 챙기고 우르르 나가는 소리가 들린다.
 		<<if $isKylarPresent && $awareness gte 100>>
 			<<set $awareOfKylar to true>>

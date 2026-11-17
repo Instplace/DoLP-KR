@@ -3234,7 +3234,7 @@
 	<<baileyRentReclaimOption>> /* Bailey Confiscation System */
 
 	<<if $money gt 0 or $baileyDeposit gt 0>>
-		<<ind>><<link [[Manage your deposit|Bailey Deposit]]>><</link>>
+		<<ind>><<link [[보증금을 관리한다|Bailey Deposit]]>><</link>>
 		<br>
 	<</if>>
 
@@ -4623,27 +4623,27 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 :: Canteen Lunch Robin Dolp
 <<effects>>
 <<npc Robin>><<person1>>
-You sit down next to Robin. <<he>> looks up for a moment before going back to staring at <<his>> lunch, you hear a soft "hey" coming from <<him>>
+당신은 로빈 옆에 앉는다. <<he>>【은는】 잠깐 고개를 들었다가 다시 점심만 쳐다보고, <<him>>에게서 작게 "안녕" 하는 소리가 들려온다.
 <br><br>
-During lunch Robin picks at <<his>> food, not touching it much. after a couple minutes you look up to Robin and ask <<him>> “hey what's up?” Robin
-looks at you sighing “I-I-I don't really know, i'm just not.“ <<he>> sighs "im just not....” you can see that <<he>> doesn't know if <<he>> wants to
-say it “i'm just having a bad day i guess” You look at <<him>> with concern.
+점심시간 내내 로빈은 음식을 깨작거릴 뿐 거의 손도 대지 않는다. 몇 분 뒤 당신은 로빈을 올려다보며 <<him>>에게 묻는다. "야, 무슨 일이야?" 로빈이
+당신을 바라보며 한숨을 쉰다. “나, 나, 나도 잘 모르겠어, 그냥 좀 그래.” <<he>>【이가】 한숨을 쉰다. "그냥 좀 그래....” <<he>>【이가】 말해도 될지 망설이는 게 보인다.
+"그냥 오늘 하루가 별로인 것 같아." 당신은 걱정스러운 눈으로 <<him>>【을를】 바라본다.
 <br><br>
-<<link [[Give Robin a pat|Canteen Lunch Robin Pat Dolp]]>><<lrtrauma>><<npcincr Robin trauma -1>><</link>><br>
+<<link [[로빈을 토닥인다|Canteen Lunch Robin Pat Dolp]]>><<lrtrauma>><<npcincr Robin trauma -1>><</link>><br>
 <<if C.npc.Robin.love gte 25>>
-<<link [[Give Robin a hug|Canteen Lunch robin hug dolp]]>><<lrtrauma>><<npcincr Robin trauma -2>><</link>><br>
+<<link [[로빈을 안아 준다|Canteen Lunch robin hug dolp]]>><<lrtrauma>><<npcincr Robin trauma -2>><</link>><br>
 <</if>>
 <<if C.npc.Robin.love gte 50>>
-<<link [[Embrace Robin|Canteen Lunch robin embrace dolp]]>><<lrtrauma>><<npcincr Robin trauma -5>><</link>><br>
+<<link [[로빈을 꼭 끌어안는다|Canteen Lunch robin embrace dolp]]>><<lrtrauma>><<npcincr Robin trauma -5>><</link>><br>
 <</if>>
-<<link [[Ignore Robin|Canteen Lunch robin ignore dolp]]>><<lrtrauma>><<npcincr Robin trauma 5>><</link>><br>
+<<link [[로빈을 무시한다|Canteen Lunch robin ignore dolp]]>><<lrtrauma>><<npcincr Robin trauma 5>><</link>><br>
 
 :: Canteen Lunch Robin Pat Dolp
 <<effects>>
 <<npc Robin>><<person1>>
-You rest your hand on <<his>> shoulder, squeezing it gently. You can see tears forming, but <<he>> quickly blinks them away and looks at you. “It'll be ok,” you say
-to <<him>>, giving <<him>> a thumbs up and a <<if $trauma gte $traumamax / 5>>forced <<else>>bright <</if>> smile. <<His>> expression softens, and
-<<he>> nods in response. “Thank you, I needed that.” <<He>> seems to be a bit more relaxed now, and you continue to eat your lunch together.
+당신은 <<his>> 어깨에 손을 얹고 부드럽게 꼭 쥔다. 눈물이 맺히는 게 보이지만, <<he>>【은는】 재빨리 눈을 깜박여 눈물을 털어 내고 당신을 바라본다. "괜찮을 거야."
+당신은 <<him>>에게 엄지를 치켜들고 <<if $trauma gte $traumamax / 5>>억지<<else>>환한<</if>> 미소를 지어 보인다. <<His>> 표정이 누그러지고,
+<<he>>【이가】 대답하듯 고개를 끄덕인다. "고마워, 이게 필요했나 봐." <<He>>【은는】 이제 조금 더 편안해진 듯하고, 두 사람은 점심을 계속 함께 먹는다.
 <<lrtrauma>><<npcincr Robin trauma -1>>
 <br><br>
 <<historyicon>><<link [[로빈과 역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<set $withRobin to "yes">><<unset $kylarexit>><<pass 1>><</link>><br>
@@ -4653,10 +4653,10 @@ to <<him>>, giving <<him>> a thumbs up and a <<if $trauma gte $traumamax / 5>>fo
 :: Canteen Lunch robin hug dolp
 <<effects>>
 <<npc Robin>><<person1>>
-“Hey…” You wrap your arms around <<him>>, pulling <<him>> into a hug. “It’s gonna be all right.” you say and <<he>> releases a breath <<he>> was
-holding, tears appearing in <<his>> eyes as <<he>> hugs you back. You pull back and see some tears falling and quickly wipe them away. “T-t-thank you so
-much.” You let <<his>> go and give <<his>> an extra pat on the back. “Don’t worry,” you say with a <<if $trauma gte $traumamax / 5>>forced <<else>>bright
-<</if>> smile. Robin looks much more relaxed, and you both finish your lunch together.
+"저기..." 당신은 두 팔로 <<him>>【을를】 감싸 안아 끌어당긴다. "다 괜찮아질 거야." 당신이 말하자 <<he>>【은는】 참고 있던 숨을
+내쉬고, <<his>> 눈에 눈물이 맺힌 채 당신을 마주 안는다. 당신이 몸을 떼자 눈물 몇 방울이 떨어지는 것이 보여 재빨리 닦아 준다.
+"고, 고, 고마워 정말." 당신은 <<him>>【을를】 놓아주고 등을 한 번 더 토닥여 준다. "걱정 마." 당신이 말한다. 당신은 <<if $trauma gte $traumamax / 5>>억지<<else>>환한
+<</if>> 미소를 짓는다. 로빈은 훨씬 편안해 보이고, 두 사람은 함께 점심을 마저 먹는다.
 <<lrtrauma>><<npcincr Robin trauma -2>>
 <br><br>
 <<historyicon>><<link [[로빈과 역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<set $withRobin to "yes">><<unset $kylarexit>><<pass 1>><</link>><br>
@@ -4666,10 +4666,10 @@ much.” You let <<his>> go and give <<his>> an extra pat on the back. “Don’
 :: Canteen Lunch robin embrace dolp
 <<effects>>
 <<npc Robin>><<person1>>
-You pull <<him>> into your arms, holding <<him>> close to your chest. <<he>> melts into your embrace, clinging to you slightly. You feel <<his>> tears on your skin
-as <<he>> softly sobs. "Don't worry, Robin," you say, "I'll be here for you." You continue to hold <<him>>, gently rocking back and forth, until <<he>>
-reluctantly lets go. <<he>> wipes <<his>> face with <<his>> sleeves, blushing furiously. “I-I-I think I really n-n-needed that, thank you.” You both continue
-lunch in a slightly better mood.
+당신은 <<him>>【을를】 품에 끌어안고 가슴께로 바싹 당긴다. <<he>>【은는】 당신의 품에 녹아들듯 안겨 살짝 매달린다. 당신은 <<his>> 눈물이 피부에 닿는 것을 느낀다.
+<<he>>【은는】 나직이 흐느낀다. "걱정 마, 로빈." 당신이 말한다. "내가 네 곁에 있을게." 당신은 <<him>>【을를】 계속 안은 채 부드럽게 앞뒤로 흔들어 주고, 마침내 <<he>>【이가】
+마지못해 몸을 뗀다. <<he>>【은는】 소매로 얼굴을 닦으며 얼굴을 확 붉힌다. "나, 나, 나 이게 정말 필, 필요했나 봐, 고마워." 두 사람은 이어서
+조금 나아진 기분으로 점심을 먹는다.
 <<lrtrauma>><<npcincr Robin trauma -5>>
 <br><br>
 <<historyicon>><<link [[로빈과 역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<set $withRobin to "yes">><<unset $kylarexit>><<pass 1>><</link>><br>
@@ -4679,8 +4679,8 @@ lunch in a slightly better mood.
 :: Canteen Lunch robin ignore dolp
 <<effects>>
 <<npc Robin>><<person1>>
-You take a bite of your lunch choosing to ignore <<his>> plight. <<He>> looks hurt by the lack of interest. you can hear soft sobs coming from <<him>> but you
-decide not to pay attention. You both continue to eat lunch in silence.
+당신은 점심을 한 입 베어 물며 <<his>> 곤경을 모른 척하기로 한다. <<He>>【은는】 무관심에 상처받은 얼굴이다. <<him>>에게서 나직한 흐느낌이 들리지만 당신은
+신경 쓰지 않기로 한다. 두 사람은 말없이 점심을 계속 먹는다.
 <<lrtrauma>><<npcincr Robin trauma 5>>
 <br><br>
 <<historyicon>><<link [[로빈과 역사 수업에 간다 (0:01)|History Classroom]]>><<set $justEntered to true>><<set $withRobin to "yes">><<unset $kylarexit>><<pass 1>><</link>><br>
@@ -5397,7 +5397,7 @@ decide not to pay attention. You both continue to eat lunch in silence.
 		<br><br>
 
 		/* <<if displayDefiantOption(500)>> */
-			<<link [[Demand the money|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><<wolfDefiant 500>><</link 500>><<llove>><<ldom>>
+			<<link [[돈을 요구한다|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><<wolfDefiant 500>><</link 500>><<llove>><<ldom>>
 			<br>
 		/* <</if>> */
 		<<robinoptions>>
@@ -5667,11 +5667,11 @@ decide not to pay attention. You both continue to eat lunch in silence.
 :: Robin Bunny
 <<set $outisde to 0>><<set $location to "home">><<effects>>
 
-Feeling a sudden urge, you turn towards Robin and butt your head against <<his>>.
+갑작스러운 충동이 치밀어, 당신은 로빈 쪽으로 몸을 돌려 <<his>> 머리에 당신의 머리를 들이받듯 비빈다.
 <<if $robin.timer.hurt gte 1>>
-Robin hesitates for a moment before moving your head away from <<him>>.
+로빈은 잠시 머뭇거리다가 당신의 머리를 자기에게서 떼어 낸다.
 <<else>>
-<<He>> giggles as your ears tickle <<his>> nose.
+당신의 귀가 <<his>> 코를 간지럽히자 <<He>>【은는】 킥킥 웃는다.
 <</if>>
 <br><br>
 
@@ -5679,12 +5679,12 @@ Robin hesitates for a moment before moving your head away from <<him>>.
 
 :: Robin Water Dragon
 <<set $outside to 0>><<set $location to "home">><<effects>>
-Feeling safe and happy as you relax with Robin, little squeaks and clicks bubble up your throat and your tail starts to wag.
-Robin pauses <<his>> game to look over at you in surprise. "You sound like a dolphin!" <<he>> giggles,
-and you can't help but to laugh along with <<him>>.
+로빈과 함께 편히 쉬며 안전하고 행복한 기분이 들자, 작게 끽끽거리는 소리와 딸깍거리는 소리가 목구멍에서 솟아오르고 꼬리가 흔들리기 시작한다.
+로빈은 게임을 멈추고 놀란 얼굴로 당신을 돌아본다. "돌고래 소리 같아!" <<he>>【이가】 킥킥거린다.
+당신도 참지 못하고 <<him>>【와과】 함께 웃는다.
 <br><br>
-<<He>> takes a breath and attempts to replicate the sound. <<Hes>> not great at first, but you squeak and
-click along with <<him>> until <<he>> almost gets the hang of it. You go back and forth for a time, enjoying the moment.
+<<He>>【은는】 숨을 들이쉬고 그 소리를 따라 해 보려 한다. 처음에는 <<Hes>> 영 서툴지만, 당신이 끽끽거리고
+딸깍거리며 <<him>>【와과】 함께 소리를 내자 <<he>>【이가】 거의 요령을 익힌다. 두 사람은 한동안 소리를 주고받으며 그 순간을 즐긴다.
 <br><br>
 
 <<robinoptions>>
@@ -9154,20 +9154,20 @@ USB를 설치하자 잠시 후 파일 폴더가 자동으로 나타난다. 당�
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"Can... Can I help around the orphanage?" you ask softly, avoiding <<his>> gaze. "Maybe pay off my debt that way..?"
+	"저... 제가 고아원에서 일을 도와도 될까요?" 당신이 <<his>> 시선을 피하며 조용히 묻는다. "그걸로 제 빚을 갚을 수도 있을 것 같은데요..?"
 <<elseif $speech_attitude is "bratty">>
-	"Let me help around the orphanage," you say. "Help the kids, sure as hell better than giving you money."
+	"내가 고아원 일을 도울게." 당신이 말한다. "애들 돕는 게 너한테 돈 갖다 바치는 것보다는 확실히 낫지."
 <<else>>
-	"Let me help you with the orphanage," you suggest. "I'll help cut down maintenance costs while paying my debt, it's a win-win."
+	"고아원 일을 돕게 해 주세요." 당신이 제안한다. "빚을 갚으면서 유지비도 줄일 수 있으니 서로 이득이에요."
 <</if>>
 <br><br>
 
-Bailey squints at you, looking you up and down before saying
+베일리가 눈을 가늘게 뜨고 당신을 위아래로 훑어본 뒤 말한다.
 <<if $housekeepingSuccess is 1>>
 	<<set $bailey_housekeeping to 1>>
-	"<span class="green">Fine</span>, you seem capable enough to not mess this up. It'll be based on your performance, got it?" <<he>> leans back, staring you square in the eyes. "And no, I won't be paying you for doing extra. Unless there's anything else, get out. I have work to do."
+	"<span class="green">좋아</span>, 망치지는 않을 만큼 해낼 것 같군. 네 성과에 따라 달라질 거야, 알겠어?" <<he>>【은는】 등을 뒤로 기대며 당신의 눈을 똑바로 쳐다본다. "그리고 아니, 추가로 한 일에 돈을 주진 않아. 다른 용건이 없으면 꺼져. 난 할 일이 있으니까."
 <<else>>
-	"<span class="red">Hah! You?</span>" <<he>> scoffs. "I'd be surprised if you didn't burn the orphanage down within a week. Get out and stop wasting my time."
+	"<span class="red">하! 네가?</span>" <<he>>【이가】 코웃음을 친다. "일주일 안에 고아원을 홀랑 태워 먹지 않으면 놀랄 지경이다. 꺼져. 내 시간 낭비하지 마."
 <</if>>
 <br><br>
 
@@ -9177,20 +9177,20 @@ Bailey squints at you, looking you up and down before saying
 <<effects>>
 
 <<if $speech_attitude is "meek">>
-	"Please give me another chance..." you plead. "I'll work really hard..."
+	"제발 한 번만 더 기회를 주세요..." 당신이 애원한다. "정말 열심히 할게요..."
 <<elseif $speech_attitude is "bratty">>
-	"Look, I've improved," you say. "Just give me the job."
+	"봐, 나 나아졌어." 당신이 말한다. "그냥 일이나 맡겨."
 <<else>>
-	"Give me another chance," you suggest. "You can't maintain the orphanage alone forever."
+	"한 번만 더 기회를 주세요." 당신이 제안한다. "혼자서 고아원을 영원히 유지할 수는 없잖아요."
 <</if>>
 <br><br>
 
-Bailey looks you over and
+베일리가 당신을 훑어보고
 <<if $housekeepingSuccess is 1>>
 	<<set $bailey_housekeeping to 1>>
-	sighs "<span class="green">Fine</span>, you seem capable enough to not mess this up. It'll be based on your performance, got it?" <<he>> leans back, staring you square in the eyes. "And no, I won't be paying you for doing extra. Unless there's anything else, get out. I have work to do."
+	한숨을 쉰다. "<span class="green">좋아</span>, 망치지는 않을 만큼 해낼 것 같군. 네 성과에 따라 달라질 거야, 알겠어?" <<he>>【은는】 등을 뒤로 기대며 당신의 눈을 똑바로 쳐다본다. "그리고 아니, 추가로 한 일에 돈을 주진 않아. 다른 용건이 없으면 꺼져. 난 할 일이 있으니까."
 <<else>>
-	flatly says "<span class="red">No</span>, get out."
+	무미건조하게 말한다. "<span class="red">안 돼</span>, 꺼져."
 <</if>>
 <br><br>
 
@@ -9303,7 +9303,7 @@ Bailey looks you over and
 :: Bailey Deposit
 <<effects>>
 
-"You're putting down a deposit? Fine, saves me the trouble of finding you." <<he>> says without looking up. <<if $baileyDeposit gt 0>>"If it's a withdrawal, I'll be taking a <span class="red">$depositWithdrawalFee%</span> fee."<</if>>
+"보증금을 내겠다고? 좋아, 너를 찾아다니는 수고를 덜어 주는군." <<he>>【이가】 고개도 들지 않고 말한다. <<if $baileyDeposit gt 0>>"인출이라면 <span class="red">$depositWithdrawalFee%</span>의 수수료를 떼겠다."<</if>>
 <br><br>
 
 <div id="depositAmount">
@@ -9312,18 +9312,18 @@ Bailey looks you over and
 </div>
 
 <div id="depositExit">
-	<<link "Deposit">>
+	<<link "예치한다">>
 		<<set _depositAmount = Math.clamp(_depositAmount * 100, 1, $money)>>
 		<<replace #depositExit>><<depositBaileyExitConfirm 0>><</replace>><<replace #depositAmount>><</replace>>
 	<</link>>
 	<br>
-	<<link "Withdrawal">>
+	<<link "인출한다">>
 		<<set _depositAmount = _depositAmount * 100>>
 		<<replace #depositExit>><<depositBaileyExitConfirm 1>><</replace>><<replace #depositAmount>><</replace>>
 	<</link>>
 </div>
 <br>
-<<link [[Cancel|Orphanage]]>><<endevent>><<clotheson>><</link>>
+<<link [[취소한다|Orphanage]]>><<endevent>><<clotheson>><</link>>
 
 :: Robin Watering Thank
 <<effects>>
@@ -9439,7 +9439,7 @@ Bailey looks you over and
 	<<if $speech_attitude is "meek">>
 		"로빈, 괜찮다면 정원에 물 좀 줄 수 있을까?" 당신은 묻는다.
 	<<elseif $speech_attitude is "bratty">>
-		"I need you to water the garden for me," you say.
+		"내 대신 정원에 물 좀 줘야겠어." 당신이 말한다.
 	<<else>>
 		"로빈, 나 대신 정원에 물 좀 주기 시작해 줄래?" 당신은 묻는다.
 	<</if>>
@@ -9449,12 +9449,12 @@ Bailey looks you over and
 		<<case 0>>
 			<<He>>【은는】 고개를 끄덕인다. "응, 할 수 있어. 오후에 물 줄 수 있을 거야."
 		<<case 1>>
-			<<He>> looks confused. "I thought you wanted me to stop? Well, okay, I can keep watering it."
+			<<He>>【은는】 어리둥절한 얼굴이다. "그만하라고 한 줄 알았는데? 음, 알았어, 계속 물 줄 수 있어."
 		<<case 2>>
 			<<if C.npc.Robin.dom lt 20>>
-				<<He>> looks uncomfortable. "Please stop asking me. I'll water your plants, just please stop doing that."
+				<<He>>【은는】 불편한 얼굴이다. "제발 그만 물어봐. 네 식물에는 물 줄게, 그러니까 제발 그만해 줘."
 			<<else>>
-				<<He>> looks annoyed. "Stop messing with me. I'll water your plants, but stop whatever you're trying to do."
+				<<He>>【은는】 짜증스러운 얼굴이다. "그만 놀려. 네 식물에 물은 줄 테니까, 무슨 짓을 하려는 건지 모르겠지만 그만해."
 			<</if>>
 			<<npcincr Robin love -1>><<llove>>
 		<<default>>
@@ -9474,12 +9474,12 @@ Bailey looks you over and
 		<<case 0>>
 			<<He>>【은는】 고개를 끄덕인다. "알겠어."
 		<<case 1>>
-			<<He>> looks confused. "I thought you wanted me to start? Well, okay, I won't water it."
+			<<He>>【은는】 어리둥절한 얼굴이다. "시작하라고 한 줄 알았는데? 음, 알았어, 물은 안 줄게."
 		<<case 2>>
 			<<if C.npc.Robin.dom lt 20>>
-				<<He>> looks uncomfortable. "Please stop asking me. I'll keep away from your plants, just please stop doing that."
+				<<He>>【은는】 불편한 얼굴이다. "제발 그만 물어봐. 네 식물에는 가까이 안 갈게, 그러니까 제발 그만해 줘."
 			<<else>>
-				<<He>> looks annoyed. "Stop messing with me. I'll keep away from your plants, but stop whatever you're trying to do."
+				<<He>>【은는】 짜증스러운 얼굴이다. "그만 놀려. 네 식물에는 가까이 안 갈 테니까, 무슨 짓을 하려는 건지 모르겠지만 그만해."
 			<</if>>
 			<<npcincr Robin love -1>><<llove>>
 		<<default>>

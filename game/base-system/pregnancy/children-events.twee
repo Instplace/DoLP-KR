@@ -1190,13 +1190,13 @@
 		언젠가, <<childhe>>【이가】 당신의 둥지를 떠나 자유롭게 날아갈 것이라고, 당신은 생각한다. 그 생각에 어지럽고도 씁쓸한 기분이 든다. 당신은 <<childname>>【을를】 가까이 안고 <<childhis>> 작은 몸을 쓰다듬는다. <<trauma -6>><<ltrauma>>
 		<<set $childRecords[$childActivityEvent.childid].development.activity to "sleeping">>
 	<<case "dismissChildHawk">>
-		You knew this day would come. It feels like only a short time ago you heard your baby's first sounds, and you've become accustomed to their song. Walking up to the perch, child in hand, you think about if you were good enough for them, if they truly are ready. As the <<print Time.season>> winds brush through your hair, you look out at the moor below. In that moment, holding <<childhim>>, it dawns on you.<span class="green"> You gave <<childname>> everything you would have wanted.</span>/*Possibly add version for low control high trauma?*/
+		이날이 올 줄 알았다. 아기의 첫 울음소리를 들은 것이 엊그제 같고, 그 노랫소리에도 어느새 익숙해졌다. 아이를 안고 횃대로 걸어가며, 당신은 자신이 아이에게 충분히 좋은 부모였는지, 아이가 정말 준비가 되었는지 생각한다. <<print window.KR.getSeasonKr(Time.season)>>의 바람이 머리카락을 스치고, 당신은 아래로 펼쳐진 황야를 내려다본다. <<childhim>>【을를】 안은 바로 그 순간, 깨달음이 찾아온다.<span class="green"> 당신은 <<childname>>에게 당신이 바랐을 모든 것을 주었다.</span>/*Possibly add version for low control high trauma?*/
 		<br><br>
 
-		You have been holding <<childhim>> close this whole time, but you get down on one knee and gently put them on the ground. <<childHe>> takes a moment stretching his wings, feeling the force <<childhis>> wings now generate. With a flurry of flapping, their feet leave the perch, pushing themselves up higher and higher. You watch with pride as your child takes to the sky, ready to begin the next chapter of their life. They circle above you,
-		<<if $childRecords[$childActivityEvent.childid].features.monster is "monster">> chirping in delight 
-		<<else>> smiling down at you<</if>> 
-		for a few moments before taking off into the distance.<<trauma -50>><<ltrauma>>
+		지금껏 <<childhim>>【을를】 품에 꼭 안고 있었지만, 당신은 한쪽 무릎을 꿇고 아이를 조심스럽게 땅에 내려놓는다. <<childHe>>【은는】 잠시 날개를 쭉 펴 보며 이제 날개가 만들어 내는 힘을 느낀다. 요란한 날갯짓과 함께 발이 횃대에서 떨어지고, 아이는 점점 더 높이 떠오른다. 당신은 자랑스럽게 지켜본다. 당신의 아이가 하늘로 날아올라 인생의 다음 장을 시작할 준비를 마쳤다. 아이는 당신 위를 빙빙 돌며
+		<<if $childRecords[$childActivityEvent.childid].features.monster is "monster">> 기쁘게 지저귀고
+		<<else>> 웃으며 당신을 내려다보고<</if>>
+		잠시 뒤 먼 곳으로 날아간다.<<trauma -50>><<ltrauma>>
 		<<set $childRecords[$childActivityEvent.childid].development.farewell to true>>
 		<<set $childRecords[$childActivityEvent.childid].development.activity to "dismissed">>
 	<<case "preen">>
@@ -1429,7 +1429,7 @@
 	<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 		"저... 저도 좀 마셔봐도 될까요?"
 	<<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-		"Would you mind if I had some too?"
+		"저도 좀 마셔도 괜찮을까요?"
 	<<elseif $speech_attitude is "bratty">>
 		"제가 마실 것도 남아있나요?"
 	<<else>>

@@ -126,7 +126,7 @@
 							<<set _baileyDepositDays += 1>>
 							<<set _baileyDepositWorth += $rentmoney + ($babyRent or 0)>>
 						<</for>>
-						<li>You still have enough deposit for Bailey for <span class="gold">_baileyDepositDays</span><<if _baileyDepositDays gte 1000>>+<</if>> weeks which is worth <<printmoney _baileyDepositWorth>><<if _baileyDepositDays gte 1000>>+<</if>>.</li>
+						<li>베일리에게 맡긴 예치금이 아직 <span class="gold">_baileyDepositDays</span><<if _baileyDepositDays gte 1000>>+<</if>>주 치 남아 있으며, 이는 <<printmoney _baileyDepositWorth>><<if _baileyDepositDays gte 1000>>+<</if>>에 해당합니다.</li>
 				<<else>>
 					<li><<rentday>>까지 베일리가 요구하는 금액은 <<printmoney $rentMoney>><<babyRentDisplay " (고아원 아이 돌봄 명목 " " 포함)" "gold">>입니다.</li>
 				<</if>>
@@ -176,7 +176,7 @@
 				<</if>>
 			<</if>>
 			<<if modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1 and $valentines_poppy_flat_accept is 1>>
-				<li>You have a date with Poppy on Valentine's Day, on <<= getFormattedDate(new DateTime(Time.year, 2, 14))>>. <<nnpc_He "Poppy">> is expecting you in <<nnpc_his "Poppy">> flat at <<ampm 20 00>>. Remember to dress formally.</li>
+				<li>발렌타인데이(<<= getFormattedDate(new DateTime(Time.year, 2, 14))>>)에 포피와 데이트가 있습니다. <<nnpc_He "Poppy">>【은는】 <<ampm 20 00>>에 <<nnpc_his "Poppy">> 집에서 당신을 기다리고 있습니다. 격식 있는 옷차림을 잊지 마십시오.</li>
 			<</if>>
 
 			<<if $harper_appointments.enabled or $schoolPsych is 1>>
@@ -296,49 +296,49 @@
 			<<if $bicycle.own>>
 				<<switch $bicycle.location>>
 					<<case "nightingale">>
-						<<set _bikeString to "Nightingale Street (Hospital)">>
+						<<set _bikeString to "나이팅게일 가 (병원)">>
 					<<case "domus">>
-						<<set _bikeString to "Domus Street (Home)">>
+						<<set _bikeString to "도무스 가 (집)">>
 					<<case "elk">>
-						<<set _bikeString to "Elk Street">>
+						<<set _bikeString to "엘크 가">>
 					<<case "high">>
-						<<set _bikeString to "High Street (Shopping centre)">>
+						<<set _bikeString to "하이 가 (쇼핑센터)">>
 					<<case "starfish">>
-						<<set _bikeString to "Starfish Street (Beach)">>
+						<<set _bikeString to "스타피쉬 가 (해변)">>
 					<<case "barb">>
-						<<set _bikeString to "Barb Street (Studio)">>
+						<<set _bikeString to "바브 가 (스튜디오)">>
 					<<case "connudatus">>
-						<<set _bikeString to "Connudatus Street (Clubs)">>
+						<<set _bikeString to "콘누다투스 가 (클럽)">>
 					<<case "wolf">>
-						<<set _bikeString to "Wolf Street (Temple)">>
+						<<set _bikeString to "울프 가 (신전)">>
 					<<case "harvest">>
-						<<set _bikeString to "Harvest Street (Pub)">>
+						<<set _bikeString to "하베스트 가 (술집)">>
 					<<case "oxford">>
-						<<set _bikeString to "Oxford Street (School)">>
+						<<set _bikeString to "옥스포드 가 (학교)">>
 					<<case "danube">>
-						<<set _bikeString to "Danube Street (Mansions)">>
+						<<set _bikeString to "다뉴브 가 (저택)">>
 					<<case "mer">>
-						<<set _bikeString to "Mer Street (Docks)">>
+						<<set _bikeString to "메르 가 (부두)">>
 					<<case "cliff">>
-						<<set _bikeString to "Cliff Street (Cafe)">>
+						<<set _bikeString to "클리프 가 (카페)">>
 					<<case "lake">>
-						<<set _bikeString to "the Lake">>
+						<<set _bikeString to "호수">>
 					<<case "alex_farm">>
-						<<set _bikeString to "the Farmlands">>
+						<<set _bikeString to "농지">>
 					<<case "forest">>
-						<<set _bikeString to "the Forest Outskirts">>
+						<<set _bikeString to "숲 외곽">>
 					<<case "cabin">>
-						<<set _bikeString to "Eden's Cabin">>
+						<<set _bikeString to "에덴의 오두막">>
 					<<case "wolf_cave_yard">>
-						<<set _bikeString to "the Wolf Cave">>
+						<<set _bikeString to "늑대 동굴">>
 					<<case "moor">>
-						<<set _bikeString to "the Moor Castle">>
+						<<set _bikeString to "황야의 성">>
 					<<default>>
-						<<set _bikeString to "$bicycle.location | This is a bug. Please report this to the DOLP server or DOLP channel in the DOLMODS server">>
+						<<set _bikeString to "$bicycle.location | 버그입니다. DOLMODS 서버의 DOLP 서버 또는 DOLP 채널에 제보해 주세요">>
 				<</switch>>
-				<li><<if $bicycle.persistentLocation is true>>Your bike is at _bikeString.<</if>> Your bike has $bicycle.durability.current minutes of usage time left in it.</li>
+				<li><<if $bicycle.persistentLocation is true>>자전거 위치: _bikeString. <</if>>자전거의 남은 사용 시간은 $bicycle.durability.current분입니다.</li>
 				<<if $bicycle.durability.repair isnot undefined>>
-					<li>You have $bicycle.durability.repair repair kits. You think you can carry 5 at most.</li>
+					<li>수리 키트가 $bicycle.durability.repair개 있습니다. 최대 5개까지 가지고 다닐 수 있을 것 같습니다.</li>
 				<</if>>
 			<</if>>
 
@@ -349,37 +349,37 @@
 				<</for>>
 				<<if $book_rent_deposit gte _totalRentPrice / 14>>
 					<<set _book_rent_deposit_duration_display to Math.floor($book_rent_deposit / (_totalRentPrice / 14))>>
-					<li>You are renting
+					<li>도서관 책을
 					<<if $studyBooks.rented.count gt 1>>
-						library books
+						여러 권
 					<<else>>
-						a library book
+						한 권
 					<</if>>
-					but your deposit is still covering it for <span class="gold">_book_rent_deposit_duration_display</span> day<<if _book_rent_deposit_duration_display gt 1>>s<</if>>.</li>
+					빌리고 있지만, 보증금이 아직 <span class="gold">_book_rent_deposit_duration_display</span>일<<if _book_rent_deposit_duration_display gt 1>> 동안<</if>> 대여를 충당하고 있습니다.</li>
 				<<elseif $book_rent_timer is 0>>
-					<li><span class="blue">You have
+					<li><span class="blue">반납 기한이 된
 					<<if $studyBooks.rented.count gt 1>>
-						library books
+						도서관 책이 여러 권
 					<<else>>
-						a library book
+						도서관 책이 한 권
 					<</if>>
-					due.</span></li>
+					있습니다.</span></li>
 				<<elseif $book_rent_timer lt 0>>
-					<li><span class="blue">You have
+					<li><span class="blue">연체된
 					<<if $studyBooks.rented.count gt 1>>
-						library books
+						도서관 책이 여러 권
 					<<else>>
-						a library book
+						도서관 책이 한 권
 					<</if>>
-					overdue.</span></li>
+					있습니다.</span></li>
 				<<else>>
-					<li><span class="blue">You have
+					<li><span class="blue">
 					<<if $studyBooks.rented.count gt 1>>
-						library books
+						도서관 책이 여러 권
 					<<else>>
-						a library book
+						도서관 책이 한 권
 					<</if>>
-					due in <span class="gold">$book_rent_timer</span> day<<if $book_rent_timer gt 1>>s<</if>>.</span></li>
+					<span class="gold">$book_rent_timer</span>일 뒤에 반납 기한입니다.<<if $book_rent_timer gt 1>><</if>></span></li>
 				<</if>>
 			<</if>>
 
@@ -710,9 +710,9 @@
 				<li>
 				<<if $stallDeposit gte 3000>>
 					<<set _string to Math.floor($stallDeposit / 3000)>>
-					You are renting a stall and still have <span class="gold">_string</span> days worth of deposit.
+					노점을 빌려 쓰고 있으며 보증금이 아직 <span class="gold">_string</span>일 치 남아 있습니다.
 				<<else>>
-					You are renting a stall and it will expire by today.
+					노점을 빌려 쓰고 있으며 오늘 중으로 임대가 만료됩니다.
 				<</if>>
 				</li>
 			<</if>>
@@ -752,29 +752,29 @@
 						<<case "nursery">>
 							<<childicon "crib">> 농장 저택에 유아 방이 만들어지고 있습니다.
 						<<case "compost bin 1">>
-							A compost bin is being installed.
+							퇴비통이 설치되고 있습니다.
 						<<case "compost bin 2" "compost bin 3">>
-							The compost bin is being expanded.
+							퇴비통이 확장되고 있습니다.
 						<<case "extract 1">>
-							The aphrodisiac extraction system is being installed.
+							최음제 추출 장치가 설치되고 있습니다.
 						<<case "extract 2">>
-							The aphrodisiac extraction system is being upgraded.
+							최음제 추출 장치가 업그레이드되고 있습니다.
 						<<case "cooler 1">>
-							An industrial cooler is being installed.
+							산업용 냉장고가 설치되고 있습니다.
 						<<case "cooler 2" "cooler 3">>
-							The industrial cooler is being upgraded.
+							산업용 냉장고가 업그레이드되고 있습니다.
 						<<case "water field 1">>
-							A fence is being build around the water field site.
+							수경지 부지 둘레에 울타리가 세워지고 있습니다.
 						<<case "water field 2">>
-							The water field is being excavated.
+							수경지가 굴착되고 있습니다.
 						<<case "water field 3">>
-							Synethetic liners is being installed on the water field.
+							수경지에 합성 방수막이 설치되고 있습니다.
 						<<case "water field 4">>
-							The water source and water control structures are being installed on the water field.
+							수경지에 수원과 수량 조절 시설이 설치되고 있습니다.
 						<<case "greenhouse 1">>
-							Sprinklers are being added to the orphanage greenhouse.
+							고아원 온실에 스프링클러가 추가되고 있습니다.
 						<<case "greenhouse 2">>
-							Hydroponic beds are being built in the orphanage greenhouse.
+							고아원 온실에 수경 재배 베드가 만들어지고 있습니다.
 					<</switch>>
 					<<nDays $farm.build_timer>>에 완공될 것입니다.
 				</li>
@@ -800,7 +800,7 @@
 						<<shopicon "dilapidated">> $_theshop【은는】 무너질 듯 낡았습니다.
 					<</if>>
 					<<if $adultshopprogress lt 22>>
-						You can help Sydney there on Elk Street, on Fridays after <<ampm 16>> and on any non-school day.
+						금요일 <<ampm 16>> 이후와 학교가 없는 날이면 엘크 가의 그곳에서 시드니를 도울 수 있습니다.
 					<</if>>
 				</li>
 			<</if>>
@@ -812,15 +812,15 @@
 						<<set _dock_location to _skul_dock_keys[_i]>>
 						<<set _dock_contents to $skul_dock[_skul_dock_keys[_i]].contents>>
 						<<if _dock_contents is "gold">>
-							<li>There's a bar of gold in a container at the <<skul_dock_location _dock_location>>.</li>
+							<li><<skul_dock_location _dock_location>>에 있는 컨테이너에 금괴가 있습니다.</li>
 						<<elseif _dock_contents is "aphrodisiacs">>
-							<li>A local company is moving something special through. It's being kept near the <<skul_dock_location _dock_location>>.</li>
+							<li>한 지역 회사가 특별한 물건을 옮기고 있습니다. 그것은 <<skul_dock_location _dock_location>> 근처에 보관되어 있습니다.</li>
 						<<elseif _dock_contents is "electronics">>
-							<li>There's a container full of goods, including valuable electronics, near the <<skul_dock_location _dock_location>>.</li>
+							<li><<skul_dock_location _dock_location>> 근처에 값비싼 전자제품 등 물건이 가득 든 컨테이너가 있습니다.</li>
 						<<elseif _dock_contents is "fertiliser">>
-							<li>There's a container full of what looks like fertiliser near the <<skul_dock_location _dock_location>>.</li>
+							<li><<skul_dock_location _dock_location>> 근처에 비료로 보이는 것이 가득 든 컨테이너가 있습니다.</li>
 						<<elseif _dock_contents is "equipment">>
-							<li>There's a container full of specialist equipment near the <<skul_dock_location _dock_location>>.</li>
+							<li><<skul_dock_location _dock_location>> 근처에 전문 장비가 가득 든 컨테이너가 있습니다.</li>
 						<</if>>
 					<</if>>
 				<</for>>
@@ -916,12 +916,12 @@
 		<hr>
 		<h1 class="header gold bold">낚시</h1>
 		<ul class="journal">
-			<<icon `"fish/" + $daily.fishing.baitShopRequestFish + ".png"`>> The bait shop owner wants a freshly-caught 
+			<<icon `"fish/" + $daily.fishing.baitShopRequestFish + ".png"`>> 미끼 상점 주인이 갓 잡은
 			<mouse class="tooltip gold">$daily.fishing.baitShopRequestFish<span class="white">
 			<<set _tempItem to $daily.fishing.baitShopRequestFish>>
 			<<foodstuff_find_tip>>
 			</span></mouse>
-			, brought to them before they close at <<ampm 19 00>>.
+			한 마리를 원합니다. 가게가 문을 닫는 <<ampm 19 00>> 전까지 가져다주어야 합니다.
 			<<if $daily.fishing.baitShopRequest is "ready">>
 				<span class="green">건네줄 물고기를 잡았습니다.</span>
 			<</if>>
@@ -989,15 +989,15 @@
 			<</if>>
 			<<if modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1 and !poppyDismissed() and Number($poppyromance) gte 0>>
 				<<if $christmas_gift_poppy is undefined>>
-					<li>You can buy Poppy a gift at the shopping centre.</li>
+					<li>쇼핑센터에서 포피에게 줄 선물을 살 수 있습니다.</li>
 				<<elseif $christmas_gift_poppy_wrapped isnot 1>>
 					<<if poppyFlatAccessible()>>
-						<li>You can wrap Poppy's gift at <<nnpc_his "Poppy">> flat, in a room <<nnpc_he "Poppy">>'s not in.</li>
+						<li>포피의 선물을 <<nnpc_his "Poppy">> 집에서, <<nnpc_he "Poppy">>【이가】 없는 방에서 포장할 수 있습니다.</li>
 					<<else>>
-						<li>You can wrap Poppy's gift in your room.</li>
+						<li>방에서 포피의 선물을 포장할 수 있습니다.</li>
 					<</if>>
 				<<elseif $christmas_gift_poppy_given is undefined>>
-					<li>You can give Poppy <<nnpc_his "Poppy">> gift at <<nnpc_his "Poppy">> flat or at the lake.</li>
+					<li>포피에게 선물을 <<nnpc_his "Poppy">> 집이나 호수에서 줄 수 있습니다.</li>
 				<</if>>
 			<</if>>
 			<<if !$christmas_wrap>>
@@ -1417,17 +1417,17 @@
 				</li>
 			<</if>>
 			<<if $antiquemoney gt 0>>
-				<li><<museumicon>><span class="green">£<<print $antiquemoney.toLocaleString("en-GB")>></span> in antiques<<if $mathstrait gte 1 and $mathsTraitBuffs.antiques is 1>> but you'd wager you can haggle it up to <<printmoney `$antiquemoney * 100 * (1 + ($mathstrait/4))`>><</if>>. You can sell them to the museum.</li>
+				<li><<museumicon>><span class="green">£<<print $antiquemoney.toLocaleString("en-GB")>></span>어치 골동품<<if $mathstrait gte 1 and $mathsTraitBuffs.antiques is 1>>이지만, 흥정하면 <<printmoney `$antiquemoney * 100 * (1 + ($mathstrait/4))`>>까지 받아 낼 수 있을 것 같습니다<</if>>. 박물관에 팔 수 있습니다.</li>
 			<</if>>
 			<<if $blackmoney gt 0>>
-				<li><<highicon>><span class="green">£<<print $blackmoney.toLocaleString("en-GB")>></span> in stolen goods<<if $mathstrait gte 1 and $mathsTraitBuffs.stolen is 1>> but you'd wager you can haggle it up to <<printmoney `$blackmoney * 100 * (1 + ($mathstrait/4))`>><</if>>. You can sell them to someone on the black market.</li>
+				<li><<highicon>><span class="green">£<<print $blackmoney.toLocaleString("en-GB")>></span>어치 장물<<if $mathstrait gte 1 and $mathsTraitBuffs.stolen is 1>>이지만, 흥정하면 <<printmoney `$blackmoney * 100 * (1 + ($mathstrait/4))`>>까지 받아 낼 수 있을 것 같습니다<</if>>. 암시장의 누군가에게 팔 수 있습니다.</li>
 			<</if>>
 			<<if $phials_held gt 0>>
-				<li><<icon "aphrodisiac.png">> <span class="green">$phials_held</span> <<pluralise $phials_held "phial">> of aphrodisiac. You can sell <<pluralise $phials_held "it" "them">> for <<if $mathsTraitBuffs.aphrodisiacPhials is 1>><<printmoney `$phials_held * 100000 * (1 + ($mathstrait/4))`>><<else>><<printmoney `$phials_held * 100000`>><</if>> on Elk Street.</li>
+				<li><<icon "aphrodisiac.png">> 최음제 <span class="green">$phials_held</span><<pluralise $phials_held "병" "병">>. 엘크 가에서 <<pluralise $phials_held "이것" "이것들">>【을를】 <<if $mathsTraitBuffs.aphrodisiacPhials is 1>><<printmoney `$phials_held * 100000 * (1 + ($mathstrait/4))`>><<else>><<printmoney `$phials_held * 100000`>><</if>>에 팔 수 있습니다.</li>
 			<</if>>
 			<<if $lurkers_held gt 0>>
 				<<set _lurkerCapLeft to lurkerCap() - $lurkers_held>>
-				<li><<birdicon "lurkers">><span class="green">$lurkers_held</span> <<pluralise $lurkers_held "lurker">>. <<if _lurkerCapLeft gte 1>>You can carry <<print _lurkerCapLeft>> more.<<else>>You cannot carry more.<</if>></li>
+				<li><<birdicon "lurkers">>럴커 <span class="green">$lurkers_held</span><<pluralise $lurkers_held "마리" "마리">>. <<if _lurkerCapLeft gte 1>><<print _lurkerCapLeft>>마리 더 운반할 수 있습니다.<<else>>더는 운반할 수 없습니다.<</if>></li>
 			<</if>>
 			<<if $milkshake gt 0>>
 				<li><<foodicon "milkshake">> 밀크쉐이크 <span class="green">$milkshake</span>개.</li>
@@ -1445,7 +1445,7 @@
 				<li><<stallicon "open">> 판매용 <span class="green">물품</span>. 새벽에 콘누다투스 가에서 노점을 빌려 팔 수 있습니다.</li>
 			<</if>>
 			<<if $DoLPSpools isnot undefined>>
-				<li><<shopicon "tailor">> <span class="green">$DoLPSpools</span> spools.</li>
+				<li><<shopicon "tailor">> 실패 <span class="green">$DoLPSpools</span>개.</li>
 			<</if>>
 		</ul>
 

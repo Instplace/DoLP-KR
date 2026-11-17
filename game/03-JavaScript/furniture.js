@@ -425,12 +425,12 @@ const Furniture = (() => {
 			showCheck: "disabled",
 		});
 		mapper.set("bunplushie", {
-			name: "large bunny plushie",
-			nameCap: "Large bunny plushie",
+			name: "커다란 토끼 인형",
+			nameCap: "커다란 토끼 인형",
 			category: ["decoration"],
 			type: [],
 			cost: 1380,
-			description: "Soft and cuddly",
+			description: "부드럽고 안기 좋다.",
 			iconFile: "bunplushie",
 		});
 		/* ------------- WARDROBES ------------- */
@@ -520,53 +520,53 @@ const Furniture = (() => {
 			category: ["radio"],
 			type: ["radio"],
 			cost: 200,
-			description: "A space-friendly radio, includes weather forecasts!",
+			description: "공간을 적게 차지하는 라디오다. 일기예보도 나온다!",
 			iconFile: "radio",
 		});
 		/* ------------- BUNNY MOD -------------- */
 		mapper.set("shelf", {
-			name: "small shelf",
-			nameCap: "Small shelf",
+			name: "작은 선반",
+			nameCap: "작은 선반",
 			category: ["shelf"],
 			type: ["shelf"],
 			cost: 3200,
-			description: "A 'rent' friendly shelf. Its the only one that would fit in your room.",
+			description: "월세방에 어울리는 선반이다. 당신의 방에 들어가는 건 이것뿐이다.",
 			iconFile: "shelf",
 		});
 		mapper.set("moonplush", {
-			name: "moon plush",
-			nameCap: "Moon plush",
+			name: "달 인형",
+			nameCap: "달 인형",
 			category: ["plush"],
 			type: [],
 			cost: 40,
-			description: "A small plush of the moon.",
+			description: "작은 달 모양 인형이다.",
 			iconFile: "moonplush",
 		});
 		mapper.set("frostplush", {
-			name: "snowman plush",
-			nameCap: "Snowman plush",
+			name: "눈사람 인형",
+			nameCap: "눈사람 인형",
 			category: ["plush"],
 			type: [],
 			cost: 40,
-			description: "A small plush of a snowman.",
+			description: "작은 눈사람 모양 인형이다.",
 			iconFile: "snowmanplush",
 		});
 		mapper.set("tfplushes", {
-			name: "collection of animal plushes",
-			nameCap: "Collection of Animal Plushes",
+			name: "동물 인형 모음",
+			nameCap: "동물 인형 모음",
 			category: ["plush"],
 			type: [],
 			cost: 1480,
-			description: "A collection of small animal plushes. Includes a fox, bunny, cat, wolf, cow and bird.",
+			description: "작은 동물 인형 모음이다. 여우, 토끼, 고양이, 늑대, 소, 새가 들어 있다.",
 			iconFile: "tfplushes",
 		});
 		mapper.set("axoplush", {
-			name: "yellow axolotl plush",
-			nameCap: "Yellow axolotl plush",
+			name: "노란 아홀로틀 인형",
+			nameCap: "노란 아홀로틀 인형",
 			category: ["plush"],
 			type: [],
 			cost: 1,
-			description: "A small lemon coloured axolotl plush. You don't see a price tag on it, only the name 'Monsieur Citron' is written.",
+			description: "레몬색의 작은 아홀로틀 인형이다. 가격표는 보이지 않고, '무슈 시트롱'이라는 이름만 적혀 있다.",
 			iconFile: "axolotlplush",
 		});
 	}

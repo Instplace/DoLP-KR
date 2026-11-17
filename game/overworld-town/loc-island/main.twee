@@ -1556,9 +1556,9 @@
 	당신은 흔들리는 불빛이 비치는 돌 천장 아래에서 깨어난다. "아," 노인의 목소리가 들린다. "이렇게 빨리 돌아올 줄은 몰랐구먼." <<person>>【이가】 묽은 차 한 잔을 건넨다. "준비되면 내 보트로 안내하지."
 	<br><br>
 
-	<<link [[Next|Islander Return Held]]>><<handheldon>><</link>>
+	<<link [[다음|Islander Return Held]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Tell you still want to explore|Islander Later ]]>><<handheldon>><</link>>
+	<<link [[아직 탐험하고 싶다고 말한다|Islander Later ]]>><<handheldon>><</link>>
 <<elseif $spear_vessel is "sea">>
 	<<loadNPC 0 "old_islander">>
 	<<loadNPC 1 "sleeper">>
@@ -1570,11 +1570,11 @@
 	당신은 흔들리는 불빛이 비치는 돌 천장 아래에서 깨어난다. "아," 노인의 목소리가 들린다. "이렇게 빨리 돌아올 줄은 몰랐구먼." <<person>>【이가】 묽은 차 한 잔을 건넨다. "준비되면 내 보트로 안내하지."
 	<br><br>
 
-	<<link [[Tell them where the spear is|Islander Return Sea]]>><<handheldon>><</link>>
+	<<link [[창이 어디 있는지 말해준다|Islander Return Sea]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Don't tell them|Islander Return Refrain]]>><<handheldon>><</link>>
+	<<link [[말하지 않는다|Islander Return Refrain]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Tell you still want to explore|Islander Later ]]>><<handheldon>><</link>>
+	<<link [[아직 탐험하고 싶다고 말한다|Islander Later ]]>><<handheldon>><</link>>
 <<elseif $spear_vessel is "Zephyr">>
 	<<loadNPC 0 "old_islander">>
 	<<loadNPC 1 "sleeper">>
@@ -1586,11 +1586,11 @@
 	당신은 흔들리는 불빛이 비치는 돌 천장 아래에서 깨어난다. "아," 노인의 목소리가 들린다. "이렇게 빨리 돌아올 줄은 몰랐구먼." <<person>>【이가】 묽은 차 한 잔을 건넨다. "준비되면 내 보트로 안내하지."
 	<br><br>
 
-	<<link [[Tell them where the spear is|Islander Return Zephyr]]>><<handheldon>><</link>>
+	<<link [[창이 어디 있는지 말해준다|Islander Return Zephyr]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Don't tell them|Islander Return Refrain]]>><<handheldon>><</link>>
+	<<link [[말하지 않는다|Islander Return Refrain]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Tell you still want to explore|Islander Later]]>><<handheldon>><</link>>
+	<<link [[아직 탐험하고 싶다고 말한다|Islander Later]]>><<handheldon>><</link>>
 <<elseif $spear_vessel is "temple">>
 	<<loadNPC 0 "old_islander">>
 	<<loadNPC 1 "sleeper">>
@@ -1602,11 +1602,11 @@
 	당신은 흔들리는 불빛이 비치는 돌 천장 아래에서 깨어난다. "아," 노인의 목소리가 들린다. "이렇게 빨리 돌아올 줄은 몰랐구먼." <<person>>【이가】 묽은 차 한 잔을 건넨다. "준비되면 내 보트로 안내하지."
 	<br><br>
 
-	<<link [[Tell them where the spear is|Islander Return Temple]]>><<handheldon>><</link>>
+	<<link [[창이 어디 있는지 말해준다|Islander Return Temple]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Don't tell them|Islander Return Refrain]]>><<handheldon>><</link>>
+	<<link [[말하지 않는다|Islander Return Refrain]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Tell you still want to explore|Islander Later]]>><<handheldon>><</link>>
+	<<link [[아직 탐험하고 싶다고 말한다|Islander Later]]>><<handheldon>><</link>>
 <<elseif $spear_vessel>>
 	<<loadNPC 0 "old_islander">>
 	<<loadNPC 1 "sleeper">>
@@ -1618,9 +1618,9 @@
 	당신은 흔들리는 불빛이 비치는 돌 천장 아래에서 깨어난다. "아," 노인의 목소리가 들린다. "이렇게 빨리 돌아올 줄은 몰랐구먼." <<person>>【이가】 묽은 차 한 잔을 건넨다. "준비되면 내 보트로 안내하지."
 	<br><br>
 
-	<<link [[Next|Islander Return Refrain]]>><<handheldon>><</link>>
+	<<link [[다음|Islander Return Refrain]]>><<handheldon>><</link>>
 	<br>
-	<<link [[Tell you still want to explore|Islander Later]]>><<handheldon>><</link>>
+	<<link [[아직 탐험하고 싶다고 말한다|Islander Later]]>><<handheldon>><</link>>
 <<else>>
 	<<generateRole 0 0 "old islander">><<person1>>
 	<<set _generate_victim to 1>>
@@ -1646,7 +1646,7 @@
 
 :: Islander Later
 <<effects>>
-The elderly nodding. "Suit yourself."
+노인이 고개를 끄덕인다. "좋을 대로 하게."
 <br><br>
 <<link [[다음|Island]]>><<endevent>><</link>>
 

@@ -816,13 +816,13 @@
 	<<link [[다음|Domus Street]]>><<endevent>><<dance_job_end>><<set $eventskip to 1>><</link>>
 	<br>
 <<elseif $tiredness gte C.tiredness.max>>
-	<<generate1>><<person1>>A <<person>> approaches you. "I'm sorry," <<he>> says. "We can't let you keep dancing when you're this tired. Thank you for coming." <<He>> points at the door.
+	<<generate1>><<person1>><<person>>【이가】 당신에게 다가온다. "미안해요." <<he>>【이가】 말한다. "이렇게 피곤한 상태로는 계속 춤추게 둘 수 없어요. 와주셔서 고마웠어요." <<He>>【은는】 문을 가리킨다.
 	<br><br>
 
 	<<link [[떠난다|Dance Job Party Intermission Leave]]>><</link>>
 	<br>
 	/* <<if $submissive lte 500>> */
-		<<socialiseicon "angry">><<link [[Demand payment|Dance Job Party Demand]]>><<def 1>><</link>><<defianttext>>
+		<<socialiseicon "angry">><<link [[돈을 요구한다|Dance Job Party Demand]]>><<def 1>><</link>><<defianttext>>
 		<br>
 	/* <</if>> */
 <<elseif $danceStudio.job.interest lte 0>>

@@ -7,7 +7,7 @@
 	<</if>>
 	<<tinyPenisDryOrgasmChance>>
 	<<if $orgasmCum gte 1>>
-		<span class="pink">You feel another climax approaching, despite your continuing orgasm.</span>
+		<span class="pink">절정이 이어지고 있는데도 또 다른 절정이 다가오는 것이 느껴진다.</span>
 	<</if>>
 	<<if $earSlime.growth gte 100 and $earSlime.defyCooldown gte Math.clamp(30 - Math.floor($earSlime.growth / 9), 2, 20) and !$possessed and $settings.ruinedOrgasmEnabled and !_noSlimes>>
 		<span class="red">당신은 감각에 거의 압도당할 뻔했지만, 미처 절정에 다다르기도 전에 끝나버린다.</span><<pain 10>><<stress 10>><<gpain>><<gstress>>
@@ -420,7 +420,7 @@
 		<<if _deniedOrgasm>>
 			<span class="red">너무나 짧은 시간 안에 실패한 절정을 수도 없이 겪어 감각이 무뎌졌다.</span>
 		<<elseif $orgasmtrait gte 1>>
-			<span class="red">You've had so many orgasms in such a short span of time that you are numb to them.</span>
+			<span class="red">너무나 짧은 시간 안에 절정을 수도 없이 겪어 감각이 무뎌졌다.</span>
 		<<else>>
 			<span class="red">너무나 짧은 시간 안에 절정을 수도 없이 겪은 탓에 더 이상 어떤 쾌감도 얻지 못한다. 신체적으로나 정신적으로나 고통스러울 뿐이다.</span>
 		<</if>>
@@ -881,7 +881,7 @@
 			<<elseif $exposed gte 1>>
 				<<set $_hidden to true>>
 			<<else>>
-				The sight and sound of a <<girl>> convulsing in climax draws the attention of those in the gym. Their reactions are mixed. Some avoid looking. Some stare at you with displeasure. But some also cheer you on. As you regain control of yourself, you notice how rowdy the gym has become. Face red, you try to make yourself look as small and unassuming as possible.
+				절정에 경련하는 <<girl>>의 모습과 소리가 체육관 사람들의 이목을 끈다. 반응은 제각각이다. 어떤 이들은 시선을 피한다. 어떤 이들은 불쾌한 표정으로 당신을 노려본다. 하지만 일부는 당신을 응원하기도 한다. 정신을 차리자 체육관이 얼마나 소란스러워졌는지 눈에 들어온다. 얼굴이 붉어진 채, 당신은 최대한 작고 눈에 띄지 않게 몸을 움츠리려 한다.
 				<<gtrauma>><<gstress>><<trauma 6>><<stress 6>><<fameexhibitionism 10>>
 			<</if>>
 		<<case "underwater">>

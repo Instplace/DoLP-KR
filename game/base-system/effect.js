@@ -808,7 +808,7 @@ function effects() {
 			const itemList = V.rebuy_failure.join(", ");
 			element(
 				"span",
-				`Your ${formatList(V.rebuy_failure, "and", true)} signal${V.rebuy_failure.length > 1 ? "" : "s"} for a replacement, but you don't have enough money.`,
+				`${formatList(V.rebuy_failure)}【이가】 대체품 요청 신호를 보냈지만, 돈이 부족합니다.`,
 				"purple"
 			);
 			V.rebuy_failure = [];
@@ -920,7 +920,7 @@ function effects() {
 					element("span", "당신의 특이한 성기에 대한 소문이 학교 전체로 퍼졌다.", "pink");
 					break;
 				case 3:
-					element("span", "It sounds far-fetched to many, but the school is rife with gossip about a student with both boy and girl parts.", "purple");
+					element("span", "많은 이에게 터무니없는 이야기로 들리겠지만, 학교에는 남자와 여자의 몸을 모두 가진 학생에 대한 소문이 자자하다.", "purple");
 					break;
 				case 2:
 					element("span", "남성과 여성의 부위를 모두 지닌 학생에 대한 소문이 학교에 퍼지고 있다.", "blue");
@@ -961,7 +961,7 @@ function effects() {
 					element("span", "특성을 얻었다.", "purple");
 					break;
 				case "traitLost":
-					element("span", `The cravings for nectar finally subside. You've lost the "${V.submissive <= 850 ? "Dendrophile" : "Plant Lover"}" and`, "lblue");
+					element("span", `넥타르에 대한 갈망이 마침내 가라앉았다. "${V.submissive <= 850 ? "나무성애자" : "식물 애호가"}" 및`, "lblue");
 					element("span", '"넥타르 중독"', "red");
 					element("span", "특성을 잃었다.", "lblue");
 					break;
@@ -978,43 +978,43 @@ function effects() {
 			const poppyOpiumMessage = poppyConsumePendingOpiumMessage();
 			switch (poppyOpiumMessage) {
 				case "traitGainKnown":
-					element("span", "You find yourself craving the powdery scent of opium. You've gained the ", "purple");
-					element("span", '"Opium Addict"', "red");
-					element("span", " trait.", "purple");
+					element("span", "가루 같은 아편 냄새가 간절해진다. ", "purple");
+					element("span", '"아편 중독자"', "red");
+					element("span", " 특성을 얻었다.", "purple");
 					br();
 					break;
 				case "traitGainUnknown":
-					element("span", "You find yourself inexplicably craving Poppy's presence, and you can't really figure out why.", "purple");
+					element("span", "이유도 모른 채 포피가 곁에 있기를 간절히 바라게 된다.", "purple");
 					br();
 					break;
 				case "traitLostKnown":
-					element("span", "The craving for opium finally subsided. You lost the ", "lblue");
-					element("span", '"Opium Addict"', "red");
-					element("span", " trait.", "lblue");
+					element("span", "아편에 대한 갈망이 마침내 가라앉았다. ", "lblue");
+					element("span", '"아편 중독자"', "red");
+					element("span", " 특성을 잃었다.", "lblue");
 					br();
 					break;
 				case "traitLostUnknown":
-					element("span", "The craving for Poppy's presence finally subsided.", "lblue");
+					element("span", "포피가 곁에 있기를 바라던 갈망이 마침내 가라앉았다.", "lblue");
 					br();
 					break;
 				case "withdrawalsKnown":
 					sWikifier(
-						'<span class="red">Your body craves opium and has begun to suffer from withdrawals.</span> <<stress 12>><<ggstress>><<straighttrauma 12>><<ggtrauma>>'
+						'<span class="red">몸이 아편을 갈망하며 금단 증상에 시달리기 시작했다.</span> <<stress 12>><<ggstress>><<straighttrauma 12>><<ggtrauma>>'
 					);
 					br();
 					break;
 				case "withdrawalsUnknown":
 					sWikifier(
-						'<span class="red">Your body craves Poppy\'s presence and has begun to suffer from withdrawals.</span> <<stress 12>><<ggstress>><<straighttrauma 12>><<ggtrauma>>'
+						'<span class="red">몸이 포피의 존재를 갈망하며 금단 증상에 시달리기 시작했다.</span> <<stress 12>><<ggstress>><<straighttrauma 12>><<ggtrauma>>'
 					);
 					br();
 					break;
 			}
 		}
 		if (window.poppyConsumePendingPavlovMessage && poppyConsumePendingPavlovMessage()) {
-			element("span", "Now that Poppy is your love interest, you can't help but feel drawn to them like a moth to a flame. You've gained the ", "purple");
-			element("span", '"Pavlov: Poppy"', "red");
-			element("span", " trait.", "purple");
+			element("span", "포피가 관심 연인이 된 뒤로, 불꽃에 끌리는 나방처럼 포피에게 이끌리는 것을 어쩔 수 없다. ", "purple");
+			element("span", '"파블로프: 포피"', "red");
+			element("span", " 특성을 얻었다.", "purple");
 			br();
 		}
 
@@ -1057,15 +1057,15 @@ function effects() {
 			delete V.loveInterest_message;
 			V.loveInterestAwareMessage = 2;
 		} else if (V.loveInterest_message === 4 && V.loveInterestAwareMessage === 2) {
-			element("i", "Your mind is open to the possibility of multiple lovers. You may now choose a fourth love interest.", "pink");
+			element("i", "여러 연인의 가능성에 마음이 열린다. 이제 네 번째 관심 연인을 선택할 수 있다.", "pink");
 			delete V.loveInterest_message;
 			V.loveInterestAwareMessage = 3;
 		} else if (V.loveInterest_message === 5 && V.loveInterestAwareMessage === 3) {
-			element("i", "Your mind is open to the possibility of multiple lovers. You may now choose a fifth love interest.", "pink");
+			element("i", "여러 연인의 가능성에 마음이 열린다. 이제 다섯 번째 관심 연인을 선택할 수 있다.", "pink");
 			delete V.loveInterest_message;
 			V.loveInterestAwareMessage = 4;
 		} else if (V.loveInterest_message === 6 && V.loveInterestAwareMessage === 4) {
-			element("i", "Your mind is open to the possibility of multiple lovers. You may now choose a sixth love interest.", "pink");
+			element("i", "여러 연인의 가능성에 마음이 열린다. 이제 여섯 번째 관심 연인을 선택할 수 있다.", "pink");
 			delete V.loveInterest_message;
 			V.loveInterestAwareMessage = 5;
 		}
@@ -1552,13 +1552,13 @@ function effects() {
 					element("span", "귀가 따끔거린다.", "gold");
 					break;
 				case "cowUp4":
-					element("span", "Your ears itch. You reach up to scratch them and find them much bigger than you expected. You've grown a pair of cow ears.", "gold");
+					element("span", "귀가 가렵다. 긁으려고 손을 올리자 생각보다 훨씬 커져 있다. 소 귀 한 쌍이 자라났다.", "gold");
 					break;
 				case "cowUp5":
 					element("span", "허리 아래가 따끔거린다.", "gold");
 					break;
 				case "cowUp6":
-					element("span", "Your bottom feels heavier than usual. You reach behind you and feel your new cow tail. You suppress the urge to moo.", "gold");
+					element("span", "엉덩이가 평소보다 무겁다. 뒤로 손을 뻗자 새로 생긴 소 꼬리가 만져진다. 음메 하고 울고 싶은 충동을 참는다.", "gold");
 					fragment.append(wikifier("earnFeat", "'Cattle'"));
 					break;
 				case "cowDown0":
@@ -1580,85 +1580,85 @@ function effects() {
 					element("span", "균형감각이 달라진 것 같다. 소 꼬리가 사라졌다.", "gold");
 					break;
 				case "waterdragonUp1":
-					element("span", "You feel an intense desire to go swimming underwater.", "gold");
+					element("span", "물속에서 헤엄치고 싶은 강렬한 욕구가 느껴진다.", "gold");
 					break;
 				case "waterdragonUp2":
-					element("span", "Your mouth feels different. You explore your mouth and wince as your tongue presses against your new fangs.", "gold");
+					element("span", "입안이 달라진 느낌이다. 혀로 더듬어 보다가 새로 돋은 송곳니에 눌려 움찔한다.", "gold");
 					break;
 				case "waterdragonUp3":
-					element("span", "Your head feels heavier. You reach up, and find that a pair of horns have sprouted.", "gold");
+					element("span", "머리가 무겁다. 손을 올려 보니 뿔 한 쌍이 돋아나 있다.", "gold");
 					break;
 				case "waterdragonUp4":
-					element("span", "Your ears itch. You reach up to them, and find them much bigger than you expected. You've grown a pair of dragon ears.", "gold");
+					element("span", "귀가 가렵다. 손을 올려 보니 생각보다 훨씬 커져 있다. 용 귀 한 쌍이 자라났다.", "gold");
 					break;
 				case "waterdragonUp5":
-					element("span", "Your lower back tingles.", "gold");
+					element("span", "허리 아래가 따끔거린다.", "gold");
 					break;
 				case "waterdragonUp6":
-					element("span", "Your bottom feels heavier than usual. You reach behind you and feel your new scaly tail. It's strong.", "gold");
+					element("span", "엉덩이가 평소보다 무겁다. 뒤로 손을 뻗자 새로 생긴 비늘 달린 꼬리가 만져진다. 힘이 넘친다.", "gold");
 					break;
 				case "waterdragonUp7":
-					element("span", "Your skin feels different. You look at your hands and see them take on an indigo hue. You feel the depths call.", "gold");
+					element("span", "피부가 달라진 느낌이다. 손을 내려다보니 쪽빛으로 물들어 있다. 깊은 곳이 당신을 부르는 것이 느껴진다.", "gold");
 					fragment.append(wikifier("earnFeat", "'Lost Legacy'"));
 					break;
 				case "waterdragonDown0":
-					element("span", "You no longer feel the need to swim.", "gold");
+					element("span", "더는 헤엄치고 싶다는 생각이 들지 않는다.", "gold");
 					break;
 				case "waterdragonDown1":
-					element("span", "Your fangs have turned into regular teeth.", "gold");
+					element("span", "송곳니가 평범한 이빨로 돌아왔다.", "gold");
 					break;
 				case "waterdragonDown2":
-					element("span", "Your horns have disappeared.", "gold");
+					element("span", "뿔이 사라졌다.", "gold");
 					break;
 				case "waterdragonDown3":
-					element("span", "Your dragon ears have disappeared.", "gold");
+					element("span", "용 귀가 사라졌다.", "gold");
 					break;
 				case "waterdragonDown4":
-					element("span", "Your lower back has stopped tingling.", "gold");
+					element("span", "허리 아래의 따끔거림이 멎었다.", "gold");
 					break;
 				case "waterdragonDown5":
-					element("span", "Your balance feels different. Your dragon tail has disappeared.", "gold");
+					element("span", "균형감각이 달라진 것 같다. 용 꼬리가 사라졌다.", "gold");
 					break;
 				case "waterdragonDown6":
-					element("span", "Your body feels different. You look at your hands and notice them return to normal.", "gold");
+					element("span", "몸이 달라진 느낌이다. 손을 내려다보니 원래대로 돌아와 있다.", "gold");
 					break;
 				case "bearUp1":
-					element("span", "You have a strange toothache and a strange craving for honey.", "gold");
+					element("span", "이상한 치통이 느껴지고, 꿀이 이상하게 당긴다.", "gold");
 					break;
 				case "bearUp2":
-					element("span", "Your mouth feels different. You explore your mouth and wince as your tongue presses against your new fangs.", "gold");
+					element("span", "입안이 달라진 느낌이다. 혀로 더듬어 보다가 새로 돋은 송곳니에 눌려 움찔한다.", "gold");
 					break;
 				case "bearUp3":
-					element("span", "Your scalp and neck itch.", "gold");
+					element("span", "두피와 목이 가렵다.", "gold");
 					break;
 				case "bearUp4":
-					element("span", "Your scalp twitches. You reach up and feel your new pair of bear ears and a patch of fur covering your neck.", "gold");
+					element("span", "두피가 움찔거린다. 손을 올리자 새로 생긴 곰 귀 한 쌍과 목을 덮은 털이 만져진다.", "gold");
 					break;
 				case "bearUp5":
-					element("span", "Your lower back tingles.", "gold");
+					element("span", "허리 아래가 따끔거린다.", "gold");
 					break;
 				case "bearUp6":
-					element("span", "Your bottom feels fluffier than usual. You reach behind you and feel your new bear tail. You suppress the urge to growl.", "gold");
+					element("span", "엉덩이가 평소보다 푹신하다. 뒤로 손을 뻗자 새로 생긴 곰 꼬리가 만져진다. 으르렁거리고 싶은 충동을 참는다.", "gold");
 					fragment.append(wikifier("earnFeat", "'Bear'"));
 					break;
 
 				case "bearDown0":
-					element("span", "Your toothache has stopped.", "gold");
+					element("span", "치통이 멎었다.", "gold");
 					break;
 				case "bearDown1":
-					element("span", "Your fangs have turned into regular teeth.", "gold");
+					element("span", "송곳니가 평범한 이빨로 돌아왔다.", "gold");
 					break;
 				case "bearDown2":
-					element("span", "Your scalp and neck no longer itch.", "gold");
+					element("span", "두피와 목이 더는 가렵지 않다.", "gold");
 					break;
 				case "bearDown3":
-					element("span", "Your bear ears have disappeared. There appears to be no more fur covering your neck.", "gold");
+					element("span", "곰 귀가 사라졌다. 목을 덮던 털도 더는 보이지 않는다.", "gold");
 					break;
 				case "bearDown4":
-					element("span", "Your lower back has stopped tingling.", "gold");
+					element("span", "허리 아래의 따끔거림이 멎었다.", "gold");
 					break;
 				case "bearDown5":
-					element("span", "Your balance feels different. Your bear tail has disappeared.", "gold");
+					element("span", "균형감각이 달라진 것 같다. 곰 꼬리가 사라졌다.", "gold");
 					break;
 				case "harpyUp1":
 					element("span", "시야가 더 선명하게 느껴진다.", "gold");
@@ -1721,7 +1721,7 @@ function effects() {
 					element("span", "이상한 치통이 느껴지고, 눈은 조금 더 예리해진 것 같다. 무언가를 훔치고 싶은 충동이 든다.", "gold");
 					break;
 				case "foxUp2":
-					element("span", "Your mouth and eyes feel different. You explore your mouth and yip as your tongue presses against your new fangs.", "gold");
+					element("span", "입안과 눈이 달라진 느낌이다. 혀로 더듬어 보다가 새로 돋은 송곳니에 눌려 깨갱 소리를 낸다.", "gold");
 					break;
 				case "foxUp3":
 					element(
@@ -1747,7 +1747,7 @@ function effects() {
 					);
 					break;
 				case "foxUp6":
-					element("span", "Your bottom feels heavier than usual. You give it a wiggle and feel your new fox tail. It's extremely comforting to touch.", "gold");
+					element("span", "엉덩이가 평소보다 무겁다. 살짝 흔들어 보니 새로 생긴 여우 꼬리가 느껴진다. 만지면 몹시 포근하다.", "gold");
 					fragment.append(wikifier("specialClothesUnlock", "'set'", "'shrine'"));
 					fragment.append(wikifier("earnFeat", "'Fox'"));
 					break;
@@ -1770,46 +1770,46 @@ function effects() {
 					element("span", "균형감각이 달라진 것 같다. 여우 꼬리가 사라졌다.", "gold");
 					break;
 				case "bunnyUp1":
-					element("span", "Your legs begin to ache.", "gold");
+					element("span", "다리가 아프기 시작한다.", "gold");
 					break;
 				case "bunnyUp2":
-					element("span", "The ache in your legs is gone and you feel more agile.", "gold");
+					element("span", "다리의 통증이 사라지고 몸이 더 날렵해진 느낌이다.", "gold");
 					break;
 				case "bunnyUp3":
-					element("span", "Your scalp begins to itch.", "gold");
+					element("span", "두피가 가렵기 시작한다.", "gold");
 					break;
 				case "bunnyUp4":
-					element("span", "You feel the urge to scratch at your head and when you do, you discover a pair of bunny ears. You tug at them.", "gold");
+					element("span", "머리를 긁고 싶은 충동이 들어 긁다 보니 토끼 귀 한 쌍이 만져진다. 귀를 살짝 잡아당겨 본다.", "gold");
 					break;
 				case "bunnyUp5":
-					element("span", "Your lower back begins to itch. You can barely scratch at it without being obvious.", "gold");
+					element("span", "허리 아래가 가렵기 시작한다. 티 나지 않게 긁기가 쉽지 않다.", "gold");
 					break;
 				case "bunnyUp6":
 					element(
 						"span",
-						"You feel a bump on your lower back and as you go to check, you discover a soft bunny tail. You continue to pet it, enjoying the sensation.",
+						"허리 아래에 혹 같은 것이 느껴져 확인하려 손을 뻗자 보드라운 토끼 꼬리가 만져진다. 계속 쓰다듬으며 그 감촉을 즐긴다.",
 						"gold"
 					);
 					fragment.append(wikifier("earnFeat", "'Bunny'"));
 					break;
 
 				case "bunnyDown0":
-					element("span", "The pain you were feeling has disappeared.", "gold");
+					element("span", "느껴지던 통증이 사라졌다.", "gold");
 					break;
 				case "bunnyDown1":
-					element("span", "Walking suddenly feels heavier.", "gold");
+					element("span", "갑자기 걷는 것이 무겁게 느껴진다.", "gold");
 					break;
 				case "bunnyDown2":
-					element("span", "Your scalp no longer itches.", "gold");
+					element("span", "두피가 더는 가렵지 않다.", "gold");
 					break;
 				case "bunnyDown3":
-					element("span", "Your bunny ears have disappeared.", "gold");
+					element("span", "토끼 귀가 사라졌다.", "gold");
 					break;
 				case "bunnyDown4":
-					element("span", "Your lower back no longer itches.", "gold");
+					element("span", "허리 아래가 더는 가렵지 않다.", "gold");
 					break;
 				case "bunnyDown5":
-					element("span", "Your bunny tail has disappeared.", "gold");
+					element("span", "토끼 꼬리가 사라졌다.", "gold");
 					break;
 				// Clothes
 				case "bimboMessage1":

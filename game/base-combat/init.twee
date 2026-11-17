@@ -1085,9 +1085,9 @@
 						<br><br>
 					<</if>>
 				<<elseif $debug and (!_npc or _npc.active isnot "active")>>
-					<br>Debug Message:<br>NPC _mancombatcontrol, <<if _npc>><<print _npc.fullDescription>><<else>>[missing NPC slot]<</if>> is not active.<br>
+					<br>디버그 메시지:<br>NPC _mancombatcontrol, <<if _npc>><<print window.KR.getDescriptionKr(_npc.fullDescription)>><<else>>[NPC 슬롯 없음]<</if>>【이가】 활성화되어 있지 않습니다.<br>
 				<<elseif $debug and _npc and _npc.stance is "defeated">>
-					<br>Debug Message:<br>NPC _mancombatcontrol, <<print _npc.fullDescription>> is defeated.<br>
+					<br>디버그 메시지:<br>NPC _mancombatcontrol, <<print window.KR.getDescriptionKr(_npc.fullDescription)>>【이가】 패배했습니다.<br>
 				<</if>>
 			<</for>>
 
@@ -1097,7 +1097,7 @@
 				<br>
 			<</if>>
 			<<if $combatExtended.stability gt 0 and $combatExtended.stabilityLost isnot 1 and $combatExtended.standingFights is 1 and $position isnot "stalk">>
-				Stability: <<combatExtendedStabilityCaption>>
+				균형: <<combatExtendedStabilityCaption>>
 				<br>
 			<</if>>
 		</div>
@@ -1402,8 +1402,8 @@
 		<<if $combatExtended.reverseRape is 1 and $pain lt 100 and $combatExtended.reverseRapeEnd is 0>>
 			<<if $combatExtended.reverseRapeStart is 1>>
 				<label class="cbtOption">
-					<p>End Reverse Rape</p>
-					<<link [[Stop|$passage]]>><<set $combatExtended.reverseRapeEnd to 1>><</link>>
+					<p>역강간 종료</p>
+					<<link [[그만둔다|$passage]]>><<set $combatExtended.reverseRapeEnd to 1>><</link>>
 				</label>
 			<<else>>
 				<<if $reverseRapeOptOutInit is undefined>>
@@ -1411,13 +1411,13 @@
 					<<set $reverseRapeOptOutInit to 1>>
 				<</if>>
 				<label class="cbtOption">
-					<p>Reverse Rape</p>
+					<p>역강간</p>
 					<<if hasSexStat("promiscuity", 5)>>
 						<label>
 							<<checkbox "$combatExtended.reverseRapeInit" 0 1 autocheck>>
 						</label><br>
 					<<else>>
-						<span class="black"><i>Unlock level 5 promiscuity.</i></span>
+						<span class="black"><i>음란도 5레벨 해금 필요.</i></span>
 					<</if>>
 				</label>
 			<</if>>

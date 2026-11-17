@@ -70,7 +70,7 @@
 <<if $exposed lte 0 and Time.dayState isnot "night" and $docks.status gte 80 and $docks.wage lt 3000>>
 	/* <<dockstatus>> multiplies inputs by 2 and clamps, so asking for a raise is -40 status */
 	/* At the earliest fame to ask for a raise, this sets you to 40, and at the highest, 60 */
-	<<socialiseicon "ask">><<link [[Ask for raise (0:05)|Docks Raise]]>><<pass 5>><<set $docks.wage to Math.clamp($docks.wage + 150, 0, 3000)>><<dockstatus -20>><</link>><<lllcool>>
+	<<socialiseicon "ask">><<link [[임금 인상을 요구한다 (0:05)|Docks Raise]]>><<pass 5>><<set $docks.wage to Math.clamp($docks.wage + 150, 0, 3000)>><<dockstatus -20>><</link>><<lllcool>>
 	<br>
 <</if>>
 <<if Time.dayState is "night">>
@@ -480,7 +480,7 @@
 당신은 다른 노동자들과 함께 앉아 점심을 먹으며 이야기를 나눈다.
 
 <<if $docks.status gte 100>>
-	You quickly become the centre of attention. A <<generate1>><<person1>><<person>> offers a toast to you and thanks you for all the help you've been<<if $docks.wage lt 3000>>, while a <<generate2>><<person2>><<person>> jokes that you should ask for a raise already<</if>>.<<stress -6>><<trauma -6>><<lstress>><<ltrauma>><<endevent>>
+	당신은 금세 주목의 중심이 된다. <<generate1>><<person1>><<person>>【이가】 당신을 위해 건배를 제안하며, 당신이 해준 모든 도움에 감사 인사를 전한다<<if $docks.wage lt 3000>>. 한편, <<generate2>><<person2>><<person>>【은는】 벌써 임금 인상을 요구해야 하는 것 아니냐고 농담한다<</if>>.<<stress -6>><<trauma -6>><<lstress>><<ltrauma>><<endevent>>
 <<elseif $docks.status gte 80>>
 	그들은 당신과 함께 있는 것을 즐기며 당신이 말할 때 귀를 기울인다. <<generate1>><<person1>><<person>>【이가】 <<his>> 음식을 나눠주겠다고 제안한다.<<stress -6>><<trauma -3>><<dockstatus 1>><<lstress>><<ltrauma>><<gcool>><<endevent>>
 <<elseif $docks.status gte 60>>
@@ -1193,7 +1193,7 @@
 			<<set _dockCount += 1>>
 		<<elseif !_dock_contents>>
 			<<if _dockCount gte 2>>
-				You don't find anything else suitable. Useful to know.
+				당신은 더 이상 적당한 것을 찾지 못한다. 알아두면 유용하다.
 			<<else>>
 				당신은 적당한 것을 찾지 못한다. 알아두면 유용하다.
 			<</if>>

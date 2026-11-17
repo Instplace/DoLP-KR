@@ -7956,7 +7956,7 @@
 
 	<<if !$plants_known.includes("potato")>>
 		<<set $plants_known.pushUnique("potato")>>
-		<span class="gold">You can now grow <<icon "tending/potato.png">> potatoes.</span>
+		<span class="gold">이제 <<icon "tending/potato.png">> 감자를 기를 수 있다.</span>
 		<br><br>
 	<</if>>
 	<<if $foodstuff.potato is undefined>>
@@ -8450,7 +8450,7 @@
 <<if $speech_attitude is "meek">>
 	"마-마음에 드세요?" 당신이 묻는다. "원하시면 더 가까이서 보셔도 돼요."
 <<elseif $speech_attitude is "shy">>
-	"D-do you like it?" you ask."
+	"마-마음에 드세요?" 당신이 묻는다."
 <<elseif $speech_attitude is "bratty">>
 	"보고 싶으면," 당신이 말한다. "그냥 물어보세요."
 <<else>>
@@ -8479,7 +8479,7 @@
 <<if $speech_attitude is "meek">>
 	"마-마음에 드세요?" 당신이 묻는다. "원하시면 더 가까이서 보셔도 돼요."
 <<elseif $speech_attitude is "shy">>
-	"D-do you like it?" you ask."
+	"마-마음에 드세요?" 당신이 묻는다."
 <<elseif $speech_attitude is "bratty">>
 	"보고 싶으면," 당신이 말한다. "그냥 물어보세요."
 <<else>>
@@ -8508,7 +8508,7 @@
 <<if $speech_attitude is "meek">>
 	"마-마음에 드세요?" 당신이 묻는다. "원하시면 더 가까이서 보셔도 돼요."
 <<elseif $speech_attitude is "shy">>
-	"D-do you like it?" you ask."
+	"마-마음에 드세요?" 당신이 묻는다."
 <<elseif $speech_attitude is "bratty">>
 	"보고 싶으면," 당신이 말한다. "그냥 물어보세요."
 <<else>>
@@ -9229,7 +9229,7 @@
 
 <<else>>
 
-You realise too late that <span class="red">something creeps towards you through the dark.</span>
+너무 늦게서야 <span class="red">어둠 속에서 무언가가 당신을 향해 기어 오고 있다</span>는 것을 깨닫는다.
 
 <<skulduggeryuse>>
 
@@ -11419,7 +11419,7 @@ You realise too late that <span class="red">something creeps towards you through
 	마지막 일격을 가하자, 당신의 안대가 떨어진다. 당신은 구석으로 재빨리 피한다. 당신은 <<him>>【을를】 조심스럽게 살피며, <<his>> 모든 움직임을 주시한다.
 	<br><br>
 
-	The <<person>> gives a sad sigh and staggers towards you. You <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>curl up defensively<<elseif $speech_attitude is "bratty">>narrow your eyes in defiance<<else>>brace yourself for another assault<</if>>, but <<he>> doesn't harm you, instead undoing your binds.
+	<<person>>【은는】 슬픈 한숨을 내쉬며 당신을 향해 비틀거리며 다가온다. 당신은 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>방어적으로 몸을 웅크리고<<elseif $speech_attitude is "bratty">>반항적으로 눈을 가늘게 뜨고<<else>>또 한 번의 공격에 대비하고<</if>> 있지만, <<he>>【은는】 당신을 해치지 않고 대신 결박을 풀어 준다.
 	<br>
 	"네가 바로 그 사람일 줄 알았는데," <<he>>【이가】 중얼거린다. <<He>>【은는】 문을 막고 잠시 조용히 서 있다가 말을 잇는다.
 	<br>
@@ -12646,7 +12646,7 @@ You realise too late that <span class="red">something creeps towards you through
 			<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 				"두 분 다 기쁘시다면... 둘 다 받을게요." 당신이 말을 더듬는다.
 			<<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-				"I suppose I'll take both then, if it is what will make you satisfied," you sigh.
+				"두 분이 만족하신다면, 그럼 둘 다 받도록 하죠." 당신이 한숨을 쉰다.
 			<<elseif $speech_attitude is "bratty">>
 				"두 분 다 짜증나고 강압적이네요. 그냥 종이나 주고 저 좀 내버려 둬요." 당신이 한숨을 쉰다.
 			<<else>>

@@ -825,7 +825,7 @@
 검은 머리의 <<person1>><<personsimple>>【은는】 <<his>> 가방을 집어 들고 내용물을 모으기 시작한다. "고-고마워," <<person1>><<he>>【은는】 더듬는다. "나-나는—" <<He>>【은는】 당신을 바라보지만, 얼굴을 붉히고 시선을 돌린다. "난 카일라야." 당신은 <<he>>【이가】 당신보다 어리다고 생각했지만, <<he>>【은는】 동갑처럼 보인다.
 <<switch $bodysize>>
 	<<case -1>>
-		Even with your tiny height, <<hes>> not that much taller than you.
+		당신의 키가 아주 작은데도, <<hes>> 당신보다 그리 많이 크지는 않다.
 	<<case 0>>
 		당신의 작은 체구에도 불구하고, <<hes>> 당신보다 약간 클 뿐이다.
 	<<case 1>>
@@ -835,7 +835,7 @@
 	<<case 3>>
 		<<Hes>> 당신과 비교하면 꽤 작다.
 	<<case 4>>
-		<<Hes>> just tiny compared to you. Then again - everyone is.
+		<<Hes>> 당신에 비하면 그저 아주 작을 뿐이다. 하긴 - 누구나 그렇다.
 <</switch>>
 <br><br>
 <<He>>【은는】 가방을 든 채 몸을 돌려 달아난다.
@@ -863,7 +863,7 @@
 "고-고마워," <<person1>><<he>>【은는】 더듬는다. "나-나는—" <<He>>【은는】 당신을 바라보지만, 얼굴을 붉히고 시선을 돌린다. "난 카일라야." 당신은 <<he>>【이가】 당신보다 어리다고 생각했지만, <<he>>【은는】 동갑처럼 보인다.
 <<switch $bodysize>>
 	<<case -1>>
-		Even with your tiny height, <<hes>> not that much taller than you.
+		당신의 키가 아주 작은데도, <<hes>> 당신보다 그리 많이 크지는 않다.
 	<<case 0>>
 		당신의 작은 체구에도 불구하고, <<hes>> 당신보다 약간 클 뿐이다.
 	<<case 1>>
@@ -873,7 +873,7 @@
 	<<case 3>>
 		<<Hes>> 당신과 비교하면 꽤 작다.
 	<<case 4>>
-		<<Hes>> just tiny compared to you. Then again - everyone is.
+		<<Hes>> 당신에 비하면 그저 아주 작을 뿐이다. 하긴 - 누구나 그렇다.
 <</switch>>
 <br><br>
 <<He>>【은는】 가방을 든 채 몸을 돌려 달아난다.

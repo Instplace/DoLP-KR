@@ -1421,10 +1421,10 @@
 <<if $phase is 0>>
 	<<= $school gte 1600 ? "당신은 모건에게 말한다" : "당신은 한숨을 쉰 뒤 모건에게 말한다">> 당신의 학교 성적이
 	<<if $school gte 8000>>
-		<span class="gold">exceptional.</span>
+		<span class="gold">탁월하다고</span>.
 		<<set _result to "exceptional">>
 	<<elseif $school gte 6000>>
-		<span class="green">distinguished.</span>
+		<span class="green">뛰어나다고</span>.
 		<<set _result to "distinguished">>
 	<<elseif $school gte 4000>>
 		<span class="green">모범적이라고</span>.
@@ -1461,14 +1461,14 @@
 
 <<if _result is "exceptional">>
 	<<npcincr Morgan love 5>>
-	"Incredible! You've reached heights no one could imagine!" Morgan exclaims, eyes sparkling with joy. <<He>> sweeps you into a tight hug. "You're an inspiration to our family, <<charles>>! I'm so proud, I can barely express it! Our noble name will be remembered because of you!"
+	"믿기지 않는구나! 아무도 상상하지 못한 높이까지 올라갔어!" 모건이 외친다. 눈이 기쁨으로 반짝인다. <<He>>【은는】 당신을 꽉 껴안는다. "넌 우리 가문의 자랑이야, <<charles>>【아야】! 너무 자랑스러워서 말로 다 못 하겠구나! 네 덕분에 우리 고귀한 이름이 길이 기억될 거란다!"
 	<<stress -15>><<lstress>>
 	<br><br>
 
 	<<link [[다음|Sewers Morgan]]>><</link>>
 <<elseif _result is "distinguished">>
 	<<npcincr Morgan love 3>>
-	"Outstanding! You've truly exceeded all expectations!" Morgan says, his voice full of pride. <<He>> places both hands on your shoulders, beaming down at you. "You're living up to our noble name, <<charles>>, and making your <<mummy>> proud every single day!"
+	"대단하구나! 정말 모든 기대를 뛰어넘었어!" 모건이 말한다. 목소리에 자랑스러움이 가득하다. <<He>>【은는】 두 손을 당신의 어깨에 얹고 환하게 웃으며 내려다본다. "네가 우리 고귀한 이름에 걸맞게 살고 있구나, <<charles>>【아야】. 하루하루 네 <<mummy>>【을를】 자랑스럽게 해 주고 있단다!"
 	<<stress -10>><<lstress>>
 	<br><br>
 

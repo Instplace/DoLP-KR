@@ -54,13 +54,13 @@
 	<<if $speechhit is 1>>
 		<<set $speechhit to 0>>
 		<<addSpeechLine "hit">>
-		<<He>> Laughs out loud. "Maybe now you'll finally listen and behave!"
+		<<He>>【이가】 크게 웃는다. "이제야 좀 말을 듣고 얌전히 굴겠군!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechmouthpenetrated is 1>>
 		<<set $speechmouthpenetrated to 0>>
 		<<addSpeechLine "mouthPenetrated">>
-		"You've been a good <<girl>> so here's your reward," <<He>> smiles.
+		"착한 <<girl>>【이었였】으니 상을 주겠다." <<He>>【이가】 미소 짓는다.
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechNoticeSexToy>>

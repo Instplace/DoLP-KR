@@ -309,7 +309,7 @@
 	<<if $gamemode isnot "soft">>
 		<<foldout false "_violenceFoldout">>
 			<span class="gold">폭력</span>
-			Enemies Defeated: $enemiesDefeatedStat
+			쓰러뜨린 적: $enemiesDefeatedStat
 			<br>
 			추행: $moleststat
 			<br>
@@ -343,7 +343,7 @@
 			때림: $attackstat
 			<br>
 			<<if $combatExtended.hookpunching is 1>>
-				Hook Punches landed: $hookpunchStat
+				훅 펀치 적중: $hookpunchStat
 				<br>
 			<</if>>
 			페퍼 스프레이 사용: $spraystat
@@ -359,15 +359,15 @@
 				<br><br>
 			<</if>>
 			<<if $combatExtended.passiveDodging is 1 or $combatExtended.activeDodging is 1>>
-				Dodges: $dodgeStat
+				회피: $dodgeStat
 				<br>
-				Partial Dodges: $partialDodgeStat
+				부분 회피: $partialDodgeStat
 				<br>
 			<</if>>
 			<<if $combatExtended.countering is 1>>
-				Counters: $counterStat
+				반격: $counterStat
 				<br>
-				Partial Counters: $partialCounterStat
+				부분 반격: $partialCounterStat
 				<br>
 			<</if>>
 		<</foldout>>
@@ -575,7 +575,7 @@
 			빙의 횟수: $wraith.possessCount
 		<</if>>
 		<br>
-		<<if modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1>>Opium Addiction: <<= $poppyDrug.addiction>><</if>>
+		<<if modLISelected("Poppy") and C.npc.Poppy and C.npc.Poppy.init is 1>>아편 중독도: <<= $poppyDrug.addiction>><</if>>
 		<br>
 		총 결석 수업: <<print Object.values($schoolLessonsMissed).reduce((x, y) => x + y)>>
 		<mouse class="tooltip linkBlue">(?)<span>이전 버전 게임의 오류로 인해 '0.4.0.0' 버전 이전의 통계는 부정확할 수 있습니다</span></mouse>
@@ -592,7 +592,7 @@
 		<br>
 		수영 결석 수: $schoolLessonsMissed.swimming
 		<br>
-		Umbrellas broken: $umbrellaStat
+		부러진 우산: $umbrellaStat
 		<br>
 		<<if $earSlimeDaysStat>>
 			귀 슬라임 동거일: $earSlimeDaysStat
@@ -631,44 +631,44 @@
 			<br>
 		<</if>>
 		<<set _buffDaysAmount to Math.floor(Time.days / $combatExtended.enemyDayScaling)>>
-		Enemy Day Scaling Buff Applied: <<print "x" + _buffDaysAmount>>
+		적 일수 스케일링 버프 적용: <<print "x" + _buffDaysAmount>>
 		<br>
 		<<if $combatExtended.enemyHealthDayScaling is 1 and (_buffDaysAmount lte $combatExtended.enemyDayScalingLimit or $combatExtended.enemyInfiniteDayScaling is 1)>>
 			<<set _daysHealthBuff to _buffDaysAmount * $combatExtended.enemyHealthDayScalingMult>>
 		<<else>>
 			<<set _daysHealthBuff to _buffDaysAmount * $combatExtended.enemyDayScalingLimit>>
 		<</if>>
-		Enemy Health Day Scaling Buff: <<print "+" + _daysHealthBuff + "%">>
+		적 체력 일수 스케일링 버프: <<print "+" + _daysHealthBuff + "%">>
 		<br>
 		<<if _buffDaysAmount lte $combatExtended.enemyDayScalingLimit or $combatExtended.enemyInfiniteDayScaling is 1>>
 			<<set _dayLevelBuff to Math.clamp(_buffDaysAmount * $combatExtended.enemyLevelDayScalingMult, 0 , 21)>>
 		<<else>>
 			<<set _dayLevelBuff to Math.clamp($combatExtended.enemyDayScalingLimit * $combatExtended.enemyLevelDayScalingMult, 0 , 21)>>
 		<</if>>
-		Enemy Level Day Scaling Buff: <<print "+" + _dayLevelBuff>>
+		적 레벨 일수 스케일링 버프: <<print "+" + _dayLevelBuff>>
 		<br>
 		<<set _buffDefeatsAmount  to Math.floor($enemiesDefeatedStat / $combatExtended.enemyDefeatScaling)>>
-		Enemy Defeat Scaling Buff Applied: <<print "x" + _buffDefeatsAmount >>
+		적 패배 스케일링 버프 적용: <<print "x" + _buffDefeatsAmount >>
 		<br>
 		<<if $combatExtended.enemyHealthDefeatScaling is 1 and (_buffDefeatsAmount  lte $combatExtended.enemyDefeatScalingLimit or $combatExtended.enemyInfiniteDefeatScaling is 1)>>
 			<<set _defeatsHealthBuff to _buffDefeatsAmount  * $combatExtended.enemyHealthDefeatScalingMult>>
 		<<else>>
 			<<set _defeatsHealthBuff to _buffDefeatsAmount  * $combatExtended.enemyDefeatScalingLimit>>
 		<</if>>
-		Enemy Health Defeat Scaling Buff: <<print "+" + _defeatsHealthBuff + "%">>
+		적 체력 패배 스케일링 버프: <<print "+" + _defeatsHealthBuff + "%">>
 		<br>
 		<<if _buffDefeatsAmount  lte $combatExtended.enemyLevelDefeatScalingMult or $combatExtended.enemyInfiniteDefeatScaling is 1>>
 			<<set _defeatLevelBuff to Math.clamp(_buffDefeatsAmount  * $combatExtended.enemyLevelDefeatScalingMult, 0 , 21)>>
 		<<else>>
 			<<set _defeatLevelBuff to Math.clamp($combatExtended.enemyDefeatScalingLimit * $combatExtended.enemyLevelDefeatScalingMult, 0 , 21)>>
 		<</if>>
-		Enemy Level Defeat Scaling Buff: <<print "+" + _defeatLevelBuff>>
+		적 레벨 패배 스케일링 버프: <<print "+" + _defeatLevelBuff>>
 		<br>
 		<<set _totalHealthBuff to _daysHealthBuff + _defeatsHealthBuff>>
-		Total Enemy Health Buff: <<print "+" + _totalHealthBuff + "%">>
+		적 체력 버프 합계: <<print "+" + _totalHealthBuff + "%">>
 		<br>
 		<<set _totalLevelBuff to Math.clamp(_dayLevelBuff + _defeatLevelBuff, 0 , 21)>>
-		Total Enemy Level Buff: <<print "+" + _totalLevelBuff>>
+		적 레벨 버프 합계: <<print "+" + _totalLevelBuff>>
 		<br>
 	<</foldout>>
 
@@ -1058,9 +1058,9 @@
 			<br>
 			젖소 발현 단계: <<print Math.trunc($cow)>>
 			<br>
-			Beariness: <<print Math.trunc($bearbuild)>> (30+ for full transformation)
+			곰 변이: <<print Math.trunc($bearbuild)>> (30+ 완전 변신)
 			<br>
-			Bear manifestation: <<print Math.trunc($bear)>>
+			곰 발현 단계: <<print Math.trunc($bear)>>
 			<br>
 			<<if resolveIfNamedBeastIsMonster("greathawk")>>하피 변이<<else>>새 변이<</if>>: <<print Math.trunc($birdbuild)>> (30+ 완전 변신)
 			<br>
@@ -1070,13 +1070,13 @@
 			<br>
 			여우 발현 단계: <<print Math.trunc($fox)>>
 			<br>
-			Bunness: <<print Math.trunc($bunnybuild)>> (30+ for full transformation)
+			바니걸 변이: <<print Math.trunc($bunnybuild)>> (30+ 완전 변신)
 			<br>
-			Bunny manifestation: <<print Math.trunc($bunny)>>
+			바니걸 발현 단계: <<print Math.trunc($bunny)>>
 			<br>
-			Draconism: <<print Math.trunc($waterdragonbuild)>> (50+ for full transformation)
+			수룡 변이: <<print Math.trunc($waterdragonbuild)>> (50+ 완전 변신)
 			<br>
-			Water dragon manifestation: <<print Math.trunc($waterdragon)>>
+			수룡 발현 단계: <<print Math.trunc($waterdragon)>>
 			<br>
 			천사 변이: <<print Math.trunc($angelbuild)>> (50+ 완전 변신)
 			<br>

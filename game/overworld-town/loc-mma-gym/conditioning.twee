@@ -152,7 +152,7 @@
     <<runeventpool>>
     <br><br>
 
-    <<link [[Next|Conditioning Lesson 2]]>><</link>>
+    <<link [[다음|Conditioning Lesson 2]]>><</link>>
 <</if>>
 
 :: Conditioning Lesson 2
@@ -321,7 +321,7 @@
 <<runeventpool>>
 <br><br>
 
-<<link [[Next|Conditioning Lesson 3]]>><</link>>
+<<link [[다음|Conditioning Lesson 3]]>><</link>>
 
 :: Conditioning Lesson 3
 <<set $outside to 0>><<set $location to "mma_gym">><<effects>>
@@ -492,7 +492,7 @@
 <<runeventpool>>
 <br><br>
 
-<<link [[Next|Conditioning Lesson 4]]>><</link>>
+<<link [[다음|Conditioning Lesson 4]]>><</link>>
 
 :: Conditioning Lesson 4
 <<set $outside to 0>><<set $location to "mma_gym">><<effects>>
@@ -663,4 +663,4 @@
 <<runeventpool>>
 <br><br>
 
-<<link [[Next|MMA Gym]]>><<endevent>><</link>>
+<<link [[다음|MMA Gym]]>><<endevent>><</link>>

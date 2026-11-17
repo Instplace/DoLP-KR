@@ -66,12 +66,12 @@
 			<</if>>
 			<<if $ears_pierced isnot 1>>
 				<<if $money lt 30000>>
-					You cannot afford to pierce your ears either.
+					귀를 뚫을 돈도 없다.
 					<br>
 				<<else>>
-					You can also pierce your ears here for <<printmoney 30000>>.
+					여기서 <<printmoney 30000>>에 귀를 뚫을 수도 있다.
 					<br><br>
-					<<shopicon "tattoo">><<link [[Get your ears pierced|Ears pierced]]>><<set $ears_pierced to 1>><<pass 10>><<money -30000>><</link>>
+					<<shopicon "tattoo">><<link [[귀를 뚫는다|Ears pierced]]>><<set $ears_pierced to 1>><<pass 10>><<money -30000>><</link>>
 					<br><br>
 				<</if>>
 			<</if>>
@@ -188,11 +188,11 @@
 	<</if>>
 	<br><br>
 
-	<span class="red">Tribal</span> tattoos:
+	<span class="red">부족 문양</span> 문신:
 	<br>
-	<label>Triangle <<radiobutton "$tattoo_choice" "triangle">></label> |
-	<label>Square <<radiobutton "$tattoo_choice" "square">></label> |
-	<label>Circle <<radiobutton "$tattoo_choice" "circle">></label> |
+	<label>삼각형 <<radiobutton "$tattoo_choice" "triangle">></label> |
+	<label>사각형 <<radiobutton "$tattoo_choice" "square">></label> |
+	<label>원 <<radiobutton "$tattoo_choice" "circle">></label> |
 	<br><br>
 </div>
 
@@ -321,6 +321,6 @@
 :: Ears pierced
 <<effects>>
 
-You sit down and fill out all the forms. It doesn't take more than three minutes getting your ears pierced. Soon enough - you are finished.
+자리에 앉아 서류를 전부 작성한다. 귀를 뚫는 데는 3분도 걸리지 않는다. 곧, 끝이 난다.
 <br><br>
 <<link [[다음|Tattoo Parlour]]>><</link>>

@@ -88,10 +88,10 @@
 			<br>
 		<</if>>
 		<!-- <<if Time.dayState is "night" and $exposed lte 0>>
-			<<townhallicon>><<link [[HBSC Bank Branch (0:01)|HBSC Bank Branch Sneak]]>><<pass 1>><</link>>
+			<<townhallicon>><<link [[HBSC 은행 지점 (0:01)|HBSC Bank Branch Sneak]]>><<pass 1>><</link>>
 			<br>
 		<<elseif $exposed lte 0>>
-			<<townhallicon>><<link [[HBSC Bank Branch (0:01)|HBSC Bank Branch]]>><<pass 1>><</link>>
+			<<townhallicon>><<link [[HBSC 은행 지점 (0:01)|HBSC Bank Branch]]>><<pass 1>><</link>>
 			<br>
 		<</if>> -->
 		<<if Time.dayState is "day" and $exposed is 0 and $photo?.street is "ready">> /* currently unused */

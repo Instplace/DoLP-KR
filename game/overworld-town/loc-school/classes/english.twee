@@ -241,7 +241,7 @@
 	<br>
 	<<socialiseicon>><<link [[반 친구들과 어울린다|English Lesson Socialise]]>><</link>><<ltrauma>><<lstress>><<gharass>>
 	<br>
-	<<daydreamicon>><<link [[Daydream|English Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
+	<<daydreamicon>><<link [[공상에 잠긴다|English Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
 	<br>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<bedicon "zzz">><<link [[책상에서 잔다|English Lesson Sleep]]>><</link>><<ltiredness>>
@@ -270,7 +270,7 @@
 	<br>
 	<<socialiseicon>><<link [[반 친구들과 어울린다|English Lesson Socialise]]>><</link>><<gcool>><<ltrauma>><<lstress>><<gharass>>
 	<br>
-	<<daydreamicon>><<link [[Daydream|English Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
+	<<daydreamicon>><<link [[공상에 잠긴다|English Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
 	<br>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<bedicon "zzz">><<link [[책상에서 잔다|English Lesson Sleep]]>><</link>><<ltiredness>>

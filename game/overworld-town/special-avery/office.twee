@@ -547,7 +547,7 @@
 			당신은 정중하고 효율적으로 모든 전화를 받는다. 에이버리가 만족스러운 듯 고개를 끄덕인다.<<npcincr Avery love 1>><<glove>>
 		<</if>>
 		<br><br>
-		You've earned <<averyofficewage "pay" "english">>.
+		<<averyofficewage "pay" "english">>【을를】 벌었다.
 		<br><br>
 
 		<<averyofficeoptions>>
@@ -557,7 +557,7 @@
 		<<wearProp "feather duster">>
 		에이버리는 당신에게 <<his>> 사무실의 먼지를 털고 청소해 달라고 한다. 당신은 구석에 있던 먼지털이를 집어 책장의 먼지를 턴다. 선반 위에 놓인 수많은 상장들을 눈여겨본다.<<housekeeping 1 600>><<ghousekeeping 600>>
 		<br><br>
-		You've earned <<averyofficewage "pay" "housekeeping">>.
+		<<averyofficewage "pay" "housekeeping">>【을를】 벌었다.
 		<br><br>
 
 		<<averyofficeoptions>>
@@ -1681,21 +1681,21 @@
 		당신은 <<allTopsUnderwear>>【을를】 벗는다. 갑자기 온도가 달라져 팔에 소름이 돋는다.<<exhibitionism2>>
 
 		<<switch $bodysize>>
-			<<case -1>>You stand on your tiptoes to try and press your <<chest>> onto the scanner. After failing miserable, you just climb the machine and lie on it.
+			<<case -1>>당신은 까치발을 들어 <<chest>>【을를】 스캐너에 대려 한다. 처참하게 실패한 뒤, 그냥 기계 위로 기어올라 그 위에 눕는다.
 			<<case 0>>당신은 까치발을 들어 <<chest>>【을를】 스캐너에 대려 한다. 닿으려면 몸무게 대부분을 기계에 실어야 한다.
 			<<case 1>>당신은 <<chest>>【을를】 스캐너에 대려 한다. 까치발을 들어야 하지만, 어떻게든 해낸다.
-			<<case 2 2.5>>You lean down, pressing your <<chest>> on the scanner.
+			<<case 2 2.5>>당신은 몸을 숙여 <<chest>>【을를】 스캐너에 누른다.
 			<<case 3>>당신은 <<chest>>【을를】 스캐너에 댈 수 있을 만큼 낮아지려고 무릎을 굽히고 몸을 숙여야 한다.
-			<<case 4>>You struggle to get low enough to press your <<chest>> against the scanner properly, but after kneeling in front of the machine, you manage.
+			<<case 4>>당신은 <<chest>>【을를】 스캐너에 제대로 대려고 충분히 낮아지려 애쓰다가, 기계 앞에 무릎을 꿇고서야 간신히 해낸다.
 		<</switch>>
 	<<else>> /* genitals */
 		당신은 <<allBottomsUnderwear>>【을를】 벗고, 에어컨 바람이 엉덩이를 살짝 스치는 것을 느낀다.<<exhibitionism4>>
 
 		<<switch $bodysize>>
-			<<case -1 0>>You scramble to get on top of the machine, legs and feet flailing as you hoist yourself up. You manage to sit your bottom on the scanner, your legs hanging down.
+			<<case -1 0>>당신은 기계 위로 올라가려고 허둥대며, 다리와 발을 허우적거리다 간신히 몸을 끌어올린다. 엉덩이를 스캐너 위에 올려 앉고, 다리는 아래로 늘어진다.
 			<<case 1>>조금 애쓴 끝에, 당신은 기계 위로 올라가 엉덩이를 스캐너 위에 올려 앉을 수 있다. 다리는 기계 옆으로 늘어진다.
-			<<case 2 2.5>>You easily climb on top of the machine and sit your bottom on the scanner.
-			<<case 3 4>>You turn around and sit on top of the scanner.
+			<<case 2 2.5>>당신은 쉽게 기계 위로 올라가 엉덩이를 스캐너 위에 올려 앉는다.
+			<<case 3 4>>당신은 몸을 돌려 스캐너 위에 앉는다.
 		<</switch>>
 	<</if>>
 	당신은 버튼을 누르고 기계가 스캔을 마칠 때까지 기다린다. 차가운 유리에 닿아 <<= $phase2 is 0 ? "당신의 <<nipples>>【이가】 딱딱해진다" : "당신은 몸을 떤다">>.<<= $phase2 is 0 ? "<<arousal 200 'breasts'>>" : "<<arousal 200 'genitals'>>">><<garousal>>

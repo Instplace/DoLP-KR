@@ -444,7 +444,7 @@
 <br><br>
 <<set $temple_harassed += 1>>
 <<if $bodysize lte -1>>
-	You feel <<his>> hands on your <<bottom>>. You try to escape, and after some wriggling, <span class="green">you manage to get away from the <<person>></span> and shift yourself forwards. You realise the fireplace is the start of a tunnel. You crawl into the dark.
+	<<his>> 손이 당신의 <<bottom>>에 닿는 것이 느껴진다. 빠져나가려 하고, 한참 몸부림친 끝에 <span class="green"><<person>>에게서 벗어나</span> 몸을 앞으로 밀어낸다. 벽난로가 터널의 입구라는 것을 깨닫는다. 당신은 어둠 속으로 기어든다.
 	<br><br>
 	모퉁이를 돌자 다른 입구에서 빛이 새어 들어오는 것을 발견한다. 계속 기어가 다른 방으로 나온다.
 	<br><br>

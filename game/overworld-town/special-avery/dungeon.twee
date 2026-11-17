@@ -1632,7 +1632,7 @@
 <<link [[떠난다|Mansion Dungeon]]>><</link>>
 <br>
 <<if $auriga_artefact is "pc" and $fake_artefact is "Avery" and !$avery_fate>>
-	<<link [[Return the stones|Mansion Dungeon Vault Return]]>><</link>>
+	<<link [[소원의 돌을 돌려놓는다|Mansion Dungeon Vault Return]]>><</link>>
 <</if>>
 <br>
 
@@ -1652,11 +1652,11 @@
 :: Mansion Dungeon Vault Return
 <<effects>>
 
-You return the wishing stones to their original place. A cold wave washes over you. <span class="blue">You feel weaker.</span>
+당신은 소원의 돌을 원래 자리에 돌려놓는다. 차가운 파도가 몸을 훑고 지나간다. <span class="blue">몸이 더 약해진 기분이다.</span>
 <br><br>
 <<set $auriga_artefact to "Avery">>
 <<set $fake_artefact to "pc">>
-You leave the wishing stones in their place, and step outside the vault.
+당신은 소원의 돌을 그 자리에 두고 금고실 밖으로 나온다.
 <br><br>
 
 <<link [[다음|Mansion Dungeon]]>><</link>>

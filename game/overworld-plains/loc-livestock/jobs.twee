@@ -252,7 +252,7 @@
 	<</if>>
 	<br><br>
 
-	"These are for you," Remy says, handing you the entire basket. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow") or pcAreArmsBound("both")>>You take the handle in your mouth.<</if>> "Good <<girls>> get treats. Enjoy."
+	"이건 네 거야." 레미가 바구니 전체를 건네며 말한다. <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow") or pcAreArmsBound("both")>>당신은 입으로 손잡이를 문다.<</if>> "착한 <<girls>>에게는 상을 줘야지. 맛있게 먹어."
 	<br><br>
 
 	<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow") and $worn.neck.name isnot "cow bell">>
@@ -867,7 +867,7 @@
 "이것으로 검진을 마칩니다." 마침내 하퍼가 말한다. 작은 방에 정중한 박수 소리가 울려 퍼진다. "다음번에는 좀 더 직접적인 접촉을 해도 안전할 겁니다. 치료의 잔여 효과를 시험하기 위해서 말이죠."
 <br><br>
 
-Harper pats your <<if $bodysize lte 3>>head<<else>>shoulder<</if>>. "Thank you for being cooperative," <<he>> says. <<He>> pauses a moment, then pulls your hair back, leans in, and kisses your lips.
+하퍼가 당신의 <<if $bodysize lte 3>>머리<<else>>어깨<</if>>를 쓰다듬는다. "협조해줘서 고맙습니다." <<he>>【이가】 말한다. <<He>>【은는】 잠시 멈췄다가 당신의 머리카락을 뒤로 넘기고, 몸을 숙여 당신의 입술에 키스한다.
 <<takeKissVirginity "Harper" "rape">>
 <br><br>
 <<if $phase is 1>>
@@ -1695,7 +1695,7 @@ Harper pats your <<if $bodysize lte 3>>head<<else>>shoulder<</if>>. "Thank you f
 
 <<He>>【은는】 이어서 당신의 엉덩이를 꽉 쥔다. 반복되는 추행에 얼굴이 붉어진다.<<arousal 1200>><<ggarousal>>
 <br><br>
-Harper spreads your cheeks, and you feel a slight pressure against your hole as <<he>> rests one finger there. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo in protest<<else>>turn your head as best you can to glare at <<him>><</if>>. Remy grips your hair to keep you in place.<<arousal 600>><<garousal>>
+하퍼가 당신의 엉덩이를 벌리자, <<he>>【이가】 손가락 하나를 당신의 구멍에 갖다 대는 약간의 압력이 느껴진다. 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>항의하듯 음매 소리를 내거나<<else>>할 수 있는 한 고개를 돌려 <<him>>【을를】 노려본다<</if>>. 레미가 당신의 머리카락을 붙잡아 제자리에 고정시킨다.<<arousal 600>><<garousal>>
 <br><br>
 하퍼가 레미를 힐끗 보더니, <<person2>><<his>> 손가락을 뗀다. "혹시 막힌 곳은 없는지 확인해본 것뿐이에요." <<he>>【이가】 순진한 미소를 지으며 말한다.
 <br><br>
@@ -1991,7 +1991,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 					<br>
 					<<link [[겁줘서 쫓아낸다|Livestock Tie Stall Punishment Cat End]]>><<pass 5>><<set $phase to 0>><</link>>
 				<<else>>
-					The first swipe of <<bhis>> tongue makes you jolt against your restraints. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>whimper<</if>> in protest. <<bHe>> grows bolder and mounts you.
+					<<bhis>> 혀가 처음 닿자 당신은 구속구에 묶인 채 화들짝 놀란다. 당신은 거세게 저항하며 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 운다<<else>>낑낑거린다<</if>>. <<bHe>>【은는】 더욱 대담해져 당신 위로 올라탄다.
 					<br><br>
 					<<link [[다음|Livestock Tie Stall Punishment Cat Rape]]>><<set $molestationstart to 1>><</link>>
 				<</if>>
@@ -2063,7 +2063,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 		<br><br>
 		"밖은 너무 추워!"
 		<br><br>
-		You shiver <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>and moo<</if>> in response, your teeth chattering.
+		당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 울며 <</if>>대답하듯 몸을 떤다. 이가 딱딱 부딪친다.
 		<br><br>
 		"무슨 일이야, <<girl>>【아야】? 추워?" 농장 일꾼이 다정하게 말한다. <<He>>【은는】 구석에 있는 캐비닛으로 가서 담요를 꺼낸다.
 		<br><br>
@@ -2160,7 +2160,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 	<<addinlineevent "tie_stall_punishment_lurker">>
 		곁눈질로 건초가 흔들리는 게 보인다. 이상하게 찍찍거리는 소리가 들린다.<<stress 5>><<gstress>>
 		<br><br>
-		<<link [[<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>Bellow<<else>>Scream<</if>>|Livestock Tie Stall Punishment Lurker]]>><<set $phase to 0>><</link>>
+		<<link [[<<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 하고 운다<<else>>비명을 지른다<</if>>|Livestock Tie Stall Punishment Lurker]]>><<set $phase to 0>><</link>>
 		<br>
 		<<link [[조용히 있는다|Livestock Tie Stall Punishment Lurker]]>><<set $phase to 1>><</link>>
 	<</addinlineevent>>
@@ -2196,7 +2196,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 	<<set $harperSeen.pushUnique("livestock")>>
 	당신 뒤에서 니트릴 장갑이 찰칵하는 소리가 들린다. "간단할 겁니다." <<person2>><<he>>【이가】 덧붙인다. "제가 검사를 마칠 수 있도록 침착하게 계시기만 하면 됩니다."
 	<br><br>
-	Something cold and wet smears on your <<bottom>>. You jump <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>and moo<<else>>and shout<</if>> in surprise. Remy and Harper share a chuckle. "It's just a gel," Remy assures you. "Nothing to worry about."
+	차갑고 축축한 무언가가 당신의 <<bottom>> 위에 발린다. 당신은 놀라 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음매 하고 울며<<else>>소리를 지르며<</if>> 몸을 움찔한다. 레미와 하퍼가 함께 웃는다. "그냥 젤이야." 레미가 안심시키듯 말한다. "걱정할 것 없어."
 	<br><br>
 	하퍼가 당신의 <<bottomsimple>>에 젤을 문질러 바른다. <<person2>><<he>>【이가】 닿는 곳마다 따뜻한 감각이 찌릿하게 번져, 당신은 몸을 비튼다. <<he>>【이가】 처음으로 당신의 <<genitals>>에 닿자 몸이 떨린다. <<He>>【은는】 계속 피부에 문질러 바르며, 특히 당신의 <<genitals>>【와과】 <<chest>>에 신경을 쓴다.<<arousal 600>><<garousal>>
 	<br><br>
@@ -2235,7 +2235,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 		짚 같다. 메스꺼움에도 불구하고 몇 입 먹는 데 성공한다.<<stress 8>><<hunger -300>><<gstress>><<lhunger>>
 	<</if>>
 <<else>>
-	You eat the apple with enthusiasm. You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo up at <<him>> and nuzzle <<his>> leg<<else>>smile up at <<him>> in thanks<</if>>.<<stress -12>><<hunger -200>><<llstress>><<lhunger>>
+	당신은 열정적으로 사과를 먹는다. 당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>><<him>>【을를】 향해 음매 소리를 내며 <<his>> 다리에 코를 비빈다<<else>>감사의 의미로 <<him>>에게 미소 짓는다<</if>>.<<stress -12>><<hunger -200>><<llstress>><<lhunger>>
 	<br><br>
 	"착한 <<girl>>【이】네." 농장 인부가 말한다. <<He>>【은는】 당신에게 작은 미소를 짓는다.
 <</if>>
@@ -2330,7 +2330,7 @@ Harper spreads your cheeks, and you feel a slight pressure against your hole as 
 :: Livestock Tie Stall Punishment Fly Watch
 <<effects>>당신은 계속해서 파리를 쳐다본다. 파리는 당신의 눈앞에서 이상한 고리와 나선형을 그리며 날아다닌다. 당신은 그것이 얼마나 자유로운지 생각하며 질투심을 느낀다.<<stress 2>><<gstress>>
 <br><br>
-After a bit, it lands on your <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>ear<<else>>nose<</if>>. Its legs tickle.
+잠시 후, 그것은 당신의 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>귀에<<else>>코에<</if>> 앉는다. 다리가 간지럽다.
 <br><br>
 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>
 	<<link [[흔들어 쫓는다|Livestock Tie Stall Punishment Fly Watch 2]]>><<set $phase to 1>><</link>><<cow>>
@@ -2584,7 +2584,7 @@ After a bit, it lands on your <<if (($cow gte 6 and $transformationParts.traits.
 :: Livestock Tie Stall Punishment Gangrape
 <<effects>>
 <<generate2>><<generate3>><<generate4>><<generate5>><<generate6>><<person1>>
-You ignore the warning and <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>scream<</if>> as loud as you can.
+당신은 경고를 무시하고 할 수 있는 한 크게 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 소리를 낸다<<else>>소리 지른다<</if>>.
 <br><br>
 헛간 문이 벌컥 열린다. 농장 인부가 <<his>> 친구들을 데리고 돌아온 것이 보인다. 그들은 불쾌해 보인다.
 <br><br>
@@ -2642,7 +2642,7 @@ You ignore the warning and <<if (($cow gte 6 and $transformationParts.traits.act
 	<br><br>
 	<<He>>【은는】 <<person1>><<person>>에게 고갯짓하고, <<he>>【은는】 입마개를 꺼내며 히죽 웃는다. "그래, 네가 내는 소음은 이제 단 한 번도 듣지 않을 거야."
 	<br><br>
-	<span class="purple"><<He>> and the <<person2>><<person>> affix the muzzle to your face.</span> Try as you might, you're unable to <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>moo<<else>>yell<</if>> anymore.<<stress 5>><<gstress>>
+	<span class="purple"><<He>>【와과】 <<person2>><<person>>【은는】 당신의 얼굴에 입마개를 채운다.</span> 아무리 애써도 더 이상 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메 소리를 낼<<else>>소리 지를<</if>> 수 없다.<<stress 5>><<gstress>>
 	<br><br>
 	무리가 다시 밖으로 나가고, 문이 쾅 닫히는 소리가 방에 울려 퍼진다. 그리고, 정적. <<tearful>> 당신은 오직 자신의 생각만을 동반한 채 남겨진다.
 <</if>>
@@ -2773,7 +2773,7 @@ You ignore the warning and <<if (($cow gte 6 and $transformationParts.traits.act
 :: Livestock Tie Stall Punishment Lurker
 <<effects>>
 <<if $phase is 0>>
-	You <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>bellow<<else>>scream<</if>>. <span class="red">No one comes to your aid.</span><<if !$willpowersuccess>> Panic grips you, and you struggle against your bindings. The ropes chafe your skin.<<pain 6>><<gpain>><</if>>
+	당신은 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메하고 운다<<else>>비명을 지른다<</if>>. <span class="red">아무도 당신을 도우러 오지 않는다.</span><<if !$willpowersuccess>> 공황이 당신을 덮치고, 당신은 결박에 저항하며 몸부림친다. 밧줄이 피부를 쓸어 상처를 낸다.<<pain 6>><<gpain>><</if>>
 <<else>>
 	당신은 조용히 있는다.<<if !$willpowersuccess>> 침착함을 유지하려는 최선의 노력에도 불구하고 심장이 마구 뛰는 것이 느껴진다. 당신은 결박에 저항하며 몸부림친다. 밧줄이 피부를 쓸어 상처를 낸다.<<pain 6>><<gpain>><</if>>
 <</if>>
@@ -2784,7 +2784,7 @@ You ignore the warning and <<if (($cow gte 6 and $transformationParts.traits.act
 	<<link [[다음|Livestock Tie Stall Punishment End]]>><<endevent>><</link>>
 	<br>
 <<else>>
-	The chittering grows louder. You see shadows moving just out of reach. As you prepare to <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>bellow<<else>>scream<</if>> again, the noises stop. You hold your breath. After a few seconds, you begin to relax. Then it starts again, and your heart races with panic.
+	채터링 소리가 점점 커진다. 손이 닿지 않는 곳에서 그림자가 움직이는 것이 보인다. 당신이 다시 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>음메하고 울<<else>>비명을 지를<</if>> 준비를 할 때, 소음이 멈춘다. 당신은 숨을 참는다. 몇 초 후, 긴장이 풀리기 시작한다. 그때 다시 소리가 시작되고, 당신의 심장은 공황으로 마구 뛴다.
 	<br><br>
 	다음에 어떻게 해야 할지 알아내기도 전에, 한 생물이 건초더미에서 뛰어올라 당신을 향해 날아온다!
 	<br><br>

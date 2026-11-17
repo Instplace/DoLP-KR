@@ -715,14 +715,14 @@
 	<</if>>
 <</if>>
 <<if $worn.neck.name is "Whitney's collar" or $worn.neck.name is "Whitney's collar with leash">>
-	<<He>> reads the bold letters on your collar "Whitney's pet?" Pretty much the entire class is watching now. "Are you Whitney's dog?"
+	<<He>>【은는】 당신의 목줄에 새겨진 굵은 글씨를 읽는다. "휘트니의 애완동물?" 이제 거의 반 전체가 지켜보고 있다. "너, 휘트니의 개라도 되나?"
 	<br><br>
-	Someone giggles, which distracts Winter. "Quiet! Now, where was I..." <<He>> commences <<his>> droning.
+	누군가 킥킥거리자 윈터의 주의가 흩어진다. "조용! 자, 어디까지 했더라..." <<He>>【은는】 <<his>> 지루한 설명을 다시 시작한다.
 	<br><br>
 <<else>>
-	What would possess you to wear such a thing?" Pretty much the entire class is watching now. "Do you like to roleplay as a dog?" 
+	도대체 무슨 생각으로 이런 걸 차고 다니는 거지?" 이제 거의 반 전체가 지켜보고 있다. "개 역할 놀이라도 좋아하나?"
 	<br><br>
-	Someone giggles, which distracts Winter. "Quiet! Now, where was I..." <<He>> commences <<his>> droning.
+	누군가 킥킥거리자 윈터의 주의가 흩어진다. "조용! 자, 어디까지 했더라..." <<He>>【은는】 <<his>> 지루한 설명을 다시 시작한다.
 	<br><br>
 <</if>>
 <<endevent>>

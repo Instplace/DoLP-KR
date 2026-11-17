@@ -17,35 +17,35 @@
 		"옷 벗겨!"
 		<br><br>
 
-		Whitney glares at you, <<his>> grip the only thing keeping you from falling. You swear you see the faintest trace of a tear in <<his>> eye.
+		휘트니가 당신을 노려본다. <<his>> 손아귀 힘만이 당신이 쓰러지는 것을 간신히 막고 있다. 당신은 <<his>> 눈에서 희미한 눈물 자국을 본 것만 같다.
 			<<if !$worn.neck.type.includes("naked")>>
 				<<if ($worn.neck.name isnot "Whitney's collar with leash") and ($worn.neck.name isnot "Whitney's collar")>>
 					<<if $worn.neck.name is "familiar collar">>
 						<<if $whitneyFamiliarCollarKnown is 1>>
-							<<He>> grimaces at the collar. "I'm not touching that shit again..."
+							<<He>>【은는】 목걸이를 보고 얼굴을 찌푸린다. "그 좆같은 걸 다시는 안 만질 거야..."
 						<<else>>
-							<<He>> turns you around, you can feel <<him>> pull at your $worn.neck.name but immediately lets go with a pained yelp as <<his>> hand shoots back. "Ow! What the fuck? Who gave you this shit?"
+							<<He>>【은는】 당신을 돌려세우고, 당신은 <<him>>【이가】 당신의 $worn.neck.name【을를】 잡아당기는 걸 느끼지만, <<his>> 손이 튕겨 나가며 아파서 비명을 지르고는 곧바로 손을 놓는다. "아야! 씨발 뭐야? 누가 너한테 이딴 걸 줬어?"
 						<</if>>
 					<<else>>
-						<<He>> turns you around, you can feel <<him>> pull at your $worn.neck.name and lets out a tsk. <<He>> digs around in <<his>> pocket
-						and before you know it the $worn.neck.name falls to the ground and gets replaced by something else.
+						<<He>>【은는】 당신을 돌려세우고, 당신은 <<him>>【이가】 당신의 $worn.neck.name【을를】 잡아당기다 혀를 차는 걸 느낀다. <<He>>【은는】 주머니를 뒤적거리더니
+						어느새 $worn.neck.name【이가】 바닥에 떨어지고 다른 무언가가 그 자리를 대신한다.
 						<<set $worn.neck.type.push("broken")>>
 						<<neckruined>>
 						<<neckwear "Whitney's collar with leash">><<set $whitneycollar to 1>>
 					<</if>>
 				<</if>>
 			<<elseif ($worn.neck.name isnot "Whitney's collar with leash") and ($worn.neck.name isnot "Whitney's collar")>>
-				<<He>> lets out a loud sigh and turns you around, you can something get pulled around your neck and hear a lock click shut.
+				<<He>>【은는】 크게 한숨을 쉬며 당신을 돌려세우고, 당신은 무언가가 목에 둘러지는 것을 느끼며 자물쇠가 찰칵 잠기는 소리를 듣는다.
 					<<set $worn.neck.type.push("broken")>>
 					<<neckruined>>
 					<<neckwear "Whitney's collar with leash">><<set $whitneycollar to 1>>
 				<<else>>
 			<</if>>
-		Before it goes any further, <<he>> drops you on the floor.
+		상황이 더 진행되기 전에, <<he>>【이가】 당신을 바닥에 내동댕이친다.
 		<br><br>
-		Whitney's breathing is heavier. <<He>> speaks, "Only... I get to kidnap you. Got it?" The group leaves with Whitney glancing back at you.
+		휘트니의 숨결이 거칠어진다. <<He>>【이가】 말한다. "오직... 나만 널 납치할 수 있어. 알았어?" 무리가 떠나고, 휘트니가 돌아보며 당신을 힐끗 쳐다본다.
 			<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-				<<He>> points at you "AND DON'T TAKE THAT OFF! YOU ARE MINE!!"
+				<<He>>【은는】 당신을 가리킨다. "그거 벗지 마! 넌 내 거야!!"
 			<</if>>
 			<<npcincr Whitney dom 3>><<stress 6>><<gstress>><<ggdom>>
 		<br><br>
@@ -122,9 +122,9 @@
 			<<case 1>><<set $bullyeventstreet += 1>>
 				뭔가 딱딱한 것이 당신 머리에 부딪힌다.
 				<<if $whitneyromance is 1>>
-					Not with much force, but hard enough to get your attention. You turn and spot Whitney sat atop a dumpster. <<He>> winks.
+					세게 맞은 건 아니지만 당신의 주의를 끌기엔 충분하다. 고개를 돌려보니 휘트니가 쓰레기통 위에 앉아 있다. <<He>>【이가】 윙크한다.
 						<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-							<<He>> glances over your collar and give you a smirk and says "Good <<girl.>>"
+							<<He>>【은는】 당신의 목걸이를 훑어보고 씩 웃으며 말한다. "착한 <<girl.>>"
 						<</if>>
 						<<npcincr Whitney lust 5>><<glust>>
 					<br><br>
@@ -146,7 +146,7 @@
 			<<case 2>><<set $bullyeventstreet += 1>>
 				어느 팔이 당신의 어깨 너머로 슬금슬금 올라와 당신을 헤드락 건다. "어디 가?" 휘트니다. <<He>>【이가】 손가락 관절로 당신의 두피를 파고들며 머리를 헝클이자, <<his>> 친구들이 조롱한다.<<pain 2>><<gpain>>
 					<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-						<<He>> gives your collar a tug "Good that you know you are mine." Whitney smirks.
+						<<He>>【은는】 당신의 목걸이를 홱 잡아당긴다. "네가 내 거라는 걸 알아서 다행이네." 휘트니가 비웃는다.
 					<</if>>
 				<<ruffleHair>>
 				<br><br>
@@ -227,7 +227,7 @@
 					"무슨 일이야, 걸레야?" 휘트니다. 당신이 대답하기도 전에 <<He>>【이가】 당신에게 입을 맞춘다.<<stress 2>><<arousal 500 "mouth">><<gstress>><<garousal>>
 					<br><br>
 					/* <<if displayDefiantOption(500)>> */
-						<<link [[Take charge|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link 500>><<promiscuous1>><<ldom>>
+						<<link [[주도한다|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link 500>><<promiscuous1>><<ldom>>
 						<br>
 					/* <</if>> */
 					<<link [[순순히 따른다|Street Bully Makeout]]>><<set $phase to 1>><<sub 1>><<stress 4>><<arousal 1000 "mouth">><<npcincr Whitney dom 1>><</link>><<gstress>><<garousal>><<gdom>>
@@ -281,7 +281,7 @@
 
 					<<He>>【이가】 보온병 뚜껑을 비틀어 열어 내민다. 보온병에서 김이 피어오르고 달콤한 초콜릿 향이 풍긴다. "한 모금 마실래?"
 						<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-							<<He>> rubs your collar, "good to see you are listening to me."
+							<<He>>【은는】 당신의 목걸이를 문지른다. "내 말 잘 듣고 있다니 보기 좋네."
 						<</if>>
 					<br><br>
 
@@ -292,7 +292,7 @@
 				<<elseif Weather.isOvercast>>
 					당신의 등 뒤에서 물을 첨벙거리는 발소리가 들린다. 당신이 몸을 돌렸을 때, 휘트니가 당신을 덮치는 걸 본다.<<stress 10>><<ggstress>>
 						<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-							<<He>> glances over your collar and give you a smirk.
+							<<He>>【은는】 당신의 목걸이를 흘끗 보고 씩 웃는다.
 						<</if>>
 					<br><br>
 
@@ -337,9 +337,9 @@
 				<br><br>
 
 				<<if $whitneyromance is 1 or $delinquency gte 400>>
-					Sensing your approach, <<he>> turns around. <<He>> tosses you a can of spray paint. "Go on," <<He>> grins. "Make me something pretty."
+					당신의 접근을 느낀 <<he>>【이가】 돌아본다. <<He>>【이가】 스프레이 페인트 한 캔을 당신에게 던진다. "해봐." <<He>>【이가】 씩 웃는다. "나한테 예쁜 걸 좀 그려봐."
 						<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-							<<He>> looks at your collar and gives you a quick pet on the head.
+							<<He>>【은는】 당신의 목걸이를 보고 머리를 재빨리 쓰다듬는다.
 						<</if>>
 					<br><br>
 
@@ -363,7 +363,7 @@
 
 				<<He>>【이가】 당신 뒤에 벽을 만들고 서 있는 친구들에게 고개를 끄덕인다. 그들이 길거리에서 사람들이 보는 시야를 가린다. "걱정 마." 미소를 지으며 <<he>>【이가】 말한다. "아무도 못 볼 테니까."
 					<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-						<<He>> glances over your collar and give you a smirk.
+						<<He>>【은는】 당신의 목걸이를 흘끗 보고 씩 웃는다.
 					<</if>>
 				<br><br>
 
@@ -389,7 +389,7 @@
 
 				당신은 앞서 있는 휘트니를 발견한다. 당신을 보자 <<his>> 눈에 장난기가 스친다. <<He>>【이가】 <<if $whitneyromance is 1>>손으로 당신의 등을 밀며 거리를 따라 당신을 이끈다<<else>>당신의 머리카락을 쥐어 잡고 길거리로 끌어낸다<</if>>.
 					<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-						<<He>> gives it a quick tug.
+						<<He>>【은는】 그것을 재빨리 잡아당긴다.
 					<</if>>
 				<br><br>
 
@@ -548,7 +548,7 @@
 
 				"내 걸레 왔네." 옷 안으로 손을 집어넣으며 <<he>>【이가】 말한다. "내가 보고 싶었나 봐." <<He>>【이가】 당신을 골목 안으로 데려간다. 앞쪽에 3층 건물 꼭대기로 이어지는 사다리가 있다. "너 먼저. 저 위가 낭만적일 거야."
 					<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar">>
-						<<He>> glances at your collar, "What a good <<girl>>"
+						<<He>>【은는】 당신의 목걸이를 흘끗 본다. "참 착한 <<girl>>【이】네."
 					<</if>>
 				<br><br>
 

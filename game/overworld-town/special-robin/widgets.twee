@@ -776,11 +776,11 @@
 			<br>
 		<</if>>
 		<<if _robin.trauma lt 20 and (($bunny gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bunny")>>
-		    <<ind>><<link [[Head butt (0:20)|Robin Bunny]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><<handheldon 1>><</link>><<bunny>><<gdom>><<glove>><<ltrauma>><<lstress>>
+		    <<ind>><<link [[머리를 비빈다 (0:20)|Robin Bunny]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><<handheldon 1>><</link>><<bunny>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if $robinconsole is 1 and $waterdragon gte 7>>
-			<<tficon "waterdragon">><<link [[Squeak at Robin (0:20)|Robin Water Dragon]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<gdom>><<glove>><<ltrauma>><<lstress>>
+			<<tficon "waterdragon">><<link [[로빈에게 끽끽거린다 (0:20)|Robin Water Dragon]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if _robin.lovestage gte 3 and _robin.trauma lte 20>>
@@ -1084,19 +1084,19 @@
 			<<set _baileyDepositMax += $rentmoney + ($babyRent or 0)>>
 		<</for>>
 		<<if $baileyDeposit + _depositAmount gte _baileyDepositMax and $depositMax gt 0>>
-			You can only deposit for <span class="gold">$depositMax</span> weeks which is worth <<printmoney _baileyDepositMax>>.
+			보증금은 <span class="gold">$depositMax</span>주 치까지만 낼 수 있으며, 이는 <<printmoney _baileyDepositMax>>에 해당한다.
 			<br>
 			<<if $baileyDeposit gt 0>>
 				<<set _depositAmount to _baileyDepositMax - $baileyDeposit>>
-				You already had <<printmoney $baileyDeposit>> in deposit. 
+				이미 맡겨 둔 보증금이 <<printmoney $baileyDeposit>> 있었다.
 			<</if>>
-			Your deposit has been adjusted to <<printmoney _depositAmount>>. Would you like to continue?
+			보증금이 다음 금액으로 조정되었습니다: <<printmoney _depositAmount>>. 계속하시겠습니까?
 			<br>
 		<<else>>
-			You are depositing <<printmoney _depositAmount>>. Would you like to continue?
+			보증금으로 맡길 금액: <<printmoney _depositAmount>>. 계속하시겠습니까?
 		<br>
 		<</if>>
-		<<link [[Confirm|Orphanage]]>>
+		<<link [[확인|Orphanage]]>>
 			<<endevent>><<clotheson>>
 			<<set $baileyDeposit += _depositAmount>>
 			<<money `-_depositAmount` "baileyRent">>
@@ -1104,18 +1104,18 @@
 		<</link>>
 	<<else>>
 		<<if $baileyDeposit gte _depositAmount + ((_depositAmount / 100) * $depositWithdrawalFee)>>
-			You are withdrawing <<printmoney _depositAmount>>. <<if $depositWithdrawalFee gt 0>>An additional <<printmoney `(_depositAmount / 100) * $depositWithdrawalFee`>> will be charged as withdrawal fee, bringing it up to <<printmoney `_depositAmount + ((_depositAmount / 100) * $depositWithdrawalFee)`>>.<</if>> Would you like to continue?
+			인출할 금액: <<printmoney _depositAmount>>. <<if $depositWithdrawalFee gt 0>>인출 수수료로 <<printmoney `(_depositAmount / 100) * $depositWithdrawalFee`>> 추가 부과되어, 총 <<printmoney `_depositAmount + ((_depositAmount / 100) * $depositWithdrawalFee)`>> 차감됩니다.<</if>> 계속하시겠습니까?
 			<br>
-			<<link [[Confirm|Orphanage]]>>
+			<<link [[확인|Orphanage]]>>
 				<<endevent>><<clotheson>>
 				<<money `_depositAmount` "baileyRent">>
 				<<set $baileyDeposit -= _depositAmount>>
 			<</link>>
 		<<else>>
 			<<set _withdrawalMax to Math.round($baileyDeposit / ((100 + $depositWithdrawalFee) / 100))>>
-			You can only withdraw <<printmoney _withdrawalMax>> due to the additional <<printmoney `$baileyDeposit - _withdrawalMax`>> withdrawal fee. Would you like to continue?
+			추가 인출 수수료 <<printmoney `$baileyDeposit - _withdrawalMax`>> 때문에 <<printmoney _withdrawalMax>>까지만 인출할 수 있습니다. 계속하시겠습니까?
 			<br>
-			<<link [[Confirm|Orphanage]]>>
+			<<link [[확인|Orphanage]]>>
 				<<endevent>><<clotheson>>
 				<<money `_withdrawalMax` "baileyRent">>
 				<<set $baileyDeposit -= $baileyDeposit>>

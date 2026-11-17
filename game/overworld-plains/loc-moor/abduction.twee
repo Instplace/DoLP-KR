@@ -457,7 +457,7 @@
 	<<person2>>"거짓말은 아니었군." <<person>> 한 명이 말한다. "물건이 좋네.<<if $settings.pregnancySpeechEnabled>> 훌륭한 씨받이가 되겠어.<</if>>"
 	<br><br>
 
-	<<person3>>"<<= $settings.pregnancySpeechEnabled ? "Breeder?" : "Personally,">>" a <<person>> interjects. "I'm more interested in the produce. Gonna make a killing." <<He>> grasps the leash attached to your collar, and forces you to your feet. You're in a small barn. The <<person>> tugs you behind <<him>>.
+	<<person3>>"<<= $settings.pregnancySpeechEnabled ? "씨받이?" : "개인적으로,">>" <<person>>【이가】 끼어든다. "난 생산물 쪽에 더 관심이 많아. 한몫 단단히 챙기겠어." <<He>>【이가】 당신의 목줄에 달린 가죽끈을 잡고 억지로 일으켜 세운다. 당신은 작은 헛간 안에 있다. <<person>>【이가】 당신을 <<him>> 뒤로 잡아끈다.
 	<br><br>
 	<<badEndTracking "Underground Farm" { reason: "abductedMoor" }>>
 	<<link [[다음|Livestock Intro]]>><<endevent>><</link>>

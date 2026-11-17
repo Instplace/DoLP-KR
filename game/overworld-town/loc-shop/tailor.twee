@@ -112,7 +112,7 @@
 				<br><br>
 				<<set _options to true>>
 			<<elseif $money lt $tailor_cost>>
-				You don't have enough cash to repair your current clothes. (<<printmoney `Math.trunc($tailor_cost)` "red">>)
+				현재 입고 있는 옷을 수선할 돈이 부족하다. (<<printmoney `Math.trunc($tailor_cost)` "red">>)
 				<br><br>
 				<<set _options to true>>
 			<</if>>
@@ -183,29 +183,29 @@
 			<</if>>
 
 			<<if $DoLPSpools is undefined>>
-				"If you're interested in learning," <<he>> continues. "There's sewing kits and spools for sale too."
+				"배워 보고 싶으시다면요." <<he>>【이가】 말을 잇는다. "재봉 키트와 실패도 팔아요."
 				<br>
 				<<if $money gte 10000>>
-					<<shopicon "tailor">><<link [[Buy a sewing kit (£100)|$passage]]>>
+					<<shopicon "tailor">><<link [[재봉 키트를 산다 (£100)|$passage]]>>
 						<<set $money -= 10000>>
 						<<set $DoLPSpools to 0>>
 					<</link>>
 				<<else>>
-					You can't afford the sewing kit. (<<printmoney `Math.trunc(10000)` "red">>)
+					재봉 키트를 살 돈이 부족하다. (<<printmoney `Math.trunc(10000)` "red">>)
 				<</if>>
 				<br><br>
 			<<else>>
-				"Remember to restock on spools," <<he>> continues. "A sewing kit's not much use without them." You have <span class="green">$DoLPSpools</span> spools.
+				"실패는 꼭 채워 두세요." <<he>>【이가】 말을 잇는다. "재봉 키트는 실패가 없으면 별 쓸모가 없거든요." 당신은 실패를 <span class="green">$DoLPSpools</span>개 가지고 있다.
 				<br>
 				<<if $money gte 500>>
-					<<shopicon "tailor">><<link [[Buy 5 spools (£5)|$passage]]>>
+					<<shopicon "tailor">><<link [[실패 5개를 산다 (£5)|$passage]]>>
 						<<set $money -= 500>>
 						<<set $DoLPSpools += 5>>
 							<<endevent>>
 					<</link>>
 					<br>
 					<<if $money gte 1000>>
-						<<shopicon "tailor">><<link [[Buy 10 spools (£10)|$passage]]>>
+						<<shopicon "tailor">><<link [[실패 10개를 산다 (£10)|$passage]]>>
 							<<set $money -= 1000>>
 							<<set $DoLPSpools += 10>>
 							<<endevent>>
@@ -213,7 +213,7 @@
 						<br>
 					<</if>>
 					<<if $money gte 2500>>
-						<<shopicon "tailor">><<link [[Buy 25 spools (£25)|$passage]]>>
+						<<shopicon "tailor">><<link [[실패 25개를 산다 (£25)|$passage]]>>
 							<<set $money -= 2500>>
 							<<set $DoLPSpools += 25>>
 							<<endevent>>
@@ -221,7 +221,7 @@
 						<br>
 					<</if>>
 					<<if $money gte 5000>>
-						<<shopicon "tailor">><<link [[Buy 50 spools (£50)|$passage]]>>
+						<<shopicon "tailor">><<link [[실패 50개를 산다 (£50)|$passage]]>>
 							<<set $money -= 5000>>
 							<<set $DoLPSpools += 50>>
 							<<endevent>>
@@ -229,7 +229,7 @@
 						<br>
 					<</if>>
 					<<if $money gte 10000>>
-						<<shopicon "tailor">><<link [[Buy 100 spools (£100)|$passage]]>>
+						<<shopicon "tailor">><<link [[실패 100개를 산다 (£100)|$passage]]>>
 							<<set $money -= 10000>>
 							<<set $DoLPSpools += 100>>
 							<<endevent>>
@@ -238,7 +238,7 @@
 					<</if>>
 					<br>
 				<<else>>
-					You can't afford the spools. (<<printmoney `Math.trunc(500)` "red">>)
+					실패를 살 돈이 부족하다. (<<printmoney `Math.trunc(500)` "red">>)
 					<br><br>
 				<</if>>
 			<</if>>

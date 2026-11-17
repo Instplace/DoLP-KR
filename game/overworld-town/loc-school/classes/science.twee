@@ -123,7 +123,7 @@
 	<<elseif !$worn.handheld.type.includes("bookbag")>>
 		<span class="blue">책가방이 없으면 공부할 수 없습니다.</span>
 		<br>
-		<<historyicon>><<link [[Relax before class|Science Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
+		<<historyicon>><<link [[수업 전에 휴식한다|Science Classroom Study]]>><<set $phase to 0>><</link>><<lstress>>
 	<<else>>
 		<<scienceicon>><<link [[과학을 공부한다|Science Classroom Study]]>><<set $phase to 1>><</link>><<gstress>><<gscience>>
 		<br>

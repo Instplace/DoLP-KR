@@ -45,39 +45,39 @@
 			<</if>>
 			<!-- Generate general dance actions -->
 			<<if $danceactiondefault is "cool">>
-				<label>Cool Dance <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool" checked>></label> |
+				<label>멋지게 춤을 춘다 <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool" checked>></label> |
 			<<elseif $danceactiondefault is 0>>
-				<label>Cool Dance <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool" checked>></label> |
+				<label>멋지게 춤을 춘다 <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool" checked>></label> |
 			<<else>>
-				<label>Cool Dance <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool">></label> |
+				<label>멋지게 춤을 춘다 <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "cool">></label> |
 			<</if>>
 			<br>
 			<<if $danceactiondefault is "sophisticated">>
-				<label>Sophisticated Dance <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "sophisticated" checked>></label> |
+				<label>세련되게 춤을 춘다 <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "sophisticated" checked>></label> |
 			<<else>>
-				<label>Sophisticated Dance <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "sophisticated">></label> |
+				<label>세련되게 춤을 춘다 <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<radiobutton "$danceaction" "sophisticated">></label> |
 			<</if>>
 			<br>
 			<<if $danceactiondefault is "seductive">>
-				<label><span class="meek">Seductive Dance</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist1>> <<radiobutton "$danceaction" "seductive" checked>></label> |
+				<label><span class="meek">유혹적인 춤을 춘다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist1>> <<radiobutton "$danceaction" "seductive" checked>></label> |
 			<<else>>
-				<label><span class="meek">Seductive Dance</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist1>> <<radiobutton "$danceaction" "seductive">></label> |
+				<label><span class="meek">유혹적인 춤을 춘다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist1>> <<radiobutton "$danceaction" "seductive">></label> |
 			<</if>>
 			<br>
 			<<if hasSexStat("exhibitionism", 2)>>
 				<<if $danceactiondefault is "sexual">>
-					<label><span class="sub">Sexual Dance</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist2>> <<radiobutton "$danceaction" "sexual" checked>></label> |
+					<label><span class="sub">성적인 춤을 춘다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist2>> <<radiobutton "$danceaction" "sexual" checked>></label> |
 				<<else>>
-					<label><span class="sub">Sexual Dance</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist2>> <<radiobutton "$danceaction" "sexual">></label> |
+					<label><span class="sub">성적인 춤을 춘다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <<combatexhibitionist2>> <<radiobutton "$danceaction" "sexual">></label> |
 				<</if>>
 				<br>
 			<</if>>
 			<<goocount>>
 			<<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat") and $liquidoutsidecount gte 1 and !pcAreArmsBound("any")>>
 				<<if $danceactiondefault is "groom">>
-					<label><span class="sub">Groom</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <span class="blue">Cat</span> <<radiobutton "$danceaction" "groom" checked>></label> |
+					<label><span class="sub">털을 고른다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <span class="blue">고양이</span> <<radiobutton "$danceaction" "groom" checked>></label> |
 				<<else>>
-					<label><span class="sub">Groom</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <span class="blue">Cat</span> <<radiobutton "$danceaction" "groom">></label> |
+					<label><span class="sub">털을 고른다</span> <<if $dancingRebalance is 1>>(0:02)<<else>>(0:01)<</if>> <span class="blue">고양이</span> <<radiobutton "$danceaction" "groom">></label> |
 				<</if>>
 			<</if>>
 			<!-- Generate stripping dance actions -->
@@ -232,7 +232,7 @@
 				<<set $audience += 1>>
 				<<person_dance>>
 			<<else>>
-				Someone else tries to join but there's too many people.
+				다른 누군가가 합류하려 하지만 사람이 너무 많다.
 			<</if>>
 		<</if>>
 		<<if $audience is 0>>
@@ -385,7 +385,7 @@
 				<!-- No other events can trigger -->
 			<<elseif $dancelocation is 0>>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $audiencearousal gte 100>>
 					<<if $rng gte 91>>
@@ -452,7 +452,7 @@
 				<</if>>
 			<<elseif $dancelocation is "brothel">>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $rng lte 8 and $worn.feet.type.includes("heels") and currentSkillValue("feetskill") lt $worn.feet.reveal>>
 					<<dancetriprape>>
@@ -517,7 +517,7 @@
 				<</if>>
 			<<elseif $dancelocation is "underground">>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $audiencearousal gte 100>>
 					<<if $rng gte 91>>
@@ -546,7 +546,7 @@
 				<</if>>
 			<<elseif $dancelocation is "smuggler_forced">>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $audiencearousal gte 100>>
 					<<if $rng gte 91>>
@@ -591,7 +591,7 @@
 				<</if>>
 			<<elseif $dancelocation is "stage">>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $audiencearousal gte 100>>
 					<<if $rng gte 91>>
@@ -621,7 +621,7 @@
 				<</if>>
 			<<elseif $dancelocation is "smuggler_pub">>
 				<<if $stress gte $stressmax>>
-					<span class="red">You collapse out of sheer exhaustion.</span>
+					<span class="red">당신은 완전히 지쳐 쓰러진다.</span>
 					<<dancefall>>
 				<<elseif $audiencearousal gte 100>>
 					<<if $rng gte 91>>
@@ -694,7 +694,7 @@
 
 <<widget "dancetiredpull">>
 	<<set $danceevent to "finish">>
-	One of the audience gets on stage and pulls you aside. "Look, anyone could tell you're exhausted, let's stop here."
+	관객 중 한 명이 무대로 올라와 당신을 한쪽으로 끌어당긴다. "저기, 누가 봐도 너 지쳤어. 여기서 그만하자."
 <</widget>>
 
 <<widget "dancedrunktrip">>
@@ -790,7 +790,7 @@
 <</widget>>
 
 <<widget "dancetiredfinish">>
-	A member of security motions for you to step off the stage. You open your mouth to ask why, but you are interrupted, "Anyone can tell that you're tired as hell. We won't allow anyone to overwork themselves in the establishment, club policy."
+	경비 한 명이 무대에서 내려오라고 손짓한다. 당신은 이유를 물으려 입을 열지만 말이 끊긴다. "누가 봐도 너 엄청 지쳐 보여. 우리 업소에서는 아무도 무리해서 일하게 두지 않아, 클럽 방침이야."
 	<br><br>
 	<<set $danceevent to "finish">>
 	<br><br>
@@ -863,7 +863,7 @@
 <</widget>>
 
 <<widget "dancesamtiredfinish">>
-	<<endevent>><<npc Sam>>Sam appears beside your table-stage. "That's enough everyone, this <<girl>> has had enough." <<He>> takes you by the arm and leads you into a back room. "Don't force yourself, anyone could tell you're exhausted." You earn <<printmoney 500>><<money 500 "cafeWaiter">>.
+	<<endevent>><<npc Sam>>샘이 당신의 탁자 무대 옆에 나타난다. "모두 거기까지, 이 <<girl>>【은는】 할 만큼 했으니까." <<He>>【은는】 당신의 팔을 잡고 뒷방으로 안내한다. "무리하지 마, 누가 봐도 너 지쳤어." 당신은 <<printmoney 500>>【을를】 벌었다.<<money 500 "cafeWaiter">>
 	<<npcincr Sam love 1>><<glove>><<set $danceevent to "finish">>
 <</widget>>
 

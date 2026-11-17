@@ -43,19 +43,19 @@
 	<br>
 <</if>>
 <<if $sciencelichentemple is 1 and $sciencelichentempleready lt 1>>
-	<<scienceicon "pink lichen">><<link [["Add pink lichen(" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 0>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
+	<<scienceicon "pink lichen">><<link [["분홍 이끼를 추가한다 (" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 0>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
 	<br>
 <</if>>
 <<if $sciencelichenpark is 1 and $sciencelichenparkready lt 1>>
-	<<scienceicon "white lichen">><<link [["Add white lichen(" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 1>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
+	<<scienceicon "white lichen">><<link [["하얀 이끼를 추가한다 (" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 1>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
 	<br>
 <</if>>
 <<if $sciencelichendrain is 1 and $sciencelichendrainready lt 1>>
-	<<scienceicon "violet lichen">><<link [["Add violet lichen(" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 2>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
+	<<scienceicon "violet lichen">><<link [["보라 이끼를 추가한다 (" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 2>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
 	<br>
 <</if>>
 <<if $sciencelichenlake is 1 and $sciencelichenlakeready lt 1>>
-	<<scienceicon "purple lichen">><<link [["Add purple lichen(" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 3>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
+	<<scienceicon "purple lichen">><<link [["자주색 이끼를 추가한다 (" + _timeString1 + ")"|Science Project Lichen]]>><<set $phase to 3>><<pass _finalTime1>><<scienceskill 18>><</link>><<gggscience>>
 	<br>
 <</if>>
 <<if $scienceshroomknown is 1>>
@@ -68,11 +68,11 @@
 	<br>
 <</if>>
 <<if $scienceshroomheart gt $scienceshroomheartready>>
-	<<foodstufficon "mushroom">><<link [["Add heart shroom (" + _timeString2 + ")"|Science Project Shroom]]>><<set $phase to 0>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
+	<<foodstufficon "mushroom">><<link [["하트 버섯을 추가한다 (" + _timeString2 + ")"|Science Project Shroom]]>><<set $phase to 0>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
 	<br>
 <</if>>
 <<if $scienceshroomwolf gt $scienceshroomwolfready>>
-	<<foodstufficon "wolfshroom">><<link [["Add wolf shroom (" + _timeString2 + ")"|Science Project Shroom]]>><<set $phase to 1>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
+	<<foodstufficon "wolfshroom">><<link [["늑대 버섯을 추가한다 (" + _timeString2 + ")"|Science Project Shroom]]>><<set $phase to 1>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
 	<br>
 <</if>>
 <<if $sciencephallusknown is 1>>
@@ -80,7 +80,7 @@
 	당신은 남근 크기에 대한 프로젝트를 진행 중입니다. 박람회에서 우승할 확률은 <<print ($sciencephallusready * 10)>>%입니다.
 	<br>
 	<<if $sciencephallus gt $sciencephallusready>>
-		<<icon "project-science.png">><<link [["Add phallus (" + _timeString2 + ")"|Science Project Phallus]]>><<set $phase to 0>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
+		<<icon "project-science.png">><<link [["남근을 추가한다 (" + _timeString2 + ")"|Science Project Phallus]]>><<set $phase to 0>><<pass _finalTime2>><<scienceskill 6>><</link>><<ggscience>>
 		<br>
 	<</if>>
 <</if>>
@@ -94,12 +94,12 @@
 	<<getouticon>><<link [[그만둔다|Bedroom]]>><</link>>
 	<br>
 <<elseif $location is "alex_cottage">>
-	<<getouticon>><<link [[Stop|Farm Bedroom]]>><</link>>
+	<<getouticon>><<link [[그만둔다|Farm Bedroom]]>><</link>>
 	<br>
 <<elseif $location is "avery_mansion">>
 	<<getouticon>><<link [[그만둔다|Mansion Study]]>><</link>>
 <<elseif modLISelected("Poppy") and $location is "flats">>
-	<<getouticon>><<link [[Stop|Flats Poppy Bedroom]]>><</link>>
+	<<getouticon>><<link [[그만둔다|Flats Poppy Bedroom]]>><</link>>
 <<else>>
 	<<getouticon>><<link [[그만둔다|School Library]]>><</link>>
 <</if>>
@@ -164,7 +164,7 @@
 	<<elseif $location is "avery_mansion">>
 		<<link [[다음|Mansion Study]]>><</link>>
 	<<elseif modLISelected("Poppy") and $location is "flats">>
-		<<link [[Next|Flats Poppy Bedroom]]>><</link>>
+		<<link [[다음|Flats Poppy Bedroom]]>><</link>>
 	<<else>>
 		<<link [[다음|School Library]]>><</link>>
 	<</if>>
@@ -213,7 +213,7 @@
 	<<elseif $location is "avery_mansion">>
 		<<link [[다음|Mansion Study]]>><</link>>
 	<<elseif modLISelected("Poppy") and $location is "flats">>
-		<<link [[Next|Flats Poppy Bedroom]]>><</link>>
+		<<link [[다음|Flats Poppy Bedroom]]>><</link>>
 	<<else>>
 		<<link [[다음|School Library]]>><</link>>
 	<</if>>
@@ -257,11 +257,11 @@
 	<<if $location is "home">>
 		<<link [[다음|Bedroom]]>><</link>>
 	<<elseif $location is "alex_cottage">>
-		<<link [[Next|Farm Bedroom]]>><</link>>
+		<<link [[다음|Farm Bedroom]]>><</link>>
 	<<elseif $location is "avery_mansion">>
 		<<link [[다음|Mansion Study]]>><</link>>
 	<<elseif modLISelected("Poppy") and $location is "flats">>
-		<<link [[Next|Flats Poppy Bedroom]]>><</link>>
+		<<link [[다음|Flats Poppy Bedroom]]>><</link>>
 	<<else>>
 		<<link [[다음|School Library]]>><</link>>
 	<</if>>

@@ -3667,9 +3667,10 @@ function initFoodstuff() {
 
 	setup.moddedFoodstuff = {
 		green_manure: {
-			name: "green_manure",
-			singular: "green manure",
-			plural: "green manure",
+			name: "녹비",
+			singular: "녹비",
+			counter: "포기",
+			plural: "녹비",
 			icon: "green-manure.png",
 			category: "vegetable",
 			kitchen_item_type_icon: "recipe-vegetable.png",
@@ -3688,9 +3689,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		ghost_orchid: {
-			name: "ghost_orchid",
-			singular: "ghost orchid (epipogium aphyllum)",
-			plural: "ghost orchids (epipogium aphyllum)",
+			name: "유령난초",
+			singular: "유령난초",
+			counter: "송이",
+			plural: "유령난초",
 			icon: "ghost-orchid.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3701,9 +3703,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		hen_of_the_woods: {
-			name: "hen_of_the_woods",
-			singular: "hen of the woods",
-			plural: "hen of the woods",
+			name: "잎새버섯",
+			singular: "잎새버섯",
+			counter: "개",
+			plural: "잎새버섯",
 			icon: "hen-of-the-woods.png",
 			category: "mushroom",
 			kitchen_item_type_icon: "recipe-shroom.png",
@@ -3714,9 +3717,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		red_helleborine: {
-			name: "red_helleborine",
-			singular: "red helleborine (Cephalanthera rubra)",
-			plural: "red helleborines (Cephalanthera rubra)",
+			name: "붉은 헬레보린",
+			singular: "붉은 헬레보린(Cephalanthera rubra)",
+			counter: "송이",
+			plural: "붉은 헬레보린(Cephalanthera rubra)",
 			icon: "red-helleborine.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3727,9 +3731,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		lady_orchid: {
-			name: "lady_orchid",
-			singular: "lady orchid",
-			plural: "lady orchids",
+			name: "레이디 오키드",
+			singular: "레이디 오키드",
+			counter: "송이",
+			plural: "레이디 오키드",
 			icon: "lady-orchid.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3740,9 +3745,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		fly_agaric: {
-			name: "fly_agaric",
-			singular: "fly agaric",
-			plural: "fly agarics",
+			name: "광대버섯",
+			singular: "광대버섯",
+			counter: "개",
+			plural: "광대버섯",
 			icon: "fly-agaric.png",
 			category: "mushroom",
 			kitchen_item_type_icon: "recipe-shroom.png",
@@ -3753,9 +3759,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		spiked_rampion: {
-			name: "spiked_rampion",
-			singular: "spiked rampion",
-			plural: "spiked rampions",
+			name: "스파이크 램피언",
+			singular: "스파이크 램피언",
+			counter: "송이",
+			plural: "스파이크 램피언",
 			icon: "spiked-rampion.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3766,9 +3773,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		cloudberry: {
-			name: "cloudberry",
-			singular: "cloudberry",
-			plural: "cloudberries",
+			name: "클라우드베리",
+			singular: "클라우드베리",
+			counter: "개",
+			plural: "클라우드베리",
 			icon: "cloudberry.png",
 			category: "fruit",
 			kitchen_item_type_icon: "recipe-fruit.png",
@@ -3780,9 +3788,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		scottish_bog_myrtle: {
-			name: "scottish_bog_myrtle",
-			singular: "scottish bog myrtle",
-			plural: "scottish bog myrtles",
+			name: "스코틀랜드 보그머틀",
+			singular: "스코틀랜드 보그머틀",
+			counter: "포기",
+			plural: "스코틀랜드 보그머틀",
 			icon: "scottish-bog-myrtle.png",
 			category: "mushroom",
 			kitchen_item_type_icon: "recipe-shroom.png",
@@ -3793,9 +3802,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		bog_orchid: {
-			name: "bog_orchid",
-			singular: "bog orchid",
-			plural: "bog orchids",
+			name: "늪난초",
+			singular: "늪난초",
+			counter: "송이",
+			plural: "늪난초",
 			icon: "bog-orchid.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3806,9 +3816,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		marsh_saxifrage: {
-			name: "marsh_saxifrage",
-			singular: "marsh saxifrage",
-			plural: "marsh saxifrages",
+			name: "습지 범의귀",
+			singular: "습지 범의귀",
+			counter: "송이",
+			plural: "습지 범의귀",
 			icon: "marsh-saxifrage.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3819,9 +3830,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		clover: {
-			name: "clover",
-			singular: "three-leaf clover",
-			plural: "three-leaf clovers",
+			name: "클로버",
+			singular: "세잎클로버",
+			counter: "송이",
+			plural: "세잎클로버",
 			icon: "clover.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",
@@ -3832,9 +3844,10 @@ function initFoodstuff() {
 			modder: "DoLP"
 		},
 		four_leaf_clover: {
-			name: "four leaf clover",
-			singular: "four-leaf clover",
-			plural: "four-leaf clovers",
+			name: "네잎클로버",
+			singular: "네잎클로버",
+			counter: "송이",
+			plural: "네잎클로버",
 			icon: "four-leaf-clover.png",
 			category: "flower",
 			kitchen_item_type_icon: "recipe-flower.png",

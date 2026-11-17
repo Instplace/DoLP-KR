@@ -1133,17 +1133,17 @@
 		<<else>>
 			<<set _stolenMoney to $money * ($npcStealMoneyPercentage/100)>>
 		<</if>>
-		<<He>> rifles through your pockets and take <<printmoney _stolenMoney>>.
+		<<He>>【이가】 당신의 주머니를 뒤져 <<printmoney _stolenMoney>>【을를】 가져간다.
 		<<if _stolenMoney gte 100000>>
-			"That's a lot of money, I'll take that thank you."
+			"돈이 꽤 많네. 이건 내가 가져갈게, 고마워."
 		<<elseif _stolenMoney gte 50000>>
-			"Not bad, not bad at all."
+			"나쁘지 않네, 아주 나쁘지 않아."
 		<<elseif _stolenMoney gte 10000>>
-			"Heh, that makes it worth the trouble."
+			"헤, 이 정도면 수고한 보람이 있지."
 		<<elseif _stolenMoney gte 5000>>
-			"This is all you have?"
+			"가진 게 이게 다야?"
 		<<else>>
-			"This is peanuts..."
+			"이건 푼돈이잖아..."
 		<</if>>
 		<<set _stolenMoney to _stolenMoney * -1>>
 		<<money _stolenMoney "stolenMoney">>
@@ -1182,9 +1182,9 @@
 			<<unset $right_guard>>
 		<</if>>
 		<<if $struggle.enemy[_i].health gt 0>>
-			<span class="teal">It's hurt. </span>
+			<span class="teal">그것은 다쳤다. </span>
 		<<else>>
-			<span class="green">It's too hurt. </span>
+			<span class="green">그것은 너무 심하게 다쳤다. </span>
 		<</if>>
 	<<elseif _args[0] is "dodge">>
 		<<if $struggle.enemy[_i].dodge is undefined>>
@@ -1195,9 +1195,9 @@
 			<<set $struggle.enemy[_i].dodge to 0>>
 			<<set $struggle.enemy[_i].health -= 1>>
 			<<if $struggle.enemy[_i].health gt 0>>
-				<span class="teal">It's running out of steam. </span>
+				<span class="teal">그것은 지쳐 가고 있다. </span>
 			<<else>>
-				<span class="green">It ran out of steam. </span>
+				<span class="green">그것은 완전히 지쳐 쓰러졌다. </span>
 			<</if>>
 		<</if>>
 	<</if>>

@@ -102,7 +102,7 @@
 				<</for>>
 				<br>
 				<<if $_legalBeastEvent>>
-					<span class="green">Recognized beast-train lifecycle entry. This reload/generation is expected and should not be treated as an escaped NPC by itself.</span><br>
+					<span class="green">짐승 열차 생애주기 항목으로 인식되었습니다. 이 재로드/생성은 예상된 동작이며, 그것만으로 탈출한 NPC로 취급해서는 안 됩니다.</span><br>
 				<</if>>
 			<</if>>
 			<!-- Check other event NPCs for linked passages -->
@@ -126,7 +126,7 @@
 					<<if !$_legalBeastEvent>>
 						<span class="red">이 NPC는 슬롯 <<print $event.slot[$_eventNPC.slot]>>에서 덮어씌워졌거나 다른 NPC를 덮어씌웠습니다!</span><br>
 					<<else>>
-						<span class="green">This slot reuse matches a known beast-train reload path.</span><br>
+						<span class="green">이 슬롯 재사용은 알려진 짐승 열차 재로드 경로와 일치합니다.</span><br>
 					<</if>>
 					<<break>>
 				<</if>>

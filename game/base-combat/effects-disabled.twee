@@ -647,17 +647,17 @@
 		<<set $leftactiondefault to $leftaction>><<set $leftaction to 0>><<set _target to random(1,$enemyno)-1>>
 		<<set $striking to 1>><<combatExtendedEnemyCheck _target>>
 		<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
-			You try to <<print either("punch","slap","scratch","claw","chop","strike")>> with your left hand but they 
+			당신은 왼손으로 <<print either("주먹을 날리려","따귀를 때리려","할퀴려","발톱을 세워 할퀴려","수도를 내리치려","타격을 입히려")>> 하지만 상대가
 			<<if $combatExtended.enemyCounterSuccess is 2>>
-				<span class="red">counter</span>.
+				<span class="red">반격한다</span>.
 				<<violence 10>><<combatExtendedStability -10>>
 			<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-				<span class="red">dodge</span>.
+				<span class="red">피한다</span>.
 			<<elseif $combatExtended.enemyCounterSuccess is 1>>
-				<span class="red">partially counter</span>.
+				<span class="red">일부 반격한다</span>.
 				<<defiance $_wraithDamage _target>><<violence 5>><<combatExtendedStability -5>>
 			<<else>>
-				<span class="blue">partially dodge</span>.
+				<span class="blue">일부 피한다</span>.
 				<<set $_wraithDamage to Math.round($_wraithDamage / 2)>>
 				<<defiance $_wraithDamage _target>>
 			<</if>>
@@ -705,17 +705,17 @@
 		<<set $rightactiondefault to $rightaction>><<set $rightaction to 0>><<set _target to random(1,$enemyno)-1>>
 		<<set $striking to 1>><<combatExtendedEnemyCheck _target>>
 		<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
-			You try to <<print either("punch","slap","scratch","claw","chop","strike")>> with your right hand but they 
+			당신은 오른손으로 <<print either("주먹을 날리려","따귀를 때리려","할퀴려","발톱을 세워 할퀴려","수도를 내리치려","타격을 입히려")>> 하지만 상대가
 			<<if $combatExtended.enemyCounterSuccess is 2>>
-				<span class="red">counter</span>.
+				<span class="red">반격한다</span>.
 				<<violence 10>><<combatExtendedStability -10>>
 			<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-				<span class="red">dodge</span>.
+				<span class="red">피한다</span>.
 			<<elseif $combatExtended.enemyCounterSuccess is 1>>
-				<span class="red">partially counter</span>.
+				<span class="red">일부 반격한다</span>.
 				<<defiance $_wraithDamage _target>><<violence 5>><<combatExtendedStability -5>>
 			<<else>>
-				<span class="blue">partially dodge</span>.
+				<span class="blue">일부 피한다</span>.
 				<<set $_wraithDamage to Math.round($_wraithDamage / 2)>>
 				<<defiance $_wraithDamage _target>>
 			<</if>>
@@ -737,17 +737,17 @@
 		<<set $feetactiondefault to $feetaction>><<set $feetaction to 0>><<set _target to random(1,$enemyno)-1>>
 		<<set $kicking to 1>><<combatExtendedEnemyCheck _target>>
 		<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
-			You try to <<print either("awkwardly","viciously","rapidly","jerkily","cruelly","<<feettext>>")>> lash out with your feet but they 
+			당신은 발을 뻗어 <<print either("어색하게","사납게","빠르게","발작적으로","잔혹하게","<<feettext>>")>> 걷어차려 하지만 상대가
 			<<if $combatExtended.enemyCounterSuccess is 2>>
-				<span class="red">counter</span>.
+				<span class="red">반격한다</span>.
 				<<violence 10>><<combatExtendedStability -10>>
 			<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-				<span class="red">dodge</span>.
+				<span class="red">피한다</span>.
 			<<elseif $combatExtended.enemyCounterSuccess is 1>>
-				<span class="red">partially counter</span>.
+				<span class="red">일부 반격한다</span>.
 				<<defiance $_wraithDamage _target>><<violence 5>><<combatExtendedStability -5>>
 			<<else>>
-				<span class="blue">partially dodge</span>.
+				<span class="blue">일부 피한다</span>.
 				<<set $_wraithDamage to Math.round($_wraithDamage / 2)>>
 				<<defiance $_wraithDamage _target>>
 			<</if>>

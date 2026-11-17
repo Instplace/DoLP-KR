@@ -69,10 +69,10 @@
 				<<endevent>>
 			<</link>>
 		<<else>>
-			A pack of 5 bait worms (£6). <span class="blue">You can't afford it.</span><br>
+			미끼용 지렁이 한 팩 (5마리) (£6) <span class="blue">돈이 부족하다.</span><br>
 		<</if>>
 		<<if $money gte 1200>>
-			<<foodstufficon "bait_worm">><<link [[Pack of 10 bait worms (£12)|Bait Shop]]>>
+			<<foodstufficon "bait_worm">><<link [[미끼용 지렁이 한 팩 (10마리) (£12)|Bait Shop]]>>
 				<<money -1200 "fishing">>
 				<<set $fishing.baitShopAmbient to "boughtBaitWorms">>
 				<<tending_give bait_worm 10>>
@@ -80,7 +80,7 @@
 			<</link>><br>
 		<</if>>
 		<<if $money gte 6000>>
-			<<foodstufficon "bait_worm">><<link [[Pack of 50 bait worms (£60)|Bait Shop]]>>
+			<<foodstufficon "bait_worm">><<link [[미끼용 지렁이 한 팩 (50마리) (£60)|Bait Shop]]>>
 				<<money -6000 "fishing">>
 				<<set $fishing.baitShopAmbient to "boughtBaitWorms">>
 				<<tending_give bait_worm 50>>
@@ -88,7 +88,7 @@
 			<</link>><br>
 		<</if>>
 		<<if $money gte 12000>>
-			<<foodstufficon "bait_worm">><<link [[Pack of 100 bait worms (£120)|Bait Shop]]>>
+			<<foodstufficon "bait_worm">><<link [[미끼용 지렁이 한 팩 (100마리) (£120)|Bait Shop]]>>
 				<<money -12000 "fishing">>
 				<<set $fishing.baitShopAmbient to "boughtBaitWorms">>
 				<<tending_give bait_worm 100>>

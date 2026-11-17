@@ -760,7 +760,7 @@
 	<br><br>
 
 	<<if $monster is 1>>
-		"Humans like small living things. Thought it'd make <<ppackbrother>> feel better," <<bhe>> says.<<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>> "<<pPackbrother>> used to be human. Still cries like one, when not howls like us."<</if>>
+		"인간은 작은 생물을 좋아한다. <<ppackbrother>> 기분이 나아질 줄 알았다." <<bhe>>【이가】 말한다.<<if (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>> "<<pPackbrother>>【은는】 원래 인간이었다. 우리처럼 울부짖지 않을 땐, 아직도 인간처럼 운다."<</if>>
 
 	<<else>>
 		그 짐승은 당신에게 토끼를 더 가까이 들이밀며 무언가를 기다린다. <<bhe>>【은는】 당신의 어떤 반응을 바라는 것 같다. <<bhe>>【은는】 당신의 기분을 풀어주려는 걸까?

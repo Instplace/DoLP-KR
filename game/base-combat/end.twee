@@ -61,7 +61,7 @@
 			<<else>>
 				<<set $combatExtended.brawling += 5 * $enemynomax * ($enemynomax * (1 + ($enemynomax - 1) * 0.25)) * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))>>
 			<</if>>
-			<span class="green">Your brawling skills improve.</span>
+			<span class="green">난투 실력이 향상되었습니다.</span>
 			<br>
 		<</if>>
 	<<elseif $enemyhealth lte ($permenemyhealthmax - 100) and $enemynomax gte 1>>
@@ -71,7 +71,7 @@
 			<<else>>
 				<<set $combatExtended.brawling += (5 * $enemynomax * ($enemynomax * (1 + ($enemynomax - 1) * 0.25)) * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))) * 0.33>>
 			<</if>>
-			<span class="green">Your brawling skills improve.</span>
+			<span class="green">난투 실력이 향상되었습니다.</span>
 			<br>
 		<</if>>
 	<</if>>
@@ -1041,6 +1041,6 @@
 		<<set $speechNPCAnusEscape to 1>>
 		<</if>>
 	<<elseif $options.debugdisable is "f">>
-		<span class="red">ERROR: manspeech called with invalid NPC index: [_n]</span>
+		<span class="red">오류: manspeech가 잘못된 NPC 번호로 호출되었습니다: [_n]</span>
 	<</if>>
 <</widget>>

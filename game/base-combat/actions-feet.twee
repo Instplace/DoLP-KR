@@ -87,7 +87,7 @@
 <<widget "feetRunClothed">>
 	/* Commented for lack of effect
 	<<if $NPCList[$feettarget].vagina is "clothed" or $NPCList[$feettarget].penis is "clothed">>
-		<<set _feetaction["Rub " + $NPCList[$feettarget].pronouns.his + " crotch"] to "rub">>
+		<<set _feetaction["상대의 사타구니를 문지른다"] to "rub">>
 	<</if>>*/
 <</widget>>
 
@@ -141,7 +141,7 @@
 <<widget "feetDodge">>
 	<<if $feettarget isnot "self">>
 		<<if $consensual isnot 1 and ($fightTargets is undefined or $fightTargets.includes($feettarget)) and $position isnot "wall" and $combatExtended.stabilityLost is 0 and $combatExtended.activeDodging is 1>>
-			<<set _feetaction["Dodge"] to "dodge">>
+			<<set _feetaction["피한다"] to "dodge">>
 		<</if>>
 	<</if>>
 <</widget>>
@@ -149,7 +149,7 @@
 <<widget "feetPlant">>
 	<<if $feettarget isnot "self">>
 		<<if $consensual isnot 1 and $position isnot "wall" and $combatExtended.stabilityLost is 0 and $combatExtended.standingFights is 1>>
-			<<set _feetaction["Plant"] to "plant">>
+			<<set _feetaction["버틴다"] to "plant">>
 		<</if>>
 	<</if>>
 <</widget>>
@@ -157,7 +157,7 @@
 <<widget "feetSubmit">>
 	<<if $feettarget isnot "self">>
 		<<if $consensual isnot 1 and $position isnot "wall" and $combatExtended.stabilityLost is 0 and $combatExtended.standingFights is 1>>
-			<<set _feetaction["Submit"] to "submit">>
+			<<set _feetaction["굴복한다"] to "submit">>
 		<</if>>
 	<</if>>
 <</widget>>

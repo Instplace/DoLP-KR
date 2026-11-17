@@ -13357,7 +13357,7 @@ function initUpper() {
 			fabric_strength: 30,
 			reveal: 100,
 			bustresize: -1,
-			word: "a",
+			word: "",
 			one_piece: 1,
 			strap: 0,
 			open: 0,

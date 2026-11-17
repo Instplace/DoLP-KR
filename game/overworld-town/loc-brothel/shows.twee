@@ -2257,7 +2257,7 @@
 	<br><br>
 	<<He>>【은는】 <<his>> 사무실로 당신을 안내한다. 안에 들어가자, 당신은 브라이어가 말하기를 끈기 있게 기다린다. "아주 좋은 쇼였어. 네 팬들이 아주 좋아했지."
 	<br><br>
-	<<He>> seems satisfied and hands you <<printmoney $tip>><<money $tip "brothelShow">><<set $tip to 0>><<set $tipmod to 1>>. "You did well. I almost wish I had..." <<He>> trails off before waving you out.
+	<<He>>【은는】 만족한 듯 보이며 당신에게 <<printmoney $tip>><<money $tip "brothelShow">><<set $tip to 0>><<set $tipmod to 1>>【을를】 건네준다. "잘했어. 나도 거의..." <<He>>【은는】 말을 흐리더니 당신에게 나가라는 손짓을 한다.
 <</if>>
 <br><br>
 

@@ -52,7 +52,7 @@
 		"Leighton": () => "관심",
 		"Mason": () => "애정",
 		"Morgan": () => "애정",
-		"Riley" : () => "Respect",
+		"Riley" : () => "존경",
 		"River": () => "존경",
 		"Robin": () => "사랑",
 		"Sam": () => "존경",
@@ -61,7 +61,7 @@
 		"Winter": () => "애정",
 		"Black Wolf": () => "사랑",
 		"Niki": () => "존경",
-		"Poppy": () => "Love",
+		"Poppy": () => "사랑",
 		"Quinn": () => "관심",
 		"Remy": () => "관심",
 		"Alex": () => "사랑",
@@ -813,15 +813,15 @@
 				"check": "$estatePersistent.totalBetMoneyMade gte 100000"
 			},
 			{
-				"message": "Win at least £2,500 worth of bets, or have £25,000 on you.",
+				"message": "£2,500어치 이상의 판돈을 따거나, 소지금이 £25,000 이상이어야 합니다.",
 				"check": "$estatePersistent.totalBetMoneyMade gte 250000"
 			},
 			{
-				"message": "Win at least £5,000 worth of bets, or have £50,000 on you.",
+				"message": "£5,000어치 이상의 판돈을 따거나, 소지금이 £50,000 이상이어야 합니다.",
 				"check": "$estatePersistent.totalBetMoneyMade gte 500000"
 			},
 			{
-				"message": "Win at least £10,000 worth of bets, or have £100,000 on you.",
+				"message": "£10,000어치 이상의 판돈을 따거나, 소지금이 £100,000 이상이어야 합니다.",
 				"check": "$estatePersistent.totalBetMoneyMade gte 1000000"
 			}
 		],
@@ -940,7 +940,7 @@
 		soldBailey: "베일리에게 팔림",
 		soldBaileyRobin: "베일리에게 로빈과 함께 팔림",
 		soldBriar: "브라이어에게 배신당해 팔림",
-		soldPoppy: "Sold out by Poppy",
+		soldPoppy: "포피에게 배신당해 팔림",
 		tempPassout: "극한의 온도로 기절해 붙잡힘",
 		uDungeonDefeated: "의뢰인을 쓰러뜨리고 탈출함",
 		uDungeonDumped: "부서진 장난감처럼 버려짐",

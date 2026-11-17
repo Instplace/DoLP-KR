@@ -649,7 +649,7 @@
 					"그 농부 <<nnpc_gendery "Alex">>에게서 또 온 거야."
 				<</if>>
 			<<elseif modLISelected("Poppy") and _value.mother is "Poppy">>
-				"Poppy came by with <<print _childrenText>> and a paternity test. Seems <<nnpc_he "Poppy">> expected me to be moved by the whole thing. I wasn't, but the paperwork had your name on it."
+				"포피가 <<print _childrenText>>【을를】 데리고 친자 확인서까지 들고 찾아왔더군. 포피는 내가 그 모든 일에 마음이라도 움직일 줄 알았나 보지. 아니었지만, 서류에는 네 이름이 적혀 있었다."
 			<<elseif $NPCNameList.includes(_value.mother)>>
 				"_value.mother【이】라는 자가 <<print _childrenText>>【을를】 두고 갔어, 네 이름이 적힌 친자 확인서와 함께."
 			<<else>>

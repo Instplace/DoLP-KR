@@ -126,13 +126,13 @@
 		<</if>>
 		<<if $boutiqueintro is 1>>
 			<<if $exposed lte 0 and Time.openingHours(2)>>
-				<<boutiqueicon>><<link [[Jewellery Boutique (0:03)|Boutique]]>><<pass 3>><</link>>
+				<<boutiqueicon>><<link [[보석 부티크 (0:03)|Boutique]]>><<pass 3>><</link>>
 				<br>
 			<<elseif Time.hour is $closinghour>>
-				<<boutiqueicon>><span class="blue">You see the night bodyguards arrive near the boutique.</span> It must be closing time.
+				<<boutiqueicon>><span class="blue">부티크 근처에 야간 경호원들이 도착하는 것이 보인다.</span> 문 닫을 시간인 것 같다.
 				<br>
 			<<elseif !Time.openingHours(2)>>
-				<<boutiqueicon>><<link [[Jewellery Boutique (0:03)|Boutique Guard]]>><<pass 3>><</link>>
+				<<boutiqueicon>><<link [[보석 부티크 (0:03)|Boutique Guard]]>><<pass 3>><</link>>
 				<br>
 			<</if>>
 		<</if>>

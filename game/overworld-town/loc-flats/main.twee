@@ -317,8 +317,8 @@
 		<<if modLISelected("Poppy")>>
 			<<run poppySchedule()>><<poppyFlatInit>>
 			<<if ((Number($poppySafeHouse) gte 1 or (Number($poppyromance) gte 0 and $poppySeen.includes("lake_postclaim_intro"))) and !(Number($poppyFlat.kickedUntilDay) gte Time.days))>>
-				<br>Right next to a door with a lotus, there is another marked with a painted poppy flower.<br>
-				<<poppyicon "flat">><<link [[Poppy's flat (0:01)|Flats Poppy Enter]]>><<pass 1>><<set $poppyFlat.entryNote to "entry">><</link>>
+				<br>연꽃이 그려진 문 바로 옆에, 양귀비꽃이 그려진 문이 하나 더 있다.<br>
+				<<poppyicon "flat">><<link [[포피의 집 (0:01)|Flats Poppy Enter]]>><<pass 1>><<set $poppyFlat.entryNote to "entry">><</link>>
 				<br>
 			<</if>>
 		<</if>>

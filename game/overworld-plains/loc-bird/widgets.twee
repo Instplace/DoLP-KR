@@ -620,7 +620,7 @@
 		<br><br>
 
 		<<if $monster is 1>>
-			"Poor <<if ($harpy lte 5 and ($transformationParts.bird.wings is "hidden" and $transformationParts.bird.wings is "disabled"))>>landbound <</if>><<wife>> has never raised egg before. Not to worry. I will help teach!"
+			"불쌍한 <<if ($harpy lte 5 and ($transformationParts.bird.wings is "hidden" and $transformationParts.bird.wings is "disabled"))>>땅을 딛고 사는 <</if>><<wife>>【은는】 알을 품어본 적이 없지. 걱정하지 마. 내가 가르쳐 줄 테니까!"
 		<</if>>
 		<<bHe>>【은는】 조심스레 그 돌들을 둥지로 가져가서 따뜻하게 품는 법을 시범 보인다. 잠시 후, <<bhe>>【은는】 돌에서 폴짝 뛰어내려 당신이 넘겨받을 자리를 비켜준다.
 		<br><br>
@@ -885,7 +885,7 @@
 <<widget "hawkCaughtYouSpeech">>
 	<<if $monster is 1>>
 		<<if $birdescaped gte 1>>
-			"<<Wife>> shouldn't <<if $birdescaped gte 2>>keep running<<else>>run<</if>> away," <<bhe>> says. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>> doesn't know how to fly yet<<else>>Landbound travel is dangerous<</if>>."
+			"<<Wife>>【은는】 <<if $birdescaped gte 2>>계속 도망쳐서는<<else>>도망쳐서는<</if>> 안 돼." <<bhe>>【이가】 말한다. "<<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<Wife>>【은는】 아직 나는 법도 모르잖아<<else>>지상을 돌아다니는 건 위험해<</if>>."
 		<<else>>
 			"잡았다." <<bhis>> 등 뒤의 날개를 맹렬하게 퍼덕이며 <<bhe>>【이가】 말한다.
 		<</if>>
@@ -2910,7 +2910,7 @@
 		<<if playerIsPregnant() and playerNormalPregnancyType() is "hawk">>
 			<<if $location is "tower">>
 				<<set _eggIcon to _litter.length>><<wearProp `"hawk egg " + Math.clamp(_eggIcon, 1, 3)`>>
-				You awaken feeling disoriented, and feel a building pressure in your abdomen. A bestial instinct washes over you. You <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>ruffle your feathers and <</if>>get on your hands and knees.
+				당신은 혼란스러운 기분으로 깨어나며 하복부에서 압박감이 커지는 것을 느낀다. 짐승의 본능이 당신을 휩쓴다. 당신은 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>깃털을 곤두세우고 <</if>>손과 무릎을 짚고 엎드린다.
 				뭔가 거대한 것이 당신 안에서 움직이며 당신의 내벽을 문지를 때마다 고통과 쾌락의 파도를 보낸다. <<arousal 4000>><<pain 12>><<gggarousal>><<ggpain>>
 				<br><br>
 
@@ -2957,7 +2957,7 @@
 				<<set $harpyEggsPrevent to 28>>
 			<<else>>
 				<<set _eggIcon to _litter.length>><<wearProp `"hawk egg " + Math.clamp(_eggIcon, 1, 3)`>>
-				You awaken feeling disoriented, and feel a building pressure in your abdomen. A bestial instinct washes over you. You <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>ruffle your feathers and <</if>>get on your hands and knees.
+				당신은 혼란스러운 기분으로 깨어나며 하복부에서 압박감이 커지는 것을 느낀다. 짐승의 본능이 당신을 휩쓴다. 당신은 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>깃털을 곤두세우고 <</if>>손과 무릎을 짚고 엎드린다.
 				뭔가 거대한 것이 당신 안에서 움직이며 당신의 내벽을 문지를 때마다 고통과 쾌락의 파도를 보낸다. <<arousal 4000>><<garousal>>
 				<br><br>
 
@@ -3004,7 +3004,7 @@
 				<<set $harpyEggsPrevent to 28>>
 			<</if>>
 		<<elseif !playerIsPregnant() and $harpyEggs>>
-			You awaken feeling disoriented, and feel a building pressure in your abdomen. A bestial instinct washes over you. You <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>ruffle your feathers and <</if>>get on your hands and knees.
+			당신은 혼란스러운 기분으로 깨어나며 하복부에서 압박감이 커지는 것을 느낀다. 짐승의 본능이 당신을 휩쓴다. 당신은 <<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird") and V.transformationParts.bird.plumage isnot "hidden">>깃털을 곤두세우고 <</if>>손과 무릎을 짚고 엎드린다.
 			뭔가 당신 안에서 움직이며 당신의 내벽을 문지를 때마다 쾌락의 파도를 보낸다. <<arousal 2000>><<garousal>>
 			<br><br>
 

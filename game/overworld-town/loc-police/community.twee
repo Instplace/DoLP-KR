@@ -1752,7 +1752,7 @@
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "special")>>
 	"저, 몸을 가릴 만한 것 좀 주실 수 있나요?" 당신이 묻는다. "제발요. 수-수건이라도..."
 <<elseif ($speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-	"Could you give me something to cover with?" you ask. "Please. Even a towel would hel—"
+	"몸을 가릴 만한 것을 좀 주시겠어요?" 당신이 묻는다. "부탁드려요. 수건 한 장이라도 도움이—"
 <<elseif $speech_attitude is "bratty">>
 	"몸 가릴 것도 없이 그냥 이대로 나가라는 건가요?" 당신이 묻는다.
 <<else>>

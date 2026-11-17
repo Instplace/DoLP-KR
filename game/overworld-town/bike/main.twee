@@ -1,7 +1,7 @@
 :: Bike
 <<endevent>><<effects>><<set $phase to 1>>
 
-You climb onto your bike.
+당신은 자전거에 올라탄다.
 <br><br>
 <<bikeMenu>>
 <br>
@@ -25,5 +25,5 @@ You climb onto your bike.
         <<destinationBike $destination>>
     <<case 2>>
     /* Not yet implemented. Space for combat encounters or nnpc events */
-        <<link [[Next|Bike Travel Interrupted]]>><</link>>
+        <<link [[다음|Bike Travel Interrupted]]>><</link>>
 <</switch>>

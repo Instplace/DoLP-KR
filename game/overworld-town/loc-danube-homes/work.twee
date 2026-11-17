@@ -28,7 +28,7 @@
 		<br><br>
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube House Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -43,7 +43,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Party Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -54,7 +54,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Attic Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -65,7 +65,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Tea Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -76,7 +76,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Garden Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -87,7 +87,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Doll Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -98,7 +98,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Tutor Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -110,7 +110,7 @@
 
 			<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Breast Intro]]>><</link>>
 			<br>
-			<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+			<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 			<br>
 			<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 			<br>
@@ -127,7 +127,7 @@
 
 		<<socialiseicon "ask">><<link [[일거리를 구한다|Danube Catperson Intro]]>><</link>>
 		<br>
-		<<danubeicon>><<link [[Excuse yourself and knock on another door (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
+		<<danubeicon>><<link [[양해를 구하고 다른 문을 두드린다 (0:01)|Danube House Knock]]>><<pass 1>><<endevent>><</link>>
 		<br>
 		<<getouticon>><<link [[주소를 잘못 찾았다고 말하고 떠난다|Danube Street]]>><<endevent>><</link>>
 		<br>
@@ -690,9 +690,9 @@
 <<elseif $goocount gte 10>>음란한 촉수 점액이 당신의 피부에서 번들거리며, 모두에게 명백하게 보인다.
 <<elseif $nectarcount gte 10>>달콤한 넥타르가 당신의 피부에 달라붙어, 모두에게 명백하게 보인다.
 <<elseif $liquidcount gte 10>>너무 적게 입어서, 당신의 피부에 묻은 음란한 성적 체액이 선명하게 보인다.
-<<elseif (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>You notice the guests check out your wolf tail.
+<<elseif (($wolfgirl gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "wolf")>>손님들이 당신의 늑대 꼬리를 힐끔거리는 것이 눈에 들어온다.
 <<elseif $wolfgirl gte 4 and (!["hidden", "disabled"].includes($transformationParts.wolf.pubes) or !["hidden", "disabled"].includes($transformationParts.wolf.pits))>>너무 적게 입어서, 당신의 몸을 덮고 있는 늑대 같은 털이 모두에게 보인다.
-<<elseif currentSkillValue('physique') gte ($physiquesize / 7) * 5>>Wearing so little shows off your <<bellyDescription "pc">> and your firm, powerful physique.
+<<elseif currentSkillValue('physique') gte ($physiquesize / 7) * 5>>너무 적게 입어서 당신의 <<bellyDescription "pc">>【와과】 단단하고 강력한 체격이 드러난다.
 <<elseif $beauty gte ($beautymax * 4/7)>>너무 적게 입어서 당신의 타고난 미모와 매력이 드러난다.
 <</if>><<garousal>><<arousal 600>>
 <br><br>

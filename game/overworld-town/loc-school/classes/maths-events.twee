@@ -1974,7 +1974,7 @@
 		쾌락의 파도가 온몸을 훑고 지나가자 당신은 숨을 고르기 위해 애쓴다. 휘트니는
 
 	<<elseif $player.penisExist>>
-		Your thighs twitch a little as <<he>> begins to <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>milk<<else>>stroke<</if>> you beneath the desk. <<He>> keeps <<his>> grip tight and moves <<his>> hand up and down your shaft as quickly as <<he>> can without drawing attention to <<himself>><<if $player.vaginaExist>>, pausing occasionally at the bottom of <<his>> strokes to thrust a couple fingers into your <<pussy>><</if>>. You struggle to control your breathing as <<he>>
+		<<he>>【이가】 책상 밑에서 당신을 <<if (($cow gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cow")>>착유하기<<else>>쓰다듬기<</if>> 시작하자 당신의 허벅지가 살짝 경련한다. <<He>>【은는】 단단히 붙잡은 채로 <<himself>>에게 시선이 쏠리지 않을 정도로 빠르게 당신의 기둥을 위아래로 움직인다<<if $player.vaginaExist>>, 가끔 손을 아래로 내릴 때 멈춰서 당신의 <<pussy>>에 손가락 두어 개를 쑤셔 넣기도 한다<</if>>. <<he>>【이가】 그러는 동안 당신은 숨을 고르기 위해 애쓴다.
 	<<else>>
 		<<he>>【이가】 책상 밑에서 당신에게 손가락을 넣기 시작하자 당신의 허벅지가 살짝 경련한다. <<He>>【은는】 <<himself>>에게 시선이 쏠리지 않을 정도로 빠르게 당신의 질에 손가락 두 개를 넣었다 빼기를 반복하며, 가끔 멈춰서 <<his>> 엄지손가락으로 당신의 클리토리스를 비빈다. <<he>>【이가】 그러는 동안 당신은 숨을 고르기 위해 애쓴다.
 	<</if>>

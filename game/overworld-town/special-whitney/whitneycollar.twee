@@ -1,11 +1,11 @@
 /*
-Needed variables 
+Needed variables
 <<set $worn.neck.type.push("broken")>><<neckruined true>><<set $worn.neck.collaredpolice to 0>>		breaks your current neckwear
 <<neckwear "Whitney's collar">> / "Whitney's collar with leash"												Whitneys collar/leash
 <if$hairlength gte 300>>																			hair long enough to move to put collar on
 ($worn.neck.name.includes("Whitney's collar")														wear check
 $whitneycollar																						collar intro check
-<<edenicon "collar">>																				collar icon 
+<<edenicon "collar">>																				collar icon
 */ 
 
 

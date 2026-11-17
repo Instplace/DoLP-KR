@@ -641,29 +641,29 @@
 	<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You try to smack the <<beasttype>> with your _hand but they
+				당신은 _hand【을를】 휘둘러 <<beasttype>>【을를】 때리려 하지만 녀석이
 			<<elseif $pain lte 60>>
-				You fight through pain and try to smack the <<beasttype>> with your _hand but they
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<beasttype>>【을를】 때리려 하지만 녀석이
 			<<else>>
-				Pained and terrified, you try to flail at the <<beasttype>> but they
+				고통과 공포에 질린 채, 당신은 <<beasttype>>에게 마구 팔을 휘두르려 하지만 녀석이
 			<</if>>
 		<<else>>
 			<<if $pain lte 20>>
-				You try to strike <<someone $_target>> with your _hand but they
+				당신은 _hand【을를】 휘둘러 <<someone $_target>>【을를】 때리려 하지만 상대가
 			<<elseif $pain lte 60>>
-				You fight through the pain and try to strike at <<someone $_target>> with your _hand but they
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<someone $_target>>【을를】 때리려 하지만 상대가
 			<<else>>
-				Pained and terrified, you try to flail in self-defence but they
+				고통과 공포에 질린 채, 당신은 자기방어를 위해 마구 팔을 휘두르려 하지만 상대가
 			<</if>>
 		<</if>>
 		<<if $combatExtended.enemyCounterSuccess is 2>>
-			<span class="red">counter</span>
+			<span class="red">반격한다</span>
 		<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-			<span class="red">dodge</span>
+			<span class="red">피한다</span>
 		<<elseif $combatExtended.enemyCounterSuccess is 1>>
-			<span class="red">partially counter</span>
+			<span class="red">일부 반격한다</span>
 		<<else>>
-			<span class="blue">partially dodge</span>
+			<span class="blue">일부 피한다</span>
 		<</if>>.
 	<<else>>
 		<<if $enemytype is "beast">>
@@ -701,29 +701,29 @@
 	<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You try to smack the <<beasttype>> with your _hand but they
+				당신은 _hand【을를】 휘둘러 <<beasttype>>【을를】 때리려 하지만 녀석이
 			<<elseif $pain lte 60>>
-				You fight through pain and try to smack the <<beasttype>> with your _hand but they
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<beasttype>>【을를】 때리려 하지만 녀석이
 			<<else>>
-				Pained and terrified, you try to flail at the <<beasttype>> but they
+				고통과 공포에 질린 채, 당신은 <<beasttype>>에게 마구 팔을 휘두르려 하지만 녀석이
 			<</if>>
 		<<else>>
 			<<if $pain lte 20>>
-				You try to strike <<someone $_target>> with your _hand but they
+				당신은 _hand【을를】 휘둘러 <<someone $_target>>【을를】 때리려 하지만 상대가
 			<<elseif $pain lte 60>>
-				You fight through the pain and try to strike at <<someone $_target>> with your _hand but they
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<someone $_target>>【을를】 때리려 하지만 상대가
 			<<else>>
-				Pained and terrified, you try to flail in self-defence but they
+				고통과 공포에 질린 채, 당신은 자기방어를 위해 마구 팔을 휘두르려 하지만 상대가
 			<</if>>
 		<</if>>
 		<<if $combatExtended.enemyCounterSuccess is 2>>
-			<span class="red">counter</span>
+			<span class="red">반격한다</span>
 		<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-			<span class="red">dodge</span>
+			<span class="red">피한다</span>
 		<<elseif $combatExtended.enemyCounterSuccess is 1>>
-			<span class="red">partially counter</span>
+			<span class="red">일부 반격한다</span>
 		<<else>>
-			<span class="blue">partially dodge</span>
+			<span class="blue">일부 피한다</span>
 		<</if>>.
 	<<else>>
 		<<if $enemytype is "beast">>
@@ -759,13 +759,13 @@
 		<</if>>
 	<</if>>
 	<<if currentSkillValue('physique') gte ($physiquesize / 7) * 5>>
-		Swiftly raising your _arm whilst tensing your muscles, you put your guard up.
+		근육을 팽팽히 긴장시키며 재빨리 _arm【을를】 들어, 당신은 방어 자세를 취한다.
 	<<elseif currentSkillValue('physique') gte ($physiquesize / 7) * 3>>
-		Raising your _arm, you put your guard up.
+		_arm【을를】 들어, 당신은 방어 자세를 취한다.
 	<<elseif currentSkillValue('physique') gte ($physiquesize / 7) * 2>>
-		Raising your _arm, you put up a weak guard.
+		_arm【을를】 들어, 당신은 허술하게 방어 자세를 취한다.
 	<<else>>
-		You weakly raise your _arm, barely putting up a guard.
+		당신은 _arm【을를】 힘없이 들어 간신히 방어 자세를 취한다.
 	<</if>>
 <</widget>>
 
@@ -784,48 +784,48 @@
 	<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You try to launch a feint but the <<beasttype>>
+				당신은 페인트 동작을 시도하지만 <<beasttype>>【이가】
 			<<elseif $pain lte 60>>
-				You fight through pain and try to launch a feint but the <<beasttype>>
+				당신은 고통을 이겨내고 페인트 동작을 시도하지만 <<beasttype>>【이가】
 			<<else>>
-				Pained and terrified, you try to launch a desperate feint but the <<beasttype>>
+				고통과 공포에 질린 채, 당신은 필사적으로 페인트 동작을 시도하지만 <<beasttype>>【이가】
 			<</if>>
-			isn't fooled and
+			속지 않고
 		<<else>>
 			<<if $pain lte 20>>
-				You try to launch a feint but
+				당신은 페인트 동작을 시도하지만
 			<<elseif $pain lte 60>>
-				You fight through the pain and try to launch a feint but
+				당신은 고통을 이겨내고 페인트 동작을 시도하지만
 			<<else>>
-				Pained and terrified, you try to launch a desperate feint but
+				고통과 공포에 질린 채, 당신은 필사적으로 페인트 동작을 시도하지만
 			<</if>>
-			they aren't fooled and
+			상대가 속지 않고
 		<</if>>
 		<<if $combatExtended.enemyCounterSuccess is 2>>
-			<span class="red">counter</span>
+			<span class="red">반격한다</span>
 		<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-			<span class="red">dodge</span>
+			<span class="red">피한다</span>
 		<<elseif $combatExtended.enemyCounterSuccess is 1>>
-			<span class="red">partially counter</span>
+			<span class="red">일부 반격한다</span>
 		<<else>>
-			<span class="blue">partially dodge</span>
+			<span class="blue">일부 피한다</span>
 		<</if>>.
 	<<else>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You launch a feint, only to smack the <<beasttype>> elsewhere with your _hand.
+				당신은 페인트 동작을 건 뒤, _hand【을를】 휘둘러 <<beasttype>>의 다른 곳을 때린다.
 			<<elseif $pain lte 60>>
-				You fight through pain and launch a feint, only to smack the <<beasttype>> elsewhere with your _hand.
+				당신은 고통을 이겨내고 페인트 동작을 건 뒤, _hand【을를】 휘둘러 <<beasttype>>의 다른 곳을 때린다.
 			<<else>>
-				Pained and terrified, you launch a desperate feint, only to hit the <<beasttype>> elsewhere with your _hand.
+				고통과 공포에 질린 채, 당신은 필사적으로 페인트 동작을 건 뒤 _hand【을를】 휘둘러 <<beasttype>>의 다른 곳을 때린다.
 			<</if>>
 		<<else>>
 			<<if $pain lte 20>>
-				You launch a feint, only to strike <<someone $_target>> elsewhere with your _hand.
+				당신은 페인트 동작을 건 뒤, _hand【을를】 휘둘러 <<someone $_target>>의 다른 곳을 때린다.
 			<<elseif $pain lte 60>>
-				You fight through the pain and launch a feint, only to strike <<someone $_target>> elsewhere with your _hand.
+				당신은 고통을 이겨내고 페인트 동작을 건 뒤, _hand【을를】 휘둘러 <<someone $_target>>의 다른 곳을 때린다.
 			<<else>>
-				Pained and terrified, you launch a feint, only to hit <<someone $_target>> elsewhere with your _hand.
+				고통과 공포에 질린 채, 당신은 필사적으로 페인트 동작을 건 뒤 _hand【을를】 휘둘러 <<someone $_target>>의 다른 곳을 때린다.
 			<</if>>
 		<</if>>
 	<</if>>
@@ -846,46 +846,46 @@
 	<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You try to wind up a hook punch but the <<beasttype>> but they
+				당신은 <<beasttype>>에게 훅 펀치를 날리려 몸을 젖히지만 녀석이
 			<<elseif $pain lte 60>>
-				You fight through pain and try to hook punch the <<beasttype>> but they
+				당신은 고통을 이겨내고 <<beasttype>>에게 훅 펀치를 날리려 하지만 녀석이
 			<<else>>
-				Pained and terrified, you throw a desperate hook punch at the <<beasttype>> but they
+				고통과 공포에 질린 채, 당신은 <<beasttype>>에게 필사적으로 훅 펀치를 날리지만 녀석이
 			<</if>>
 		<<else>>
 			<<if $pain lte 20>>
-				You try to wind up a hook punch <<someone $_target>> but they
+				당신은 <<someone $_target>>에게 훅 펀치를 날리려 몸을 젖히지만 상대가
 			<<elseif $pain lte 60>>
-				You fight through the pain and try to hook punch at <<someone $_target>> but they
+				당신은 고통을 이겨내고 <<someone $_target>>에게 훅 펀치를 날리려 하지만 상대가
 			<<else>>
-				Pained and terrified, you throw a desperate hook punch but they
+				고통과 공포에 질린 채, 당신은 필사적으로 훅 펀치를 날리지만 상대가
 			<</if>>
 		<</if>>
 		<<if $combatExtended.enemyCounterSuccess is 2>>
-			<span class="red">counter</span>
+			<span class="red">반격한다</span>
 		<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-			<span class="red">see it coming and dodge</span>
+			<span class="red">그것을 예상하고 피한다</span>
 		<<elseif $combatExtended.enemyCounterSuccess is 1>>
-			<span class="red">partially counter</span>
+			<span class="red">일부 반격한다</span>
 		<<else>>
-			<span class="blue">dodge but still get clipped by it</span>
+			<span class="blue">피하지만 그래도 주먹에 스친다</span>
 		<</if>>.
 	<<else>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You deliver a nasty hook onto the <<beasttype>> with your _hand.
+				당신은 _hand【을를】 휘둘러 <<beasttype>>에게 지독한 훅을 먹인다.
 			<<elseif $pain lte 60>>
-				You fight through pain and hook punch the <<beasttype>> with your _hand.
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<beasttype>>에게 훅 펀치를 날린다.
 			<<else>>
-				Pained and terrified, you connect a desperate hook at the <<beasttype>>.
+				고통과 공포에 질린 채, 당신은 <<beasttype>>에게 필사적인 훅을 적중시킨다.
 			<</if>>
 		<<else>>
 			<<if $pain lte 20>>
 				당신은 _hand【을를】 휘둘러 <<someone $_target>>【을를】 때린다.
 			<<elseif $pain lte 60>>
-				You fight through the pain and throw a hook punch at <<someone $_target>> with your _hand.
+				당신은 고통을 이겨내고 _hand【을를】 휘둘러 <<someone $_target>>에게 훅 펀치를 날린다.
 			<<else>>
-				Pained and terrified, you connect a desperate hook.
+				고통과 공포에 질린 채, 당신은 필사적인 훅을 적중시킨다.
 			<</if>>
 		<</if>>
 	<</if>>
@@ -959,33 +959,33 @@
 	<<if $combatExtended.enemyDodgeSuccess gte 1 or $combatExtended.enemyCounterSuccess gte 1>>
 		<<if $enemytype is "beast">>
 			<<if $pain lte 20>>
-				You try to kick the <<beasttype>> but they
+				당신은 <<beasttype>>【을를】 걷어차려 하지만 녀석이
 			<<elseif $pain lte 60>>
-				You try to kick the <<beasttype>> away from you but they
+				당신은 <<beasttype>>【을를】 걷어차서 떼어내려 하지만 녀석이
 			<<else>>
-				You desperately try to kick the <<beasttype>> away but they
+				당신은 필사적으로 <<beasttype>>【을를】 걷어차서 떼어내려 하지만 녀석이
 			<</if>>
 		<<else>>
 			<<if $leftarm is "grappled" or $rightarm is "grappled">>
-				You struggle against the attacker's grasp, kicking shins while trying to twist free but they
+				당신은 공격자의 손아귀에 저항하며, 정강이를 걷어차 몸을 비틀어 빠져나오려 하지만 상대가
 			<<else>>
 				<<if $pain lte 20>>
-					Defiant, you try to lash out with your feet but they
+					반항적으로, 당신은 발로 후려치려 하지만 상대가
 				<<elseif $pain lte 60>>
-					Though hurt, you try to lash out with your feet but they
+					다쳤어도, 당신은 발로 후려치려 하지만 상대가
 				<<else>>
-					You try to lash out in desperation but they
+					당신은 절박하게 후려치려 하지만 상대가
 				<</if>>
 			<</if>>
 		<</if>>
 		<<if $combatExtended.enemyCounterSuccess is 2>>
-			<span class="red">counter</span>
+			<span class="red">반격한다</span>
 		<<elseif $combatExtended.enemyDodgeSuccess is 2>>
-			<span class="red">dodge</span>
+			<span class="red">피한다</span>
 		<<elseif $combatExtended.enemyCounterSuccess is 1>>
-			<span class="red">partially counter</span>
+			<span class="red">일부 반격한다</span>
 		<<else>>
-			<span class="blue">partially dodge</span>
+			<span class="blue">일부 피한다</span>
 		<</if>>.
 	<<else>>
 		<<if $enemytype is "beast">>
@@ -1015,22 +1015,22 @@
 <<widget "actionsdodge">>
 	<<if $enemytype is "beast">>
 		<<if $pain lte 20>>
-			You stay light on your feet.
+			당신은 가볍게 발을 놀린다.
 		<<elseif $pain lte 60>>
-			You try to stay away from the <<beasttype>>.
+			당신은 <<beasttype>>에게서 멀어지려 한다.
 		<<else>>
-			You desperately try to get away from the <<beasttype>>.
+			당신은 필사적으로 <<beasttype>>에게서 벗어나려 한다.
 		<</if>>
 	<<else>>
 		<<if $leftarm is "grappled" or $rightarm is "grappled">>
-			You struggle against the attacker's grasp, planting your feet to get any kind of leverage to dodge.
+			당신은 공격자의 손아귀에 저항하며, 피할 수 있도록 발을 단단히 디뎌 버틸 곳을 찾는다.
 		<<else>>
 			<<if $pain lte 20>>
-				You stay light on your feet.
+				당신은 가볍게 발을 놀린다.
 			<<elseif $pain lte 60>>
-				Though hurt, you try to stay light on your feet.
+				다쳤지만, 당신은 가볍게 발을 놀리려 애쓴다.
 			<<else>>
-				You scramble in desperation.
+				당신은 필사적으로 허둥댄다.
 			<</if>>
 		<</if>>
 	<</if>>
@@ -1615,50 +1615,50 @@
 					<<famebestiality $enemyno>>
 				<<case "Poppy">>
 					<<if $npc.includes("Poppy")>>
-						"Poppy... please be gentle..."
+						"포피... 제발 상냥하게 해줘..."
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
-								"Please no... I wanted Poppy to be my first..."
+								"제발 안 돼... 포피가 내 첫 상대였으면 했는데..."
 							<<else>>
-								"Please stop... that's for Poppy..."
+								"제발 그만해... 그건 포피 거야..."
 							<</if>>
 						<<else>>
-							"I only do this with Poppy... please stop..."
+							"포피하고만 하는 일이야... 제발 그만해..."
 						<</if>>
 					<<elseif $vaginastate is "penetrated" or $anusstate is "penetrated">>
 						<<if $arousal lte $arousalmax / 5>>
-							"I'm sorry, Poppy..."
+							"미안해, 포피..."
 						<<elseif $arousal lte ($arousalmax / 5) * 4>>
-							"Please take it out... I only want Poppy..."
+							"제발 빼줘... 난 포피만 원해..."
 						<<else>>
-							"Poppy... help me..."
+							"포피... 도와줘..."
 						<</if>>
 					<<elseif $penisstate is "penetrated" or $penisstate is "otheranus">>
 						<<if $arousal lte $arousalmax / 5>>
-							"I'm sorry, Poppy..."
+							"미안해, 포피..."
 						<<elseif $arousal lte ($arousalmax / 5) * 4>>
-							"Please get off... I only want Poppy..."
+							"제발 내게서 떨어져... 난 포피만 원해..."
 						<<else>>
-							"Poppy... help me..."
+							"포피... 도와줘..."
 						<</if>>
 					<<elseif $exposed gte 2>>
 						<<switch random(1,3)>>
-							<<case 1>> "Please don't look... only Poppy can see me like this..."
-							<<case 2>> "Poppy will be upset... please stop..."
-							<<case 3>> "I only want Poppy to touch me..."
+							<<case 1>> "제발 보지 마... 내 이런 모습은 포피만 볼 수 있어..."
+							<<case 2>> "포피가 속상해할 거야... 제발 그만해..."
+							<<case 3>> "난 포피가 만져주는 것만 원해..."
 						<</switch>>
 					<<else>>
 						<<if $pain lte 20>>
 							<<switch random(1,3)>>
-								<<case 1>> <<if $awarelevel gte 1>>"I'm with Poppy, please let me go!"<<else>>"Leave me alone... I only want Poppy..."<</if>>
-								<<case 2>> "Please... I need to get back to Poppy..."
-								<<case 3>> "Poppy is waiting for me..."
+								<<case 1>> <<if $awarelevel gte 1>>"난 포피와 함께야, 제발 보내줘!"<<else>>"날 내버려 둬... 난 포피만 원해..."<</if>>
+								<<case 2>> "제발... 포피에게 돌아가야 해..."
+								<<case 3>> "포피가 날 기다리고 있어..."
 							<</switch>>
 						<<elseif $pain lte 60>>
-							"Poppy never hurts me like this..."
+							"포피는 날 이렇게 아프게 한 적 없어..."
 						<<else>>
-							"No... I need Poppy..."
+							"안 돼... 난 포피가 필요해..."
 						<</if>>
 					<</if>>
 				<<case "Avery">>
@@ -2129,21 +2129,21 @@
 
 <<widget "askoralpenis">>
 	<<if $speech_attitude is "meek">>
-		You <<voice "plead">> for fellatio.
+		당신은 자지를 빨아달라고 <<voice "plead">>.
 	<<elseif $speech_attitude is "bratty">>
-		You <<voice "demand">> for fellatio.
+		당신은 자지를 빨아달라고 <<voice "demand">>.
 	<<else>>
-		You <<voice "moan">> for fellatio.
+		당신은 자지를 빨아달라고 <<voice "moan">>.
 	<</if>>
 <</widget>>
 
 <<widget "askoralvagina">>
 	<<if $speech_attitude is "meek">>
-		You <<voice "plead">> for cunnilingus.
+		당신은 보지를 핥아달라고 <<voice "plead">>.
 	<<elseif $speech_attitude is "bratty">>
-		You <<voice "demand">> for cunnilingus.
+		당신은 보지를 핥아달라고 <<voice "demand">>.
 	<<else>>
-		You <<voice "moan">> for cunnilingus.
+		당신은 보지를 핥아달라고 <<voice "moan">>.
 	<</if>>
 <</widget>>
 
@@ -2172,7 +2172,7 @@
 			<<case "Kylar">>
 				<<pc-line-kylar-moan>>
 			<<case "Poppy">>
-				"You make everything feel soft and sweet, Poppy."
+				"네가 있으면 모든 게 부드럽고 달콤하게 느껴져, 포피."
 			<<case "Gwylan">>
 				<<pc-line-gwylan-moan>>
 		<</switch>>
@@ -3104,50 +3104,50 @@
 					<<famebestiality $enemyno>>
 				<<case "Poppy">>
 					<<if $npc.includes("Poppy")>>
-						"Poppy, stop! I don't want this!"
+						"포피, 그만해! 난 이런 거 싫어!"
 					<<elseif $vaginastate is "imminent" or $penisstate is "imminent" or $penisstate is "otheranusimminent">>
 						<<if $player.virginity.vaginal is true and $player.virginity.penile is true>>
 							<<if $awarelevel gte 1>>
-								"Back off! I'm saving my first time for Poppy!"
+								"물러서! 내 첫 경험은 포피를 위해 아껴둔 거야!"
 							<<else>>
-								"Get away from there! That's Poppy's!"
+								"거기서 떨어져! 그건 포피 거야!"
 							<</if>>
 						<<else>>
-							"Don't touch me there! That's for Poppy!"
+							"거기 만지지 마! 그건 포피 거야!"
 						<</if>>
 					<<elseif $vaginastate is "penetrated" or $anusstate is "penetrated">>
 						<<if $arousal lte $arousalmax / 5>>
-							"Poppy's the one I want, not you!"
+							"내가 원하는 건 포피지, 네가 아니야!"
 						<<elseif $arousal lte ($arousalmax / 5) * 4>>
-							"Get out! That's for Poppy!"
+							"나가! 그건 포피 거야!"
 						<<else>>
-							"I'm not cheating on Poppy.... Get off!"
+							"난 포피를 배신하지 않아.... 떨어져!"
 						<</if>>
 					<<elseif $penisstate is "penetrated" or $penisstate is "otheranus">>
 						<<if $arousal lte $arousalmax / 5>>
-							"Poppy's the one I want, not you!"
+							"내가 원하는 건 포피지, 네가 아니야!"
 						<<elseif $arousal lte ($arousalmax / 5) * 4>>
-							"Get the fuck off! That's for Poppy!"
+							"씨발 떨어져! 그건 포피 거야!"
 						<<else>>
-							"I'm not cheating on Poppy...!"
+							"난 포피를 배신하지 않아...!"
 						<</if>>
 					<<elseif $exposed gte 2>>
 						<<switch random(1,3)>>
-							<<case 1>> "Don't look! This body is for Poppy!"
-							<<case 2>> "Only Poppy gets to see me like this, not you."
-							<<case 3>> "Look away before Poppy finds out."
+							<<case 1>> "쳐다보지 마! 이 몸은 포피 거야!"
+							<<case 2>> "내 이런 모습은 포피만 볼 수 있어, 네가 아니라."
+							<<case 3>> "포피가 알기 전에 눈 돌려."
 						<</switch>>
 					<<else>>
 						<<if $arousal lte $arousalmax / 5>>
 							<<switch random(1,3)>>
-								<<case 1>> <<if $awarelevel gte 1>>"Fuck off, I belong to Poppy!"<<else>>"Leave me alone! I only want Poppy!"<</if>>
-								<<case 2>> "I'm not breaking Poppy's heart for you."
-								<<case 3>> "Poppy is waiting for me. Let me go."
+								<<case 1>> <<if $awarelevel gte 1>>"꺼져, 난 포피의 사람이야!"<<else>>"날 내버려 둬! 난 포피만 원해!"<</if>>
+								<<case 2>> "너 때문에 포피의 마음을 아프게 하진 않아."
+								<<case 3>> "포피가 날 기다리고 있어. 보내줘."
 							<</switch>>
 						<<elseif $arousal lte ($arousalmax / 5) * 3>>
-							"Poppy treats me better than you will ever be able to."
+							"포피는 네가 절대 할 수 없을 만큼 날 잘 대해줘."
 						<<else>>
-							"Only Poppy can make me feel like this...!"
+							"오직 포피만이 날 이렇게 느끼게 할 수 있어...!"
 						<</if>>
 					<</if>>
 

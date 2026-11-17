@@ -175,7 +175,7 @@
 
 		<<link [[합류한다|Pirate Scum Deck Shanty Join]]>><<stress -6>><</link>><<lstress>>
 		<br>
-		<<link [[Take the lead|Pirate Scum Deck Shanty Lead]]>><</link>><<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<harpy>><<else>><<englishdifficulty 1 1000>><</if>>
+		<<link [[리드한다|Pirate Scum Deck Shanty Lead]]>><</link>><<if (($harpy gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "bird")>><<harpy>><<else>><<englishdifficulty 1 1000>><</if>>
 		<br>
 		<<link [[무시한다|Pirate Scum Deck Shanty Ignore]]>><</link>>
 		<br>

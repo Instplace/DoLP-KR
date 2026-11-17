@@ -38,48 +38,48 @@
 	<<combatExtendedCheck>>
 	<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
 		<<if $spankobject is "paddle">>
-			<<He>> tries to whack your <<bottom>> with the paddle but
+			<<He>>【은는】 패들로 당신의 <<bottom>>【을를】 후려치려 하지만
 			<<if $combatExtended.counterSuccess is 2>>
-				<span class="green">you spin and throw a kick to their side.</span>
+				<span class="green">당신은 몸을 돌려 상대의 옆구리에 발차기를 날린다.</span>
 				<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 			<<elseif $combatExtended.dodgeSuccess is 2>>
-				<span class="green">you dodge.</span>
+				<span class="green">당신은 피한다.</span>
 				<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 			<<elseif $combatExtended.counterSuccess is 1>>
-				<span class="blue">you manage to kick them away.</span>
+				<span class="blue">당신은 용케 상대를 걷어차 떼어낸다.</span>
 				<<defiance 3>><<violence 10>><<bruise bottom>><<hitstat>><<partialCounterStat>><<combatExtendedStability -10>>
 			<<else>>
-				<span class="blue">you partially dodge.</span>
+				<span class="blue">당신은 일부만 피한다.</span>
 				<<violence 5>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>><<set $speechSpank to 1>>
 			<</if>>
 		<<elseif getSexToysofType("dildos and whips").includes($spankobject)>>
-			<<He>> tries to <<print either("spank","whack","slap","smack","thwack")>> your <<bottom>> with the $spankobject but
+			<<He>>【은는】 <<print window.KR.getToolKr($spankobject)>>【으로로】 당신의 <<bottom>>【을를】 <<print either("찰싹 때리려","후려치려","때리려","철썩 때리려","세게 내리치려")>> 하지만
 			<<if $combatExtended.counterSuccess is 2>>
-				<span class="green">you spin and throw a kick to their side.</span>
+				<span class="green">당신은 몸을 돌려 상대의 옆구리에 발차기를 날린다.</span>
 				<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 			<<elseif $combatExtended.dodgeSuccess is 2>>
-				<span class="green">you dodge.</span>
+				<span class="green">당신은 피한다.</span>
 				<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 			<<elseif $combatExtended.counterSuccess is 1>>
-				<span class="blue">you manage to kick them away.</span>
+				<span class="blue">당신은 용케 상대를 걷어차 떼어낸다.</span>
 				<<defiance 3>><<violence 5>><<bruise bottom>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 			<<else>>
-				<span class="blue">you partially dodge.</span>
+				<span class="blue">당신은 일부만 피한다.</span>
 				<<violence 3>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>><<set $speechSpank to 1>>
 			<</if>>
 		<<else>>
-			<<He>> tries to spank your <<bottom>> but
+			<<He>>【은는】 당신의 <<bottom>>【을를】 때리려 하지만
 			<<if $combatExtended.counterSuccess is 2>>
-				<span class="green">you spin and throw a kick to their side.</span>
+				<span class="green">당신은 몸을 돌려 상대의 옆구리에 발차기를 날린다.</span>
 				<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 			<<elseif $combatExtended.dodgeSuccess is 2>>
-				<span class="green">you dodge.</span>
+				<span class="green">당신은 피한다.</span>
 				<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 			<<elseif $combatExtended.counterSuccess is 1>>
-				<span class="blue">you manage to kick them away.</span>
+				<span class="blue">당신은 용케 상대를 걷어차 떼어낸다.</span>
 				<<defiance 3>><<violence 5>><<bruise bottom>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 			<<else>>
-				<span class="blue">you partially dodge.</span>
+				<span class="blue">당신은 일부만 피한다.</span>
 				<<violence 3>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>><<set $speechSpank to 1>>
 			<</if>>
 		<</if>>
@@ -116,15 +116,15 @@
 	<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
 		<<if npcHasSexToyOfType(_n,"dildo")>>
 			<<if $NPCList[_n].location.genitals is "head" or $mouthuse is "facesit" or $mouthuse is "penis">>
-				<<He>> tries to <<print either("spank","whack","slap","smack","thwack")>> your <<breasts>> with the $_toy in <<his>> $_hand hand but
+				<<He>>【은는】 <<print ($_hand is "left" ? "왼손" : "오른손")>>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<breasts>>【을를】 <<print either("찰싹 때리려","후려갈기려","철썩 때리려","세게 치려","매섭게 내리치려")>> 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you manage to grab their arm and twist it.</span>
+					<span class="green">당신은 용케 상대의 팔을 붙잡아 비튼다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you manage to hit back.</span>
+					<span class="blue">당신은 용케 되받아친다.</span>
 					<<defiance 3>><<violence 5>><<bruise bottom>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 					
 					<<if $worn.rings.type.includes("jewelled")>>
@@ -134,36 +134,36 @@
 					<</if>>
 					
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 3>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 				<</if>>
 			<<else>>
-				<<He>> tries to <<print either("spank","whack","slap","smack","thwack")>> your <<bottom>> with the $_toy in <<his>> $_hand hand but
+				<<He>>【은는】 <<print ($_hand is "left" ? "왼손" : "오른손")>>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<bottom>>【을를】 <<print either("찰싹 때리려","후려갈기려","철썩 때리려","세게 치려","매섭게 내리치려")>> 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you spin and throw a kick to their side.</span>
+					<span class="green">당신은 몸을 돌려 상대의 옆구리에 발차기를 날린다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you manage to kick them away.</span>
+					<span class="blue">당신은 용케 상대를 걷어차 떼어낸다.</span>
 					<<defiance 3>><<violence 5>><<bruise bottom>><<hitstat>><<partialCounterStat>><<combatExtendedStability -5>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 3>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -3>>
 				<</if>>
 			<</if>>
 		<<elseif npcHasSexToyOfType(_n,"whip")>>
 			<<if $NPCList[_n].location.genitals is "head" or $mouthuse is "facesit" or $mouthuse is "penis">>
-				<<He>> tries to <<print either("brutally","viciously","deftly","sadistically","maliciously")>> <<print either("spank","whack","slap","smack","thwack")>> your <<breasts>> with the $_toy in <<his>> $_hand hand but
+				<<He>>【이가】 <<print either("무자비하게","악랄하게","교묘하게","가학적으로","악의적으로")>> <<print ($_hand is "left" ? "왼손" : "오른손")>>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<breasts>>【을를】 <<print either("찰싹 때리려","후려갈기려","철썩 때리려","세게 치려","매섭게 내리치려")>> 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you manage to grab their arm and twist it.</span>
+					<span class="green">당신은 용케 상대의 팔을 붙잡아 비튼다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you manage to painfully catch the whip in your hands and hit back.</span>
+					<span class="blue">당신은 아픔을 참고 용케 채찍을 두 손으로 붙잡아 되받아친다.</span>
 					<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 					<<if $leftaction is "leftcounter">>
 						<<bruise leftarm>>
@@ -171,19 +171,19 @@
 						<<bruise rightarm>>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 10>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 				<</if>>
 			<<else>>
-				<<He>> tries to <<print either("brutally","viciously","deftly","sadistically","maliciously")>> <<print either("spank","whack","slap","smack","thwack")>> your <<bottom>> with the $_toy in <<his>> $_hand hand but
+				<<He>>【이가】 <<print either("무자비하게","악랄하게","교묘하게","가학적으로","악의적으로")>> <<print ($_hand is "left" ? "왼손" : "오른손")>>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 <<bottom>>【을를】 <<print either("찰싹 때리려","후려갈기려","철썩 때리려","세게 치려","매섭게 내리치려")>> 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you rush into them and kick them in the genitals.</span>
+					<span class="green">당신은 상대에게 달려들어 사타구니를 걷어찬다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you manage to painfully catch the whip in your hands and pull them into a haymaker.</span>
+					<span class="blue">당신은 아픔을 참고 용케 채찍을 두 손으로 붙잡아 상대를 끌어당기며 대포알 같은 주먹을 날린다.</span>
 					<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 					<<if $leftaction is "leftcounter">>
 						<<bruise leftarm>>
@@ -191,23 +191,23 @@
 						<<bruise rightarm>>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 10>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 				<</if>>
 			<</if>>
 		<<else>>
-			<<He>> tries to spank your <<bottom>> but you
+			<<He>>【은는】 당신의 <<bottom>>【을를】 때리려 하지만
 			<<if $combatExtended.counterSuccess is 2>>
-				<span class="green">you grab their hand and twist it.</span>
+				<span class="green">당신은 상대의 손을 붙잡아 비튼다.</span>
 				<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 			<<elseif $combatExtended.dodgeSuccess is 2>>
-				<span class="green">you dodge.</span>
+				<span class="green">당신은 피한다.</span>
 				<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 			<<elseif $combatExtended.counterSuccess is 1>>
-				<span class="blue">you spank back.</span>
+				<span class="blue">당신도 엉덩이를 때려 되갚는다.</span>
 				<<defiance 3>><<violence 2>><<hitstat>><<partialCounterStat>><<combatExtendedStability -2>>
 			<<else>>
-				<span class="blue">you partially dodge.</span>
+				<span class="blue">당신은 일부만 피한다.</span>
 				<<violence 1>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -1>>
 			<</if>>
 		<</if>><<bodypart_admire_chance random_bottom>>
@@ -1896,9 +1896,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<namedNpcReaction 0 "choke">>
 	<<elseif $combatExtended.standingFightStart is 0 and $combatExtended.standingFightsType is "normal" and $combatExtended.stabilityLost is 0 and Math.random() * 100 lte 33 and ($enemyanger + $rng lt 160)>>
 		<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-			<span class="purple"><<He>> tries to grapple you onto the floor with <<his>> _args[0] hand</span> but
+			<span class="purple"><<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】 당신을 바닥으로 넘어뜨리려 하지만</span>
 			<<if $combatExtended.counterSuccess is 2>>
-				<span class="green">you avoid their grabby hands and jab their face.</span>
+				<span class="green">당신은 움켜쥐려는 손을 피해 상대의 얼굴에 잽을 날린다.</span>
 				<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<if $worn.rings.type.includes("jewelled")>>
 					<<defiance 0.75>>
@@ -1906,10 +1906,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<defiance 0.25 >>
 				<</if>>
 			<<elseif $combatExtended.dodgeSuccess is 2>>
-				<span class="green">you dodge.</span>
+				<span class="green">당신은 피한다.</span>
 				<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 			<<elseif $combatExtended.counterSuccess is 1>>
-				<span class="blue">you manage to punch them in return.</span>
+				<span class="blue">당신은 용케 주먹으로 받아친다.</span>
 				<<defiance 3>><<partialCounterStat>><<combatExtendedStability -10>>
 				
 				<<if $worn.rings.type.includes("jewelled")>>
@@ -1918,11 +1918,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<defiance 0.15 >>
 				<</if>>
 			<<else>>
-				<span class="blue">you partially dodge.</span>
+				<span class="blue">당신은 일부만 피한다.</span>
 				<<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 			<</if>>
 		<<else>>
-			<span class="purple"><<He>> tries to grapple you onto the floor with <<his>> _args[0] hand.</span>
+			<span class="purple"><<He>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>【으로로】 당신을 바닥으로 넘어뜨리려 한다.</span>
 			<<set $speechgrapple to 1>><<combatExtendedStability -10>>
 		<</if>>
 	<<elseif $combatgoal is "strip" and ($consensual is 1 or $combatExtended.stabilityLost is 1 or $combatExtended.standingFightsType is "normal")>>
@@ -2590,9 +2590,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<else>>
 				<<combatExtendedCheck>>
 				<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-					<<He>> tries to slap your <<bottom>> but
+					<<He>>【은는】 당신의 <<bottom>>【을를】 찰싹 때리려 하지만
 					<<if $combatExtended.counterSuccess is 2>>
-						<span class="green">you sidestep it and deliver a liver punch.</span>
+						<span class="green">당신은 옆으로 비켜서며 간을 노린 주먹을 꽂는다.</span>
 						<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						
 						<<if $worn.rings.type.includes("jewelled")>>
@@ -2601,15 +2601,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<defiance 0.20 >>
 						<</if>>
 					<<elseif $combatExtended.dodgeSuccess is 2>>
-						<span class="green">you dodge.</span>
+						<span class="green">당신은 피한다.</span>
 						<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 					<<elseif $combatExtended.counterSuccess is 1>>
-						<span class="blue">you punch their gut at the same time.</span>
+						<span class="blue">당신도 동시에 상대의 배에 주먹을 꽂는다.</span>
 						<<defiance 3>><<violence 10>><<hitstat>><<partialCounterStat>><<combatExtendedStability -10>>
 						
 							<<defiance 0.45>>
 					<<else>>
-						<span class="blue">you partially dodge.</span>
+						<span class="blue">당신은 일부만 피한다.</span>
 						<<violence 5>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 					<</if>>
 				<<else>>
@@ -2627,15 +2627,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to dig <<his>> nails into your <<bottom>> but
+				<<He>>【은는】 당신의 <<bottom>>에 손톱을 박아 넣으려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you grab their arm and twist it.</span>
+					<span class="green">당신은 상대의 팔을 붙잡아 비튼다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you smack their hand away after.</span>
+					<span class="blue">당신은 이어서 상대의 손을 쳐낸다.</span>
 					<<defiance 3>><<violence 10>><<hitstat>><<partialCounterStat>><<combatExtendedStability -10>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<defiance 0.45>>
@@ -2643,7 +2643,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<defiance 0.15 >>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 5>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 				<</if>>
 			<<else>>
@@ -2660,18 +2660,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to smack your thighs but
+				<<He>>【은는】 당신의 허벅지를 때리려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you simply kick their hand away.</span>
+					<span class="green">당신은 가볍게 상대의 손을 걷어찬다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you kick their ankle in return.</span>
+					<span class="blue">당신도 상대의 발목을 걷어찬다.</span>
 					<<defiance 3>><<violence 10>><<hitstat>><<partialCounterStat>><<combatExtendedStability -10>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 5>><<bruise bottom>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 				<</if>>
 			<<else>>
@@ -2688,15 +2688,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to punch your tummy but
+				<<He>>【은는】 당신의 배를 주먹으로 치려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you catch their wrist and pull them into a knee strike.</span>
+					<span class="green">당신은 상대의 손목을 붙잡아 끌어당기며 무릎으로 가격한다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you hammer fist their shoulder in return.</span>
+					<span class="blue">당신도 상대의 어깨에 망치 주먹을 내리꽂는다.</span>
 					<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<defiance 0.45>>
@@ -2704,7 +2704,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<defiance 0.15 >>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 10>><<bruise tummy>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 				<</if>>
 			<<else>>
@@ -2721,15 +2721,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to slap your <<breasts>> but
+				<<He>>【은는】 당신의 <<breasts>>【을를】 찰싹 때리려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you block it mid-swing and palm strike their chest.</span>
+					<span class="green">당신은 휘두르는 도중에 막아내고 상대의 가슴에 손바닥 가격을 날린다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you jab in return.</span>
+					<span class="blue">당신도 잽으로 받아친다.</span>
 					<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<defiance 0.45>>
@@ -2737,7 +2737,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<defiance 0.15 >>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 10>><<bruise chest>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 				<</if>>
 			<<else>>
@@ -2786,9 +2786,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<if $rng gte 81>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to punch your nose but
+						<<He>>【은는】 당신의 코를 주먹으로 치려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you duck under and deliver your own punch to their nose.</span>
+							<span class="green">당신은 몸을 숙여 피하며 상대의 코에 주먹을 날린다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.75>>
@@ -2796,10 +2796,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.25 >>
 							<</if>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you punch their nose at the same time.</span>
+							<span class="blue">당신도 동시에 상대의 코를 주먹으로 친다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.45>>
@@ -2807,7 +2807,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.15 >>
 							<</if>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2817,15 +2817,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 61>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to punch the back of your neck but
+						<<He>>【은는】 당신의 뒷목을 주먹으로 치려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you duck under and strike their own neck with an elbow.</span>
+							<span class="green">당신은 몸을 숙여 피하며 팔꿈치로 상대의 목을 친다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you swing around and smack their neck too.</span>
+							<span class="blue">당신도 몸을 휙 돌려 상대의 목을 후려친다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.45>>
@@ -2833,7 +2833,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.15 >>
 							<</if>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2843,9 +2843,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 41>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to punch your cheek but
+						<<He>>【은는】 당신의 뺨을 주먹으로 치려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you slip left and fire off a hook to their face.</span>
+							<span class="green">당신은 왼쪽으로 몸을 비껴 상대의 얼굴에 훅을 꽂는다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.75>>
@@ -2853,10 +2853,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.25 >>
 							<</if>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you punch them at the same time.</span>
+							<span class="blue">당신도 동시에 상대를 주먹으로 친다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.45>>
@@ -2864,7 +2864,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.15 >>
 							<</if>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2874,9 +2874,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 21>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to punch your jaw but
+						<<He>>【은는】 당신의 턱을 주먹으로 치려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you slip right and fire off a hook to their face.</span>
+							<span class="green">당신은 오른쪽으로 몸을 비껴 상대의 얼굴에 훅을 꽂는다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.75>>
@@ -2884,10 +2884,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.25 >>
 							<</if>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you punch them at the same time.</span>
+							<span class="blue">당신도 동시에 상대를 주먹으로 친다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.45>>
@@ -2895,7 +2895,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.15 >>
 							<</if>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2905,9 +2905,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to jab the front of your neck but
+						<<He>>【은는】 당신의 목 앞쪽을 찌르려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you parry and throw your own jab onto their neck.</span>
+							<span class="green">당신은 쳐내며 상대의 목에 잽을 되돌려 꽂는다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.75>>
@@ -2915,13 +2915,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.25 >>
 							<</if>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to kick their genitals.</span>
+							<span class="blue">당신은 용케 상대의 사타구니를 걷어찬다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2945,18 +2945,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<if $rng gte 81>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to scratch the side of your face but
+						<<He>>【은는】 당신의 얼굴 옆쪽을 할퀴려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you backstep and launch a fade away jab.</span>
+							<span class="green">당신은 뒤로 물러서며 페이드 어웨이 잽을 날린다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to scratch their own.</span>
+							<span class="blue">당신은 용케 상대의 같은 곳을 할퀸다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2966,18 +2966,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 61>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to scratch the back of your neck but
+						<<He>>【은는】 당신의 뒷목을 할퀴려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you duck and throw a back kick.</span>
+							<span class="green">당신은 몸을 숙이며 뒤차기를 날린다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to spin and catch them with your elbow.</span>
+							<span class="blue">당신은 용케 몸을 돌려 팔꿈치로 상대를 가격한다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -2987,18 +2987,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 41>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to scratch your cheek but
+						<<He>>【은는】 당신의 뺨을 할퀴려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you backstep and launch a fade away jab.</span>
+							<span class="green">당신은 뒤로 물러서며 페이드 어웨이 잽을 날린다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to scratch their own.</span>
+							<span class="blue">당신은 용케 상대의 같은 곳을 할퀸다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -3008,18 +3008,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<elseif $rng gte 21>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to scratch your jaw but
+						<<He>>【은는】 당신의 턱을 할퀴려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you slap the hand away and proceed to backhand the shit out of them.</span>
+							<span class="green">당신은 손을 쳐내고 이어서 상대를 손등으로 호되게 후려갈긴다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to scratch back.</span>
+							<span class="blue">당신도 용케 맞받아 할퀸다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<bruise face>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -3029,9 +3029,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<else>>
 					<<combatExtendedCheck>>
 					<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-						<<He>> tries to scratch the front of your neck but
+						<<He>>【은는】 당신의 목 앞쪽을 할퀴려 하지만
 						<<if $combatExtended.counterSuccess is 2>>
-							<span class="green">you swat it away and throw a jab into their neck.</span>
+							<span class="green">당신은 손을 쳐내고 상대의 목에 잽을 꽂는다.</span>
 							<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<if $worn.rings.type.includes("jewelled")>>
 								<<defiance 0.75>>
@@ -3039,13 +3039,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<defiance 0.25 >>
 							<</if>>
 						<<elseif $combatExtended.dodgeSuccess is 2>>
-							<span class="green">you dodge.</span>
+							<span class="green">당신은 피한다.</span>
 							<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 						<<elseif $combatExtended.counterSuccess is 1>>
-							<span class="blue">you manage to scratch back.</span>
+							<span class="blue">당신도 용케 맞받아 할퀸다.</span>
 							<<defiance 3>><<violence 20>><<hitstat>><<bruise neck>><<partialCounterStat>><<combatExtendedStability -20>>
 						<<else>>
-							<span class="blue">you partially dodge.</span>
+							<span class="blue">당신은 일부만 피한다.</span>
 							<<violence 10>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -10>>
 						<</if>>
 					<<else>>
@@ -3070,7 +3070,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<if ["m", "f", "i", "n", "t"].includes(_npc.pronoun)>>
 			<<set $pronoun to _npc.pronoun>>
 		<<elseif $options.debugdisable is "f">>
-			<span class="red">ERROR: Unexpected $$NPCList[_n].pronoun: [_npc.pronoun]</span>
+			<span class="red">오류: 예상치 못한 $$NPCList[_n].pronoun 값: [_npc.pronoun]</span>
 		<</if>>
 
 		<<personselect _n>>
@@ -3084,7 +3084,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<manspeech _n>><<if _npc.intro isnot -1>><<set _npc.intro to 1>><</if>>
 		<</switch>>
 	<<elseif $options.debugdisable is "f">>
-		<span class="red">ERROR: man-combat called with invalid NPC index: [_n]</span>
+		<span class="red">오류: man-combat가 잘못된 NPC 번호로 호출되었습니다: [_n]</span>
 	<</if>>
 
 	<<if $NPCList[_n].state is "stalk">>
@@ -3180,7 +3180,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 손가락 사이에 문지른다.
 					<<submission 1 _n>>
 				<<elseif $rng gte 101>>
-					<<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your hand.					<<set $NPCList[_n].penis to 0>><<set $leftarm to 0>><<set $leftactiondefault to "leftgrab">>
+					<<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 손에서 치운다. <<set $NPCList[_n].penis to 0>><<set $leftarm to 0>><<set $leftactiondefault to "leftgrab">>
 				<</if>>
 			<</if>>
 			<<rng>>
@@ -3190,7 +3190,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 손가락 사이에 문지른다.
 					<<submission 1 _n>>
 				<<elseif $rng gte 101>>
-					<<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your hand.					<<set $NPCList[_n].penis to 0>><<set $rightarm to 0>><<set $rightactiondefault to "rightgrab">>
+					<<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 손에서 치운다. <<set $NPCList[_n].penis to 0>><<set $rightarm to 0>><<set $rightactiondefault to "rightgrab">>
 				<</if>>
 			<</if>>
 			<<rng>>
@@ -3200,7 +3200,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 양손 사이에 문지른다.
 					<<submission 2 _n>>
 				<<elseif $rng gte 101>>
-					<<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your hands.					<<set $NPCList[_n].penis to 0>><<set $leftarm to 0>><<set $rightarm to 0>><<set $rightactiondefault to "rightgrab">><<set $leftactiondefault to "leftgrab">>
+					<<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 양손에서 치운다. <<set $NPCList[_n].penis to 0>><<set $leftarm to 0>><<set $rightarm to 0>><<set $rightactiondefault to "rightgrab">><<set $leftactiondefault to "leftgrab">>
 				<</if>>
 			<</if>>
 			<<rng>>
@@ -3218,7 +3218,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<submission 1 _n>>
 					<</if>>
 				<<elseif $rng gte 101>>
-					<<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your feet.					<<set $NPCList[_n].penis to 0>><<set $feetuse to 0>>
+					<<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 발에서 치운다. <<set $NPCList[_n].penis to 0>><<set $feetuse to 0>>
 				<</if>>
 			<</if>>
 			<<rng>>
@@ -3318,7 +3318,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<rng>>
 			<<if $NPCList[_n].penis is "vaginaentrance">>
 				<<if $rng gte 101>>
-					<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your <<pussy>>.</span>				<<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
+					<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 <<pussy>>에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
 				<<elseif $rng gte 1>>
 					<<if $worn.over_lower.vagina_exposed is 0>>
 						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
@@ -3344,7 +3344,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 갖다 댄다. <<vagina_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
 										<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "vaginaimminent">><<set $vaginastate to "imminent">><<set $speechVaginaImminent to 1>>
 									<<else>>
-										<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>>.
+										<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 <<clit>>에 비벼댄다.
 										<<sex 5 "genital" _n>><<set $speechVaginaImminent to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝에서 쿠퍼액이 흘러나와, <span class="blue">당신의 보지를 윤활해 준다.</span>
@@ -3419,7 +3419,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<</if>>
 						<<else>>
 							<<if $enemyarousal gte (($enemyarousalmax / 5) * 4)>>
-								<<if $npcSub>>You feel <<him>> approaching <<his>> peak, and ride <<him>><<else>><<He>> fucks your <<pussy>><</if>> with increasing power, $_alongsidetext the other cock.
+								<<if $npcSub>>당신은 <<him>>【이가】 절정에 다다르는 것을 느끼며 <<him>>【을를】 올라탄 채<<else>><<He>>【은는】 당신의 <<pussy>>【을를】 박으며<</if>> $_alongsidetext 점점 더 강하게 허리를 놀린다.
 							<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 2)>>
 								<<if $npcSub>>당신은 계속해서 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>> 위에 올라타 허리를 돌린다.<<else>><<He>>【은는】 $_alongsidetext 계속해서 당신의 <<pussy>> 안으로 파고든다.<</if>>
 							<<else>>
@@ -3451,7 +3451,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<</if>>
 						<<else>>
 							<<if $enemyarousal gte (($enemyarousalmax / 5) * 4)>>
-								<<if $npcSub>>You feel <<him>> approaching <<his>> peak, and ride <<him>><<else>><<He>> fucks your <<pussy>><</if>> with increasing power.
+								<<if $npcSub>>당신은 <<him>>【이가】 절정에 다다르는 것을 느끼며 <<him>>【을를】 올라탄 채<<else>><<He>>【은는】 당신의 <<pussy>>【을를】 박으며<</if>> 점점 더 강하게 허리를 놀린다.
 							<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 2)>>
 								<<if $npcSub>>당신은 계속해서 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>> 위에 올라타 허리를 돌린다.<<else>><<He>>【은는】 계속해서 당신의 <<pussy>> 안으로 파고든다.<</if>>
 							<<else>>
@@ -3483,13 +3483,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<set _pain to Math.floor($vaginalPain * (1.5 / (7 - ($NPCList[_n].penissize or 3))))>>
 							<<if $player.virginity.vaginal isnot true>>
 								<<if $enemyanger gte 80>>
-									<span class="pink"><<He>> furiously thrusts <<his>> $NPCList[_n].penisdesc deep into your <<pussy>>, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>>.</span><<set _n to $_n>>
+									<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 깊숙이 미친 듯이 쑤셔 넣어, <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께 안을 채운다.</span><<set _n to $_n>>
 									<<personselect _npcA>><<set _pain *= 1.5>>
 								<<elseif $enemyanger gte 20>>
-									<span class="pink"><<He>> thrusts <<his>> $NPCList[_n].penisdesc deep into your <<pussy>>, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>>.</span><<set _n to $_n>>
+									<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 깊숙이 쑤셔 넣어, <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께 안을 채운다.</span><<set _n to $_n>>
 									<<personselect _npcA>>
 								<<else>>
-									<span class="pink"><<He>> glides <<his>> $NPCList[_n].penisdesc deep into your <<pussy>>, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>>.</span><<set _n to $_n>>
+									<span class="pink"><<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>> 깊숙이 미끄러뜨려, <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께 안을 채운다.</span><<set _n to $_n>>
 									<<personselect _npcA>>
 								<</if>>
 								<<switch $NPCList[_n].penissize>>
@@ -3506,13 +3506,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<else>>
 									<<switch $NPCList[_n].penissize>>
 									<<case 4 5>>
-										<span class="red"><<His>> $NPCList[_n].penisdesc thrusts deep into your virgin pussy, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>><<personselect _npcA>>, obliterating your hymen and <<virginitylosttext $NPCList[_n].fullDescription>> You scream out as your <<pussy>> struggles to accommodate <<his>> cock.</span><<set _n to $_n>>
+										<span class="red"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께<<personselect _npcA>> 당신의 처녀 보지 깊숙이 박혀 들어와, 처녀막을 짓뭉개며 <<virginitylosttext $NPCList[_n].fullDescription>> <<pussy>>【이가】 <<his>> 자지를 받아들이려 버둥대는 동안 당신은 비명을 지른다.</span><<set _n to $_n>>
 										<<violence 200>>
 									<<case 1>>
-										<span class="red"><<His>> $NPCList[_n].penisdesc pushes into your virgin pussy, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>><<personselect _npcA>>, breaking your hymen and <<virginitylosttext $NPCList[_n].fullDescription>></span> <span class="green"> While technically no longer a virgin, you can barely feel it.</span><<set _n to $_n>>
+										<span class="red"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께<<personselect _npcA>> 당신의 처녀 보지 안으로 밀고 들어와, 처녀막을 찢으며 <<virginitylosttext $NPCList[_n].fullDescription>></span> <span class="green"> 엄밀히 말하면 더는 처녀가 아니지만, 거의 느껴지지도 않는다.</span><<set _n to $_n>>
 										<<violence 25 4 4>>
 									<<default>>
-										<span class="pink"><<His>> $NPCList[_n].penisdesc thrusts deep into your virgin pussy, joining <<personselect _npcB>><<combatPersons>> <<npcPenisSimple _npcB>><<personselect _npcA>>,</span><span class="red"> tearing your hymen and <<virginitylosttext $NPCList[_n].fullDescription>></span><<set _n to $_n>>
+										<span class="pink"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 <<personselect _npcB>><<combatPersons>>의 <<npcPenisSimple _npcB>>【와과】 함께<<personselect _npcA>> 당신의 처녀 보지 깊숙이 박혀 들어와,</span><span class="red"> 처녀막을 찢으며 <<virginitylosttext $NPCList[_n].fullDescription>></span><<set _n to $_n>>
 										<<violence 100>>
 									<</switch>>
 								<</if>>
@@ -3550,13 +3550,13 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<else>>
 									<<switch $NPCList[_n].penissize>>
 									<<case 4>>
-										<span class="red"><<His>> $NPCList[_n].penisdesc thrusts deep into your virgin pussy, obliterating your hymen and <<virginitylosttext $NPCList[_n].fullDescription>> You scream out as your <<pussy>> struggles to accommodate <<his>> cock.</span>
+										<span class="red"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 처녀 보지 깊숙이 박혀 들어와, 처녀막을 짓뭉개며 <<virginitylosttext $NPCList[_n].fullDescription>> <<pussy>>【이가】 <<his>> 자지를 받아들이려 버둥대는 동안 당신은 비명을 지른다.</span>
 										<<violence 200>>
 									<<case 1>>
-										<span class="red"><<His>> $NPCList[_n].penisdesc pushes into your virgin pussy, breaking your hymen and <<virginitylosttext $NPCList[_n].fullDescription>></span> <span class="green"> While technically no longer a virgin, you can barely feel it.</span>
+										<span class="red"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 처녀 보지 안으로 밀고 들어와, 처녀막을 찢으며 <<virginitylosttext $NPCList[_n].fullDescription>></span> <span class="green"> 엄밀히 말하면 더는 처녀가 아니지만, 거의 느껴지지도 않는다.</span>
 										<<violence 25 4 4>>
 									<<default>>
-										<span class="pink"><<His>> $NPCList[_n].penisdesc thrusts deep into your virgin pussy,</span><span class="red"> tearing your hymen and <<virginitylosttext $NPCList[_n].fullDescription>></span>
+										<span class="pink"><<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 처녀 보지 깊숙이 박혀 들어와,</span><span class="red"> 처녀막을 찢으며 <<virginitylosttext $NPCList[_n].fullDescription>></span>
 										<<violence 100>>
 									<</switch>>
 								<</if>>
@@ -3578,7 +3578,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<rng>>
 			<<if $NPCList[_n].penis is "vaginaentrancedouble">>
 				<<if $rng gte 101>>
-					<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your <<pussy>>, and the other cock.</span>				<<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
+					<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 <<pussy>>【와과】 다른 자지에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $vaginause to 0>><<set $vaginastate to 0>>
 				<<elseif $rng gte 1>>
 					<<if $worn.over_lower.vagina_exposed is 0>>
 						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 문지른다.
@@ -3605,7 +3605,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<sex 20 "genitals" _n>><<set $NPCList[_n].penis to "vaginaimminentdouble">><<set $speechVaginaImminent to 1>>
 										<<if $vaginastate isnot "doublepenetrated">><<set $vaginastate to "doubleimminent">><</if>>
 									<<else>>
-										<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<pussy>>; <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it against your <<clit>> and the other cock.
+										<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<pussy>>에 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 <<clit>>【와과】 다른 자지에 비벼댄다.
 										<<sex 5 "genitals" _n>><<set $speechVaginaImminent to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝에서 쿠퍼액이 흘러나와, <span class="blue">당신의 보지를 윤활해 준다.</span>
@@ -3668,7 +3668,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte (($enemyarousalmax / 5) * 4)>>
-							<<if $npcSub>>You feel <<him>> approaching <<his>> peak, and ride <<him>><<else>><<He>> fucks your <<bottom>><</if>> with increasing power<<alongsideButtPlug>>.
+							<<if $npcSub>>당신은 <<him>>【이가】 절정에 다다르는 것을 느끼며 <<him>>【을를】 올라탄 채<<else>><<He>>【은는】 당신의 <<bottom>>【을를】 박으며<</if>> 점점 더 강하게 허리를 놀린다<<alongsideButtPlug>>.
 						<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 2)>>
 							<<if $npcSub>>당신은 계속해서 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>> 위에 올라타 허리를 돌린다.<<else>><<He>>【은는】 계속해서 당신의 <<bottom>> 안으로 파고든다<<alongsideButtPlug>>.<</if>>
 						<<else>>
@@ -3700,7 +3700,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<</if>>
 					<<else>>
 						<<if $enemyarousal gte (($enemyarousalmax / 5) * 4)>>
-							<<if $npcSub>>You feel <<him>> approaching <<his>> peak, and ride <<him>><<else>><<He>> fucks your <<bottom>><</if>> with increasing power.
+							<<if $npcSub>>당신은 <<him>>【이가】 절정에 다다르는 것을 느끼며 <<him>>【을를】 올라탄 채<<else>><<He>>【은는】 당신의 <<bottom>>【을를】 박으며<</if>> 점점 더 강하게 허리를 놀린다.
 						<<elseif $enemyarousal gte (($enemyarousalmax / 5) * 2)>>
 							<<if $npcSub>>당신은 계속해서 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>> 위에 올라타 허리를 돌린다.<<else>><<He>>【은는】 계속해서 당신의 <<bottom>> 안으로 파고든다.<</if>>
 						<<else>>
@@ -3787,7 +3787,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<rng>>
 			<<if $NPCList[_n].penis is "anusentrance">>
 				<<if $rng gte 101>>
-					<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your <<bottom>>.</span>				<<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
+					<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 <<bottom>>에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
 				<<elseif $rng gte 1>>
 					<<if $worn.over_lower.anus_exposed is 0>>
 						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
@@ -3834,7 +3834,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 												<<anus_lube_text>><<if $npcSub>>당신은<<else>><<he>>【은는】 <</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 항문과 $worn.butt_plug.name에 밀어붙이고, <span class="pink">당장이라도 쑤셔넣을 듯 짓누른다.</span>
 												<<sex 10 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>>
 											<<else>>
-												<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+												<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name 쪽으로 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 엉덩이골 사이에 비벼댄다.
 												<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 												<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 													끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
@@ -3847,7 +3847,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙인다. <<anus_lube_text>><span class="pink">그 끝이 당신을 짓누르며, 당장이라도 삽입할 듯하다.</span>
 										<<sex 20 "anal" _n>><<set $NPCList[_n].penis to "anusimminent">><<set $anusstate to "imminent">><<set $speechAnusImminent to 1>>
 									<<else>>
-										<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+										<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 엉덩이골 사이에 비벼댄다.
 										<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
@@ -3997,7 +3997,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 								<<else>>
 									<<switch $NPCList[_n].penissize>>
 										<<case 4 5>>
-											<span class="red"> You scream as your ass struggles to accommodate both cocks<<if playerHasButtPlug()>> and your $worn.butt_plug.name<</if>>.</span>
+											<span class="red"> 당신의 엉덩이가 두 자지<<if playerHasButtPlug()>>와 당신의 $worn.butt_plug.name<</if>>【을를】 받아들이려 버둥대는 동안, 당신은 비명을 지른다.</span>
 										<<case 1>>
 											<span class="green">항문은 이미 처음이 아니지만, 당신은 거의 아무것도 느끼지 못한다.</span>
 										<<default>>
@@ -4064,7 +4064,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 
 				<<if $rng gte 101>>
-					<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your <<bottom>> and the other cock.</span>				<<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
+					<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 <<bottom>>【와과】 다른 자지에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $anususe to 0>><<set $anusstate to 0>>
 				<<elseif $rng gte 1>>
 					<<if $worn.over_lower.anus_exposed is 0>>
 						<<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> 당신의 $worn.over_lower.name 너머로 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 문지른다.
@@ -4112,7 +4112,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 												<<sex 10 "anal" _n>><<set $NPCList[_n].penis to "anusimminentdouble">>
 												<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechAnusImminent to 1>>
 											<<else>>
-												<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>> and your $worn.butt_plug.name, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+												<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>【와과】 당신의 $worn.butt_plug.name 쪽으로 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 엉덩이골 사이에 비벼댄다.
 												<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 												<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 													끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
@@ -4126,7 +4126,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<sex 20 "anal" _n>><<set $NPCList[_n].penis to "anusimminentdouble">>
 										<<if $anusstate isnot "doublepenetrated">><<set $anusstate to "doubleimminent">><</if>><<set $speechAnusImminent to 1>>
 									<<else>>
-										<<if $npcSub>>You push<<else>><<He>> pushes<</if>> <<his>> $NPCList[_n].penisdesc against your <<bottom>>, <span class="blue">but fail<<if !$npcSub>>s<</if>> to penetrate,</span> instead angling away and rubbing it between your cheeks.
+										<<if $npcSub>>당신은<<else>><<He>>【은는】<</if>> <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 <<bottom>>에 밀어붙이지만, <span class="blue">삽입하지 못하고<<if !$npcSub>><</if>></span> 비껴가며 엉덩이골 사이에 비벼댄다.
 										<<sex 5 "anal" _n>><<set $speechAnusImminent to 1>>
 										<<if $enemyarousal gte ($enemyarousalmax / 2) and random(1, 3) is 3 and !npcHasStrapon(_n) and !wearingCondom(_n)>>
 											끝부분에서 쿠퍼액이 흘러나와, <span class="blue">당신의 엉덩이를 적신다.</span>
@@ -4225,14 +4225,14 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<set $NPCList[_n].penis to "mouthentrance">><<submission 5 _n>><<set $mouthstate to "entrance">>
 					<<elseif $worn.face.type.includes("face_covering") or $worn.face.type.includes("gag")>>
 						<<if $enemyanger lt $enemyangermax/2>>
-							<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>						<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+							<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 						<<else>>
 							<<switch random(0,2)>>
 								<<case 0 1>>
 									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 $worn.face.name에 밀어붙인다. <<He>>【은는】 좌절한 듯하다.
 									<<damageFaceCover 2>>
 								<<case 2>>
-									<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>								<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+									<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 							<</switch>>
 						<</if>>
 					<<elseif $rng lte 15 or ($mouthsubmit isnot 1 and $rng lte 30)>>
@@ -4272,20 +4272,20 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<His>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 당신의 얼굴에서 불과 몇 인치 떨어진 곳에 머문다.
 				<<else>>
 					<<if $rng gte 101>>
-						<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>					<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+						<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 					<<elseif $NPCList[_n].chastity.penis.includes("chastity")>>
 						<span class="purple"><<if $npcSub>>당신은<<else>><<He>>【은는】 <</if>> <<his>> $NPCList[_n].chastity.penis【을를】 당신의 입에 밀어붙인다.</span>
 						<<sex 25 "mouth" _n>><<set $speechNPCChastity to 1>>
 					<<elseif $worn.face.type.includes("face_covering") or $worn.face.type.includes("gag")>>
 						<<if $enemyanger lt $enemyangermax/2>>
-							<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>						<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+							<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 						<<else>>
 							<<switch random(0,2)>>
 								<<case 0 1>>
 									<<He>>【은는】 <<his>> <<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【을를】 당신의 $worn.face.name에 밀어붙인다. <<He>>【은는】 좌절한 듯하다.
 									<<damageFaceCover 2>>
 								<<case 2>>
-									<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>								<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+									<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 							<</switch>>
 						<</if>>
 					<<elseif $rng gte 1 and !$npcSub>>
@@ -4300,7 +4300,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 			<<rng>>
 			<<if $NPCList[_n].penis is "chest">>
 				<<if $rng gte 101>>
-					<<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your chest.					<<set $NPCList[_n].penis to 0>><<set $chestuse to 0>>
+					<<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 가슴에서 치운다. <<set $NPCList[_n].penis to 0>><<set $chestuse to 0>>
 				<<elseif $rng gte 1>>
 					<<submission 3 _n>><<playWithBreasts>>
 					<<if $breastcup is "none">>
@@ -4461,7 +4461,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class="pink">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>
 									<<sex 20 "genital" _n>><<set $NPCList[_n].penis to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 								<<elseif !$npcSub>>
-									<<He>> presses <<his>> ass against your <<penis>>, <span class="blue">but fails to envelope you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.
+									<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class="blue">당신을 감싸 안지 못한다.</span> 당신의 <<penisSimple>>【이가】 비껴가며 <<his>> 엉덩이골 사이에 비벼진다.
 									<<sex 5 "genital" _n>><<set $speechNPCAnusImminent to 1>>
 								<</if>>
 							<<elseif $rng gte 1>>
@@ -4520,7 +4520,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<<He>>【은는】 앞을 향해 찌르고,
 				<span class="pink">
 					<<if $enemyarousal gte (($enemyarousalmax / 10) * 7)>>
-						fencing
+						칼싸움하듯
 					<<elseif $enemyarousal gte (($enemyarousalmax / 10) * 4)>>
 						세차게
 					<<else>>
@@ -5061,7 +5061,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙인다. <<penis_lube_text>> <span class="pink">당신의 끝부분이 <<him>> 안으로 파고들어, 한 번만 허리를 쳐올리면 집어삼켜질 듯하다.</span>
 									<<sex 20 "genital" _n>><<set $NPCList[_n].vagina to "otheranusimminent">><<set $penisstate to "otheranusimminent">><<set $speechNPCAnusImminent to 1>>
 								<<elseif !$npcSub>>
-									<<He>> presses <<his>> ass against your <<penis>>, <span class="blue">but fails to envelope you.</span> Your <<penisSimple>> angles away and rubs between <<his>> cheeks.
+									<<He>>【이가】 당신의 <<penis>>에 엉덩이를 밀어붙이지만, <span class="blue">당신을 감싸 안지 못한다.</span> 당신의 <<penisSimple>>【이가】 비껴가며 <<his>> 엉덩이골 사이에 비벼진다.
 									<<sex 5 "genital" _n>><<set $speechNPCAnusImminent to 1>>
 								<</if>>
 							<<elseif $rng gte 1>>
@@ -5131,7 +5131,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 
 					<<elseif $oxygen lte 900>>
 						<<print either(
-							"<<He>> lets you breathe in air from under <<him>>.",
+							"<<He>>【은는】 <<him>> 아래에서 당신이 숨을 들이쉴 수 있게 해준다.",
 							"<<He>>【은는】 <<him>> 아래에 깔린 당신이 숨을 쉴 수 있게 해준다.",
 							"<<He>>【은는】 당신이 약간의 숨을 고를 수 있을 정도로만 몸을 살짝 들어올린다.",
 						)>>
@@ -5266,7 +5266,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<He>>【이가】 <<print either("리드미컬하게","","")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 밀어붙인다.
 						<<else>>
 							"예쁜 돌을",
-								`<<He>> thrusts <<his>> pussy up and down your dildo, fucking <<himself>> with a violent intensity as <<he>> approaches <<his>> peak.`,								`<<He>> <<print either("forcefully","desperately","rhythmically")>> thrusts <<his>> pussy against your $currentSexToyLeft.name.`,
+								`<<He>>【은는】 <<his>> 보지를 당신의 딜도 위아래로 문지르며, 절정이 가까워질수록 폭력적일 만큼 격렬하게 <<himself>>【을를】 박아댄다.`, `<<He>>【이가】 <<print either("힘껏","필사적으로","리듬을 타며")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 밀어붙인다.`,
 								`<<He>>【이가】 <<print either("밀어붙인다","비벼댄다")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 원을 그리듯 비벼댄다.`,
 							)>>
 							장난감을 타고 <<if $NPCList[$lefttarget].type is "plant">>넥타르가<<else>>애액이<</if>> 흘러내린다.
@@ -5292,16 +5292,16 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<<He>>【이가】 <<print either("리드미컬하게","","")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 밀어붙인다.
 						<<else>>
 							"예쁜 돌을",
-								`<<He>> thrusts <<his>> pussy up and down your dildo, fucking <<himself>> with a violent intensity as <<he>> approaches <<his>> peak.`,								`<<He>> <<print either("forcefully","desperately","rhythmically")>> thrusts <<his>> pussy against your $currentSexToyLeft.name.`,
+								`<<He>>【은는】 <<his>> 보지를 당신의 딜도 위아래로 문지르며, 절정이 가까워질수록 폭력적일 만큼 격렬하게 <<himself>>【을를】 박아댄다.`, `<<He>>【이가】 <<print either("힘껏","필사적으로","리듬을 타며")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 밀어붙인다.`,
 								`<<He>>【이가】 <<print either("밀어붙인다","비벼댄다")>> <<his>> 보지를 당신의 $currentSexToyLeft.name에 원을 그리듯 비벼댄다.`,
 							)>>
-							<<if $NPCList[$lefttarget].type is "plant">>Nectar drips<<else>>Fluids drip<</if>> down your toy.
+							장난감을 타고 <<if $NPCList[$lefttarget].type is "plant">>넥타르가<<else>>애액이<</if>> 흘러내린다.
 						<</if>>
 					<<else>>
 						<<if $enemyarousal lt (($enemyarousalmax / 5) * 4)>>
 							당신은 $currentSexToyLeft.name【으로로】 <<his>> 보지를 쑤신다.
 						<<else>>
-							You fuck <<his>> pussy with your $currentSexToyLeft.name. <<if $NPCList[$lefttarget].type is "plant">>Nectar drips<<else>>Fluids drip<</if>> from <<his>> pussy.
+							당신은 $currentSexToyLeft.name【으로로】 <<his>> 보지를 박아댄다. <<his>> 보지에서 <<if $NPCList[$lefttarget].type is "plant">>넥타르가<<else>>애액이<</if>> 뚝뚝 떨어진다.
 						<</if>>
 					<</if>>
 					<<submission 2 _n>>
@@ -5640,7 +5640,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						당신의 얼굴에 시선을 고정한 채, <<he>>【은는】 <<his>> 혀로 당신의 <<penis>>【을를】 감싸고 빨아들인다.
 						<<sex 30 "genital" _n>>
 					<<elseif $enemyarousal lt (($enemyarousalmax / 5) * 3)>>
-						<<He>> squeezes <<his>> lips around your <<penis>>, and circles <<his>> tongue around your <<glans>>.
+						<<He>>【은는】 입술로 당신의 <<penis>>【을를】 조이며 혀로 당신의 <<glans>>【을를】 휘감는다.
 						<<sex 30 "genital" _n>>
 					<<elseif $enemyarousal lt (($enemyarousalmax / 5) * 4)>>
 						당신의 <<penis>>【이가】 <<him>> 안에서 완전히 사라질 때까지, <<He>>【은는】 당신을 <<his>> 입 안 더 깊숙이 받아들인다. <<He>>【은는】 다시 천천히 당신을 빼내고는, 깊은 숨을 들이쉰다.
@@ -5786,7 +5786,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<brat 2>>
 								<</if>>
 							<<case 2>>
-								<span class="lblue"><<He>> moves <<his>> <<= npcHasStrapon(_n) ? "strap-on" : "penis">> away from your mouth.</span>								<<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
+								<span class="lblue"><<He>>【은는】 <<his>> <<= npcHasStrapon(_n) ? "페니스 밴드" : "자지">>【을를】 당신의 입에서 치운다.</span> <<set $NPCList[_n].penis to 0>><<set $mouthuse to 0>><<set $mouthstate to 0>>
 								<<if $consensual isnot 1>>
 									<<brat 2>>
 								<</if>>
@@ -5968,7 +5968,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<if $enemyanger lte 60>>
 						<<He>>【이가】 말한다. "처녀였다니! 운도 좋지!"
 					<<else>>
-						<<He>> speaks. "I felt your hymen tear bitch. Something to remember me by."
+						<<He>>【이가】 말한다. "네 처녀막이 찢어지는 게 느껴졌어, 암캐야. 날 기억할 기념품이야."
 					<</if>>
 				<<elseif $speechPenisVirgin is 1 and ($NPCList[_n].vagina is "penis" or $NPCList[_n].vagina is "otheranus" or $NPCList[_n].penis is "otheranus")>>
 					<<if $enemyanger lte 60>>
@@ -6198,7 +6198,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 							<span class="blue">
 								<<him>>【이가】 당신의 몸을 타고 앞으로 기대어 오는 것이 느껴지고, 이내 당신의
 								<<if $player.condom>>
-									<<penis>> as <<condomDesc "player" "your">> is removed.
+									<<penis>>에서 <<condomDesc "player" "your">>【이가】 벗겨진다.
 									<<removeNPCCondom $mouthtarget "player">>
 								<<else>>
 									<<penis>>.
@@ -6331,9 +6331,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $NPCList[_n].location.genitals isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<He>> tries to bite your shoulders but
+								<<He>>【은는】 당신의 어깨를 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you backstep and throw a jab into their face.</span>
+									<span class="green">당신은 뒤로 물러서며 상대의 얼굴에 잽을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.75>>
@@ -6341,10 +6341,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.25 >>
 									<</if>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them away.</span>
+									<span class="blue">당신은 용케 상대를 주먹으로 쳐서 떨쳐낸다.</span>
 									<<defiance 3>><<violence 10>><<hitstat>><<bruise leftarm>><<bruise rightarm>><<partialCounterStat>><<combatExtendedStability -10>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.45>>
@@ -6352,7 +6352,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.15 >>
 									<</if>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 5>><<bruise leftarm>><<bruise rightarm>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 								<</if>>
 							<<else>>
@@ -6364,15 +6364,15 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 					<<elseif $enemyanger + $rng lte 165 and $NPCList[_n].location.genitals isnot "genitals" and !(playerBellySize(true) gte 8)>>
 						<<combatExtendedCheck>>
 						<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-							<<He>> tries to bite your tummy but
+							<<He>>【은는】 당신의 배를 물려 하지만
 							<<if $combatExtended.counterSuccess is 2>>
-								<span class="green">you grab their head and strike their face with your knee.</span>
+								<span class="green">당신은 상대의 머리를 붙잡고 무릎으로 얼굴을 가격한다.</span>
 								<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 							<<elseif $combatExtended.dodgeSuccess is 2>>
-								<span class="green">you dodge.</span>
+								<span class="green">당신은 피한다.</span>
 								<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 							<<elseif $combatExtended.counterSuccess is 1>>
-								<span class="blue">you manage to punch them away.</span>
+								<span class="blue">당신은 용케 상대를 주먹으로 쳐서 떨쳐낸다.</span>
 								<<defiance 3>><<violence 10>><<hitstat>><<bruise tummy>><<partialCounterStat>><<combatExtendedStability -10>>
 								<<if $worn.rings.type.includes("jewelled")>>
 									<<defiance 0.45>>
@@ -6380,7 +6380,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 									<<defiance 0.15 >>
 								<</if>>
 							<<else>>
-								<span class="blue">you partially dodge.</span>
+								<span class="blue">당신은 일부만 피한다.</span>
 								<<violence 5>><<bruise tummy>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 							<</if>>
 						<<else>>
@@ -6403,9 +6403,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $NPCList[_n].location.genitals isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<He>> tries to bite your neck but you
+								<<He>>【은는】 당신의 목을 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you backstep and deliver a hook.</span>
+									<span class="green">당신은 뒤로 물러서며 훅을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.75>>
@@ -6413,10 +6413,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.25 >>
 									<</if>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them away.</span>
+									<span class="blue">당신은 용케 상대를 주먹으로 쳐서 떨쳐낸다.</span>
 									<<defiance 3>><<violence 10>><<hitstat>><<bruise neck>><<partialCounterStat>><<combatExtendedStability -10>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.45>>
@@ -6424,7 +6424,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.15 >>
 									<</if>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 5>><<bruise neck>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 								<</if>>
 							<<else>>
@@ -6447,9 +6447,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $NPCList[_n].location.genitals isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<He>> tries to bite your cheek but
+								<<He>>【은는】 당신의 뺨을 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you simply jab their face.</span>
+									<span class="green">당신은 간단히 상대의 얼굴에 잽을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.75>>
@@ -6457,10 +6457,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.25 >>
 									<</if>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them away.</span>
+									<span class="blue">당신은 용케 상대를 주먹으로 쳐서 떨쳐낸다.</span>
 									<<defiance 3>><<violence 10>><<hitstat>><<bruise face>><<partialCounterStat>><<combatExtendedStability -10>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.45>>
@@ -6468,7 +6468,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.15 >>
 									<</if>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 5>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 								<</if>>
 							<<else>>
@@ -6484,9 +6484,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<elseif $NPCList[_n].location.genitals isnot "head">>
 							<<combatExtendedCheck>>
 							<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-								<<He>> tries to bite your <<breasts>> but
+								<<He>>【은는】 당신의 <<breasts>>【을를】 물려 하지만
 								<<if $combatExtended.counterSuccess is 2>>
-									<span class="green">you backstep and jab their face.</span>
+									<span class="green">당신은 뒤로 물러서며 상대의 얼굴에 잽을 날린다.</span>
 									<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.75>>
@@ -6494,10 +6494,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.25 >>
 									<</if>>
 								<<elseif $combatExtended.dodgeSuccess is 2>>
-									<span class="green">you dodge.</span>
+									<span class="green">당신은 피한다.</span>
 									<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 								<<elseif $combatExtended.counterSuccess is 1>>
-									<span class="blue">you manage to punch them away.</span>
+									<span class="blue">당신은 용케 상대를 주먹으로 쳐서 떨쳐낸다.</span>
 									<<defiance 3>><<violence 10>><<hitstat>><<bruise chest>><<partialCounterStat>><<combatExtendedStability -10>>
 									<<if $worn.rings.type.includes("jewelled")>>
 										<<defiance 0.45>>
@@ -6505,7 +6505,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 										<<defiance 0.15 >>
 									<</if>>
 								<<else>>
-									<span class="blue">you partially dodge.</span>
+									<span class="blue">당신은 일부만 피한다.</span>
 									<<violence 5>><<bruise chest>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 								<</if>>
 							<<else>>
@@ -6517,7 +6517,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 				<</if>>
 			<</if>>
 		<<else>>
-			<span class="red"><<He>> recoils from the emotional damage</span>.
+			<span class="red"><<He>>【이가】 정서적 타격에 움찔 물러난다</span>.
 		<</if>>
 	<</if>>
 	<<if $possessed and $control lt $controlmax>>
@@ -6541,12 +6541,12 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<switch $gloryHoleEvent.target>>
 				<<case "anal">>
-					The glistening bottom wiggles expectantly.
+					번들거리는 엉덩이가 기대에 차 꿈틀거린다.
 				<<case "vaginal">>
 				<<case "penile">>
 					<<= window.KR.getPenisDescKr($NPCList[_n].penisdesc)>>【이가】 기대에 찬 듯 기다린다.
 				<<case "oral">>
-					<<He>> licks <<his>> lips expectantly.
+					<<He>>【은는】 기대에 찬 듯 입술을 핥는다.
 				<<default>>
 				<<run console.error("Target error "+ $gloryHoleEvent.target +"NPC Value"+ $NPCList[_n].fullDescription)>>
 				<<run throw new Error("Target error "+ $gloryHoleEvent.target +"NPC Value"+ $NPCList[_n].fullDescription)>>
@@ -6991,11 +6991,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<switch $gloryHoleEvent.target>>
 				<<case "anal">>
-					The glistening bottom wiggles expectantly.
+					번들거리는 엉덩이가 기대에 차 꿈틀거린다.
 				<<case "vaginal">>
 					보지가 기대에 차 기다리고 있다.
 				<<case "oral">>
-					<<He>> licks <<his>> lips expectantly.
+					<<He>>【은는】 기대에 찬 듯 입술을 핥는다.
 				<<case "penile">>
 				<<default>>
 				<<run console.error("Target error "+ $gloryHoleEvent.target +"NPC Value"+ $NPCList[_n].fullDescription)>>
@@ -7146,9 +7146,9 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to kick you in the stomach but
+				<<He>>【은는】 당신의 배를 걷어차려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you sidestep and gut punch them.</span>
+					<span class="green">당신은 옆으로 비켜서며 상대의 배에 주먹을 꽂는다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<defiance 0.75>>
@@ -7156,10 +7156,10 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<defiance 0.25 >>
 					<</if>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">you catch the leg and punch it.</span>
+					<span class="blue">당신은 다리를 붙잡아 주먹을 날린다.</span>
 					<<defiance 3>><<violence 10>><<hitstat>><<bruise tummy>><<partialCounterStat>><<combatExtendedStability -10>>
 					<<if $worn.rings.type.includes("jewelled")>>
 						<<defiance 0.45>>
@@ -7167,7 +7167,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 						<<defiance 0.15 >>
 					<</if>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 5>><<bruise tummy>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 				<</if>>
 			<<else>>
@@ -7226,18 +7226,18 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<else>>
 			<<combatExtendedCheck>>
 			<<if ($combatExtended.passiveDodging is 1 or $combatExtended.activeDodgingActive is 1 or $combatExtended.countering is 1) and ($combatExtended.dodgeSuccess gte 1 or $combatExtended.counteringActive gte 1) and $consensual isnot 1>>
-				<<He>> tries to kick you in the face but
+				<<He>>【은는】 당신의 얼굴을 걷어차려 하지만
 				<<if $combatExtended.counterSuccess is 2>>
-					<span class="green">you duck and deliver a spinning high kick.</span>
+					<span class="green">당신은 몸을 숙여 피하며 회전 하이킥을 날린다.</span>
 					<<defiance 5>><<control 4>><<ggcontrol>><<counterStat>>
 				<<elseif $combatExtended.dodgeSuccess is 2>>
-					<span class="green">you dodge.</span>
+					<span class="green">당신은 피한다.</span>
 					<<control 2>><<gcontrol>><<dodgeStat>><<set $enemyanger += 10>>
 				<<elseif $combatExtended.counterSuccess is 1>>
-					<span class="blue">use the momentum for a spinning high kick.</span>
+					<span class="blue">당신은 그 기세를 살려 회전 하이킥을 날린다.</span>
 					<<defiance 3>><<violence 10>><<hitstat>><<bruise face>><<partialCounterStat>><<combatExtendedStability -10>>
 				<<else>>
-					<span class="blue">you partially dodge.</span>
+					<span class="blue">당신은 일부만 피한다.</span>
 					<<violence 5>><<bruise face>><<hitstat>><<partialDodgeStat>><<set $enemyanger += 5>><<combatExtendedStability -5>>
 				<</if>>
 			<<else>>

@@ -467,10 +467,10 @@
 						<<set _leftaction["애태운다"] to "handedge">>
 					<</if>>
 					<<if ($consensual is 1 or ($enemytype is "man" ? $promiscuity : $deviancy) gte 55 or $promiscuityIgnore) and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag") and $mouthuse is 0>>
-						<<set _leftaction["Move towards your mouth"] to "handpenistomouth">>
+						<<set _leftaction["자지를 당신의 입으로 가져간다"] to "handpenistomouth">>
 					<</if>>
 					<<if ($consensual is 1 or ($enemytype is "man" ? $promiscuity : $deviancy) gte 35 or $promiscuityIgnore) and $chestuse is 0>>
-						<<set _leftaction["Move towards your chest"] to "handpenistochest">>
+						<<set _leftaction["자지를 당신의 가슴으로 가져간다"] to "handpenistochest">>
 					<</if>>
 				<</if>>
 				<<set _leftaction["그만둔다"] to "leftstoppenis">>
@@ -830,10 +830,10 @@
 						<<set _rightaction["애태운다"] to "handedge">>
 					<</if>>
 					<<if ($consensual is 1 or ($enemytype is "man" ? $promiscuity : $deviancy) gte 55 or $promiscuityIgnore) and !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag") and $mouthuse is 0>>
-						<<set _rightaction["Move towards your mouth"] to "handpenistomouth">>
+						<<set _rightaction["자지를 당신의 입으로 가져간다"] to "handpenistomouth">>
 					<</if>>
 					<<if ($consensual is 1 or ($enemytype is "man" ? $promiscuity : $deviancy) gte 35 or $promiscuityIgnore) and $chestuse is 0>>
-						<<set _rightaction["Move towards your chest"] to "handpenistochest">>
+						<<set _rightaction["자지를 당신의 가슴으로 가져간다"] to "handpenistochest">>
 					<</if>>
 				<</if>>
 				<<set _rightaction["그만둔다"] to "rightstoppenis">>
@@ -965,7 +965,7 @@
 						<span @class="($lastOptions.feet isnot _feetOptions ?'gold':'')">다리가 얽힌 채 억지로 벌어져 있어, <<genitals>>【을를】 보호하기가 더 어렵다.</span>
 					<<elseif $leftleg is "bound" and $rightleg is "bound">>
 						<<set _feetOptions to "bound">>
-						<span @class="($lastOptions.feet isnot _feetOptions ?'gold':'')">Your legs are bound and forced apart, leaving you less able to protect your <<genitals>>.</span><<combatExtendedStability -15>>
+						<span @class="($lastOptions.feet isnot _feetOptions ?'gold':'')">다리가 묶인 채 억지로 벌어져 있어, <<genitals>>【을를】 보호하기가 더 어렵다.</span><<combatExtendedStability -15>>
 					<<else>>
 						<<set _feetOptions to "free">>
 						<span @class="($lastOptions.feet isnot _feetOptions or _feetGold is true ?'gold':'')">발은 자유롭다.</span>
@@ -990,7 +990,7 @@
 					<span class="lewd">다리가 구속구에 대항하여 몸부림친다.</span>
 				<<else>>
 					<<set _feetOptions to "bound">>
-					<span @class="($lastOptions.feet isnot _feetOptions or _feetGold is true ?'gold':'')">Your legs are bound.</span><<combatExtendedStability -15>>
+					<span @class="($lastOptions.feet isnot _feetOptions or _feetGold is true ?'gold':'')">다리가 묶여 있다.</span><<combatExtendedStability -15>>
 				<</if>>
 			<<case "walk">>
 				<<set _feetOptions to "walk">>
@@ -1083,8 +1083,8 @@
 				<<feetsocks>>
 				<<legLock>>
 				<<if $orgasmCum gte 1>>
-					<<set _feetaction["Hold still"] to "feetHold">>
-					<<set _feetaction["Curl toes"] to "feetCurl">>
+					<<set _feetaction["가만히 있는다"] to "feetHold">>
+					<<set _feetaction["발가락을 오므린다"] to "feetCurl">>
 				<</if>>
 			<<case "leftfree" "rightfree">>
 				<<feetgrabnew>>
@@ -1346,7 +1346,7 @@
 				<<if $head isnot "grappled" and $head isnot "bound">>
 					<<if !$worn.face.type.includes("face_covering") and !$worn.face.type.includes("gag")>>
 						<<if $chestuse is "penis">>
-							<<set _mouthaction["Kiss tip"] to "peniskiss">>
+							<<set _mouthaction["끝에 입맞춘다"] to "peniskiss">>
 						<<else>>
 							<<set _mouthaction["피부에 입맞춘다"] to "kissskin">>
 						<</if>>

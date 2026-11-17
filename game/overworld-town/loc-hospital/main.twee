@@ -171,7 +171,7 @@
 			<</if>>
 		<</for>>
 		<<if ($hypnosis_traits.scream isnot undefined and $hypnosis_traits.scream gte 1) or ($hypnosis_traits.cover isnot undefined and $hypnosis_traits.cover gte 1) or ($hypnosis_traits.deviancy isnot undefined and $hypnosis_traits.deviancy gte 1)>>
-			<<socialiseicon "ask">><<link [[Inquire about reverse hypnosis (0:10)|Hospital Reverse Hypnosis]]>><<pass 10>><</link>>
+			<<socialiseicon "ask">><<link [[역최면에 대해 문의한다 (0:10)|Hospital Reverse Hypnosis]]>><<pass 10>><</link>>
 		<</if>>
 		<br>
 
@@ -927,7 +927,7 @@
 		<br>
 	<</if>>
 	<<if modLISelected("Poppy") and C.npc.Poppy.pregnancy.sample is true>>
-		<<link [[Test for Poppy (1:00)|Hospital Paternity Test 2]]>><<money -500000 "hospitalPaternityTest">><<set $paternityTestNPC to "Poppy">><</link>>
+		<<link [[포피에 대해 검사한다 (1:00)|Hospital Paternity Test 2]]>><<money -500000 "hospitalPaternityTest">><<set $paternityTestNPC to "Poppy">><</link>>
 		<br>
 	<</if>>
 
@@ -948,7 +948,7 @@
 <<underlowerstrip>>
 <<underupperstrip>>
 
-Harper accepts the payment and <<print $paternityTestNPC>>'s strand of hair. "Please undress," <<he>> says as <<he>> stands to leave the room.
+하퍼는 돈과 <<print window.KR.gatPersonNameDictKR($paternityTestNPC)>>의 머리카락 한 가닥을 받는다. "옷을 벗어 주세요." <<he>>【이가】 방을 나가려고 일어서며 말한다.
 <br>
 
 당신은 옷을 벗고 기다린다. 약간 노출된 기분이다.
@@ -998,10 +998,10 @@ Harper accepts the payment and <<print $paternityTestNPC>>'s strand of hair. "Pl
 	<<if _father is "Poppy">>
 		<<set _pregnancy.potentialFathers to [{type: _pregnancy.type, source: _pregnancy.fetus[0].father}]>>
 		<<set C.npc.Poppy.pregnancy.test to true>>
-		<span class="lewd">and Poppy is the father.</span>
+		<span class="lewd">포피가 아버지다.</span>
 	<<else>>
 		<<set _pregnancy.potentialFathers to _pregnancy.potentialFathers.filter(father => father.source isnot $paternityTestNPC)>>
-		<span class="red">but Poppy is not the father</span>.
+		<span class="red">하지만 포피는 아버지가 아니다</span>.
 	<</if>>
 <</if>>
 
@@ -1869,7 +1869,7 @@ Harper accepts the payment and <<print $paternityTestNPC>>'s strand of hair. "Pl
 
 :: Hospital Reverse Hypnosis
 <<set $outside to 0>><<set $location to "hospital">><<effects>><<npc Harper>><<person1>>
-"So, I hear you have a hypnosis problem." <<he>> says, both hands clasped over <<his>> mouth as <<he>> stares at you. "I may be able to help you, but of course, the deeper the issue, the higher the cost."
+"그러니까, 최면 문제가 있다고 들었어요." <<he>>【이가】 두 손을 <<his>> 입가에 모은 채 당신을 응시하며 말한다. "도와드릴 수 있을지도 모르지만, 물론 문제가 깊을수록 비용도 높아져요."
 <br><br>
 
 <<reverseHypnosisPrice>>
@@ -1877,75 +1877,75 @@ Harper accepts the payment and <<print $paternityTestNPC>>'s strand of hair. "Pl
 <<if $hypnosis_traits.scream isnot undefined and $hypnosis_traits.scream gte 1>>
 	<<if $money gte _price12>>
 		<<capture _price1 _price12>>
-		<<link [["Reverse Hypnotic Yearning (£" + _price1 + ")"|Hospital Reverse Hypnosis 2]]>>
+		<<link [["역최면: 암시 (£" + _price1 + ")"|Hospital Reverse Hypnosis 2]]>>
 			<<money `-_price12` "hyposisTherapy">><<set $phase to 1>>
 		<</link>>
 		<</capture>>
 		<br>
 	<<else>>
-		You don't have the <<printmoney _price12>> for the reverse hypnosis therapy.
+		역최면 치료에 필요한 <<printmoney _price12>>【이가】 없다.
 		<br>
 	<</if>>
 <</if>>
 <<if $hypnosis_traits.cover isnot undefined and $hypnosis_traits.cover gte 1>>
 	<<if $money gte _price22>>
 		<<capture _price2 _price22>>
-		<<link [["Reverse Hypnotic Flaunting (£" + _price2 + ")"|Hospital Reverse Hypnosis 2]]>>
+		<<link [["역최면: 과시 (£" + _price2 + ")"|Hospital Reverse Hypnosis 2]]>>
 			<<money `-_price22` "hyposisTherapy">><<set $phase to 2>>
 		<</link>>
 		<</capture>>
 		<br>
 	<<else>>
-		You don't have the <<printmoney _price22>> for the reverse hypnosis therapy.
+		역최면 치료에 필요한 <<printmoney _price22>>【이가】 없다.
 		<br>
 	<</if>>
 <</if>>
 <<if $hypnosis_traits.deviancy isnot undefined and $hypnosis_traits.deviancy gte 1>>
 	<<if $money gte _price32>>
 		<<capture _price3 _price32>>
-		<<link [["Reverse Hypnotic Deviancy (£" + _price3 + ")"|Hospital Reverse Hypnosis 2]]>>
+		<<link [["역최면: 일탈 (£" + _price3 + ")"|Hospital Reverse Hypnosis 2]]>>
 			<<money `-_price32` "hyposisTherapy">><<set $phase to 3>>
 		<</link>>
 		<</capture>>
 		<br>
 	<<else>>
-		You don't have the <<printmoney _price32>> for the reverse hypnosis therapy.
+		역최면 치료에 필요한 <<printmoney _price32>>【이가】 없다.
 		<br>
 	<</if>>
 <</if>>
-<<link [[Nevermind|Hospital Foyer]]>><<endevent>><</link>>
+<<link [[그만둔다|Hospital Foyer]]>><<endevent>><</link>>
 
 :: Hospital Reverse Hypnosis 2
 <<set $outside to 0>><<set $location to "hospital">><<effects>>
 "자, 앉아서 편히 계세요." 당신은 그렇게 하고, <<he>>【은는】 당신을 향해 의자를 돌린다. <<His>> 목소리는 부드러운 음색을 띤다. "숨을 깊게 들이쉬세요." <<He>>【은는】 <<his>> 펜을 들어 올린다. "펜에 집중하세요. 이 우주에는 이 펜과 제 목소리, 그리고 당신의 숨소리 외에는 아무것도 없습니다."
 <br><br>
 
-This continues for several minutes. Harper somehow picks up on whenever your minds starts to wander, and brings you back to focus. You start to feel something shift in your consciousness, as if you're entering a trance.
+이런 상태가 몇 분간 이어진다. 하퍼는 당신의 생각이 흐트러질 때마다 용케 알아채고 다시 집중하게 이끈다. 당신은 의식 속에서 무언가가 바뀌기 시작하는 것을 느낀다. 마치 몽롱한 최면 상태에 들어서는 것 같다.
 <br><br>
 
 <<if $hypnosis is 0>><<set $hypnosis to 1>><<hypnotised 1>>
-	You slip deeper into the trance. <span class="green">You don't remember ever feeling so tranquil.</span> You hear Harper's voice drifting toward you. "That's very good. Now, the next time you feel overwhelmed by it all, I want you to remember this feeling, and..." <<He>> gives you instructions. "...you won't remember this."
+	당신은 더 깊은 최면 상태로 빠져든다. <span class="green">이렇게 평온한 기분은 처음이다.</span> 하퍼의 목소리가 당신 쪽으로 흘러온다. "아주 좋아요. 이제 다음에 이 모든 것에 압도되는 느낌이 들면, 이 느낌을 기억하세요. 그리고..." <<He>>【은는】 당신에게 지시를 내린다. "...당신은 이 일을 기억하지 못할 겁니다."
 <<elseif $hypnosis gte 1>>
-	You slip deeper into the trance. <span class="green">You return to the familiar state of tranquillity.</span> You hear Harper's voice drifting toward you. "That's very good."
+	당신은 더 깊은 최면 상태로 빠져든다. <span class="green">익숙한 평온한 상태로 돌아온다.</span> 하퍼의 목소리가 당신 쪽으로 흘러온다. "아주 좋아요."
 <</if>>
 <br><br>
 
 <<if $phase is 1>>
 	<<set $hypnosis_traits.scream to 0>>
-	"When I drop this pen, you will <span class="green">stop begging for rougher treatment instead of screaming...</span> and awaken."
+	"이 펜을 떨어뜨리면, 당신은 <span class="green">비명을 지르는 대신 더 거친 대우를 애원하던 것을 멈추고...</span> 깨어납니다."
 <<elseif $phase is 2>>
 	<<set $hypnosis_traits.cover to 0>>
-	"When I drop this pen, you will <span class="green">stop flaunting your body parts instead of covering them...</span> and awaken."
+	"이 펜을 떨어뜨리면, 당신은 <span class="green">몸을 가리는 대신 드러내 보이던 것을 멈추고...</span> 깨어납니다."
 <<elseif $phase is 3>>
 	<<set $hypnosis_traits.deviancy to 0>>
-	"When I drop this pen, you will <span class="green">stop provoking beasts...</span> and awaken."
+	"이 펜을 떨어뜨리면, 당신은 <span class="green">짐승을 도발하던 것을 멈추고...</span> 깨어납니다."
 <</if>>
 <br><br>
 
-The pen clatters to the floor. You blink. You're back in reality, but feeling better and much more in control than you were before you entered the office. You recall Harper talking to you while you were entranced, but can't recall what was said.
+펜이 바닥에 떨어져 달그락거린다. 당신은 눈을 깜박인다. 현실로 돌아왔다. 진료실에 들어오기 전보다 기분이 나아졌고 마음도 훨씬 안정되었다. 최면에 빠져 있는 동안 하퍼가 말을 걸었던 것은 기억나지만, 무슨 말이었는지는 떠오르지 않는다.
 <br><br>
 
-<<He>> smiles at you. "That was a success. Well done." <<He>> holds open the door for you. "Be well."
+<<He>>【은는】 당신에게 미소를 짓는다. "성공적이었어요. 잘하셨어요." <<He>>【은는】 당신을 위해 문을 열어 준다. "몸조리 잘하세요."
 <br><br>
 
 <<link [[다음|Hospital Foyer]]>><<endevent>><</link>>

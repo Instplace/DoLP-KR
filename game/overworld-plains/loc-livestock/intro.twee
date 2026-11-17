@@ -1350,7 +1350,7 @@
 레미가 우리 중 하나로 다가가 창살 사이로 <<nnpc_his "Remy">> 손을 넣어 <<beasttypes>> 머리를 쓰다듬는다. "우리가 널 돌봐주고, 안전하게 지켜주는데," 레미가 말한다. "그런데도 넌 우리에게 반항하는구나." 레미가 말하는 동안 등 뒤에서 쇠사슬이 짤랑이는 소리가 들린다. "반항은 용납되지 않아."
 <br><br>
 
-<<print ["collar with leash", "free use collar with leash", "leather collar with leash", "spiked collar with leash", "Whitney's collar with leash"].includes($worn.neck.name) ? "Remy grabs the thick iron collar around your neck" : "A thick iron collar clamps around your neck from behind">>, connecting the short length of chain with a mounting in the ground you hadn't noticed and rendering you immobile.
+<<print ["collar with leash", "free use collar with leash", "leather collar with leash", "spiked collar with leash", "Whitney's collar with leash"].includes($worn.neck.name) ? "레미가 당신 목에 걸린 두꺼운 쇠목걸이를 붙잡자" : "등 뒤에서 두꺼운 쇠목걸이가 목에 채워지자">>, 짧은 사슬이 당신이 미처 보지 못했던 바닥의 고정 장치에 연결되어 몸을 움직일 수 없게 된다.
 <br><br>
 
 레미가 우리 빗장을 풀고 문을 활짝 열자 농장 인부들이 서로 속삭인다. 저택의 경비 <<beastsplural>> 무리가 개집에서 나온다. <<if $monster is 1>>맨발이 바닥을 두드리는 소리<<else>>발톱이 바닥을 긁는 소리<</if>>【이가】 들린다.

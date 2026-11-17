@@ -1398,7 +1398,7 @@ Zohar
 		<<set $NPCName[_i].trust += _val>>
 	<<case lust>>
 		<<set _lustwhitelist to ["Robin", "Whitney", "Eden", "Kylar", "Avery", 
-								 "Alex", "Sydney", "Gwylan", "Poppy", "Bailey", 
+								 "Alex", "Sydney", "Gwylan", "Poppy", "Bailey",
 								 "Leighton", "Quinn", "Ivory Wraith", "Mason"]>>
 		<<if !_lustwhitelist.includes(_nam)>>
 			<<error { message: "<<npcincr>>【이가】 화이트리스트에 없는 NPC의 욕망을 수정하려고 시도했다 " + _nam + ". 화이트리스트에 추가하기 전에 <<relationshipClamp>>에서 욕망 제한을 설정했는지 확인하세요." }>>
@@ -1439,7 +1439,7 @@ Zohar
 			<</if>>
 			<<set $NPCName[_i].anger to Math.max(0, 0 - (Number($NPCName[_i].patience) || 0))>>
 		<<else>>
-			<span class="red">NPCINCR error - patience is Poppy-only</span><br><br>
+			<span class="red">NPCINCR 오류 - 인내심은 포피 전용입니다</span><br><br>
 		<</if>>
 
 	<<case anger>>
@@ -1447,7 +1447,7 @@ Zohar
 			/* Anger is the negative side of patience */
 			<<npcincr Poppy patience (-_val)>>
 		<<else>>
-			<span class="red">NPCINCR error - anger is Poppy-only</span><br><br>
+			<span class="red">NPCINCR 오류 - 분노는 포피 전용입니다</span><br><br>
 		<</if>>
 	<<case rage>>
 		<<if !["Avery", "Kylar"].includes(_nam)>>
@@ -1795,9 +1795,9 @@ Zohar
 			<<elseif $NPCName[_i].love gte 60>>
 				<<if $NPCName[_i].purity gte 50>>
 					<<if $purity lte 500 or (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-						wants to <span class="blue">save you.</span>
+						당신을 <span class="blue">구해주고 싶어 한다.</span>
 					<<elseif $temple_rank is "monk" or $temple_rank is "priest" or (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel")>>
-						considers you <span class="green">an inspiration.</span>
+						당신을 <span class="green">영감을 주는 존재</span>로 여긴다.
 					<<elseif $temple_rank is "initiate">>
 						당신을 <span class="green">신동</span>으로 여긴다.
 					<<else>>
@@ -1827,7 +1827,7 @@ Zohar
 			<<elseif $NPCName[_i].love gte 10>>
 				<<if $sydneySeen?.includes("initiate")>>
 					<<if $purity lte 500 or (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-						thinks <span class="pink">you're lost.</span>
+						당신이 <span class="pink">길을 잃었다고</span> 생각한다.
 					<<else>>
 						당신을 <span class="lblue">자랑스럽게 여긴다</span>.
 					<</if>>
@@ -1837,7 +1837,7 @@ Zohar
 			<<else>>
 				<<if $sydneySeen?.includes("initiate")>>
 					<<if $purity lte 500 or (($demon gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "demon")>>
-						thinks you're <span class="red">heretical.</span>
+						당신을 <span class="red">이단</span>이라고 생각한다.
 					<<elseif $sydney.rank is "initiate" and $temple_rank is "initiate">>
 						다른 <span class="blue">입문자를 알게 되어 기뻐한다</span>.
 					<<else>>
@@ -2034,56 +2034,56 @@ Zohar
 			<<set _pat to (typeof T.poppyPatience === "number" ? T.poppyPatience : 100)>>
 			<<set _anger to 100 - _pat>>
 
-			Poppy
+			포피는
 			<<if $NPCName[_i].state is "dismissed">>
-				wants <span class="red">nothing to do with you</span>.
+				당신과 <span class="red">엮이고 싶어 하지 않는다</span>.
 			<<else>>
 				<!-- High love lust lines (only when patience isn't low) -->
 				<<if _love gte 67 and T.poppyLustUnlocked and _pat gte 34 and _lust gte 67>>
-					is <span class="pink">ready to pounce on you</span>.
+					당신에게 <span class="pink">당장이라도 덤벼들 준비가 되어 있다</span>.
 				<<elseif _love gte 67 and T.poppyLustUnlocked and _pat gte 34 and _lust gte 34>>
-					<span class="purple">yearns for you</span>.
+					당신을 <span class="purple">갈망한다</span>.
 				<<elseif _love gte 67>>
 					<<if _pat gte 67>>
-						<span class="green">adores you</span>.
+						당신을 <span class="green">몹시 아낀다</span>.
 					<<elseif _pat gte 34>>
-						<span class="teal">cares about you</span>.
+						당신을 <span class="teal">신경 쓴다</span>.
 					<<elseif _pat gte 20>>
-						<span class="blue">fusses over you</span>.
+						당신을 <span class="blue">이것저것 챙기며 야단법석을 떤다</span>.
 					<<elseif _pat gte 10>>
-						<span class="purple">can't understand you</span>.
+						당신을 <span class="purple">이해하지 못한다</span>.
 					<<elseif _pat gte 1>>
-						thinks you're <span class="pink">hopeless</span>.
+						당신을 <span class="pink">구제불능</span>이라고 생각한다.
 					<<else>>
-						wants to <span class="red">get rid of you</span>.
+						당신을 <span class="red">치워버리고 싶어 한다</span>.
 					<</if>>
 				<<elseif _love gte 34>>
 					<<if _pat gte 67>>
-						thinks you're <span class="green">cute</span>.
+						당신을 <span class="green">귀엽다</span>고 생각한다.
 					<<elseif _pat gte 34>>
-						is <span class="teal">worried about you</span>.
+						당신을 <span class="teal">걱정한다</span>.
 					<<elseif _pat gte 20>>
-						is <span class="blue">impatient with you</span>.
+						당신에게 <span class="blue">슬슬 참을성이 바닥나고 있다</span>.
 					<<elseif _pat gte 10>>
-						thinks you're <span class="purple">irritating</span>.
+						당신을 <span class="purple">짜증 나는 사람</span>이라고 생각한다.
 					<<elseif _pat gte 1>>
-						thinks you're <span class="pink">getting on her nerves</span>.
+						당신 때문에 <span class="pink">신경이 거슬린다</span>고 생각한다.
 					<<else>>
-						wants to <span class="red">get rid of you</span>.
+						당신을 <span class="red">치워버리고 싶어 한다</span>.
 					<</if>>
 				<<else>>
 					<<if _pat gte 67>>
-						is <span class="teal">curious about you</span>.
+						당신에게 <span class="teal">호기심을 느낀다</span>.
 					<<elseif _pat gte 34>>
-						<span class="lblue">tolerates you</span>.
+						당신을 <span class="lblue">참아준다</span>.
 					<<elseif _pat gte 20>>
-						is <span class="blue">impatient with you</span>.
+						당신에게 <span class="blue">슬슬 참을성이 바닥나고 있다</span>.
 					<<elseif _pat gte 10>>
-						thinks you're <span class="purple">irritating</span>.
+						당신을 <span class="purple">짜증 나는 사람</span>이라고 생각한다.
 					<<elseif _pat gte 1>>
-						thinks you're <span class="pink">getting on her nerves</span>.
+						당신 때문에 <span class="pink">신경이 거슬린다</span>고 생각한다.
 					<<else>>
-						wants to <span class="red">get rid of you</span>.
+						당신을 <span class="red">치워버리고 싶어 한다</span>.
 					<</if>>
 				<</if>>
 			<</if>>

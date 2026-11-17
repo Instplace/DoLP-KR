@@ -32,15 +32,15 @@
 	<<else>>
 		<<if hasSexStat("promiscuity", 4)>>
 				<<if $gloryholeRounds gte 10>>
-					The other employees hover near the public doors protectively. <span class="blue">Maybe you can try again tomorrow.</span><br>
+					다른 직원들이 공용 문 근처를 지키듯 서성인다. <span class="blue">내일 다시 시도해 볼 수 있을지도 모른다.</span><br>
 				<<else>>
 				<<brothelicon "gloryhole">><<link [[방을 차지한다 (0:10)|Brothel Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
 				<br>
 				<</if>>
 				<<if $brothelExclusiveGloryholeIntro is 1>>
-					<<ind>><<link [[Set your price|Brothel Exclusive Price]]>><</link>>
+					<<ind>><<link [[가격을 정한다|Brothel Exclusive Price]]>><</link>>
 					<br>
-					<<brothelicon "gloryhole">><<link [[Occupy your exclusive room (0:10)|Brothel Exclusive Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
+					<<brothelicon "gloryhole">><<link [[전용 방을 차지한다 (0:10)|Brothel Exclusive Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
 					<br>
 				<</if>>
 			<<else>>
@@ -108,38 +108,38 @@
 <<if $stress gte $stressmax>>
 	<<passoutshop>>
 <<elseif $gloryholeRounds gte 10>>
-	You wait for several minutes, and before the light can change color you hear a knock at the door.
+	몇 분을 기다리는데, 불이 색을 바꾸기도 전에 문 두드리는 소리가 들린다.
 	<br><br>
-	<span class="red">"Times up.</span> We've got another employee who's reserved this room now. Collect your things and go."
+	<span class="red">"시간 다 됐어.</span> 이 방은 이제 다른 직원이 예약했거든. 짐 챙겨서 나가."
 	<br><br>
 <<else>>
 	<<if !$gloryholestrip>>
 		<<generate1>><<person1>>
-		You wait for several minutes, and the light turns red. A
+		몇 분을 기다리자, 불이 빨간색으로 바뀐다.
 		<<if $NPCList[0].penis isnot "none">>
 			<<if $settings.analEnabled and !$NPCList[0].chastity.anus and $rng >= 451>>
-				lube-slicked bottom appears at the hole.
+				윤활제로 번들거리는 엉덩이가 구멍에 나타난다.
 				<<set $gloryHoleEvent.target to "anal">>
 			<<elseif $rng <= 49>>
-				<<print either("nervous", "panting", "hungry")>> mouth appears at the hole.
+				<<print either("잔뜩 긴장한", "헐떡이는", "굶주린")>> 입이 구멍에 나타난다.
 				<<set $gloryHoleEvent.target to "oral">>
 			<<else>>
-				hard $NPCList[0].penisdesc pokes through the hole.
+				단단하게 선 <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 구멍을 통해 삐져나온다.
 				<<set $gloryHoleEvent.target to "penile">>
 			<</if>>
 		<<else>>
 			<<if $settings.analEnabled and !$NPCList[0].chastity.anus and $rng >= 451>>
-				lube-slicked bottom appears at the hole.
+				윤활제로 번들거리는 엉덩이가 구멍에 나타난다.
 				<<set $gloryHoleEvent.target to "anal">>
 			<<elseif $rng <= 49>>
-				<<print either("nervous", "panting", "hungry")>> mouth appears at the hole.
+				<<print either("잔뜩 긴장한", "헐떡이는", "굶주린")>> 입이 구멍에 나타난다.
 				<<set $gloryHoleEvent.target to "oral">>
 			<<else>>
 				<<set $gloryHoleEvent.target to "vaginal">>
 				<<if !$NPCList[0].chastity.vagina>>
 					보지가 구멍에 나타난다.
 				<<else>>
-					belted pussy appears at the hole.
+					정조대를 찬 보지가 구멍에 나타난다.
 				<</if>>
 			<</if>>
 		<</if>>
@@ -147,43 +147,43 @@
 	<<else>>
 		<<switch $gloryHoleEvent.target>>
 			<<case "penile">>
-				The $NPCList[0].penisdesc poking through the hole twitches impatiently.
+				구멍을 통해 삐져나온 <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 초조하게 꿈틀거린다.
 			<<case "anal">>
-				The <<persons>> glistening bottom wiggles impatiently on the other side of the hole.
+				<<persons>> 윤기 나는 엉덩이가 구멍 반대편에서 초조하게 씰룩거린다.
 			<<case "oral">>
-				The <<person>> licks <<his>> lips impatiently on the other side of the hole.
+				<<person>>【이가】 구멍 반대편에서 초조하게 입술을 핥는다.
 			<<case "vaginal">>
-				The pussy on the other side of the hole drips with an air of impatience.
+				구멍 반대편의 보지가 초조한 기색으로 애액을 뚝뚝 흘린다.
 		<</switch>>
 		<br><br>
 		<<switch $gloryholestrip>>
 			<<case "mask">>
-				You pull down your $worn.face.name, <span class="lewd">freeing your mouth.</span>
+				당신은 $worn.face.name【을를】 끌어내려 <span class="lewd">입을 드러낸다.</span>
 				<<set $mouthuse to 0>><<facestrip>><br>
 			<<case "lower">>
 				<<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 1>>
 					<<set $worn.lower.skirt_down to 0>><<set $worn.lower.exposed to 1>>
-					You lift up your $worn.lower.name,
+					당신은 $worn.lower.name【을를】 들어 올리고,
 					<<if !$worn.under_lower.name.includes("naked")>>
 						<<set $worn.under_lower.state to "totheside">>
 						<<set $worn.under_lower.anus_exposed to 1>>
 						<<set $worn.under_lower.vagina_exposed to 1>>
-						<<set $worn.under_lower.exposed to 2>> tugging your $worn.under_lower.name aside and <span class="lewd">exposing your
-						<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span>
+						<<set $worn.under_lower.exposed to 2>> $worn.under_lower.name【을를】 옆으로 젖혀 <span class="lewd">당신의
+						<<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span>
 						<br>
-					<<else>> <span class="lewd">exposing your<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span><br>
+					<<else>> <span class="lewd">당신의 <<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span><br>
 					<</if>>
 				<<else>>
 					<<set $worn.lower.state to "thighs">><<set $worn.lower.exposed to 1>>
-					You pull down your $worn.lower.name,
+					당신은 $worn.lower.name【을를】 끌어내리고,
 					<<if !$worn.under_lower.name.includes("naked")>>
 						<<set $worn.under_lower.state to "totheside">>
 						<<set $worn.under_lower.anus_exposed to 1>>
 						<<set $worn.under_lower.vagina_exposed to 1>>
-						<<set $worn.under_lower.exposed to 2>> tugging your $worn.under_lower.name aside and <span class="lewd">exposing your
-						<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span>
+						<<set $worn.under_lower.exposed to 2>> $worn.under_lower.name【을를】 옆으로 젖혀 <span class="lewd">당신의
+						<<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span>
 						<br>
-					<<else>> <span class="lewd">exposing your<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span><br>
+					<<else>> <span class="lewd">당신의 <<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span><br>
 					<</if>>
 				<</if>>
 			<<case "upper">>
@@ -202,10 +202,10 @@
 	
 	<<if hasSexStat("promiscuity", 2)>>
 		<<if pcAreArmsBound("both")>>
-			<span class="blue"><<ind>>You can't use your hands with your arms bound.</span>
+			<span class="blue"><<ind>>두 팔이 묶여 있어 손을 쓸 수 없다.</span>
 			<br>
 		<<elseif $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
-			<<ind>><<link [["Service with your hand (" + getTimeString(_service.hands.time) + ")"|$passage]]>>
+			<<ind>><<link [["손으로 봉사한다 (" + getTimeString(_service.hands.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "hand" "normal">><<set $gloryHoleEvent.prom to 2>><</link>><<ghandskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
@@ -216,7 +216,7 @@
 			/* <<ind>><span class="blue">You can't use your mouth with your face covered.</span> */
 			<<set _facecovered to true>>
 		<<else>>
-			<<ind>><<link [["Service with your mouth (" + getTimeString(_service.mouth.time) + ")"|$passage]]>>
+			<<ind>><<link [["입으로 봉사한다 (" + getTimeString(_service.mouth.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "mouth" "normal">><<set $gloryHoleEvent.prom to 4>><</link>><<goralskill>><<gtiredness>><<garousal>>
 			<<if $gloryHoleEvent.target is "penile">><<oralvirginitywarning>>
 			<<elseif $gloryHoleEvent.target is "oral">><<kissvirginitywarning>>
@@ -226,25 +226,25 @@
 	<</if>>
 
 	<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 3)>>
-	<<ind>><<link [["Service with your chest (" + getTimeString(_service.chest.time) + ")"|$passage]]>>
+	<<ind>><<link [["가슴으로 봉사한다 (" + getTimeString(_service.chest.time) + ")"|$passage]]>>
 	<<gloryHoleServiceEffects "chest" "normal">><<set $gloryHoleEvent.prom to 3>><</link>><<gchestskill>><<gtiredness>><<garousal>>
 	<br>
 	<</if>>
 
 	<<if hasSexStat("promiscuity", 2) and $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
-		<<ind>><<link [["Service with your feet (" + getTimeString(_service.feet.time) + ")"|$passage]]>>
+		<<ind>><<link [["발로 봉사한다 (" + getTimeString(_service.feet.time) + ")"|$passage]]>>
 		<<gloryHoleServiceEffects "feet" "normal">><<set $gloryHoleEvent.prom to 2>><</link>><<gfeetskill>><<gtiredness>><<garousal>>
 		<br>
 	<</if>>
 
 	<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 2)>>
-		<<ind>><<link [["Service with your thighs (" + getTimeString(_service.thigh.time) + ")"|$passage]]>>			
+		<<ind>><<link [["허벅지로 봉사한다 (" + getTimeString(_service.thigh.time) + ")"|$passage]]>>
 		<<gloryHoleServiceEffects "thigh" "normal">><<set $gloryHoleEvent.prom to 2>><</link>><<gthighskill>><<gtiredness>><<garousal>>
 		<br>
 	<</if>>
 
 	<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 2)>>
-		<<ind>><<link [["Service with your cheeks (" + getTimeString(_service.bottom.time) + ")"|$passage]]>>
+		<<ind>><<link [["엉덩이로 봉사한다 (" + getTimeString(_service.bottom.time) + ")"|$passage]]>>
 		<<gloryHoleServiceEffects "butt" "normal">><<set $gloryHoleEvent.prom to 2>><</link>><<gbottomskill>><<gtiredness>><<garousal>>
 		<br>
 	<</if>>
@@ -253,7 +253,7 @@
 		<<if $worn.under_lower.exposed < 1 || $worn.lower.exposed < 1>>
 			<<set _genitalscovered to true>>
 		<<else>>
-			<<ind>><<link [["Service with your penis (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
+			<<ind>><<link [["자지로 봉사한다 (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "penis" "normal">><<set $gloryHoleEvent.prom to 5>><</link>><<gpenileskill>><<gtiredness>><<garousal>>
 			<<if $gloryHoleEvent.target isnot "penile">><<penilevirginitywarning>><</if>>
 			<br>
@@ -264,7 +264,7 @@
 		<<if $worn.under_lower.exposed < 1 || $worn.lower.exposed < 1>>
 			<<set _genitalscovered to true>>
 		<<else>>
-			<<ind>><<link [["Service with your strap-on (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
+			<<ind>><<link [["스트랩온으로 봉사한다 (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "strap" "normal">><<set $gloryHoleEvent.prom to 4>><</link>><<gpenileskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
@@ -274,7 +274,7 @@
 		<<if $worn.under_lower.exposed < 1 || $worn.lower.exposed < 1>>
 			<<set _genitalscovered to true>>
 		<<else>>
-			<<ind>><<link [["Service with your vagina (" + getTimeString(_service.vagina.time) + ")"|$passage]]>>
+			<<ind>><<link [["보지로 봉사한다 (" + getTimeString(_service.vagina.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "vagina" "normal">><<set $gloryHoleEvent.prom to 5>><</link>><<gvaginalskill>><<gtiredness>><<garousal>>
 			<<if $gloryHoleEvent.target is "penile">><<vaginalvirginitywarning>><</if>>
 			<br>
@@ -286,20 +286,20 @@
 			/* <<ind>><span class="blue">You can't use your anus with it covered. </span> */
 			<<set _asscovered to true>>
 		<<else>>
-			<<ind>><<link [["Service with your anus (" + getTimeString(_service.anus.time) + ")"|$passage]]>>
+			<<ind>><<link [["항문으로 봉사한다 (" + getTimeString(_service.anus.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "anus" "normal">><<set $gloryHoleEvent.prom to 5>><</link>><<ganalskill>><<gtiredness>><<garousal>><<analvirginitywarning>>
 			<br>
 		<</if>>
 	<</if>>
 	<br>
 	<<if _facecovered>>
-		<<ind>><<link [["Displace your "+$worn.face.name|$passage]]>><<set $gloryholestrip to "mask">><</link>><br>
+		<<ind>><<link [["당신의 "+$worn.face.name+"【을를】 치운다"|$passage]]>><<set $gloryholestrip to "mask">><</link>><br>
 	<</if>>
 	<<if _genitalscovered>>
-		<<ind>><<link [[Expose your <<genitals>>|$passage]]>><<set $gloryholestrip to "lower">><</link>><br>
+		<<ind>><<link [[<<genitals>>【을를】 드러낸다|$passage]]>><<set $gloryholestrip to "lower">><</link>><br>
 	<</if>>
 	<<if _asscovered>>
-		<<ind>><<link [[Expose your ass|$passage]]>><<set $gloryholestrip to "lower">><<set $exposepart to "ass">><</link>><br>
+		<<ind>><<link [[엉덩이를 드러낸다|$passage]]>><<set $gloryholestrip to "lower">><<set $exposepart to "ass">><</link>><br>
 	<</if>>
 	<br>
 	<<if $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">><<set $gloryHoleEvent.passage to $passage>>
@@ -310,7 +310,7 @@
 	<</if>>
 <</if>>
 	<br>
-	<<getouticon>><<link [[Leave|Brothel Basement]]>><<endcombat>><<set $punishmentposition to 0>><<unset $desperateaction>><<unset $gloryHoleEvent>><</link>>
+	<<getouticon>><<link [[나간다|Brothel Basement]]>><<endcombat>><<set $punishmentposition to 0>><<unset $desperateaction>><<unset $gloryHoleEvent>><</link>>
 	<br>
 :: Brothel Basement Sex
 <<if $sexstart is 1>>
@@ -372,9 +372,9 @@
 
 <</if>>
 
-<<link [[Wait for another customer (0:10)|$gloryHoleEvent.passage]]>><<pass 10>><</link>>
+<<link [[다른 손님을 기다린다 (0:10)|$gloryHoleEvent.passage]]>><<pass 10>><</link>>
 <br>
-<<link [[Leave|Brothel Basement]]>><<set $punishmentposition to 0>><</link>>
+<<link [[나간다|Brothel Basement]]>><<set $punishmentposition to 0>><</link>>
 <br>
 
 :: Brothel Exclusive Gloryhole
@@ -416,7 +416,7 @@
 	<<set $gloryholestat += 1>><<set $prostitutionstat += 1>>
 	<<set _moneyGain to $brothelExclusiveGloryholePrice * 100>>
 	<<promiscuityN $gloryHoleEvent.prom>>
-	<<tearful>> you count the money <<he>> pushes through the hole. You've gained <<printmoney _moneyGain>>.
+	<<tearful>> 당신은 <<he>>【이가】 구멍으로 밀어 넣은 돈을 센다. <<printmoney _moneyGain>>【을를】 얻었다.
 	<<clearnpc>><<set $gloryHoleEvent to {}>>
 	<<set $money += _moneyGain>>
 	<br><br>
@@ -435,39 +435,39 @@
 		<<else>>
 			<<set $gloryHoleEvent.customer to false>>
 			<<clearnpc>>
-			You wait for several minutes, but the light stays green.
-			<span class="red"> Nobody came.</span>
+			몇 분을 기다리지만 불은 계속 초록색이다.
+			<span class="red"> 아무도 오지 않았다.</span>
 			<br><br>
 		<</if>>
 	<</if>>
 	<<if !$gloryholestrip>>
 		<<if $gloryHoleEvent.customer is true>>
 			<<generate1>><<person1>>
-			You wait for several minutes, and the light turns red. A
+			몇 분을 기다리자, 불이 빨간색으로 바뀐다.
 			<<if $NPCList[0].penis isnot "none">>
 				<<if $settings.analEnabled and !$NPCList[0].chastity.anus and $rng >= 451>>
-					lube-slicked bottom appears at the hole.
+					윤활제로 번들거리는 엉덩이가 구멍에 나타난다.
 					<<set $gloryHoleEvent.target to "anal">>
 				<<elseif $rng <= 49>>
-					<<print either("nervous", "panting", "hungry")>> mouth appears at the hole.
+					<<print either("잔뜩 긴장한", "헐떡이는", "굶주린")>> 입이 구멍에 나타난다.
 					<<set $gloryHoleEvent.target to "oral">>
 				<<else>>
-					hard $NPCList[0].penisdesc pokes through the hole.
+					단단하게 선 <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 구멍을 통해 삐져나온다.
 					<<set $gloryHoleEvent.target to "penile">>
 				<</if>>
 			<<else>>
 				<<if $settings.analEnabled and !$NPCList[0].chastity.anus and $rng >= 451>>
-					lube-slicked bottom appears at the hole.
+					윤활제로 번들거리는 엉덩이가 구멍에 나타난다.
 					<<set $gloryHoleEvent.target to "anal">>
 				<<elseif $rng <= 49>>
-					<<print either("nervous", "panting", "hungry")>> mouth appears at the hole.
+					<<print either("잔뜩 긴장한", "헐떡이는", "굶주린")>> 입이 구멍에 나타난다.
 					<<set $gloryHoleEvent.target to "oral">>
 				<<else>>
 					<<set $gloryHoleEvent.target to "vaginal">>
 					<<if !$NPCList[0].chastity.vagina>>
 						보지가 구멍에 나타난다.
 					<<else>>
-						belted pussy appears at the hole.
+						정조대를 찬 보지가 구멍에 나타난다.
 					<</if>>
 				<</if>>
 			<</if>>
@@ -476,43 +476,43 @@
 	<<else>>
 		<<switch $gloryHoleEvent.target>>
 			<<case "penile">>
-				The $NPCList[0].penisdesc poking through the hole twitches impatiently.
+				구멍을 통해 삐져나온 <<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 초조하게 꿈틀거린다.
 			<<case "anal">>
-				The <<persons>> glistening bottom wiggles impatiently on the other side of the hole.
+				<<persons>> 윤기 나는 엉덩이가 구멍 반대편에서 초조하게 씰룩거린다.
 			<<case "oral">>
-				The <<person>> licks <<his>> lips impatiently on the other side of the hole.
+				<<person>>【이가】 구멍 반대편에서 초조하게 입술을 핥는다.
 			<<case "vaginal">>
-				The pussy on the other side of the hole drips with an air of impatience.
+				구멍 반대편의 보지가 초조한 기색으로 애액을 뚝뚝 흘린다.
 		<</switch>>
 		<br><br>
 		<<switch $gloryholestrip>>
 			<<case "mask">>
-				You pull down your $worn.face.name, <span class="lewd">freeing your mouth.</span>
+				당신은 $worn.face.name【을를】 끌어내려 <span class="lewd">입을 드러낸다.</span>
 				<<set $mouthuse to 0>><<facestrip>><br>
 			<<case "lower">>
 				<<if setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 1>>
 					<<set $worn.lower.skirt_down to 0>><<set $worn.lower.exposed to 1>>
-					You lift up your $worn.lower.name,
+					당신은 $worn.lower.name【을를】 들어 올리고,
 					<<if !$worn.under_lower.name.includes("naked")>>
 						<<set $worn.under_lower.state to "totheside">>
 						<<set $worn.under_lower.anus_exposed to 1>>
 						<<set $worn.under_lower.vagina_exposed to 1>>
-						<<set $worn.under_lower.exposed to 2>> tugging your $worn.under_lower.name aside and <span class="lewd">exposing your
-						<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span>
+						<<set $worn.under_lower.exposed to 2>> $worn.under_lower.name【을를】 옆으로 젖혀 <span class="lewd">당신의
+						<<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span>
 						<br>
-					<<else>> <span class="lewd">exposing your<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span><br>
+					<<else>> <span class="lewd">당신의 <<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span><br>
 					<</if>>
 				<<else>>
 					<<set $worn.lower.state to "thighs">><<set $worn.lower.exposed to 1>>
-					You pull down your $worn.lower.name,
+					당신은 $worn.lower.name【을를】 끌어내리고,
 					<<if !$worn.under_lower.name.includes("naked")>>
 						<<set $worn.under_lower.state to "totheside">>
 						<<set $worn.under_lower.anus_exposed to 1>>
 						<<set $worn.under_lower.vagina_exposed to 1>>
-						<<set $worn.under_lower.exposed to 2>> tugging your $worn.under_lower.name aside and <span class="lewd">exposing your
-						<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span>
+						<<set $worn.under_lower.exposed to 2>> $worn.under_lower.name【을를】 옆으로 젖혀 <span class="lewd">당신의
+						<<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span>
 						<br>
-					<<else>> <span class="lewd">exposing your<<if $exposepart is "ass">> ass<<else>> <<genitals>><</if>>.</span><br>
+					<<else>> <span class="lewd">당신의 <<if $exposepart is "ass">>엉덩이를<<else>> <<genitals>>【을를】<</if>> 드러낸다.</span><br>
 					<</if>>
 				<</if>>
 			<<case "upper">>
@@ -531,10 +531,10 @@
 	<<if $gloryHoleEvent.customer is true>>
 		<<if hasSexStat("promiscuity", 2)>>
 			<<if pcAreArmsBound("both")>>
-				<span class="blue"><<ind>>You can't use your hands with your arms bound.</span>
+				<span class="blue"><<ind>>두 팔이 묶여 있어 손을 쓸 수 없다.</span>
 				<br>
 			<<elseif $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
-				<<ind>><<link [["Service with your hand (" + getTimeString(_service.hands.time) + ")"|$passage]]>>
+				<<ind>><<link [["손으로 봉사한다 (" + getTimeString(_service.hands.time) + ")"|$passage]]>>
 				<<gloryHoleServiceEffects "hand" "exclusive">><<set $gloryHoleEvent.prom to 2>><</link>><<ghandskill>><<gtiredness>><<garousal>>
 				<br>
 			<</if>>
@@ -545,7 +545,7 @@
 				/* <<ind>><span class="blue">You can't use your mouth with your face covered.</span> */
 				<<set _facecovered to true>>
 			<<else>>
-				<<ind>><<link [["Service with your mouth (" + getTimeString(_service.mouth.time) + ")"|$passage]]>>
+				<<ind>><<link [["입으로 봉사한다 (" + getTimeString(_service.mouth.time) + ")"|$passage]]>>
 				<<gloryHoleServiceEffects "mouth" "exclusive">><<set $gloryHoleEvent.prom to 4>><</link>><<goralskill>><<gtiredness>><<garousal>>
 				<<if $gloryHoleEvent.target is "penile">><<oralvirginitywarning>>
 				<<elseif $gloryHoleEvent.target is "oral">><<kissvirginitywarning>>
@@ -555,25 +555,25 @@
 		<</if>>
 
 		<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 3)>>
-			<<ind>><<link [["Service with your chest (" + getTimeString(_service.chest.time) + ")"|$passage]]>>
+			<<ind>><<link [["가슴으로 봉사한다 (" + getTimeString(_service.chest.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "chest" "exclusive">><<set $gloryHoleEvent.prom to 3>><</link>><<gchestskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
 
 		<<if hasSexStat("promiscuity", 2) and $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
-			<<ind>><<link [["Service with your feet (" + getTimeString(_service.feet.time) + ")"|$passage]]>>
+			<<ind>><<link [["발로 봉사한다 (" + getTimeString(_service.feet.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "feet" "exclusive">><<set $gloryHoleEvent.prom to 2>><</link>><<gfeetskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
 
 		<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 2)>>
-			<<ind>><<link [["Service with your thighs (" + getTimeString(_service.thigh.time) + ")"|$passage]]>>			
+			<<ind>><<link [["허벅지로 봉사한다 (" + getTimeString(_service.thigh.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "thigh" "exclusive">><<set $gloryHoleEvent.prom to 2>><</link>><<gthighskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
 
 		<<if $gloryHoleEvent.target is "penile" and hasSexStat("promiscuity", 2)>>
-			<<ind>><<link [["Service with your cheeks (" + getTimeString(_service.bottom.time) + ")"|$passage]]>>
+			<<ind>><<link [["엉덩이로 봉사한다 (" + getTimeString(_service.bottom.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "butt" "exclusive">><<set $gloryHoleEvent.prom to 2>><</link>><<gbottomskill>><<gtiredness>><<garousal>>
 			<br>
 		<</if>>
@@ -582,7 +582,7 @@
 			<<if $worn.under_lower.exposed < 1 || $worn.lower.exposed < 1>>
 				<<set _genitalscovered to true>>
 			<<else>>
-				<<ind>><<link [["Service with your penis (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
+				<<ind>><<link [["자지로 봉사한다 (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
 				<<gloryHoleServiceEffects "penis" "exclusive">><<set $gloryHoleEvent.prom to 5>><</link>><<gpenileskill>><<gtiredness>><<garousal>>
 				<<if $gloryHoleEvent.target isnot "penile">><<penilevirginitywarning>><</if>>
 				<br>
@@ -593,14 +593,14 @@
 			<<if $worn.under_lower.exposed < 1 || $worn.lower.exposed < 1>>
 				<<set _genitalscovered to true>>
 			<<else>>
-				<<ind>><<link [["Service with your strap-on (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
+				<<ind>><<link [["스트랩온으로 봉사한다 (" + getTimeString(_service.penis.time) + ")"|$passage]]>>
 				<<gloryHoleServiceEffects "strap" "exclusive">><<set $gloryHoleEvent.prom to 4>><</link>><<gpenileskill>><<gtiredness>><<garousal>>
 				<br>
 			<</if>>
 		<</if>>
 
 		<<if $gloryHoleEvent.target isnot "anal" and $player.vaginaExist and !playerChastity("vagina") and hasSexStat("promiscuity", 5)>>
-			<<ind>><<link [["Service with your vagina (" + getTimeString(_service.vagina.time) + ")"|$passage]]>>
+			<<ind>><<link [["보지로 봉사한다 (" + getTimeString(_service.vagina.time) + ")"|$passage]]>>
 			<<gloryHoleServiceEffects "vagina" "exclusive">><<set $gloryHoleEvent.prom to 5>><</link>><<gvaginalskill>><<gtiredness>><<garousal>><<vaginalvirginitywarning>>
 			<br>
 		<</if>>
@@ -610,20 +610,20 @@
 				/* <<ind>><span class="blue">You can't use your anus with it covered. </span> */
 				<<set _asscovered to true>>
 			<<else>>
-				<<ind>><<link [["Service with your anus (" + getTimeString(_service.anus.time) + ")"|$passage]]>>
+				<<ind>><<link [["항문으로 봉사한다 (" + getTimeString(_service.anus.time) + ")"|$passage]]>>
 				<<gloryHoleServiceEffects "anus" "exclusive">><<set $gloryHoleEvent.prom to 5>><</link>><<ganalskill>><<gtiredness>><<garousal>><<analvirginitywarning>>
 				<br>
 			<</if>>
 		<</if>>
 		
 		<<if _facecovered>>
-			<br><<ind>><<link [["Displace your "+$worn.face.name|$passage]]>><<set $gloryholestrip to "mask">><</link>>
+			<br><<ind>><<link [["당신의 "+$worn.face.name+"【을를】 치운다"|$passage]]>><<set $gloryholestrip to "mask">><</link>>
 		<</if>>
 		<<if _genitalscovered>>
-			<br><<ind>><<link [[Expose your <<genitals>>|$passage]]>><<set $gloryholestrip to "lower">><</link>>
+			<br><<ind>><<link [[<<genitals>>【을를】 드러낸다|$passage]]>><<set $gloryholestrip to "lower">><</link>>
 		<</if>>
 		<<if _asscovered>>
-			<br><<ind>><<link [[Expose your ass|$passage]]>><<set $gloryholestrip to "lower">><<set $exposepart to "ass">><</link>><br>
+			<br><<ind>><<link [[엉덩이를 드러낸다|$passage]]>><<set $gloryholestrip to "lower">><<set $exposepart to "ass">><</link>><br>
 		<</if>>
 
 		<<if $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
@@ -634,9 +634,9 @@
 		<</if>>
 	<</if>>
 	<br>
-	<<ind>><<link [[Wait (0:10)|$passage]]>><<tiredness -1>><<clearnpc>><<unset $desperateaction>><<pass 10>><</link>><<ltiredness>>
+	<<ind>><<link [[기다린다 (0:10)|$passage]]>><<tiredness -1>><<clearnpc>><<unset $desperateaction>><<pass 10>><</link>><<ltiredness>>
 	<br><br>
-	<<getouticon>><<link [[Leave|Brothel Basement]]>><<endcombat>><<set $punishmentposition to 0>><<unset $desperateaction>><</link>>
+	<<getouticon>><<link [[나간다|Brothel Basement]]>><<endcombat>><<set $punishmentposition to 0>><<unset $desperateaction>><</link>>
 	<br>
 <</if>>
 
@@ -660,9 +660,9 @@
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Brothel Basement Exclusive Sex Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Brothel Basement Exclusive Sex Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Brothel Basement Exclusive Sex]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Brothel Basement Exclusive Sex]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Brothel Basement Exclusive Sex Finish
@@ -671,7 +671,7 @@
 <<set $punishmentposition to 0>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>><<set $gloryholestat += 1>><<set $prostitutionstat += 1>><<fameprostitution 1>><<set _moneyGain to $brothelExclusiveGloryholePrice * 100>>
-	<<tearful>> you count the money <<he>> pushes through the hole. You've gained <<printmoney _moneyGain>>.
+	<<tearful>> 당신은 <<he>>【이가】 구멍으로 밀어 넣은 돈을 센다. <<printmoney _moneyGain>>【을를】 얻었다.
 	<<set $money += _moneyGain>>
 	<br><br>
 
@@ -701,9 +701,9 @@
 
 <</if>>
 
-<<link [[Wait for another customer|Brothel Exclusive Gloryhole]]>><</link>>
+<<link [[다른 손님을 기다린다|Brothel Exclusive Gloryhole]]>><</link>>
 <br>
-<<link [[Leave|Brothel Basement]]>><<set $punishmentposition to 0>><</link>>
+<<link [[나간다|Brothel Basement]]>><<set $punishmentposition to 0>><</link>>
 <br>
 
 :: Brothel Exclusive Price
@@ -717,18 +717,18 @@
 <</if>>
 
 <<if $mathstrait gte 3>>
-	<span class='green'>You've calculated that you can set your price to <<printmoney $brothelExclusiveGloryholeAccuratePrice>> without losing customers today.</span>
+	<span class='green'>오늘 손님을 잃지 않고 가격을 <<printmoney $brothelExclusiveGloryholeAccuratePrice>>【으로로】 정할 수 있다고 계산해 냈다.</span>
 <<elseif $mathstrait gte 2>>
-	<span class='yellow'>You estimate that you can set your price to <<printmoney $brothelExclusiveGloryholeEstimatePrice>> without losing customers today.</span>
+	<span class='yellow'>오늘 손님을 잃지 않고 가격을 <<printmoney $brothelExclusiveGloryholeEstimatePrice>>【으로로】 정할 수 있을 거라고 어림해 본다.</span>
 <<elseif $mathstrait gte 1>>
-	You roughly estimate that you can set your price to <<printmoney $brothelExclusiveGloryholeRoughEstimatePrice>> without losing customers today.
+	오늘 손님을 잃지 않고 가격을 <<printmoney $brothelExclusiveGloryholeRoughEstimatePrice>>【으로로】 정할 수 있을 거라고 대충 짐작해 본다.
 <<else>>
-	<span class='red'>You're not sure what price to set.</span>
+	<span class='red'>가격을 얼마로 정해야 할지 감이 오지 않는다.</span>
 <</if>>
 <br>
 
-<span class="gold">Set your price (£)</span>
+<span class="gold">가격을 정한다 (£)</span>
 <<numberbox "$brothelExclusiveGloryholePrice" $brothelExclusiveGloryholePrice>>
 <br><br>
 
-<<link [[Back|Brothel Basement]]>><<set $brothelExclusiveGloryholePrice = Math.clamp($brothelExclusiveGloryholePrice, 0, 1000000)>><</link>>
+<<link [[뒤로|Brothel Basement]]>><<set $brothelExclusiveGloryholePrice = Math.clamp($brothelExclusiveGloryholePrice, 0, 1000000)>><</link>>

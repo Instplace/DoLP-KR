@@ -163,11 +163,11 @@
         /* Riley checks the time. "That is 20 minutes. Session's over. Go, I have others to train." */
         /* <br><br> */
 
-        <<link [[Next|MMA Gym]]>><<endevent>><</link>>
+        <<link [[다음|MMA Gym]]>><<endevent>><</link>>
     <<else>>
         /* Riley checks the time. "That is 20 minutes. Next station. Do not waste my time." */
         /* <br><br> */
 
-        <<link [[Next|Striking Lesson]]>><<set $gymstage += 1>><<endevent>><</link>>
+        <<link [[다음|Striking Lesson]]>><<set $gymstage += 1>><<endevent>><</link>>
     <</if>>
 <</if>>

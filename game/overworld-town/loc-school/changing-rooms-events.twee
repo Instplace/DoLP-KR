@@ -682,7 +682,7 @@
 	<<if $speech_attitude is "meek">>
 		"나-나한테 마음대로 해도 돼." 당신이 말한다.
 	<<elseif ($speech_attitude is "shy" or $speech_attitude is "polite" or $speech_attitude is "flamboyant")>>
-		"Please don't keep me waiting $changingRoomGender," you say.
+		"저를 기다리게 하지 마세요, <<print $changingRoomGender is "girls" ? "여학생" : "남학생">>【아야】." 당신이 말한다.
 	<<elseif $speech_attitude is "bratty">>
 		"뭘 꾸물거리는 거야." 당신이 말한다. "나 시간 없거든."
 	<<else>>

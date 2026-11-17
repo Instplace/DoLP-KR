@@ -95,7 +95,7 @@
 				<span class="pink">어제 수업에 $lessonmissedtext번 빠졌습니다.</span>
 			<</if>>
 			<<if $lessonmissed gte 50 and $schooltrait gte 4>>
-				<span class="red"><<possessedWord "You've" 'red'>> missed many lessons</span> <span class="green">but your grades are so good they don't even care.</span>
+				<span class="red"><<possessedWord '당신' 'red'>>【은는】 수업을 많이 빠졌습니다</span> <span class="green">하지만 성적이 워낙 좋아서 아무도 신경 쓰지 않습니다.</span>
 			/* give players a grace period of 2 weeks worth of skipped lessons before penalising them for not attending the school in case they're stuck in a bad end, and wait a weak before doing that again */
 			<<elseif $lessonmissed gte 50 && !$truancytimer>>
 				<span class="red">수업을 너무 많이 빠졌습니다. 평판이 나빠졌습니다.</span>
@@ -122,9 +122,9 @@
 		<</if>>
 		<<if $backgroundTraits.includes("genderfluid") and !$daily.gender>>=
 			<<if random(1, 2) is 2>>
-				You feel girly today.<<set $player.gender_posture to "f">>
+				오늘은 여성스러운 기분이 듭니다.<<set $player.gender_posture to "f">>
 			<<else>>
-				You feel boyish today.<<set $player.gender_posture to "m">>
+				오늘은 남성스러운 기분이 듭니다.<<set $player.gender_posture to "m">>
 			<</if>>
 			<br>
 			<<set $daily.gender to 1>>
@@ -135,11 +135,11 @@
 			<<set $daily.fickle to 1>>
 			<<set $speech_attitude to either("neutral", "neutral", "meek", "bratty", "confident", "shy")>>
 			<<switch $speech_attitude>>
-				<<case "meek">><span class="meek">You feel pretty meek today.</span>
-				<<case "shy">><span class="purple">You feel pretty shy today.</span>
-				<<case "bratty">><span class="bratty">You feel pretty bratty today.</span>
-				<<case "confident">><span class="gold">You feel pretty confident today.</span>
-				<<default>>You feel rather neutral today.
+				<<case "meek">><span class="meek">오늘은 꽤 순종적인 기분이 듭니다.</span>
+				<<case "shy">><span class="purple">오늘은 꽤 수줍은 기분이 듭니다.</span>
+				<<case "bratty">><span class="bratty">오늘은 꽤 반항적인 기분이 듭니다.</span>
+				<<case "confident">><span class="gold">오늘은 꽤 자신감이 넘치는 기분이 듭니다.</span>
+				<<default>>오늘은 꽤 중립적인 기분이 듭니다.
 			<</switch>>
 			<br><br>
 		<</if>>
@@ -158,12 +158,12 @@
 
 		<<if $worn.neck.collared gte 1 and $worn.neck.cursed is 1>>
 			<<if $worn.neck.name is "Whitney's collar with leash" or $worn.neck.name is "Whitney's collar" >>
-				<span class="pink">A collar encases <<possessedWord 'your' 'pink'>> neck with bold letters saying "Whitney's pet"</span>
+				<span class="pink">목줄이 <<possessedWord '당신의' 'pink'>> 목을 감싸고 있으며, 굵은 글씨로 "휘트니의 애완동물"이라고 적혀 있습니다.</span>
 				<br>
 			<<elseif $worn.neck.name is "familiar collar" and $hypnosis_traits.devotion gte 4>>
 				<span class="pink">익숙한 <<if $worn.neck.type.includes("leash")>>목줄 달린 <</if>>목걸이가 당신의 목을 보호합니다.</span>
 			<<else>>
-				<span class="pink">A collar encases <<possessedWord 'your' 'pink'>> neck.</span>
+				<span class="pink">목줄이 <<possessedWord '당신의' 'pink'>> 목을 감싸고 있습니다.</span>
 				<br>
 			<</if>>
 		<</if>>
@@ -260,7 +260,7 @@
 				<br>
 		<</switch>>
 		<<if $feetuse is "bound" or $worn.feet.type.includes("shackle")>>
-			<span class="pink"><<possessedWord 'Your' 'pink'>> legs are bound.</span><<combatExtendedStability -15>>
+			<span class="pink"><<possessedWord '당신의' 'pink'>> 양다리가 묶여 있습니다.</span><<combatExtendedStability -15>>
 			<br>
 		<</if>>
 		<<goo>>
@@ -328,10 +328,10 @@
 				<</if>>
 			</div>
 			<div class="sidebarButtonSplit">
-				<<button "DOL+ CREDITS">>
+				<<button "DOL+ 크레딧">>
 					<<overlayReplace "DoLPCredits">>
 				<</button>>
-				<<button "DECOMOD">>
+				<<button "데코모드">>
 					<<overlayReplace "mirrorMood">>
 				<</button>>
 			</div>

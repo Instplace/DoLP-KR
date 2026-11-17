@@ -1098,25 +1098,25 @@
 <<link [[다음|Housekeeping Lesson]]>><<endevent>><</link>>
 
 :: Kitchen Self Teach
-<span class="green">The cookbook's instructions are clear enough,</span> and with a little practice in a few different ways you get a grasp on how to cook something new.
+<span class="green">요리책의 설명은 충분히 명확하고,</span> 몇 가지 방식으로 조금 연습하자 새로운 요리를 하는 요령이 잡힌다.
 <<learn_recipe $chosen_recipe>>
 <br><br>
 <<housekeeping 1 1000>>
 
 <<if $location is "alex_cottage">>
-    <<link [[Next|Farm Kitchen]]>><</link>>
+    <<link [[다음|Farm Kitchen]]>><</link>>
 <<elseif $location is "cabin">>
-    <<link [[Next|Eden Kitchen]]>><</link>>
+    <<link [[다음|Eden Kitchen]]>><</link>>
 <<elseif $location is "school">>
-    <<link [[Next|Housekeeping Classroom]]>><</link>>
+    <<link [[다음|Housekeeping Classroom]]>><</link>>
 <<elseif $bus is "loft_kitchen">>
-    <<link [[Next|Orphanage Loft Kitchen]]>><</link>>
+    <<link [[다음|Orphanage Loft Kitchen]]>><</link>>
 <<elseif $location is "temple">>
-    <<link [[Next|Soup Kitchen Kitchen]]>><</link>>
+    <<link [[다음|Soup Kitchen Kitchen]]>><</link>>
 <<elseif $bus is "avery_kitchen">>
     <<link [[다음|Mansion Kitchen]]>><</link>>
 <<elseif $bus is "poppy_kitchen">>
-    <<link [[Next|Flats Poppy Kitchen]]>><</link>>
+    <<link [[다음|Flats Poppy Kitchen]]>><</link>>
 <<else>>
-    <<link [[Next|Kitchen]]>><</link>>
+    <<link [[다음|Kitchen]]>><</link>>
 <</if>>

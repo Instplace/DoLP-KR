@@ -271,9 +271,9 @@
 			<<socialiseicon "party">><<link [[파티|Beach Party]]>><</link>>
 			<br>
 			<<if pcAreArmsBound("both")>>
-				You could comb the beach for what the tide left behind, <span class="blue">if your arms weren't bound.</span>
+				해변에서 밀물이 남기고 간 것을 뒤질 수 있었겠지만, <span class="blue">팔이 묶여 있지 않았다면 말이다.</span>
 			<<else>>
-				<<investigateicon>><<link [[Comb the beach (0:30)|Beach Comb]]>><<pass 30>><<tiredness 2>><</link>><<gtiredness>>
+				<<investigateicon>><<link [[해변을 뒤진다 (0:30)|Beach Comb]]>><<pass 30>><<tiredness 2>><</link>><<gtiredness>>
 			<</if>>
 		<</if>>
 		<<if !Weather.isOvercast and Time.dayState isnot "night">>
@@ -926,7 +926,7 @@
 <<elseif $player.breastsize gte 6 and $rng % 2 == 0>>많은 시선이 당신의 <<breasts>>에 쏠린다.
 <<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll("chastity", "hidden")>>많은 시선이 당신의 <<penis>>에 고정된다.
 <<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>몇몇은 그저 입을 벌린 채, 당신의 벌거벗은 아름다움에 넋을 잃고 쳐다본다.
-<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>Some marvel at seeing such a stunning physique so fully displayed.
+<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>몇몇은 그렇게 멋진 몸매가 완전히 드러난 것을 보고 감탄한다.
 <<elseif $worn.genitals.type.includesAll("chastity", "hidden")>>몇몇은 당신의 $worn.genitals.name【을를】 호기심 어린 표정으로 쳐다본다.
 <</if>>
 벌거벗은 살결을 어루만지는 산들바람 하나하나가 당신의 노출을 상기시킨다. 당신은 너무나 자유롭고, 강력하고, 섹시하게 느껴진다.
@@ -1268,7 +1268,7 @@
 	<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>당신의 <<breasts>>【을를】 멍하니 쳐다보는 것에
 	<<elseif $player.penisExist and $player.penissize gte 5 and !$worn.genitals.type.includesAll("chastity", "hidden")>>당신의 <<penis>>【을를】 멍하니 쳐다보는 것에
 	<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>당신의 아름다운 나신을 감상하는 것에
-	<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>admiring your stunning physique so fully displayed
+	<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>완전히 드러난 당신의 멋진 몸매를 감상하는 것에
 	<<else>>당신을 곁눈질하는 것에
 	<</if>>
 	흥분과 쾌감을 느끼며 모래사장을 당당히 가로지른다.
@@ -1279,7 +1279,7 @@
 	<<elseif $player.breastsize gte 6 and $rng % 2 == 0>>수많은 시선이 당신의 <<breasts>>【을를】 훑어보는 것에 수치심을 느낀다.
 	<<elseif $player.penisExist and $player.penissize gte 5 and $rng % 2 == 0 and !$worn.genitals.type.includesAll("chastity", "hidden")>>수많은 시선이 당신의 <<penis>>【을를】 훑어보는 것에 수치심을 느낀다.
 	<<elseif $beauty gte (($beautymax / 7) * 5) and $rng % 3>>수많은 시선이 당신의 벌거벗은 나신을 훑어보는 것에 온몸의 살결이 따끔거린다.
-	<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>Every inch of your toned body prickles as you feel countless eyes ogling your stunning physique.
+	<<elseif currentSkillValue('physique') gte (($physiquesize / 7) * 5)>>수많은 시선이 당신의 몸매를 훑어보는 것에 탄탄한 몸 구석구석이 따끔거린다.
 	<<else>>수많은 시선이 당신을 훑어보는 것에 온몸의 살결이 따끔거린다.
 	<</if>>
 	<br><br>

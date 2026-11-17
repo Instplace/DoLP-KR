@@ -551,17 +551,17 @@
 		<<set $tiredness to 0>>
 	<</if>>
 
-	<<set $CTAngryLowC to ["snarls", "sneers", "growls", "groans", "yells"]>>
-	<<set $CTAngryMidC to ["mocks you", "sneers", "growls", "groans", "yells"]>>
-	<<set $CTAngryHighC to ["snarls", "sneers", "screams", "shouts", "yells"]>>
+	<<set $CTAngryLowC to ["으르렁거린다", "비웃는다", "낮게 으르렁거린다", "끙끙거린다", "소리친다"]>>
+	<<set $CTAngryMidC to ["당신을 조롱한다", "비웃는다", "낮게 으르렁거린다", "끙끙거린다", "소리친다"]>>
+	<<set $CTAngryHighC to ["으르렁거린다", "비웃는다", "비명을 지른다", "외친다", "소리친다"]>>
 
-	<<set $CTAnnoyedLowC to ["speaks", "snarls", "growl", "jeers"]>>
-	<<set $CTAnnoyedMidC to ["speaks hushedly","snarls","sneers","growls"]>>
-	<<set $CTAnnoyedHighC to ["is lost in the moment","snarls","sneers","growls"]>>
+	<<set $CTAnnoyedLowC to ["말한다", "으르렁거린다", "낮게 으르렁거린다", "조롱한다"]>>
+	<<set $CTAnnoyedMidC to ["숨죽여 말한다","으르렁거린다","비웃는다","낮게 으르렁거린다"]>>
+	<<set $CTAnnoyedHighC to ["쾌락에 취해 정신을 놓는다","으르렁거린다","비웃는다","낮게 으르렁거린다"]>>
 
-	<<set $CTHappyLowC to ["speaks", "whispers" , "Murmurs" , "breathes"]>>
-	<<set $CTHappyMidC to ["speaks","whispers","moans"]>>
-	<<set $CTHappyHighC to ["is lost in the moment","speaks","coos","whispers", "speaks hushedly"]>>
+	<<set $CTHappyLowC to ["말한다", "속삭인다" , "중얼거린다" , "숨을 몰아쉰다"]>>
+	<<set $CTHappyMidC to ["말한다","속삭인다","신음한다"]>>
+	<<set $CTHappyHighC to ["쾌락에 취해 정신을 놓는다","말한다","달콤하게 속삭인다","속삭인다", "숨죽여 말한다"]>>
 
 	<<if Array.isArray($mathsTraitBuffs)>>
 		<<set _mathsTraitBuffs to $mathsTraitBuffs>>
@@ -1017,30 +1017,30 @@ as what's needed by the imagepack? */
 			"다정한": "sweet",
 			"여우같은": "foxy",
 			"우울한": "gloomy",
-			"Modded 1": "modded1",
-			"Modded 2": "modded2",
-			"Modded 3": "modded3",
-			"Modded 4": "modded4",
-			"Modded 5": "modded5",
-			"Modded 6": "modded6",
-			"Modded 7": "modded7",
-			"Modded 8": "modded8",
-			"Modded 9": "modded9",
-			"Modded 10": "modded10",
-			"Modded 11": "modded11",
-			"Modded 12": "modded12",
-			"Modded 13": "modded13",
-			"Modded 14": "modded14",
-			"Modded 15": "modded15",
-			"Modded 16": "modded16",
-			"Modded 17": "modded17",
-			"Modded 18": "modded18",
-			"Modded 19": "modded19",
-			"Modded 20": "modded20",
-			"Modded 21": "modded21",
-			"Modded 22": "modded22",
-			"Modded 23": "modded23",
-			"Modded 24": "modded24",
+			"모드 1": "modded1",
+			"모드 2": "modded2",
+			"모드 3": "modded3",
+			"모드 4": "modded4",
+			"모드 5": "modded5",
+			"모드 6": "modded6",
+			"모드 7": "modded7",
+			"모드 8": "modded8",
+			"모드 9": "modded9",
+			"모드 10": "modded10",
+			"모드 11": "modded11",
+			"모드 12": "modded12",
+			"모드 13": "modded13",
+			"모드 14": "modded14",
+			"모드 15": "modded15",
+			"모드 16": "modded16",
+			"모드 17": "modded17",
+			"모드 18": "modded18",
+			"모드 19": "modded19",
+			"모드 20": "modded20",
+			"모드 21": "modded21",
+			"모드 22": "modded22",
+			"모드 23": "modded23",
+			"모드 24": "modded24",
 		},
 	}>>
 
@@ -1250,7 +1250,7 @@ as what's needed by the imagepack? */
 
 	<<if !$foodstuff>>
 		<<if $foodstuff.fly_agaric.plural is "fly agaric">>
-			<<set $foodstuff.fly_agaric.plural to "fly agarics">>
+			<<set $foodstuff.fly_agaric.plural to "광대버섯">>
 		<</if>>
 	<</if>>
 

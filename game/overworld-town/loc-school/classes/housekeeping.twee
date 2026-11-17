@@ -10,14 +10,14 @@
 		<<outfitChecks>>
 		/*Check for when the pc is only wearing an overcoat*/
 		<<if $worn.under_upper.name isnot "naked" and $worn.under_lower.name isnot "naked">>
-			<<set _naked to ($worn.under_upper.type.includes("swim") or $worn.under_lower.type.includes("swim")) ? "only wearing swimwear" : "only wearing underwear">>
+			<<set _naked to ($worn.under_upper.type.includes("swim") or $worn.under_lower.type.includes("swim")) ? "수영복만 입은" : "속옷만 입은">>
 		<<else>>
-			<<set _naked to "not wearing anything">>
+			<<set _naked to "아무것도 입지 않은">>
 		<</if>>
 
 		<<if $worn.over_upper.name isnot "naked" and $worn.over_lower.name isnot "naked">>
-			<<set _overClothes to _middleOutfit ? $worn.over_upper.name : ($worn.over_upper.name + " and " + $worn.over_lower.name)>>
-			As you go to hang your <<print _overClothes>>, you remember that you're <<print _naked>> underneath.
+			<<set _overClothes to _middleOutfit ? $worn.over_upper.name : ($worn.over_upper.name + "【와과】 " + $worn.over_lower.name)>>
+			<<print _overClothes>>【을를】 교실 뒤에 걸려고 하다가, 안에는 <<print _naked>> 상태라는 걸 떠올린다.
 		<</if>>
 
 		<br><br>
@@ -40,31 +40,31 @@
 		<<elseif Time.minute lt 5>>
 			<<if modLISelected("Poppy") and Time.days gte 21 and C.npc.Poppy and C.npc.Poppy.init isnot 1 and ($poppySeen is undefined or !Array.isArray($poppySeen) or !$poppySeen.includes("talk_intro"))>>
 				<<poppyFirstMeetingInit>><<npc Poppy>><<person1>>
-				You enter the housekeeping classroom. River and a stranger are preparing at the front of the room while the seats fill.
+				당신은 가사 교실로 들어간다. 리버와 낯선 사람이 자리가 차는 동안 교실 앞에서 준비하고 있다.
 				<<if $worn.over_upper.name isnot "naked" or $worn.over_lower.name isnot "naked" or $worn.over_head.name isnot "naked">>
 					<<undressOverClothes "housekeepingClassroom">>
 					당신은 교실 뒤에 코트를 걸고 자리에 앉는다.
 				<</if>>
 				<<if $awarelevel gte 5>>
 					<br>
-					"Alright class," River starts. "From today on, Poppy will be my teaching assistant." 
+					"좋아, 모두 주목." 리버가 입을 연다. "오늘부터 포피가 내 조교를 맡는다."
 					<br><br>
-					River gestures to the person beside <<nnpc_him "River">>. Poppy has beautiful, natural crimson red hair. Only with your eyes can you see that <<he>> has a pair of fox ears, a fluffy tail, a broken halo and a pair of ink black wings folded neatly behind <<him>>. 
+					리버가 <<nnpc_him "River">> 옆에 선 사람을 가리킨다. 포피는 아름답고 자연스러운 진홍빛 머리카락을 지녔다. 오직 당신의 눈에만 <<he>>【이가】 여우 귀 한 쌍, 푹신한 꼬리, 깨진 후광, 그리고 등 뒤에 단정히 접힌 먹빛 날개 한 쌍을 가진 것이 보인다.
 					<br><br>
-					Poppy smiles at the students and waves at them. The students are immediately charmed by <<his>> charisma and start whispering amongst themselves.
+					포피가 학생들에게 미소 짓고 손을 흔든다. 학생들은 곧바로 <<his>> 카리스마에 매료되어 저희끼리 속닥거리기 시작한다.
 				<<elseif modLISelected("Poppy") and poppyDismissed() and !$poppySeen.includes("dismissal_classroom")>>
 					<<set $poppySeen.push("dismissal_classroom")>>
 					<<npc Poppy>><<person1>>
-					You enter the housekeeping classroom. You see Poppy at the front of the classroom but <<he>> completely disregards your existence.
+					당신은 가사 교실로 들어간다. 교실 앞에 포피가 보이지만 <<he>>【은는】 당신의 존재를 완전히 무시한다.
 					<<if $worn.over_upper.name isnot "naked" or $worn.over_lower.name isnot "naked" or $worn.over_head.name isnot "naked">>
 						<<undressOverClothes "housekeepingClassroom">>
 						당신은 교실 뒤에 코트를 걸고 자리에 앉는다.
 					<</if>>
 				<<else>>
 					<br>
-					"Alright class," River starts. "From today on, Poppy will be my teaching assistant." River gestures to the person beside <<nnpc_him "River">>. Poppy has beautiful, natural crimson red hair. 
+					"좋아, 모두 주목." 리버가 입을 연다. "오늘부터 포피가 내 조교를 맡는다." 리버가 <<nnpc_him "River">> 옆에 선 사람을 가리킨다. 포피는 아름답고 자연스러운 진홍빛 머리카락을 지녔다.
 					<br><br>
-					Something about <<him>> makes your focus falter, as if <span class="navy">something</span> is flickering just beyond your vision. The students are immediately charmed by <<his>> charisma and start whispering amongst themselves.
+					<<him>>에게는 당신의 집중을 흐트러뜨리는 무언가가 있다. 마치 <span class="navy">무언가</span>가 시야 바로 너머에서 깜박이는 것처럼. 학생들은 곧바로 <<his>> 카리스마에 매료되어 저희끼리 속닥거리기 시작한다.
 				<</if>>
 			<<else>>
 				당신은 가사 교실로 들어간다.
@@ -147,48 +147,48 @@
 		<<set $daily.poppy.hkClassroomVisits to typeof $daily.poppy.hkClassroomVisits is "number" ? $daily.poppy.hkClassroomVisits : 0>>
 		<<set $daily.poppy.hkClassroomLocked to $daily.poppy.hkClassroomLocked ? 1 : 0>>
 		<<if $daily.poppy.hkClassroomLocked is 1>>
-			You try to enter the housekeeping classroom. The door is locked.
+			당신은 가사 교실에 들어가려 한다. 문이 잠겨 있다.
 			<br><br>
 			<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 		<<elseif Array.isArray(_poppyStatus) and _poppyStatus.includes("LowPatience")>>
 			<<set $daily.poppy.hkClassroomLocked to 1>>
 			<<npc Poppy>><<person1>>
-			When you enter the housekeeping classroom, Poppy looks up from <<his>> paperwork. <<He>> doesn't seem happy to see you.
+			당신이 가사 교실에 들어서자 포피가 <<his>> 서류에서 고개를 든다. <<He>>【은는】 당신을 반기는 것 같지 않다.
 			<br><br>
-			"I'm busy right now. If you need anything, please go seek River." Poppy ushers you out of the classroom and locks the door.
+			"지금 바빠. 필요한 게 있으면 리버를 찾아가 줘." 포피가 당신을 교실 밖으로 내보내고 문을 잠근다.
 			<<poppyOpiumPulse>>
 			<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 		<<else>>
 			<<set $daily.poppy.hkClassroomVisits to $daily.poppy.hkClassroomVisits + 1>>
 			<<npc Poppy>><<person1>>
 			<<if $daily.poppy.hkClassroomVisits is 1>>
-				When you enter the housekeeping classroom, Poppy looks up from <<his>> paperwork and smiles. "Is there anything I can do for you?"
+				당신이 가사 교실에 들어서자 포피가 <<his>> 서류에서 고개를 들고 미소 짓는다. "내가 도와줄 일이라도 있어?"
 				<<poppyOpiumPulse>>
-				<<socialiseicon "ask">><<link [[Ask for help with your housekeeping skills (0:30)|Housekeeping Classroom Poppy Help]]>><<pass 30>><</link>><<ghousekeeping>>
+				<<socialiseicon "ask">><<link [[가사 실력에 대한 도움을 청한다 (0:30)|Housekeeping Classroom Poppy Help]]>><<pass 30>><</link>><<ghousekeeping>>
 				<br>
 				<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 			<<elseif $daily.poppy.hkClassroomVisits is 2>>
-				Poppy looks up from <<his>> paperwork. "Did... you forget something?"
+				포피가 <<his>> 서류에서 고개를 든다. "혹시... 뭐 잊은 거라도 있어?"
 				<<poppyOpiumPulse>>
-				<<socialiseicon "ask">><<link [[Ask for help with your housekeeping skills (0:30)|Housekeeping Classroom Poppy Help]]>><<pass 30>><</link>><<ghousekeeping>>
+				<<socialiseicon "ask">><<link [[가사 실력에 대한 도움을 청한다 (0:30)|Housekeeping Classroom Poppy Help]]>><<pass 30>><</link>><<ghousekeeping>>
 				<br>
 				<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 			<<elseif (typeof C.npc.Poppy.lust is "number" and C.npc.Poppy.lust gte 60)>>
 				<<npcincr Poppy patience -5>>
 				<<set $daily.poppy.hkClassroomLocked to 1>>
-				As you enter the housekeeping classroom once more, Poppy grabs you by the wrist and throws you against the nearest wall, pinning both hands beside your head. 
+				당신이 가사 교실에 다시 들어서자 포피가 당신의 손목을 낚아채 가장 가까운 벽으로 내던지고, 두 손을 당신의 머리 옆에 붙들어 고정한다.
 				<br><br>
-				"You're such a pain in the ass, are you really this desperate for my attention?" <<He>> scowls.
+				"넌 정말 골칫거리야. 그렇게까지 내 관심이 간절한 거야?" <<He>>【은는】 얼굴을 찌푸린다.
 				<<poppyOpiumPulse>>
-				<<link [[Kiss|Housekeeping Classroom Poppy Kiss]]>><</link>>
+				<<link [[키스한다|Housekeeping Classroom Poppy Kiss]]>><</link>>
 				<br>
-				<<link [[Apologise|Housekeeping Classroom Poppy Apologise]]>><</link>>
+				<<link [[사과한다|Housekeeping Classroom Poppy Apologise]]>><</link>>
 			<<else>>
 				<<npcincr Poppy patience -5>>
 				<<set $daily.poppy.hkClassroomLocked to 1>>
-				Poppy looks up from <<his>> paperwork with an annoyed sigh. "Please stop disturbing me unless it's something important." 
+				포피가 짜증 섞인 한숨을 쉬며 <<his>> 서류에서 고개를 든다. "중요한 일이 아니면 방해하지 말아 줘."
 				<br><br>
-				Poppy ushers you out of the classroom and locks the door.<<delinquency 1>><<gdelinquency>>
+				포피가 당신을 교실 밖으로 내보내고 문을 잠근다.<<delinquency 1>><<gdelinquency>>
 				<<poppyOpiumPulse>>
 				<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 				<br>
@@ -224,15 +224,15 @@
 			<br><br>
 			<<housekeeping_exam_select>>
 			<<if $chosen_recipe isnot "none">>
-				<span class="gold">You can teach yourself a recipe from your cookbook here.</span> You flip open the book and land on a recipe for <<print $chosen_recipe.replace(/_/g," ")>>.<br><br>
-				<<link [["Learn something new (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
+				<span class="gold">여기서는 요리책으로 레시피를 독학할 수 있다.</span> 책을 펼치자 <<print $chosen_recipe.replace(/_/g," ")>> 레시피가 나온다.<br><br>
+				<<link [["새로운 것을 배운다 (" + _timeString + ")"|Kitchen Self Teach]]>><<pass _baseTime>><<housekeeping 1 1000>><</link>><<ghousekeeping 1000>>
 			<<else>>
-				There's no more recipes you can learn.
+				더 배울 수 있는 레시피가 없다.
 			<</if>>
 			<br>
 		<</if>>
 
-	<<crimeicon "mark">><<link [[Steal|Housekeeping Kitchen Steal]]>><</link>>
+	<<crimeicon "mark">><<link [[훔친다|Housekeeping Kitchen Steal]]>><</link>>
 	<br><br>
 	<<getouticon>><<link [[방을 나간다 (0:01)|Hallways]]>><<kitchenExit>><<pass 1>><</link>>
 	<br>
@@ -243,16 +243,16 @@
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
 <<if modLISelected("Poppy") and Time.days gte 21 and C.npc.Poppy and C.npc.Poppy.init isnot 1 and ($poppySeen is undefined or !Array.isArray($poppySeen) or !$poppySeen.includes("talk_intro"))>>
 	<<poppyFirstMeetingInit>><<npc Poppy>><<person1>>
-	You slip into the housekeeping classroom just as River begins the lesson.
+	리버가 수업을 시작하는 순간 당신은 가사 교실로 슬그머니 들어간다.
 	<br><br>
 	<<if $awarelevel gte 5>>
-		"Before we begin," River says, gesturing to the person beside <<nnpc_him "River">>, "this is Poppy, my new teaching assistant." Poppy has beautiful, natural crimson red hair. 
+		"시작하기 전에." 리버가 <<nnpc_him "River">> 옆에 선 사람을 가리키며 말한다. "이쪽은 포피, 새로 온 내 조교야." 포피는 아름답고 자연스러운 진홍빛 머리카락을 지녔다.
 		<br><br>
-		Only with your eyes can you see that <<he>> has a pair of fox ears, a fluffy tail, a broken halo and a pair of ink black wings folded neatly behind <<him>>. Poppy smiles and gives the class a lazy wave.
+		오직 당신의 눈에만 <<he>>【이가】 여우 귀 한 쌍, 푹신한 꼬리, 깨진 후광, 그리고 등 뒤에 단정히 접힌 먹빛 날개 한 쌍을 가진 것이 보인다. 포피는 미소 지으며 학급을 향해 느긋하게 손을 흔든다.
 	<<else>>
-		"Before we begin," River says, gesturing to the person beside <<nnpc_him "River">>, “this is Poppy, my new teaching assistant.” Poppy has beautiful, natural crimson red hair. 
+		"시작하기 전에." 리버가 <<nnpc_him "River">> 옆에 선 사람을 가리키며 말한다. "이쪽은 포피, 새로 온 내 조교야." 포피는 아름답고 자연스러운 진홍빛 머리카락을 지녔다.
 		<br><br>
-		Something about <<him>> makes your focus falter, as if <span class="navy">something</span> is flickering just beyond your vision. Poppy smiles and gives the class a lazy wave.
+		<<him>>에게는 당신의 집중을 흐트러뜨리는 무언가가 있다. 마치 <span class="navy">무언가</span>가 시야 바로 너머에서 깜박이는 것처럼. 포피는 미소 지으며 학급을 향해 느긋하게 손을 흔든다.
 	<</if>>
 	<br><br><<endevent>>
 <<else>>
@@ -316,7 +316,7 @@
 	<br>
 	<<socialiseicon>><<link [[반 친구들과 어울린다|Housekeeping Lesson Socialise]]>><</link>><<gcool>><<ltrauma>><<lstress>><<gharass>>
 	<br>
-	<<daydreamicon>><<link [[Daydream|Housekeeping Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
+	<<daydreamicon>><<link [[공상에 잠긴다|Housekeeping Lesson Daydream]]>><</link>><<lstress>><<ltiredness>><<lharass>>
 	<br>
 	<<if $tiredness gte (C.tiredness.max / 5) * 3>>
 		<<bedicon "zzz">><<link [[책상에 엎드려 잔다|Housekeeping Lesson Sleep]]>><</link>><<ltiredness>>
@@ -358,13 +358,13 @@
 	<br><br>
 	<<housekeeping _lesson_progress>>
 	<<if _dolp_desk_stress>><<stress _dolp_desk_stress>><<else>><<stress _lesson_progress>><</if>>
-	As you work, a pair of hands rest against your shoulders. 
+	작업하는 동안 한 쌍의 손이 당신의 어깨에 얹힌다.
 	<br><br>
-	You turn around to see Poppy smiling at you. "Do you need any guidance?"
+	돌아보니 포피가 당신에게 미소 짓고 있다. "도움이 필요해?"
 	<br><br>
-	<<link [[Say yes|Housekeeping Lesson Focus Poppy Yes]]>><</link>><<glove>><<ghousekeeping>><<handholdingvirginitywarning>>
+	<<link [[그렇다고 말한다|Housekeeping Lesson Focus Poppy Yes]]>><</link>><<glove>><<ghousekeeping>><<handholdingvirginitywarning>>
 	<br>
-	<<link [[Say you're fine|Housekeeping Lesson Focus Poppy No]]>><</link>>
+	<<link [[괜찮다고 말한다|Housekeeping Lesson Focus Poppy No]]>><</link>>
 <<else>>
 	당신은 선생님의 말을 듣고 자료를 공부하는 데 집중한다. 쉽지는 않지만, 진전이 있는 것 같다.
 	<br><br>
@@ -446,27 +446,27 @@
 
 :: Housekeeping Kitchen Steal
 <<set $outside to 0>><<set $location to "school">><<effects>>
-You look through the cabinets. Most of the ingredients you use during classes are here. 
+당신은 찬장을 살펴본다. 수업 때 쓰는 재료 대부분이 여기 있다.
 <<if Time.schoolDay>>
 	<<if $schoolstate is "early" or $schoolstate is "lunch">>
-		Nobody usually comes here at this hour, so it should be easy.
+		이 시간에는 보통 아무도 오지 않으니 쉬울 것이다.
 		<<set $skulduggerydifficulty to 400>>
 	<<elseif $schoolstate is "late">>
-		You don't think anybody will come in, but there is always the possibility.
+		아무도 들어오지 않을 것 같지만, 가능성은 언제나 있다.
 		<<set $skulduggerydifficulty to 500>>
 	<<else>>
-		You must be quick. Somebody may come in at any point.
+		서둘러야 한다. 누가 언제 들어올지 모른다.
 		<<set $skulduggerydifficulty to 800>>
 	<</if>>
 <<else>>
-	Nobody is around.
+	주위에 아무도 없다.
 	<<set $skulduggerydifficulty to 300>>
 <</if>>
 <br><br>
 
 <<ingredientsSuppliesSteal "salt" "vegetable_oil" "bottle_of_milk" "white_wine" "flour" "oats" "sugar">>
 <br>
-<<icon "housekeeping.png">><<link [[Back|Housekeeping Classroom]]>><<endevent>><</link>>
+<<icon "housekeeping.png">><<link [[뒤로|Housekeeping Classroom]]>><<endevent>><</link>>
 
 :: school Kitchen Steal Result
 <<effects>>
@@ -475,12 +475,12 @@ You look through the cabinets. Most of the ingredients you use during classes ar
 <br><br>
 
 <<if $skulduggerysuccess is 1>>
-	The <<recipe_name $phase "plural">> are behind some jars, so you move them out of your way as quietly as possible. <<tending_pick $phase 3 6>>
+	<<recipe_name $phase "plural">>【은는】 병 몇 개 뒤에 있어서, 당신은 최대한 조용히 병들을 치운다. <<tending_pick $phase 3 6>>
 	<br>
-	You probably shouldn't take more, or River will notice too much is missing.
+	더 가져가면 안 될 것 같다. 너무 많이 없어진 걸 리버가 알아챌 것이다.
 	<br><br>
 	
-	<<icon "housekeeping.png">><<link [[Walk away|Housekeeping Classroom]]>><</link>>
+	<<icon "housekeeping.png">><<link [[자리를 뜬다|Housekeeping Classroom]]>><</link>>
 	<br>
 	<<ingredientsSuppliesSteal "salt" "vegetable_oil" "bottle_of_milk" "white_wine" "flour" "oats" "sugar">>
 <<else>>
@@ -488,43 +488,43 @@ You look through the cabinets. Most of the ingredients you use during classes ar
 		<<if $schoolstate is "early" or $schoolstate is "lunch" or $schoolstate is "late">>
 			<<generatey1>><<person1>>
 			<<set _tellTarget to random(1, 6)>>
-			The <<recipe_name $phase "plural">> are behind some jars, so you move them out of your way as quietly as possible. You're reaching for them when you hear a gasp behind you. You turn around.
+			<<recipe_name $phase "plural">>【은는】 병 몇 개 뒤에 있어서, 당신은 최대한 조용히 병들을 치운다. 막 손을 뻗는 순간 등 뒤에서 헉 하는 소리가 들린다. 당신은 돌아선다.
 			<br><br>
-			"Are you stealing ingredients?" the <<person>> exclaims. "That's not okay! I'm telling <<switch _tellTarget>><<case 1>>the head<<case 2>>the <<nnpc_title "Leighton">><<case 3>>Leighton<<case 4>>a teacher<<default>>River<</switch>>!"
+			"재료를 훔치고 있는 거야?" 그 <<person>>【이가】 소리친다. "그러면 안 돼! <<switch _tellTarget>><<case 1>>교장 선생님<<case 2>><<nnpc_title "Leighton">><<case 3>>레이튼<<case 4>>선생님<<default>>리버<</switch>>한테 이를 거야!"
 			<br><br>
-			<<He>> runs out before you can say anything. <<detention 1>><<gdelinquency>>
+			<<He>>【은는】 당신이 아무 말도 하기 전에 뛰쳐나간다.<<detention 1>><<gdelinquency>>
 			<br><br>
-			You look at the <<recipe_name $phase>> in your hand. You'll still be in trouble even if you leave it here, but it will be worse if you take it with you.
+			당신은 손에 든 <<recipe_name $phase>>【을를】 내려다본다. 여기에 두고 가도 곤란해지겠지만, 가지고 가면 더 심해질 것이다.
 			<br><br><<set $weekly.theft.school[$phase] to false>>
-			<<link [[Leave it behind|Housekeeping Leave]]>><</link>>
+			<<link [[두고 간다|Housekeeping Leave]]>><</link>>
 			<br>
-			<<link [[Take it anyway|Housekeeping Take]]>><<detention 4>><</link>><<ggdelinquency>>
+			<<link [[그래도 가져간다|Housekeeping Take]]>><<detention 4>><</link>><<ggdelinquency>>
 		<<else>>
 			<<npc River>><<person1>>
-			The <<recipe_name $phase "plural">> are behind some jars, so you move them out of your way as quietly as possible. You don't manage to take them before you hear someone coming in.
+			<<recipe_name $phase "plural">>【은는】 병 몇 개 뒤에 있어서, 당신은 최대한 조용히 병들을 치운다. 챙기기도 전에 누가 들어오는 소리가 들린다.
 			<br><br>
-			"Are you trying to steal ingredients?" You turn around and find yourself face to face with River. <<His>> eyes narrow. "Put the <<recipe_name $phase>> back. Perhaps a detention will teach you not to steal."<<npcincr River love -1>><<llove>><<detention 6>><<ggdelinquency>>
+			"재료를 훔치려는 거야?" 돌아선 당신은 리버와 정면으로 마주한다. <<His>> 눈이 가늘어진다. "<<recipe_name $phase>>【을를】 도로 갖다 놔라. 방과 후 벌을 받으면 훔치지 않는 법을 배우겠지."<<npcincr River love -1>><<llove>><<detention 6>><<ggdelinquency>>
 			<<set $weekly.theft.school[$phase] to false>><br><br>
-			<<link [[Leave the room (0:01)|Hallways]]>><<handheldon>><<pass 1>><<endevent>><</link>>
+			<<link [[방을 나간다 (0:01)|Hallways]]>><<handheldon>><<pass 1>><<endevent>><</link>>
 		<</if>>
 	<<else>>
 		<<beastNEWinit 1 cat>>
-		You move some jars out of the way to reach for <<recipe_name $phase "plural">>, but accidentally knock them together. You freeze, and hear a low growl behind you.
+		<<recipe_name $phase "plural">>【을를】 꺼내려고 병 몇 개를 옮기다가 실수로 서로 부딪히게 만든다. 당신은 얼어붙고, 등 뒤에서 낮은 으르렁 소리가 들린다.
 		<<beastNEWinit 1 cat>>
 		<<if ($monster is 1 or $settings.bestialityEnabled) and not ($NPCList[0] and $NPCList[0].lewdBlocked)>>
-			A large <<beasttype>> pounces on you from the shadows, forcing you to your knees. The jar drops, shattering on the floor.
+			그림자 속에서 커다란 <<beasttype>>【이가】 당신에게 덮쳐 당신을 무릎 꿇린다. 병이 떨어져 바닥에서 산산조각 난다.
 			<br><br>
 			<<if (($cat gte 6 and $transformationParts.traits.activeTF is "disabled") or $transformationParts.traits.activeTF is "cat")>>
-				<<link [[Hiss|School Housekeeping Hiss]]>><</link>><<cat>>
+				<<link [[쉿 소리를 낸다|School Housekeeping Hiss]]>><</link>><<cat>>
 				<br>
 			<</if>>
-			<<link [[Fight|School Housekeeping Cat]]>><<set $molestationstart to 1>><</link>>
+			<<link [[싸운다|School Housekeeping Cat]]>><<set $molestationstart to 1>><</link>>
 			<br>
 		<<else>>
-			A large cat pounces on you from the shadows, making you drop the jar. It shatters on the floor. You manage to escape, but not without injury. You leave quite a mess behind you.<<crimeUp 5 "destruction">><<crime "destruction">>
+			그림자 속에서 커다란 고양이가 당신에게 덮쳐 병을 떨어뜨리게 한다. 병은 바닥에서 산산조각 난다. 당신은 간신히 빠져나오지만 상처 없이는 아니다. 뒤에는 상당한 난장판이 남는다.<<crimeUp 5 "destruction">><<crime "destruction">>
 			<<beastescape>>
 			<br><br>
-			<<link [[Next|Housekeeping Classroom]]>><<endevent>><</link>>
+			<<link [[다음|Housekeeping Classroom]]>><<endevent>><</link>>
 			<br>
 		<</if>>
 	<</if>>
@@ -532,14 +532,14 @@ You look through the cabinets. Most of the ingredients you use during classes ar
 
 :: Housekeeping Leave
 <<effects>>
-You put down the <<recipe_name $phase "plural">>. At least now there's little evidence it was you. Still, you should probably leave and not try again for some time. 
+당신은 <<recipe_name $phase "plural">>【을를】 내려놓는다. 적어도 이제 당신이 했다는 증거는 거의 없다. 그래도 한동안은 다시 시도하지 말고 이만 떠나는 게 좋을 것이다.
 <<set $weekly.theft.school[$phase] to false>>
 <br><br>
-<<getouticon>><<link [[Leave the room (0:01)|Hallways]]>><<handheldon>><<pass 1>><<endevent>><</link>>
+<<getouticon>><<link [[방을 나간다 (0:01)|Hallways]]>><<handheldon>><<pass 1>><<endevent>><</link>>
 
 :: Housekeeping Take
 <<effects>>
-You pick the <<recipe_name $phase>> anyways. <<tending_pick $phase 3 6>> You should still leave quickly before you get in more trouble. And probably not return any time soon.
+당신은 그래도 <<recipe_name $phase>>【을를】 집어 든다. <<tending_pick $phase 3 6>> 더 큰 곤란을 겪기 전에 서둘러 떠나는 게 좋겠다. 그리고 당분간은 돌아오지 않는 편이 좋을 것이다.
 <br><br>
 <<getouticon>><<link [[교실을 나간다 (0:01)|Hallways]]>><<pass 1>><</link>>
 
@@ -547,24 +547,24 @@ You pick the <<recipe_name $phase>> anyways. <<tending_pick $phase 3 6>> You sho
 <<set $outside to 0>><<set $location to "school">><<effects>>
 당신이 <<beasttype>>에게 쉿 소리를 낸다. <<bHe>>【은는】 귀를 뒤로 젖힌 채 당신에게서 물러난다. 당신이 <<bhim>>【을를】 응시하며 가장 깊은 야옹 소리를 낸다. <<bHe>>【은는】 으르렁거리며 맞서지만, <<bhis>> 얼굴은 이내 편안해진다. <<bHe>>【은는】 창턱으로 뛰어올라 그 뒤로 사라진다.
 <br><br>
-You look around at the shattered jar on the ground. The <<recipe_name $phase "plural">> you wanted to steal lie on the ground mixed with glass. Picking any of it would be too dangerous, but it's enough to be passed as a simple accident. If you clean it up, nobody should bat an eye on the destruction you caused.
+당신은 바닥의 깨진 병을 둘러본다. 훔치려던 <<recipe_name $phase "plural">>【은는】 유리 조각과 뒤섞여 바닥에 널려 있다. 무엇이든 주워 가기엔 너무 위험하지만, 단순한 사고로 넘어가기에는 충분하다. 치워 두면 당신이 낸 피해를 눈여겨볼 사람은 없을 것이다.
 <br><br>
-<<link [[Clean it up|Housekeeping Classroom Sweep]]>><<endevent>><</link>><br>
-<<link [[Leave it|Housekeeping Classroom Leave]]>><<detention 2>><<endevent>><</link>><<gdelinquency>>
+<<link [[치운다|Housekeeping Classroom Sweep]]>><<endevent>><</link>><br>
+<<link [[그냥 둔다|Housekeeping Classroom Leave]]>><<detention 2>><<endevent>><</link>><<gdelinquency>>
 
 :: Housekeeping Classroom Sweep
 <<set $outside to 0>><<set $location to "school">><<effects>>
-You pick up the broom and sweep the glass and remains of <<recipe_name $phase "plural">> off the floor. It doesn't take you long to take care of it.
+당신은 빗자루를 들고 바닥의 유리 조각과 <<recipe_name $phase "plural">>의 잔해를 쓸어 낸다. 치우는 데는 오래 걸리지 않는다.
 <br><br>
-<<crimeicon "mark">><<link [[Steal more|Housekeeping Kitchen Steal]]>><</link>><br>
-<<icon "housekeeping.png">><<link [[Walk away|Housekeeping Classroom]]>><</link>>
+<<crimeicon "mark">><<link [[더 훔친다|Housekeeping Kitchen Steal]]>><</link>><br>
+<<icon "housekeeping.png">><<link [[자리를 뜬다|Housekeeping Classroom]]>><</link>>
 
 :: Housekeeping Classroom Leave
 <<set $outside to 0>><<set $location to "school">><<effects>>
-You decide it's better to leave the mess behind. It's not your problem anymore.
+난장판은 그냥 두고 가는 편이 낫다고 판단한다. 이제 당신의 문제가 아니다.
 <br><br>
-<<crimeicon "mark">><<link [[Steal more|Housekeeping Kitchen Steal]]>><</link>><br>
-<<icon "housekeeping.png">><<link [[Walk away|Housekeeping Classroom]]>><<endevent>><</link>>
+<<crimeicon "mark">><<link [[더 훔친다|Housekeeping Kitchen Steal]]>><</link>><br>
+<<icon "housekeeping.png">><<link [[자리를 뜬다|Housekeeping Classroom]]>><<endevent>><</link>>
 
 
 :: School Housekeeping Cat
@@ -587,9 +587,9 @@ You decide it's better to leave the mess behind. It's not your problem anymore.
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|School Housekeeping Cat Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|School Housekeeping Cat Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|School Housekeeping Cat]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|School Housekeeping Cat]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: School Housekeeping Cat Finish
@@ -599,17 +599,17 @@ You decide it's better to leave the mess behind. It's not your problem anymore.
 	<<beastejaculation>>
 	<<beasttype>>【은는】 만족스럽게 끙끙거리더니, 창문 밖으로 뛰어내려 당신을 바닥에 남겨두고 떠난다.
 	<br><br>
-	<<tearful>> you rise to your feet. You look around and see quite a mess behind you.<<crimeUp 7 "destruction">><<crime "destruction">>
+	<<tearful>> 당신은 일어선다. 둘러보니 뒤에 상당한 난장판이 남아 있다.<<crimeUp 7 "destruction">><<crime "destruction">>
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Housekeeping Classroom]]>><<endevent>><</link>>
+	<<link [[다음|Housekeeping Classroom]]>><<endevent>><</link>>
 <<elseif $enemyhealth lte 0>>
 	<<beasttype>>【이가】 낑낑거리며 창문으로 도망친다.
 	<br><br>
-	<<tearful>> you rise to your feet. You look around and see quite a mess behind you.<<crimeUp 10 "destruction">><<crime "destruction">>
+	<<tearful>> 당신은 일어선다. 둘러보니 뒤에 상당한 난장판이 남아 있다.<<crimeUp 10 "destruction">><<crime "destruction">>
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Housekeeping Classroom]]>><<endevent>><</link>>
+	<<link [[다음|Housekeeping Classroom]]>><<endevent>><</link>>
 <</if>>
