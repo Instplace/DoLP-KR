@@ -202,10 +202,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          sed -e "s/{{VERSION}}/$VERSION/g" -e "s/{{TAG}}/$TAG/g" -e "s/{{COMMIT}}/$GITHUB_SHA/g" -e "s/{{PACKAGE}}/$APP_PACKAGE/g" -e "s/{{APP_NAME}}/$APP_NAME/g" .github/release-notes.md > notes.md
-          if [ "$SIGNED" != "true" ]; then sed -i '/<!-- apk -->/,/<!-- \/apk -->/d' notes.md; fi
-          if [ "$PRERELEASE" = "true" ]; then sed -i '/<!-- variants -->/,/<!-- \/variants -->/d' notes.md; fi
-          sed -i '/<!-- \/\?\(apk\|variants\) -->/d' notes.md
+          sed -e "s/{{VERSION}}/$VERSION/g" .github/release-notes.md > notes.md
           files=(out/*.zip)
           if [ "$SIGNED" = "true" ]; then files+=("out/$NAME-$TAG.apk"); fi
           if [ "$PRERELEASE" = "true" ]; then
