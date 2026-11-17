@@ -239,7 +239,7 @@
 	<br><br>
 	<<tearful>>you tremble, but you force yourself to hold it together as you try to settle back down.<br><br>
 <<elseif $enemyhealth lte 0>>
-	You kick Avery away from you.
+	당신은 에이버리를 발로 차서 밀어낸다.
 	<<if C.npc.Avery.rage gte random(20, 100) and $averyragerevealed gte 1>>
 		<<He>> scoffs, gathers <<himself>> up, and pointedly refuses to look at you.
 	<<else>>
@@ -260,7 +260,7 @@
 <</if>>
 <<clotheson>>
 <<endcombat>>
-<<link [[Next|Mansion Bedroom]]>><</link>>
+<<link [[다음|Mansion Bedroom]]>><</link>>
 <br>
 
 :: Mansion Bedroom Masturbate Fight
@@ -290,23 +290,23 @@
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	Out of strength, Avery collapses. <<tearful>> you use the opportunity to escape from arm's reach.<<larage>><<npcincr Avery rage -1>>
+	힘이 다한 에이버리가 쓰러진다. <<tearful>> 당신은 그 틈을 타 손이 닿는 범위에서 빠져나온다.<<larage>><<npcincr Avery rage -1>>
 	<br><br>
-	<<His>> knees tremble as <<he>> climbs to <<his>> feet. <<He>> glares at you a moment, then walks away.
+	<<His>> 무릎이 떨리지만, <<he>>【은는】 몸을 일으킨다. <<He>>【은는】 잠시 당신을 노려본 뒤 걸어 나간다.
 	<br><br>
 <<elseif $enemyhealth lte 0>>
-	Avery's knees buckle, and <<he>> collapses in a heap. <<tearful>> you use the opportunity to escape from arm's reach.<<larage>><<npcincr Avery rage -1>><<ldom>><<npcincr Avery dom -1>>
+	에이버리의 무릎이 꺾이고, <<he>>【은는】 힘없이 무너져 내린다. <<tearful>> 당신은 그 틈을 타 손이 닿는 범위에서 빠져나온다.<<larage>><<npcincr Avery rage -1>><<ldom>><<npcincr Avery dom -1>>
 	<br><br>
-	<<tearful>> you recover.
+	<<tearful>> 몸을 추스른다.
 	<br><br>
 <<else>>
-	You fall to the ground, too hurt to continue fighting. Avery observes you a moment, considering, then <<he>> walks away.<<ggdom>><<npcincr Avery dom 3>>
+	당신은 너무 다쳐 더는 싸울 수 없어 바닥에 쓰러진다. 에이버리는 당신을 잠시 지켜보며 생각하더니, 이내 걸어 나간다.<<ggdom>><<npcincr Avery dom 3>>
 	<br><br>
-	<<tearful>> you struggle to your feet.
+	<<tearful>> 당신은 힘겹게 일어선다.
 	<br><br>
 <</if>>
 <<endcombat>>
 <<clotheson>>
 <<endevent>>
-<<link [[Next|Mansion Bedroom]]>><</link>>
+<<link [[다음|Mansion Bedroom]]>><</link>>
 <br>

@@ -17,7 +17,7 @@ You climb onto your bike.
         <br>
         <<bikeTransition>>
         <br><br>
-        <<link [[Next|$passage]]>><</link>>
+        <<link [[다음|$passage]]>><</link>>
     <<case 0>>
         <<set $phase to 1>>
         <<bikeEvents $destination>>

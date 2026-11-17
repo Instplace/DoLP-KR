@@ -1,5 +1,4 @@
 :: Clothing Shop Categories [widget]
-
 <<widget "updateclothingshop">>
 	<<run new Wikifier(null, '<<replace "#clothingShop-div">><<' + $shopName + "Shop-main>><</replace>>")>>
 	<<numberify '#clothingShop-div'>>
@@ -339,7 +338,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "all">>
 					<<else>>
-						<div class="category-icon-alt">OO</div>
+						<div class="category-icon-alt">겉</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<AllShop>><</replace>><</link>>
 				</div>
@@ -351,7 +350,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "over-outfit">>
 						<<else>>
-							<div class="category-icon-alt">OO</div>
+							<div class="category-icon-alt">겉</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<OverOutfitShop>><</replace>><</link>>
 					</div>
@@ -372,7 +371,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "upper">>
 						<<else>>
-							<div class="category-icon-alt">U</div>
+							<div class="category-icon-alt">상</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<TopShop>><</replace>><</link>>
 					</div>
@@ -381,7 +380,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "lower">>
 						<<else>>
-							<div class="category-icon-alt">L</div>
+							<div class="category-icon-alt">하</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<BottomShop>><</replace>><</link>>
 					</div>
@@ -392,7 +391,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "under-outfit">>
 						<<else>>
-							<div class="category-icon-alt">UO</div>
+							<div class="category-icon-alt">상외</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<UnderOutfitShop>><</replace>><</link>>
 					</div>
@@ -401,7 +400,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "under-upper">>
 					<<else>>
-						<div class="category-icon-alt">UU</div>
+						<div class="category-icon-alt">상의</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<UnderTopShop>><</replace>><</link>>
 				</div>
@@ -410,7 +409,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "under-lower">>
 					<<else>>
-						<div class="category-icon-alt">UL</div>
+						<div class="category-icon-alt">상하</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<UnderBottomShop>><</replace>><</link>>
 				</div>
@@ -435,7 +434,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "head">>
 					<<else>>
-						<div class="category-icon-alt">He</div>
+						<div class="category-icon-alt">머</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<HeadShop>><</replace>><</link>>
 				</div>
@@ -444,7 +443,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "face">>
 					<<else>>
-						<div class="category-icon-alt">Fa</div>
+						<div class="category-icon-alt">얼</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<FaceShop>><</replace>><</link>>
 				</div>
@@ -454,7 +453,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "neck">>
 						<<else>>
-							<div class="category-icon-alt">Ne</div>
+							<div class="category-icon-alt">목</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<NeckShop>><</replace>><</link>>
 					</div>
@@ -469,7 +468,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "handheld">>
 						<<else>>
-							<div class="category-icon-alt">Hd</div>
+							<div class="category-icon-alt">손</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<HandheldShop>><</replace>><</link>>
 					</div>
@@ -480,7 +479,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "hand">>
 						<<else>>
-							<div class="category-icon-alt">Ha</div>
+							<div class="category-icon-alt">모</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<HandsShop>><</replace>><</link>>
 					</div>
@@ -499,7 +498,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "legs">>
 						<<else>>
-							<div class="category-icon-alt">Le</div>
+							<div class="category-icon-alt">다리</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<LegsShop>><</replace>><</link>>
 					</div>
@@ -509,7 +508,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "feet">>
 					<<else>>
-						<div class="category-icon-alt">Fe</div>
+						<div class="category-icon-alt">발</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<FeetShop>><</replace>><</link>>
 				</div>
@@ -523,7 +522,7 @@
 						<<if $options.images is 1>>
 							<<clothingcategoryicon "all">>
 						<<else>>
-							<div class="category-icon-alt">OO</div>
+							<div class="category-icon-alt">겉</div>
 						<</if>>
 						<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<AllShop>><</replace>><</link>>
 					</div>
@@ -533,7 +532,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "neck">>
 					<<else>>
-						<div class="category-icon-alt">Ne</div>
+						<div class="category-icon-alt">목</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<NeckShop>><</replace>><</link>>
 				</div>
@@ -560,7 +559,7 @@
 					<<if $options.images is 1>>
 						<<clothingcategoryicon "hand">>
 					<<else>>
-						<div class="category-icon-alt">Ha</div>
+						<div class="category-icon-alt">모</div>
 					<</if>>
 					<<link "">><<set $shopPage = 0>><<unset $clothes_choice>><<set _shopNameFilter to ''>><<replace "#clothingShop-div">><<HandsShop>><</replace>><</link>>
 				</div>

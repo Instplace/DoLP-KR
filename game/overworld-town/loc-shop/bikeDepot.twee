@@ -4,21 +4,21 @@
 
 <<if currentSkillValue('skulduggery') gte $lock>>
 	<<if pcAreArmsBound("both")>>
-		You think you'd be able to pick the lock, <span class="blue">if your arms weren't bound.</span>
+		자물쇠를 딸 수 있을 것 같지만, <span class="blue">팔이 묶여 있지 않다면 말이다.</span>
 	<<else>>
 		<<wearProp "lockpick">>
-		<span class="green">The lock looks easy to pick.</span>
+		<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 		<br><br>
 
 		<<lockicon "pick">><<link [[Pick it (0:10)|Bike Depot]]>><<pass 10>><<crimeUp 5 "trespassing">><</link>><<crime "trespassing">>
 	<</if>>
 	<br>
 <<else>>
-	<span class="red">The lock looks beyond your ability to pick.</span>
+	<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span>
 	<<skulduggeryrequired>>
 	<br><br>
 <</if>>
-<<getouticon>><<link [[Leave|Shopping Centre]]>><</link>>
+<<getouticon>><<link [[떠난다|Shopping Centre]]>><</link>>
 
 :: Bike Depot
 <<set $outside to 0>><<set $location to "shopping_centre">><<effects>>
@@ -74,7 +74,7 @@ You are in the Bike Depot. It has quite the stock of bikes.
 <</if>>
 
 <<if Time.dayState is "night">>
-	You are alone in the darkness.
+	어둠 속에 당신 혼자 있다.
 	<br><br>
 <<elseif $exposed gte 1>>
 	You hide behind a rack of bikes to protect your dignity.
@@ -85,13 +85,13 @@ You are in the Bike Depot. It has quite the stock of bikes.
 	<<passoutshop>>
 <<else>>
 	<<if Time.hour is 21>>
-		It's closing time. Security is herding everyone outside.
+		폐점 시간이다. 경비원이 모든 사람을 밖으로 몰아내고 있다.
 		<<if $exposed gte 1>>
-			Panic swells within you as you realise how embarrassed you'll be should security find you exposed like this.
+			경비원이 이 옷차림을 본다면 얼마나 수치스러울지 깨닫고 공황 상태에 빠진다.
 		<</if>>
 		<br><br>
 		<<if $exposed lte 0>>
-			<<highicon>><<link [[Go outside|High Street]]>><</link>>
+			<<highicon>><<link [[밖으로 나간다|High Street]]>><</link>>
 			<br>
 		<<else>>
 			<<ind>><<link [["Hide until it's over (1:00)"|Bike Depot]]>><<pass 1 hour>><</link>>
@@ -203,7 +203,7 @@ You are in the Bike Depot. It has quite the stock of bikes.
 			<</if>>
 			<br>
 		<</if>>
-		<<getouticon>><<link [[Leave|Shopping Centre]]>><</link>>
+		<<getouticon>><<link [[떠난다|Shopping Centre]]>><</link>>
 		<br>
 	<</if>>
 <</if>>

@@ -79,11 +79,11 @@
 			<</if>>
 		<</if>>
 		<<if $phase is 4>>
-			"It's yours, okay?" you say.
+			"네 아이야, 알겠어?" 당신이 말한다.
 		<<elseif $phase is 3>>
 			You both take a seat. With a sigh, you <<if !$worn.upper.type.includes("naked")>>lift the hem of your shirt and <</if>>frame your belly with your hands, drawing <<his>> eyes to your stomach.
 			<br>
-			"It's yours, okay?" you say.
+			"네 아이야, 알겠어?" 당신이 말한다.
 		<<else>>
 			You nod. "It's yours."
 		<</if>>
@@ -148,15 +148,15 @@
 		"How did you...?"
 		<br><br>
 		<<if $speech_attitude is "meek" or $speech_attitude is "shy" or $speech_attitude is "docile">>
-			You shake your head. "I don't know. I can't explain it either..."
+			당신은 고개를 젓는다. "나도 몰라. 나도 설명할 수 없어..."
 		<<elseif $speech_attitude is "polite" or $speech_attitude is "flamboyant" or $speech_attitude is "special">>
 			You let out a helpless breath. "I don't really know how to explain it either."
 		<<elseif $speech_attitude is "bratty" or $speech_attitude is "cruel">>
-			You shrug. "Fuck if I know. Life finds a way."
+			당신은 어깨를 으쓱한다. "내가 알면 씨발 좋겠네. 생명은 길을 찾기 마련이지."
 		<<elseif $speech_attitude is "confident">>
 			You shrug. "I don't have an explanation. It's just happening."
 		<<else>>
-			You shrug. "Don't ask questions."
+			당신은 어깨를 으쓱한다. "묻지 마."
 		<</if>>
 		<br><br>
 		Poppy slowly pulls <<his>> hand away and slowly nods to <<himself>>. "I guess there really isn't any reason for me not to believe you, besides basic biology. Take good care of yourself, alright?"
@@ -188,7 +188,7 @@
 <<else>>
 	You reach for Poppy and gently catch <<his>> sleeve.
 <</if>>
-"Hey, do you have a minute? I have something I need to share with you. It's important." 
+"저기, 시간 좀 있어? 너한테 할 말이 있는데. 중요한 거야."
 <br><br>
 Poppy tilts <<his>> head curiously. "Of course! What is it?"
 <br><br>
@@ -228,7 +228,7 @@ You hold each other for a while, trading quiet kisses between Poppy's whispered 
 <br><br>
 Eventually <<he>> tucks a stray strand of your hair behind your ear, <<his>> hand lingering on your cheek. "Whatever happens from here, we figure it out together. Okay?"
 <br><br>
-You nod.
+당신은 고개를 끄덕인다.
 <<poppyOpiumPulse>>
 <<link [[Next|Flats Poppy Social]]>><<endevent>><<npc "Poppy">><<person1>><</link>>
 
@@ -274,7 +274,7 @@ You nod.
 	Poppy gasps when <<he>> sees you. "Oh my, you're pregnant?! Why didn't you tell me?!" <<He>> pouts a little<<if !_fatherIsPoppy>>, but then the pout turns into a smile<</if>>.
 	<br><br>
 	<<if _fatherIsPoppy>>
-		"It's yours, okay?" you say.
+		"네 아이야, 알겠어?" 당신이 말한다.
 		<br><br>
 		<<if $fame.sex gte 600>>
 			Poppy gives you a weird look. "I'm not so sure about that. You have a reputation of... sleeping around with other people. I can't trust you with just words alone. A paternity test wouldn't hurt, right?" <<He>> reaches up and tugs a strand of <<his>> own hair free, pressing it into your palm.
@@ -329,7 +329,7 @@ You nod.
 :: Poppy PC Birth Harper
 <<effects>><<endevent "phaseless">><<npc "Poppy">><<person1>><<npc "Harper" 2>><<person2>>
 <<if $poppyPcBirthContext is "flat">>
-	It doesn't take long before you hear a knock.
+	얼마 지나지 않아 노크 소리가 들린다.
 	<br><br>
 	Poppy stands up and opens the door. The only thing you see in the shadow of the doorframe is the silhouette of someone carrying a big bag. "Doctor..." Poppy says.
 	<br><br>
@@ -375,7 +375,7 @@ You awaken in a hospital bed. Several blurry figures move around. One leans clos
 <br><br>
 "Please take a deep breath," <<he>> says.
 <br><br>
-<<link [[Next|Pregnancy Birth Hospital]]>><<endevent>><<set $phase to 1>><</link>>
+<<link [[다음|Pregnancy Birth Hospital]]>><<endevent>><<set $phase to 1>><</link>>
 
 :: Poppy Self Pregnancy Reveal
 <<effects>><<endevent "phaseless">><<npc "Poppy">><<person1>>
@@ -615,7 +615,7 @@ You see Poppy cradling <<if _isMultiple>>babies<<else>>a baby<</if>> in <<his>> 
 	You already know the way to the nursery.
 <</if>>
 <<poppyOpiumPulse>>
-<<link [[Next|Orphanage]]>><<endevent>><</link>>
+<<link [[다음|Orphanage]]>><<endevent>><</link>>
 
 /* ==============================================================
  * Nursery RNG: Poppy & Bailey conversation overheard
@@ -640,7 +640,7 @@ Poppy pulls you towards <<childname>>'s cradle. The two of you look down at the 
 <<He>> reaches <<his>> hand into the cradle to touch <<childname>>'s cheek. You feel your heart melt at the sight.<<llstress>><<stress -6>>
 <<if !$poppySeen>><<set $poppySeen to []>><</if>><<run $poppySeen.pushUnique("nursery_intro")>>
 <<poppyOpiumPulse>>
-<<link [[Next|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>
+<<link [[다음|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>
 
 /* ==============================================================
  * Nursery RNG: Poppy reading storybook (repeatable)
@@ -651,7 +651,7 @@ Poppy pulls you towards <<childname>>'s cradle. The two of you look down at the 
 <<if _poppyChildIds.length gt 0>><<childSelect _poppyChildIds[0]>><</if>>
 You step into the nursery to find Poppy sitting on the ground with <<childname>> in <<his>> lap, reading a children's storybook. The sight of them fills you with unadulterated joy.<<llstress>><<stress -8>><<ltrauma>><<trauma -4>>
 <<poppyOpiumPulse>>
-<<link [[Next|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>
+<<link [[다음|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>
 
 /* ==============================================================
  * Dismissed-Poppy nursery event (one-shot)
@@ -696,4 +696,4 @@ With a sigh, Poppy pats you on the shoulder. "Take good care of the <<if _isMult
 Poppy finally leaves. You feel like you could finally breathe again.
 <<run $poppySeen.pushUnique("nursery_dismissed")>>
 <<poppyOpiumPulse>>
-<<link [[Next|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>
+<<link [[다음|$childPassageExit]]>><<unset $childPassageExit>><<endevent>><</link>>

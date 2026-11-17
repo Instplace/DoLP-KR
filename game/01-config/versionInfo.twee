@@ -7,7 +7,7 @@
 	<</if>>
 
 	<<if StartConfig.sneaky>>
-		<h4 class="orange">SNEAKY BUILD</h4>
+		<h4 class="orange">비공식 버전</h4>
 	<</if>>
 <</widget>>
 

@@ -19,7 +19,7 @@ You ask Poppy for help and make an effort to focus properly.
 <br><br>
 "Alright," Poppy clasps <<his>> hands together. "If you have any more questions, feel free to ask River or me during class, okay?" <<He>> sends you on your way.
 <<poppyOpiumPulse>>
-<<getouticon>><<link [[Leave|Hallways]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 
 :: Housekeeping Classroom Poppy Help Daydream
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
@@ -32,7 +32,7 @@ You straighten your posture and try to focus, but your mind refuses to listen. I
 <br><br>
 "Alright," Poppy clasps <<his>> hands together. "If you have any more questions, feel free to ask River or me during class, okay?" <<He>> sends you on your way.
 <<poppyOpiumPulse>>
-<<getouticon>><<link [[Leave|Hallways]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 
 :: Housekeeping Classroom Poppy Kiss
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
@@ -92,7 +92,7 @@ You kiss Poppy on the lips this time, and <<he>> leans into it. You hear the fai
 <br><br>
 <<He>> gives you a light reprimand. You leave the housekeeping classroom, unspanked.
 <<clotheson>><<endcombat>>
-<<getouticon>><<link [[Leave|Hallways]]>><</link>>
+<<getouticon>><<link [[나간다|Hallways]]>><</link>>
 
 :: Housekeeping Classroom Poppy Apologise
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
@@ -101,7 +101,7 @@ You apologise to Poppy for your behaviour. <<His>> hand slides away from beside 
 <br><br>
 <<He>> gives you a light reprimand. You leave the housekeeping classroom, unspanked.
 <<poppyOpiumPulse>>
-<<getouticon>><<link [[Leave|Hallways]]>><<endevent>><</link>>
+<<getouticon>><<link [[떠난다|Hallways]]>><<endevent>><</link>>
 
 :: Housekeeping Lesson Focus Poppy Yes
 <<set $outside to 0>><<set $location to "school">><<schooleffects>><<effects>>
@@ -128,7 +128,7 @@ You apologise to Poppy for your behaviour. <<His>> hand slides away from beside 
 <<if $phase is 1>>
 	<<endevent>><<lessonEnd "housekeepingClassroom">>
 <<else>>
-	<<link [[Next|Housekeeping Lesson]]>><<endevent>><</link>>
+	<<link [[다음|Housekeeping Lesson]]>><<endevent>><</link>>
 <</if>>
 
 :: Housekeeping Lesson Focus Poppy No
@@ -148,7 +148,7 @@ You apologise to Poppy for your behaviour. <<His>> hand slides away from beside 
 <<if $phase is 1>>
 	<<endevent>><<lessonEnd "housekeepingClassroom">>
 <<else>>
-	<<link [[Next|Housekeeping Lesson]]>><<endevent>><</link>>
+	<<link [[다음|Housekeeping Lesson]]>><<endevent>><</link>>
 <</if>>
 
 /* SOUPKITCHEN */
@@ -161,13 +161,13 @@ You rush over to carry some of the dishes from Poppy. Both of you bring them to 
 <br><br>
 Poppy pats your shoulder twice before hurrying off to tend to other tasks. You continue on with your initial work.
 <<poppyOpiumPulse>>
-<<link [[Next|Soup Kitchen]]>><<endevent>><</link>>
+<<link [[다음|Soup Kitchen]]>><<endevent>><</link>>
 
 :: Soup Kitchen Poppy Busy
 <<effects>>
 You tell Poppy that you also have your hands tied at the moment. <<He>> nods with a smile and hurries off to the kitchen.
 <br><br>
-<<link [[Next|Soup Kitchen]]>><<endevent>><</link>>
+<<link [[다음|Soup Kitchen]]>><<endevent>><</link>>
 
 /*
 	Entry point reached from the main :: Hallways passage when:
@@ -202,7 +202,7 @@ You turn to see that it's Poppy.
 With a coy smile, <<he>> walks off as <<his>> tail drags along your arm, leaving you slightly flustered.<<arousal 400>><<garousal>>
 <<if T.poppyLIAvailable>><<npcincr Poppy lust 2>><<glust>><</if>>
 <<poppyOpiumPulse>>
-<<link [[Next|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
 
 /* SHOULDER PASS  (low awareness, no LowPatience) */
 :: Hallways Poppy Shoulder Pass
@@ -214,7 +214,7 @@ You turn to see that it's Poppy.
 <br><br>
 With a coy smile, <<he>> walks off as <<his>> hand drags along your arm, leaving you slightly flustered.
 <<poppyOpiumPulse>>
-<<link [[Next|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
 
 /* SKIPPING CONFRONTATION  (always available, including LowPatience) */
 :: Hallways Poppy Skipping
@@ -225,7 +225,7 @@ You are in the school hallway, you hear someone clears their throat behind you. 
 It would be wise to go back to class.
 <<llove>><<npcincr Poppy love -3>><<npcincr Poppy patience -2>><<lpatience>><<gdelinquency>><<delinquency 3>><<gstress>><<stress 5>>
 <<poppyOpiumPulse>><<detention 1>>
-<<link [[Next|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Hallways]]>><<endevent>><<set $eventskip to 1>><</link>>
 
 
 /*
@@ -243,7 +243,7 @@ It would be wise to go back to class.
 /* FIRST ENCOUNTER */
 :: Bailey's Office Poppy Meeting
 <<effects>><<set $outside to 0>><<run markPoppyInteraction()>>
-You enter Bailey's office and find <<him>> sitting at <<his>> desk.
+당신은 베일리의 사무실로 들어가 <<his>> 책상에 앉아 있는 <<him>>【을를】 발견한다.
 <br><br>
 You find a special guest sitting at the edge of Bailey's desk, facing <<him>>. You recognise those crimson red locks. It's Poppy. Bailey looks at you and scowls.
 <br><br>
@@ -251,7 +251,7 @@ You find a special guest sitting at the edge of Bailey's desk, facing <<him>>. Y
 <br><br>
 Poppy turns <<nnpc_his "Poppy">> head to look at you over <<nnpc_his "Poppy">> shoulder. <<nnpc_He "Poppy">> gives you a slight smile and flicks <<nnpc_his "Poppy">> wrist twice, requesting you to leave.
 <br><br>
-<<main_hall_icon>><<link [[Main hall (0:01)|Orphanage]]>><<pass 1>><<endevent>><</link>>
+<<main_hall_icon>><<link [[중앙 홀 (0:01)|Orphanage]]>><<pass 1>><<endevent>><</link>>
 
 /* REPEAT ENCOUNTER */
 :: Bailey's Office Poppy Repeat
@@ -260,7 +260,7 @@ Bailey and Poppy are inside the office. You can hear them talking but it's too m
 <br><br>
 It's best not to disturb them further.
 <br><br>
-<<main_hall_icon>><<link [[Main hall (0:01)|Orphanage]]>><<pass 1>><<endevent>><</link>>
+<<main_hall_icon>><<link [[중앙 홀 (0:01)|Orphanage]]>><<pass 1>><<endevent>><</link>>
 
 
 /*
@@ -293,7 +293,7 @@ You chat with Poppy as you eat. The pancakes are delicious. Poppy asks you about
 <<if Number($poppyromance) gte 0>>
 	"Ah... I'm stuffed. Time flies by whenever I'm with you." Poppy stands up with a sigh. "Thanks for keeping me company, my love."
 	<br><br>
-	<<He>> kisses you on the cheek. 
+	<<He>>【은는】 당신의 뺨에 키스한다.
 	<br><br>
 	"Remember to come see me again, I'll be waiting. Bye bye now." <<He>> whispers into your ear before leaving with a giggle.<<arousal 200>><<garousal>>
 <<else>>
@@ -322,7 +322,7 @@ You chat with Poppy as you eat. The pancakes are delicious. Poppy asks you about
 :: Temple Poppy Fallen Story Intro
 <<set $outside to 0>><<run markPoppyInteraction()>><<npc Poppy>><<person1>>
 <<if !$poppySeen.includes("temple_fallen_story")>><<set $poppySeen.push("temple_fallen_story")>><</if>>
-You are in the main hall of the temple. Stone walls and pillars tower into darkness. Rows of seats face an altar at the end of the room. 
+당신은 신전의 대전 안에 있다. 돌벽과 기둥들이 어둠 속으로 높이 솟아 있다. 방 끝의 제단을 향해 좌석들이 줄지어 놓여 있다.
 <br><br>
 The usual figure wearing a white cowl is not kneeling at the altar, but rather conversing with <span class="purple">a vixen at a corner of the hall</span>.
 <br><br>
@@ -335,11 +335,11 @@ You see the two of them exchanging a courteous smile before bowing to each other
 :: Temple Poppy Fallen Story Answer
 <<set $outside to 0>><<temple_effects>><<effects>>
 <<if $poppyTempleAnswer is "yes">>
-	You nod.
+	당신은 고개를 끄덕인다.
 <<elseif $poppyTempleAnswer is "no">>
-	You shake your head.
+	당신은 고개를 젓는다.
 <<else>>
-	You remain silent.
+	당신은 침묵을 지킨다.
 <</if>>
 <br><br>
 "You're a fallen angel, were you associated with the temple in the past?" you ask. 
@@ -448,7 +448,7 @@ You take a step back from <<him>>. Poppy takes the hint and doesn't press furthe
 <br><br>
 With a smile and a wave, <<he>> walks off.
 <<poppyOpiumPulse>>
-<<link [[Next|Orphanage]]>><<endevent>><</link>>
+<<link [[다음|Orphanage]]>><<endevent>><</link>>
 
 /*
 	Entry point reached from :: Flats Knock when
@@ -469,7 +469,7 @@ With a smile and a wave, <<he>> walks off.
 "I need someone to tend to the flowers around my place. I'm a very busy <<if C.npc.Poppy.pronoun is "m">>man<<else>>woman<</if>> and always forget to take care of them. I'll pay you £50."
 <<poppyOpiumPulse>><<run markPoppyInteraction()>>
 <<getinicon>><<link [[Accept (1:00)|Flats Poppy Knock Work]]>><<pass 60>><</link>><br>
-<<refuseicon>><<link [[Refuse|Flats]]>><<endevent>><</link>>
+<<refuseicon>><<link [[거절한다|Flats]]>><<endevent>><</link>>
 
 :: Flats Poppy Knock Work
 <<effects>><<set $outside to 0>>
@@ -504,7 +504,7 @@ As you're tending the last pot, Poppy approaches to inspect your work.<<gtending
 You nod, and leave the flat.
 <<poppyOpiumPulse>><<set $poppySafeHouse to 1>>
 <span class="gold"><i>You now have access to Poppy's flat! Except for the bedroom.</i></span><br>
-<<link [[Next|Flats]]>><<endevent>><</link>>
+<<link [[다음|Flats]]>><<endevent>><</link>>
 
 :: Street Poppy Valentines Accept
 <<set $valentines_poppy_flat_accept to 1>><<unset $valentines_poppy_flat_decline>><<unset $valentines_poppy_flat_missed>><<unset $valentines_poppy_flat_done>>

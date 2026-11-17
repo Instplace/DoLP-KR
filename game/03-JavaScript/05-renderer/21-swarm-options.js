@@ -133,7 +133,7 @@ class SwarmCombatMapper {
 	 * @returns {SwarmTypes}
 	 */
 	static getSwarmType() {
-		return T.swarmcreature;
+		return V.swarm.type;
 	}
 
 	/**

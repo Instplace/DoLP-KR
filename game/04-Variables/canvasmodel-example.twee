@@ -1,5 +1,4 @@
 :: Combat Demo Preparation
-
 <<set $demo to $demo or {
 	type: "human",
 	position: "missionary",
@@ -9,24 +8,24 @@
 
 <<endcombat>>
 
-Configure setup for the combat system:<br><br>
+전투 시스템 설정을 구성합니다:<br><br>
 
-Type:
+유형:
 <div>
-	<label><<radiobutton "$demo.type" "human" autocheck>> Human</label>
-	<label><<radiobutton "$demo.type" "animal" autocheck>> Bestial</label>
+	<label><<radiobutton "$demo.type" "human" autocheck>> 인간</label>
+	<label><<radiobutton "$demo.type" "animal" autocheck>> 야수</label>
 </div>
 
-Consent:
+동의:
 <div>
-	<label><<radiobutton "$demo.consent" true autocheck>> Consensual</label>
-	<label><<radiobutton "$demo.consent" false autocheck>> Non-con</label>
+	<label><<radiobutton "$demo.consent" true autocheck>> 합의</label>
+	<label><<radiobutton "$demo.consent" false autocheck>> 비합의</label>
 </div>
 
-Debugging:
+디버깅:
 <div>
-	<label><<radiobutton "$demo.debug" true autocheck>> Enabled</label>
-	<label><<radiobutton "$demo.debug" false autocheck>> Disabled</label>
+	<label><<radiobutton "$demo.debug" true autocheck>> 활성화</label>
+	<label><<radiobutton "$demo.debug" false autocheck>> 비활성화</label>
 </div>
 
 <div id="combat-setup">
@@ -36,18 +35,17 @@ Debugging:
 <<combatdemotools>>
 
 <br>
-<<link [[Start|Combat Demo]]>><<set $sexstart to 1>><</link>>
+<<link [[시작|Combat Demo]]>><<set $sexstart to 1>><</link>>
 <br>
-<<link [[Editor|Canvas Combat Editor]]>><<set $sexstart to 1>><</link>>
+<<link [[에디터|Canvas Combat Editor]]>><<set $sexstart to 1>><</link>>
 <br><br>
-<<link [[Bedroom|Bedroom]]>><</link>>
+<<link [[침실|Bedroom]]>><</link>>
 <br>
-<<link [[Clothing store|Shopping Centre Top]]>><</link>>
+<<link [[의류 상점|Shopping Centre Top]]>><</link>>
 <br>
-<<link [[Forest store|Forest Shop]]>><</link>>
+<<link [[숲속 상점|Forest Shop]]>><</link>>
 
 :: Combat Demo
-
 <<set $demo to $demo or {
 	type: "human",
 	position: "missionary",
@@ -60,10 +58,10 @@ Debugging:
 	<div class="combat-init">
 		<<switch $demo.type>>
 			<<case "human">>
-				<p class="text-muted">Man init</p>
+				<p class="text-muted">인간 초기화</p>
 				<<maninit>>
 			<<case "bestial">>
-				<p class="text-muted">Beast init</p>
+				<p class="text-muted">야수 초기화</p>
 				<<beastCombatInit>>
 		<</switch>>
 		<<if $demo.consent>>
@@ -79,46 +77,46 @@ Debugging:
 
 <<if $demo.type is "tentacles">>
 	<div class="combat-state">
-		<p class="text-muted">State tentacles</p>
+		<p class="text-muted">상태 촉수</p>
 		<<statetentacles>>
 	</div>
 <</if>>
 
 <div class="combat-effects">
-	<p class="text-muted">Effects</p>
+	<p class="text-muted">효과</p>
 	<<effects>>
 </div>
 <div class="combat-effectsman">
-	<p class="text-muted">Effects man</p>
+	<p class="text-muted">효과 인간</p>
 	<<effectsman>>
 </div>
 <div class="combat-man">
 	<<switch $demo.type>>
 		<<case "human">>
-			<p class="text-muted">Man</p>
+			<p class="text-muted">인간</p>
 			<<man>>
 		<<case "bestial">>
-			<p class="text-muted">Beast</p>
+			<p class="text-muted">야수</p>
 			<<beast>>
 	<</switch>>
 </div>
 
 <<if $demo.type.includes("human")>>
 	<div class="combat-state">
-		<p class="text-muted">State man</p>
+		<p class="text-muted">상태 인간</p>
 		<<stateman>>
 	</div>
 <</if>>
 <div class="combat-actions">
-	<p class="text-muted">Animate combat</p>
+	<p class="text-muted">전투 애니메이션</p>
 	<<animateCombat>>
 </div>
 <div class="combat-actions">
-	<p class="text-muted">Actions man</p>
+	<p class="text-muted">행동 인간</p>
 	<<actionsman>>
 </div>
-<span id="next"><<link [[Next|$passage]]>><</link>></span><<nexttext>>
-<<link [[Bedroom|Bedroom]]>>
+<span id="next"><<link [[다음|$passage]]>><</link>></span><<nexttext>>
+<<link [[침실|Bedroom]]>>
 	<<endcombatdemo>>
 <</link>>
 <br><br>
@@ -127,13 +125,13 @@ Debugging:
 <br>
 
 <<if $demo.consent>>
-	<<link [[Set to Rape|$passage]]>>
+	<<link [[강간으로 설정|$passage]]>>
 		<<set $demo.consent to false>>
 		<<endcombat>>
 		<<set $sexstart to 1>>
 	<</link>>
 <<else>>
-	<<link [[Set to Consensual|$passage]]>>
+	<<link [[합의로 설정|$passage]]>>
 		<<set $demo.consent to true>>
 		<<endcombat>>
 		<<set $sexstart to 1>>
@@ -142,17 +140,17 @@ Debugging:
 <br><br>
 
 <<if $position isnot "wall">>
-	<<link [[Set to missionary|$passage]]>>
+	<<link [[정상위로 설정|$passage]]>>
 		<<set $demo.position to "missionary">>
 		<<endcombat>>
 		<<set $sexstart to 1>>
 	<</link>> |
-	<<link [[Set to doggy|$passage]]>>
+	<<link [[후배위로 설정|$passage]]>>
 		<<set $demo.position to "doggy">>
 		<<endcombat>>
 		<<set $sexstart to 1>>
 	<</link>> |
-	<<link [[Don't set position|$passage]]>>
+	<<link [[체위 설정 안 함|$passage]]>>
 		<<set $demo.position to 0>>
 		<<endcombat>>
 		<<set $sexstart to 1>>
@@ -161,7 +159,7 @@ Debugging:
 <</if>>
 
 :: CanvasModel Example
-<<link [[Bedroom]]>><</link>>
+<<link [[침실|Bedroom]]>><</link>>
 <hr>
 
 <!-- "divsex" is cache slot id to preserve layer caches between passages -->
@@ -185,7 +183,6 @@ Debugging:
 <<canvasModelEditor>>
 
 :: Combat Demo Widgets [widget]
-
 <<widget "animateCombat">>
 	<<if !$options.images or !$options.combatImages>>
 		<<exit>>
@@ -286,7 +283,7 @@ Debugging:
 			<<bindCombatDebugControls>>
 			<details>
 				<summary class="d-flex flex-row justify-content-between">
-					<span>Layers</span>
+					<span>레이어</span>
 					<<if CombatEditor.layersChecked>>
 						<input type="checkbox" name="layers" checked />
 					<<else>>
@@ -298,9 +295,9 @@ Debugging:
 				</div>
 			</details>
 			<details>
-				<summary>Main options</summary>
+				<summary>주요 설정</summary>
 				<label class="d-inline-flex flex-column">
-					Position:
+					위치:
 					<<listbox "$position" autoselect>>
 						<<optionsfrom setup.positions>>
 					<</listbox>>
@@ -308,7 +305,7 @@ Debugging:
 
 				<<set _crOverrides.legFrontPosition to PlayerCombatMapper.mapPcToLegFrontPosition(_options)>>
 				<label class="d-inline-flex flex-column">
-					Front leg:
+					앞다리:
 					<<listbox "_crOverrides.legFrontPosition" autoselect>>
 						<<optionsfrom setup.legPositions>>
 					<</listbox>>
@@ -316,7 +313,7 @@ Debugging:
 
 				<<set _crOverrides.legBackPosition to PlayerCombatMapper.mapPcToLegBackPosition(_options)>>
 				<label class="d-inline-flex flex-column">
-					Back leg:
+					뒷다리:
 					<<listbox "_crOverrides.legBackPosition" autoselect>>
 						<<optionsfrom setup.legPositions>>
 					<</listbox>>
@@ -324,7 +321,7 @@ Debugging:
 
 				<<set _crOverrides.animFrames to PlayerCombatMapper.getPcAnimationFrameCount(_options)>>
 				<label class="d-inline-flex flex-column">
-					Frames:
+					프레임:
 					<<listbox "_crOverrides.animFrames" autoselect>>
 						<<option "4" 4>>
 						<<option "2" 2>>
@@ -333,28 +330,29 @@ Debugging:
 
 				<<set _crOverrides.animSpeed to PlayerCombatMapper.getPcAnimationSpeed(_options)>>
 				<label class="d-inline-flex flex-column">
-					Speed:
+					속도:
 					<<listbox "_crOverrides.animSpeed" autoselect>>
-						<<option "VFast" "vfast">>
-						<<option "Fast" "fast">>
-						<<option "Mid" "mid">>
-						<<option "Slow" "slow">>
-						<<option "Idle" "idle">>
+						<<option "매우 빠름" "vfast">>
+						<<option "빠름" "fast">>
+						<<option "보통" "mid">>
+						<<option "느림" "slow">>
+						<<option "대기" "idle">>
 					<</listbox>>
 				</label>
 			</details>
 
 			<details>
-				<summary>Clothing options</summary>
+				<summary>의상 설정</summary>
 				<div class="d-grid grid-auto-2 gap-1">
 					<<for _slot range Object.keys($worn)>>
 						<<set _wornSetup to CombatRenderer.getClothingSetupBySlot(_slot)>>
 						<<set _source to CombatRenderer.getSourceClothing(_slot, _wornSetup)>>
 						<<set _worn to $worn[_slot]>>
-						<<capture _worn, _wornSetup, _source>>
+						<<set _slotKr to window.KR.getClothingSlotKr(_slot)>>
+						<<capture _worn, _wornSetup, _source, _slotKr>>
 							<div class="d-flex flex-column border rounded justify-content-space-between p-1">
 								<label class="d-flex flex-row justify-content-space-between">
-									<<= _slot>>
+									<<= _slotKr>>
 								</label>
 								<label class="d-flex flex-row justify-content-space-between">
 									<<= _wornSetup.name_cap>>
@@ -363,7 +361,7 @@ Debugging:
 									<<= _source.variable>>
 								</label>
 								<label class="d-flex flex-row justify-content-space-between">
-									State:
+									상태:
 									<<listbox "_worn.state" autoselect>>
 										<<optionsfrom setup.clothingStates>>
 									<</listbox>>
@@ -391,16 +389,16 @@ Debugging:
 			<</if>>
 			<<capture _npc>>
 				<div class="p-2 border border-primary">
-					Type: <<- _npc.type>>
-					Sex: <<- _npc.gender>>
-					Appearance: <<- _npc.pronoun>>
+					타입: <<- _npc.type>>
+					성별: <<- _npc.gender>>
+					외형: <<- _npc.pronoun>>
 				</div>
 			<</capture>>
 		<</for>>
 	</div>
 
 	<div class="d-flex flex-vertical">
-		<<button "Add human">>
+		<<button "인간 추가">>
 			<<generateNPC `$NPCList.countWith(a => a.type) + 1`>>
 			<<replace "#combat-setup">>
 				<<combatsetup>>
@@ -409,13 +407,13 @@ Debugging:
 		<<listbox "_animalType" autoselect>>
 			<<optionsfrom $BeastList>>
 		<</listbox>>
-		<<button `"Set " + _animalType`>>
+		<<button `"설정: " + _animalType`>>
 			<<beastNEWinit `$NPCList.countWith(a => a.type) + 1` _animalType>>
 			<<replace "#combat-setup">>
 				<<combatsetup>>
 			<</replace>>
 		<</button>>
-		<<button "Clear">>
+		<<button "초기화">>
 			<<endevent>>
 			<<replace "#combat-setup">>
 				<<combatsetup>>
@@ -425,12 +423,12 @@ Debugging:
 <</widget>>
 
 <<widget "combatdemotools">>
-	Tools:
+	도구:
 	<div>
 		<div id="tools-random-peek">
-			Next random: <<- State.prng.peek(1)>>
+			다음 난수: <<- State.prng.peek(1)>>
 		</div>
-		<<button "Randomly shift RNG">>
+		<<button "RNG 무작위 변경">>
 			<<script>>
 				const iterations = Math.trunc(Math.random() * 1000);
 				for (let index = 0; index < iterations; index++) {
@@ -438,7 +436,7 @@ Debugging:
 				}
 			<</script>>
 			<<replace "#tools-random-peek">>
-				Next random: <<- State.prng.peek(1)>>
+				다음 난수: <<- State.prng.peek(1)>>
 			<</replace>>
 		<</button>>
 	</div>

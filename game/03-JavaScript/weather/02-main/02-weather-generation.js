@@ -13,13 +13,13 @@ Weather.WeatherGeneration = (() => {
 			}
 
 			if (date.timeStamp > lastKeyPointTimestamp) {
-				console.warn(`getWeather: Provided date is after the last key point timestamp.`);
+				console.warn(`getWeather: 제공된 날짜가 마지막 키포인트 타임스탬프보다 뒤에 있습니다.`);
 				return null;
 			}
 
 			if (date.timeStamp < Time.date.timeStamp) {
 				if (V.debug) {
-					console.warn(`getWeather: Provided date is before the current timestamp. Returning the current weather type.`);
+					console.warn(`getWeather: 제공된 날짜가 현재 타임스탬프보다 앞에 있습니다. 현재 날씨 유형을 반환합니다.`);
 				}
 				return interpolateWeather(new DateTime(Time.date));
 			}
@@ -54,7 +54,7 @@ Weather.WeatherGeneration = (() => {
 		if (minutes <= 0) minutes = 1;
 		const weatherTypeIndex = Weather.genSettings.weatherTypes.findIndex(wt => wt.name.toLowerCase() === weatherType.toLowerCase());
 		if (weatherTypeIndex === -1 || V.weatherObj.keypointsArr.length < 1) {
-			console.warn(`Could not set weather. ${weatherType} doesn't exist.`);
+			console.warn(`날씨를 설정할 수 없습니다. ${weatherType}【이가】 존재하지 않습니다.`);
 			return;
 		}
 		delete T.currentTemperature;
@@ -197,7 +197,7 @@ Weather.WeatherGeneration = (() => {
 			const exceptions = setup.WeatherExceptions.filter(exception => {
 				const exceptionDate = exception.date;
 				if (!exceptionDate || typeof exceptionDate !== "function") {
-					throw new Error("Could not read date from setup.WeatherExceptions");
+					throw new Error("setup.WeatherExceptions에서 날짜를 읽을 수 없습니다");
 				}
 				return exceptionDate().dayDifference(date) === 0;
 			});

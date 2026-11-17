@@ -81,3 +81,6 @@ id_rsa.pub
 /testbuild/*
 testbuild.ps1
 *.html
+
+# GitHub Actions (릴리스 빌드)
+!.github

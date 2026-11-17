@@ -1,74 +1,74 @@
 :: Flats Events Knees
 <<effects>>
 
-The <<person1>><<person>> grasps your hair with one hand, and adjusts <<his>> <<print $NPCList[0].clothes.lower.name>> with the other, exposing <<his>>
+<<person1>><<person>>【은는】 한 손으로 당신의 머리카락을 잡고, 다른 손으로 <<his>> <<print $NPCList[0].clothes.lower.name>>【을를】 조정하여 <<his>>
 <<if $NPCList[0].penis isnot "none">>
-	<<print $NPCList[0].penisdesc>>.
+	<<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>.
 <<else>>
-	pussy.
+	보지를.
 <</if>>
-The <<person2>><<person>> and <<person3>><<person>> follow suit. They start masturbating, inches from your face.
+<<person2>><<person>>【와과】 <<person3>><<person>>도 뒤따른다. 그들은 당신의 얼굴에서 몇 인치 떨어진 곳에서 자위를 시작한다.
 <br><br>
 
-"Hold still <<bitch>>," the <<person1>><<person>> says. "You're in our territory, so we're gonna mark you as ours." <<He>> tightens <<his>> grip as they approach orgasm, to make sure you can't escape.
+"가만히 있어, <<bitch>>." <<person1>><<person>>【이가】 말한다. "네가 우리 구역에 있으니, 우리 소유라고 표시할 거야." <<He>>【은는】 그들이 절정에 다다를 때, 당신이 도망치지 못하도록 <<his>> 손아귀에 힘을 준다.
 <br><br>
 
 <<if $NPCList[0].penis isnot "none" and $NPCList[0].strapon is undefined>>
-	Semen erupts from the <<person1>><<persons>> <<print $NPCList[0].penisdesc>>. <<random_semen_head>>
+	정액이 <<person1>><<persons>> <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>에서 분출된다. <<random_semen_head>>
 <<else>>
-	The <<person1>><<persons>> pussy twitches, and squirts. <<random_goo_head>>
+	<<person1>><<persons>> 보지가 경련하며 분출한다. <<random_goo_head>>
 <</if>>
 <br>
 <<if $NPCList[1].penis isnot "none" and $NPCList[0].strapon is undefined>>
-	Semen erupts from the <<person2>><<persons>> <<print $NPCList[1].penisdesc>>. <<random_semen_head>>
+	정액이 <<person2>><<persons>> <<print window.KR.getPenisDescKr($NPCList[1].penisdesc)>>에서 분출된다. <<random_semen_head>>
 <<else>>
-	The <<person2>><<persons>> pussy twitches, and squirts. <<random_goo_head>>
+	<<person2>><<persons>> 보지가 경련하며 분출한다. <<random_goo_head>>
 <</if>>
 <br>
 <<if $NPCList[2].penis isnot "none" and $NPCList[0].strapon is undefined>>
-	Semen erupts from the <<person3>><<persons>> <<print $NPCList[2].penisdesc>>. <<random_semen_head>>
+	정액이 <<person3>><<persons>> <<print window.KR.getPenisDescKr($NPCList[2].penisdesc)>>에서 분출된다. <<random_semen_head>>
 <<else>>
-	The <<person3>><<persons>> pussy twitches, and squirts. <<random_goo_head>>
+	<<person3>><<persons>> 보지가 경련하며 분출한다. <<random_goo_head>>
 <</if>>
 <br><br>
 
-"That should do it," pants the <<person1>><<person>>. <<He>> releases your hair, and the trio walk away.
+"이걸로 됐어." <<person1>><<person>>【이가】 헐떡인다. <<He>>【은는】 당신의 머리카락을 놓고, 세 사람은 걸어간다.
 <br><br>
 
 <<clotheson>>
 <<endcombat>>
 
-<<link [[Next|Flats]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<set $eventskip to 1>><</link>>
 <br>
 
 
 :: Flats Events Scream
 <<effects>>
 
-You scream for help. The <<person>> shoves you against the wall. "Expecting coppas?" <<he>> asks.
+당신은 도움을 청하며 비명을 지른다. <<person>>【은는】 당신을 벽으로 밀친다. "경찰이라도 기대했나?" <<he>>【이가】 묻는다.
 <br><br>
 
 <<if Time.dayState isnot "night">>
 	<<generate4>><<person4>>
-	"No one's—"
+	"아무도—"
 	<br><br>
-	<span class="teal">A door opens down the hallway,</span> and a <<person>> pokes <<his>> head out. "You fucking kids again," <<he>> says. "Scram, or I'll call the police."
+	<span class="teal">복도 아래에서 문이 열린다,</span> 그리고 한 <<person>>【이가】 <<his>> 머리를 내민다. "또 너희 망할 꼬맹이들이냐." <<he>>【이가】 말한다. "꺼져, 아니면 경찰 부를 거야."
 	<br><br>
-	The <<person1>><<person>> gives you a sneering glance, then leaves you be.
+	<<person1>><<person>>【은는】 당신에게 경멸적인 시선을 던지고는 당신을 내버려 둔다.
 	<br><br>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	"No one's gonna help you."
+	"아무도 널 도와주지 않을 거야."
 	<br><br>
 
-	<i>People are rarely willing to investigate screams at night.</i>
+	<i>사람들은 밤에 비명소리를 조사하려 하지 않는다.</i>
 	<br><br>
 
-	<<link [[Get on your knees|Flats Events Knees]]>><<sub 1>><</link>>
+	<<link [[무릎을 꿇는다|Flats Events Knees]]>><<sub 1>><</link>>
 	<br>
-	<<link [[Fight|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
+	<<link [[싸운다|Flats Events Fight]]>><<def 1>><<set $fightstart to 1>><</link>>
 	<br>
 <</if>>
 
@@ -93,53 +93,53 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <<actionsman>>
 
 <<if _combatend or ($pain gte 100 and $willpowerpain is 0) or $rescue is 1 and $alarm is 1>>
-	<span id="next"><<link [[Next|Flats Events Fight Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Fight Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Flats Events Fight]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Fight]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Flats Events Fight Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	They're too drained to stop you escaping.
+	그들은 너무 지쳐서 당신이 도망치는 것을 막을 수 없다.
 	<br><br>
-	<<tearful>> you run up a staircase, and take cover around a random corner.
+	<<tearful>> 당신은 계단을 뛰어 올라가 아무 모퉁이에 숨는다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 
 <<elseif $enemyhealth lte 0>>
-	The trio back away from you. "Crazy <<bitch>>," the <<person1>><<person>> says. They walk away.
+	세 사람은 당신에게서 물러선다. "미친 <<bitch>>." <<person1>><<person>>【이가】 말한다. 그들은 걸어간다.
 	<<famescrap 3>>
 	<br><br>
-	<<tearful>> you gather yourself.
+	<<tearful>> 당신은 정신을 차린다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<elseif $rescue is 1>>
 	<<generate4>><<person4>>
-	<span class="teal">A door opens down the hallway,</span> and a <<person>> pokes <<his>> head out. "You fucking kids again," <<he>> says. "Scram, or I'll call the police."
+	<span class="teal">복도 아래에서 문이 열린다,</span> 그리고 한 <<person>>【이가】 <<his>> 머리를 내민다. "또 너희 망할 꼬맹이들이냐." <<he>>【이가】 말한다. "꺼져, 아니면 경찰 부를 거야."
 	<br><br>
-	The <<person1>><<person>> gives you a sneering glance, then the trio leave you be.
+	<<person1>><<person>>【은는】 당신에게 경멸적인 시선을 던지고는 세 사람은 당신을 내버려 둔다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	<<tearful>> you fall to the ground. You're too hurt to continue fighting.
+	<<tearful>> 당신은 땅에 쓰러진다. 너무 다쳐서 계속 싸울 수 없다.
 	<br><br>
-	The <<person1>><<person>> grabs your hair, and pulls you to your knees.
+	<<person1>><<person>>【은는】 당신의 머리카락을 잡고 무릎을 꿇린다.
 	<br><br>
-	<<link [[Next|Flats Events Knees]]>><</link>>
+	<<link [[다음|Flats Events Knees]]>><</link>>
 	<br>
 <</if>>
 
@@ -147,62 +147,60 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <<effects>>
 
 <<if $physiqueSuccess>>
-	You smack the <<persons>> face. <span class="green"><<He>> recoils from the blow,</span> trips, and tumbles down the stairs.<<ltrauma>><<trauma -6>>
+	당신은 <<persons>> 얼굴을 때린다. <span class="green"><<He>>【은는】 그 충격에 움찔하며,</span> 발을 헛디뎌 계단 아래로 굴러떨어진다.<<ltrauma>><<trauma -6>>
 	<br><br>
 
-	<<He>> staggers to <<his>> feet, and limps away.
+	<<He>>【은는】 비틀거리며 일어나 절뚝거리며 사라진다.
 	<br><br>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	You try to slap the <<person>>, <span class="red">but <<he>> grasps your wrist,</span> and uses the momentum to bend you over the bannister.
+	당신은 <<person>>【을를】 때리려 하지만, <span class="red"><<he>>【은는】 당신의 손목을 잡는다,</span> 그리고 그 기세를 이용해 당신을 난간 위로 구부린다.
 	<br><br>
-	<<link [[Next|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <</if>>
-
 
 :: Flats Events Stomp
 <<effects>>
 
 <<if $physiqueSuccess>>
-	You stomp on the <<persons>> foot. <span class="green"><<He>> releases you with a cry,</span> trips, and tumbles down the stairs.<<ltrauma>><<trauma -6>>
+	당신은 <<persons>> 발을 밟는다. <span class="green"><<He>>【은는】 비명을 지르며 당신을 놓아주고,</span> 발을 헛디뎌 계단 아래로 굴러떨어진다.<<ltrauma>><<trauma -6>>
 	<br><br>
 
-	<<He>> staggers to <<his>> feet, and limps away.
+	<<He>>【은는】 비틀거리며 일어나 절뚝거리며 사라진다.
 	<br><br>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	You stomp on the <<persons>> foot. <<He>> grimaces, <span class="red">but grips you with more force.</span> "Nice try." <<He>> bends you over the bannister.
+	당신은 <<persons>> 발을 밟는다. <<He>>【은는】 얼굴을 찡그리지만, <span class="red">더 강한 힘으로 당신을 붙잡는다.</span> "좋은 시도야." <<He>>【은는】 당신을 난간 위로 구부린다.
 	<br><br>
 
-	<<link [[Next|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <</if>>
 
 :: Flats Events Endure
 <<effects>>
 
-<<He>> <<if $worn.face.type.includes("mask")>>pulls your mask aside and <</if>>pushes <<his>> lips against yours, tongue-first. It worms and twists into your mouth.<<takeKissVirginity $NPCList[0] rape>>
+<<He>>【은는】 <<if $worn.face.type.includes("mask")>>당신의 가면을 옆으로 당기고 <</if>><<his>> 입술을 당신의 입술에 혀부터 밀어붙인다. 그것은 당신의 입 안에서 꿈틀거리며 뒤틀린다.<<takeKissVirginity $NPCList[0] rape>>
 <br><br>
-<<He>> pulls away, leaving a connecting thread of saliva,
+<<He>>【은는】 뒤로 물러나며, 타액 한 줄이 이어진다,
 <<if random(1, 2) is 2>>
-	<span class="green">then releases you.</span> <<He>> walks away without another glance.
+	<span class="green">그리고 당신을 놓아준다.</span> <<He>>【은는】 다시는 쳐다보지도 않고 걸어간다.
 	<br><br>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	<span class="red">and bends you over the bannister.</span>
+	<span class="red">그리고 당신을 난간 위로 구부린다.</span>
 	<br><br>
 
-	<<link [[Next|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Flats Events Rape]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <</if>>
-
 
 :: Flats Events Rape
 <<if $molestationstart is 1>>
@@ -226,46 +224,45 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Flats Events Rape Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Rape Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Flats Events Rape]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Rape]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Flats Events Rape Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	<<He>> walks away without looking back.
+	<<He>>【은는】 뒤도 돌아보지 않고 걸어간다.
 	<br><br>
-	<<tearful>> you gather yourself.
+	<<tearful>> 당신은 정신을 차린다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-
 <<elseif $enemyhealth lte 0>>
-	<<He>> trips and tumbles down the stairs.
+	<<He>>【은는】 발을 헛디뎌 계단 아래로 굴러떨어진다.
 	<br><br>
 
-	<<He>> staggers to <<his>> feet, and limps away.
+	<<He>>【은는】 비틀거리며 일어나 절뚝거리며 사라진다.
 	<br><br>
 
-	<<tearful>> you gather yourself.
+	<<tearful>> 당신은 정신을 차린다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
 <<else>>
 	<<set $rescued += 1>>
-	"What the fuck is going on down there?" shouts a voice from above. The <<person>> pulls away from you, throws an anxious glance up the stairwell, then hurries in the opposite direction.
+	"거기 아래서 무슨 지랄이야?" 위에서 목소리가 외친다. <<person>>【은는】 당신에게서 물러나, 계단 위를 불안하게 쳐다보더니, 반대 방향으로 서둘러 간다.
 	<br><br>
-	<<tearful>> you gather yourself.
+	<<tearful>> 당신은 정신을 차린다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
 <</if>>
 
-<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Flats Events Solicit
@@ -282,35 +279,35 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <<seductionskilluptext>>
 <<seductionskilluse>>
 
-"I'm for sale, you know," you say, bending over and giving your <<bottom>> a shake.
+"저 팔아요, 아시죠." 당신은 몸을 숙여 <<bottom>>【을를】 흔들며 말한다.
 <<promiscuity3>>
 
 <<if $seductionrating gte $seductionrequired>>
 
-	The <<persons>> eyes flash. <<His>> phone starts ringing, <span class="green">but <<he>> ignores it.</span> "My flat's this way."
+	<<persons>> 눈이 번뜩인다. <<His>> 전화가 울리기 시작하지만, <span class="green"><<he>>【은는】 그것을 무시한다.</span> "우리 집은 이쪽이야."
 	<br><br>
-	<<He>> leads you down the hall, and holds the door open for you to enter first.
+	<<He>>【은는】 당신을 복도 아래로 이끌고, 당신이 먼저 들어가도록 문을 열어준다.
 
 	<<if $rng gte 81>>
-		The room is dimly lit, and it takes a moment for your eyes to adjust, and for you to notice the BDSM paraphernalia covering the walls.
+		방은 어둡게 불이 켜져 있고, 당신의 눈이 적응하고 벽을 덮고 있는 BDSM 도구들을 알아차리는 데 잠시 시간이 걸린다.
 		<br><br>
-		The <<person>> grabs you from behind, and bends you over <<his>> knee. "Don't worry," <<he>> says. "I'm in the mood for something light."
+		<<person>>【은는】 뒤에서 당신을 잡고 <<his>> 무릎 위로 당신을 구부린다. "걱정 마." <<he>>【이가】 말한다. "가벼운 걸 하고 싶은 기분이야."
 		<br><br>
 
-		<<link [[Next|Flats Events Solicit Spank]]>><<set $sexstart to 1>><</link>>
+		<<link [[다음|Flats Events Solicit Spank]]>><<set $sexstart to 1>><</link>>
 		<br>
 	<<else>>
-		It's a normal looking flat, if a bit dirty. <<He>> shuts the door behind <<him>>, and gropes you at once.
+		좀 더럽긴 하지만 평범해 보이는 아파트다. <<He>>【은는】 <<him>> 뒤로 문을 닫고, 즉시 당신을 더듬는다.
 		<br><br>
 
-		<<link [[Next|Flats Events Solicit Sex]]>><<set $sexstart to 1>><</link>>
+		<<link [[다음|Flats Events Solicit Sex]]>><<set $sexstart to 1>><</link>>
 		<br>
 	<</if>>
 
 <<else>>
-	The <<persons>> eyes flash, but <<his>> phone starts ringing. <<He>> looks away and answers it. "Yes, honey. I'll be right there." <<He>> puts the phone away, gives you a sheepish look, <span class="red">and walks away.</span>
+	<<persons>> 눈이 번뜩이지만, <<his>> 전화가 울리기 시작한다. <<He>>【은는】 시선을 돌려 전화를 받는다. "응, 자기야. 바로 갈게." <<He>>【은는】 전화를 끊고, 당신에게 멋쩍은 표정을 짓고는, <span class="red">걸어간다.</span>
 	<br><br>
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <</if>>
 
@@ -331,47 +328,46 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <br><br>
 <<actionsman>>
 <<if _combatend>>
-	<span id="next"><<link [[Next|Flats Events Solicit Sex Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Solicit Sex Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Flats Events Solicit Sex]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Solicit Sex]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Flats Events Solicit Sex Finish
-
 <<set $outside to 0>><<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	The <<person1>><<person>> lies on <<his>> sofa, and fishes for cash in <<his>> pocket. "Here you go," <<he>> says. "Buy yourself something nice."
+	<<person1>><<person>>【은는】 <<his>> 소파에 누워 <<his>> 주머니에서 현금을 찾는다. "자, 여기." <<he>>【이가】 말한다. "좋은 거나 사."
 	<br><br>
 	<<if $phase is 1>>
-		You make <<printmoney 5000>><<money 5000 "prostitution">>.
+		당신은 <<printmoney 5000>>【을를】 번다<<money 5000 "prostitution">>.
 	<<elseif $phase is 2>>
-		You make <<printmoney 10000>><<money 10000 "prostitution">>.
+		당신은 <<printmoney 10000>>【을를】 번다<<money 10000 "prostitution">>.
 	<<else>>
-		You make <<printmoney 15000>><<money 15000 "prostitution">>.
+		당신은 <<printmoney 15000>>【을를】 번다<<money 15000 "prostitution">>.
 	<</if>>
 	<br><br>
-	<<tearful>> you leave the flat.
+	<<tearful>> 당신은 아파트를 떠난다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<elseif $enemyhealth lte 0>>
-	The <<person1>><<person>> falls back on <<his>> sofa, nursing an injury.
+	<<person1>><<person>>【은는】 부상을 입고 <<his>> 소파에 쓰러진다.
 	<br><br>
-	<<tearful>> you run from the flat.
+	<<tearful>> 당신은 아파트에서 도망친다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<else>>
-	"Fucking tease," the <<person1>><<person>> says. <<He>> points to the door with an annoyed glare. "Go, get the hell outta here, and no, you're not getting a penny from me."
+	"씨발, 사람 놀리나." <<person1>><<person>>【이가】 말한다. <<He>>【은는】 짜증 난 눈초리로 문을 가리킨다. "가, 여기서 꺼져, 그리고 아니, 나한테서 한 푼도 못 받을 거야."
 	<br><br>
-	<<tearful>> you exit the flat.
+	<<tearful>> 당신은 아파트를 나간다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <</if>>
 
-<<link [[Next|Flats]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Flats Events Solicit Spank
@@ -392,82 +388,80 @@ You scream for help. The <<person>> shoves you against the wall. "Expecting copp
 <br><br>
 <<actionsman>>
 <<if _combatend or $enemyanger lte 20>>
-	<span id="next"><<link [[Next|Flats Events Solicit Spank Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Solicit Spank Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Flats Events Solicit Spank]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Solicit Spank]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Flats Events Solicit Spank Finish
-
 <<set $outside to 0>><<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	The <<person1>><<person>> lies back on the sofa, leaving your <<bottom>> raw. "That'll do," <<he>> says. <<He>> reaches into <<his>> pocket, and hands you the money.
+	<<person1>><<person>>【은는】 소파에 기대어 눕고, 당신의 <<bottom>>【은는】 새빨갛게 달아오른다. "그걸로 됐어." <<he>>【이가】 말한다. <<He>>【은는】 <<his>> 주머니에 손을 넣어 돈을 건네준다.
 	<br><br>
 	<<if $phase is 1>>
-		You make <<printmoney 5000>><<money 5000 "prostitution">>.
+		당신은 <<printmoney 5000>>【을를】 번다<<money 5000 "prostitution">>.
 	<<elseif $phase is 2>>
-		You make <<printmoney 10000>><<money 10000 "prostitution">>.
+		당신은 <<printmoney 10000>>【을를】 번다<<money 10000 "prostitution">>.
 	<<else>>
-		You make <<printmoney 15000>><<money 15000 "prostitution">>.
+		당신은 <<printmoney 15000>>【을를】 번다<<money 15000 "prostitution">>.
 	<</if>>
 	<br><br>
-	<<tearful>> you leave the flat.
+	<<tearful>> 당신은 아파트를 떠난다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<elseif $enemyhealth lte 0>>
-	The <<person1>><<person>> recoils, and you twist out of <<his>> grasp. <<He>> reaches for a riding crop hanging on the wall, but leans too far on one end of the sofa, toppling it, and <<him>>.
+	<<person1>><<person>>【은는】 움찔하고, 당신은 <<his>> 손아귀에서 벗어난다. <<He>>【은는】 벽에 걸린 승마 채찍을 잡으려 하지만, 소파 한쪽 끝에 너무 기대어 소파와 <<him>> 모두 넘어진다.
 	<br><br>
-	<<tearful>> you leave the flat.
+	<<tearful>> 당신은 아파트를 떠난다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<else>>
-	The <<person1>><<person>> ceases <<his>> assault. "That'll do me," <<he>> says, reaching into <<his>> pocket. <<He>> hands you the money. "You can show yourself out."
+	<<person1>><<person>>【은는】 <<his>> 공격을 멈춘다. "그걸로 됐어." <<he>>【이가】 <<his>> 주머니에 손을 넣으며 말한다. <<He>>【은는】 당신에게 돈을 건네준다. "스스로 나가."
 	<br><br>
 	<<if $phase is 1>>
-		You make <<printmoney 5000>><<money 5000 "prostitution">>.
+		당신은 <<printmoney 5000>>【을를】 번다<<money 5000 "prostitution">>.
 	<<elseif $phase is 2>>
-		You make <<printmoney 10000>><<money 10000 "prostitution">>.
+		당신은 <<printmoney 10000>>【을를】 번다<<money 10000 "prostitution">>.
 	<<else>>
-		You make <<printmoney 15000>><<money 15000 "prostitution">>.
+		당신은 <<printmoney 15000>>【을를】 번다<<money 15000 "prostitution">>.
 	<</if>>
 	<br><br>
-	<<tearful>> you leave the flat.
+	<<tearful>> 당신은 아파트를 떠난다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <</if>>
 
-<<link [[Next|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
+<<link [[다음|Flats]]>><<set $eventskip to 1>><<endevent>><</link>>
 <br>
-
 
 :: Flats Events Ignore
 <<effects>>
 
 <<if $rng gte 11>>
-	You try to ignore the footsteps behind you. <span class="green"><<He>> stops by one of the flats, and enters.</span> It was a coincidence.
+	당신은 뒤에서 들려오는 발소리를 무시하려고 노력한다. <span class="green"><<He>>【은는】 아파트 중 한 곳 옆에 멈춰 서서 들어간다.</span> 우연이었다.
 	<br><br>
 
-	<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+	<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 	<br>
 <<else>>
-	You try to ignore the footsteps behind you, but they seem to be speeding up, getting closer. You glance behind you, just in time to catch the <<person>> break into a run. <<He>> grabs your waist and pins you against the wall.
+	당신은 뒤에서 들려오는 발소리를 무시하려고 하지만, 발소리는 점점 빨라지고 가까워지는 것 같다. 당신이 뒤를 돌아보는 순간, <<person>>【이가】 달려드는 것을 포착한다. <<He>>【은는】 당신의 허리를 잡고 벽에 고정시킨다.
 	<br><br>
 
-	<<link [[Next|Flats Events Rape 2]]>><<set $molestationstart to 1>><</link>>
+	<<link [[다음|Flats Events Rape 2]]>><<set $molestationstart to 1>><</link>>
 	<br>
 <</if>>
 
 :: Flats Events Run
 <<effects>>
 
-You feel a surge of anxiety as you break into a run, worrying that the <<person1>><<person>> will give chase. <<He>> does not, but it takes a while for your pulse to slow.
+당신은 <<person1>><<person>>【이가】 쫓아올까 봐 걱정하며 뛰기 시작하면서 불안감이 치솟는다. <<He>>【은는】 쫓아오지 않지만, 맥박이 느려지는 데는 시간이 좀 걸린다.
 <br><br>
 
-<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Flats Events Rape 2
@@ -492,109 +486,109 @@ You feel a surge of anxiety as you break into a run, worrying that the <<person1
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Flats Events Rape 2 Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Rape 2 Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Flats Events Rape 2]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Flats Events Rape 2]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Flats Events Rape 2 Finish
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	<<He>> leaves you slumped against the wall, and walks away.
+	<<He>>【은는】 당신을 벽에 기대어 쓰러뜨리고 걸어간다.
 	<br><br>
-	<<tearful>> you rise to your feet.
+	<<tearful>> 당신은 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<elseif $enemyhealth lte 0>>
-	You shove the <<person>> against the wall. <<He>> thuds against it, and slumps to the ground.
+	당신은 <<person>>【을를】 벽으로 밀친다. <<He>>【은는】 벽에 부딪혀 땅에 쓰러진다.
 	<br><br>
-	<<tearful>> you make your escape.
+	<<tearful>> 당신은 탈출한다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <<else>>
 	<<set $rescued += 1>>
 	<<generate2>><<person2>>
-	A heavy thud echoes from one of the nearby flats. "Shut the fuck up out there," shouts a <<personssimple>> voice. "Or I'll call the police."
+	근처 아파트 중 한 곳에서 쿵 하는 소리가 울린다. "거기서 닥쳐." <<personssimple>> 목소리가 외친다. "아니면 경찰 부를 거야."
 	<br><br>
-	The <<person1>><<person>> hesitates, then walks away.
+	<<person1>><<person>>【은는】 망설이다가 걸어간다.
 	<br><br>
-	<<tearful>> you struggle to your feet.
+	<<tearful>> 당신은 힘겹게 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 <</if>>
 
-<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>
 
 :: Flats Events Peek
-Morbid curiosity wins against your better judgment. You
+병적인 호기심이 이성을 이겼다. 당신은
 <<if $speech_attitude is "meek">>
-	slowly poke your head out, until only one of your eyes can see the hallway.
+	한쪽 눈으로만 복도가 보일 때까지 천천히 고개를 내민다.
 <<elseif $speech_attitude is "bratty">>
-	slide your back against the wall, turning your head around once you reach the corner.
+	벽에 등을 기대고 미끄러지듯 이동하다가, 모퉁이에 다다르자 고개를 돌린다.
 <<else>>
-	stick your head out and hope the hallway's poor lighting conceals you.
+	복도의 어두운 조명이 당신을 숨겨주길 바라며 고개를 불쑥 내민다.
 <</if>>
 <<promiscuity3>>
 
-The <<person2>><<personsimple>> is obscured by Bailey, but you can see <<his>> arms wrapped around <<person1>><<his>> neck. <<person2>><<His>> hands interchange between caressing shoulders and combing through hair.
-Bailey holds <<him>> by the waist, and keeps <<him>> pinned against
+<<person2>><<personsimple>>【은는】 베일리에 가려져 있었지만, <<his>> 팔이 <<person1>><<his>> 목을 감싸고 있는 것은 볼 수 있었다. <<person2>><<His>> 손은 어깨를 쓰다듬고 머리카락을 쓸어 넘기는 동작을 번갈아 가며 하고 있었다.
+베일리는 <<him>>【을를】 허리로 안아 올리고, <<him>>【을를】 
 <<if $flats_progress gte 2>>
-	<<person1>><<his>> flat's door.
+	<<person1>><<his>> 아파트 문에 밀어붙인다.
 <<elseif $flats_progress is 1>>
-	<span class="purple">the door with the lotus handle.</span>
+	<span class="purple">연꽃 무늬 손잡이가 있는 문</span>에 밀어붙인다.
 <<else>>
-	one of the flat's doors.
+	아파트 문 중 하나에 밀어붙인다.
 <</if>>
 <br><br>
 
-Bailey's lips move across the <<person2>><<personsimple>>'s jawline, revealing <<his>> face.
+베일리의 입술이 <<person2>><<personsimple>>의 턱선을 타고 움직이자, <<his>> 얼굴이 드러난다.
 <<if $bailey_partner is 1>>
-	<span class="blue">It's not the same one you saw last time</span>, but it's just as attractive.
+	<span class="blue">지난번에 본 사람과는 달랐지만</span>, 마찬가지로 매력적이다.
 <<else>>
-	It's an attractive one, but you don't recognise it from town. <<His>> clothes aren't like the styles you see around town either.
+	매력적인 얼굴이었지만, 마을에서는 본 적 없는 사람이다. <<His>> 옷차림 역시 마을에서 흔히 볼 수 있는 스타일이 아니다.
 <</if>>
 <br><br>
 
-<<link [[Next|Flats Events Peek 2]]>><</link>>
+<<link [[다음|Flats Events Peek 2]]>><</link>>
 <br>
 
 :: Flats Events Peek 2
-The <<person2>><<personsimple>> opens <<his>> mouth to speak, but <<his>> words are stolen when Bailey <span class="lewd">presses a knee between <<his>> thighs</span>, leaving a moan way louder than expected in their place. Bailey snickers, and slithers <<person1>><<his>> knee further up, causing <<his>> partner to go weak.
+<<person2>><<personsimple>>【이가】 입을 열어 무언가 말하려 했지만, 베일리가 <span class="lewd"><<his>> 허벅지 사이에 무릎을 밀어 넣자</span> 말이 끊기고 예상보다 훨씬 큰 신음이 새어 나온다. 베일리는 낄낄거리며 <<person1>><<his>> 무릎을 더 위로 밀어 올렸고, 그 바람에 파트너의 몸이 축 늘어진다.
 <br><br>
 
-Bailey fumbles with <<his>> keys until <<he>> opens the door. <<He>> drags the <<person2>><<personsimple>> inside, and then slams it shut.
+베일리는 <<his>> 열쇠를 더듬거리다 이내 문을 연다. <<He>>【은는】 <<person2>><<personsimple>>【을를】 안으로 끌고 들어간 뒤, 문을 쾅 닫는다.
 <br><br>
 
-Surrounded by silence, you realise how heavy your breathing became. <<gtrauma>><<trauma 6>><<garousal>><<arousal 600>>
+적막에 둘러싸이자, 당신은 자신의 숨소리가 얼마나 가빠졌는지 깨닫는다. <<gtrauma>><<trauma 6>><<garousal>><<arousal 600>>
 <br><br>
 
-<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>><<set $bailey_partner to 1>>
+<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>><<set $bailey_partner to 1>>
 <br>
 
 :: Flats Events Hide
-You stay behind the wall and
+당신은 벽 뒤에 머물며
 <<if $speech_attitude is "meek">>
-	close your eyes shut, covering them with both hands.
+	두 손으로 눈을 가리고 질끈 감았다.
 <<elseif $speech_attitude is "bratty">>
-	cover your mouth with both hands, making sure no sound can escape.
+	두 손으로 입을 틀어막아 아무 소리도 새어 나가지 않게 했다.
 <<else>>
-	rest your hands on your chest, your heart races.
+	가슴에 손을 얹었다. 심장이 요동쳤다.
 <</if>>
 <br><br>
 
-You jump through different thoughts to distract yourself from the lewd noises coming a few metres away from you. <span class="lewd">A loud moan startles you</span>, and Bailey's snickering makes you flinch.
+당신은 불과 몇 미터 밖에서 들려오는 음란한 소리에서 주의를 돌리려 이런저런 잡생각을 떠올렸다. <span class="lewd">큰 신음 소리에 깜짝 놀랐고</span>, 베일리의 낄낄거리는 소리에 몸을 움찔했다.
 <br><br>
 
-A pair of keys rattle, followed by a door scraping open. It's slammed shut just as fast.
+열쇠가 달그락거리는 소리에 이어 문이 긁히듯 열리는 소리가 났다. 그리고 곧바로 문이 쾅 닫혔다.
 <br><br>
 
-The silence returns to the hallway, but it takes a few seconds for you to get comfortable enough to look. Once you do, they're already gone. <<gtrauma>><<trauma 6>><<garousal>><<arousal 600>>
+복도에 다시 정적이 찾아왔지만, 다시 내다볼 엄두가 날 때까지는 몇 초의 시간이 걸렸다. 마침내 고개를 내밀었을 때, 그들은 이미 사라지고 없었다. <<gtrauma>><<trauma 6>><<garousal>><<arousal 600>>
 <br><br>
 
-<<link [[Next|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
+<<link [[다음|Flats]]>><<endevent>><<set $eventskip to 1>><</link>>
 <br>

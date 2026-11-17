@@ -4,75 +4,75 @@
 	<<speechPool "Eden">>
 	<<if $player.virginity.anal is "Eden" and $speechAnusVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> speaks. "I know this hurts now, but you'll get used to it soon."
+			<<He>>【이가】 말한다. "지금은 아프겠지만 곧 익숙해질 거다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.oral is "Eden" and $speechOralVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> speaks. "Damn, you feel great. We're definitely doing this more often."
+			<<He>>【이가】 말한다. "제길, 느낌 좋네. 우리 앞으로 더 자주 하게 될 거다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.kiss is "Eden" and $speechKissVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> speaks. "How was that? I'm not done, though."
+			<<He>>【이가】 말한다. "어땠지? 난 아직 안 끝났다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechLINameDrop>>
 		<<switch _loveInterest>>
 			<<case "Black Wolf" "Great Hawk">>
 				<<addSpeechLine "namedrop">>
-					<<He>> speaks. "That thing will tear you apart the first chance it gets! Stay away from it."
+					<<He>>【이가】 말한다. "기회만 생기면 저건 널 갈가리 찢어버릴 거다. 피해 다녀."
 				<</addSpeechLine>>
 			<<case "Gwylan">>
 				<<addSpeechLine "namedrop">>
-					<<He>> freezes. "That damned witch is trying to steal you from me, too?"
+					<<He>>【이가】 굳는다. "그 망할 마녀도 널 내게서 빼앗으려 드는 건가?"
 				<</addSpeechLine>>
 			<<default>>
 				<<addSpeechLine "namedrop">>
-					<<He>> speaks. "Whoever that is, forget them." <<He>> sounds hurt.
+					<<He>>【이가】 말한다. "그게 누구든, 잊어버려." <<He>>【이가】 상처받은 목소리로 말한다.
 				<</addSpeechLine>>
 		<</switch>>
 	<</if>>
 	<<if $speechNoticeSexToy>>
 		<<addSpeechLine "sexToy">>
-			<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
-			Eden looks at your $_sexToy. "Toys like that aren't necessary," <<he>> says. "They might even get in the way."
+			<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
+			에덴이 당신의 $_sexToy【을를】 쳐다본다. "이런 건 필요 없어." <<he>>【이가】 말한다. "방해만 된다."
 		<</addSpeechLine>>
 	<</if>>
 	<<if ($speechPenisVirgin is 1 and $player.virginity.penile is "Eden") or ($speechVaginaVirgin is 1 and $player.virginity.vaginal is "Eden")>>
 		<<addSpeechLine "virginity">>
-			<<He>> speaks. "I felt your virginity. I couldn't help it. I needed to take you."
+			<<He>>【이가】 말한다. "네 순결을 느꼈다. 어쩔 수 없었어. 널 취해야 했으니까."
 		<</addSpeechLine>>
 	<</if>>
 	<<speechSay>>
 	<<if $daily.eden.huntCaught gte 1>>
 		<<switch $daily.eden.huntCaught>>
-			<<case 1>> "How dare they touch you?" Eden growls.
-			<<case 2>> "You belong to me," Eden snaps.
-			<<case 3>> "You're mine," Eden says. "Only mine."
-			<<case 4>> "I'm the only one who's allowed to do this to you," Eden says.
-			<<case 5>> "If anyone else lays their hands on you," Eden says, "they're dead."
-			<<case 6>> "Only I can touch you like this," Eden seethes.
-			<<case 7>> "Say it," Eden growls. "Tell me that you're mine."
-			<<case 8>> "You're my possession," Eden says. "Mine alone."
-			<<case 9>> "Don't forget who you belong to," Eden says.
-			<<case 10>> "I own every single part of you," Eden growls.
+			<<case 1>> "누가 감히 널 건드려?" 에덴이 으르렁거린다.
+			<<case 2>> "넌 내 거야." 에덴이 쏘아붙인다.
+			<<case 3>> "넌 내 거다." 에덴이 말한다. "나만의 것."
+			<<case 4>> "너한테 이럴 수 있는 건 나뿐이야." 에덴이 말한다.
+			<<case 5>> "누구든 네 몸에 손을 댄다면," 에덴이 말한다. "다 죽은 목숨이다."
+			<<case 6>> "오직 나만이 널 이렇게 안을 수 있다." 에덴이 속을 끓이며 말한다.
+			<<case 7>> "말해." 에덴이 으르렁거린다. "넌 내 거라고."
+			<<case 8>> "넌 내 소유다." 에덴이 말한다. "나만의 소유."
+			<<case 9>> "네 주인이 누군지 잊지 마." 에덴이 말한다.
+			<<case 10>> "네 머리카락 한 올까지도 다 내 거다." 에덴이 으르렁거린다.
 		<</switch>>
 		<<set $daily.eden.huntCaught to ($daily.eden.huntCaught + 1) % 11>>
 		<<unset _noNameComment>>
 	<</if>>
 	<<if $daily.eden.robinCrash gte 1>>
 		<<switch $daily.eden.robinCrash>>
-			<<case 1>> "<<nnpc_He "Robin">> can't protect you," Eden snarls.
-			<<case 2>> "Only I can," Eden says.
-			<<case 3>> "I'm the one who provides for you," Eden says.
-			<<case 4>> "I'm the one who cares for you," Eden shouts.
-			<<case 5>> "<<nnpc_He "Robin">> didn't rescue you from the town," Eden sneers, "I did."
-			<<case 6>> "You're the only one I need," Eden says.
-			<<case 7>> "And I'm the only one you need," Eden says.
-			<<case 8>> "Everyone else is just noise," Eden says.
-			<<case 9>> "I'm never going to let you go," Eden says.
-			<<case 10>> "You belong to me and only me," Eden growls. "I'll make sure you forget about everyone else. "
+			<<case 1>> "<<nnpc_He "Robin">> 따위가 널 지킬 순 없다." 에덴이 으르렁거린다.
+			<<case 2>> "오직 나만이 널 지킨다." 에덴이 말한다.
+			<<case 3>> "너를 먹여 살리는 건 나다." 에덴이 말한다.
+			<<case 4>> "널 돌보는 건 나라고," 에덴이 소리친다.
+			<<case 5>> "<<nnpc_He "Robin">>【이가】 마을에서 널 구해낸 게 아냐," 에덴이 코웃음 친다. "내가 구했지."
+			<<case 6>> "내겐 너뿐이다." 에덴이 말한다.
+			<<case 7>> "그리고 넌 나만 있으면 된다." 에덴이 말한다.
+			<<case 8>> "다른 놈들은 그저 소음에 불과해." 에덴이 말한다.
+			<<case 9>> "절대 널 놓아주지 않겠다." 에덴이 말한다.
+			<<case 10>> "너는 오직 내 거다." 에덴이 으르렁거린다. "다른 놈들은 머릿속에서 완전히 지워주마."
 		<</switch>>
 		<<set $daily.eden.robinCrash to ($daily.eden.robinCrash + 1) % 11>>
 		<<unset _noNameComment>>

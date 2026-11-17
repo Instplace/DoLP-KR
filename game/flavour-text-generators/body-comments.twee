@@ -27,109 +27,109 @@
 
 	/* big pp */
 	<<set _big_penis_affection to [
-		"giddyup horsey,",
-		"like a fucking horse,",
-		"you're so big, you might break me,",
-		"you're huge,",
-		"I bet bigger tastes better,"
+		"이랴, 이랴,",
+		"씨발 말 같다니까,",
+		"너무 커, 날 망가뜨릴지도 몰라,",
+		"엄청 크네,",
+		"큰 게 더 맛있다니까,"
 	]>>
 	<<set _big_penis_size_remarks to [
-		"I've seen ponies smaller than that,",
-		"that is ginormous,",
-		"that's massive,",
-		"it's so big,"
+		"저것보다 작은 조랑말도 본 적 있어,",
+		"그거 정말 어마어마하네,",
+		"거대하네,",
+		"너무 커,"
 	]>>
 	<<set _big_penis_surprise to [
-		"how the hell are you that hung?",
-		"oh my god, it's ginormous,",
-		"I've never in my life seen a dick that big,",
-		"oh wow, that is huge,",
-		"Jesus fucking Christ that's big,",
-		"wow, you're hung like a horse,",
-		"it's so big!"
+		"도대체 어떻게 그렇게 큰 거야?",
+		"세상에, 어마어마하게 크잖아,",
+		"내 평생 그렇게 큰 좆은 본 적이 없어,",
+		"오 와우, 정말 거대하네,",
+		"씨발 세상에 존나 크네,",
+		"와우, 말자지 같잖아,",
+		"너무 커!"
 	]>>
 	<<set _big_penis_question_use to [
-		"can that massive thing even fit inside anyone?",
-		"how the hell do you even get something like that inside you?",
-		"can you even get hard without passing out with a dick that big?"
+		"그렇게 거대한 게 사람 안에 들어가긴 해?",
+		"대체 저런 걸 어떻게 네 몸 안에 집어넣는 거야?",
+		"그렇게 큰 좆으로 기절하지 않고 발기할 수는 있는 거야?"
 	]>>
 	/* normal pp */
 
 	<<set _normal_penis_size_remarks to [
-		"I prefer bigger ones, myself,",
-		"not the biggest I've ever seen,",
-		"I'm glad it's not too small,",
-		"it's just the right size to suck,",
-		"such a perfect size,"
+		"난 더 큰 게 취향인데,",
+		"내가 본 것 중에 제일 큰 건 아니네,",
+		"너무 작지 않아서 다행이야,",
+		"빨기 딱 좋은 크기네,",
+		"아주 완벽한 크기야,"
 	]>>
 
 	<<set _normal_penis_affection to [
-		"that cock is perfect decoration,",
-		"I want a picture of that penis,",
-		"that penis is adorable,",
-		"that cock looks tasty,",
-		"I've never seen a cock so cute,"
+		"그 좆은 장식품으로 딱이네,",
+		"그 자지 사진 하나 찍고 싶은데,",
+		"그 자지 참 사랑스럽네,",
+		"그 좆 맛있어 보이는데,",
+		"이렇게 귀여운 좆은 본 적이 없어,"
 	]>>
 
 	/* smol pp */
 	<<set _small_penis_affection to [
-		"what a cute little dick,",
-		"what a cute little dicklet,",
-		"Such a small and cute penis,",
-		"it's so small and cute,",
-		"what an adorable penis,"
+		"정말 귀엽고 작은 좆이네,",
+		"정말 귀엽고 앙증맞은 좆이네,",
+		"정말 작고 귀여운 자지야,",
+		"정말 작고 귀여워,",
+		"참 사랑스러운 자지네,"
 	]>>
 	<<set _small_penis_size_remarks to [
-		"it's tiny,",
-		"it's smaller than my finger,",
-		"it's so small,",
-		"I've seen flash drives bigger than that,",
-		"I've seen batteries bigger than that,"
+		"완전 쥐좆만 해,",
+		"내 손가락보다 작잖아,",
+		"너무 작아,",
+		"저것보다 큰 USB도 본 적 있어,",
+		"저것보다 큰 건전지도 본 적 있어,"
 	]>>
 	<<set _small_penis_surprise to [
-		"how the hell are you that small?",
-		"I thought <<pher>> penis would be bigger,",
-		"oh my god, it's tiny,",
-		"oh my god, it's smaller than my finger,",
-		"<<pShes>> so small!"
+		"도대체 어떻게 그렇게 작은 거야?",
+		"<<pher>> 자지는 더 클 줄 알았는데,",
+		"세상에, 완전 쥐좆만 해,",
+		"세상에, 내 손가락보다 작잖아,",
+		"<<pShes>> 너무 작아!"
 	]>>
 	<<set _small_penis_insult to [
-		"what a pathetic little shrimp dick,",
-		"nice dick, loser,"
+		"정말 한심할 정도로 작은 새우좆이네,",
+		"좆 참 훌륭하다, 패배자야,"
 	]>>
 	<<set _small_penis_question_use to [
-		"well you're not much good down there, are you?",
-		"who exactly are you planning on fucking with that tiny thing?"
+		"거기 아래는 별 볼 일 없는 모양이네?",
+		"그 조그만 걸로 도대체 누구한테 박겠다는 거야?"
 	]>>
 	<<set _small_penis_assert_useless to [
-		"a dick that small belongs in chastity, you're not going to be using it anyway,",
-		"oh my god, that little thing should be locked up,"
+		"그렇게 작은 좆은 정조대에 채워둬야 해. 어차피 쓰지도 못할 텐데,",
+		"세상에, 그 앙증맞은 건 잠가둬야겠네,"
 	]>>
 
 	/* micro pp */
 	<<set _micropenis_size_remarks to [
-		"that looks more like a swollen clit than a dick,",
-		"I've seen coins bigger than that,",
-		"It's so cute and tiny,"
+		"좆보다는 부어오른 클리토리스 같은데,",
+		"저것보다 큰 동전도 본 적 있어,",
+		"너무 귀엽고 쪼그만하네,"
 	]>>
 	<<set _micropenis_surprise to [
-		"how the hell are you so tiny?",
-		"<<pShes>> so tiny!",
-		"it's so tiny!",
-		"oh my god, it's like an acorn,",
-		"I can't believe it's so tiny,"
+		"도대체 어떻게 그렇게 조그마해?",
+		"<<pShes>> 너무 조그마해!",
+		"정말 조그마해!",
+		"세상에, 도토리 같잖아,",
+		"이렇게 쪼그마하다니 믿을 수가 없어,"
 	]>>
 	<<set _micropenis_insult to [
-		"no amount of oral is making up for that,",
-		"nice little willy you've got, try not to hurt anyone with it,",
-		"I've never seen such a pathetic penis,"
+		"입으로 아무리 해 줘도 만회가 안 되겠네,",
+		"앙증맞은 고추네, 그걸로 누구 다치게 하지 않게 조심해,",
+		"이렇게 한심한 자지는 본 적이 없어,"
 	]>>
 	<<set _micropenis_question_use to [
-		"can that little dick of yours even get inside a woman?"
+		"그 조그만 좆으로 여자 몸 안에 들어갈 수나 있어?"
 	]>>
 	<<set _micropenis_assert_useless to [
-		"there's no way a dick that small could ever please anyone,",
-		"Christ, I would be surprised if that could get past someone's lips,"
+		"그렇게 작은 좆으로 누굴 만족시킬 리가 없잖아,",
+		"맙소사, 그게 누구 입술 사이에라도 들어가면 놀랍겠네,"
 	]>>
 
 	<<set _big_penis_all to []>>
@@ -277,7 +277,7 @@
 <</widget>>
 
 <<widget "pillorypeniscomment">>
-	<<Penisremarkquote>> a person in the crowd yells.
+	<<Penisremarkquote>> 군중 속 누군가가 소리친다.
 	<<trauma 5>><<gtrauma>>
 	<<incgpenisinsecurity>>
 	<br><br>

@@ -31,13 +31,13 @@
 	<br><br>
 
 	<<if !_exhibitionismCheck>>
-		<<insufficientStat "exhibitionism" "to keep standing around in such an exposed state">>
+		<<insufficientStat "exhibitionism" "심하게 노출한 상태로 서있기엔">>
 		<br>
-		<<link [[Return to the beach|Beach]]>><<set $bus to "beach">><</link>>
+		<<link [[해변으로 돌아간다|Beach]]>><<set $bus to "beach">><</link>>
 	<<else>>
-		<<link [[Wait for a bite (0:05)|Fishing Beach Wait Loop]]>><<pass 5>><</link>>
+		<<link [[입질을 기다린다 (0:05)|Fishing Beach Wait Loop]]>><<pass 5>><</link>>
 		<br>
-		<<link [[Return to the beach|Beach]]>><<set $eventskip to 1>><<set $bus to "beach">><</link>>
+		<<link [[해변으로 돌아간다|Beach]]>><<set $eventskip to 1>><<set $bus to "beach">><</link>>
 	<</if>>
 <</if>>
 
@@ -46,7 +46,7 @@
 	<<baitMobileDropdown>>
 <<elseif $options.images isnot 1>>
 	<br>
-	<<link "Change bait">><<run openBaitOverlay()>><</link>>
+	<<link "미끼를 바꾼다">><<run openBaitOverlay()>><</link>>
 <</if>>
 
 <<fishingBeachDebugLinks>>
@@ -64,7 +64,7 @@
 		<<run fishingMinigameStart($fishingHookedFish.type)>>
 		<<include "Fishing Beach Minigame Loop">>
 	<<else>>
-		You feel a tug on your line as <<a $fishingHookedFish.type>><<if _isPreferredBait>> greedily<</if>> <<if $fishing.currentBait>>takes the bait<<else>>takes the hook<</if>>. You haul back on the line and pull it out of the water without a fight.
+		<<= setup.foodstuff[$fishingHookedFish.type].name>>【이가】 <<if _isPreferredBait>> 게걸스럽게<</if>> <<if $fishing.currentBait>>미끼를<<else>>낚싯바늘을<</if>> 물자 낚싯줄이 팽팽해지는 것이 느껴진다. 낚싯줄을 힘껏 당겨 녀석과 힘겨루기할 틈도 주지 않고 물 밖으로 건져 올린다.
 		<<onFishCaught>>
 		<<fishingCatchFishText $fishingHookedFish>>
 		<br><br>
@@ -185,15 +185,13 @@
 <</addinlineevent>>
 <<runeventpool>>
 
-
-
 :: Fishing Beach Cat Eat
 <<effects>>
-You open wide and drop the whole $fishingHookedFish.type in your mouth. <<fishingEatFishTfProgress>><<lstress>><<stress -6>>
+당신은 입을 크게 벌리고 <<= setup.foodstuff[$fishingHookedFish.type].name>>【을를】 통째로 밀어 넣는다. <<fishingEatFishTfProgress>><<lstress>><<stress -6>>
 <<unset $fishingHookedFish>>
 <br><br>
 
-<<link [[Next|Fishing Beach Wait]]>><<set $fishingAmbientOverride to "castOut">><</link>>
+<<link [[다음|Fishing Beach Wait]]>><<set $fishingAmbientOverride to "castOut">><</link>>
 
 :: Widgets Fishing Beach Wait Flavour [widget]
 <<widget "fishingBeachAmbient">>
@@ -205,29 +203,29 @@ You open wide and drop the whole $fishingHookedFish.type in your mouth. <<fishin
 <<widget "fishingBeachWaitAmbient">>
 	<<if $fishingAmbientOverride is "throwBack">>
 		<<if $fishing.currentBait>>
-			You toss the fish back into the sea before <<fishingRebaitMid>>
+			당신은 <<fishingRebaitMid>> 물고기를 다시 바다로 던진다.
 		<<else>>
-			You toss the fish back into the sea and cast back out.
+			당신은 물고기를 바다로 던져 넣고 다시 낚싯줄을 던진다.
 		<</if>>
 	<<elseif $fishingAmbientOverride is "stowAway">>
 		<<if $fishing.currentBait>>
-			You stow the fish away before <<fishingRebaitMid>>
+			당신은 <<fishingRebaitMid>> 물고기를 챙겨 둔다.
 		<<else>>
-			You stow the fish away and cast back out.
+			당신은 물고기를 챙겨 두고 다시 낚싯줄을 던진다.
 		<</if>>
 	<<elseif $fishingAmbientOverride is "reHook">>
 		<<if $fishing.currentBait>>
 			<<fishingRebaitStart>>
 		<<else>>
-			You re-hook your line and cast back out.
+			당신은 낚싯바늘을 다시 꿰고 바다를 향해 낚싯줄을 던진다.
 		<</if>>
 	<<elseif $fishingAmbientOverride is "keepClothing">>
 		<<generalSend "wardrobe" $clothingItem.slot $clothingItem.item.name $clothingItem.colour>>
-		You wring out the <<= $clothingItem.item.name>> and stow <<= $clothingItem.item.word is "n" ? "them" : "it">> away.
+		당신은 <<= $clothingItem.item.name>>【을를】 꾹 짜내고 챙겨 둔다.
 	<<elseif $fishingAmbientOverride is "tossClothing">>
-		You carry the sodden <<= $clothingItem.item.name>> over to a bin and throw <<= $clothingItem.item.word is "n" ? "them" : "it">> away.
+		당신은 흠뻑 젖은 <<= $clothingItem.item.name>>【을를】 쓰레기통까지 들고 가서 <<= $clothingItem.item.word is "n" ? "그것들을" : "그것을">> 버린다.
 	<<elseif $fishingAmbientOverride is "castOut">>
-		You cast out into the water.
+		당신은 물을 향해 낚싯줄을 던진다.
 	<<else>>
 		<<cleareventpool>>
 		<<fishingWaitAmbient $bus>>

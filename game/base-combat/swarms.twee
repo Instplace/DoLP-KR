@@ -75,7 +75,7 @@
 		}>>
 
 		<<set _swarmamounts to $swarm.amount>>
-		<<set _swarmcreature to $swarm.type>>
+		<<set _swarmcreature to $swarm.name>>
 
 		<<set _swarmactive to _swarmamounts.active[0]>>
 
@@ -108,7 +108,7 @@
 			<<if playerChastity("hidden") and playerChastity("anus")>>
 				<<set _swarmnote.buttchastity += _swarmamounts.butt[0]>>
 			<<else>>
-				<<set _swarmnote.buttinsideintro += _swarmamounts.butt[0]>>
+			<<set _swarmnote.buttinsideintro += _swarmamounts.butt[0]>>
 			<</if>>
 			<<set _swarmamounts.butt[1] += _swarmamounts.butt[0]>><<set _swarmamounts.butt[0] to 0>>
 		<</if>>
@@ -119,7 +119,7 @@
 			<<if playerChastity("hidden")>>
 				<<set _swarmnote.genitalchastity += _swarmamounts.genital[0]>>
 			<<else>>
-				<<set _swarmnote.genitalinsideintro += _swarmamounts.genital[0]>>
+			<<set _swarmnote.genitalinsideintro += _swarmamounts.genital[0]>>
 			<</if>>
 			<<set _swarmamounts.genital[1] += _swarmamounts.genital[0]>><<set _swarmamounts.genital[0] to 0>>
 		<</if>>
@@ -178,19 +178,19 @@
 						<<if $rng lte _swarmactive * 20>>
 							<<rng>>
 							<<if $rng gte 81>> /*Chance swarm bypass clothing*/
-								<<neutral 4 "bottom">>
-								<<set _swarmamounts.butt[0] += 1>><<set _swarmamounts.active[4] -= 1>>
-								<<if $worn.under_lower.type.includes("naked") and !(playerChastity("hidden") and playerChastity("anus"))>>
-									<<if (!$worn.over_lower.type.includes("naked") and setup.clothes.over_lower[clothesIndex('over_lower', $worn.over_lower)].skirt is 0) or (!$worn.lower.type.includes("naked") and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 0)>>
-										<<set _swarmnote.buttlowerintroclothed += 1>>
-									<<else>>
-										<<set _swarmnote.buttintro += 1>>
-									<</if>>
-								<<elseif playerChastity("hidden") and playerChastity("anus")>>
+									<<neutral 4 "bottom">>
+									<<set _swarmamounts.butt[0] += 1>><<set _swarmamounts.active[4] -= 1>>
+									<<if $worn.under_lower.type.includes("naked") and !(playerChastity("hidden") and playerChastity("anus"))>>
+										<<if (!$worn.over_lower.type.includes("naked") and setup.clothes.over_lower[clothesIndex('over_lower', $worn.over_lower)].skirt is 0) or (!$worn.lower.type.includes("naked") and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 0)>>
+											<<set _swarmnote.buttlowerintroclothed += 1>>
+										<<else>>
+											<<set _swarmnote.buttintro += 1>>
+										<</if>>
+									<<elseif playerChastity("hidden") and playerChastity("anus")>>
 									<<set _swarmnote.buttchastityintro += 1>>
-								<<else>>
-									<<set _swarmnote.buttunderintroclothed += 1>>
-								<</if>>
+									<<else>>
+										<<set _swarmnote.buttunderintroclothed += 1>>
+									<</if>>
 							<<else>>
 								<<if (!$worn.over_lower.type.includes("naked") and setup.clothes.over_lower[clothesIndex('over_lower', $worn.over_lower)].skirt is 0) or (!$worn.lower.type.includes("naked") and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt is 0)>>
 									<<set _swarmnote.buttlowerclothed += 1>>
@@ -312,37 +312,37 @@
 
 		<<if _swarmnote.activate gte 1>>
 			<<set _swarmnote.activate to 0>>
-			The <<swarmName>> $swarm.spill, surrounding you with more $swarm.type.
+			<<swarmName>>【이가】 $swarm.spill, 더 많은 $swarm.name【으로로】 당신을 에워싼다.
 		<</if>>
 
 		<<if _swarmamounts.active[2] gte 1>>
 			<<set $_remainingSwarms to _swarmamounts.active[1] + _swarmamounts.active[2]>>
-			There <<if $_remainingSwarms gt 1>>are<<else>>is<</if>> <<number $_remainingSwarms>> <<swarmName $_remainingSwarms>> and <span class="blue"><<if _swarmamounts.active[1] + _swarmamounts.active[2] is 1>>it<<else>><<number _swarmamounts.active[2]>> of them<</if>> <<if _swarmamounts.active[2] gte 2>>are<<else>>is<</if>> $swarm.move.</span>
+			아직 <<number $_remainingSwarms>>마리의 <<swarmName $_remainingSwarms>>【이가】 남아 있으며, <span class="blue">그중 <<if _swarmamounts.active[2] gte 2>><<number _swarmamounts.active[2]>>마리가<<else>>하나가<</if>> $swarm.move.</span>
 		<</if>>
 
 		<<if _swarmactive lte 0>>
 		<<elseif _swarmactive lte 1>>
-			The _swarmcreature are squirming over you.
+			_swarmcreature【이가】 당신의 몸 위에서 꿈틀거린다.
 		<<elseif _swarmactive lte 2>>
-			The _swarmcreature are swarming over you.
+			_swarmcreature【이가】 당신의 몸을 뒤덮고 우글거린다.
 		<<elseif _swarmactive lte 3>>
-			The _swarmcreature teem around you.
+			_swarmcreature【이가】 당신의 주위에서 득실거린다.
 		<<elseif _swarmactive lte 4>>
-			You're practically swimming in _swarmcreature.
+			당신은 거의 _swarmcreature 속에서 헤엄치다시피 하고 있다.
 		<<elseif _swarmactive lte 9>>
-			The _swarmcreature completely surround you.
+			_swarmcreature【이가】 당신을 완전히 포위하고 있다.
 		<<elseif _swarmactive gte 10>>
-			<span class="pink">The _swarmcreature completely surround you, as if you are in a living pit.<<if $orgasmdown gte 1>> Not an inch of skin is spared the torment.<</if>></span>
+			<span class="pink">마치 살아있는 구덩이에 빠진 듯, _swarmcreature【이가】 당신을 완전히 에워싸고 있다.<<if $orgasmdown gte 1>> 포위된 피부는 그 고통을 단 한치도 피하지 못한다.<</if>></span>
 		<</if>>
 
 		<<rng>>
 		<<if $rng gte 91 and $leftarm is 0 and $rightarm is 0>>
 			<<if $rng gte 96>>
 				<<set $leftarm to "swarmgrappled">><<set $lefttarget to "swarm">>
-				<span class="purple">The $swarm["type"] swarm over your left arm, restraining it.</span>
+				<span class="purple">$swarm["name"]【이가】 당신의 왼팔 위로 우글거리며 묶어버린다.</span>
 			<<else>>
 				<<set $rightarm to "swarmgrappled">><<set $righttarget to "swarm">>
-				<span class="purple">The $swarm["type"] swarm over your right arm, restraining it.</span>
+				<span class="purple">$swarm["name"]【이가】 당신의 오른팔 위로 우글거리며 묶어버린다.</span>
 			<</if>>
 		<</if>>
 
@@ -350,45 +350,45 @@
 
 		<<if _swarmnote.chestcovered gte 1>>
 			<<set _swarmnote.chestcovered to 0>>
-			You manage to keep them away from your chest.
+			당신은 가까스로 그것들을 가슴에서 떼어놓는다.
 		<</if>>
 
 		<<if _swarmnote.chestmolest gte 1>>
 			<<set _swarmnote.chestmolest to 0>>
-			They writhe over your <<print either("chest", "stomach", "back", "neck", "arms")>>.
+			그것들이 당신의 <<print either("가슴", "배", "등", "목", "팔")>> 위에서 꿈틀거린다.
 		<</if>>
 
 		<<if _swarmnote.chestclothed gte 1>>
 			<<set _swarmnote.chestclothed to 0>>
-			Some of them assault and damage your
+			그것들 중 일부가 집요하게 당신의
 			<<if !$worn.over_upper.type.includes("naked")>>
-				$worn.upper.name<<if !$worn.upper.type.includes("naked")>> and<<else>>,<</if>>
+				$worn.over_upper.name<<if !$worn.upper.type.includes("naked")>>【와과】 <</if>>
 			<</if>>
 			<<if !$worn.upper.type.includes("naked")>>
-				$worn.upper.name,
+				$worn.upper.name
 			<</if>>
-			trying to get to the skin beneath.
+			【을를】 물어뜯어 손상시키며 그 안쪽의 피부에 닿으려 한다.
 		<</if>>
 
 		<<if _swarmnote.chestintro gte 1>>
 			<<set _swarmnote.chestintro to 0>>
 			<<if _swarmamounts.chest gte 1>>
-				<span class="purple">More $swarm["type"] gather around your <<breasts>>.</span>
+				<span class="purple">더 많은 $swarm["name"]【이가】 당신의 <<breasts>> 주위로 모여든다.</span>
 			<<else>>
-				<span class="purple">A number of them take a liking to your <<breasts>>.</span>
+				<span class="purple">상당수가 당신의 <<breasts>>에 흥미를 보인다.</span>
 			<</if>>
 		<</if>>
 
 		<<if _swarmnote.chestintroclothed gte 1>>
 			<<set _swarmnote.chestintroclothed to 0>>
-			<span class="purple">Some of them wriggle their way into your
+			<span class="purple">일부가 꿈틀거리며 당신의
 			<<if !$worn.over_upper.type.includes("naked")>>
-				$worn.upper.name<<if !$worn.upper.type.includes("naked")>> and<<else>>,<</if>>
+				$worn.over_upper.name<<if !$worn.upper.type.includes("naked")>>【와과】 <</if>>
 			<</if>>
 			<<if !$worn.upper.type.includes("naked")>>
-				$worn.upper.name,
+				$worn.upper.name
 			<</if>>
-			where they take a liking to your <<breasts>>.</span>
+			속으로 파고들어, 당신의 <<breasts>>에 달라붙는다.</span>
 		<</if>>
 
 		<<if _swarmamounts.chest gte 1>>
@@ -397,10 +397,10 @@
 			<<neutral 5 "breasts">>
 			<<if _swarmnote.chestmilk gte 1>>
 				<<set _swarmnote.chestmilk to 0>>
-				They twist and tease your <<nipples>>, <span class="purple">causing milk to leak out of the tips.</span>
+				그것들이 당신의 <<nipples>>【을를】 비틀며 애태우고, <span class="purple">그 끝에서 모유가 새어나오게 만든다.</span>
 				/*Maybe put a notification here, about swarmers that are attracted to milk?*/
 			<<else>>
-				They twist and tease your <<nipples>>, keeping them firm.
+				그것들이 당신의 <<nipples>>【을를】 비틀며 애태워서 꼿꼿하게 세운다.
 			<</if>>
 		<</if>>
 
@@ -408,60 +408,60 @@
 
 		<<if _swarmnote.buttcovered gte 1>>
 			<<set _swarmnote.buttcovered to 0>>
-			You manage to keep them away from your butt.
+			당신은 가까스로 그것들을 엉덩이에서 떼어놓는다.
 		<</if>>
 
 		<<if _swarmnote.buttmolest gte 1>>
 			<<set _swarmnote.buttmolest to 0>>
-			They writhe over your <<print either("butt", "thighs", "legs")>>.
+			그것들이 당신의 <<print either("엉덩이", "허벅지", "다리")>> 위에서 꿈틀거린다.
 		<</if>>
 
 		<<if _swarmnote.buttlowerclothed gte 1>>
 			<<set _swarmnote.buttlowerclothed to 0>>
 			<<if $worn.over_lower.name is "naked" and $worn.lower.name is "naked">>
-				Some tear apart the ruined scraps of your clothing.
+				일부는 넝마가 된 당신의 옷자락을 찢어버린다.
 			<<else>>
-				Some of them burrow into your
+				그들 중 일부가 당신의
 				<<if !$worn.over_lower.type.includes("naked")>>
-					$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>> and<<else>>,<</if>>
+					$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>>【와과】 <<else>>,<</if>>
 				<</if>>
 				<<if !$worn.lower.type.includes("naked")>>
 					$worn.lower.name,
 				<</if>>
-				tearing the fabric.
+				속으로 파고들어 천을 찢어버린다.
 			<</if>>
 		<</if>>
 
 		<<if _swarmnote.buttunderclothed gte 1>>
 			<<set _swarmnote.buttunderclothed to 0>>
-			Some of them assail your $worn.under_lower.name, tearing the fabric.
+			그것들 중 일부가 당신의 $worn.under_lower.name【을를】 공격해, 옷감을 찢어댄다.
 		<</if>>
 
 		<<if _swarmnote.buttlowerintroclothed gte 1>>
 			<<set _swarmnote.buttlowerintroclothed to 0>>
-			<span class="purple">Some of them wriggle their way into your
+			<span class="purple">일부가 꿈틀거리며 당신의
 			<<if !$worn.over_lower.type.includes("naked")>>
-				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>> and<<else>>.<</if>>
+				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>>【와과】 <<else>>,<</if>>
 			<</if>>
 			<<if !$worn.lower.type.includes("naked")>>
-				$worn.lower.name.
+				$worn.lower.name,
 			<</if>>
-			You feel them moving toward your anus.</span>
+			안으로 파고들어 당신의 항문을 향해 움직이는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.buttunderintroclothed gte 1>>
 			<<set _swarmnote.buttunderintroclothed to 0>>
-			<span class="purple">Some of them wriggle their way into your $worn.under_lower.name. You feel them moving toward your anus.</span>
+			<span class="purple">그들 중 일부가 당신의 $worn.under_lower.name 속으로 꿈틀거리며 파고들어, 항문을 향해 움직이는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.buttchastityintro gte 1>>
 			<<set _swarmnote.buttchastityintro to 0>>
-			<span class="purple">Some of them writhe against your $worn.genitals.name anal shield.</span>
+			<span class="purple">일부가 당신의 $worn.genitals.name 애널 실드에 맞닿아 몸부림친다.</span>
 		<</if>>
 
 		<<if _swarmnote.buttchastity gte 1>>
 			<<set _swarmnote.buttchastity to 0>>
-			<span class="purple">Some of them wriggle their way into your $worn.genitals.name. You feel them moving toward your butt.</span> <span class="pink">With your $worn.genitals.name anal shield in the way, you won't be able to get them out!</span>
+			<span class="purple">일부가 당신의 $worn.genitals.name 속으로 꿈틀거리며 파고들어, 엉덩이를 향해 움직이는 것이 느껴진다.</span> <span class="pink">$worn.genitals.name 애널 실드가 앞을 막고 있어, 당신은 그것들을 빼낼 수 없을 것이다!</span>
 			<<if $settings.parasitesEnabled>>
 				<<set $analchastityparasite to $swarm["type"]>>
 			<</if>>
@@ -469,17 +469,17 @@
 
 		<<if _swarmnote.buttintro gte 1>>
 			<<set _swarmnote.buttintro to 0>>
-			<span class="purple">They swarm around your butt. You feel them move toward your anus.</span>
+			<span class="purple">그것들이 당신의 엉덩이 주위로 몰려들어 항문을 향해 파고드는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.buttinsideintro gte 1>>
 			<<set _swarmnote.buttinsideintro to 0>>
-			<span class="pink">They start squirming their way into your <<bottom>>!</span>
+			<span class="pink">그것들이 당신의 <<bottom>> 안으로 꿈틀거리며 밀고 들어가기 시작한다!</span>
 		<</if>>
 
 		<<if _swarmamounts.butt[1] gte 1>>
 			<<neutral 10 "bottom">><<impregnateParasite $swarm["type"] _swarmamounts.butt[1]>>
-			They writhe inside your lower intestine<<if $player.sex isnot "f">>, blindly teasing your prostate<</if>><<if _impreg is true>><<if $player.sex isnot "f">>,<</if>> and <span class="red">attempt to move further inside you</span><</if>>.
+			그것들은 당신의 직장 안에서 꿈틀거<<if $player.sex isnot "f">>리며, 맹목적으로 당신의 전립선을 자극한다<<else>>린다<</if>>.<<if _impreg is true>> <span class="red">그리고 몸속 더 깊은 곳으로 파고들려 시도한다.</span><</if>>
 			<<set _impreg to false>>
 			<<arousal `_swarmamounts.butt[1] * 20`>>
 		<</if>>
@@ -488,64 +488,68 @@
 
 		<<if _swarmnote.genitalcovered gte 1>>
 			<<set _swarmnote.genitalcovered to 0>>
-			You manage to keep them away from your <<genitals>>.
+			당신은 가까스로 그것들을 <<genitals>>에서 떼어놓는다.
 		<</if>>
 
 		<<if _swarmnote.genitalmolest gte 1>>
 			<<set _swarmnote.genitalmolest to 0>>
-				You feel them writhing over your <<if !$worn.lower.type.includes("naked") and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt isnot 1>><<genitals>> through your
-				<<if !$worn.over_lower.type.includes("naked")>>
-					$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>> and<<else>>.<</if>>
-				<</if>>
-				<<if !$worn.lower.type.includes("naked")>>
-					$worn.lower.name.
-				<</if>>
-			<<elseif !$worn.under_lower.type.includes("naked")>>
-				<<genitals>> through your $worn.under_lower.name.<<else>>unprotected <<genitals>>.
+				<<if !$worn.lower.type.includes("naked") and setup.clothes.lower[clothesIndex('lower', $worn.lower)].skirt isnot 1>>
+					그것들이 당신의 <<genitals>> 위에서 꿈틀거린다. 가로막는 것은 당신의
+					<<if !$worn.over_lower.type.includes("naked")>>
+						$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>>【와과】 <</if>>
+					<</if>>
+					<<if !$worn.lower.type.includes("naked")>>
+						$worn.lower.name
+					<</if>>
+				<<elseif !$worn.under_lower.type.includes("naked")>>
+					그것들이 당신의 $worn.under_lower.name 너머로 <<genitals>> 위에서 꿈틀거린다.
+				<<else>>
+					그것들이 당신의 무방비한 <<genitals>> 위에서 꿈틀거린다.
 				<</if>>
 		<</if>>
 
 		<<if _swarmnote.genitallowerclothed gte 1>>
 			<<set _swarmnote.genitallowerclothed to 0>>
-			Some of them start tearing into your
+			그들 중 일부가 당신의
 			<<if !$worn.over_lower.type.includes("naked")>>
-				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>> and<<else>>.<</if>>
+				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>>【와과】 <</if>>
 			<</if>>
 			<<if !$worn.lower.type.includes("naked")>>
-				$worn.lower.name.
+				$worn.lower.name
 			<</if>>
+			【을를】 물어뜯어, 그 아래의 피부에 닿으려 한다.
 		<</if>>
 
 		<<if _swarmnote.genitalunderclothed gte 1>>
 			<<set _swarmnote.genitalunderclothed to 0>>
-			Some of them try to breach your $worn.under_lower.name, trying to get to the skin beneath.
+			그것들 중 일부가 당신의 $worn.under_lower.name【을를】 뚫고, 그 아래의 피부에 닿으려 한다.
 		<</if>>
 
 		<<if _swarmnote.genitallowerintroclothed gte 1>>
 			<<set _swarmnote.genitallowerintroclothed to 0>>
-			<span class="purple">Some of them wriggle their way into your
+			<span class="purple">그들 중 일부가 당신의
 			<<if !$worn.over_lower.type.includes("naked")>>
-				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>> and<<else>>.<</if>>
+				$worn.over_lower.name<<if !$worn.lower.type.includes("naked")>>【와과】 <<else>>.<</if>>
 			<</if>>
 			<<if !$worn.lower.type.includes("naked")>>
 				$worn.lower.name.
 			<</if>>
-			You feel them moving toward your <<genitals>>.</span>
+			속으로 파고들어 당신의 <<genitals>>【을를】 향해 움직이는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.genitalunderintroclothed gte 1>>
 			<<set _swarmnote.genitalunderintroclothed to 0>>
-			<span class="purple">Some of them wriggle their way into your $worn.under_lower.name. You feel them moving toward your <<genitals>>.</span>
+			<span class="purple">그중 일부가 $worn.under_lower.name 속으로 꿈틀거리며 파고들어, <<genitals>>【을를】 향해 움직이는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.genitalchastityintro gte 1>>
 			<<set _swarmnote.genitalchastityintro to 0>>
-			<span class="purple">Some of them writhe against your $worn.genitals.name.</span>
+			<span class="purple">일부가 $worn.genitals.name에 맞닿아 몸부림친다.</span>
 		<</if>>
 
 		<<if _swarmnote.genitalchastity gte 1>>
 			<<set _swarmnote.genitalchastity to 0>>
-			<span class="purple">Some of them wriggle their way into your $worn.genitals.name. You feel them moving toward your <<genitals 1>>.</span> <span class="pink">With your $worn.genitals.name in the way, you won't be able to get them out!</span>
+			<span class="purple">그중 일부가 당신의 $worn.genitals.name 속으로 꿈틀거리며 파고들어 <<genitals 1>>【을를】 향해 움직이는 것이 느껴진다.</span> <span class="pink">$worn.genitals.name【이가】 가로막고 있어 빼낼 수 없다!</span>
 			<<if $settings.parasitesEnabled>>
 				<<if $player.vaginaExist and playerChastity("vagina")>>
 					<<set $vaginalchastityparasite to $swarm["type"]>>
@@ -558,27 +562,27 @@
 
 		<<if _swarmnote.genitalintro gte 1>>
 			<<set _swarmnote.genitalintro to 0>>
-			<span class="purple">They swarm around your groin. You feel them move toward your <<genitals>>.</span>
+			<span class="purple">그들이 당신의 사타구니로 몰려들어 당신의 <<genitals>>【을를】 향해 파고드는 것이 느껴진다.</span>
 		<</if>>
 
 		<<if _swarmnote.genitalinsideintro gte 1>>
 			<<set _swarmnote.genitalinsideintro to 0>>
 			<<if $player.vaginaExist>>
-				<span class="pink">They start squirming their way into your pussy!</span>
+				<span class="pink">그들이 당신의 보지 안으로 꿈틀거리며 비집고 들어가기 시작한다!</span>
 			<<elseif $player.penisExist>>
-				<span class="pink">They start enveloping your penis!</span>
+				<span class="pink">그들이 당신의 자지를 집어삼키기 시작한다!</span>
 			<</if>>
 		<</if>>
 
 		<<if _swarmamounts.genital[1] gte 1>>
 			<<if $player.vaginaExist>>
 				<<impregnateParasite $swarm["type"] _swarmamounts.genital[1] "vagina">>
-				They writhe and squirm inside your vagina, probing and teasing without mercy<<if _impreg is true>>, and <span class="red">attempt to move further inside you</span><</if>>.
+				그들은 당신의 보지 안에서 꿈틀거리며, 사정없이 더듬고 애태운다.<<if _impreg is true>> <span class="red">그리고 당신 몸속 더 깊은 곳으로 파고들려 시도한다.</span><</if>>
 				<<set _impreg to false>>
 				<<arousal `_swarmamounts.genital[1] * 20 * $genitalsensitivity`>>
 				<<neutral 10 "genitals">>
 			<<elseif $player.penisExist>>
-				They writhe and squirm over your penis, rubbing and teasing the entire length.
+				그것들은 당신의 자지 위를 꿈틀거리며 기어 다니며, 전체를 문지르고 애태운다.
 				<<arousal `_swarmamounts.genital[1] * 20 * $genitalsensitivity`>>
 				<<neutral 10 "genitals">>
 			<</if>>
@@ -608,10 +612,10 @@
 
 <<widget "swarmName">>
 	<<if _args[0] is undefined or _args[0] gt 1>>
-		<<if $swarm.name.endsWith(" mass")>>
-			<<set _swarmname to $swarm.name + "es">>
+		<<if $swarm.name.endsWith(" 떼")>>
+			<<set _swarmname to $swarm.name>>
 		<<else>>
-			<<set _swarmname to $swarm.name + "s">>
+			<<set _swarmname to $swarm.name>>
 		<</if>>
 	<<else>>
 		<<set _swarmname to $swarm.name>>

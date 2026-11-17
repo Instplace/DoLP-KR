@@ -1,11 +1,11 @@
 :: Downgrade Waiting Room
 Welcome back to Degrees of Lewdity Plus <<- StartConfig.version>><<if StartConfig.versionName>> <<print StartConfig.versionName>><</if>>.
 <br><br>
-You have switched to an older version of the game, from <<- $saveVersions.last()>>, so we just want to confirm you know what you're doing.
+<<- $saveVersions.last()>>에서 더 오래된 게임 버전으로 되돌아왔습니다. 의도하신 작업이 맞는지 확인하고자 합니다.
 <br><br>
 <<link [[Confirm|$passagePrev]]>><<doVersionCheck>><</link>>
 <br>
-<span class="red">If you want to avoid potential issues, go back to the latest version.</span>
+<span class="red">문제가 생기는 것을 피하려면 최신 버전으로 돌아가십시오.</span>
 
 :: Modded Waiting Room
 

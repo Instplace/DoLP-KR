@@ -1,4 +1,4 @@
-/* Passage that the player is sent to when they start fishing. If the player lands on this passage, there's not going to be an event that fires. The player can then click on the wait for a bite link to get sent into the wait loop passage, which can either trigger an event, or send the user back to this passage. */
+/* 플레이어가 낚시를 시작할 때 이동하는 패시지입니다. 플레이어가 이 패시지에 도달하면 바로 실행되는 이벤트는 없습니다. 이후 플레이어가 입질을 기다린다는 링크를 클릭하면 대기 루프 패시지로 이동하며, 이 과정에서 이벤트가 발생하거나 다시 이 패시지로 돌아올 수 있습니다. */
 :: Fishing LocationName
 <<run initFishingLocationName()>>
 <<wearActiveFishingRodProp>>
@@ -22,9 +22,9 @@
 <</if>>
 <br><br>
 
-<<link [[Wait for a bite (0:05)|Fishing LocationName Wait]]>><</link>>
+<<link [[입질을 기다린다 (0:05)|Fishing LocationName Wait]]>><</link>>
 <br>
-<<link [[Leave|SomeParentPassage]]>><</link>>
+<<link [[떠난다|SomeParentPassage]]>><</link>>
 
 /* Wait loop passage. Sending the user here will roll an event and send the user to that event. "Nothing" is treated like every other event, and instead of sending the user to an event, it sends the user back to the Fishing LocationName passage. */
 :: Fishing LocationName Wait Loop
@@ -38,7 +38,7 @@
 	<<if fishTriggersMinigame($fishingHookedFish)>>
 		<<include "Fishing LocationName Bite Big">>
 	<<else>>
-		You feel a tug on your line as <<a $fishingHookedFish.type>><<if _isPreferredBait>> greedily<</if>> <<if $fishing.currentBait>>takes the bait<<else>>takes the hook<</if>>. You haul back on the line and pull it out of the water without a fight.
+		<<= setup.foodstuff[$fishingHookedFish.type].name>>【이가】 <<if _isPreferredBait>> 게걸스럽게<</if>> <<if $fishing.currentBait>>미끼를<<else>>낚싯바늘을<</if>> 물자 낚싯줄이 팽팽해지는 것이 느껴진다. 낚싯줄을 힘껏 당겨 녀석과 힘겨루기할 틈도 주지 않고 물 밖으로 건져 올린다.
 		<<include "Fishing LocationName Catch">>
 	<</if>>
 <</addinlineevent>>
@@ -91,16 +91,16 @@
 <<widget "fishingLocationNameWaitAmbient">>
 	<<if $fishingAmbientOverride is "throwBack">>
 		<<if $fishing.currentBait>>
-			You throw the fish back into the water before <<fishingRebaitMid>>
+			당신은 <<fishingRebaitMid>> 물고기를 물속으로 던져 넣는다.
 		<<else>>
-			You throw the fish back into the water.
+			당신은 물고기를 다시 물속으로 던져 넣는다.
 		<</if>>
 		<<unset $fishingAmbientOverride>>
 	<<elseif $fishingAmbientOverride is "stowAway">>
 		<<if $fishing.currentBait>>
-			You stow the fish away before <<fishingRebaitMid>>
+			당신은 <<fishingRebaitMid>> 물고기를 보관해 둔다.
 		<<else>>
-			You stow the fish away and cast back out.
+			당신은 물고기를 보관해 두고 다시 낚싯줄을 던진다.
 		<</if>>
 		<<unset $fishingAmbientOverride>>
 	<<else>>
@@ -122,9 +122,9 @@
 <<widget "fishingLocationNameDangerWaitAmbient">>
 	<<addinlineevent 20>>
 		<<print either(
-			"You hear spooky noises.",
-			"You smell spooky smells.",
-			"You see spooky sights."
+			"소름돋는 소리가 들린다.",
+			"기분나쁜 냄새가 난다.",
+			"으스스한 광경이 보인다."
 		)>>
 		<<set $fishing.locationName.eventDanger += 1>>
 	<</addinlineevent>>

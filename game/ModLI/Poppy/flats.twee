@@ -142,7 +142,7 @@ You approach the window.<br>
 <<elseif Time.hour lt 21>>
 	You can see that the sun has long since disappeared behind the towers, but the street remains busy.
 <<else>>
-	Voices and occasional shouting emerge from nearby buildings despite the hour.
+	늦은 시간임에도 불구하고 근처 건물에서 목소리와 간간이 외치는 소리가 들려온다.
 <</if>>
 <br><br>
 A pot of poppies rests on the sill, their colour vivid against the glass.
@@ -397,7 +397,7 @@ Poppy grins at you. "<span class="green">There we go</span>. Don't you think tha
 <<elseif Number($poppyromance) gte 0>>
     "What a shame, time flies by whenever I'm with you." Poppy stands up with a sigh. "Thanks for keeping me company, my jewel."
     <br><br>
-    <<He>> kisses you on the cheek.
+    <<He>>【은는】 당신의 뺨에 키스한다.
     <br><br>
     "I'll be home later. Bye bye now." <<He>> whispers into your ear before leaving with a giggle.<<arousal 200>><<garousal>>
 <<else>>
@@ -677,7 +677,7 @@ Seeing your flushed face, Poppy pulls away, seemingly satisfied by your reaction
 		<<brothelicon>><<link [[Take it further (0:15)|Flats Poppy Take It Further]]>><<pass 15>><<set $daily.poppy.lastAction to "takeFurther">><</link>>
 		<br><br>
 	<<else>>
-		<<insufficientStat "promiscuity" "to take it further">>
+		<<insufficientStat "promiscuity" "진도를 더 빼기에는">>
 		<br>
 	<</if>>
 <</if>>
@@ -827,7 +827,7 @@ Flowers:<br>
 		<<elseif $speech_attitude is "confident">>
 			"I made you something," you say with a small smile. "You'll like it."
 		<<else>>
-			"I've made you a gift," you say. "I hope you like it."
+			"선물을 만들었어." 당신이 말한다. "마음에 들었으면 좋겠다."
 		<</if>>
 		<br><br>
 		<<if ["jammie_dodger", "rich_biscuit", "quiche"].includes($gift)>>
@@ -1269,7 +1269,7 @@ You take off your clothes and look at your <<genitals>>.
 	<<exit>>
 <</if>>
 <<if playerChastity("cage")>>
-	Your penis is <<if $worn.genitals.name is "chastity parasite">>sealed inside the parasite<<else>>locked inside the cage<</if>>. Shaving around it will be a bit more tricky, but that's not a big deal.
+	당신의 자지는 <<if $worn.genitals.name is "chastity parasite">>기생충 안에 봉인되어<<else>>케이지 안에 잠겨<</if>> 있다. 그 주위를 면도하는 것은 좀 더 까다롭겠지만, 큰 문제는 아니다.
 	<br><br>
 <</if>>
 <<if $pblevel gte 2 or $pbstrip gte 1 or $pblevelballs gte 2>>
@@ -1317,7 +1317,7 @@ You take off your clothes and look at your <<genitals>>.
 
 :: Flats Poppy Shave Clean
 <<set $location to "flats">><<set $bus to "poppy_bathroom">><<set $outside to 0>><<effects>>
-You pick up some shaving cream and a razor.
+당신은 쉐이빙 크림과 면도기를 집어 든다.
 <br>
 You sit down, spread your legs, and start carefully shaving your pubes. After a few minutes, you are done and your <<genitals_are 2>> now smooth and clean.
 <<poppyOpiumPulse>>
@@ -1325,7 +1325,7 @@ You sit down, spread your legs, and start carefully shaving your pubes. After a 
 
 :: Flats Poppy Shave Pubis
 <<set $location to "flats">><<set $bus to "poppy_bathroom">><<set $outside to 0>><<effects>>
-You pick up some shaving cream and a razor.
+당신은 쉐이빙 크림과 면도기를 집어 든다.
 <br>
 You start carefully shaving hair. After a few minutes, you are done and your pubis is now smooth and clean.
 <<poppyOpiumPulse>>
@@ -1333,7 +1333,7 @@ You start carefully shaving hair. After a few minutes, you are done and your pub
 
 :: Flats Poppy Shave Balls
 <<set $location to "flats">><<set $bus to "poppy_bathroom">><<set $outside to 0>><<effects>>
-You pick up some shaving cream and a razor.
+당신은 쉐이빙 크림과 면도기를 집어 든다.
 <br>
 You prop one leg on a bathtub and start carefully shaving your balls. After a few minutes, you are done and your testicles are now smooth and clean.
 <<poppyOpiumPulse>>
@@ -1341,7 +1341,7 @@ You prop one leg on a bathtub and start carefully shaving your balls. After a fe
 
 :: Flats Poppy Shave Strip
 <<set $location to "flats">><<set $bus to "poppy_bathroom">><<set $outside to 0>><<effects>>
-You pick up some shaving cream and a razor.
+당신은 쉐이빙 크림과 면도기를 집어 든다.
 <br>
 You sit down, spread your legs, and start carefully shaving your pubes. After a few minutes, you are done and your <<genitals_are 2>> now smooth and clean with a <<print $pbstripName>> adorning your pubis.
 <<poppyOpiumPulse>>
@@ -1403,16 +1403,16 @@ After several minutes, you rinse your private area with water and behold your <<
 	<<poppyOpiumPulse>>
 	<<if currentSkillValue('skulduggery') gte $lock>>
 		<<if pcAreArmsBound("both")>>
-			You think you'd be able to pick the lock, <span class="blue">if your arms weren't bound.</span>
+			자물쇠를 딸 수 있을 것 같지만, <span class="blue">팔이 묶여 있지 않다면 말이다.</span>
 			<br><br>
 		<<else>>
-			<span class="green">The lock looks easy to pick.</span>
+			<span class="green">자물쇠는 쉽게 딸 수 있을 것 같다.</span>
 			<br><br>
 			<<lockicon "pick">><<link [[Pick the lock|Flats Poppy Pick Lock]]>><<wearProp "lockpick">><</link>>
 			<br>
 		<</if>>
 	<<else>>
-		<span class="red">The lock looks beyond your ability to pick.</span>
+		<span class="red">자물쇠는 당신의 실력으로 딸 수 없을 것 같다.</span>
 		<<skulduggeryrequired>>
 		<br><br>
 	<</if>>
@@ -1487,7 +1487,7 @@ There is a thermometer outside the window. It reads <span class="teal"><<print W
 <<if $unbind is 1>>
 	<<unset $unbind>>
 	<<if $possessed>>
-		You stare down at your bindings. You pull, and they fall apart, unable to hold against you. <<unbind>>
+		당신은 당신의 결박을 내려다본다. 당신이 당기자, 그것들은 당신을 버티지 못하고 부서져 버린다. <<unbind>>
 		<br>
 	<<else>>
 		<span class="green">You rub your bindings against the bed frame.</span> It takes some effort, but eventually the material yields, freeing your limbs.
@@ -1508,13 +1508,13 @@ There is a thermometer outside the window. It reads <span class="teal"><<print W
 <<if $study is 1>>
 	<<unset $study>>
 	<<if $phase is 1>>
-		You crack open your science textbook and read through the material.
+		당신은 과학 교과서를 펼쳐 내용을 읽는다.
 	<<elseif $phase is 2>>
-		You crack open your maths textbook and read through the material.
+		당신은 수학 교과서를 펼쳐 내용을 읽는다.
 	<<elseif $phase is 3>>
-		You crack open your English textbook and read through the material.
+		당신은 영어 교과서를 펼쳐 내용을 읽는다.
 	<<elseif $phase is 4>>
-		You crack open your history textbook and read through the material.
+		당신은 역사 교과서를 펼쳐 내용을 읽는다.
 	<</if>>
 	<br>
 <</if>>
@@ -1544,7 +1544,7 @@ There is a thermometer outside the window. It reads <span class="teal"><<print W
 <<poppyicon "wardrobe">><<link [[Wardrobe|Flats Poppy Wardrobe]]>><</link>>
 <br>
 <<if playerHasSexToys()>>
-	<<sextoysicon>><<link [[Sex toys|Sextoys Inventory]]>><<set $sextoyInvReturnLink to $passage>><</link>>
+	<<sextoysicon>><<link [[섹스 토이|Sextoys Inventory]]>><<set $sextoyInvReturnLink to $passage>><</link>>
 	<br>
 <</if>>
 
@@ -1562,7 +1562,7 @@ There is a thermometer outside the window. It reads <span class="teal"><<print W
 	<br>
 <</if>>
 <<if $debug is 1>>
-	<<link [[Turn off debug mode|Bedroom]]>><<set $debug to 0>><</link>>
+	<<link [[디버그 모드를 끈다|Bedroom]]>><<set $debug to 0>><</link>>
 	<br>
 <</if>>
 <</if>>
@@ -1656,7 +1656,7 @@ You approach the bedroom window.<br>
 <<elseif Time.hour lt 21>>
 	You can see that the sun has long since disappeared behind the towers, but the street remains busy.
 <<else>>
-	Voices and occasional shouting emerge from nearby buildings despite the hour.
+	늦은 시간임에도 불구하고 근처 건물에서 목소리와 간간이 외치는 소리가 들려온다.
 <</if>>
 <br><br>
 A pot of poppies rests on the sill, their colour vivid against the glass.
@@ -1678,10 +1678,10 @@ A pot of poppies rests on the sill, their colour vivid against the glass.
 	You snuggle under the covers beside Poppy.
 <<else>>
 	<<unset $bedGuest>>
-	You snuggle under the covers.
+	당신은 이불 속으로 파고든다.
 <</if>>
 <<if $wraith.state and $wraithPrison and ($moonstate is "evening" or $moonstate is _nightstate)>>
-	You feel anxious, and your eyes dart over to the mirror.
+	불안감을 느끼자, 당신의 시선이 거울로 향한다.
 <</if>>
 <<poppyOpiumPulse>>
 <<nightmareCheck "Flats Poppy Sleep">>
@@ -1696,9 +1696,9 @@ A pot of poppies rests on the sill, their colour vivid against the glass.
 <<set _autosavehere to true>><<sleep>><<effects>>
 <<if $wraith and $wraith.nightmare is 2 and Time.isBloodMoon() and !T.poppyFlatBaileyDue and _poppy_interrupt isnot "sex">>
 	<<sleepeffects>>
-	You dream of a beautiful figure, cloaked in white, standing under the red moon. It has its arms spread out to you in a welcoming gesture. You can feel its gaze boring into your mind as you step closer.
+	당신은 붉은 달 아래 서 있는, 흰 옷을 걸친 아름다운 형상의 꿈을 꾼다. 그것은 환영하는 몸짓으로 당신에게 팔을 벌리고 있다. 당신이 가까이 다가갈수록, 그 시선이 당신의 마음을 꿰뚫는 것이 느껴진다.
 	<br><br>
-	It's surrounded by trees, all bending inwards, and floating above a lake. Everything moves around you, and you find yourself hanging above a large ruin. You can't breathe.
+	그것은 모두 안쪽으로 구부러진 나무들에 둘러싸여 있고, 호수 위에 떠 있다. 모든 것이 당신 주위에서 움직이고, 당신은 거대한 폐허 위에 매달려 있는 자신을 발견한다. 숨을 쉴 수가 없다.
 
 	<br><br>
 	You slowly open your eyes, and sluggishly stand from the bed. <<if $poppyFlat.home and $poppyFlat.room is "bedroom">>You make sure not to wake Poppy.<</if>> Your ears are ringing.
@@ -1710,15 +1710,15 @@ A pot of poppies rests on the sill, their colour vivid against the glass.
 	<<sleepeffects>><<wakingEffects $sleepHoursTotal>>
 	<<if ["dryheaving","nausea"].includes(_wakingEffect)>>
 		<br><br>
-		You slept soundly, but now feel a little rough.
+		푹 잤지만, 지금은 몸이 좀 찌뿌둥하다.
 		<br><br>
 	<<elseif $nightmares gte 1 and $controlled is 0>>
-		You <<if _wakingEffect>>dreamed of<<else>>dream you are<</if>> being hunted by something <<if ["haunt", "despair"].includes($wraith.state) and $rng lte 25>>pale<<else>>dark<</if>> and terrible.
+		당신은 <<if _wakingEffect>>꿈에서<<else>>꿈속에서 자신이<</if>> <<if ["haunt", "despair"].includes($wraith.state) and $rng lte 25>>창백하고<<else>>어둡고<</if>> 끔찍한 무언가에게 사냥당하고 있다.
 	<<else>>
 		<<if ($specialClothesEffects.bimbo.total gte random(100,1000) || $specialClothesEffects.pimp.total gte random(100,1000)) or $arousal gte ($arousalmax / 10) * 9>>
 			<<wetDream>>
 		<<elseif !_wakingEffect>>
-			You sleep soundly.
+			당신은 깊이 잠든다.
 			<br><br>
 		<<else>>
 			<br><br>
@@ -1738,7 +1738,7 @@ A pot of poppies rests on the sill, their colour vivid against the glass.
 			<br><br>
 		<<else>>
 			<<if Time.hour lte 5>>
-				You spread across the whole bed.
+				당신은 침대 전체에 몸을 뻗는다.
 			<<elseif Time.hour lte 8>>
 				Dawnlight filters through the curtains.
 			<<elseif Time.hour lte 17>>
@@ -1825,7 +1825,7 @@ Your eyelids feel heavy and your vision blurs. You didn't realise that you've ex
 <<if T.poppyFlatBaileyHome>>
 	You hear a knock at the door. Poppy doesn't hesitate to get up and open the door. You follow suit to see who it could be.
 	<br><br>
-	<span class="red">It's Bailey.</span>
+	<span class="red">베일리다.</span>
 	<br><br>
 	<<if !$poppySeen.includes("flat_bailey_intro")>>
 		"Poppy." Bailey greets the <<if $awarelevel gte 5>>crimson fox<<else>>crimson haired person<</if>>.
@@ -1861,7 +1861,7 @@ Your eyelids feel heavy and your vision blurs. You didn't realise that you've ex
 <<else>>
 	You hear a knock at the door. Poppy is not home at the moment so you went to check who it could be on <<his>> behalf.
 	<br><br>
-	You open the door. <span class="red">It's Bailey.</span>
+	당신은 문을 연다. <span class="red">베일리다.</span>
 	<br><br>
 	"Time to pay up," <<nnpc_he "Bailey">> says.
 	<br><br>

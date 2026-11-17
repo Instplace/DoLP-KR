@@ -33,7 +33,7 @@ function masturbationSlimeControl() {
 		if (alternateForcedActions.includes("selfImpreg")) {
 			disableArmActions = true;
 		} else {
-			fragment.append(redText("The slime prevents you from moving your left hand away."));
+			fragment.append(redText("슬라임이 왼손을 떼지 못하게 막는다."));
 			fragment.append(" ");
 			V.leftaction = "slime";
 		}
@@ -45,7 +45,7 @@ function masturbationSlimeControl() {
 		if (alternateForcedActions.includes("selfImpreg")) {
 			disableArmActions = true;
 		} else {
-			fragment.append(redText("The slime prevents you from moving your right hand away."));
+			fragment.append(redText("슬라임이 오른손을 떼지 못하게 막는다."));
 			fragment.append(" ");
 			V.rightaction = "slime";
 		}
@@ -54,21 +54,21 @@ function masturbationSlimeControl() {
 	if (alternateForcedActions.includes("selfImpreg")) {
 		// Do nothing
 	} else if (V.mouthaction === "mpenisstop" || V.mouthaction === "mpenismouthoff") {
-		fragment.append(Wikifier.wikifyEval('<span class="red">The slime prevents you from moving your mouth away from your <<penis>>.</span>'));
+		fragment.append(Wikifier.wikifyEval('<span class="red">슬라임이 <<penis>>에서 입을 떼지 못하게 막는다.</span>'));
 		fragment.append(" ");
 		V.mouthaction = "slime";
 	} else if (V.mouthaction === "mchastityparasitestop") {
-		fragment.append(Wikifier.wikifyEval('<span class="red">The slime prevents you from moving your mouth away from your chastity parasite.</span>'));
+		fragment.append(Wikifier.wikifyEval('<span class="red">슬라임이 정조대 기생충에서 입을 떼지 못하게 막는다.</span>'));
 		fragment.append(" ");
 		V.mouthaction = "slime";
 	} else if (V.mouthaction === "mpenispullback") {
 		fragment.append(
-			Wikifier.wikifyEval('<span class="red">The slime prevents you from pulling back from sucking your <<penis>> as deep as you currently are.</span>')
+			Wikifier.wikifyEval('<span class="red">슬라임이 현재 깊이까지 빤 <<penis>>에서 물러나지 못하게 막는다.</span>')
 		);
 		fragment.append(" ");
 		V.mouthaction = "slime";
 	} else if (V.mouthaction === "mvaginastop") {
-		fragment.append(redText("The slime prevents you from moving your mouth away from your vagina."));
+		fragment.append(redText("슬라임이 보지에서 입을 떼지 못하게 막는다."));
 		fragment.append(" ");
 		V.mouthaction = "slime";
 	}
@@ -82,7 +82,7 @@ function masturbationSlimeControl() {
 		["mdildostop", "mvaginastopdildo", "manusstopdildo", "mpenisstopstroker", "mmouthstopdildo", "mstopbreastpump"].includes(V.leftaction) &&
 		!(V.mouth !== 0 && playerToys[V.currentToyLeft].type.includes("stroker"))
 	) {
-		fragment.append(redText("The slime prevents you from putting the sex toy in your left hand down."));
+		fragment.append(redText("슬라임이 왼손의 섹스 토이를 내려놓지 못하게 막는다."));
 		fragment.append(" ");
 		V.leftaction = "slime";
 	}
@@ -95,7 +95,7 @@ function masturbationSlimeControl() {
 		["mdildostop", "mvaginastopdildo", "manusstopdildo", "mpenisstopstroker", "mmouthstopdildo", "mstopbreastpump"].includes(V.rightaction) &&
 		!(V.mouth !== 0 && playerToys[V.currentToyRight].type.includes("stroker"))
 	) {
-		fragment.append(redText("The slime prevents you from putting the sex toy in your right hand down."));
+		fragment.append(redText("슬라임이 오른손의 섹스 토이를 내려놓지 못하게 막는다."));
 		fragment.append(" ");
 		V.rightaction = "slime";
 	}
@@ -103,11 +103,11 @@ function masturbationSlimeControl() {
 	if (V.corruptionMasturbation) {
 		if (V.earSlime.event.includes("get your own sperm into your")) {
 			fragment.append(
-				Wikifier.wikifyEval("<span class='red'>It continues to force you to play with yourself, but limits its control so you can do your task.</span>")
+				Wikifier.wikifyEval("<span class='red'>그것은 계속 당신에게 자위를 강요하지만, 당신이 일을 할 수 있도록 통제는 제한한다.</span>")
 			);
 			fragment.append(" ");
 		} else {
-			fragment.append(Wikifier.wikifyEval("<span class='red'>It continues to force you to play with yourself.</span>"));
+			fragment.append(Wikifier.wikifyEval("<span class='red'>그것은 계속 당신에게 자위를 강요한다.</span>"));
 			fragment.append(" ");
 		}
 	}
@@ -135,6 +135,7 @@ function masturbationSlimeControl() {
 		const armCap = arm.toUpperFirst();
 		const armAction = arm + "action";
 		const otherArm = arm === "left" ? "right" : "left";
+		const armk = arm === "left" ? "왼" : "오른";
 		const otherArmCap = otherArm.toUpperFirst();
 		const otherArmAction = otherArm + "action";
 		if (

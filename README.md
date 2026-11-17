@@ -1,3 +1,35 @@
+# DoLP-KR
+
+[Degrees of Lewdity Plus](https://gitgud.io/Frostberg/degrees-of-lewdity-plus)(DoL+)의 한국어 번역본입니다.
+
+원작 0.5.13.8 한국어판인 [DoL-KR](https://github.com/Instplace/DoL-KR)의 번역을 바탕으로, DoL+가 더하고 바꾼 내용을 옮기고 있습니다. 지금 기준으로 삼는 DoL+는 원작 0.5.13.8에 맞춘 개발 브랜치 `bec-dev`입니다.
+
+> **작업 중입니다.** DoL+에서 새로 생긴 이야기(새 연인 Poppy, MMA 체육관, 섬 등)와 바뀐 대사 일부가 아직 영어로 남아 있습니다.
+
+> 이 게임은 성인용입니다. 성적·폭력적인 내용을 담고 있으며 미성년자에게 적합하지 않습니다.
+
+## 원작과 출처
+
+- **원작**: Vrelnir의 [Degrees of Lewdity](https://vrelnir.blogspot.com/) ([소스 저장소](https://gitgud.io/Vrelnir/degrees-of-lewdity))
+- **DoL+**: Frostberg와 기여자들의 [Degrees of Lewdity Plus](https://gitgud.io/Frostberg/degrees-of-lewdity-plus). 이 저장소의 첫 커밋이 그 `bec-dev` 브랜치의 파일입니다.
+- **한국어 번역**: [DoL-KR](https://github.com/Instplace/DoL-KR). 그 바탕은 [아카라이브 DOL 채널](https://arca.live/b/dolgame)의 번역 참여자들이 만들고 [Ooo-eee/DoL_KrTranslation](https://github.com/Ooo-eee/DoL_KrTranslation)이 공개한 번역본입니다.
+
+## 라이선스
+
+원작, DoL+, 기존 번역본에 적용된 **CC BY-NC-SA 4.0**을 그대로 따릅니다. 이 저장소에서 더한 변경도 같은 조건으로 공개합니다.
+
+- **BY (저작자표시)**: 원작과 번역본의 저작자 및 출처를 밝혀야 합니다.
+- **NC (비영리)**: 영리 목적으로 이용할 수 없습니다.
+- **SA (동일조건변경허락)**: 이 번역본을 고치거나 바탕으로 삼은 2차 저작물에도 같은 라이선스를 적용해야 합니다.
+
+자세한 내용은 [`LICENSE`](LICENSE) 파일과 [라이선스 한글 요약](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko)을 참고하세요.
+
+번역 기준(문체, 용어집, 인물별 말투)은 [`docs/kr-translation`](docs/kr-translation)에 있습니다.
+
+아래로는 DoL+의 `README.md`가 이어집니다.
+
+---
+
 # Degrees of Lewdity Herm NPCs Mod
 
 ## Lexicon of Lewdity

@@ -176,7 +176,7 @@ Weather.Renderer.ParticleEmitter = class ParticleEmitter {
 		}
 		if (preWarm) {
 			// Await image before prewarming
-			imagePromise.then(() => this.#preWarm()).catch(err => console.warn("Image decode failed:", err));
+			imagePromise.then(() => this.#preWarm()).catch(err => console.warn("이미지 디코딩 실패:", err));
 		}
 	}
 

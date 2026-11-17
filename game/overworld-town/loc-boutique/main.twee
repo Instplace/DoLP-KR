@@ -37,11 +37,11 @@
 		<<passoutshop>>
 	<<else>>
 		<<if Time.hour is $closinghour>>
-			It's closing time. Security is herding everyone outside. <<if $exposed gte 1>>Panic swells within you as you realise how exposed you'll be should security find you in this state of dress.<</if>>
+			폐점 시간이다. 경비원이 모든 사람을 밖으로 몰아내고 있다. <<if $exposed gte 1>>경비원이 이 옷차림을 본다면 얼마나 노출되어 있을지 깨닫고 공황 상태에 빠진다.<</if>>
 			<br><br>
 		<<else>>
 			<<if !Time.openingHours()>>
-				You are alone in the darkness.
+				어둠 속에 당신 혼자 있다.
 				<br><br>
 			<</if>>
 				<div id="tryonstats-div"><<tryOnStats>></div>
@@ -50,22 +50,22 @@
 				<<set $shopPage = 0>>
 
 				<<if Time.dayState is "night">>
-					You are alone in the darkness.
+					어둠 속에 당신 혼자 있다.
 				<</if>>
 				
 				<br>
 
-				<span>Warmth:</span>
+				<span>보온성:</span>
 				<<warmthscale>>
 				<div id="warmth-description">
 					<<warmth_description>>
 				</div>
 				<br><br>
 				<<clothingcategoryicon "all">>
-				<<link "View All">><<replace "#clothingShop-div">><<AllShop>><</replace>><</link>>
+				<<link "전체 보기">><<replace "#clothingShop-div">><<AllShop>><</replace>><</link>>
 				<br><br>
 				<<clothingcategoryicon "neck">>
-				<<link "View Neck Accessories">><<replace "#clothingShop-div">><<NeckShop>><</replace>><</link>>
+				<<link "목 장식 보기">><<replace "#clothingShop-div">><<NeckShop>><</replace>><</link>>
 				<br>
 				<<clothingcategoryicon "earrings">>
 				<<link "View Earrings">><<replace "#clothingShop-div">><<EarringsShop>><</replace>><</link>>
@@ -74,7 +74,7 @@
 				<<link "View Rings">><<replace "#clothingShop-div">><<RingsShop>><</replace>><</link>>
 				<br>
 				<<clothingcategoryicon "hand">>
-				<<link "View Hand Accessories">><<replace "#clothingShop-div">><<HandsShop>><</replace>><</link>>
+				<<link "장갑 보기">><<replace "#clothingShop-div">><<HandsShop>><</replace>><</link>>
 				<br>
 				<br><br>
 				<<run linkifyDivs('.button-back-to-shop')>>
@@ -156,4 +156,4 @@ A few security guard watch you entrance closely as you approach the door. Realiz
 The boutique is closed. <<openinghours>> Two security guards stand in from of the entrance, watching it closely. There is no chance for you to sneak in.
 <br><br>
 
-<<getouticon>><<link [[Leave|Danube Street]]>><</link>>
+<<getouticon>><<link [[떠난다|Danube Street]]>><</link>>

@@ -246,7 +246,7 @@ Poppy eyes you suggestively.<<npcincr Poppy lust 2>><<glust>>
 		<<brothelicon>><<link [[Take it further (0:15)|Lake Poppy Take Further]]>><<pass 15>><<set $daily.poppy.lastAction to "takeFurther">><</link>>
 		<br><br>
 	<<else>>
-		<<insufficientStat "promiscuity" "to take it further">>
+		<<insufficientStat "promiscuity" "진도를 더 빼기에는">>
 		<br>
 	<</if>>
 <</if>>
@@ -347,7 +347,7 @@ Poppy eyes you suggestively.<<npcincr Poppy lust 2>><<glust>>
 <<elseif Number($poppyromance) gte 0>>
 	"What a shame, time flies by whenever I'm with you." Poppy stands up with a sigh. "Thanks for keeping me company, my jewel."
 	<br><br>
-	<<He>> kisses you on the cheek. 
+	<<He>>【은는】 당신의 뺨에 키스한다.
 	<br><br>
 	"Remember to come see me again, I'll be waiting. Bye bye now." <<He>> whispers into your ear before leaving with a giggle.<<arousal 200>><<garousal>>
 <<else>>
@@ -523,7 +523,7 @@ Both of you snuggle for a while before Poppy gets off you and puts <<his>> cloth
 "See you soon, my jewel. Don't leave me waiting too long. Love you." <<He>> winks at you before leaving your room.
 <br><br>
 <<clotheson>><<endcombat>>
-<<link [[Next|Bedroom]]>><</link>>
+<<link [[다음|Bedroom]]>><</link>>
 
 :: Poppy Lake Gifts List
 <<effects>><<lakeeffects>><<run poppySchedule()>>
@@ -579,7 +579,7 @@ Poppy keeps gazing at the lake while waiting for you to speak.
 	<<elseif $speech_attitude is "confident">>
 		"I made you something," you say with a small smile. "You'll like it."
 	<<else>>
-		"I've made you a gift," you say. "I hope you like it."
+		"선물을 만들었어." 당신이 말한다. "마음에 들었으면 좋겠다."
 	<</if>>
 	<br><br>
 	<<if ["jammie_dodger", "rich_biscuit", "quiche"].includes($gift)>>

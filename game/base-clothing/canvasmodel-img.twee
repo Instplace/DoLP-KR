@@ -1,5 +1,4 @@
 :: Widgets Canvas Model Main [widget]
-
 <!--
 <<canvasimg [CSSCLASSES]>>
 Render full player image.
@@ -28,7 +27,6 @@ Render full player image.
 Set model options & filters from player body
 Requires prior <<selectmodel "main">>
 -->
-
 
 <!--
  -     ██████ ██       ██████  ████████ ██   ██ ███████ ███████

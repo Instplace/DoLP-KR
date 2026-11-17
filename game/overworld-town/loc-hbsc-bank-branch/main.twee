@@ -11,7 +11,7 @@ You enter a long waiting room, lined with wooden doors. A <<person1>><<person>> 
 <<if hbscBank.account.level gte 2>>
     <i>You're a priority customer, queues are for chumps.</i>
 <<else>>
-    <i>It would be pointless to wait in line without a goal in mind.</i>
+    <i>목표 없이 줄을 서서 기다리는 것은 무의미할 것이다.</i>
 <</if>>
 <br><br>
 
@@ -28,7 +28,7 @@ You enter a long waiting room, lined with wooden doors. A <<person1>><<person>> 
 
 :: HBSC Bank Wait
 <<effects>>
-You wait in line behind a <<person2>><<person>>.
+당신은 <<person2>><<person>> 뒤에서 줄을 기다린다.
 
 <<if $rng gte 91>>
     <<He>> carries a locked briefcase, gripping the handle tightly. When <<his>> turn arrives, <<he>> places it on the counter and murmurs something under <<his>> breath.
@@ -69,7 +69,7 @@ You wait in line behind a <<person2>><<person>>.
     <br><br>
     The teller types into the system. "I see your account. Do you want to freeze your old card?"
     <br><br>
-    "Yes, please."
+    "네, 좋아요."
     <br><br>
     The teller presses a few keys and nods. "Done. A new card will be mailed to you within five business days. In the meantime, I can issue a temporary card if needed."
     <br><br>

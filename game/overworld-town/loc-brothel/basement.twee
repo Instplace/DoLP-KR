@@ -1,21 +1,20 @@
 :: Brothel Basement
-
 <<set $outside to 0>><<set $location to "brothel">><<effects>>
 
 <<if $brothel_basement_intro is undefined>>
 	<<set $brothel_basement_intro to 1>>
 	<<generate1>><<person1>>
-	A <<person>> emerges from a nearby door. <<He>> wears a black mask that covers the top half of <<his>> face.
+	<<person>>【이가】 근처 문에서 나온다. <<He>>【은는】 <<his>> 얼굴 상반부를 가리는 검은 가면을 쓰고 있다.
 	<br><br>
-	"You look lost," <<he>> chuckles. "These rooms are for employees." <<He>> points at a sign near the stairs. It reads <<printmoney $brothel_basement_price>>.
+	"길을 잃은 모양이군." <<he>>【이가】 킥킥 웃는다. "이 방들은 직원용이야." <<He>>【은는】 계단 근처의 표지판을 가리킨다. 거기에는 <<printmoney $brothel_basement_price>>라고 쓰여 있다.
 	<<if $brothel_basement_price gte 2000>>
-		"Expensive today.
+		"오늘은 비싸군.
 	<<else>>
-		"That's a typical price.
+		"보통 이 정도 가격이야.
 	<</if>>
-	Not as much as using a stage, but this way no one needs to know who you are."
+	"무대를 사용하는 것만큼은 아니지만, 이 방법으로는 아무도 당신이 누군지 알 필요가 없지."
 	<br><br>
-	<<link [[Next|Brothel Basement]]>><<endevent>><</link>>
+	<<link [[다음|Brothel Basement]]>><<endevent>><</link>>
 	<br>
 <<else>>
 	<<if ($passagePrev is "Brothel Gloryhole" || $passagePrev is "Brothel Exclusive Gloryhole") && $gloryClothesOff>>
@@ -24,9 +23,9 @@
 		<<unset $gloryClothesOff>>
 		<<clotheson>>
 	<</if>>
-	You are in the brothel basement. A row of small rooms lines one wall. Inside each is a single <<if $awareness gte 200>>gloryhole<<else>>hole<</if>>.
+	당신은 창관 지하실에 있다. 한쪽 벽에는 작은 방들이 줄지어 있다. 각 방 안에는 하나의 <<if $awareness gte 200>>글로리홀<<else>>구멍<</if>>【이가】 있다.
 	<br><br>
-	A sign by the stairs reads <<printmoney $brothel_basement_price>>.
+	계단 옆 표지판에는 <<printmoney $brothel_basement_price>>라고 쓰여 있다.
 	<br><br>
 	<<if $stress gte $stressmax>>
 		<<passoutshop>>
@@ -35,7 +34,7 @@
 				<<if $gloryholeRounds gte 10>>
 					The other employees hover near the public doors protectively. <span class="blue">Maybe you can try again tomorrow.</span><br>
 				<<else>>
-				<<brothelicon "gloryhole">><<link [[Occupy a room (0:10)|Brothel Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
+				<<brothelicon "gloryhole">><<link [[방을 차지한다 (0:10)|Brothel Gloryhole]]>><<pass 10>><<set $phase to 1>><</link>><<promiscuous4>>
 				<br>
 				<</if>>
 				<<if $brothelExclusiveGloryholeIntro is 1>>
@@ -45,23 +44,22 @@
 					<br>
 				<</if>>
 			<<else>>
-				<<insufficientStat "promiscuity" "to work at the gloryholes">> 
+				<<insufficientStat "promiscuity" "글로리홀에서 일하기에는">>
 				<br><br>
 		<</if>>
-		<<getouticon>><<link [[Leave|Brothel]]>><</link>>
+		<<getouticon>><<link [[나간다|Brothel]]>><</link>>
 		<br>
 	<</if>>
 <</if>>
 
 :: Brothel Gloryhole
-
 <<set $outside to 0>><<set $location to "brothel">><<effects>>
 <<rng 0 500>>
 <<if !$gloryHoleEvent>>
 	<<set $gloryHoleEvent to {}>>
 <</if>>
 <<if $phase is 1>><<set $phase to 0>>
-	You enter one of the rooms and close the door behind you. A green light flickers on above.
+	당신은 방 중 하나로 들어가 문을 닫는다. 위쪽에서 녹색 불이 깜빡인다.
 	<br><br>
 	
 <<elseif $phase is 2>><<set $phase to 0>>
@@ -100,7 +98,7 @@
 	<<ejaculation "short">><<fetishPregnancyImg>>
 	<<set $gloryholestat += 1>><<set $prostitutionstat += 1>>
 	<<promiscuityN $gloryHoleEvent.prom>>
-	<<tearful>> you count the money <<he>> pushes through the hole. You've gained <<printmoney $brothel_basement_price>>.
+	<<tearful>> 당신은 <<he>>【이가】 구멍으로 밀어 넣은 돈을 센다. <<printmoney $brothel_basement_price>>【을를】 얻었다.
 	<<clearnpc>><<set $gloryHoleEvent to {}>>
 	<<set $money += $brothel_basement_price>>
 	<br><br>
@@ -139,7 +137,7 @@
 			<<else>>
 				<<set $gloryHoleEvent.target to "vaginal">>
 				<<if !$NPCList[0].chastity.vagina>>
-					pussy appears at the hole.
+					보지가 구멍에 나타난다.
 				<<else>>
 					belted pussy appears at the hole.
 				<</if>>
@@ -305,7 +303,7 @@
 	<</if>>
 	<br>
 	<<if $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">><<set $gloryHoleEvent.passage to $passage>>
-	<<brothelicon>><<link [[Engage|Brothel Basement Sex]]>><<set $sexstart to 1>><<tiredness 3>><</link>><<gtiredness>>
+	<<brothelicon>><<link [[응한다|Brothel Basement Sex]]>><<set $sexstart to 1>><<tiredness 3>><</link>><<gtiredness>>
 	<br>
 	<<else>>
 		<<run console.log("Anal and oral engagements are WIP and aren't accessible yet")>>
@@ -315,7 +313,6 @@
 	<<getouticon>><<link [[Leave|Brothel Basement]]>><<endcombat>><<set $punishmentposition to 0>><<unset $desperateaction>><<unset $gloryHoleEvent>><</link>>
 	<br>
 :: Brothel Basement Sex
-
 <<if $sexstart is 1>>
 	<<set $sexstart to 0>>
 	<<consensual>>
@@ -334,18 +331,17 @@
 <<actionsman>>
 
 <<if _combatend>>
-	<span id="next"><<link [[Next|Brothel Basement Sex Finish]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Brothel Basement Sex Finish]]>><</link>></span><<nexttext>>
 <<else>>
-	<span id="next"><<link [[Next|Brothel Basement Sex]]>><</link>></span><<nexttext>>
+	<span id="next"><<link [[다음|Brothel Basement Sex]]>><</link>></span><<nexttext>>
 <</if>>
 
 :: Brothel Basement Sex Finish
-
 <<set $outside to 0>><<effects>>
 <<set $punishmentposition to 0>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>><<set $gloryholestat += 1>><<set $prostitutionstat += 1>>
-	<<tearful>> you count the money <<he>> pushes through the hole. You've gained <<printmoney $brothel_basement_price>>.
+	<<tearful>> 당신은 <<he>>【이가】 구멍으로 밀어 넣은 돈을 센다. <<printmoney $brothel_basement_price>>【을를】 얻었다.
 	<<money $brothel_basement_price "brothelGloryhole">>
 	<br><br>
 
@@ -353,23 +349,23 @@
 	<<endcombat>>
 
 <<elseif $enemyhealth lte 0>>
-	You hear a shout of pain from behind the wall, and the
+	벽 뒤에서 고통스러운 비명이 들리고,
 	<<if $NPCList[0].penis isnot "none">>
-		$NPCList[0].penisdesc
+		<<= window.KR.getPenisDescKr($NPCList[0].penisdesc)>>
 	<<else>>
-		pussy
+		보지가
 	<</if>>
-	disappears.
+	사라진다.
 	<br><br>
-	<<tearful>> you rise to your feet.
+	<<tearful>> 당신은 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
 <<else>>
-	You hear the <<person>> grumble on the other side of the wall.
+	벽 반대편에서 <<person>>【이가】 투덜거리는 소리가 들린다.
 	<br><br>
-	<<tearful>> you rise to your feet.
+	<<tearful>> 당신은 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
@@ -389,7 +385,7 @@
 	<<set $gloryHoleEvent to {}>>
 <</if>>
 <<if $phase is 1>><<set $phase to 0>>
-	You enter one of the rooms and close the door behind you. A green light flickers on above.
+	당신은 방 중 하나로 들어가 문을 닫는다. 위쪽에서 녹색 불이 깜빡인다.
 	<br><br>
 	
 <<elseif $phase is 2>><<set $phase to 0>>
@@ -469,7 +465,7 @@
 				<<else>>
 					<<set $gloryHoleEvent.target to "vaginal">>
 					<<if !$NPCList[0].chastity.vagina>>
-						pussy appears at the hole.
+						보지가 구멍에 나타난다.
 					<<else>>
 						belted pussy appears at the hole.
 					<</if>>
@@ -632,7 +628,7 @@
 
 		<<if $gloryHoleEvent.target isnot "anal" && $gloryHoleEvent.target isnot "oral">>
 			<br><<set $gloryHoleEvent.passage to $passage>>
-			<<brothelicon>><<link [[Engage|Brothel Basement Sex]]>><<set $sexstart to 1>><<tiredness 3>><</link>><<gtiredness>>
+			<<brothelicon>><<link [[응한다|Brothel Basement Sex]]>><<set $sexstart to 1>><<tiredness 3>><</link>><<gtiredness>>
 		<<else>>
 			<<run console.log("Anal and oral engagements are WIP and aren't accessible yet")>>
 		<</if>>
@@ -683,22 +679,22 @@
 	<<endcombat>>
 
 <<elseif $enemyhealth lte 0>>
-	You hear a shout of pain from behind the wall, and the
+	벽 뒤에서 고통스러운 비명이 들리고,
 	<<if $NPCList[0].penis isnot "none">>
-	$NPCList[0].penisdesc disappears.
+	<<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【이가】 시야에서 사라진다.
 	<<else>>
-	pussy disappears.
+	보지가 사라진다.
 	<</if>>
 	<br><br>
-	<<tearful>> you rise to your feet.
+	<<tearful>> 당신은 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
 
 <<else>>
-	You hear the <<person>> grumble on the other side of the wall.
+	벽 반대편에서 <<person>>【이가】 투덜거리는 소리가 들린다.
 	<br><br>
-	<<tearful>> you rise to your feet.
+	<<tearful>> 당신은 일어선다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>

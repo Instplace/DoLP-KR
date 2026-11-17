@@ -74,7 +74,7 @@ const DoLSave = ((Story, Save) => {
 		// an empty slot gives back null, which is not the same as an empty save. JavaScript treats null as an object.
 		// so checking the type alone would let an empty slot through and crash - isObject rules out null
 		if (!isObject(save)) {
-			Errors.report("Could not find a valid save at that slot.", {});
+			Errors.report("해당 슬롯에서 유효한 세이브를 찾을 수 없습니다.", {});
 			return;
 		}
 		const currVersion = parseVersion(StartConfig.version);
@@ -343,13 +343,13 @@ const DoLSave = ((Story, Save) => {
 		const zstate = compressor.compress(state);
 		zstate.dictionary = COMPRESSOR_CURRENT_DICTIONARY_ID;
 		zstate.title =
-			"This save is compressed and is not compatible with old versions of Degrees of Lewdity. If you want to load this save in an older game build, use exporting.";
+				"이 세이브는 압축되어 있어 이전 버전의 Degrees of Lewdity와 호환되지 않습니다. 더 오래된 게임 빌드에서 이 세이브를 불러오려면 내보내기 기능을 사용하세요.";
 		zstate.variables = {};
 		if (shouldVerifyCompression()) {
 			// Sanity check
 			const uzstate = decompressState(zstate);
 			if (JSON.stringify(state) !== JSON.stringify(uzstate)) {
-				throw new Error("Decompression check failed");
+					throw new Error("압축 해제 확인에 실패했습니다");
 			}
 		}
 		return zstate;
@@ -362,13 +362,13 @@ const DoLSave = ((Story, Save) => {
 	 * @param {object} zstate
 	 */
 	function decompressState(zstate) {
-		if (!("dictionary" in zstate)) throw new Error("Unable to load - compressed save has no dictionary");
+		if (!("dictionary" in zstate)) throw new Error("불러올 수 없습니다 - 압축된 세이브에 사전 정보가 없습니다");
 		const dicid = zstate.dictionary;
 		if (!(dicid in COMPRESSOR_DICTIONARIES))
 			throw new Error(
-				"Unable to decompress the save - the dictionary " +
+					"세이브 압축을 해제할 수 없습니다 - 사전 " +
 					JSON.stringify(dicid) +
-					" is unknown to this game version (trying to load newer save from older game?)"
+						"이 현재 게임 버전에서 알 수 없습니다. (구버전 게임에서 신버전 세이브를 불러오려는 건가요?)"
 			);
 		const dictionary = COMPRESSOR_DICTIONARIES[dicid];
 		const decompressor = new JsonDecompressor(dictionary);
@@ -401,7 +401,7 @@ const DoLSave = ((Story, Save) => {
 			saveObj.state.history = saveObj.state.history.map(state => compressState(state));
 			saveObj.metadata.jsoncompressed = 1;
 		} catch (e) {
-			DOL.Errors.report("Unable to compress - " + e);
+			DOL.Errors.report("압축할 수 없습니다 - " + e);
 			console.error(e);
 			// Just return, the saveObj won't be modified
 		}
@@ -439,7 +439,7 @@ const DoLSave = ((Story, Save) => {
 					if (decompressed) dictOverride = otherDicts[k];
 				}
 				if (!decompressed)
-					throw new Error("Unable to decompress the save with any of the game's dictionaries (save is labeled " + JSON.stringify(dictOverride) + ")");
+					throw new Error("게임의 어떤 사전으로도 저장 파일을 압축 해제할 수 없습니다 (저장 파일 이름은 " + JSON.stringify(dictOverride) + ") 입니다.)");
 				return decompressed;
 			} else return state;
 		});
@@ -506,7 +506,7 @@ window.loadSaveData = function () {
 	const input = document.getElementById("saveDataInput");
 	const result = Save.deserialize(input.value);
 	if (result === null) {
-		input.value = "Invalid Save.";
+		input.value = "유효하지 않은 세이브입니다.";
 	}
 };
 
@@ -533,8 +533,8 @@ window.copySavedata = function (id) {
 		document.execCommand("copy");
 	} catch (err) {
 		const copyTextArea = document.getElementById("CopyTextArea");
-		copyTextArea.value = "Copying Error";
-		console.log("Unable to copy: ", err);
+		copyTextArea.value = "복사 오류";
+		console.log("복사할 수 없습니다: ", err);
 	}
 };
 
@@ -1134,217 +1134,217 @@ window.settingNameFromVarName = function (varName) {
 		case "snake":
 			return "Snakes";
 		case "blackwolf":
-			return "Black Wolf";
+			return "검은 늑대";
 		case "greathawk":
-			return "Great Hawk";
+			return "거대 매";
 		case "nightmonster":
-			return "Night Monster";
+			return "밤의 괴물";
 		case "bodysize":
-			return "Body size";
+			return "몸집";
 		case "facevariant":
 			return "Demeanour";
 		case "breastsensitivity":
-			return "Breast sensitivity";
+			return "가슴 민감도";
 		case "genitalsensitivity":
-			return "Genital sensitivity";
+			return "성기 민감도";
 		case "mouthsensitivity":
-			return "Mouth sensitivity";
+			return "입 민감도";
 		case "bottomsensitivity":
-			return "Bottom sensitivity";
+			return "엉덩이 민감도";
 		case "drunkSensitivity":
-			return "Alcohol tolerance";
+			return "주량";
 		case "eyeselect":
-			return "Eye colour";
+			return "눈 색";
 		case "hairselect":
-			return "Hair colour";
+			return "머리색";
 		case "hairlength":
-			return "Hair length";
+			return "머리 길이";
 		case "awareselect":
 			return "Awareness";
 		case "background":
 			return "Background";
 		case "startingseason":
-			return "Starting season";
+			return "시작 계절";
 		case "gamemode":
-			return "Game difficulty";
+			return "게임 난이도";
 		case "ironmanmode":
-			return "Ironman mode";
+			return "아이언맨 모드";
 		case "gender":
 			return "Gender";
 		case "sex":
 			return "Genitals";
 		case "gender_body":
-			return "Body type";
+			return "신체 유형";
 		case "bodyshape":
-			return "Body shape";
+			return "체형";
 		case "skinColour":
-			return "Natural Skintone";
+			return "자연 피부색";
 		case "ballsExist":
 			return "Balls";
 		case "faceFreckles":
-			return "Face freckles";
+			return "얼굴 주근깨";
 		case "bodyFreckles":
-			return "Body freckles";
+			return "몸 주근깨";
 		case "breastsize":
-			return "Breast size";
+			return "가슴 크기";
 		case "penissize":
-			return "Penis size";
+			return "자지 크기";
 		case "bottomsize":
-			return "Bottom size";
+			return "엉덩이 크기";
 		case "breastsizemin":
-			return "Minimum breast size";
+			return "가슴 최소 크기";
 		case "breastsizemax":
-			return "Maximum breast size";
+			return "가슴 최대 크기";
 		case "bottomsizemin":
-			return "Minimum bottom size";
+			return "엉덩이 최소 크기";
 		case "bottomsizemax":
-			return "Maximum bottom size";
+			return "엉덩이 최대 크기";
 		case "penissizemin":
-			return "Minimum penis size";
+			return "자지 최소 크기";
 		case "penissizemax":
-			return "Maximum penis size";
+			return "자지 최대 크기";
 		case "confirmSave":
-			return "Require confirmation on save";
+			return "세이브 확인 요구";
 		case "confirmLoad":
-			return "Require confirmation on load";
+			return "로드 확인 요구";
 		case "confirmDelete":
-			return "Require confirmation on delete";
+			return "삭제 확인 요구";
 		case "reducedLineHeight":
-			return "Reduced line height";
+			return "줄 높이 축소";
 		case "outfitEditorPerPage":
-			return "Items per page";
+			return "페이지당 항목 수";
 		case "analEnabled":
 			return "Anal";
 		case "analingusGivingEnabled":
-			return "Analingus (Giving)";
+			return "항문 핥기 (하는 쪽)";
 		case "analingusReceivingEnabled":
-			return "Analingus (Receiving)";
+			return "항문 핥기 (받는 쪽)";
 		case "transformAnimalEnabled":
-			return "Animal Transformations";
+			return "동물 변신";
 		case "asphyxiaLevel":
 			return "Asphyxiation";
 		case "penisModifier":
-			return "Average size of NPC penises";
+			return "NPC 자지 평균 크기";
 		case "breastModifier":
-			return "Average size of women's breasts";
+			return "여성 가슴 평균 크기";
 		case "rentCostModifier":
-			return "Bailey's rent";
+			return "베일리의 상납금";
 		case "baseNpcPregnancyChance":
-			return "Base NPC pregnancy chance";
+			return "NPC 기본 임신 확률";
 		case "basePlayerPregnancyChance":
-			return "Base player pregnancy chance";
+			return "플레이어 기본 임신 확률";
 		case "beesEnabled":
 			return "Bees";
 		case "blindStatsEnabled":
-			return "Blind stats mode";
+			return "블라인드 스탯 모드";
 		case "bodyWritingLevel":
 			return "Bodywriting";
 		case "breastFeedingEnabled":
 			return "Breastfeeding";
 		case "cheatsEnabledToggle":
-			return "Cheat mode";
+			return "치트 모드";
 		case "condomLevel":
 			return "Condoms";
 		case "clothingCostModifier":
-			return "Cost of clothing";
+			return "의류 가격";
 		case "furnitureCostModifier":
-			return "Cost of furniture";
+			return "가구 가격";
 		case "lewdClothingCostModifier":
-			return "Cost of lewd clothes";
+			return "선정적인 의류 가격";
 		case "schoolClothingCostModifier":
-			return "Cost of school clothes";
+			return "교복 가격";
 		case "underwearCostModifier":
-			return "Cost of underwear";
+			return "속옷 가격";
 		case "tendingYieldModifier":
-			return "Crop yield";
+			return "작물 수확량";
 		case "toyDildoEnabled":
 			return "Dildos";
 		case "transformDivineEnabled":
-			return "Divine Transformations";
+			return "신성 변신";
 		case "analDoubleEnabled":
-			return "Double Anal";
+			return "이중 애널";
 		case "vaginalDoubleEnabled":
-			return "Double Vaginal";
+			return "이중 질 삽입";
 		case "allureModifier":
-			return "Encounter rate";
+			return "조우율";
 		case "facesitEnabled":
 			return "Facesitting";
 		case "pregnancySpeechEnabled":
-			return "Fertility references";
+			return "가임/임신 관련 언급";
 		case "footFetishEnabled":
-			return "Foot fetish";
+			return "발 페티시";
 		case "forcedCrossdressingEnabled":
-			return "Forced crossdressing";
+			return "강제 크로스드레싱";
 		case "granularBeastControl":
-			return "Granular beast preferences";
+			return "세분화된 짐승 선호도";
 		case "humanPregnancyMonths":
-			return "Human pregnancy length";
+			return "인간 임신 기간";
 		case "hypnosisEnabled":
 			return "Hypnosis";
 		case "npcVirginChanceAdult":
-			return "Likelihood of adults being virgins";
+			return "성인 NPC가 동정/처녀일 확률";
 		case "npcVirginChanceStudent":
-			return "Likelihood of young adults being virgins";
+			return "젊은 성인 NPC가 동정/처녀일 확률";
 		case "skinToneMin":
-			return "Lightest NPC skin";
+			return "가장 밝은 NPC 피부";
 		case "skinToneMode":
-			return "Most common NPC skin";
+			return "가장 흔한 NPC 피부";
 		case "skinToneMax":
-			return "Darkest NPC skin";
+			return "가장 어두운 NPC 피부";
 		case "lurkersEnabled":
 			return "Lurkers";
 		case "fertilityCycleEnabled":
-			return "Menstrual cycle";
+			return "월경 주기";
 		case "toyMultiplePenetrationEnabled":
-			return "Multiple penetration with sex toys";
+			return "섹스 토이 다중 삽입";
 		case "multipleWardrobes":
-			return "Multiple wardrobes";
+			return "여러 옷장";
 		case "maleChanceSplit":
-			return "NPC attraction split by gender appearance";
+			return "NPC의 성별 외형별 끌림 분리";
 		case "npcPregnancyEnabled":
-			return "Generic NPC pregnancy";
+			return "일반 NPC 임신";
 		case "nnpcPregnancyEnabled":
 			return "NNPC pregnancy";
 		case "analPregnancy":
-			return "PC anal pregnancy";
+			return "플레이어 항문 임신";
 		case "npcAnalPregnancyEnabled":
-			return "NPC anal pregnancy";
+			return "NPC 항문 임신";
 		case "maleChanceMale":
-			return "NPCs who are attracted to men";
+			return "남성에게 끌리는 NPC";
 		case "maleChanceFemale":
-			return "NPCs who are attracted to women";
+			return "여성에게 끌리는 NPC";
 		case "nudeGenderPerception":
-			return "Nude gender appearance";
+			return "나체 성별 인식";
 		case "parasitePregnancyEnabled":
-			return "Parasite pregnancy";
+			return "기생충 임신";
 		case "parasitesEnabled":
 			return "Parasites";
 		case "maleNPCVaginaChance":
-			return "Percentage of men that have vaginas";
+			return "보지를 가진 남성 비율";
 		case "maleVictimChance":
-			return "Percentage of other victims that are male";
+			return "다른 피해자 중 남성 비율";
 		case "maleChance":
-			return "Percentage of people attracted to you that are male";
+			return "당신에게 끌리는 사람 중 남성 비율";
 		case "femaleNPCPenisChance":
-			return "Percentage of women that have penises";
+			return "자지를 가진 여성 비율";
 		case "straponChance":
-			return "Percentage of women that have strap-on penises";
+			return "페니스 밴드를 가진 여성 비율";
 		case "plantsEnabled":
 			return "Plantpeople";
 		case "playerPregnancyEggLayingEnabled":
-			return "Player egg laying";
+			return "플레이어 산란";
 		case "playerPregnancyBeastEnabled":
-			return "Player pregnancy with beasts";
+			return "플레이어의 짐승 임신";
 		case "playerPregnancyHumanEnabled":
-			return "Player pregnancy with humans";
+			return "플레이어의 인간 임신";
 		case "pregnancyType":
-			return "Pregnancy mode";
+			return "임신 모드";
 		case "pubicHairEnabled":
-			return "Pubic hair";
+			return "음모";
 		case "ruinedOrgasmEnabled":
-			return "Ruined orgasms";
+			return "망친 절정";
 		case "skillCheckStyle":
-			return "Skill check display";
+			return "스킬 체크 표시";
 		case "slimesEnabled":
 			return "Slimes";
 		case "slugsEnabled":
@@ -1364,45 +1364,45 @@ window.settingNameFromVarName = function (varName) {
 		case "toyWhipEnabled":
 			return "Whips";
 		case "wolfPregnancyWeeks":
-			return "Wolf pregnancy length";
+			return "늑대 임신 기간";
 		case "neverNudeMenus":
-			return "Hide player nudity in menus";
+			return "메뉴에서 플레이어 노출 숨기기";
 		case "showCaptionText":
-			return "Show caption text in sidebar";
+			return "사이드바 캡션 텍스트 표시";
 		case "clothingCaption":
-			return "Show clothing description in sidebar";
+			return "사이드바 의류 설명 표시";
 		case "clothingReplacementWarning":
-			return "Enable clothing replacement warning";
+			return "의류 교체 경고 활성화";
 		case "sidebarStats":
-			return "Closed sidebar stats";
+			return "닫힌 사이드바 스탯";
 		case "sidebarTime":
-			return "Closed sidebar time";
+			return "닫힌 사이드바 시간";
 		case "combatControls":
-			return "Combat controls";
+			return "전투 조작";
 		case "mapMovement":
-			return "Enable movement by clicking on map";
+			return "지도 클릭 이동 활성화";
 		case "mapTop":
-			return "Move the map above the map links";
+			return "지도를 지도 링크 위로 이동";
 		case "mapMarkers":
-			return "Show clickable areas on maps";
+			return "지도에서 클릭 가능 영역 표시";
 		case "images":
 			return "Images";
 		case "combatImages":
-			return "Combat images";
+			return "전투 이미지";
 		case "bodywritingImages":
-			return "Bodywriting images";
+			return "몸 낙서 이미지";
 		case "silhouetteEnabled":
 			return "NPC silhouettes";
 		case "sidebarAnimations":
-			return "Sidebar images";
+			return "사이드바 이미지";
 		case "blinkingEnabled":
-			return "Animated blinking";
+			return "눈 깜빡임 애니메이션";
 		case "combatAnimations":
-			return "Combat animations";
+			return "전투 애니메이션";
 		case "halfClosedEnabled":
-			return "Half-closed eyes";
+			return "반쯤 감은 눈";
 		case "characterLightEnabled":
-			return "Character lighting";
+			return "캐릭터 조명";
 		case "lightSpotlight":
 			return "Spotlight";
 		case "lightGradient":
@@ -1410,119 +1410,119 @@ window.settingNameFromVarName = function (varName) {
 		case "lightGlow":
 			return "Glow";
 		case "lightFlat":
-			return "Flat light";
+			return "평면광";
 		case "lightTFColor":
-			return "Angel/Devil TF colour components";
+			return "천사/악마 변신 색상 요소";
 		case "combatLightEnabled":
-			return "Character lighting";
+			return "캐릭터 조명";
 		case "combatLightOffsetY":
 			return "Y offset";
 		case "combatLightSpotlight":
 			return "Spotlight";
 		case "combatLightSpotlightX":
-			return "Spotlight width";
+			return "스포트라이트 너비";
 		case "combatLightSpotlightY":
-			return "Spotlight height";
+			return "스포트라이트 높이";
 		case "combatLightGradient":
 			return "Gradient";
 		case "combatLightGlow":
 			return "Glow";
 		case "combatLightFlat":
-			return "Flat light";
+			return "평면광";
 		case "combatLightTFColor":
-			return "Angel/Devil TF colour components";
+			return "천사/악마 변신 색상 요소";
 		case "maxStates":
-			return "History depth";
+			return "히스토리 깊이";
 		case "historyControls":
-			return "Show history controls";
+			return "히스토리 조작 표시";
 		case "useNarrowMarket":
-			return "Use 'narrow screen' version of market inventory";
+			return "시장 인벤토리에 좁은 화면 버전 사용";
 		case "skipStatisticsConfirmation":
-			return "Skip confirmation when viewing extra stats";
+			return "추가 스탯 보기 확인 건너뛰기";
 		case "passageCount":
-			return "Display passage count";
+			return "패시지 수 표시";
 		case "playtime":
-			return "Display play time";
+			return "플레이 시간 표시";
 		case "numberify_enabled":
-			return "Enable numbered link navigation";
+			return "번호 링크 이동 활성화";
 		case "timestyle":
-			return "Time style";
+			return "시간 표시 방식";
 		case "tipdisable":
-			return "Sidebar Tips";
+			return "사이드바 팁";
 		case "pepperSprayDisplay":
-			return "Pepper spray display";
+			return "호신 스프레이 표시";
 		case "condomsDisplay":
-			return "Condom display";
+			return "콘돔 표시";
 		case "closeButtonMobile":
-			return "Items per page";
+			return "페이지당 항목 수";
 		case "showDebugRenderer":
-			return "Enable renderer debugger";
+			return "렌더러 디버거 활성화";
 		case "showCombatTools":
-			return "Enable combat tools";
+			return "전투 도구 활성화";
 		case "numpad":
-			return "Enable numpad";
+			return "숫자패드 활성화";
 		case "traitOverlayFormat":
-			return "Display traits";
+			return "특성 표시";
 		case "font":
 			return "Font";
 		case "passageLineHeight":
-			return "Passage line height";
+			return "패시지 줄 높이";
 		case "overlayLineHeight":
-			return "Overlay line height";
+			return "오버레이 줄 높이";
 		case "sidebarLineHeight":
-			return "Sidebar line height";
+			return "사이드바 줄 높이";
 		case "passageFontSize":
-			return "Passage font size";
+			return "패시지 글자 크기";
 		case "overlayFontSize":
-			return "Overlay font size";
+			return "오버레이 글자 크기";
 		case "sidebarFontSize":
-			return "Sidebar font size";
+			return "사이드바 글자 크기";
 		case "genderBody":
-			return "Body type displayed";
+			return "표시할 신체 유형";
 		case "notesAutoSave":
-			return "Notes auto saving";
+			return "메모 자동 저장";
 		case "dateFormat":
-			return "Date format";
+			return "날짜 형식";
 		case "alwaysBackToShopButton":
-			return "Always show back-to-shop button";
+			return "상점 돌아가기 버튼 항상 표시";
 		case "color":
-			return "Default clothing colour";
+			return "기본 의상 색";
 		case "colourItems":
-			return "Colour items";
+			return "물건 색 표시";
 		case "compactMode":
-			return "Compact mode";
+			return "간결 모드";
 		case "disableReturn":
-			return "Hide return button";
+			return "돌아가기 버튼 숨기기";
 		case "highContrast":
-			return "High contrast";
+			return "고대비";
 		case "mannequinGender":
-			return "Mannequin gender";
+			return "마네킹 성별";
 		case "mannequinGenderFromClothes":
-			return "Mannequin gender from clothes";
+			return "의상에 따른 마네킹 성별";
 		case "noHelp":
-			return "Hide help";
+			return "도움말 숨기기";
 		case "noTraits":
-			return "Hide traits";
+			return "특성 숨기기";
 		case "secColor":
-			return "Default secondary clothing colour";
+			return "기본 보조 의상 색";
 		case "showTraits":
-			return "Show traits";
+			return "특성 표시";
 		case "extraInfo":
-			return "Show extra info";
+			return "추가 정보 표시";
 		case "monsterChance":
-			return "Monster person chance";
+			return "괴물인간 확률";
 		case "hallucinationsOnly":
-			return "Monster people only while hallucinating";
+			return "환각 중에만 괴물인간";
 		case "victimsAlwaysMonster":
-			return "Victims are always monster people";
+			return "피해자는 항상 괴물인간";
 		case "bestiality":
 			return "Bestiality";
 		case "pronoun":
 			return "Pronoun";
 		case "skincolour":
-			return "Skin tone";
+			return "피부 톤";
 		case "skinType":
-			return "Skin type";
+			return "피부 유형";
 		default:
 			return varName;
 	}
@@ -1570,7 +1570,7 @@ function settingValueNameFromValue(varName, value) {
 				case 2:
 					return "Sensitive";
 				case 3:
-					return "Very Sensitive";
+					return "예민함";
 			}
 			break;
 		case "genitalsensitivity":
@@ -1580,7 +1580,7 @@ function settingValueNameFromValue(varName, value) {
 				case 2:
 					return "Sensitive";
 				case 3:
-					return "Very Sensitive";
+					return "예민함";
 			}
 			break;
 		case "mouthsensitivity":
@@ -1590,7 +1590,7 @@ function settingValueNameFromValue(varName, value) {
 				case 2:
 					return "Sensitive";
 				case 3:
-					return "Very Sensitive";
+					return "예민함";
 			}
 			break;
 		case "bottomsensitivity":
@@ -1600,7 +1600,7 @@ function settingValueNameFromValue(varName, value) {
 				case 2:
 					return "Sensitive";
 				case 3:
-					return "Very Sensitive";
+					return "예민함";
 			}
 			break;
 		case "drunkSensitivity":
@@ -1618,9 +1618,9 @@ function settingValueNameFromValue(varName, value) {
 				case "purple":
 					return "Purple";
 				case "dark blue":
-					return "Dark blue";
+					return "어두운 파란색";
 				case "light blue":
-					return "Light blue";
+					return "밝은 파랑";
 				case "amber":
 					return "Amber";
 				case "hazel":
@@ -1630,7 +1630,7 @@ function settingValueNameFromValue(varName, value) {
 				case "green":
 					return "Green";
 				case "lime green":
-					return "Lime green";
+					return "라임 그린";
 				case "red":
 					return "Red";
 				case "pink":
@@ -1640,7 +1640,7 @@ function settingValueNameFromValue(varName, value) {
 				case "grey":
 					return "Grey";
 				case "light grey":
-					return "Light grey";
+					return "밝은 회색";
 				case "random":
 					return "Random";
 			}
@@ -1650,37 +1650,37 @@ function settingValueNameFromValue(varName, value) {
 				case "red":
 					return "Red";
 				case "jetblack":
-					return "Jet black";
+					return "칠흑색";
 				case "black":
 					return "Black";
 				case "darkbrown":
-					return "Dark brown";
+					return "어두운 갈색";
 				case "brown":
 					return "Brown";
 				case "copperbrown":
-					return "Copper brown";
+					return "구리빛 갈색";
 				case "softbrown":
-					return "Soft brown";
+					return "부드러운 갈색";
 				case "lightbrown":
-					return "Light brown";
+					return "밝은 갈색";
 				case "burntorange":
-					return "Burnt orange";
+					return "번트 오렌지";
 				case "blond":
 					return "Blond";
 				case "softblond":
-					return "Soft blond";
+					return "부드러운 금발";
 				case "platinumblond":
-					return "Platinum blond";
+					return "백금발";
 				case "ashyblond":
-					return "Ashy blond";
+					return "애쉬 블론드";
 				case "strawberryblond":
-					return "Strawberry blond";
+					return "스트로베리 블론드";
 				case "ginger":
 					return "Ginger";
 				case "white":
 					return "White";
 				case "snowwhite":
-					return "Snow white";
+					return "설백색";
 				case "random":
 					return "Random";
 			}
@@ -1716,7 +1716,7 @@ function settingValueNameFromValue(varName, value) {
 				case "lustful":
 					return "Lustful";
 				case "plantlover":
-					return "Plant lover";
+					return "식물 애호가";
 			}
 			break;
 		case "startingseason":
@@ -1788,45 +1788,45 @@ function settingValueNameFromValue(varName, value) {
 		case "skinColour":
 			switch (value) {
 				case "light":
-					return "Neutral Light";
+					return "중립 밝음";
 				case "medium":
-					return "Neutral Medium";
+					return "중립 보통";
 				case "dark":
-					return "Neutral Dark";
+					return "중립 어두움";
 				case "gyaru":
-					return "Neutral Gyaru";
+					return "중립 갸루";
 				case "rlight":
-					return "Warm Light";
+					return "따뜻한 밝음";
 				case "rmedium":
-					return "Warm Medium";
+					return "따뜻한 보통";
 				case "rdark":
-					return "Warm Dark";
+					return "따뜻한 어두움";
 				case "rgyaru":
-					return "Warm Gyaru";
+					return "따뜻한 갸루";
 				case "glight":
-					return "Golden Light";
+					return "황금빛 밝음";
 				case "gmedium":
-					return "Golden Medium";
+					return "황금빛 보통";
 				case "gdark":
-					return "Golden Dark";
+					return "황금빛 어두움";
 				case "ggyaru":
-					return "Golden Gyaru";
+					return "황금빛 갸루";
 				case "ylight":
-					return "Olive Light";
+					return "올리브 밝음";
 				case "ymedium":
-					return "Olive Medium";
+					return "올리브 보통";
 				case "ydark":
-					return "Olive Dark";
+					return "올리브 어두움";
 				case "ygyaru":
-					return "Olive Gyaru";
+					return "올리브 갸루";
 				case "blight":
-					return "Cool Light";
+					return "차가운 밝음";
 				case "bmedium":
-					return "Cool Medium";
+					return "차가운 보통";
 				case "bdark":
-					return "Cool Dark";
+					return "차가운 어두움";
 				case "bgyaru":
-					return "Cool Gyaru";
+					return "차가운 갸루";
 			}
 			break;
 		case "ballsExist":
@@ -1852,9 +1852,9 @@ function settingValueNameFromValue(varName, value) {
 				case "none":
 					return "None";
 				case "upper":
-					return "Upper body";
+					return "상체";
 				case "full":
-					return "Full body";
+					return "전신";
 				case "random":
 					return "Random";
 			}
@@ -2004,45 +2004,45 @@ function settingValueNameFromValue(varName, value) {
 		case "asphyxiaLevel":
 			switch (value) {
 				case 0:
-					return "NPCs will not touch your neck";
+					return "NPC가 당신의 목을 건드리지 않습니다";
 				case 1:
-					return "NPCs may grab you by the neck without impeding breathing";
+					return "NPC가 호흡을 방해하지 않는 선에서 당신의 목을 잡을 수 있습니다";
 				case 2:
-					return "NPCs may try to choke you during consensual encounters";
+					return "합의된 조우 중 NPC가 당신의 목을 조르려 할 수 있습니다";
 				case 3:
-					return "NPCs may try to strangle you during non-consensual encounters";
+					return "비동의 조우 중 NPC가 당신의 목을 조르려 할 수 있습니다";
 			}
 			break;
 		case "bodyWritingLevel":
 			switch (value) {
 				case 0:
-					return "NPCs will not write on you";
+					return "NPC가 당신 몸에 낙서하지 않습니다";
 				case 1:
-					return "NPCs may ask to write on you";
+					return "NPC가 당신 몸에 낙서해도 되는지 물을 수 있습니다";
 				case 2:
-					return "NPCs may forcibly write on you";
+					return "NPC가 억지로 당신 몸에 낙서할 수 있습니다";
 				case 3:
-					return "NPCs may forcibly write on and tattoo you";
+					return "NPC가 억지로 당신 몸에 낙서하고 문신을 새길 수 있습니다";
 			}
 			break;
 		case "condomLevel":
 			switch (value) {
 				case 0:
-					return "Everyone is allergic to latex and safe sex";
+					return "모두가 라텍스와 안전한 성관계에 알레르기가 있습니다";
 				case 1:
-					return "Only you may use condoms, but you may give NPCs condoms";
+					return "당신만 콘돔을 사용할 수 있지만, NPC에게 콘돔을 줄 수 있습니다";
 				case 2:
-					return "NPCs will only have condoms if pregnancy between them and the player is possible";
+					return "NPC는 플레이어와 임신이 가능한 경우에만 콘돔을 소지합니다";
 				case 3:
-					return "NPCs may have and use condoms whenever they please";
+					return "NPC는 원할 때 언제든 콘돔을 소지하고 사용할 수 있습니다";
 			}
 			break;
 		case "multipleWardrobes":
 			switch (value) {
 				case false:
-					return "One shared wardrobe";
+					return "하나의 공용 옷장";
 				case "isolated":
-					return "Separate per location";
+					return "장소별로 분리";
 			}
 			break;
 		case "analPregnancy":
@@ -2050,7 +2050,7 @@ function settingValueNameFromValue(varName, value) {
 				case false:
 					return "Disabled";
 				case "exceptional":
-					return "Exceptional circumstances only";
+					return "예외적인 경우에만";
 				case "always":
 					return "Always";
 			}
@@ -2058,13 +2058,13 @@ function settingValueNameFromValue(varName, value) {
 		case "nudeGenderPerception":
 			switch (value) {
 				case 0:
-					return "NPCs will ignore genitals when perceiving gender";
+					return "NPC가 성별을 인식할 때 성기를 무시합니다";
 				case 1:
-					return "NPCs will consider your genitals when perceiving your gender";
+					return "NPC가 당신의 성별을 인식할 때 성기를 고려합니다";
 				case 2:
-					return "NPCs will judge your gender based on your genitals";
+					return "NPC가 성기를 기준으로 당신의 성별을 판단합니다";
 				case -1:
-					return "NPCs will ignore genitals when perceiving gender, and crossdressing warnings will not be displayed";
+					return "NPC가 성별을 인식할 때 성기를 무시하며, 크로스드레싱 경고가 표시되지 않습니다";
 			}
 			break;
 		case "pregnancyType":
@@ -2078,11 +2078,11 @@ function settingValueNameFromValue(varName, value) {
 		case "skillCheckStyle":
 			switch (value) {
 				case "percentage":
-					return "Exact chance of success";
+					return "정확한 성공 확률";
 				case "words":
-					return "General chance of success";
+					return "대략적인 성공 확률";
 				case "skillname":
-					return "Skill name only";
+					return "기술 이름만";
 			}
 			break;
 		case "sidebarStats":
@@ -2108,13 +2108,13 @@ function settingValueNameFromValue(varName, value) {
 		case "combatControls":
 			switch (value) {
 				case "radio":
-					return "Radio buttons";
+					return "라디오 버튼";
 				case "columnRadio":
-					return "Radio buttons in columns";
+					return "열별 라디오 버튼";
 				case "lists":
 					return "Lists";
 				case "limitedLists":
-					return "Limited lists";
+					return "제한된 목록";
 			}
 			break;
 		case "passageCount":
@@ -2122,9 +2122,9 @@ function settingValueNameFromValue(varName, value) {
 				case "disabled":
 					return "Disabled";
 				case "changes":
-					return "Passage changes count";
+					return "패시지 변경 횟수";
 				case "total":
-					return "Passage count";
+					return "패시지 횟수";
 			}
 			break;
 		case "numberify_enabled":
@@ -2143,7 +2143,7 @@ function settingValueNameFromValue(varName, value) {
 		case "timestyle":
 			switch (value) {
 				case "military":
-					return "Military (24-Hour)";
+					return "군용 (24시간제)";
 				case "ampm":
 					return "AM/PM (12-Hour)";
 			}
@@ -2173,7 +2173,7 @@ function settingValueNameFromValue(varName, value) {
 				case "table":
 					return "Table";
 				case "reducedTable":
-					return "Reduced table";
+					return "간략한 표";
 				case "list":
 					return "List";
 			}
@@ -2303,9 +2303,9 @@ function settingValueNameFromValue(varName, value) {
 		case "mannequinGender":
 			switch (value) {
 				case "same":
-					return "Same as player";
+					return "플레이어와 같음";
 				case "opposite":
-					return "Opposite of player";
+					return "플레이어와 반대";
 				case "male":
 					return "Male";
 				case "female":
@@ -2349,7 +2349,7 @@ function settingValueNameFromValue(varName, value) {
 				case "off":
 					return "Disabled";
 				case "monsterOnly":
-					return "Only as monster people";
+					return "괴물인간으로만";
 			}
 			break;
 		case "pronoun":
@@ -2365,7 +2365,7 @@ function settingValueNameFromValue(varName, value) {
 		case "skinType":
 			switch (value) {
 				case "ghost":
-					return "Ghostly Pale";
+					return "유령처럼 창백함";
 			}
 			break;
 		case "skincolour":
@@ -2600,7 +2600,7 @@ window.loadExternalExportFile = function () {
 		})
 		.catch(function () {
 			const button = document.getElementById("LoadExternalExportFile");
-			button.value = "Error Loading";
+			button.value = "불러오기 오류";
 		});
 };
 

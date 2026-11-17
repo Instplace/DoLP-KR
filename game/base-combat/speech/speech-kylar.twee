@@ -6,86 +6,86 @@
 	<<if $player.virginity.anal is "Kylar" and $speechAnusVirgin>>
 		<<addSpeechLine "virginity">>
 			<<if $player.vaginaExist and $settings.pregnancySpeechEnabled>>
-				<<He>> gasps. "We can't make babies this way, but I just couldn't resist you."
+				<<He>>【이가】 헐떡인다. "이러면 애는 못 만들겠지만, 널 참을 수 없었어."
 			<<elseif !$player.vaginaExist and _kylar.gender is "m" and knowsAboutAnyPregnancy("pc","Kylar") and $settings.pregnancySpeechEnabled>>
-				<<He>> gasps. "Is this how you got pregnant before? But you were still a virgin!"
+				<<He>>【이가】 헐떡인다. "그래서 전에 임신했던 거야? 그래도 처음이었는데!"
 			<<else>>
-				<<He>> gasps. "Every part of you, the deepest part of you. I wanna feel it all!"
+				<<He>>【이가】 헐떡인다. "네 모든 부분, 가장 깊은 곳까지 다 느끼고 싶어!"
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.oral is "Kylar" and $speechOralVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> gasps. "Finally, you're kissing the most intimate part of me. Just like in my dreams!"
+			<<He>>【이가】 숨을 몰아쉰다. "드디어 네가 내 가장 은밀한 곳에 키스해주고 있어. 내 꿈에서처럼!"
 		<</addSpeechLine>>
 	<</if>>
 	<<if $player.virginity.kiss is "Kylar" and $speechKissVirgin>>
 		<<addSpeechLine "virginity">>
-			<<He>> gasps. "Iloveyouiloveyouiloveyou!!!"
+			<<He>>【이가】 숨을 거칠게 쉰다. "사랑해사랑해사랑해!!!"
 			<<set $kylarSeen.pushUnique("saidLove")>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $settings.pregnancySpeechEnabled and $speechCrossdressAroused is 1>>
 		<<addSpeechLine "reveal">>
 			<<if _kylar.gender is "h">>
-				<<He>> gasps. "Oh. I thought you were..." <<He>> shakes <<his>> head with a grin. "Oh well! We can still make a family together...!"
+				<<He>>【이가】 숨을 헐떡인다. "아. 난 네가... 그런 줄 알았어." <<He>>【이가】 씨익 웃으며 머리를 가로젓는다. "뭐 어때! 우린 여전히 가족을 만들 수 있어...!"
 			<<elseif $player.penisExist and (C.npc.Kylar.vagina isnot "none" or $settings.npcAnalPregnancyEnabled)>>
-				<<He>> gasps. "You can make me pregnant. I'd given up on making a family, but..." <<He>> starts to cry. "You can make me pregnant...!"
+				<<He>>【이가】 헐떡인다. "네가 날 임신시켜 줄 수 있어. 가족을 만드는 건 포기했었는데..." <<He>>【이가】 울기 시작한다. "네가 날 임신시킬 수 있어...!"
 			<<else>>
-				<<He>> gasps. "I can make you pregnant. I'd given up on making a family, but..." <<He>> starts to cry. "I can make you pregnant...!"
+				<<He>>【이가】 헐떡인다. "내가 널 임신시켜 줄 수 있어. 가족을 만드는 건 포기했었는데..." <<He>>【이가】 울기 시작한다. "내가 널 임신시킬 수 있어...!"
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechCrossdressDisappointed is 1>>
 		<<addSpeechLine "reveal">>
 			<<if !$player.vaginaExist and knowsAboutAnyPregnancy("pc","Kylar")>>
-				<<He>> sighs. "Oh. I thought you were..." <<He>> suddenly looks excited. "But weren't you pregnant before? Hmm, there's still a chance then."
+				<<He>>【이가】 한숨을 쉰다. "아. 난 네가..." <<He>>【이가】 갑자기 들떠서 말한다. "그래도 전에 임신했었잖아? 흐음, 그럼 아직 희망이 있네."
 			<<else>>
-				<<He>> sighs. "Oh. I thought you were..." <<He>> shakes <<his>> head. "I-it's okay. We can always adopt."
+				<<He>>【이가】 한숨을 쉰다. "아. 난 네가..." <<He>>【이가】 머리를 흔든다. "괘-괜찮아. 우린 언제든 입양하면 돼."
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechHermAroused is 1>>
 		<<addSpeechLine "reveal">>
 			<<if _kylar.gender is "h" and $settings.pregnancySpeechEnabled>>
-				<<He>> gasps. "You have both...? Just like me...? We could make so many children...perfection..."
+				<<He>>【이가】 헐떡인다. "너한테 둘 다 있어...? 나처럼...? 우리는 엄청 많은 아이들을 만들 수 있을 거야... 완벽해..."
 			<<else>>
-				<<He>> gasps. "You have both...? I didn't think you could get any more perfect..."
+				<<He>>【이가】 헐떡인다. "둘 다 있어...? 네가 이것보다 더 완벽할 수 있을 줄 몰랐는데..."
 			<</if>>
 		<</addSpeechLine>>
 	<</if>>
 	<<if $speechLINameDrop>>
 		<<if _loveInterest is "Black Wolf" or _loveInterest is "Great Hawk">>
 			<<addSpeechLine "namedrop">>
-				<<His>> eyes narrow. "I can be an animal, too. Watch!"
+				<<His>> 눈이 가늘어진다. "나도 짐승처럼 할 수 있어. 똑똑히 봐!"
 				<<npcincr Kylar rage 10>><<ggksuspicion>>
 			<</addSpeechLine>>
 		<<else>>
 			<<switch _loveInterest>>
 				<<case "Robin">>
 					<<addSpeechLine "namedrop">>
-						<<He>> growls. "Robin can't take care of you like I can!"
+						<<He>>【이가】 으르렁거린다. "로빈은 나만큼 널 챙겨줄 수 없어!"
 						<<npcincr Kylar rage 10>><<ggksuspicion>>
 					<</addSpeechLine>>
 				<<case "Whitney">>
 					<<addSpeechLine "namedrop">>
-						<<He>> freezes. "W... Whitney can't stop me!"
+						<<He>>【이가】 멈칫한다. "휘... 휘트니는 날 못 막아!"
 						<<npcincr Kylar rage 10>><<ggksuspicion>>
 					<</addSpeechLine>>
 				<<case "Sydney">>
 					<<addSpeechLine "namedrop">>
-						<<He>> growls. "Sydney doesn't know you like I do!"
+						<<He>>【이가】 으르렁거린다. "시드니는 나만큼 널 잘 몰라!"
 						<<set $kylarSeen.pushUnique("sydneyWriting")>>
 						<<npcincr Kylar rage 10>><<ggksuspicion>>
 					<</addSpeechLine>>
 				<<default>>
 					<<addSpeechLine "namedrop">>
-						<<He>> freezes. "Who... are you talking about...?"
+						<<He>>【이가】 멈칫한다. "누구... 얘기하는 거야...?"
 						<<npcincr Kylar rage 10>><<ggksuspicion>>
 					<</addSpeechLine>>
 			<</switch>>
 			<<addSpeechLine "namedrop">>
-				<<He>> freezes. "You don't need them! You only need me!"
+				<<He>>【이가】 굳어버린다. "걔넨 필요 없어! 넌 나만 있으면 돼!"
 				<<npcincr Kylar rage 10>><<ggksuspicion>>
 			<</addSpeechLine>>
 		<</if>>
@@ -93,31 +93,31 @@
 	<<if $speechNoticeSexToy>>
 		<<if !$player.penisExist and $NPCList[0].vagina isnot "none" and random(0,2) isnot 0>>
 			<<addSpeechLine "sexToy">>
-				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 			<<speechLine>>
-				<<He>> looks at your $_sexToy and speaks. "U-use it. Please, use me, use it."
+				<<He>>【이가】 당신의 $_sexToy【을를】 보며 말한다. "써-써줘. 제발, 날... 그걸 써줘."
 			<<speechLine>>
-				<<He>> looks at your $_sexToy and speaks. "It's a sign of our love, right?"
+				<<He>>【이가】 당신의 $_sexToy【을를】 보며 말한다. "우리가 사랑한다는 증거지, 그렇지?"
 			<</addSpeechLine>>
 		<<elseif $player.penisExist or $NPCList[0].penis isnot "none" and random(0,2) isnot 0>>
 			<<addSpeechLine "sexToy">>
-				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 			<<speechLine>>
-				<<He>> looks at your $_sexToy and speaks. "What... am I doing wrong...?"
+				<<He>>【이가】 당신의 $_sexToy【을를】 보며 말한다. "내가... 뭘 잘못했어...?"
 			<<speechLine>>
-				<<He>> looks at your $_sexToy and speaks. "If it makes you happy, my love, but..."
+				<<He>>【이가】 당신의 $_sexToy【을를】 보며 말한다. "네가 행복하다면 나도 좋지만..."
 			<</addSpeechLine>>
 		<<else>>
 			<<addSpeechLine "sexToy">>
-				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "sex toys" : "sex toy")>>
+				<<set $_sexToy to ($rightarm is "heldSexToy" and $leftarm is "heldSexToy" ? "섹스 토이들" : "섹스 토이")>>
 			<<speechLine>>
-				<<He>> looks at your $_sexToy and pouts. "Am I not good enough for you?"
+				<<He>>【이가】 당신의 $_sexToy【을를】 보고 입을 삐죽 내민다. "나로는 부족해?"
 			<</addSpeechLine>>
 		<</if>>
 	<</if>>
 	<<if ($speechPenisVirgin is 1 and $player.virginity.penile is "Kylar") or ($speechVaginaVirgin is 1 and $player.virginity.vaginal is "Kylar")>>
 		<<addSpeechLine "virginity">>
-			<<He>> gasps. "You were a virgin too," <<he>> says. "We were meant for each other."
+			<<He>>【이가】 숨을 헐떡인다. "너도 처음이었구나." <<he>>【이가】 말한다. "우린 운명이야."
 		<</addSpeechLine>>
 	<</if>>
 	<<if hasSpeechLines()>>
@@ -127,29 +127,29 @@
 		<<switch $kylarsexcycle>>
 			<<case 0>>
 				<<if $settings.pregnancySpeechEnabled and (playerCanBreedWith("Kylar") or (!$genderknown.includes("Kylar") and $player.gender_appearance is "f"))>>
-					<<He>> whispers into your ear. "We're going to make lots of babies."
+					<<He>>【이가】 당신의 귓가에 속삭인다. "우리 아기를 아주 많이 가질 거야."
 				<<else>>
-					"We're going to adopt lots of babies," <<he>> says.
+					"우리 아기를 아주 많이 입양할 거야." <<he>>【이가】 말한다.
 				<</if>>
 			<<case 1>>
-				<<print `"You'll be the best <<pmummy>> ever," <<he>> says.`>>
+				<<print `"넌 최고의 <<pmummy>>【이가】 될 거야." <<he>>【이가】 말한다.`>>
 			<<case 2>>
-				"You're so naughty," <<he>> says. "We're not even married yet!"
+				"정말 야하다니까," <<he>>【이가】 말한다. "우리 아직 결혼도 안 했는데!"
 			<<case 3>>
-				"I want you to wear me out," <<he>> says, "and then keep going."
+				"내 기운을 쏙 빼놓아줘." <<he>>【이가】 말한다. "그리고 멈추지 마."
 			<<case 4>>
-				<<print `"I'm going to do this again and again until you forget about every other ${$pronoun is "m" ? "bastard" : "whore"} who's looked at you," <<he>> says.`>>
+				<<print `"널 쳐다본 다른 ${$pronoun is "m" ? "개자식들" : "창년들"} 따위 전부 잊어버릴 때까지 몇 번이고 다시 할 거야." <<he>>【이가】 말한다.`>>
 			<<case 5>>
-				"I'll be the only one you ever think about," <<he>> says.
+				"네가 영원히 생각하는 건 나뿐일 거야." <<he>>【이가】 말한다.
 			<<case 6>>
-				"Everyone is bad," <<he>> says. "Except you. You're perfect."
+				"모두 다 나쁜 놈들이야." <<he>>【이가】 말한다. "너 빼고. 넌 완벽해."
 			<<case 7>>
-				"I feel safe like this," <<he>> says. "I never want it to end."
+				"이러니까 안심돼." <<he>>【이가】 말한다. "영원히 끝나지 않았으면 좋겠어."
 			<<case 8>>
-				"I l-love you," <<he>> says.
+				"사-사랑해." <<he>>【이가】 말한다.
 				<<set $kylarSeen.pushUnique("saidLove")>>
 			<<default>>
-				"You're so lewd and naughty and all mine," <<he>> says.
+				"넌 정말 음탕하고 야해. 전부 내 거야." <<he>>【이가】 말한다.
 		<</switch>>
 		<<set $kylarsexcycle to ($kylarsexcycle + 1) % 10>> <!-- increase by one, and reset to 0 if it hits 10 -->
 	<<else>>

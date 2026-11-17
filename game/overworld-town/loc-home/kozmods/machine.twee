@@ -76,12 +76,12 @@
 You disassemble the machine and store it safely back in your wardrobe.
 <br><br>
 <<if $location is "home">>
-	<<link [[Next|Bedroom]]>><<endevent>><</link>>
+	<<link [[다음|Bedroom]]>><<endevent>><</link>>
 <<elseif $location is "alex_cottage">>
-	<<link [[Next|Farm Bedroom]]>><<endevent>><</link>>
+	<<link [[다음|Farm Bedroom]]>><<endevent>><</link>>
 <<else>>
 	PLEASE REPORT IF YOU SOMEHOW GET THIS
 	<br>
-	<<link [[Next|Bedroom]]>><<endevent>><</link>>
+	<<link [[다음|Bedroom]]>><<endevent>><</link>>
 <</if>>
 <br>

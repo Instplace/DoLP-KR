@@ -25,7 +25,7 @@ The tide is out. You walk along the waterline, picking through what the sea left
 	<br><br>
 	You've gained <<printmoney _combLoot>>.<<money _combLoot "beachComb">>
 	<br><br>
-	<<link [[Next|Beach]]>><</link>>
+	<<link [[다음|Beach]]>><</link>>
 <</if>>
 
 :: Beach Comb Pearl Eat
@@ -33,14 +33,14 @@ The tide is out. You walk along the waterline, picking through what the sea left
 You swallow the pearl before you can think better of it. It goes down cold, and a shiver runs through your body.
 <<if $waterdragonbuild gte 30>><span class="gold">Where it belongs.</span><<else>><span class="gold">You don't know why you did that, but somehow it calms you down.</span><</if>><<lstress>><<stress -4>>
 <br><br>
-<<link [[Next|Beach]]>><</link>>
+<<link [[다음|Beach]]>><</link>>
 
 :: Beach Comb Pearl Keep
 <<effects>>
 
 You pocket the pearl. It will sell for a good sum. <<if $waterdragonbuild gte 1>><span class="red">You can't help but feel bad about it.</span><</if>>
 <br><br>
-<<link [[Next|Beach]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Beach]]>><<set $eventskip to 1>><</link>>
 
 :: Beach Comb Moonstone Eat
 <<effects>>
@@ -48,13 +48,13 @@ You swallow the stone. It tastes of salt, and a coolness spreads through your ch
 
 <<if $waterdragonbuild gte 30>><span class="gold">Where it belongs.</span><<else>><span class="gold">You don't know why, but somehow it calms you down.</span><</if>><<lstress>><<stress -2>>
 <br><br>
-<<link [[Next|Beach]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Beach]]>><<set $eventskip to 1>><</link>>
 
 :: Beach Comb Moonstone Keep
 <<effects>>
 You pocket the stone. It should fetch a decent price. <<if $waterdragonbuild gte 1>><span class="purple">Part of you doesn't want to let it go.</span><</if>>
 <br><br>
-<<link [[Next|Beach]]>><<set $eventskip to 1>><</link>>
+<<link [[다음|Beach]]>><<set $eventskip to 1>><</link>>
 
 
 :: Water Dragon Island Travel
@@ -621,15 +621,15 @@ The <<person>> in front steps closer. <<He>> doesn't lift a knife. <<His>> hand 
 
 :: Island Defeat Dragon Breed Finish 2
 <<effects>>
-The islanders carry you from the ruins, back to the rapid river bridged by a log. They haul the stick back into an upright position, so that you face the edge of the river.
+섬 주민들은 당신을 폐허에서 꺼내 통나무 다리가 놓인 급류 강가로 다시 데려간다. 그들은 막대기를 다시 수직으로 세워 당신이 강가를 마주 보게 한다.
 <br><br>
 With a single movement, the <<person>> slices through all the bindings attaching you to the rope. You plunge into the river.
 <br><br>
-You fall.
+당신은 넘어진다.
 <br><br>
 <<set $island.dragon_defeat_count += 1>>
 <<unbind>><<leg_unbind>>
-<<link [[Next|Island Defeat Tattoo End 2]]>><<endcombat>><</link>>
+<<link [[다음|Island Defeat Tattoo End 2]]>><<endcombat>><</link>>
 
 /* ELDER INTERVENTION (triggers on the 5th dragon defeat) */
 :: Island Defeat Dragon Intervene
@@ -780,7 +780,7 @@ You arrive at a narrow staircase, a sheer drop on either side.
 :: Islander Elder Spear
 <<effects>><<person1>>
 <<set _generate_victim to 1>><<generateRole 1 0 "sleeper">><<saveNPC 1 "sleeper">>
-At last, you arrive at even ground. The dark seems to press in, preventing the <<persons>> torchlight from reaching more than a dozen feet in any direction, but <<his>> steps are assured.
+마침내 평지에 다다른다. 짙은 어둠 탓에 <<persons>> 횃불 빛은 십여 피트 밖을 벗어나지 못하지만, <<his>> 발걸음은 확신에 차 있다.
 <br><br>
 "Sire," <<he>> says, coming to a halt beside a brazier. You can't see who <<he>> addresses, until <<he>> shoves the torch into the vessel beside <<him>>. 
 The firelight illuminates a <<person2>><<personsimple>>, lying still as a statue, arms clasped at <<his>> breast above the hilt of a gigantic, gilded spear.
@@ -791,11 +791,11 @@ As you look closer, you notice the figure's chest rising and falling, as if asle
 <br><br>
 <<He>> nods at you, and waits.
 <br><br>
-<<link [[Walk up to the sleeping figure|Islander Walk]]>><<set $island.walk to 1>><</link>>
+<<link [[잠자는 인물에게 다가간다|Islander Walk]]>><<set $island.walk to 1>><</link>>
 <br>
-<<link [[Kneel|Islander Kneel]]>><<set $island.kneel to 1>><</link>>
+<<link [[무릎 꿇는다|Islander Kneel]]>><<set $island.kneel to 1>><</link>>
 <br>
-<<link [[Take the Spear|Islander Spear]]>><</link>>
+<<link [[창을 집는다|Islander Spear]]>><</link>>
 
 /* POST-ELDER: PC is handed straight to the Elder, no breeding */
 :: Island Defeat Dragon Elder Call
@@ -832,7 +832,7 @@ The corridor carries you gently out into the woods above the ruin, leaving the c
 <<if !$island.home>>
 	<<link [[Next|Island Treeline Search]]>><<endevent>><</link>>
 <<else>>
-	<<link [[Next|Island]]>><<endevent>><</link>>
+	<<link [[다음|Island]]>><<endevent>><</link>>
 <</if>>
 
 :: Water Dragon Helpers [widget]

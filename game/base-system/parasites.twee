@@ -91,7 +91,7 @@
 				<<set $worn.genitals.type.push("broken")>>
 				<<genitalsruined>>
 			<<elseif playerChastity("penis") and !playerChastity("vagina") and !$player.penisExist and _args[0]>>
-				With nothing to hold it in place, you <<print $worn.genitals.name>> falls to the ground.
+				붙잡아 둘 것이 사라지자, 당신의 <<print $worn.genitals.name>>【이가】 바닥으로 떨어진다.
 				<<set $worn.genitals.type.push("broken")>>
 				<<genitalsruined>>
 			<</if>>
@@ -156,7 +156,7 @@
 		<<if _args[1] gt $earSlime[_args[0]] and $earSlime.corruption gte random(0, 50 * _args[1] * (_args[2] or 1)) and V[_args[0]] gte [0,0,15,35,55,75,95][_args[1]]>>
 			<<set $earSlime[_args[0]] to _args[1]>>
 			<br><br>
-			<span class="red">The slime in your ear takes notice of your lewd action.</span>
+			<span class="red">귀에 있는 슬라임이 당신의 음란한 행동을 알아차렸다.</span>
 		<</if>>
 	<</if>>
 <</widget>>

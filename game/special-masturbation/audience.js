@@ -13,27 +13,27 @@ function masturbationAudience() {
 		const audienceMutual = V.masturbationAudienceMutualAllowed && V.audiencearousal >= 50;
 		if (V.masturbationAudience > 6) {
 			sWikifier(
-				`<span class="lewd">A crowd is watching you.${
-					audienceMutual ? " The lewd sounds you hear clearly mean that many of them are masturbating." : ""
+				`<span class="lewd">군중이 당신을 지켜보고 있다.${
+					audienceMutual ? " 들려오는 음란한 소리로 보아 그들 중 여럿이 자위하고 있는 게 분명하다." : ""
 				}</span> `
 			);
 		}
 		if (V.npc[npc - 1]) {
 			sWikifier(
-				`<span class="lewd"><<person${npc}>>You can feel <<combatpersons>> eyes${V.masturbationAudience > 1 ? ", alongside others," : ""} on you.${
+				`<span class="lewd"><<person${npc}>><<combatpersons>> 시선${V.masturbationAudience > 1 ? "과 다른 이들의 시선" : ""}이 당신에게 꽂히는 것이 느껴진다.${
 					audienceMutual && V.masturbationAudience <= 6
-						? ` <<He>> mirrors${V.mouth === 0 || V.mouth === "disabled" ? " " : " some of"} your actions.`
+						? ` <<He>>【은는】 당신의 행동${V.mouth === 0 || V.mouth === "disabled" ? "" : " 일부"}를 따라 한다.`
 						: ""
 				}</span>`
 			);
 		} else if (V.masturbationAudience === 1) {
 			sWikifier(
-				`<span class="lewd"><<person${npc}>>You can feel the <<persons>> eyes on you${
-					audienceMutual ? ` as <<he>> mirrors${V.mouth === 0 || V.mouth === "disabled" ? " " : " some of"} your actions` : ""
+				`<span class="lewd"><<person${npc}>><<persons>> 시선이 당신에게 꽂히는 것이 느껴진다${
+					audienceMutual ? ` <<he>>【이가】 당신의 행동${V.mouth === 0 || V.mouth === "disabled" ? "" : " 일부"}를 따라 하며` : ""
 				}.</span>`
 			);
 		} else if (V.masturbationAudience <= 6) {
-			sWikifier(`<span class="lewd"><<person${npc}>>You can feel the ${V.masturbationAudience > 4 ? "many " : ""}eyes watching you.</span>`);
+			sWikifier(`<span class="lewd"><<person${npc}>>${V.masturbationAudience > 4 ? "수많은 " : ""}시선이 당신을 지켜보는 것이 느껴진다.</span>`);
 		}
 		fragment.append(" ");
 		if (comment) {
@@ -216,207 +216,203 @@ function masturbationAudienceLineText(npc, lineType = "") {
 	const resultArray = [];
 	switch (lineType + namedNpc) {
 		case "orgasm":
-			resultArray.push(`"Your face is so cute when you cum."`, `"You better not stop now. I know you want another round."`);
+			resultArray.push(`"쌀 때 네 얼굴 진짜 귀엽다."`, `"이제 와서 멈추지 않는 게 좋을걸. 너 한 번 더 하고 싶은 거 다 알아."`);
 			if (V.masturbationAudience > 1) {
-				resultArray.push(`"Look at how much <<pshe>> is shaking. Must be a pretty intense orgasm."`);
+				resultArray.push(`"<<pshe>> 얼마나 떨고 있는지 봐. 꽤 격한 절정인가 본데."`);
 			}
 			if (V.masturbationAudience >= 3 && V.masturbationAudienceReactions >= 3) {
-				resultArray.push(`"Cum for us, you pervert. Show everyone how lewd you are."`, `"Do you enjoy cumming in front of everyone?"`);
+				resultArray.push(`"우릴 위해 싸 봐, 변태야. 네가 얼마나 음란한지 모두에게 보여 줘."`, `"모두 앞에서 싸는 게 그렇게 좋아?"`);
 			}
-			if (["mpenisentrance", "mpenis"].includes(V.mouth)) resultArray.push(`"How do you like the taste of your own cum?"`);
-			if (["mvaginaentrance"].includes(V.mouth)) resultArray.push(`"How do you like the taste of your own juices?"`);
+			if (["mpenisentrance", "mpenis"].includes(V.mouth)) resultArray.push(`"네 정액 맛은 어때?"`);
+			if (["mvaginaentrance"].includes(V.mouth)) resultArray.push(`"네 애액 맛은 어때?"`);
 			if (V.masturbationAudienceReactions.filter(a => a === "orgasm").length > 2) {
 				if (V.masturbationAudience > 1) {
-					resultArray.push(`"This slut just keeps on cumming non-stop!"`);
+					resultArray.push(`"이 걸레는 쉬지도 않고 계속 싸네!"`);
 				}
-				resultArray.push(`"What's it like cumming so frequently!"`);
+				resultArray.push(`"그렇게 자주 싸면 어떤 기분이야?"`);
 			}
 			if (V.masturbationorgasm >= 5) {
 				if (V.masturbationAudience > 1) {
-					resultArray.push(`"This slut just keeps on cumming in front of ${V.masturbationAudience >= 4 ? "everyone" : "us"}?"`);
+					resultArray.push(`"이 걸레는 ${V.masturbationAudience >= 4 ? "모두" : "우리"} 앞에서 계속 싸대는 거야?"`);
 				} else {
-					resultArray.push(`"You must love cumming in front of me."`);
+					resultArray.push(`"내 앞에서 싸는 게 정말 좋은가 보네."`);
 				}
 			}
 			return resultArray.random();
 		case "mouthOral":
 			if (V.masturbationAudience > 1) {
-				return `"Fuck, this slut's flexible!"`;
+				return `"씨발, 이 걸레 존나 유연하네!"`;
 			} else {
-				return `"Fuck, how flexible are you?"`;
+				return `"씨발, 너 얼마나 유연한 거야?"`;
 			}
 		case "rest":
 			if (V.masturbationActions.leftaction === "mrest" && V.masturbationActions.rightaction === "mrest") {
 				if (V.audiencearousal <= 0 && V.exposed <= 0) {
 					// Likely needs to be re-written to fit the context, should not show in the first release
-					return [`Are you feeling okay?`, `Do you need some help?`].random();
+					return [`괜찮아?`, `도움이 필요해?`].random();
 				} else {
 					return [
-						`Why did you stop? Keep playing with yourself in front of ${V.masturbationAudience > 1 ? "us" : "me"}.`,
-						`Feeling tired already? Can I help?`,
+						`왜 멈췄어? ${V.masturbationAudience > 1 ? "우리" : "내"} 앞에서 계속 만져.`,
+						`벌써 지쳤어? 도와줄까?`,
 					].random();
 				}
 			} else {
 				return [
-					`Are you going to use that free hand to play with yourself more?`,
-					`You're already playing with yourself with one hand, but it'd be better with two.`,
+					`남은 손으로 더 만질 생각 없어?`,
+					`이미 한 손으로 만지고 있잖아. 두 손이면 더 좋을 텐데.`,
 				].random();
 			}
 		case "penis":
-			resultArray.push(`"C'mon, squeeze it harder."`);
+			resultArray.push(`"자, 더 세게 쥐어 봐."`);
 			if (V.masturbationAudience >= 4) {
 				resultArray.push(
-					`"Look how fast <<pshes>> stroking <<pherself>>."`,
-					`"Does it feel good? Touching your dick in front of everyone, I mean."`,
-					`"I think I can see some precum dripping."`,
-					`"That's it, show everyone how you masturbate."`
+					`"<<pshes>> <<pherself>>【을를】 얼마나 빠르게 문지르는지 봐."`,
+					`"기분 좋아? 모두 앞에서 네 자지를 만지는 거 말이야."`,
+					`"쿠퍼액이 조금 떨어지는 것 같은데."`,
+					`"그래, 모두에게 네가 어떻게 자위하는지 보여 줘."`
 				);
 			} else {
 				resultArray.push(
-					`"Is stroking it like that in front of ${V.masturbationAudience > 1 ? "us" : "me"} fun?"`,
-					`"Does it feel good? Touching your dick in front of ${V.masturbationAudience > 1 ? "us" : "me"}, I mean."`,
-					`"Is that precum dripping from <<pher>> cock?"`
+					`"${V.masturbationAudience > 1 ? "우리" : "내"} 앞에서 그렇게 문지르니까 재밌어?"`,
+					`"기분 좋아? ${V.masturbationAudience > 1 ? "우리" : "내"} 앞에서 네 자지를 만지는 거 말이야."`,
+					`"<<pher>> 자지에서 쿠퍼액 떨어지는 거야?"`
 				);
 			}
 			return resultArray.random();
 		case "chastitypenis":
-			resultArray.push(`"What is that thing you're playing with?"`);
+			resultArray.push(`"네가 만지작거리는 그건 뭐야?"`);
 			if (V.mouth === 0 || V.mouth === "disabled") {
-				resultArray.push(`"Are you drooling just from squeezing it?"`);
+				resultArray.push(`"그걸 쥐는 것만으로 침 흘리는 거야?"`);
 			}
 			if (V.masturbationAudience >= 4) {
 				resultArray.push(
-					`"Look how hard <<pshes>> squeezing it."`,
-					`"Looks like it feels really good. It makes you look real slutty."`,
-					`"That's it, show everyone how you masturbate."`
+					`"<<pshes>> 저걸 얼마나 세게 쥐는지 봐."`,
+					`"정말 기분 좋아 보이네. 진짜 걸레처럼 보여."`,
+					`"그래, 모두에게 네가 어떻게 자위하는지 보여 줘."`
 				);
 			} else {
 				resultArray.push(
-					`"Is squeezing it like that in front of ${V.masturbationAudience > 1 ? "us" : "me"} fun?"`,
-					`"Does it feel good? Touching that thing in front of ${V.masturbationAudience > 1 ? "us" : "me"}, I mean."`
+					`"${V.masturbationAudience > 1 ? "우리" : "내"} 앞에서 그렇게 쥐니까 재밌어?"`,
+					`"기분 좋아? ${V.masturbationAudience > 1 ? "우리" : "내"} 앞에서 그걸 만지는 거 말이야."`
 				);
 			}
 			return resultArray.random();
 		case "vagina":
 			if (V.masturbationAudience >= 4) {
 				resultArray.push(
-					`"Look how wet <<pshe>> is."`,
-					`"Did you want an audience that badly?"`,
-					`"<<pHer>> clit is so hard."`,
-					`"Yeah <<girl>>, show everyone how you play with your pussy."`
+					`"<<pshe>> 얼마나 젖었는지 봐."`,
+					`"그렇게까지 관객이 필요했어?"`,
+					`"<<pHer>> 클리가 잔뜩 섰네."`,
+					`"그래, <<girl>>. 네가 보지로 어떻게 노는지 모두에게 보여 줘."`
 				);
 			} else {
 				resultArray.push(
-					`"Look how wet you are."`,
-					`"Did you want ${V.masturbationAudience > 1 ? "us" : "me"} to watch that badly?"`,
-					`"Your clit is so hard."`,
-					`"Yeah <<girl>>, show ${V.masturbationAudience > 1 ? "us" : "me"} how you play with your pussy."`
+					`"네가 얼마나 젖었는지 봐."`,
+					`"그렇게까지 ${V.masturbationAudience > 1 ? "우리" : "내"}가 봐 주길 바랐어?"`,
+					`"네 클리 잔뜩 섰네."`,
+					`"그래, <<girl>>. 네가 보지로 어떻게 노는지 ${V.masturbationAudience > 1 ? "우리" : "내게"} 보여 줘."`
 				);
 			}
-			if (V.fingersInVagina <= 0) resultArray.push(`"C'mon, just shove some fingers in."`);
+			if (V.fingersInVagina <= 0) resultArray.push(`"자, 그냥 손가락 좀 쑤셔 넣어."`);
 			if (between(V.fingersInVagina, 1, 3))
 				resultArray.push(
-					`"Is that all ${V.masturbationAudience > 1 ? "<<pshe>>" : "the fingers you"} can fit in${
-						V.masturbationAudience > 1 ? " <<phim>>? Must be a virgin." : "?"
+					`"${V.masturbationAudience > 1 ? "<<pshe>>" : "네가"} 넣을 수 있는 게 그게 전부야${
+						V.masturbationAudience > 1 ? " <<phim>>? 처녀인가 보네." : "?"
 					}"`,
-					`"Come on, add another finger already. I know you can fit more than that in there."`,
-					`"I can give you more than some fingers if you come here."`
+					`"어서 손가락 하나 더 넣어. 거기에 그보다 더 들어갈 거 다 알아."`,
+					`"이리 오면 손가락보다 더한 것도 줄 수 있는데."`
 				);
 			if (V.fingersInVagina >= 5) {
 				resultArray.push(
-					`"Didn't think ${V.masturbationAudience > 1 ? "<<pshe>>" : "you"}'d be able to fit ${
-						V.masturbationAudience > 1 ? "<<pher>>" : "a"
-					} whole fist in there, but I guess I was wrong. What a size <<pking>>."`
+					`"${V.masturbationAudience > 1 ? "<<pshe>>【이가】 <<pher>>" : "네가 네"} 주먹을 통째로 넣을 수 있을 줄은 몰랐는데, 내가 틀렸나 보네. 대단한 크기의 <<pking>>야."`
 				);
 			}
-			if (V.fingersInVagina >= 1) resultArray.push(`"We can hear all the lewd sounds coming from your pussy, <<girl>>.`);
+			if (V.fingersInVagina >= 1) resultArray.push(`"네 보지에서 나는 음란한 소리가 다 들려, <<girl>>."`);
 			return resultArray.random();
 		case "anusEntrance":
 			resultArray.push(
-				`"I got a nice view of ${V.masturbationAudience > 1 ? "<<phim>>" : "you"} touching ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} ass."`,
-				`"I've never seen such a spankable ass."`,
-				`"C'mon, shove in some fingers already."`,
-				`"Show ${V.masturbationAudience > 1 ? "us" : "me"} how you play with your ass, slut."`
+				`"${V.masturbationAudience > 1 ? "<<phim>>【이가】 <<pher>>" : "네가 네"} 엉덩이를 만지는 게 아주 잘 보이네."`,
+				`"이렇게 때리고 싶은 엉덩이는 처음 봐."`,
+				`"자, 손가락 좀 쑤셔 넣어."`,
+				`"네 엉덩이로 어떻게 노는지 ${V.masturbationAudience > 1 ? "우리" : "내게"} 보여 줘, 걸레야."`
 			);
 			if (npcSelected && npcSelected.penis && npcSelected.penis !== "none") {
-				resultArray.push(`"Fuck, I wanna rub my cock between those cheeks."`);
+				resultArray.push(`"씨발, 저 엉덩이 사이에 내 자지를 비비고 싶네."`);
 			}
 			return resultArray.random();
 		case "anus":
 			return [
-				`"That's it? C'mon, you can fit more than that."`,
-				`"Does playing with your ass feel that good? What a slut."`,
-				`"${V.masturbationAudience > 1 ? "<<pShe>>" : "You"} must have a lot of experience with that ass."`,
-				`"If you need more than some fingers, I can help you."`,
-				`"Holy shit, ${V.masturbationAudience > 1 ? "<<pshe>>" : "you"} did manage to shove all ${
-					V.masturbationAudience > 1 ? "<<pher>>" : "your"
-				} fist inside. How much action has that ass seen?"`,
+				`"그게 다야? 더 들어갈 수 있잖아."`,
+				`"엉덩이 가지고 노는 게 그렇게 좋아? 완전 걸레네."`,
+				`"${V.masturbationAudience > 1 ? "<<pShe>>" : "너"} 그 엉덩이로 경험이 꽤 많은가 보네."`,
+				`"손가락보다 더한 게 필요하면 내가 도와줄게."`,
+				`"맙소사, ${V.masturbationAudience > 1 ? "<<pshe>>【이가】 <<pher>>" : "네가 네"} 주먹을 넣고 있잖아. 그 엉덩이는 대체 얼마나 굴렀던 거야?"`,
 			].random();
 		case "mouthBreast":
 			resultArray.push(
-				`"Sucking on your own nipples, stupid slut."`,
-				`"Showing off how easy it is to suck on your own large breasts? You really are a pervert."`,
-				`"Can I suck on those tits too?"`
+				`"자기 유두나 빨고 있다니, 멍청한 걸레 같으니."`,
+				`"자기 큰 가슴을 얼마나 쉽게 빨 수 있는지 과시하는 거야? 너 진짜 변태구나."`,
+				`"나도 그 젖 좀 빨아도 돼?"`
 			);
 			if (V.lactating && V.settings.breastFeedingEnabled === true) {
-				resultArray.push(`"Look at how hard <<pshe>> is trying to milk <<pherself>>."`);
+				resultArray.push(`"<<pshe>>【이가】 <<pherself>>【을를】 얼마나 열심히 짜내려 하는지 봐."`);
 			}
 			return resultArray.random();
 		case "chest":
 			resultArray.push(
-				`"Squeeze those tits, slut."`,
-				`"Look at how hard ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} nipples are."`,
-				`"Flaunting your chest for all to see? You really are a pervert."`,
-				`"Can I rub those tits too?"`
+				`"그 젖을 쥐어짜 봐, 걸레야."`,
+				`"${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 유두가 얼마나 딱딱해졌는지 봐."`,
+				`"모두 보라고 가슴을 과시하는 거야? 너 진짜 변태구나."`,
+				`"나도 그 젖 좀 문질러도 돼?"`
 			);
 			if (npcSelected && npcSelected.penis && npcSelected.penis !== "none") {
-				resultArray.push(`"Fuck, I wanna shove my cock between those tits."`);
+				resultArray.push(`"씨발, 저 젖 사이에 내 자지를 처박고 싶네."`);
 			}
 			return resultArray.random();
 		case "penisSize0": // empty case on purpose
 		case "penisSize1":
 			return [
-				`"Such a cute clit!"`,
-				`"Bet it's hard to masturbate that thing with more than a finger and a thumb."`,
-				`"I've never seen such a pathetic penis."`,
+				`"참 귀여운 클리네!"`,
+				`"저건 손가락 하나랑 엄지 말고는 제대로 만지기도 힘들겠는데."`,
+				`"이렇게 불쌍한 자지는 처음 봐."`,
 			]
 				.random()
 				.concat(`<<ginsecurity "penis_small">>`);
 		case "penisSize2":
 			return [
-				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "You're"} so tiny!"`,
-				`"I can't believe it's so tiny!"`,
-				`"I've never seen such a pathetic penis."`,
+				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "넌"} 정말 작네!"`,
+				`"이렇게 작다니 믿기지가 않네!"`,
+				`"이렇게 불쌍한 자지는 처음 봐."`,
 			]
 				.random()
 				.concat(`<<ginsecurity "penis_small">>`);
 		case "penisSize3":
 			return [
-				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "You're"} so small!"`,
-				`"Such a small, cute penis."`,
-				`"I thought ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} penis would be bigger."`,
+				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "넌"} 정말 작네!"`,
+				`"작고 귀여운 자지네."`,
+				`"${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 자지는 더 클 줄 알았는데."`,
 			]
 				.random()
 				.concat('<<ginsecurity "penis_small">>');
 		case "penisSize4":
 			return [
-				`"I'd love a picture of ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} cute penis."`,
-				`"Don't be shy, everyone should know how beautiful your penis is."`,
-				`"If you don't want your penis photographed, you shouldn't act like a slut."`,
+				`"${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 귀여운 자지 사진 하나 갖고 싶네."`,
+				`"부끄러워하지 마. 네 자지가 얼마나 예쁜지 모두가 알아야지."`,
+				`"자지 사진 찍히기 싫으면 걸레처럼 굴지 말았어야지."`,
 			].random();
 		case "penisSize5":
 			return [
-				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "You're"} bigger than I expected."`,
-				`"Don't be shy, you should be proud of your penis."`,
-				`"${V.masturbationAudience > 1 ? "<<pHer>>" : "Your"} penis is the perfect size."`,
+				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "너"} 생각보다 크네."`,
+				`"부끄러워하지 마. 네 자지는 자랑스러워해야지."`,
+				`"${V.masturbationAudience > 1 ? "<<pHer>>" : "네"} 자지는 딱 좋은 크기야."`,
 			]
 				.random()
 				.concat(V.player.gender !== "m" ? `<<ginsecurity "penis_big">>` : "");
 		case "penisSize6":
 			return [
-				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "You're"} huge!"`,
-				`"${V.masturbationAudience > 1 ? "<<pHer>>" : "Your"} penis is freakishly big."`,
-				`"I've never seen such a huge cock."`,
+				`"${V.masturbationAudience > 1 ? "<<pShes>>" : "넌"} 엄청 크네!"`,
+				`"${V.masturbationAudience > 1 ? "<<pHer>>" : "네"} 자지는 기괴할 정도로 크네."`,
+				`"이렇게 거대한 자지는 처음 봐."`,
 			]
 				.random()
 				.concat('<<ginsecurity "penis_big">>');
@@ -424,33 +420,33 @@ function masturbationAudienceLineText(npc, lineType = "") {
 			if (V.player.gender_appearance === "m") {
 				if (V.worn.upper.exposed >= 2) {
 					return [
-						`"Boys have such cute nipples."`,
-						`"That sleek chest of yours is a thing of beauty."`,
-						`"Don't be shy, there's nothing lewd about your nipples."`,
+						`"남자애 유두는 참 귀엽다니까."`,
+						`"네 매끈한 가슴은 정말 아름답네."`,
+						`"부끄러워하지 마. 네 유두는 음란한 게 아니잖아."`,
 					].random();
 				} else {
 					return [
-						`"Take your top off, I wanna see that fine chest."`,
-						`"I wish I could take a picture of what's under <<pher>> top."`,
-						`"Even when you're clothed, I can tell you have a lovely chest."`,
+						`"상의 벗어. 그 좋은 가슴 좀 보고 싶어."`,
+						`"<<pher>> 상의 아래가 어떤지 사진으로 남기고 싶네."`,
+						`"옷을 입고 있어도 네 가슴이 예쁘다는 건 알겠어."`,
 					].random();
 				}
 			} else {
 				if (V.worn.upper.exposed >= 2) {
 					return [
-						`"Your flat chest looks delicious."`,
-						`"${V.masturbationAudience > 1 ? "<<pHer>>" : "Your"} chest is so flat, ${
+						`"네 납작한 가슴 맛있어 보인다."`,
+						`"${V.masturbationAudience > 1 ? "<<pHer>>" : "네"} 가슴은 너무 납작해서, ${
 							V.masturbationAudience > 1 ? "<<pshe>>" : "you"
 						} could pass as a boy."`,
-						`"Should I take pictures of <<pher>> cute chest? It'll be useful later."`,
+						`"<<pher>> 귀여운 가슴 사진을 찍어 둘까? 나중에 쓸모가 있겠지."`,
 					]
 						.random()
 						.concat(`<<ginsecurity "breasts_small">>`);
 				} else {
 					return [
-						`"I can't wait to see under <<pher>> top."`,
-						`"Do other girls tease you for your flat chest?"`,
-						`"Don't worry, you're cute even without boobs."`,
+						`"<<pher>> 상의 아래를 빨리 보고 싶어."`,
+						`"다른 여자애들이 네 납작한 가슴 가지고 놀려?"`,
+						`"걱정 마, 가슴이 없어도 넌 귀여워."`,
 					]
 						.random()
 						.concat(`<<ginsecurity "breasts_small">>`);
@@ -460,33 +456,33 @@ function masturbationAudienceLineText(npc, lineType = "") {
 			if (V.player.gender_appearance === "m") {
 				if (V.worn.upper.exposed >= 2) {
 					return [
-						`"Your flabby chest is almost like a girl's."`,
-						`"Look at those little tits. I bet the other boys pick on you."`,
-						`"Don't be shy, there's nothing lewd about your boy nipples, even if they look like a girl's."`,
+						`"네 물렁한 가슴은 거의 여자애 같네."`,
+						`"저 작은 젖 좀 봐. 다른 남자애들이 너 놀리겠는데."`,
+						`"부끄러워하지 마. 여자애 것처럼 보여도 네 남자애 유두는 음란한 게 아니잖아."`,
 					]
 						.random()
 						.concat(`<<ginsecurity "breasts_small">>`);
 				} else {
 					return [
-						`"Take your top off, I wanna see that fine chest."`,
-						`"I wish I could take a picture of what's under <<pher>> top."`,
-						`"Even when you're clothed, I can tell you have a lovely chest."`,
+						`"상의 벗어. 그 좋은 가슴 좀 보고 싶어."`,
+						`"<<pher>> 상의 아래가 어떤지 사진으로 남기고 싶네."`,
+						`"옷을 입고 있어도 네 가슴이 예쁘다는 건 알겠어."`,
 					].random();
 				}
 			} else {
 				if (V.worn.upper.exposed >= 2) {
 					return [
-						`"<<pHer>> tiny breasts are so cute."`,
-						`"Now however large your breasts grow, I'll have evidence of when they were small and cute."`,
-						`"Don't be ashamed of your small breasts, they're adorable."`,
+						`"<<pHer>> 자그마한 가슴 정말 귀엽다."`,
+						`"이제 네 가슴이 아무리 커져도, 작고 귀여웠던 시절의 증거는 내가 갖고 있겠네."`,
+						`"작은 가슴이라고 부끄러워하지 마. 사랑스럽잖아."`,
 					]
 						.random()
 						.concat(`<<ginsecurity "breasts_small">>`);
 				} else {
 					return [
-						`"I can see the shape of <<pher>> tiny breasts beneath <<pher>> $worn.upper.name."`,
-						`"Take your top off, I want a clear view of your breasts."`,
-						`"I can't wait to see <<pher>> little breasts, I bet they're superb."`,
+						`"<<pher>> 자그마한 가슴 모양이 <<pher>> $worn.upper.name 아래로 보이네."`,
+						`"상의 벗어. 네 가슴을 제대로 보고 싶어."`,
+						`"<<pher>> 작은 가슴을 빨리 보고 싶어. 분명 끝내주겠지."`,
 					]
 						.random()
 						.concat(`<<ginsecurity "breasts_small">>`);
@@ -494,16 +490,14 @@ function masturbationAudienceLineText(npc, lineType = "") {
 			}
 		case "breastSizeNormal":
 			if (V.worn.upper.exposed >= 2) {
-				return [`"Your breasts are very photogenic."`, `"Your breasts are mesmerising."`, `"This picture of your breasts will come in handy later."`]
+				return [`"네 가슴은 사진발이 정말 좋네."`, `"네 가슴은 홀릴 것 같아."`, `"네 가슴 사진은 나중에 요긴하게 쓰이겠어."`]
 					.random()
 					.concat(V.player.gender === "m" ? `<<ginsecurity "breasts_big">>` : "");
 			} else {
 				return [
-					`"Take ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} top off, I want a clear look at ${
-						V.masturbationAudience > 1 ? "<<pher>>" : "your"
-					} breasts."`,
-					`"Don't be embarrassed, it's not like your breasts are exposed yet."`,
-					`"I can tell how lovely ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} breasts are, even when they're clothed."`,
+					`"${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 상의 벗어. ${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 가슴을 보여 줘."`,
+					`"부끄러워하지 마. 아직 가슴이 드러난 것도 아니잖아."`,
+					`"옷에 가려져 있어도 ${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 가슴이 얼마나 예쁜지는 알 수 있어."`,
 				]
 					.random()
 					.concat(V.player.gender === "m" ? `<<ginsecurity "breasts_big">>` : "");
@@ -511,17 +505,17 @@ function masturbationAudienceLineText(npc, lineType = "") {
 		case "breastSizeLarge":
 			if (V.worn.upper.exposed >= 2) {
 				return [
-					`"${V.masturbationAudience > 1 ? "<<pHer>>" : "Your"} breasts flop about so beautifully."`,
-					`"Those are some impressive mammaries."`,
-					`"Don't be ashamed, you should be proud of such large breasts.`,
+					`"${V.masturbationAudience > 1 ? "<<pHer>>" : "네"} 가슴이 흔들리는 모습이 정말 아름답네."`,
+					`"참 대단한 젖가슴이네."`,
+					`"부끄러워하지 마, 그렇게 큰 가슴은 자랑스러워해야지.`,
 				]
 					.random()
 					.concat(`<<ginsecurity "breasts_big">>`);
 			} else {
 				return [
-					`"Are ${V.masturbationAudience > 1 ? "<<pher>>" : "your"} breasts really as large as they seem? Only one way to find out."`,
-					`"Take your top off. I want a look at your large breasts, so I can think about them later."`,
-					`"Breasts that large are lewd even under clothes."`,
+					`"${V.masturbationAudience > 1 ? "<<pher>>" : "네"} 가슴이 정말 보기만큼 큰지 확인할 방법은 하나뿐이지."`,
+					`"상의 벗어. 네 큰 가슴을 보고 나중에 떠올리고 싶어."`,
+					`"그렇게 큰 가슴은 옷 아래 있어도 음란해."`,
 				]
 					.random()
 					.concat(`<<ginsecurity "breasts_big">>`);
@@ -529,17 +523,17 @@ function masturbationAudienceLineText(npc, lineType = "") {
 		case "breastSizeHuge":
 			if (V.worn.upper.exposed >= 2) {
 				return [
-					`"Those are some gigantic udders."`,
-					`"You could feed every baby in town with those."`,
-					`"I should get photographic proof, no one would believe how big they were otherwise."`,
+					`"엄청난 젖통이네."`,
+					`"그거면 마을의 아기들을 전부 먹일 수 있겠는데."`,
+					`"사진 증거를 남겨야겠어. 안 그러면 아무도 이렇게 컸다는 걸 믿지 않겠지."`,
 				]
 					.random()
 					.concat(`<<ginsecurity "breasts_big">>`);
 			} else {
 				return [
-					`"You can't fake breasts this large, surely."`,
-					`"Take your top off, I want a look at those massive things."`,
-					`"Breasts this huge are lewd even under clothes."`,
+					`"이렇게 큰 가슴은 속일 수 없겠지, 분명히."`,
+					`"상의 벗어. 그 거대한 것 좀 보고 싶어."`,
+					`"이렇게 거대한 가슴은 옷 아래 있어도 음란해."`,
 				]
 					.random()
 					.concat(`<<ginsecurity "breasts_big">>`);

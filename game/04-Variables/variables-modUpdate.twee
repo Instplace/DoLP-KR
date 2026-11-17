@@ -1011,12 +1011,12 @@ it can be as easy as setting facevariants to what exists in the current face fol
 as what's needed by the imagepack? */
 	<<set setup.faceVariantOptions to {
 		"default": {
-			"Gentle": "default",
-			"Catty": "catty",
-			"Aloof": "aloof",
-			"Sweet": "sweet",
-			"Foxy": "foxy",
-			"Gloomy": "gloomy",
+			"상냥한": "default",
+			"새침한": "catty",
+			"냉담한": "aloof",
+			"다정한": "sweet",
+			"여우같은": "foxy",
+			"우울한": "gloomy",
 			"Modded 1": "modded1",
 			"Modded 2": "modded2",
 			"Modded 3": "modded3",

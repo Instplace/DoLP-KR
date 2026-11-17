@@ -22,7 +22,7 @@ function sexToysInventoryInit() {
 				const ownedSpan = Object.assign(document.createElement("span"), {
 					id: `sti_already_owned_${idSuffix}`,
 					className: "sti_owned_text",
-					textContent: item.worn ? "worn" : item.carried ? "carried" : "",
+					textContent: item.worn ? "착용 중" : item.carried ? "소지 중" : "",
 				});
 				ownedSpan.dataset.category = category;
 				ownedSpan.dataset.index = index;
@@ -59,7 +59,7 @@ window.sexToysInventoryInit = sexToysInventoryInit;
 
 function sexToysInventoryOnItemClick(index, category) {
 	const setupItem = setup.sextoys.find(t => t.name === category);
-	if (!setupItem) throw new Error(`Sex toy not found! index: ${index}, category: ${category}`);
+	if (!setupItem) throw new Error(`섹스 토이를 찾을 수 없습니다. index: ${index}, category: ${category}`);
 
 	const invItem = V.player.inventory.sextoys[category][index];
 
@@ -81,7 +81,7 @@ function sexToysInventoryOnItemClick(index, category) {
 	const closeBtn = $("<div>", {
 		id: "sti_close1",
 		class: "sti_close",
-		title: "close",
+		title: "닫기",
 		text: "x",
 		click: () => window.sextoysOnCloseDesc("stiDescPillContainer"),
 	});
@@ -97,7 +97,7 @@ function sexToysInventoryOnItemClick(index, category) {
 	const carryButton = $("<a>", {
 		id: "stiCarryButton",
 		class: "sti_carry_button",
-		text: invItem.carried ? "Put it back" : "Carry it",
+		text: invItem.carried ? "수납장에 다시 넣기" : "소지하기",
 		click: () => window.sexToysInventoryOnCarryClick(index, category),
 	});
 
@@ -105,14 +105,14 @@ function sexToysInventoryOnItemClick(index, category) {
 		id: "stiWearButton",
 		class: "sti_wear_button",
 		style: setupItem.wearable === 1 ? "" : "display:none",
-		text: invItem.worn ? "Take it off" : "Wear it",
+		text: invItem.worn ? "벗기" : "착용하기",
 		click: () => window.sexToysInventoryOnWearClick(index, category),
 	});
 
 	const throwButton = $("<a>", {
 		id: "stiThrowButton",
 		class: "sti_throw_button",
-		text: "Throw it away",
+		text: "버리기",
 		click: () => window.sexToysInventoryOnThrowClick(index, category),
 	});
 
@@ -174,10 +174,10 @@ function sexToysInventoryOnCarryClick(index, category) {
 		}
 	}
 
-	document.getElementById("stiWearButton").textContent = toy.worn ? "Take off" : "Wear it"; // update button text value
-	document.getElementById("stiCarryButton").textContent = toy.carried ? "Put back in the cupboard" : "Carry it"; // update button text value
+	document.getElementById("stiWearButton").textContent = toy.worn ? "벗기" : "착용하기"; // update button text value
+	document.getElementById("stiCarryButton").textContent = toy.carried ? "수납장에 다시 넣기" : "소지하기"; // update button text value
 	// update worn/carried tag on cell
-	document.getElementById("sti_already_owned_" + category.replace(/\s/g, "_") + "_" + index).textContent = toy.worn ? "worn" : toy.carried ? "carried" : "";
+	document.getElementById("sti_already_owned_" + category.replace(/\s/g, "_") + "_" + index).textContent = toy.worn ? "착용 중" : toy.carried ? "소지 중" : "";
 
 	updateCarryCountUI();
 	greyButtonsIfCarryLimitReached(index, category);
@@ -199,7 +199,7 @@ function sexToysInventoryOnWearClick(index, category) {
 	// if player tries to wear a strapon but that under_lower is cursed
 	if (setupCategory === "strap-on" && V.worn.under_lower.cursed === 1) {
 		document.getElementById("stiCursedText").outerHTML =
-			`<div id="stiCursedText" class="ssm_fade_in">You try to remove the ` + V.worn.under_lower.name + ` but fail</div>`;
+			`<div id="stiCursedText" class="ssm_fade_in">` + V.worn.under_lower.name + `【을를】 벗으려 하지만 실패한다.</div>`;
 		return;
 	}
 
@@ -207,7 +207,7 @@ function sexToysInventoryOnWearClick(index, category) {
 		if (V.worn.genitals.cursed === 1 && V.worn.genitals.anal_shield === 1) {
 			// if player tries to wear a butt plug but there is a cursed chastity belt fitted with an anal shield
 			document.getElementById("stiCursedText").outerHTML =
-				`<div id="stiCursedText" class="ssm_fade_in">You can't get the ` + toy.name + ` past the ` + V.worn.genitals.name + `'s anal shield</div>`;
+				`<div id="stiCursedText" class="ssm_fade_in">` + toy.name + `【을를】 ` + V.worn.genitals.name + `의 애널 실드 너머로 넣을 수 없다.</div>`;
 			return;
 		}
 	}
@@ -246,13 +246,13 @@ function sexToysInventoryOnWearClick(index, category) {
 		V.worn[setupCategory].state = "worn";
 	}
 	toy.carried = true; // also carry the item if not done alreadys
-	document.getElementById("stiWearButton").textContent = toy.worn ? "Take off" : "Wear it"; // update button text value
-	document.getElementById("stiCarryButton").textContent = !toy.carried ? "Carry it" : "Put back in the cupboard"; // update button text value
-	document.getElementById("sti_already_owned_" + category.replace(/\s/g, "_") + "_" + index).textContent = toy.worn ? "worn" : toy.carried ? "carried" : "";
+	document.getElementById("stiWearButton").textContent = toy.worn ? "벗기" : "착용하기"; // update button text value
+	document.getElementById("stiCarryButton").textContent = !toy.carried ? "소지하기" : "수납장에 다시 넣기"; // update button text value
+	document.getElementById("sti_already_owned_" + category.replace(/\s/g, "_") + "_" + index).textContent = toy.worn ? "착용 중" : toy.carried ? "소지 중" : "";
 	$("[id*='sti_already_owned_']").each(function (i, element) {
 		const c = element.getAttribute("data-category");
 		const ind = element.getAttribute("data-index");
-		element.textContent = V.player.inventory.sextoys[c][ind].worn ? "worn" : V.player.inventory.sextoys[c][ind].carried ? "carried" : "";
+		element.textContent = V.player.inventory.sextoys[c][ind].worn ? "착용 중" : V.player.inventory.sextoys[c][ind].carried ? "소지 중" : "";
 	});
 	// this is an exception for strap-ons. Upon "wearing", also set them in under_lower as they don't have their own category yet.
 	if (setupCategory === "strap-on") {
@@ -320,7 +320,7 @@ function updateNumberInString(element, indexMin, category) {
 	// extract the index from the element's ID and force it into a number.
 	const index = parseInt(match[0], 10);
 
-	if (isNaN(index)) throw new Error(`Misconfigured sex toy ID: ${element.id}`);
+	if (isNaN(index)) throw new Error(`섹스 토이 ID 설정이 잘못되었습니다: ${element.id}`);
 	// No need to update, this element comes BEFORE the removed item, so its index is unaffected.
 	if (index < indexMin || index <= 0) return;
 
@@ -335,7 +335,7 @@ function updateNumberInString(element, indexMin, category) {
 function checkSextoysGift(npcName) {
 	const npc = V.NPCName.find(n => n.nam === npcName);
 	if (!npc) {
-		throw new Error("Invalid NPC name given!");
+		throw new Error("잘못된 NPC 이름입니다.");
 	} else {
 		return Object.values(npc.sextoys || {}).some(category => category?.some(item => item.gift_state === "held"));
 	}
@@ -369,14 +369,14 @@ window.patchStraponsWearStatus = patchStraponsWearStatus;
 function checkIfNPCHasCategorySextoy(npcName, category) {
 	const npc = V.NPCName.find(n => n.nam === npcName);
 	if (!npc) {
-		throw new Error("Invalid NPC name given!");
+		throw new Error("잘못된 NPC 이름입니다.");
 	}
 
 	const categoryToyNames = Object.values(setup.sextoys)
 		.filter(n => n.category === category)
 		.map(n => n.name);
 	if (categoryToyNames.length === 0) {
-		throw new Error("Invalid sex toy category given!");
+		throw new Error("잘못된 섹스 토이 카테고리입니다.");
 	}
 
 	const npcSexToys = [];
@@ -392,7 +392,7 @@ window.checkIfNPCHasCategorySextoy = checkIfNPCHasCategorySextoy;
 function handSextoysGiftToNPC(npcName) {
 	const npc = V.NPCName.find(n => n.nam === npcName);
 	if (!npc) {
-		throw new Error("Invalid NPC name given!");
+		throw new Error("잘못된 NPC 이름입니다.");
 	}
 	Object.values(npc.sextoys).forEach(category => {
 		category.forEach(item => {
@@ -422,7 +422,7 @@ window.countCarriedSextoys = countCarriedSextoys;
 function updateCarryCountUI() {
 	const colour = countCarriedSextoys() >= maxCarried ? "red" : "";
 	document.getElementById("carryCount").outerHTML = `<div id="carryCount" class="sti_grid_carried_count">
-		Items carried: <span class="${colour}">${countCarriedSextoys()}/${maxCarried}</span>
+		소지 중인 물건: <span class="${colour}">${countCarriedSextoys()}/${maxCarried}</span>
 	</div>`;
 }
 window.updateCarryCountUI = updateCarryCountUI;
@@ -456,7 +456,7 @@ function setLowerVisibility(desiredVisibility) {
 	}
 
 	const elem = document.querySelector("#stiShowUnderwear > .link-internal");
-	if (elem !== null) elem.text = !T.lowerVisible ? "Show lower clothing" : "Hide lower clothing";
+	if (elem !== null) elem.text = !T.lowerVisible ? "하의 보이기" : "하의 숨기기";
 
 	Links.generateLinkNumbers($(".passage"));
 }

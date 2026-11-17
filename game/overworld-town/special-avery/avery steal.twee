@@ -701,34 +701,34 @@ Soon enough the whole honeycomb is in your belly and you want to take a bit more
 <<effects>>
 <<if $enemyarousal gte $enemyarousalmax>>
 	<<ejaculation>>
-	Avery tries to lean on the wall for support, but slumps to <<his>> arse instead. <<tearful>> you step away from <<him>>.
+	에이버리는 벽에 기대 몸을 지탱하려 하지만, 대신 <<his>> 엉덩방아를 찧고 주저앉는다. <<tearful>> 당신은 <<him>>에게서 물러난다.
 	<br><br>
-	<<He>> pushes <<himself>> to <<his>> feet, regards you a moment, then walks away. 
+	<<He>>【은는】 <<himself>> 몸을 밀어 <<his>> 발로 일으킨 뒤 잠시 당신을 바라보고, 걸어간다.
 	<<avery_housework_change "kitchen" 1>>
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Mansion Kitchen]]>><</link>>
+	<<link [[다음|Mansion Kitchen]]>><</link>>
 
 <<elseif $enemyhealth lte 0>>
-	You smack Avery away from you. <<He>> collides with the wall, and slumps onto <<his>> arse. <<tearful>> you step away from <<him>>.
+	당신은 에이버리를 때려서 밀쳐낸다. <<He>>【은는】 벽에 부딪히고 <<his>> 엉덩방아를 찧으며 주저앉는다. <<tearful>> 당신은 <<him>>에게서 멀어진다.
 	<br><br>
-	<<He>> pushes <<himself>> to <<his>> feet, regards you a moment, then walks away.
+	<<He>>【은는】 <<himself>> 몸을 밀어 <<his>> 발로 일으킨 뒤 잠시 당신을 바라보고, 걸어간다.
 	<<avery_housework_change "kitchen" 1>>
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Mansion Kitchen]]>><</link>>
+	<<link [[다음|Mansion Kitchen]]>><</link>>
 
 <<else>>
-	<<tearful>> you fall to the ground. You're too hurt to continue fighting.
+	<<tearful>> 당신은 땅에 쓰러진다. 너무 다쳐서 계속 싸울 수 없다.
 	<br><br>
-	Avery hauls you to your feet, and pushes you ahead of <<him>>.
+	에이버리가 당신을 일으켜 세우고 <<him>>의 앞으로 민다.
 	<<avery_housework_change "kitchen" 1>>
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
-	<<link [[Next|Mansion Kitchen]]>><</link>>
+	<<link [[다음|Mansion Kitchen]]>><</link>>
 <</if>>
 
 

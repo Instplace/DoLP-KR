@@ -17,62 +17,61 @@
 
 <<if $factory_intro is undefined>>
 	<<set $factory_intro to 1>>
-	You approach the factory, a colossal brick structure at the entrance of town. A <<person>> stands by the gate, waving through a fleet of lorries.
+	당신은 마을 입구에 있는 거대한 벽돌 건물인 공장으로 다가간다. 한 <<person>>【이가】 문 옆에 서서 줄지어 들어오는 트럭들에게 손짓하고 있다.
 	<br><br>
-	<<He>> turns to you as the gate clanks shut. "Nothing for you to see here," <<he>> says. "Not unless you have a lot of produce to sell. We could handle that for you. For a cut."
+	문이 쾅 닫히자 <<He>>【은는】 당신에게로 돌아선다. "여기서 볼 건 아무것도 없어." <<he>>【이가】 말한다. "팔 농산물이 많지 않은 이상은 말이야. 우리가 처리해 줄 수는 있지. 수수료를 떼고."
 	<br><br>
-	<<link [[Next|Farmers Centre]]>><</link>>
+	<<link [[다음|Farmers Centre]]>><</link>>
 	<br>
 <<else>>
-	You are outside a factory on Harvest Street. They'll process and sell produce on your behalf, but only so fast, and won't pay as much as customers at market.
+	당신은 하베스트 가에 있는 공장 밖에 있다. 그들은 당신을 대신해 농산물을 가공하고 판매하지만, 속도가 그리 빠르지 않고 시장의 고객들만큼 값을 쳐주지도 않는다.
 	<br><br>
 
 	<<if $rng gte 91>>
-		A <<person>> sits in a kiosk outside, thumbing through a magazine.
+		한 <<person>>【이가】 바깥 매표소에 앉아 잡지를 넘기고 있다.
 	<<elseif $rng gte 81>>
-		A <<person>> leans against the wall, smoking a cigarette.
+		한 <<person>>【이가】 벽에 기대어 담배를 피우고 있다.
 	<<elseif $rng gte 71>>
-		A <<person>> sits in a kiosk outside, staring at a small television in the corner.
+		한 <<person>>【이가】 바깥 매표소에 앉아 구석에 있는 작은 텔레비전을 쳐다보고 있다.
 	<<elseif $rng gte 61>>
-		A <<person>> sits in a kiosk outside, staring at <<his>> phone.
+		한 <<person>>【이가】 바깥 매표소에 앉아 <<his>> 휴대폰을 쳐다보고 있다.
 	<<elseif $rng gte 51>>
-		A <<person>> waves a fleet of lorries through the gate.
+		한 <<person>>【이가】 문을 통과하는 트럭 행렬에 손을 흔들고 있다.
 	<<elseif $rng gte 41>>
-		A <<person>> sits in a kiosk outside, talking on <<his>> phone.
+		한 <<person>>【이가】 바깥 매표소에 앉아 <<his>> 휴대폰으로 통화하고 있다.
 	<<elseif $rng gte 31>>
-		A <<person>> sits in a kiosk outside, thumbing through paper.
+		한 <<person>>【이가】 바깥 매표소에 앉아 서류를 넘기고 있다.
 	<<elseif $rng gte 21>>
-		A <<person>> leans against the wall, watching the traffic pass.
+		한 <<person>>【이가】 벽에 기대어 지나가는 차량들을 지켜보고 있다.
 	<<elseif $rng gte 11>>
-		A <<person>> watches you from a kiosk.
+		한 <<person>>【이가】 매표소에서 당신을 지켜보고 있다.
 	<<else>>
-		A <<person>> sits in a kiosk outside, reclining in a chair.
+		한 <<person>>【이가】 바깥 매표소에 앉아 의자에 기대어 있다.
 	<</if>>
 	<br><br>
 
 	<<if $farmersProduce.money gt 10000>>
-		<<highicon>><<link [[Collect money|Farmers Centre Money Collection]]>><</link>>
+		<<highicon>><<link [[돈을 수령한다|Farmers Centre Money Collection]]>><</link>>
 		<br>
 	<</if>>
-	<<socialiseicon "ask">><<link [[Enquire about selling produce|Farmers Centre Produce Sale]]>><</link>>
+	<<socialiseicon "ask">><<link [[농산물 판매에 대해 문의한다|Farmers Centre Produce Sale]]>><</link>>
 	<br>
 	<<socialiseicon "ask">><<link [[Enquire about improving rates|Farmers Centre Upgrades]]>><</link>>
 	<br>
-	<<harvesticon>><<link [[Leave|Harvest Street]]>><<endevent>><</link>>
+	<<harvesticon>><<link [[떠난다|Harvest Street]]>><<endevent>><</link>>
 
 <</if>>
 
 :: Farmers Centre Money Collection
-
-The <<person>> enters the factory proper, and emerges with a wad of notes. You've made <<printmoney $farmersProduce.money>><<money $farmersProduce.money "factoryProduce">>.
+그 <<person>>【이가】 공장 안으로 들어가더니 지폐 뭉치를 들고 나온다. 당신은 <<printmoney $farmersProduce.money>>【을를】 벌었다<<money $farmersProduce.money "factoryProduce">>.
 <<set $farmersProduce.money to 0>>
 <br><br>
-<<getouticon>><<link [[Leave|Farmers Centre]]>><</link>>
+<<getouticon>><<link [[떠난다|Farmers Centre]]>><</link>>
 
 :: Farmers Centre Produce Sale
-The <<person>> opens a laptop. "So what do you have for me?"
+그 <<person>>【이가】 노트북을 연다. "그래서 뭘 가져왔지?"
 <br><br>
-<i>You can collect money from sold produce every day at noon. High business fame helps the factory sell produce faster.</i>
+<i>판매된 농산물 대금은 매일 정오에 수령할 수 있습니다. 사업 명성이 높으면 공장에서 농산물을 더 빨리 판매하는 데 도움이 됩니다.</i>
 <br><br>
 <<set $farmersProduce.toSell to {}>>
 <<set _foodstuffKeys to Object.keys($foodstuff)>>
@@ -87,17 +86,16 @@ The <<person>> opens a laptop. "So what do you have for me?"
 		<<produceDisplay>>
 	</div>
 <<else>>
-	You don't have any produce.
+	농산물이 없습니다.
 	<br>
 <</if>>
 <br>
-<<getouticon>><<link [[Leave|Farmers Centre]]>><<set $farmersProduce.toSell to {}>><</link>>
+<<getouticon>><<link [[떠난다|Farmers Centre]]>><<set $farmersProduce.toSell to {}>><</link>>
 
 :: Farmers Centre Produce Sale Confirm
-
-The gate shudders open, and a lorry rumbles out, on its way to collect your produce.
+문이 덜컹거리며 열리고, 당신의 농산물을 수거하러 가는 트럭 한 대가 굉음을 내며 빠져나온다.
 <br><br>
-<<getouticon>><<link [[Leave|Farmers Centre]]>><</link>>
+<<getouticon>><<link [[떠난다|Farmers Centre]]>><</link>>
 
 :: Farmers Centre Upgrades
 <<if $factoryUpgradesIntro isnot undefined and $factoryUpgradesIntro is 1>>
@@ -107,7 +105,7 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 	<<farmUpgradeOptions>>
 	<br><br>
 
-	<<getouticon>><<link [[Leave|Farmers Centre]]>><</link>>
+	<<getouticon>><<link [[떠난다|Farmers Centre]]>><</link>>
 <<else>>
 	<<if $factoryUpgradesIntro is undefined>>
 		The <<person>> raises an eyebrow and sizes you up for a moment.
@@ -134,7 +132,7 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 		<</if>>
 	<</if>>
 	<br><br>
-	<<getouticon>><<link [[Leave|Farmers Centre]]>><</link>>
+	<<getouticon>><<link [[떠난다|Farmers Centre]]>><</link>>
 <</if>>
 
 :: Farmers Centre Widgets [widget]
@@ -148,7 +146,7 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 	<div id="body">
 		<div id="mainSection">
 			<div id="search">
-				Search: <<textbox "_foodSearch" "">>
+				검색: <<textbox "_foodSearch" "">>
 				<<run $(() => {
 					var foodTimer = null;
 					$('#textbox--foodsearch').on('input change keypress', e => {
@@ -166,13 +164,12 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 			</div>
 		</div>
 		<div id="altSection" class="mobileHidden">
-			<div id="basket">Selling:</div>
+			<div id="basket">판매 중:</div>
 			<<produceDisplayBasket>>
 		</div>
 		<div id="mobileCloser" class="mobileOnly mobileHidden" onclick="wikifier('addclass', '#altSection', 'mobileHidden'); wikifier('addclass', '#mobileCloser', 'mobileHidden');"></div>
 	</div>
 <</widget>>
-
 
 <<widget "produceDisplayItems">>
 	<<set _keys to [...new Set([...Object.keys(_foodstuffItems), ...Object.keys($farmersProduce.toSell)])]
@@ -206,8 +203,8 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 		<<set _categoryVar to "_" + _category.replace(" ", "")>>
 		<<set _open to _category is "Sellable Produce" ? true : false>>
 		<<foldout _open _categoryVar>>
-			<span class="gold"><<print _category.toLocaleUpperFirst()>></span>
-			<<set _keys to _foodKeys.filter(key => (_category isnot "Owned Produce" && $foodstuff[key].amount > 250) ||	(_category is "Owned Produce" && ($foodstuff[key] === undefined || V.foodstuff[key].amount <= 250))
+			<span class="gold"><<print ({ "Sellable Produce": "판매 가능한 농산물", "Owned Produce": "보유 중인 농산물" }[_category] || _category.toLocaleUpperFirst())>></span>
+			<<set _keys to _foodKeys.filter(key => (_category isnot "Owned Produce" && $foodstuff[key].amount > 250) || (_category is "Owned Produce" && ($foodstuff[key] === undefined || V.foodstuff[key].amount <= 250))
 			)>>
 			<<for $_i, $_key range _keys>>
 				<div @id="$_key" class="item"><<produceDisplayItem $_key>></div>
@@ -225,10 +222,10 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 				<<set $_total += bulkProduceValue(setup.foodstuff[_label],_value)>>
 			<</if>>
 		<</for>>
-		Total: <<printmoney $_total>>
+		총액: <<printmoney $_total>>
 		<<if $_total gt 0>>
 			|
-			<<link [[Sell produce|Farmers Centre Produce Sale Confirm]]>>
+			<<link [[농산물 판매|Farmers Centre Produce Sale Confirm]]>>
 				<<for _label, _value range $farmersProduce.toSell>>
 					<<if _value gt 0>>
 						<<if $farmersProduce.selling[_label] is undefined>>
@@ -257,21 +254,21 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 				<</if>>
 				<<foodstufficon _item>>
 				<<if $foodstuff[_item] is undefined>>
-					You don't have any <<print setup.foodstuff[_item].plural>> right now.
+					당신은 현재 <<print setup.foodstuff[_item].plural>>【을를】 전혀 가지고 있지 않다.
 				<<elseif $foodstuff[_item].amount lt 250>>
-					<<print setup.foodstuff[_item].plural.toLocaleUpperFirst()>> | Owned: <span class="gold"><<print $foodstuff[_item].amount>></span>
+					<<print setup.foodstuff[_item].plural.toLocaleUpperFirst()>> | 소지량: <span class="gold"><<print $foodstuff[_item].amount>></span>
 					<br>
-					Not enough to sell.
+					팔기에 충분하지 않다.
 					<<if $farmersProduce.selling[_item]>><br><</if>>
 				<<else>>
 					<<set _max to $foodstuff[_item].amount - ($foodstuff[_item].amount % 250)>>
 					<<set _base to bulkProduceValue(setup.foodstuff[_item])>>
 					<<set _title to setup.foodstuff[_item].plural.toLocaleUpperFirst()>>
-					| Value per 250: <<printmoney _base>>
+					| 250개당 가치: <<printmoney _base>>
 					<<numberStepper "_title" 0 {
 						callback: (value, arr) => {
 							V.farmersProduce.toSell[arr[0]] = value;
-							Wikifier.wikifyEval('<<replace "#altSection">><div id="basket">Selling:</div><<produceDisplayBasket>><</replace>>');
+							Wikifier.wikifyEval('<<replace "#altSection">><div id="basket">판매 중:</div><<produceDisplayBasket>><</replace>>');
 							if (!$('#mobileHeader').hasClass('hidden')) {
 								Wikifier.wikifyEval('<<replace "#mobileHeader">><div class="mobileOnly"><<produceDisplayBasket>></div><</replace>>');
 							};
@@ -288,7 +285,7 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 					}>>
 				<</if>>
 				<<if $farmersProduce.selling[_item]>>
-					<span class="teal">They are still processing <<print $farmersProduce.selling[_item]>> <<print setup.foodstuff[_item].plural>>.</span>
+					<span class="teal">아직 <<print window.KR.getFoodstuffCountKr(_item, $farmersProduce.selling[_item])>>를 처리 중이다.</span>
 				<</if>>
 			</div>
 		<</capture>>
@@ -328,7 +325,6 @@ The gate shudders open, and a lorry rumbles out, on its way to collect your prod
 		<<if $factoryUpgrades.marketing isnot undefined>>
 			<<set _baseSaleQuantity to _baseSaleQuantity * (1 + (0.1 * $factoryUpgrades.marketing))>>
 		<</if>>
-		<<set _baseSaleQuantity += 400>>
 		<<if !$farmersProduce.soldData>><<set $farmersProduce.soldData = {}>><</if>>
 		<<for _label, _value range $farmersProduce.selling>>
 			<<set _quantity to clone(_baseSaleQuantity)>>

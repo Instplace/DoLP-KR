@@ -108,7 +108,7 @@ Poppy heads back to you.
 <br><br>
 "Well, alright. I'll be waiting for you at my flat later today." Poppy says before giving you a smooch on the cheek.
 <br><br>
-<<link [[Next|Orphanage]]>><<endevent>><</link>>
+<<link [[다음|Orphanage]]>><<endevent>><</link>>
 
 :: Poppy Christmas Flat Arrival
 <<effects>><<set $location to "flats">><<set $bus to "poppy_living_room">>
@@ -193,7 +193,7 @@ After a little while, you get dressed, say your goodbyes, and leave.
 	<br>
 <</if>>
 <<endcombat>><<pass 30>><<clotheson>>
-<<link [[Next|Flats]]>><</link>>
+<<link [[다음|Flats]]>><</link>>
 
 /* VALENTINE DATE */
 

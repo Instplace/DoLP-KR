@@ -589,6 +589,7 @@
 <</widget>>
 
 /*<<playWithBreasts>>*/
+
 :: Widgets playWithBreasts [widget]
 <<widget "playWithBreasts">>
 	<<if _args[0]>>
@@ -600,6 +601,7 @@
 
 /*<<creampie "npc" "anus">> -- <<set $sexStats.creampie.npc.anus++>>*/
 /*<<creampie "self" "mouth">> -- <<set $sexStats.creampie.self.mouth++>>*/
+
 :: Widgets creampie [widget]
 <<widget "creampie">>
 	<<if _args[0] and _args[1]>>

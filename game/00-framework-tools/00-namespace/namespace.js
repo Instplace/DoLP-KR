@@ -32,7 +32,7 @@ window.defineGlobalNamespaces = namespaces => {
 		try {
 			if (window[name] && window[name] !== namespaceObject) {
 				console.warn(
-					`Attempted to set ${name} in the global namespace, but it's already in use. Skipping this assignment. Existing Object:`,
+					`${name}【을를】 전역 네임스페이스에 설정하려 했지만 이미 사용 중입니다. 이 할당을 건너뜁니다. 기존 객체:`,
 					window[name]
 				);
 			} else {
@@ -41,7 +41,7 @@ window.defineGlobalNamespaces = namespaces => {
 			}
 		} catch (e) {
 			if (window[name] !== namespaceObject) {
-				console.error(`Failed to setup global namespace object ${name}. Attempting to continue. Source Error:`, e);
+				console.error(`전역 네임스페이스 객체 ${name} 설정에 실패했습니다. 계속 진행을 시도합니다. 원본 오류:`, e);
 			}
 		}
 	});

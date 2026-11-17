@@ -40,7 +40,7 @@ You walk between shops, looking for something Poppy would like. You find a few i
 	<br>
 <</if>>
 <br>
-<<getouticon>><<link [[Leave|Shopping Centre]]>><</link>>
+<<getouticon>><<link [[떠난다|Shopping Centre]]>><</link>>
 <br>
 
 :: Shop Poppy Christmas
@@ -51,9 +51,9 @@ You walk between shops, looking for something Poppy would like. You find a few i
 	<<case "perfume_unwrapped">>You buy the perfume. You think Poppy will like it.
 	<<case "tuxedo_unwrapped">>You buy the tuxedo suit. You think Poppy will like it.
 <</switch>>
-<<if $christmas_wrap is undefined>>Now you just need wrapping paper.<<else>>You can wrap it in your room.<</if>>
+<<if $christmas_wrap is undefined>>이제 포장지만 있으면 된다.<<else>>방에 가서 포장하면 된다.<</if>>
 <br><br>
-<<link [[Next|Shopping Centre]]>><</link>>
+<<link [[다음|Shopping Centre]]>><</link>>
 
 /* Wrapping inside Poppy's own flat.
 Reachable from any room; the orphanage version below covers players who can't get through the door yet. */
@@ -98,7 +98,7 @@ You wrap it as carefully as you can. The gift has a fetching look to it once don
 <br><br>
 You tuck the parcel away where the other orphans won't get curious about it. You'll have to carry it to Poppy yourself.
 <br><br>
-<<link [[Next|Bedroom]]>><</link>>
+<<link [[다음|Bedroom]]>><</link>>
 <br>
 
 /* Handover.

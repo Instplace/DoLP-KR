@@ -3,11 +3,11 @@
 	<<set _npc_speech to true>>
 	<<if $possessed>>
 		<<if $control gte $controlmax>>
-			<<He>> scoffs. "Now leave, and leave <<phim>> be."
+			<<He>>【이가】 콧방귀를 뀐다. "이제 가봐라. 그리고 <<phim>>【을를】 가만히 내버려 둬."
 		<<elseif $npcspeechcycle is 0>>
-			<<He>> raises <<his>> telescope to <<his>> eye for a moment, before putting it away.
+			<<He>>【이가】 망원경을 잠시 눈에 갖다 대더니 치워버린다.
 		<<else>>
-			<<He>> stares you down, silent.
+			<<He>>【은는】 말없이 당신을 빤히 바라본다.
 		<</if>>
 	<<else>>
 		<<speechPool "Zephyr">>
@@ -15,15 +15,15 @@
 			<<switch _loveInterest>>
 				<<case "Gwylan">>
 					<<addSpeechLine "namedrop">>
-						<<He>> speaks. "Hah! How's little seabird doing?"
+						<<He>>【이가】 말한다. "하! 꼬맹이 갈매기는 어때?"
 					<</addSpeechLine>>
 				<<case "Black Wolf" "Great Hawk">>
 					<<addSpeechLine "namedrop">>
-						<<He>> chortles. "Oh, you're full of tales."
+						<<He>>【이가】 껄껄 웃는다. "오, 흥미로운 얘기가 잔뜩 있군 그래."
 					<</addSpeechLine>>
 				<<default>>
 					<<addSpeechLine "namedrop">>
-						<<He>> smirks. "A lover on land or a heart at sea, pick one."
+						<<He>>【이가】 피식 웃는다. "육지의 애인이냐, 바다의 심장이냐. 하나만 골라."
 					<</addSpeechLine>>
 			<</switch>>
 		<</if>>
