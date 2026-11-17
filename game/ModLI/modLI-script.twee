@@ -83,7 +83,7 @@ Heavy work only runs when a slot is missing, mismatched, or carries vestige fiel
                 if (unlocks[nm]) { needsWork = true; break; }
             } else if (!isHealthy(V.NPCName[ix], nm)) {
                 needsWork = true;
-                gucket.tooltip = ` <span tooltip="<span class='gold'>` + itemsInText + `</span>" class="tooltip-anchor"><span class='gold'>(물건 ` + cHas + `/` + cCap + `)</span></span>`;
+                break;
             }
         }
         if (!needsWork) return;   /* ← This is where most calls bail out */

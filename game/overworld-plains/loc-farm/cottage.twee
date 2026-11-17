@@ -415,7 +415,7 @@
 		<br>
 		<<switch _owlplush.id>>
 			<<case "owlplushie">>
-				<<furnitureicon _owlplush.iconFile>><<print _owlplushNameKr>>【은는】 어둠 속에 녹아들 듯 옷장 위에서 내려다보고 있다.
+				<<furnitureicon _owlplush.iconFile>>The _owlplush.name stares down from the wardrobe, blending into the gloom.
 		<</switch>>
 	<</if>>
 	<<if _windowsill>>
