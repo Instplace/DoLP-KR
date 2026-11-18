@@ -1,6 +1,8 @@
 # DoLP-KR
 [Degrees of Lewdity Plus](https://gitgud.io/Frostberg/degrees-of-lewdity-plus)(DoL+)의 한국어 번역본입니다.
 
+> 이 게임은 성인용입니다. 성적·폭력적인 내용을 담고 있으며 미성년자에게 적합하지 않습니다.
+
 ## 원작자
 ### Degrees of Lewdity
 © Vrelnir
@@ -10,7 +12,7 @@
 ### Degrees of Lewdity Plus
 © Frostberg
 
-[GitGud (소스 코드)](https://gitgud.io/Frostberg/degrees-of-lewdity-plus) | [FANBOX (후원)](https://vrelnir.fanbox.cc)
+[GitGud (소스 코드)](https://gitgud.io/Frostberg/degrees-of-lewdity-plus) | [Patreon (후원)](https://www.patreon.com/DegreesofLewdityPlus)
 
 ### 한국어 번역
 [아카라이브 DOL 채널](https://arca.live/b/dolgame)의 여러 기여자
