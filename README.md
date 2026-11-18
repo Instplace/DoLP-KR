@@ -3,13 +3,17 @@
 
 ## 원작자
 ### Degrees of Lewdity
-© Vrelnir / [개발자 블로그](https://vrelnir.blogspot.com/) ([소스 저장소](https://gitgud.io/Vrelnir/degrees-of-lewdity))
+© Vrelnir
+
+[개발자 블로그](https://vrelnir.blogspot.com/) | [GitGud (소스 코드)](https://gitgud.io/Vrelnir/degrees-of-lewdity) | [FANBOX (후원)](https://vrelnir.fanbox.cc)
 
 ### Degrees of Lewdity Plus
-© Frostberg / [GitGud](https://gitgud.io/Frostberg/degrees-of-lewdity-plus)
+© Frostberg
+
+[GitGud (소스 코드)](https://gitgud.io/Frostberg/degrees-of-lewdity-plus) | [FANBOX (후원)](https://vrelnir.fanbox.cc)
 
 ### 한국어 번역
-[아카라이브 DOL 채널](https://arca.live/b/dolgame)
+[아카라이브 DOL 채널](https://arca.live/b/dolgame)의 여러 기여자
 
 ## 라이선스
 본 리포지토리의 모든 컨텐츠는 **CC BY-NC-SA 4.0**에 따라서 배포됩니다.
