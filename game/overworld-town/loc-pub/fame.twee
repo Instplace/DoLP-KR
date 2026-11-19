@@ -314,7 +314,7 @@
 		) + $_krWord[$_result[1]]>>
 		<<if _args[1] is "cap">><<capitalise>><</if>>
 	<<else>>
-		<<set _text_output to "<span class='black'><i>pubfameRemyPassword 위젯이 레미 작업이 활성화되지 않은 상태에서 $passage 패시지에서 호출되었습니다. Vrelnir에게 알려주세요.</i></span>">>
+		<<set _text_output to "<span class='black'><i>pubfameRemyPassword 위젯이 레미 작업이 활성화되지 않은 상태에서 $passage 패시지에서 호출되었습니다. Vrelnir에게 알려 주십시오.</i></span>">>
 	<</if>>
 <</silently>><<print _text_output>><</widget>>
 
@@ -673,7 +673,7 @@
 
 <<else>> <!-- all conditions should be met in the above if statements -->
 	<<set _failed to 1>>
-	"어..." 미키가 눈살을 찌푸린다. "미안, 무슨 뜻인지 잘 모르겠어. 도와줄 수가 없네. 다시 골라 줘." <span class="black"><i>(목표 "<<print $pubfame.goal is "temp" ? "임시" : "영구">>" 및 대상 "<<print $pubfame.target>>" 관련 버그입니다. Vrelnir에게 알려주세요.)</i></span>
+	"어..." 미키가 눈살을 찌푸린다. "미안, 무슨 뜻인지 잘 모르겠어. 도와줄 수가 없네. 다시 골라 줘." <span class="black"><i>(목표 "<<print $pubfame.goal is "temp" ? "임시" : "영구">>" 및 대상 "<<print $pubfame.target>>" 관련 버그입니다. Vrelnir에게 알려 주십시오.)</i></span>
 <</if>>
 <br><br>
 

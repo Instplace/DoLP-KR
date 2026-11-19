@@ -335,7 +335,7 @@
 					<<case "moor">>
 						<<set _bikeString to "황야의 성">>
 					<<default>>
-						<<set _bikeString to "$bicycle.location | 버그입니다. DOLMODS 서버의 DOLP 서버 또는 DOLP 채널에 제보해 주세요">>
+						<<set _bikeString to "$bicycle.location | 버그입니다. DOLMODS 서버의 DOLP 서버 또는 DOLP 채널에 제보해 주십시오">>
 				<</switch>>
 				<li><<if $bicycle.persistentLocation is true>>자전거 위치: _bikeString. <</if>>자전거의 남은 사용 시간은 $bicycle.durability.current분입니다.</li>
 				<<if $bicycle.durability.repair isnot undefined>>

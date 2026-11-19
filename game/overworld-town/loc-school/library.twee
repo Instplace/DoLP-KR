@@ -1041,7 +1041,7 @@
 		<<getouticon>><<link [[나간다|School Library]]>><<endevent>><<set $eventskip to 1>><<crimeUp 20 "thievery">><</link>><<crime "thievery">>
 		<br>
 	<<case "cancelDeposit">>
-		마음을 바꿔 보증금을 맡기지 않기로 합니다. 시드니가 미소 짓는다. "괜찮아요, 나중에 맡기기로 하면 말해 줘요."
+		마음을 바꿔 보증금을 맡기지 않기로 한다. 시드니가 미소 짓는다. "괜찮아요, 나중에 맡기기로 하면 말해 줘요."
 		<br><br>
 		<<sydneyOptions>>
 	<<default>>

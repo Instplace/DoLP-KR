@@ -3876,7 +3876,7 @@
 				<</link>><br>
 				<label>
 					<<checkbox "$combatExtended.passiveDodging" 0 1 autocheck>> 수동 회피 활성화
-					<mouse class="tooltip linkBlue">(?)<span>수동 회피입니다. 매트릭스가 되어 보세요.</span></mouse>
+					<mouse class="tooltip linkBlue">(?)<span>수동 회피입니다. 매트릭스가 되어 보십시오.</span></mouse>
 				</label><br>
 				<label>
 					<<checkbox "$combatExtended.activeDodging" 0 1 autocheck>> 능동 회피 활성화
@@ -3884,7 +3884,7 @@
 				</label><br>
 				<label>
 					<<checkbox "$combatExtended.uncappedDodgeChance" 0 1 autocheck>> 회피 확률 상한 해제 활성화
-					<mouse class="tooltip linkBlue">(?)<span>내면의 매트릭스를 받아들이세요.</span></mouse>
+					<mouse class="tooltip linkBlue">(?)<span>내면의 매트릭스를 받아들이십시오.</span></mouse>
 				</label><br>
 				<span class="gold">회피 확률 상한
 				<mouse class="tooltip linkBlue">(?)<span>회피 확률의 상한입니다.</span></mouse>
@@ -4335,16 +4335,16 @@
 					<</if>>
 					<<set _subsection to "amcTraits">><<replace #subsectionDiv>><<amcTraitsSettings>><</replace>>
 				<</link>><br>
-				<label><span class="blue">단련된 유혹 스킬</span> <<checkbox "$AMCTraits.seductionskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 입 스킬</span> <<checkbox "$AMCTraits.oralskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 가슴 스킬</span> <<checkbox "$AMCTraits.chestskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 손 스킬</span> <<checkbox "$AMCTraits.handskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 엉덩이 스킬</span> <<checkbox "$AMCTraits.bottomskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 자지 스킬</span> <<checkbox "$AMCTraits.penileskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 보지 스킬</span> <<checkbox "$AMCTraits.vaginalskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 애널 스킬</span> <<checkbox "$AMCTraits.analskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 허벅지 스킬</span> <<checkbox "$AMCTraits.thighskill" 1 2 autocheck>></label><br>
-				<label><span class="blue">단련된 발 스킬</span> <<checkbox "$AMCTraits.feetskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 유혹 기술</span> <<checkbox "$AMCTraits.seductionskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 입 기술</span> <<checkbox "$AMCTraits.oralskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 가슴 기술</span> <<checkbox "$AMCTraits.chestskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 손 기술</span> <<checkbox "$AMCTraits.handskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 엉덩이 기술</span> <<checkbox "$AMCTraits.bottomskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 자지 기술</span> <<checkbox "$AMCTraits.penileskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 보지 기술</span> <<checkbox "$AMCTraits.vaginalskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 애널 기술</span> <<checkbox "$AMCTraits.analskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 허벅지 기술</span> <<checkbox "$AMCTraits.thighskill" 1 2 autocheck>></label><br>
+				<label><span class="blue">단련된 발 기술</span> <<checkbox "$AMCTraits.feetskill" 1 2 autocheck>></label><br>
 			</div>
 			<div class="settingsToggleItem">
 				<<link "모든 부정적 명성 전환">>
