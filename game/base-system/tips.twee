@@ -166,7 +166,7 @@
 
 		<!-- Animal TF tips -->
 		<<set setup.tips.animalTFs to [
-			"늑대<<if !animalSexEnabledForType('wolf')>> 수인<</if>>, 여우<<if !animalSexEnabledForType('fox')>> 수인<</if>>, 토끼<<if !animalSexEnabledForType('bunny')>> 수인<</if>>의 정액을 섭취하면 신체에 기묘한 영향을 끼칠 수 있습니다.",
+			"늑대<<if !animalSexEnabledForType('wolf')>> 수인<</if>>, 여우<<if !animalSexEnabledForType('fox')>> 수인<</if>>, 곰<<if !animalSexEnabledForType('bear')>> 수인<</if>>의 정액을 섭취하면 신체에 기묘한 영향을 끼칠 수 있습니다.",
 			"여우<<if !animalSexEnabledForType('fox')>> 수인<</if>>【을를】 상대로 소리 지르기 시합을 하려 들지 마십시오.",
 		]>>
 
