@@ -312,7 +312,7 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 				<<if pcAreArmsBound("any") or $feetuse is "bound">>
 					당신은 눈을 굴리며 몸을 돌려 <<him>>에게 묶인 <<if pcAreArmsBound("any")>>팔<<if $feetuse is "bound">>【와과】 <</if>><</if>><<if $feetuse is "bound">>다리<</if>>【을를】 보여준다.
 
-					<<His>>의 눈이 번뜩인다. 순간적으로 당신은 욕정을 본 것 같다. "어떻게 네가..? 됐다." <<He>>【은는】 당신에게 걸어온다. "정말 알고 싶지 않군."
+					<<His>> 눈이 번뜩인다. 순간적으로 당신은 욕정을 본 것 같다. "어떻게 네가..? 됐다." <<He>>【은는】 당신에게 걸어온다. "정말 알고 싶지 않군."
 					<br><br>
 
 					팔다리가 풀리는 것이 느껴진다.<<unbind>>
@@ -1895,7 +1895,7 @@ Some events are replaced with more severe events if PC is deemed (randomly) to b
 	<<case 1, 2>>
 		레이튼은 <<nnpc_his "Leighton">> 책상에 앉아 당신의 표정을 살피려고 몸을 가까이 기울인다.
 	<<case 3, 4>>
-		"이 느낌이 마음에 드나, 어린 <<lady>>?" 레이튼이 묻는다. <<nnpc_he "Leighton">> 당신의 눈을 빤히 쳐다보자 <<nnpc_His "Leighton">> 뜨거운 숨결이 얼굴에 닿는다.
+		"이 느낌이 마음에 드나, 어린 <<lady>>?" 레이튼이 묻는다. <<nnpc_he "Leighton">>【은는】 당신의 눈을 빤히 쳐다보자 <<nnpc_His "Leighton">> 뜨거운 숨결이 얼굴에 닿는다.
 	<<case 4, 5>>
 		<<person1>>"<<He>>【은는】 이걸 잘하지, 안 그런가?" 레이튼이 <<person>>【을를】 올려다보며 히죽 웃는다.
 	<<case 6>>

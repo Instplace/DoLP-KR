@@ -1132,7 +1132,7 @@
 		<<addinlineevent "docks_overhear_fame_impregnation" _chance_divisor>>
 			"내가 듣자 하니, 그 <<lass>>【이가】 온 동네 여자들은 다 임신시켰다더라."
 			<br>
-			"진짜? 부럽네. <<pShe>> 진짜 많이 박고 다니나 보다."
+			"진짜? 부럽네. <<pShe>>【은는】 진짜 많이 박고 다니나 보다."
 			<br>
 			"저놈 양육비 얼마나 낼 거 같아?"
 			<br>

@@ -67,7 +67,7 @@
 <<set $outside to 1>><<set $location to "park">><<effects>><<set $bus to "park">>
 <<person2>>당신은 그 <<person>>에게서 등을 돌리고 받침대에서 뛰어내린다. 기다리고 있던 <<person1>><<nnpc_gender "Avery">>의 팔에 바로 안긴다. 그 <<person2>><<person2>><<person>>【은는】 받침대 주위를 달려오다가, 새로 온 사람을 보고 멈춘다. "이 <<girl>>【은는】 당신 건가?" <<he>>【이가】 말한다. "<<pShe>>【은는】 공공기물을 훼손하고 있었어."
 <br><br>
-"<<pShes>>【은는】 그런 짓 안 했어." <<person1>><<nnpc_gender "Avery">>【이가】 당신을 꽉 껴안으며 말한다. <<He>>【은는】 그 <<person2>><<person>>【을를】 노려본다. "너도 알잖아."
+"<<pShes>> 그런 짓 안 했어." <<person1>><<nnpc_gender "Avery">>【이가】 당신을 꽉 껴안으며 말한다. <<He>>【은는】 그 <<person2>><<person>>【을를】 노려본다. "너도 알잖아."
 <br><br>
 그 <<person>>【은는】 자신감이 없어 보인다. <<He>>【은는】 <<his>> 곤봉을 집어넣고 돌아선다.
 <br><br>

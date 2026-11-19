@@ -564,11 +564,11 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-reset-hand _args[0]>><<set $NPCList[_n][$_hand + "tool"] to 0>>
 		/*<<set $vaginause to 0>>*/
 	<<elseif $rng gte 61>>
-		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 음순을 <<strokes>><<if $_clothing isnot undefined>> 그리고 당신의 <<print $_clothing>>【을를】 너머로<</if>>.
+		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 음순을 <<strokes>><<if $_clothing isnot undefined>> 그리고 당신의 <<print $_clothing>> 너머로<</if>>.
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif ($_rng gte 21 or $novaginal is 0) and (!$player.penisExist or random(1,100) gte 51)>>
-		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 클리토리스를 <<print either("문지른다","가볍게 때린다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.
+		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 클리토리스를 <<print either("문지른다","가볍게 때린다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>> 너머로<</if>>.
 		<<set $speechClit to 1>><<neutral 10 "genitals" _n>>
 		<<violence 1>>
 		<<bodypart_admire_chance pubic>>
@@ -651,7 +651,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<neutral 10 "genitals" _n>>
 		<<bodypart_admire_chance pubic>>
 	<<elseif $rng gte 21>>
-		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 귀두를 <<print either("가볍게 친다","찰싹 때린다","희롱한다","문지른다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>>【을를】 너머로<</if>>.
+		<<He>>【이가】 <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 당신의 귀두를 <<print either("가볍게 친다","찰싹 때린다","희롱한다","문지른다")>><<if $_clothing isnot undefined>>, 당신의 <<print $_clothing>> 너머로<</if>>.
 		<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 		<<violence 1>>
 		<<bodypart_admire_chance pubic>>
@@ -743,7 +743,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 		<<combat-set-hand-target _args[0] "penisstroker">>
 		<<bodypart_admire_chance pubic>>
 	<<else>>
-		<<he>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 <<if $_clothing isnot "none">>당신의 $_clothing【을를】 너머로, <</if>>당신의 귀두를 애태운다.
+		<<he>>【이가】 <<his>> <<print _args[0] is "left" ? "왼손" : "오른손">>에 든 <<print window.KR.getToolKr($_toy)>>【으로로】 <<if $_clothing isnot "none">>당신의 $_clothing 너머로, <</if>>당신의 귀두를 애태운다.
 		<<neutral 10 "genitals" _n>><<set $speechGlans to 1>>
 		<<bodypart_admire_chance pubic>>
 	<</if>>
@@ -7528,7 +7528,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<<run statusCheck("Poppy")>>
 <</if>>
 <<if $suffocationPhase lte 1>>
-	<span class='red'>질식합니다.</span><br>
+	<span class='red'>질식한다.</span><br>
 	시야가 흐려지더니 이내 사라진다.
 	<<if $vaginastate is "penetrated" or $vaginastate is "othervagina" or $penisstate is "othervagina" or $penisstate is "otheranus" or $penisstate is "othermouth" or $anusstate is "penetrated" or $mouthstate is "penetrated">>
 		당신은 마지막으로 경련을 일으키며 축 늘어진다. 당신의 축 늘어진 몸은 가차없이 계속해서 박힌다.
@@ -7561,7 +7561,7 @@ Hands are 'inverted': NPC holds PC's left hand with their right one, and vice ve
 	<br><br>
 	<<link [[다음|Man combat suffocated]]>><</link>>
 <<else>>
-	<span class="red">의식을 잃었습니다.</span><br>
+	<span class="red">의식을 잃은 상태다.</span><br>
 	<!-- Simulate 30 seconds of sex while passed out -->
 	<<set _simTurns to 3>>
 	<<for _turn to 0; _turn lte _simTurns; _turn++>>

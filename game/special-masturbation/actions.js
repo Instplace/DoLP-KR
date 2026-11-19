@@ -912,7 +912,7 @@ function masturbationActionsMouth({ selectedToy, toyDisplay, genitalsExposed, br
 			break;
 		case "mpenisentrance":
 			result.text = corruptionCheck
-				? '<span class="red">귀 안의 슬라임이 당신의 입을 자지 앞으로 가져가게 한다.</span>'
+				? '<span class="red">귀 슬라임이 당신의 입을 자지 앞으로 가져가게 한다.</span>'
 				: "입이 자지 앞에 있다.";
 			if (awarenessCheck) {
 				result.options.push({
@@ -933,7 +933,7 @@ function masturbationActionsMouth({ selectedToy, toyDisplay, genitalsExposed, br
 			break;
 		case "mchastityparasiteentrance":
 			result.text = corruptionCheck
-				? '<span class="red">귀 안의 슬라임이 당신의 입을 정조대 기생충 앞으로 가져가게 한다.</span>'
+				? '<span class="red">귀 슬라임이 당신의 입을 정조대 기생충 앞으로 가져가게 한다.</span>'
 				: "입이 정조대 기생충 앞에 있다.";
 			if (awarenessCheck) {
 				result.options.push({
@@ -948,7 +948,7 @@ function masturbationActionsMouth({ selectedToy, toyDisplay, genitalsExposed, br
 			break;
 		case "mvaginaentrance":
 			result.text = corruptionCheck
-				? '<span class="red">귀 안의 슬라임이 당신의 보지를 핥게 한다.</span>'
+				? '<span class="red">귀 슬라임이 당신의 보지를 핥게 한다.</span>'
 				: "입이 보지 앞에 있다.";
 			if (awarenessCheck) {
 				result.options.push({
@@ -979,7 +979,7 @@ function masturbationActionsMouth({ selectedToy, toyDisplay, genitalsExposed, br
 			break;
 		case "mpenis":
 			result.text = corruptionCheck
-				? '<span class="red">귀 안의 슬라임이 당신의 자지를 빨게 한다.</span>'
+				? '<span class="red">귀 슬라임이 당신의 자지를 빨게 한다.</span>'
 				: "당신은 자지를 빨고 있다.";
 			if (V.selfsuckDepth === V.selfsuckLimit) {
 				result.text += ` 전체가 입${V.selfsuckDepth >= 2 ? "과 목구멍" : ""} 안에 들어와 있다.`;

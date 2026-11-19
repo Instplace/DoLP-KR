@@ -12,9 +12,9 @@
 				<!-- Do Nothing -->
 			<<elseif $NPCList[_j].stance isnot "topface">>
 				<<if $anusactiondefault is "anustopenis">>
-					| <label><span class="sub"><<his>> 자지에 올라타기</span> <<radiobutton "$anusaction" "anustopenis" checked>><<analdifficulty>> <<combatpromiscuous5>></label>
+					| <label><span class="sub"><<his>> 자지 위로 올라탄다</span> <<radiobutton "$anusaction" "anustopenis" checked>><<analdifficulty>> <<combatpromiscuous5>></label>
 				<<else>>
-					| <label><span class="sub"><<his>> 자지에 올라타기</span> <<radiobutton "$anusaction" "anustopenis">><<analdifficulty>> <<combatpromiscuous5>></label>
+					| <label><span class="sub"><<his>> 자지 위로 올라탄다</span> <<radiobutton "$anusaction" "anustopenis">><<analdifficulty>> <<combatpromiscuous5>></label>
 				<</if>>
 				<<break>>
 			<</if>>
@@ -53,9 +53,9 @@
 					<!-- Do Nothing -->
 				<<else>>
 					<<if $anusactiondefault is "anuspenisfuck">>
-						| <label><span class="sub"><<his>> 자지를 삼키기</span> <<radiobutton "$anusaction" "anuspenisfuck" checked>> <<combatpromiscuous5>><<analvirginitywarning>><<NPCvirginitywarning $NPCList[_j].fullDescription "penile">></label>
+						| <label><span class="sub"><<his>> 자지를 받아들인다</span> <<radiobutton "$anusaction" "anuspenisfuck" checked>> <<combatpromiscuous5>><<analvirginitywarning>><<NPCvirginitywarning $NPCList[_j].fullDescription "penile">></label>
 					<<else>>
-						| <label><span class="sub"><<his>> 자지를 삼키기</span> <<radiobutton "$anusaction" "anuspenisfuck">> <<combatpromiscuous5>><<analvirginitywarning>><<NPCvirginitywarning $NPCList[_j].fullDescription "penile">></label>
+						| <label><span class="sub"><<his>> 자지를 받아들인다</span> <<radiobutton "$anusaction" "anuspenisfuck">> <<combatpromiscuous5>><<analvirginitywarning>><<NPCvirginitywarning $NPCList[_j].fullDescription "penile">></label>
 					<</if>>
 					<<break>>
 				<</if>>

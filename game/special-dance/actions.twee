@@ -121,7 +121,7 @@
 		<<link [[은근슬쩍 더듬게 내버려 둔다|$passage]]>><<set $danceaction to "cop">><</link>>
 		<br>
 		<<if $dancelocation is "brothel" and $corruptionDancing isnot undefined>>
-			귓속의 슬라임이 쇼를 끝내지 못하게 막는다.
+			귀 슬라임이 쇼를 끝내지 못하게 막는다.
 		<<elseif $forceddance isnot 1>>
 			<<link [["너무 위험하니 쇼를 끝낸다"|$passage]]>><<set $danceaction to "finish">><</link>>
 			<br>
@@ -783,7 +783,7 @@
 <</widget>>
 
 <<widget "dancetripfinish">>
-	당신은 어설프게 스텝이 꼬이더니 힐을 신은 채 비틀거리며, 앞으로 넘어져 무대 밖으로 몸을 내동댕이친다. 다행히 경비원 중 한 명이 당신을 붙잡아주었지만, 발목은 욱신거린다.
+	당신은 어설프게 스텝이 꼬이더니 힐을 신은 채 비틀거리며, 앞으로 넘어져 무대 밖으로 몸을 내동댕이친다. 다행히 경비원 중 한 명이 당신을 붙잡아주지만, 발목은 욱신거린다.
 	<<pain 10>><<ggpain>><<bruise full>>
 	<<set $danceevent to "finish">>
 	<br><br>
@@ -857,7 +857,7 @@
 <</widget>>
 
 <<widget "dancesamfinish">>
-	<<endevent>><<npc Sam>>샘이 당신의 탁자 무대 옆에 나타난다. "모두 거기까지, 이 <<girl>>【은는】 할 만큼 했으니까." <<He>>【은는】 당신의 팔을 잡고 뒷방으로 안내한다. "오늘 수고했어. 이건 약간의 추가금이야." 당신은 <<printmoney 1000>>【을를】 벌었습니다.<<money 1000 "cafeWaiter">>
+	<<endevent>><<npc Sam>>샘이 당신의 탁자 무대 옆에 나타난다. "모두 거기까지, 이 <<girl>>【은는】 할 만큼 했으니까." <<He>>【은는】 당신의 팔을 잡고 뒷방으로 안내한다. "오늘 수고했어. 이건 약간의 추가금이야." 당신은 <<printmoney 1000>>【을를】 번다.<<money 1000 "cafeWaiter">>
 	<<npcincr Sam love 2>><<glove>><<set $danceevent to "finish">>
 	<br><br>
 <</widget>>

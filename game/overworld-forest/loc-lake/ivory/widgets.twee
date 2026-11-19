@@ -1504,7 +1504,7 @@
 		<<set $wraith.timer++>>
 		<<set $wraith.timer += Math.floor(C.npc["Ivory Wraith"].lust / 10)>>
 		<<if $rng gte 61 and numberOfEarSlime()>>
-			귀 안의 슬라임이 평소와 다른 소리를 내는 것이 들린다, <span class="red">마치 무언가를 부르는 듯한 소리다.</span>
+			귀 슬라임이 평소와 다른 소리를 내는 것이 들린다, <span class="red">마치 무언가를 부르는 듯한 소리다.</span>
 			<<set $wraith.timer++>>
 		<</if>>
 	<</if>>

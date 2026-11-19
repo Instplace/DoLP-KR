@@ -1982,10 +1982,10 @@
 						<<elseif playerBellyVisible() and $settings.pregnancySpeechEnabled>>
 							<<He>>【이가】 말한다.
 							<<print [
-								`"<<bred>> <<bitch>> 치고는 아직도 꽤 꽉 조이네."`,
-								`"<<bred>> <<bitch>>【이가】 언제나 제일 재밌지."`,
+								`"<<bred>>당한 <<bitch>> 치고는 아직도 꽤 꽉 조이네."`,
+								`"<<bred>>당한 <<bitch>>【이가】 언제나 제일 재밌지."`,
 								`"그 보지를 어떻게 쓰는지 정말 잘 아네."`,
-								`"씨발, <<bred>> 보지 안에 진짜 싸고 있어."`,
+								`"씨발, <<bred>>당한 보지 안에 진짜 싸고 있어."`,
 								`"안에 싸 줄까? 어차피 더 임신할 일도 없으니까."`,
 							][random(0,4)]>>"
 							<<insecurity "pregnancy" 2>><<ginsecurity "pregnancy">>
@@ -3608,13 +3608,13 @@
 			<<elseif $npcspeechcycle is 2>>
 				"그래, 착한 <<bitch>>지."
 			<<elseif $npcspeechcycle is 3>>
-				"걱정 마, 너도 모르는 사이에 <<bred>> 될 테니까."
+				"걱정 마, 너도 모르는 사이에 <<bred>>될 테니까."
 			<<elseif $npcspeechcycle is 4>>
 				"송곳니가 귀엽네."
 			<<elseif $npcspeechcycle is 5>>
 				"누가 발정 난 착한 강아지지?"
 			<<else>>
-				"<<bred>> 되기 위해서라면 뭐든 할 거 같은데."
+				"<<bred>>되기 위해서라면 뭐든 할 거 같은데."
 			<</if>>
 
 		<<elseif $speechPlead is 1>>
@@ -4729,7 +4729,7 @@
 					<<else>>
 						<<switch $npcspeechcycle>>
 							<<case 0>> "빨리 네 씨앗을 받고 싶어."
-							<<case 1>> "날 가득 채워 줘, 내가 누구에게 <<bred>> 건지 모두가 알 수 있게."
+							<<case 1>> "날 가득 채워 줘, 내가 누구에게 <<bred>>당한 건지 모두가 알 수 있게."
 							<<case 2>> "내가 네 새끼를 품게 되면 넌 그렇게 오만하게 굴지 못할 거야."
 							<<case 3>> "반항하지 않으면 재미없지."
 							<<case 4>> "얌전히 구는 게 좋을 거야, 아니면 내 형제들과 널 나눌 테니까."

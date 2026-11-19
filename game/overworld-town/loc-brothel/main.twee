@@ -78,7 +78,7 @@
 <<else>>
 
 <<if $exposed gte 1>>
-	이렇게 음란하게 차려입은 사람이 당신뿐만이 아님에도 불구하고, 노출된 기분이 듭니다.
+	이렇게 음란하게 차려입은 사람이 당신뿐만이 아님에도 불구하고, 노출된 기분이 든다.
 	<br><br>
 <</if>>
 
@@ -494,7 +494,7 @@
 	<br>
 <<elseif $danceevent is 0>>
 	<<if $corruptionDancing isnot undefined>>
-		귀 안의 슬라임이 당신을 강요하고 있다.
+		귀 슬라임이 당신을 강요하고 있다.
 	<<elseif $exposed gte 2 and !hasSexStat("exhibitionism", 5)>>
 		<<link [[도망친다|Brothel Dressing Room]]>><<clotheson>><<endevent>><<unset $corruptionDancing>><</link>>
 	<<elseif $exposed gte 1 and !hasSexStat("exhibitionism", 3)>>

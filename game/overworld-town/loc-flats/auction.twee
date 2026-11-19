@@ -189,7 +189,7 @@
 		"<<pShe>>【은는】 고아원에 살거나, 살았었지."
 <</switch>>
 <br><br>
-"<<personsimple>>의 말을 들으셨죠." <<person2>><<person>>【이가】 소리친다. "그리고 <<pshe>> 당신의 것이 될 수 있습니다. 경매를 시작하겠습니다..." <<He>>【은는】 잠시 멈춘다. "£<<print Math.trunc($flats_auction * 100)>>부터!"
+"<<personsimple>>의 말을 들으셨죠." <<person2>><<person>>【이가】 소리친다. "그리고 <<pshe>>【이가】 당신의 것이 될 수 있습니다. 경매를 시작하겠습니다..." <<He>>【은는】 잠시 멈춘다. "£<<print Math.trunc($flats_auction * 100)>>부터!"
 <br><br>
 
 <<link [[다음|Flats Auction 5]]>><</link>>

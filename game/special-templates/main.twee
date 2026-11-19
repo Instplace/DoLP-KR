@@ -442,7 +442,7 @@
 <<elseif $alarm is 1 and $rescue is 1>>
 	<<set $rescued += 1>>
 
-	당신은 구조되었다.
+	당신은 구조된다.
 	<br><br>
 	<<tearful>> 마음을 다잡는다.
 	<br><br>
@@ -1231,7 +1231,7 @@ $kylar_camera = 7: Camera left.
 
 <<elseif $danceevent is 0>>
 	<<if $corruptionDancing isnot undefined>>
-		귀 안의 슬라임이 당신을 강요하고 있다.
+		귀 슬라임이 당신을 강요하고 있다.
 	<<elseif $exposed gte 2 and !hasSexStat("exhibitionism", 5)>>
 		<<link [[도망친다|Brothel Dressing Room]]>><<clotheson>><<endevent>><<unset $corruptionDancing>><</link>>
 	<<elseif $exposed gte 1 and !hasSexStat("exhibitionism", 3)>>

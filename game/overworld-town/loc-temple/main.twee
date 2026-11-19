@@ -2863,7 +2863,7 @@
 <<masturbationactions>>
 
 <<if $corruptionMasturbation>>
-	<span class="red">귀 속의 슬라임이 당신이 멈추도록 허락하지 않는다.</span>
+	<span class="red">귀 슬라임이 당신이 멈추도록 허락하지 않는다.</span>
 <</if>>
 <div id="masturbationButtons">
 	<<if $timer lte 0>>

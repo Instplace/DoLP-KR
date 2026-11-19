@@ -7,7 +7,7 @@
 
 	<<run try { new Function("const foo = {}; foo?.bar;"); } catch (e) {
 		window.Utils.Defer(() => {
-			Errors.report('현재 사용 중인 브라우저가 DoL의 최소 요구 사양(ES2020)을 충족하지 않습니다. Vrelnir와 개발 팀에 알리고 브라우저를 업데이트해 주세요.');
+			Errors.report('현재 사용 중인 브라우저가 DoL의 최소 요구 사양(ES2020)을 충족하지 않습니다. Vrelnir와 개발 팀에 알리고 브라우저를 업데이트하십시오.');
 			Errors.Reporter.show();
 		});
 	}>>
@@ -968,7 +968,7 @@
 		wolfCaveDefeated: "무리를 쓰러뜨림",
 		wolfCaveFeared: "두려움으로 쫓아냄",
 		wolfCaveTrusted: "신뢰를 얻어 자유로워짐",
-		teleportCheater: "순간이동으로 탈출함. 치트 쓴 거 다 알아.",
+		teleportCheater: "순간이동으로 탈출함. 치트 쓴 거 다 압니다.",
 	}>>
 
 	/*

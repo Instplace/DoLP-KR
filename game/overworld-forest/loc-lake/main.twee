@@ -237,7 +237,7 @@
 	<br><br>
 	/* Added $exhibitionism due to situations where the player can be softlocked and unsure how best to deal with it */
 	<<if $earSlime.forcedCommando isnot undefined and !$worn.under_lower.type.includes("naked") and hasSexStat("exhibitionism", 3) and $hypnosis_traits?.silence isnot 1>>
-		<span class="red">귓속의 슬라임 때문에 <<underwearTypeText>>【을를】 입고는 떠날 수 없습니다.</span>
+		<span class="red">귀 슬라임 때문에 <<underwearTypeText>>【을를】 입고는 떠날 수 없습니다.</span>
 	<<else>>
 		<<bike>><br>
 		<<foresticon>><<link [[숲 (0:10)|Forest]]>><<pass 10>><</link>>
@@ -1660,14 +1660,14 @@
 	<<set _storedClothes to clothingInStorage("lakeshore")>>
 
 	<<if $earSlime.forcedCommando isnot undefined and _storedClothes.find(item => item.slot is "under_lower" and !item.type.includes("naked")) and $hypnosis_traits?.silence isnot 1>>
-		<span class="red">귀 안의 슬라임이 <<underwearTypeText>> 차림으로 떠나는 것을 허락하지 않습니다.</span>
+		<span class="red">귀 슬라임이 <<underwearTypeText>> 차림으로 떠나는 것을 허락하지 않습니다.</span>
 		<<set _earSlimeText to true>>
 	<<elseif _storedClothes.length>>
 		<<link [[옷을 갈아입고 함께 간다 (0:40)|Lake Return Journey]]>><<endevent>><<storeload "lakeshore">><<set $foresthunt to 0>><<pass 40>><</link>>
 		<br>
 	<</if>>
 	<<if $earSlime.forcedCommando isnot undefined and !$worn.under_lower.type.includes("naked") and $hypnosis_traits?.silence isnot 1>>
-		<<if _earSlimeText>><span class="red">귀 안의 슬라임이 <<underwearTypeText>> 차림으로 떠나는 것을 허락하지 않습니다.</span><</if>>
+		<<if _earSlimeText>><span class="red">귀 슬라임이 <<underwearTypeText>> 차림으로 떠나는 것을 허락하지 않습니다.</span><</if>>
 	<<elseif $exposed lte 0>>
 		<<link [[함께 간다 (0:30)|Lake Return Journey]]>><<endevent>><<set $foresthunt to 0>><<pass 30>><</link>>
 		<br>
@@ -1690,7 +1690,7 @@
 <<set $outside to 1>><<set $location to "lake">><<effects>>
 <<beastNEWinit 1 wolf>><<generatey2>>
 
-나무 사이로 엿보니, 불량배 무리에게 시달리는 <<beasttype 0>>【을를】 발견한다. <<bhis 0>>의 모습을 보니
+나무 사이로 엿보니, 불량배 무리에게 시달리는 <<beasttype 0>>【을를】 발견한다. <<bhis 0>> 모습을 보니
 <<if $monster is 1>>
 	헝클어진 머리카락과 <<bhis 0>> 몸에 난 멍들로 보아,
 <<else>>

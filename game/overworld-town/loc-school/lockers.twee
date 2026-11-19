@@ -431,7 +431,7 @@
 		<<storeon _store_location "check">>
 		<<set _clothes to clothingInStorage(_store_location)>>
 		<<if _clothes.length gt 0>>
-			<<print $worn.handheld.name>>【을를】 <<print _clothes[0].name>>【으로로】 바꿔 들고 중앙 복도를 나섭니다.<<set $lockerSwapLock to false>><<handheldundress "lockers2">><<storeload "lockers">>
+			<<print $worn.handheld.name>>【을를】 <<print _clothes[0].name>>【으로로】 바꿔 들고 중앙 복도를 나선다.<<set $lockerSwapLock to false>><<handheldundress "lockers2">><<storeload "lockers">>
 			<br><br>
 		<<else>>
 			<<storeon "lockers2" "check">>
@@ -448,7 +448,7 @@
 		<<set _clothes to clothingInStorage(_store_location)>>
 		<<if $lockerSwapLock>>
 			<<if _clothes.length gt 0>>
-				<<print $worn.handheld.name>>【을를】 <<print _clothes[0].name>>【으로로】 바꿔 들고 중앙 복도를 나섭니다.<<set $lockerSwapLock to false>><<handheldundress "lockers">><<storeload "lockers2">>
+				<<print $worn.handheld.name>>【을를】 <<print _clothes[0].name>>【으로로】 바꿔 들고 중앙 복도를 나선다.<<set $lockerSwapLock to false>><<handheldundress "lockers">><<storeload "lockers2">>
 				<br><br>
 			<<else>>
 				<<storeon "lockers" "check">>

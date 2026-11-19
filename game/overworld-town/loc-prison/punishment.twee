@@ -328,7 +328,7 @@
 		<br>
 	<<case "bindings">>
 		<<set $leftarm to "bound">><<set $rightarm to "bound">>
-		<<methodical_guard 0 cap>>【이가】 <<veteran_guard 3>><<person4>>에게 고개를 끄덕이자, 그가 밧줄을 꺼내듭니다. "가만히 있어, <<girl>>." <<He>>【은는】 당신의 팔을 함께 묶어<<print $worn.handheld.name isnot "naked" ? " 당신의 $worn.handheld.name【을를】 빼앗은 뒤,<<handheldruined>>" : ",">> 당신을 무력하게 만듭니다.
+		<<methodical_guard 0 cap>>【이가】 <<veteran_guard 3>><<person4>>에게 고개를 끄덕이자, 그가 밧줄을 꺼내든다. "가만히 있어, <<girl>>." <<He>>【은는】 당신의 팔을 함께 묶어<<print $worn.handheld.name isnot "naked" ? " 당신의 $worn.handheld.name【을를】 빼앗은 뒤,<<handheldruined>>" : ",">> 당신을 무력하게 만든다.
 		<br><br>
 
 		<<link [[다음|Prison Punishment Bindings]]>><<prison_punishment_init>><</link>>
