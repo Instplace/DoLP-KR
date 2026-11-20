@@ -38,7 +38,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -152,7 +152,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -1311,7 +1311,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -1599,7 +1599,7 @@
 
 	휘트니는 <<his>> 눈을 굴린다. "그럼 왜 씨발 동의한 건데? 그냥 거기에 두고 갈까, 멍청아."
 
-	<<He>>【은는】 <<hes>> 진지하게 고민하는 듯 잠시 생각에 잠기지만, 몇 순간 뒤 한숨을 쉬고 당신을 끌어낸다.
+	<<He>>【은는】 진지하게 고민하는 듯 잠시 생각에 잠기지만, 몇 순간 뒤 한숨을 쉬고 당신을 끌어낸다.
 
 	<<if $speech_attitude is "meek">>
 		"고-고마워." 당신은 간신히 말하며 일어선다.
@@ -3038,7 +3038,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -4459,7 +4459,7 @@
 :: Bully Piss 3
 <<effects>>
 
-<<He>>【은는】 <<hes>> 물러나려는 듯 보이지만, <<him>>에게 무언가 떠오른다. "아니, 잠깐..." <<He>>【은는】 당신을 끌어내려 변기 위에 걸터앉게 만든다. "그렇게 마음에 들었으면 보너스 영상은 어때? 무삭제 감독판이면 구매자가 두 배는 낼걸."
+<<He>>【은는】 물러나려는 듯 보이지만, <<him>>에게 무언가 떠오른다. "아니, 잠깐..." <<He>>【은는】 당신을 끌어내려 변기 위에 걸터앉게 만든다. "그렇게 마음에 들었으면 보너스 영상은 어때? 무삭제 감독판이면 구매자가 두 배는 낼걸."
 <br><br>
 휘트니의 친구들은 역겨움과 흥분이 뒤섞인 환호를 지르고, 그 사이 <<he>>【은는】
 <<if C.npc.Whitney.penis isnot "none">>
@@ -5447,7 +5447,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -5653,7 +5653,7 @@
 
 <<effects>>
 <<effectsman>>
-<<alarmstate "<span class='red'>No one comes to your aid, likely due to your reputation as a delinquent.</span>">>
+<<alarmstate "<span class='red'>불량 학생이라는 평판 탓인지 아무도 당신을 도우러 오지 않는다.</span>">>
 <<man>>
 <<audience>>
 <<stateman>>
@@ -5905,13 +5905,13 @@
 			당신이 담배를 입에 물자, <<He>>【은는】 또 한 번 엉망진창이 되길 기대하는 게 분명한 얼굴로 히죽거린다. 이번에는 더 오래 버티지만, 결국 기침하고 만다. "왜 그래? 불쌍한 아가, <<pher>> 연기도 못 견디겠어?" <<he>>【이가】 조롱한다.
 			<br><br>
 			<<if $speech_attitude is "meek">>
-				"더, 더 잘할 수 있거든! 두고 봐." 당신은 <<him>>【에게】 말한다.
+				"더, 더 잘할 수 있거든! 두고 봐." 당신은 <<him>>에게 말한다.
 			<<elseif $speech_attitude is "bratty">>
-				"그래, 그래, 실컷 비웃어라. 그냥 몸 풀던 중이거든." 당신은 <<him>>【에게】 말한다.
+				"그래, 그래, 실컷 비웃어라. 그냥 몸 풀던 중이거든." 당신은 <<him>>에게 말한다.
 			<<else>>
-				"오랜만이라 서툴렀을 뿐이야. 나중에 누가 웃는지 보자고," 당신은 <<him>>【에게】 말한다.
+				"오랜만이라 서툴렀을 뿐이야. 나중에 누가 웃는지 보자고," 당신은 <<him>>에게 말한다.
 			<</if>>
-			당신은 담배를 다시 <<him>>【에게】 넘겨준다.
+			당신은 담배를 다시 <<him>>에게 넘겨준다.
 			<br><br>
 			"그러시겠지." <<he>>【이가】 다 안다는 듯 말한다. "몸이 받아들이는 법을 익혀야 하는 것뿐이야. 너 그런 거엔 익숙하잖아, 걸레년아?" <<He>>【이가】 낄낄거리지만, 당신이 마지막 기침을 뱉어내자 등을 쓸어내려 준다. <<npcincr Whitney love 1>><<glove>>
 		<</if>>
@@ -8595,7 +8595,7 @@
 			<br>
 		<<case 4>>
 			<<generatey2>><<person2>>
-			휘트니가 <<person1>><<his>> 옆에 있는 <<person>>【에게】 귓속말을 한다. <<person2>><<He>>【은는】 자리에서 비틀거리며 일어나 바 쪽으로 향한다.
+			휘트니가 <<person1>><<his>> 옆에 있는 <<person>>에게 귓속말을 한다. <<person2>><<He>>【은는】 자리에서 비틀거리며 일어나 바 쪽으로 향한다.
 			<br><br>
 
 			<<if $phase is "penis">>
@@ -8835,7 +8835,7 @@
 	<<if $phase is "penis" and $player.vaginaExist>>
 		<<he>>【이가】 당신의 <<pussy>>【을를】 애무하는 동안 당신은 <<hers>> 몸에 기댄다.
 		<<if $NPCList[0].penissize gte 4>>
-			<<his>> 거대한 크기와 거친 몸짓 탓에, <<him>>【의】 모든 감각이 적나라하게 와닿는다.
+			<<his>> 거대한 크기와 거친 몸짓 탓에, <<him>>의 모든 감각이 적나라하게 와닿는다.
 		<<elseif $NPCList[0].penissize lte 1>>
 			크기에서 모자란 부분을, <<he>>【은는】 순전한 사나움으로 채운다.
 		<<else>>
@@ -8947,10 +8947,10 @@
 	<br><br>
 
 	<<if $weekly.whitneyPub gte 6>>
-		당신은 천천히 사타구니를 <<hers>> 것에게서 멀리 떨어뜨린다. 눈치채지 못한 <<he>>【은는】 당신의 다리에 허리를 비벼댄다. <<he>>【이가】 알아차렸을 때쯤엔, <<hes>> <<his>> 자신의 흥분에 너무 깊이 빠져 있어 속도를 늦추지 못한다.
+		당신은 천천히 사타구니를 <<hers>> 것에게서 멀리 떨어뜨린다. 눈치채지 못한 <<he>>【은는】 당신의 다리에 허리를 비벼댄다. <<he>>【이가】 알아차렸을 때쯤엔, <<hes>> 자신의 흥분에 너무 깊이 빠져 있어 속도를 늦추지 못한다.
 		<br><br>
 
-		<<He>>【은는】 갑자기 당신의 <<genitals>>【을를】 향해 허리를 찌른다. 당신은 몸을 틀어 피한다. 또 찌르고, 또 피한다. 당신은 <<hes>> 얼굴이 새빨개질 때까지 계속 피한다.<<npcincr Whitney lust 5>><<glust>>
+		<<He>>【은는】 갑자기 당신의 <<genitals>>【을를】 향해 허리를 찌른다. 당신은 몸을 틀어 피한다. 또 찌르고, 또 피한다. 당신은 <<he>>【이가】 얼굴이 새빨개질 때까지 계속 피한다.<<npcincr Whitney lust 5>><<glust>>
 	<<elseif $weekly.whitneyPub gte 4>>
 		<<if $phase is "penis">>
 			당신은 <<hers>> 움직임에 맞춰 엉덩이를 돌리며, <<bottom>>【을를】 아슬아슬하게 닿지 않는 곳에 둔다. <<He>>【은는】 맞서 더 거칠게 찌르지만, 표적을 맞추느라 애를 먹고, <<his>> <<print window.KR.getPenisDescKr($NPCList[0].penisdesc)>>【은는】 당신의 항문에서 비껴난다.
@@ -10145,7 +10145,7 @@
 <</if>>
 <br><br>
 
-"진짜 걸레 같다니까," <<he>>【이가】 허리에 팔을 감아 당신을 끌어당겨 입을 맞춘다. <<him>>【과와】 나눴던 다른 키스들과는 느낌이 다르다. <<Hes>> 더 부드럽고, <<his>> 혀를 쓰려는 조급함도 덜하다. 당신들은 한동안 서로의 품에 안긴 채 그대로 있는다.<<takeKissVirginity "Whitney" `($whitneyromance is 1?"loveInterest":"romantic")`>>
+"진짜 걸레 같다니까," <<he>>【이가】 허리에 팔을 감아 당신을 끌어당겨 입을 맞춘다. <<him>>【와과】 나눴던 다른 키스들과는 느낌이 다르다. <<Hes>> 더 부드럽고, <<his>> 혀를 쓰려는 조급함도 덜하다. 당신들은 한동안 서로의 품에 안긴 채 그대로 있는다.<<takeKissVirginity "Whitney" `($whitneyromance is 1?"loveInterest":"romantic")`>>
 <br><br>
 
 <<link [[다음|Whitney Orphanage Loft 8]]>><<set $phase to 1>><</link>>
@@ -10430,7 +10430,7 @@
 	<<if C.npc.Whitney.love gte 21>>
 		당신은 고개를 저어 거절하고 휘트니를 꼭 끌어안는다.
 		<<if $speech_attitude is "meek">>
-			"ㅈ-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 <<his>> 따뜻한 살결에 대고 속삭인다.
+			"제-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 <<his>> 따뜻한 살결에 대고 속삭인다.
 		<<elseif $speech_attiude is "bratty">>
 			"저 새끼가 날 이상하게 쳐다봐." 당신이 <<his>> 따뜻한 살결에 대고 중얼거린다.
 		<<else>>
@@ -10448,7 +10448,7 @@
 	<<else>>
 		당신은 고개를 저으며 단호하게 말한다.
 		<<if $speech_attitude is "meek">>
-			"ㅈ-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 속삭인다.
+			"제-제발, 쟤들이 이런 내 모습을 보는 게 싫어." 당신이 속삭인다.
 		<<elseif $speech_attitude is "bratty">>
 			"저 새끼가 날 이상하게 쳐다봐." 당신이 중얼거린다.
 		<<else>>
@@ -10474,7 +10474,7 @@
 	<br><br>
 	<<he>>【이가】 시야에서 사라지자, 아직 남아 있는 긴장에 뒤섞인 흥분이 밀려드는 것을 어쩔 수 없다. 감정의 롤러코스터를 탄 듯 숨이 조금 가쁘지만, 일이 이렇게 풀려서 어쩐지 기분도 좋다.<<arousal 600>><<npcincr Whitney lust 3>><<garousal>><<glust "Whitney">>
 	<br><br>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	당신은 고개를 젓는다. 눈에는 반항기가 어려 있다.
 	<<if $speech_attitude is "meek">>
@@ -10632,7 +10632,7 @@
 	<<else>>
 		몇 분 쉬고 나서 당신은 몸을 추스르고 공원으로 돌아간다.
 		<br><br>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<</if>>
 <<elseif $enemyhealth lte 0>>
 
@@ -10643,7 +10643,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<whitneyexit>>
+	<<whitneyExit>>
 
 <<else>>
 
@@ -10657,7 +10657,7 @@
 	<<tearful>> 당신은 휘트니와 같은 길로 떠나지만, 어디에서도 <<nnpc_him "Whitney">>【을를】 보지 못한다.
 	<br><br>
 
-	<<whitneyexit>>
+	<<whitneyExit>>
 
 <</if>>
 
@@ -10778,7 +10778,7 @@
 
 :: Whitney Collar Replace Kneel 3 Dolp
 <<effects>><<set $location to "park">>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Collar Replace Run Dolp
 <<effects>><<set $location to "park">>
@@ -10790,7 +10790,7 @@
 	<br><br>
 	<<him>>【이가】 가방을 집어 들고 시야에서 사라지는 것이 보인다.
 	<br><br>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	<<He>>【은는】 당신을 더 세게 움켜쥔다. "뭐 하는 짓이야, 걸레야?" <<His>> 손아귀 힘이 더욱 세진다. "네가 갈 수 있을 것 같아, 응?"
 	<br><br>
@@ -10809,5 +10809,5 @@
 	당신은 눈을 감고 목에 묵직한 가죽 목걸이가 살갗에 바싹 당겨지는 것을 느낀다. 자물쇠가 찰칵 걸리고, 휘트니가 그것을 홱 잡아당겨 당신을 억지로 다시 일으켜 세운다. "이제 착하게 굴어." <<He>>【은는】 당신의 엉덩이를 찰싹 때린다.
 	<br><br>
 	<<neckwear "Whitney's collar">>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <</if>>

@@ -80,7 +80,7 @@
 			<<elseif _fishingLocation is "fishingForestLake">>
 				<<set _fishingWeatherText to "나뭇가지 위로 얇은 구름이 지나간다.">>
 			<<elseif _fishingLocation is "fishingMoor">>
-				<<set _fishingWeatherText to "황무지 위로 얇은 구름이 지나간다.">>
+				<<set _fishingWeatherText to "황야 위로 얇은 구름이 지나간다.">>
 			<</if>>
 		<<case "heavyClouds">>
 			<<if ["fishingPier", "fishingBeach", "fishingCoastPath"].includes(_fishingLocation)>>
@@ -123,7 +123,7 @@
 				<<elseif _fishingLocation is "fishingForestLake">>
 					<<set _fishingWeatherText to "나무줄기와 갈대 사이로 거센 눈이 내린다.">>
 				<<elseif _fishingLocation is "fishingMoor">>
-					<<set _fishingWeatherText to "황무지와 진흙 위로 눈이 거세게 쏟아진다.">>
+					<<set _fishingWeatherText to "히스와 진흙 위로 눈이 거세게 쏟아진다.">>
 				<</if>>
 			<</if>>
 		<<case "storm">>
@@ -1387,7 +1387,7 @@
 	/* Ear Slime */
 	<<if numberOfEarSlime()>>
 		<<addinlineevent 1>>
-			귀 속 슬라임<<if numberOfEarSlime() gt 1>>들<</if>>【이가】 당신에게 미치는 영향에 대해 곱씹지 않으려 애쓴다.
+			귀 슬라임<<if numberOfEarSlime() gt 1>>들<</if>>【이가】 당신에게 미치는 영향에 대해 곱씹지 않으려 애쓴다.
 		<</addinlineevent>>
 	<</if>>
 	<<if numberOfEarSlime()>>
@@ -1397,7 +1397,7 @@
 	<</if>>
 	<<if numberOfEarSlime()>>
 		<<addinlineevent 1>>
-			귀 속 슬라임<<if numberOfEarSlime() gt 1>>들<</if>>【이가】 당신에게서 무엇을 원할지, 다음엔 무엇을 요구할지 궁금해진다.
+			귀 슬라임<<if numberOfEarSlime() gt 1>>들<</if>>【이가】 당신에게서 무엇을 원할지, 다음엔 무엇을 요구할지 궁금해진다.
 		<</addinlineevent>>
 	<</if>>
 
@@ -1529,7 +1529,7 @@
 	<</if>>
 	<<if $loveInterest.secondary isnot "None" and ($loveInterest.secondary isnot "Whitney" or _whitneyAbsent)>>
 		<<addinlineevent 1>>
-			생각이 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>【에게】로 흘러간다.
+			생각이 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>에게로 흘러간다.
 		<</addinlineevent>>
 		<<addinlineevent 1>>
 			어느새 <<= (["Black Wolf", "Great Hawk"].includes($loveInterest.secondary) ? "그 " : "") + window.KR.gatPersonNameDictKR($loveInterest.secondary)>>【을를】 생각하고 있는 자신을 발견한다.

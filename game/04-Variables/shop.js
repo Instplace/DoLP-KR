@@ -87,7 +87,7 @@ setup.shopDetails = {
 	sticky_fingers: {
 		name: "손버릇",
 		desc: "남의 물건을 내 것으로 만들 때 아주 유용합니다.",
-		details: "속임수를 더 쉽게 성공 할 수 있습니다.",
+		details: "속임수를 더 쉽게 성공할 수 있습니다.",
 	},
 	rainproof: {
 		name: "방수",
@@ -144,7 +144,7 @@ setup.shopDetails = {
 	},
 	prison: {
 		name: "죄수복",
-		desc: "교도소에서 입던 옷입니다.",
+		desc: "감옥에서 입던 옷입니다.",
 		details: "없음",
 	},
 	sticky: {
@@ -302,7 +302,7 @@ setup.shopDetails = {
 	},
 	fishing_rod: {
 		name: "낚싯대",
-		desc: "낚시를 하려면 필요하다.",
+		desc: "낚시를 하려면 필요합니다.",
 		details: "없음",
 	},
 	jewelled: {

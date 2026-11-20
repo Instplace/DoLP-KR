@@ -191,7 +191,7 @@
 					<<if $_number isnot "an unknown number of" and $_number isnot "more than one" and $_number gt 1>>
 						<<set _childType to "">>
 						<<if _litter[0].identical isnot null and playerKnowsLitterDetails(_preg)>>
-							<<set _childType += "identical ">>
+							<<set _childType += "일란성 ">>
 						<</if>>
 						<<set _childType += ($_number is 3 ? "세쌍둥이" : "쌍둥이")>>
 					<<else>>
@@ -203,14 +203,14 @@
 					<<set _childType to ($_number is 1 || $_number is "more than one" ? "매 알" : "매 알들")>>
 			<</switch>>
 			<<if _species is "hawk">>
-				당신은 <<number $_number>>마리의 _childType【을를】 품고 있으며,
+				당신은 <<if $_number is "more than one">>둘 이상의 <<elseif $_number is "an unknown number of">>몇 개인지 알 수 없는 <<else>><<number $_number>>개의 <</if>>_childType【을를】 품고 있으며,
 				<<switch _trimester>>
-					<<case "first">><<if $_number is 1>>알을<<else>>알들을<</if>> 낳으려면 아직 멀었습니다.
-					<<case "second">>하지만 <<if $_number is 1>>알을<<else>>알들을<</if>> 낳기까지는 아직 시간이 좀 더 걸립니다.
-					<<case "third">>곧 <<if $_number is 1>>알을<<else>>알들을<</if>> 낳을 준비가 될 것입니다.
+					<<case "초">><<if $_number is 1>>알을<<else>>알들을<</if>> 낳으려면 아직 멀었습니다.
+					<<case "중">>하지만 <<if $_number is 1>>알을<<else>>알들을<</if>> 낳기까지는 아직 시간이 좀 더 걸립니다.
+					<<case "후">>곧 <<if $_number is 1>>알을<<else>>알들을<</if>> 낳을 준비가 될 것입니다.
 				<</switch>>
 			<<else>>
-				당신은 임신 _trimester기이며, <<if !["twins", "identical twins", "triplets"].includes(_childType)>>$_number명의 <</if>>_childType【을를】 임신 중입니다.
+				당신은 임신 _trimester기이며, <<if $_number is "more than one">>둘 이상의 <<elseif $_number is "an unknown number of">>몇 명인지 알 수 없는 <<elseif !["쌍둥이", "일란성 쌍둥이", "세쌍둥이", "일란성 세쌍둥이"].includes(_childType)>>$_number명의 <</if>>_childType【을를】 임신 중입니다.
 			<</if>>
 		<<else>>
 			당신은 자신이 임신 _trimester기라는 것을 알고 있습니다.
@@ -259,7 +259,7 @@
 	<!--Semen Details-->
 	<<if $player.penisExist and $player.penissize gte 0>>
 		<<set _semenCapacityTextConfig = { currentValue : $semen_volume, preText: '당신은 ', states : [
-				{ requiredValue: 0,		color: '',			description: '',				postText: '정액을 생산하지 않는다.' },
+				{ requiredValue: 0,		color: '',			description: '',				postText: '정액을 생산하지 않습니다.' },
 				{ requiredValue: 1,		color: 'red',		description: '아주 적은',			postText: ' 양의 정액을 생산하며, ' },
 				{ requiredValue: 100,	color: 'pink',		description: '적은',			postText: ' 양의 정액을 생산하며, ' },
 				{ requiredValue: 300,	color: 'purple',	description: '적당한',		postText: ' 양의 정액을 생산하며, ' },
@@ -538,7 +538,7 @@
 				<<if $AMCTraits.beauty is 2>>
 					<<set _beautyConfig = { name : "미모", icon : "ui/sym-beauty", displayType : "level", currentValue : $beauty, maxValue: $beautymax * $AMCTraits.beauty, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},{ requiredValue: $beautymax / 7, level: 1, color: 'pink', description: '당신은 귀엽다.'},{ requiredValue: ($beautymax / 7) * 2, level: 2, color: 'purple', description: '당신은 예쁘다.'},{ requiredValue: ($beautymax / 7) * 3, level: 3, color: 'blue', description: '당신은 매력적이다.'},{ requiredValue: ($beautymax / 7) * 4, level: 4, color: 'lblue', description: '당신은 아름답다.'},{ requiredValue: ($beautymax / 7) * 5, level: 5, color: 'teal', description: '당신은 눈부시게 매혹적이다.'},{ requiredValue: ($beautymax / 7) * 6, level: 6, color: 'green', description: '당신의 아름다움은 경이롭다.'}					]
+							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},
 							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: '당신은 귀엽다.'},
 							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 예쁘다.'},
 							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 매력적이다.'},
@@ -557,7 +557,7 @@
 				<<else>>
 					<<set _beautyConfig = { name : "미모", icon : "ui/sym-beauty", displayType : "level", currentValue : $beauty, maxValue: $beautymax, modifier: 100, modTypes: { good: [], bad: [] },
 						states : [
-							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},{ requiredValue: $beautymax / 7, level: 1, color: 'pink', description: '당신은 귀엽다.'},{ requiredValue: ($beautymax / 7) * 2, level: 2, color: 'purple', description: '당신은 예쁘다.'},{ requiredValue: ($beautymax / 7) * 3, level: 3, color: 'blue', description: '당신은 매력적이다.'},{ requiredValue: ($beautymax / 7) * 4, level: 4, color: 'lblue', description: '당신은 아름답다.'},{ requiredValue: ($beautymax / 7) * 5, level: 5, color: 'teal', description: '당신은 눈부시게 매혹적이다.'},{ requiredValue: ($beautymax / 7) * 6, level: 6, color: 'green', description: '당신의 아름다움은 경이롭다.'}					]
+							{ requiredValue: 0, level: 0, color: 'red', description: '당신은 평범하다.'},
 							{ requiredValue:	$beautymax / 7,			level: 1, color: 'pink',	description: '당신은 귀엽다.'},
 							{ requiredValue:	($beautymax / 7) * 2,	level: 2, color: 'purple',	description: '당신은 예쁘다.'},
 							{ requiredValue:	($beautymax / 7) * 3,	level: 3, color: 'blue',	description: '당신은 매력적이다.'},
@@ -1312,7 +1312,7 @@
 		</div>
 		<div class="characteristic-box-extras">
 			<<set _schoolPerformanceConfig = { currentValue : $school, preText: '당신의 전반적인 학교 성적은 ', modifier: 100, modTypes: { good: [], bad: [] }, states : [
-					{ requiredValue: 0, color: 'red', description: '끔찍하다.'},{ requiredValue: 1, color: 'pink', description: '매우 나쁘다.'},{ requiredValue: 400, color: 'purple', description: '나쁘다.'},{ requiredValue: 800, color: 'blue', description: '나쁘지 않다.'},{ requiredValue: 1600, color: 'lblue', description: '좋다.'},{ requiredValue: 2800, color: 'teal', description: '훌륭하다.'},{ requiredValue: 4000, color: 'green', description: '모범적이다.'}				]
+					{ requiredValue: 0, color: 'red', description: '끔찍하다.'},
 					{ requiredValue: 1,		color: 'pink',		description: '매우 나쁘다.'},
 					{ requiredValue: 400,	color: 'purple',	description: '나쁘다.'},
 					{ requiredValue: 800,	color: 'blue',		description: '나쁘지 않다.'},
@@ -1452,7 +1452,7 @@
 		<<set $_source to []>>
 		<<set $_sourceText to "무언가">>
 		<<set $_arousal to []>>
-		<<set $_arousedText to "당신을 계속 달아오르게 하고 있다">>
+		<<set $_arousedText to "당신을 계속 달아오르게 하고 있습니다">>
 
 		/* SourceText */
 		<<if $wolfgirl gte 2 or $cat gte 2 or ($cow gte 2 or $transformationParts.cow.horns is "default") or $fox gte 2 or $bear gte 2 or $bunny gte 2>>
@@ -1473,7 +1473,7 @@
 			<<run $_arousal.push("러트")>>
 		<</if>>
 		<<if $_arousal.length>>
-			<<set $_arousedText to "당신을 " + formatList($_arousal, "그리고") + " 상태로 몰아넣고 있다">>
+			<<set $_arousedText to "당신을 " + formatList($_arousal, "그리고") + " 상태로 몰아넣고 있습니다">>
 		<</if>>
 	<</if>>
 	<</silently>><<if $_sourceText>><<print $_sourceText>><<print $_source.length and $_source.length gte 2 ? "들이 " : "【이가】 ">> <<print $_arousedText>>.<<if _args[0]>><br><br><</if>><</if>>

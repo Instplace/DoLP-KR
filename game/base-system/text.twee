@@ -5373,23 +5373,16 @@
 		<<case "plead">>
 			<<if $pain lte 60>>
 				<<if $rng lte 33>><<set _text_output to "애원한다">>
-					<<set _text_output to "plead">>
 				<<elseif $rng lte 66>><<set _text_output to "간청한다">>
-					<<set _text_output to "beg">>
 				<<elseif $wolfgirl gte 4>><<set _text_output to "훌쩍인다">>
-					<<set _text_output to "whimper">>
 				<<elseif $cat gte 4>><<set _text_output to "낑낑댄다">>
-					<<set _text_output to "mewl">>
 				<<elseif $cow gte 4>><<set _text_output to "음매거린다">>
-					<<set _text_output to "moo">>
 				<<elseif $bear gte 4>>
-					<<set _text_output to "yelp">>
+					<<set _text_output to "끙끙댄다">>
 				<<elseif $harpy gte 4>><<set _text_output to "짹짹거린다">>
-					<<set _text_output to "chirp">>
 				<<elseif $fox gte 4>><<set _text_output to "훌쩍인다">>
-					<<set _text_output to "whimper">>
 				<<else>>
-					<<set _text_output to "plead">>
+					<<set _text_output to "애원한다">>
 				<</if>>
 			<<else>>
 				<<if $rng lte 50>><<set _text_output to "울며 애원한다">>
@@ -5402,53 +5395,39 @@
 			<<elseif $rng lte 50>><<set _text_output to "중얼거린다">>
 			<<elseif $rng lte 75>>
 				<<if $arousal lt ($arousalmax / 5) * 3>><<set _text_output to "킥킥댄다">>
-					<<set _text_output to "giggle">>
 				<<else>>
-					<<set _text_output to "gasp and giggle">>
+					<<set _text_output to "숨을 헐떡이며 킥킥댄다">>
 				<</if>>
 			<<elseif $wolfgirl gte 4>><<set _text_output to "숨을 헐떡인다">>
-				<<set _text_output to "pant">>
 			<<elseif $cat gte 4>><<set _text_output to "가르랑거린다">>
-				<<set _text_output to "purr">>
 			<<elseif $cow gte 4>><<set _text_output to "음매거린다">>
-				<<set _text_output to "moo">>
 			<<elseif $bear gte 4>>
-				<<set _text_output to "purr">>
+				<<set _text_output to "그르렁거린다">>
 			<<elseif $harpy gte 4>><<set _text_output to "짹짹거린다">>
-				<<set _text_output to "chirp">>
 			<<elseif $fox gte 4>><<set _text_output to "깨갱거린다">>
-				<<set _text_output to "yip">>
 			<<else>>
-				<<set _text_output to "moan">>
+				<<set _text_output to "신음한다">>
 			<</if>>
 		<<case "demand">>
 			<<if $arousal lt ($arousalmax / 5) * 3>>
 				<<if $rng lte 33>><<set _text_output to "말한다">>
-					<<set _text_output to "speak">>
 				<<elseif $rng lte 66>><<set _text_output to "소리친다">>
-					<<set _text_output to "yell">>
 				<<elseif $wolfgirl gte 4>><<set _text_output to "짖는다">>
-					<<set _text_output to "bark">>
 				<<elseif $cat gte 4>><<set _text_output to "하악질한다">>
-					<<set _text_output to "hiss">>
 				<<elseif $cow gte 4>><<set _text_output to "콧김을 뿜는다">>
-					<<set _text_output to "exhale through your nostrils threateningly">>
+					<<set _text_output to "콧김을 뿜는다">>
 				<<elseif $bear gte 4>>
-					<<set _text_output to "growl">>
+					<<set _text_output to "으르렁거린다">>
 				<<elseif $harpy gte 4>><<set _text_output to "새액거린다">>
-					<<set _text_output to "screech">>
 				<<elseif $fox gte 4>><<set _text_output to "비명을 지른다">>
-					<<set _text_output to "scream">>
 				<<else>>
-					<<set _text_output to "spit">>
+					<<set _text_output to "내뱉는다">>
 				<</if>>
 			<<elseif $rng lte 50>><<set _text_output to "헐떡인다">>
-				<<set _text_output to "gasp">>
 			<<else>>
-				<<set _text_output to "growl">>
+				<<set _text_output to "으르렁거린다">>
 			<</if>>
 		<<default>><<set _text_output to "딸꾹질을 한다">>
-			<<set _text_output to "try to speak, but hiccup instead. This is a bug, please report to Vrelnir" + (_args[0] isnot undefined ? _args[0] : "undefined")>>
 	<</switch>>
 	<<print _text_output>>
 <</widget>>
@@ -6251,7 +6230,7 @@
 			<<set _text_output to C.npc[_args[0]].hairColour>>
 		<</if>>
 	<<else>>
-		<<set _text_output to "유령 같은 색입니다. 누군가 npcHairColour 위젯에 NPC를 정의하는 것을 깜빡했으니 Vrelnir에게 알려주세요">>
+		<<set _text_output to "유령 같은 색입니다. 누군가 npcHairColour 위젯에 NPC를 정의하는 것을 깜빡했으니 Vrelnir에게 알려 주십시오">>
 	<</if>>
 <</silently>><<print _text_output>><</widget>>
 
@@ -6270,7 +6249,7 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 			<<case "lower">>
 				<<set _text_output to $_npc.clothes.lower.name>>
 			<<default>>
-				<<set _text_output to '<span class="red">오류: 잘못된 NPC 의류 상황입니다. (NPC: $_npc.fullDescription, 호출된 부위: $_part) PurityGuy에게 알려주세요</span>'>>
+				<<set _text_output to '<span class="red">오류: 잘못된 NPC 의류 상황입니다. (NPC: $_npc.fullDescription, 호출된 부위: $_part) PurityGuy에게 알려 주십시오</span>'>>
 		<</switch>>
 	<</if>>
 <</silently>><<print _text_output>><</widget>>
@@ -6283,7 +6262,7 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 		<<set $_his to ($combat is 1 ? "<<hisselect $index>>" : "<<his>>")>>
 		<<set _text_output to "">>
 		<<if !$_npc.clothes>>
-			<<set _text_output += '<span class="red">오류: NPC ($_npc.fullDescription)의 옷 정보가 정의되지 않았습니다. PurityGuy에게 알려주세요</span>'>>
+			<<set _text_output += '<span class="red">오류: NPC ($_npc.fullDescription)의 옷 정보가 정의되지 않았습니다. PurityGuy에게 알려 주십시오</span>'>>
 		<<elseif $_part is "both">>
 			<<set $_clothesDesc to setup.npcClothesSets.find(item => item.name === $_npc.clothes.set).desc>>
 			<<set _text_output += $_his + " " + $_clothesDesc + ($_self ? "【을를】 벗는다" : "【을를】 벗긴다")>>
@@ -6298,7 +6277,7 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 				<<case "open">><<set _actionText to "【을를】 벌린다">>
 				<<case "undo">><<set _actionText to "【을를】 푼다">>
 				<<case "unwrap">><<set _actionText to "【을를】 벗겨낸다">>
-				<<default>><<set _actionText to '<span class="red">오류: 잘못된 NPC 의류 동작입니다. (NPC: $_npc.fullDescription, 호출된 부위: $_part, 동작: $_clothesAction) PurityGuy에게 알려주세요</span>'>>
+				<<default>><<set _actionText to '<span class="red">오류: 잘못된 NPC 의류 동작입니다. (NPC: $_npc.fullDescription, 호출된 부위: $_part, 동작: $_clothesAction) PurityGuy에게 알려 주십시오</span>'>>
 			<</switch>>
 			<<set _text_output += $_his + " " + $_npc.clothes[$_part].name + _actionText>>
 		<</if>>
@@ -6654,6 +6633,15 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 	<</if>>
 <</silently>>_text_output<</widget>>
 
+/* 한국어판 전용: <<cute>>의 관형형(귀여운/예쁜/잘생긴). 명사 앞에서 쓴다. */
+<<widget "cuteKr">><<silently>>
+	<<if $player.gender_appearance is "f">>
+		<<set _text_output to (random(1) is 0 ? "귀여운" : "예쁜")>>
+	<<else>>
+		<<set _text_output to (random(1) is 0 ? "귀여운" : "잘생긴")>>
+	<</if>>
+<</silently>>_text_output<</widget>>
+
 <<widget "a_role">><<silently>>
 	<<if $role and $role isnot "normal">>
 		<<set _text_output to window.KR.getNpcRoleKr($role)>>
@@ -6672,10 +6660,10 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 		<<if random(1, 10000) is 10000>>
 			<<set _text_output to "빵(bread)">>
 		<<else>>
-			<<set _text_output to "교배당한">>
+			<<set _text_output to "교배">>
 		<</if>>
 	<<else>>
-		<<set _text_output to "따먹힌">>
+		<<set _text_output to "유린">>
 	<</if>>
 	<<print _text_output>>
 <</widget>>
@@ -6856,7 +6844,7 @@ Argument 2, where appropriate, determines whether it's the player undressing the
 		<<case "Underground Dungeon">><<set _text_output to "지하 창관">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
 		<<case "Mines">><<set _text_output to "아파트 아래의 동굴">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
 		<<case "Asylum">><<set _text_output to "숲속 정신병원">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
-		<<case "Prison">><<set _text_output to "교도소">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
+		<<case "Prison">><<set _text_output to "감옥">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
 		<<case "Pound">><<set _text_output to "유기견 보호소">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
 		<<case "Island">><<set _text_output to "근처 섬">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>
 		<<case "Pirate Ship">><<set _text_output to "해적선">><<if _args[1] is "at">><<set _text_output to _text_output + "에서">><</if>>

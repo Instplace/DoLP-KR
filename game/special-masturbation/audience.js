@@ -218,7 +218,7 @@ function masturbationAudienceLineText(npc, lineType = "") {
 		case "orgasm":
 			resultArray.push(`"쌀 때 네 얼굴 진짜 귀엽다."`, `"이제 와서 멈추지 않는 게 좋을걸. 너 한 번 더 하고 싶은 거 다 알아."`);
 			if (V.masturbationAudience > 1) {
-				resultArray.push(`"<<pshe>> 얼마나 떨고 있는지 봐. 꽤 격한 절정인가 본데."`);
+				resultArray.push(`"<<pshe>>【이가】 얼마나 떨고 있는지 봐. 꽤 격한 절정인가 본데."`);
 			}
 			if (V.masturbationAudience >= 3 && V.masturbationAudienceReactions >= 3) {
 				resultArray.push(`"우릴 위해 싸 봐, 변태야. 네가 얼마나 음란한지 모두에게 보여 줘."`, `"모두 앞에서 싸는 게 그렇게 좋아?"`);
@@ -300,7 +300,7 @@ function masturbationAudienceLineText(npc, lineType = "") {
 		case "vagina":
 			if (V.masturbationAudience >= 4) {
 				resultArray.push(
-					`"<<pshe>> 얼마나 젖었는지 봐."`,
+					`"<<pshe>>【이가】 얼마나 젖었는지 봐."`,
 					`"그렇게까지 관객이 필요했어?"`,
 					`"<<pHer>> 클리가 잔뜩 섰네."`,
 					`"그래, <<girl>>. 네가 보지로 어떻게 노는지 모두에게 보여 줘."`
@@ -316,7 +316,7 @@ function masturbationAudienceLineText(npc, lineType = "") {
 			if (V.fingersInVagina <= 0) resultArray.push(`"자, 그냥 손가락 좀 쑤셔 넣어."`);
 			if (between(V.fingersInVagina, 1, 3))
 				resultArray.push(
-					`"${V.masturbationAudience > 1 ? "<<pshe>>" : "네가"} 넣을 수 있는 게 그게 전부야${
+					`"${V.masturbationAudience > 1 ? "<<pshe>>【이가】" : "네가"} 넣을 수 있는 게 그게 전부야${
 						V.masturbationAudience > 1 ? " <<phim>>? 처녀인가 보네." : "?"
 					}"`,
 					`"어서 손가락 하나 더 넣어. 거기에 그보다 더 들어갈 거 다 알아."`,
@@ -344,7 +344,7 @@ function masturbationAudienceLineText(npc, lineType = "") {
 			return [
 				`"그게 다야? 더 들어갈 수 있잖아."`,
 				`"엉덩이 가지고 노는 게 그렇게 좋아? 완전 걸레네."`,
-				`"${V.masturbationAudience > 1 ? "<<pShe>>" : "너"} 그 엉덩이로 경험이 꽤 많은가 보네."`,
+				`"${V.masturbationAudience > 1 ? "<<pShe>>【은는】" : "너"} 그 엉덩이로 경험이 꽤 많은가 보네."`,
 				`"손가락보다 더한 게 필요하면 내가 도와줄게."`,
 				`"맙소사, ${V.masturbationAudience > 1 ? "<<pshe>>【이가】 <<pher>>" : "네가 네"} 주먹을 넣고 있잖아. 그 엉덩이는 대체 얼마나 굴렀던 거야?"`,
 			].random();
@@ -436,8 +436,8 @@ function masturbationAudienceLineText(npc, lineType = "") {
 					return [
 						`"네 납작한 가슴 맛있어 보인다."`,
 						`"${V.masturbationAudience > 1 ? "<<pHer>>" : "네"} 가슴은 너무 납작해서, ${
-							V.masturbationAudience > 1 ? "<<pshe>>" : "you"
-						} could pass as a boy."`,
+							V.masturbationAudience > 1 ? "<<pshe>>【은는】" : "너는"
+						} 남자애로 통하겠어."`,
 						`"<<pher>> 귀여운 가슴 사진을 찍어 둘까? 나중에 쓸모가 있겠지."`,
 					]
 						.random()

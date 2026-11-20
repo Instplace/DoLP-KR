@@ -907,7 +907,7 @@
 		<br><br>
 		<<person2>> 그 <<person>>【이가】 높은 목소리로 말한다. "누가 착한 <<beasttype>>【이】지! 바로 너야! 우리가 너에게 <<bitch>>【을를】 데려왔어, 네가 정말 착한 <<beasttype>>【이】니까!"
 		<<if $monster is 1>>
-			그 <<beasttype>>【은는】 얼굴이 붉어지며 거친 숨을 내쉰다. <<bHis>> 의도는 명확하다. <<bHes>>【은는】 짝을 갈망하고 있다.
+			그 <<beasttype>>【은는】 얼굴이 붉어지며 거친 숨을 내쉰다. <<bHis>> 의도는 명확하다. <<bHes>> 짝을 갈망하고 있다.
 		<</if>>
 		<br><br>
 		<<link [[도망치려 한다|Beach Abduction Dog]]>><<set $molestationstart to 1>><<set $phase to 0>><</link>>
@@ -1002,7 +1002,7 @@
 	<br><br>
 <</if>>
 
-<<person2>><<person>>【와과】 <<person3>><<person>>【이가】 박수를 친다. "<<silently>><<bred>><</silently>>네년이 <<bitch>>인 것처럼 <<capitalise>>." <<person>>【이가】 당신의 결박을 풀어주며 외친다. <<person2>><<person>>【이가】 약속했던 옷가지를 던져준다. "목줄은 가져도 돼. 너한테 잘 어울리니까." 그들은 웃으며 모래 위에 굴욕적으로 쓰러져 있는 당신을 내버려 두고 떠난다. <<tearful>> 당신은 힘겹게 일어선다.
+<<person2>><<person>>【와과】 <<person3>><<person>>【이가】 박수를 친다. "네년이 <<bitch>>인 것처럼 <<silently>><<bred>><</silently>><<capitalise>>당했네." <<person>>【이가】 당신의 결박을 풀어주며 외친다. <<person2>><<person>>【이가】 약속했던 옷가지를 던져준다. "목줄은 가져도 돼. 너한테 잘 어울리니까." 그들은 웃으며 모래 위에 굴욕적으로 쓰러져 있는 당신을 내버려 두고 떠난다. <<tearful>> 당신은 힘겹게 일어선다.
 <br><br>
 
 <<unbind>>

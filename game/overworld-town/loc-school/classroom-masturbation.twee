@@ -165,7 +165,7 @@
 <</if>>
 
 <<if $corruptionMasturbation>>
-	<span class="red">귀 안의 슬라임이 멈추는 것을 허락하지 않는다.</span>
+	<span class="red">귀 슬라임이 멈추는 것을 허락하지 않는다.</span>
 <</if>>
 <div id="masturbationButtons">
 	<<if _interruption>>
@@ -196,7 +196,7 @@
 <br><br>
 
 <<if _masturbation_semen gt 0 or _masturbation_milk gt 0>>
-	당신은 교실을 돌아보며 당신의 작업 결과를 살펴봅니다.
+	당신은 교실을 돌아보며 당신의 작업 결과를 살펴본다.
 	<<emptyClassroomMasturbationDescription>>
 	<br><br>
 

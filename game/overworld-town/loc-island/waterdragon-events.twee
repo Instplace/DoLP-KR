@@ -375,7 +375,7 @@
 		"한마디라도 지껄이면 뒈질 줄 알아, 걸레야."
 		<br><br>
 	<</if>>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <<elseif C.npc.Whitney.dom gte 20 and C.npc.Whitney.love lte 10>>
 	/* Tier 1: low love / high dom, no reward (not farmable) */
 	휘트니가 세게 움찔하더니 <<his>> 얼굴이 대번에 찌푸려진다.
@@ -392,7 +392,7 @@
 	<</if>>
 	<<he>>【이가】 협박을 실행에 옮기기 전에 당신은 물러선다.
 	<br><br>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	/* Tier 2: ordinary / high-ish love */
 	<<if !$daily.whitney.waterDragon>>
@@ -409,7 +409,7 @@
 		"넌 완전 괴짜야, 걸레야. 그냥... 다음엔 그 이상한 소음 좀 줄여."
 		<<npcincr Whitney love 1>><<glove>>
 		<br><br>
-		<<whitneyoptions>>
+		<<whitneyOptions>>
 	<<else>>
 		휘트니는 오늘 이미 한 번 들었고, <<his>> 인내심은 바닥났다. <<He>>【은는】 입술을 말아 올리고 쉭 소리를 내며 당신에게 돌아선다.
 		<br><br>
@@ -424,7 +424,7 @@
 				<br><br>
 				"재미없네." <<He>>【은는】 나무 아래 자기 자리로 성큼성큼 돌아간다.
 				<br><br>
-				<<whitneyoptions>>
+				<<whitneyOptions>>
 			<<else>>
 				당신은 <span class="red">발이 걸려 넘어지고, <<he>>【이가】 당신을 가장자리 너머로 밀어 버린다.</span>
 				당신은 그대로 빠져<<if Time.season is "winter">>, 얇은 얼음을 깨고 들어가<</if>> 흠뻑 젖은 채 떠오른다.
@@ -433,13 +433,13 @@
 				"있잖아? 이제 속이 훨씬 시원하네. 고맙다, <<bitch>>【아야】."
 				<<He>>【은는】 분수에서 허우적대는 당신을 내버려 두고, 웃으며 공원 밖으로 걸어 나간다.
 				<br><br>
-				<<whitneyexit>>
+				<<whitneyExit>>
 			<</if>>
 		<<else>>
 			"그만해, 걸레야, 머리 아프잖아." <<He>>【은는】 손가락으로 당신의 가슴을 쿡 찌른다.
 			"한 번만 더 삑 소리 내 봐, 진짜 꽥꽥거릴 일을 만들어 줄 테니까."
 			<br><br>
-			<<whitneyoptions>>
+			<<whitneyOptions>>
 		<</if>>
 	<</if>>
 <</if>>
@@ -458,7 +458,7 @@
 <<stress -10>><<lllstress>>
 <<npcincr Whitney love 3>><<glove>>
 <br><br>
-<<whitneyexit>>
+<<whitneyExit>>
 
 /*
 	=====================================================================
@@ -675,7 +675,7 @@
 <br><br>
 묵직한 나무 문 앞에서 <<he>>【이가】 멈춘다. <<He>>【이가】 문에 손바닥을 대자, 문이 저절로 안쪽으로 열린다.
 <br><br>
-<<link [[Enter|Islander Elder Meeting]]>><</link>>
+<<link [[들어간다|Islander Elder Meeting]]>><</link>>
 
 :: Islander Elder Meeting
 <<effects>>

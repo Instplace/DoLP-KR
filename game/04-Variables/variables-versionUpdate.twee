@@ -2772,9 +2772,9 @@
 		<<set $objectVersion.animations to 1>>
 		<<if $combatAnimations is false and $sidebarAnimations is false>>
 			<div id="animWarning" @class="'no-numberify '">
-				<span class='teal'>Animations are currently disabled. This may have been caused by a one-time bug. You can re-enable animations immediately, or in the "general" tab of the settings menu.</span> |
-				<<link "Enable all animations">><<addclass #animWarning "hidden">><<set $combatAnimations to true>><<set $sidebarAnimations to true>><</link>> |
-				<<link "Disable this message">><<addclass #animWarning "hidden">><</link>>
+				<span class='teal'>애니메이션이 현재 꺼져 있습니다. 일회성 오류로 인해 발생했을 수 있습니다. 지금 바로 애니메이션을 다시 켜거나, 설정 메뉴의 "일반" 탭에서 켤 수 있습니다.</span> |
+				<<link "모든 애니메이션을 켠다">><<addclass #animWarning "hidden">><<set $combatAnimations to true>><<set $sidebarAnimations to true>><</link>> |
+				<<link "이 메시지를 끈다">><<addclass #animWarning "hidden">><</link>>
 			</div>
 		<</if>>
 		<<if $combatAnimations is undefined>>

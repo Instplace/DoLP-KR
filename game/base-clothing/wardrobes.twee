@@ -922,25 +922,25 @@
 	<<switch _args[0]>>
 		<<case "upper">>
 			<<switch $worn.upper.variable>>
-				<<case "schoolcardigan">><<set _altLink to ["가디건을 허리에 묶기", "가디건을 정상적으로 입기"]>>
-				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["재킷 지퍼 올리기", "재킷 지퍼 내리기"]>>
-				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["넣어 입기", "빼서 입기"]>>
-				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["셔츠 단추 풀기", "셔츠 단추 채우기"]>>
-				<<case "catsuit">><<set _altLink to ["지퍼 내리기", "지퍼 올리기"]>>
-				<<case "kimono" "kimonomini">><<set _altLink to ["느슨하게 풀기", "단단히 조이기"]>>
-				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["소매 내리기", "소매 올리기"]>>
+				<<case "schoolcardigan">><<set _altLink to ["가디건을 허리에 묶는다", "가디건을 정상적으로 입는다"]>>
+				<<case "brownleather" "blackleather" "leathercropjacket" "winterjacket">><<set _altLink to ["재킷 지퍼를 올린다", "재킷 지퍼를 내린다"]>>
+				<<case "waistcoat" "waistcoatlapel" "blazershirt">><<set _altLink to ["넣어 입는다", "빼서 입는다"]>>
+				<<case "dress" "buttondown" "oversizedbuttondown" "shortsleevebuttonup" "flannel shirt">><<set _altLink to ["셔츠 단추를 푼다", "셔츠 단추를 채운다"]>>
+				<<case "catsuit">><<set _altLink to ["지퍼를 내린다", "지퍼를 올린다"]>>
+				<<case "kimono" "kimonomini">><<set _altLink to ["느슨하게 푼다", "단단히 조인다"]>>
+				<<case "flowy sleeve top" "milkmaid dress">><<set _altLink to ["소매를 내린다", "소매를 올린다"]>>
 				<<case "striped sweater">><<set _altLink to ["소매를 걷어올린다", "소매를 내린다"]>>
-				<<case "boilersuit">><<set _altLink to ["지퍼 내리기", "지퍼 올리기"]>>
+				<<case "boilersuit">><<set _altLink to ["지퍼를 내린다", "지퍼를 올린다"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<case "under_upper">>
 			<<switch $worn.under_upper.variable>>
-				<<case "ruffled swimsuit">><<set _altLink to ["가디건 벗기", "가디건 입기"]>>
+				<<case "ruffled swimsuit">><<set _altLink to ["가디건을 벗는다", "가디건을 입는다"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<case "head">>
 			<<switch $worn.head.variable>>
-				<<case "bandana hat">><<set _altLink to ["뒤로 묶기", "앞으로 묶기"]>>
+				<<case "bandana hat">><<set _altLink to ["뒤로 묶는다", "앞으로 묶는다"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<case "neck">>
@@ -972,7 +972,7 @@
 			<</switch>>
 		<<case "legs">>
 			<<switch $worn.legs.variable>>
-				<<case "kneeplaster">><<set _altLink to ["왼쪽 무릎 가리기", "오른쪽 무릎 가리기"]>>
+				<<case "kneeplaster">><<set _altLink to ["왼쪽 무릎을 가린다", "오른쪽 무릎을 가린다"]>>
 				<<default>><<exit>>
 			<</switch>>
 		<<default>><<exit>>
@@ -1806,7 +1806,7 @@
 		<<case "Sydney Beach Changing Room Leave">>
 			<<set _earSlimeEnableSwimwear to true>>
 			<<if $earSlime.forcedCommando isnot undefined and !$worn.under_lower.type.includes("naked") and $hypnosis_traits?.silence isnot 1>>
-				<span class="red">귓속의 슬라임이 <<underwearTypeText>>【을를】 입은 채로 나가는 것을 허락하지 않는다.</span>
+				<span class="red">귀 슬라임이 <<underwearTypeText>>【을를】 입은 채로 나가는 것을 허락하지 않는다.</span>
 			<<elseif $exposed lte 1>>
 				<<getouticon>><<link [[떠난다|Sydney Beach Leave]]>><<cleanupOnWardrobeExit>><</link>>
 			<<else>>

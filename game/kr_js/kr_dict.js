@@ -170,7 +170,7 @@ window.KR.dict = {
   "chastity cage": "정조대 케이지",
   "chastity parasite": "기생형 정조대",
   "checkered lace skirt": "체크무늬 레이스 치마",
-  "checkered shirt": "체크 무늬 셔츠",
+  "checkered shirt": "체크무늬 셔츠",
   "checkered skirt": "체크무늬 치마",
   "cheerleader gloves": "치어리더 장갑",
   "cheerleading skirt": "치어리더 치마",
@@ -358,7 +358,7 @@ window.KR.dict = {
   "full body leotard bottom": "전신 레오타드 하의",
   "fur beret": "털 베레모",
   "fur beret with pompom": "방울 달린 털 베레모",
-  "fur boa": "깃털 보아",
+  "fur boa": "털 보아",
   "fur boots": "털부츠",
   "fur cap": "털모자",
   "futuristic bodysuit": "미래지향적 바디슈트",
@@ -548,10 +548,10 @@ window.KR.dict = {
   "light-up trainers": "발광 운동화",
   "loincloth": "샅바",
   "lolita bonnet": "롤리타 보닛",
-  "lolita dress": "로리타 드레스",
+  "lolita dress": "롤리타 드레스",
   "lolita headband": "롤리타 헤어밴드",
-  "lolita lace nightgown": "로리타 레이스 잠옷",
-  "lolita maid": "로리타 메이드",
+  "lolita lace nightgown": "롤리타 레이스 잠옷",
+  "lolita maid": "롤리타 메이드",
   "lolita maid headband": "롤리타 메이드 헤어밴드",
   "lolita night cap": "롤리타 수면 모자",
   "lolita nun's habit": "롤리타 수녀복",
@@ -977,7 +977,7 @@ window.KR.dict = {
   "towel top": "수건 상의",
   "tracksuit bottoms": "트레이닝 바지",
   "tracksuit jacket": "트레이닝 재킷",
-  "tracksuit top": "트레이닝 복 상의",
+  "tracksuit top": "트레이닝복 상의",
   "traditional maid band": "전통 메이드 머리띠",
   "traditional maid dress": "전통 메이드복",
   "traditional maid skirt": "전통 메이드복 치마",
@@ -1905,7 +1905,7 @@ window.KR.getPenisDescKr = function(desc) {
         "gigantic": "초거대한",
         "little": "작은",
         "pathetic": "초라한",
-        "micro": "실같은",
+        "micro": "실 같은",
         "mini": "아주 작은",
         "tiny": "조그만",
         "small": "작은",
@@ -1925,7 +1925,7 @@ window.KR.getPenisDescKr = function(desc) {
         "white": "흰색",
         "yellow": "노란색",
         "tan": "황갈색",
-        "brown": "갈색"
+        "brown": "갈색", "dark": "짙은", "light": "연한", "pale": "창백한", "bright": "선명한", "deep": "진한", "neon": "형광", "teal": "청록색", "lime-green": "연두색", "light-pink": "연분홍색", "grey": "회색", "gray": "회색"
     };
 
     if (dict[desc]) return dict[desc];
@@ -2044,7 +2044,7 @@ window.KR.wardrobeNameDict = {
     "Brothel": "창관",
     "Schools boy's locker": "학교 남자 라커",
     "Schools girl's locker": "학교 여자 라커",
-    "Prison locker": "교도소 라커",
+    "Prison locker": "감옥 라커",
     "Mansion Wardrobe": "저택 옷장",
     "Temple": "신전",
     "Pirate Ship": "해적선",
@@ -2195,7 +2195,7 @@ window.KR.getNpcTitleKr = function(title) {
         case "pirate": return "해적";
         case "horror": return "끔찍한 존재";
         case "curious": return "호기심 많은";
-        case "scarred": return "상처입은";
+        case "scarred": return "상처 입은";
         case "guard": return "경비원";
         case "manager": return "매니저";
         case "cultist": return "신도";

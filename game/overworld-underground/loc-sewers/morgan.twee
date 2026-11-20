@@ -140,7 +140,7 @@
 	<<set $enemyanger += 200>>
 	<<npcidlegenitals>>
 	<<set $timer to 10>>
-	"감히 날 거절하지 마." <<he>>【은는】 으르렁거립니다.
+	"감히 날 거절하지 마." <<he>>【은는】 으르렁거린다.
 	<br><br>
 	<<set $enemyhealthmax += 100>><<set $enemyhealth += 100>>
 <</if>>
@@ -586,7 +586,7 @@
 	모건이 조언을 하나 건넨다. "여기선 윗옷을 안 입고 수영하면 안 돼." <<he>>【이가】 말한다. "물속에 끔찍한 기생충들이 살고 있거든."
 	<br><br>
 
-	<<He>>【은는】 당신에게서 몸을 돌린다. "이 골동품들 찾는 것 좀 도와주렴." <<he>>【이가】 쓰레기 더미를 뒤지며 말한다. "나쁜 <<girl>>【이】 되지 말고 와서 거들렴."
+	<<He>>【은는】 당신에게서 몸을 돌린다. "이 골동품들 찾는 것 좀 도와주렴." <<he>>【이가】 쓰레기 더미를 뒤지며 말한다. "나쁜 <<girl>>【이가】 되지 말고 와서 거들렴."
 	<br><br>
 
 	<<link [[돕는다 (1:00)|Sewers Rummage]]>><<trauma 6>><<stress 6>><<npcincr Morgan love 1>><<pass 60>><</link>><<gtrauma>><<gstress>>
@@ -650,7 +650,7 @@
 	<<link [[말하기를 거부한다|Sewers Spank]]>><<set $molestationstart to 1>><<npcincr Morgan love -1>><</link>>
 
 <<else>>
-	"이 골동품들 찾는 것 좀 도와주렴." 모건이 쓰레기 더미를 뒤지며 말한다. "나쁜 <<girl>>【이】 되지 말고 와서 거들렴."
+	"이 골동품들 찾는 것 좀 도와주렴." 모건이 쓰레기 더미를 뒤지며 말한다. "나쁜 <<girl>>【이가】 되지 말고 와서 거들렴."
 	<br><br>
 
 	<<link [[돕는다 (1:00)|Sewers Rummage]]>><<trauma 6>><<stress 6>><<npcincr Morgan love 1>><<pass 60>><</link>><<gtrauma>><<gstress>>
@@ -1128,7 +1128,7 @@
 	모건이 <<his>> 잠결에 콧소리를 내자, 당신은 숨을 죽이고 재빨리 손을 뺀다. 몇 초 기다리자 모건의 코 고는 소리가 다시 들린다. <span class="green">들키지 않았다.</span>
 	<br><br>
 
-	지금이 탈출할 기회일지도 모릅니다.
+	지금이 탈출할 기회일지도 모른다.
 	<br><br>
 
 	<<link [[잔다|Sewers Sleep]]>><</link>>

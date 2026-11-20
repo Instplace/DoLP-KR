@@ -769,7 +769,7 @@
 				<<case "marker">>
 					유성 마커로 <<= _written>> 있다.
 				<<case "magic">>
-					세겨져 있다. (<span class="pink">봉인</span>)
+					새겨져 있다. (<span class="pink">봉인</span>)
 				<<case "pen">>
 					일반 펜으로 <<= _written>> 있다.
 				<<case "lipstick">>
@@ -2252,7 +2252,7 @@
 		<</button>>
 		<<button '<span class="fa-icon fa-save"></span> 저장'>>
 			<<if _hairStyleName is "">>
-				<<replace "#textbox-error">><br> <span class="red">이름을 입력하세요.</span><</replace>>
+				<<replace "#textbox-error">><br> <span class="red">이름을 입력하십시오.</span><</replace>>
 			<<else>>
 				<<replace "#textbox-error">><</replace>>
 				<<set _hairStyleName to _hairStyleName.replace(/[^a-zA-Z\u4e00-\u9fa5\u3131-\u318E\uAC00-\uD7A30-9_-]+/g,"").substring(0,30)>>
@@ -2265,7 +2265,7 @@
 	<div class="tab">
 		<<button '<span class="fa-icon fa-save"></span> 저장'>>
 			<<if _hairStyleName is "">>
-				<<replace "#textbox-error">><br> <span class="red">이름을 입력하세요.</span><</replace>>
+				<<replace "#textbox-error">><br> <span class="red">이름을 입력하십시오.</span><</replace>>
 			<<else>>
 				<<replace "#textbox-error">><</replace>>
 				<<set _hairStyleName to _hairStyleName.replace(/[^a-zA-Z\u4e00-\u9fa5\u3131-\u318E\uAC00-\uD7A30-9_-]+/g,"").substring(0,30)>>
@@ -3913,7 +3913,7 @@
 			<details class="expandMenu">
 				<summary class="expandMenu">사용자 지정 색상</summary>
 				<div class="menuWarning">
-					변신 부위를 선택하지 않았습니다! 색상을 변경하고 싶은 부위의 체크박스를 선택하세요.
+					변신 부위를 선택하지 않았습니다! 색상을 변경하고 싶은 부위의 체크박스를 선택하십시오.
 				</div>
 				<div class="menuContent hidden">
 					<<set _options to ['ffffff', 'ff0000', '00ff00', '0000ff', '590099', '000000']>>
@@ -4147,6 +4147,6 @@
 	여우 변이: <<link [[초기화한다|$passage]]>><<foxTransform 99>><<updatesidebarimg>><</link>><<if $foxtf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 	<<if $bunnybuild gte 1>>
-	바니 변이: <<link [[초기화한다|$passage]]>><<bunnyTransform 99>><<updatesidebarimg>><</link>><<if $bunnytf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
+	토끼 변이: <<link [[초기화한다|$passage]]>><<bunnyTransform 99>><<updatesidebarimg>><</link>><<if $bunnytf is 1>><span class="green">안전</span><<else>><span class="red">위험</span><</if>><br>
 	<</if>>
 <</widget>>

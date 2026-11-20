@@ -223,7 +223,7 @@
 
 <<person1>>당신은 무릎을 꿇고 신발끈을 묶는 척한다. 일어서면서 <<wallet>>【을를】 집어 든다.
 <<if $rng gte 61>>
-	<<person2>><<person>>【이가】 당신을 발견한다. "<<pShes>>【이가】 당신 물건을 훔치고 있어! 봐!" <<he>>【이가】 소리친다.
+	<<person2>><<person>>【이가】 당신을 발견한다. "<<pShes>> 당신 물건을 훔치고 있어! 봐!" <<he>>【이가】 소리친다.
 	<<gstress>><<stress 6>>
 	<br><br>
 	<<set $skulduggerydifficulty to 400>>

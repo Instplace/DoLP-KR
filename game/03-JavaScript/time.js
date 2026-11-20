@@ -846,7 +846,7 @@ function dayPassed() {
 		V.pound.tasks = [];
 	}
 
-	V.rentMoney = [10000, 30000, 50000, 70000, 100000, 150000, 200000][Math.min(Math.max(V.rentstage - 1, 0), 6)];
+	V.rentMoney = [10000, 30000, 50000, 70000, 100000, 150000, 200000][Math.min(Math.max(V.rentStage - 1, 0), 6)];
 	wikifier("rentmod");
 
 	if (V.valentines && Time.monthDay === 13) V.timeMessages.pushUnique("valentinesTomorrow");
@@ -3108,7 +3108,7 @@ function passRentTick() {
 		if (V.rentTime <= 0 && V.rentTime % 7 === 0) {
 			V.rentTime = 7;
 			V.baileyDeposit -= V.rentMoney + (V.babyRent || 0);
-			V.rentstage += 1;
+			V.rentStage += 1;
 		}
 	} else {
 		if (V.rentTime < 0 && V.rentTime % 7 === 0) {

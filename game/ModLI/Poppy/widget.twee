@@ -386,10 +386,10 @@
 	<</if>>
 
 	/* ---- 4. Bailey trigger flags ---- */
-	<<set _rentDue to (Number($rentmoney) || 0) + (Number($babyRent) || 0)>>
+	<<set _rentDue to (Number($rentMoney) || 0) + (Number($babyRent) || 0)>>
 	<<set _notYetToday to ($daily.poppy.flatBaileySeenDay isnot Time.days)>>
 	/* Two-tier overdue: -2+ any time, or -1..0 only during waking hours (4-21). */
-	<<set _rentOverdue to ($renttime lte -2) or ($renttime lte 0 and Time.hour gte 4 and Time.hour lte 21)>>
+	<<set _rentOverdue to ($rentTime lte -2) or ($rentTime lte 0 and Time.hour gte 4 and Time.hour lte 21)>>
 	<<set T.poppyFlatBaileyDue to !!(_rentOverdue and _notYetToday and _rentDue gt 0)>>
 	<<set T.poppyFlatBaileyHome to $poppyFlat.home is true>>
 	<<set T.poppyFlatBaileyLowPatience to !!(T.poppyStatus and T.poppyStatus.includes("LowPatience"))>>

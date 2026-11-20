@@ -120,7 +120,7 @@
 			<<set $audiencemod += 1>>
 			데릴은 주목을 받자 놀라고 당황한 기색이 역력하지만, 무대에서 내려오기 전에 방 안을 향해 수줍은 미소를 지어 보인다. "당신이 무사해서 다행이에요." <<nnpc_he Darryl>>【이가】 말한다.
 		<<else>>
-			데릴은 당황한 표정으로 조심스럽게 무대에서 내려온다. "미안해요." <<nnpc_he Darryl>>【이가】 말한다. "저, 저는 다른 분들도 확인해야 해서요."
+			데릴은 당황한 표정으로 조심스럽게 무대에서 내려온다. "미안해요." <<nnpc_he Darryl>>【이가】 말한다. "저-저는 다른 분들도 확인해야 해서요."
 		<</if>>
 	<</if>>
 
@@ -671,7 +671,7 @@
 		당신은 동작을 늦추며 조심스럽게 술을 받아 마신다. 머리가 한층 더 어지러워지지만, 관중들은 만족스러워한다.<<drunk 60>><<set $audiencemod += 2>>
 	<<elseif $danceaction is "drink_ignore">>
 		<<set $danceaction to 0>>
-		당신은 술을 무시하고 춤을 계속 이어간다. <<person>>【은는】 실망한 기색을 내비치고, 그건 <<hes>> 혼자만이 아니다.<<set $audienceexcitement -= 5>>
+		당신은 술을 무시하고 춤을 계속 이어간다. <<person>>【은는】 실망한 기색을 내비치고, 그건 <<him>> 혼자만이 아니다.<<set $audienceexcitement -= 5>>
 	<<elseif $danceaction is "light_flaunt">>
 		<<set $danceaction to 0>>
 		무대 가장자리로 요염하게 걸어간 당신은, 돌아선 다음 다리를 살짝 벌리고 한 손을 정강이에 얹은 채 허리를 굽힌다. 당신은 몸을 천천히 일으키며 무릎에서부터 허벅지 위로 부드럽게 손을 쓸어 올린다. 어둠 속에서 손 하나가 뻗어 나오지만, 당신은 요염하게 물러서 그 손이 허공만 헛짚게 놔둔다.
@@ -904,7 +904,7 @@
 				<<if $rng gte 76>>
 					"무대 위에서 저렇게 가버리다니, 저 년은 진짜배기 걸레가 분명해."
 				<<elseif $rng gte 51>>
-					"<<pshe>> 방금 진짜로 간 거야?"
+					"<<pshe>>【은는】 방금 진짜로 간 거야?"
 				<<elseif $rng gte 26>>
 					"음탕한 <<girls>>【이가】 절정에 달하는 걸 직접 보니 훨씬 낫네."
 				<<else>>
@@ -914,7 +914,7 @@
 				<<if $rng gte 76>>
 					"저렇게 드라이 오르가즘으로 느끼다니, 진짜 걸레가 분명해."
 				<<elseif $rng gte 51>>
-					"<<pshe>> 방금 진짜 여자애처럼 간 거야?"
+					"<<pshe>>【은는】 방금 진짜 여자애처럼 간 거야?"
 				<<elseif $rng gte 26>>
 					"음탕한 <<girls>>【이가】 절정에 달하는 걸 직접 보니까 훨씬 낫네."
 				<<else>>
@@ -1093,7 +1093,7 @@
 							<</if>>
 							<<switch $rng>>
 							<<case 1>>
-								"<<pshe>> 분명히 자기 자지랑 보지를 내놓고 과시하는 걸 즐길 거야."
+								"<<pshe>>【은는】 분명히 자기 자지랑 보지를 내놓고 과시하는 걸 즐길 거야."
 							<<case 2>>
 								"핥기 좋은 성기가 두 개나 달려있잖아."
 							<<case 3>>
@@ -1242,7 +1242,7 @@
 								"저 <<print $worn.under_lower.name_simple>>【은는】 뭘 가려주질 못하네."
 							<</if>>
 						<<else>>
-							"<<pshe>> 너무 다 내놓고 있잖아, 최고야."
+							"<<pshe>>【은는】 너무 다 내놓고 있잖아, 최고야."
 						<</if>>
 					<</if>>
 				<<else>>
@@ -1348,7 +1348,7 @@
 				<<elseif $audiencearousal gte 60>>
 					"<<pshe>>【은는】 완벽한 <<girl>>【이】야."
 				<<elseif $audiencearousal gte 40>>
-					"<<pshe>> 너무 아름다워."
+					"<<pshe>>【은는】 너무 아름다워."
 				<<elseif $audiencearousal gte 20>>
 					"<<pshe>>【은는】 파는 상품이려나."
 				<<else>>
@@ -1356,7 +1356,7 @@
 				<</if>>
 			<<elseif $audienceexcitement gte 81>>
 				<<if $audiencearousal gte 100>>
-					"<<pshe>> 너무 사랑스러워, 더는 못 참겠어."
+					"<<pshe>>【은는】 너무 사랑스러워, 더는 못 참겠어."
 				<<elseif $audiencearousal gte 80>>
 					"<<phim>>【을를】 나 혼자만 독차지하고 싶어."
 				<<elseif $audiencearousal gte 60>>

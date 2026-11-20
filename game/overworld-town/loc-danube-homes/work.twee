@@ -1679,7 +1679,7 @@
 <<elseif $orgasmdown gte 1>>
 	<<if $phase % 2>>
 		<<if $NPCList[0].gender is "m" and $vaginastate is "penetrated">>"계속해, 브루투스." <<person2>><<person>>【이가】 말한다. "<<pshes>> 네 씨를 원해서 꽥꽥대고 있잖아!"
-		<<elseif $NPCList[0].gender is "m" and ($vaginastate is "imminent" or $vaginastate is "entrance")>>"지금이야, 브루투스!" <<person2>><<person>>【이가】 말한다. "<<phim>>【을를】 박아버려! <<pShe>> 원하고 있잖아!"
+		<<elseif $NPCList[0].gender is "m" and ($vaginastate is "imminent" or $vaginastate is "entrance")>>"지금이야, 브루투스!" <<person2>><<person>>【이가】 말한다. "<<phim>>【을를】 박아버려! <<pShe>>【은는】 원하고 있잖아!"
 		<<elseif $penisstate is "penetrated">>"착하지, 브루투스." <<person2>><<person>>【이가】 말한다. "저 종마를 아주 쥐어짜냈구나!"
 		<<elseif $NPCList[0].gender is "m" and $penisstate is "otheranus">>"나쁜 <<bboy>>, 브루투스." <<person2>><<person>>【이가】 말한다. "네가 종마 역할을 해야지!"
 		<<elseif $penisstate is "othermouth" or $penisstate is "othermouthimminent" or $penisstate is "othermouthentrance">>"브루투스!" <<person3>><<person>>【이가】 말한다. "그만 핥아! 그거 먹는 거 아니야!"
@@ -1795,7 +1795,7 @@
 
 	<<clotheson>>
 
-	<<moneyGain 300>>【이】 당신의 손에 쥐여진다.
+	<<moneyGain 300>>【이가】 당신의 손에 쥐여진다.
 	<br>
 	"브루투스에게 필요했던 거란다. <<bitch>> 한 마리 값이 대충 <<moneyGainDisplay 300>> 정도 하니까, 이쯤 하면 우린 셈이 끝난 거로 치자꾸나. 여기서 나가거라."
 	<br><br>

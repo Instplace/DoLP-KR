@@ -121,7 +121,7 @@
 	<<endevent>><<generate1>><<generate2>><<person1>>
 	브라이어가 당신을 돌아본다. "모든 준비가 끝났어. 이제 주인공만 기다리면 돼. 관객들은 삽입을 보고 싶어 한다는 걸 기억해." 당신은 무대 위로 걸어가 대기 중인 테이블 옆에 선다. 평소보다 관객이 적다. 브라이어는 이것이 개인 쇼라고 언급했다. 당신 위로 하얀 조명 하나가 켜지자, 관객석이 어둠 속으로 잠긴다.
 	<br><br>
-	"<<Ladies_gentlemen>>!" 브라이어의 목소리가 방 전체에 울려 퍼진다. "오늘 우리는 자랑스러운 학생이 <<pher>> 과학 프로젝트를 시험하는 것을 목격할 겁니다. <<pShe>> 아직 그것이 얼마나 성공적인지 깨닫지 못했죠." 검은색 바디수트를 입은 <<fullGroup>>【이가】 당신 뒤로 섹스 머신을 무대 위로 끌고 온다. 남근에는 윤활유가 뚝뚝 떨어지고 있다.
+	"<<Ladies_gentlemen>>!" 브라이어의 목소리가 방 전체에 울려 퍼진다. "오늘 우리는 자랑스러운 학생이 <<pher>> 과학 프로젝트를 시험하는 것을 목격할 겁니다. <<pShe>>【은는】 아직 그것이 얼마나 성공적인지 깨닫지 못했죠." 검은색 바디수트를 입은 <<fullGroup>>【이가】 당신 뒤로 섹스 머신을 무대 위로 끌고 온다. 남근에는 윤활유가 뚝뚝 떨어지고 있다.
 	<br><br>
 
 	<<link [[다음|Brothel Show Machine Intro]]>><</link>>
@@ -131,7 +131,7 @@
 	<<endevent>><<generate1>><<generate2>><<person1>>
 	브라이어가 당신을 돌아본다. "모든 준비가 끝났어. 이제 주인공만 기다리면 돼. 관객들은 삽입을 보고 싶어 한다는 걸 기억해." 당신은 무대 위로 걸어가 대기 중인 테이블 옆에 선다. 평소보다 관객이 적다. 브라이어는 이것이 개인 쇼라고 언급했다. 당신 위로 하얀 조명 하나가 켜지자, 관객석이 어둠 속으로 잠긴다.
 	<br><br>
-	"<<Ladies_gentlemen>>!" 브라이어의 목소리가 방 전체에 울려 퍼진다. "오늘 우리는 자랑스러운 학생이 <<pher>> 과학 프로젝트를 시험하는 것을 목격할 겁니다. <<pShe>> 아직 그것이 얼마나 성공적인지 깨닫지 못했죠." 검은색 바디수트를 입은 <<fullGroup>>【이가】 당신 뒤로 섹스 머신을 무대 위로 끌고 온다. 일부 패널이 덜컹거린다.
+	"<<Ladies_gentlemen>>!" 브라이어의 목소리가 방 전체에 울려 퍼진다. "오늘 우리는 자랑스러운 학생이 <<pher>> 과학 프로젝트를 시험하는 것을 목격할 겁니다. <<pShe>>【은는】 아직 그것이 얼마나 성공적인지 깨닫지 못했죠." 검은색 바디수트를 입은 <<fullGroup>>【이가】 당신 뒤로 섹스 머신을 무대 위로 끌고 온다. 일부 패널이 덜컹거린다.
 	<br><br>
 
 	<<link [[다음|Brothel Show Tentacles Intro]]>><</link>>
@@ -1862,7 +1862,7 @@
 				<br>
 			<</if>>
 		<<else>>
-			<<insufficientStat "promiscuity" "to flaunt your body parts at them">>
+			<<insufficientStat "promiscuity" "그들에게 신체 부위를 과시하기엔">>
 			<br>
 		<</if>>
 		<<link [[가만히 있는다|Brothel Show Virginity Auction]]>><<set $phase to 0>><</link>>
@@ -1900,7 +1900,7 @@
 				<<link [[혀를 과시한다|Brothel Show Virginity Auction]]>><<set $phase to 2>><<set $virginitytip += $oralskill * 50>><</link>><<promiscuous3>><<skill_difficulty `currentSkillValue("oralskill")` "입 스킬" 1 800>>
 			<</if>>
 		<<else>>
-			<<insufficientStat "promiscuity" "to flaunt your body parts at them">>
+			<<insufficientStat "promiscuity" "그들에게 신체 부위를 과시하기엔">>
 		<</if>>
 		<br>
 		<<link [[가만히 있는다|Brothel Show Virginity Auction]]>><<set $phase to 0>><</link>>
@@ -1936,7 +1936,7 @@
 			<br>
 			<<link [[허벅지를 두드린다|Brothel Show Virginity Auction]]>><<set $phase to 2>><<set $virginitytip += $thighskill * 50>><</link>><<promiscuous4>><<skill_difficulty `currentSkillValue("thighskill")` "허벅지 스킬" 1 800>>
 		<<else>>
-			<<insufficientStat "promiscuity" "to flaunt your body parts at them">>
+			<<insufficientStat "promiscuity" "그들에게 신체 부위를 과시하기엔">>
 		<</if>>
 		<br>
 		<<link [[가만히 있는다|Brothel Show Virginity Auction]]>><<set $phase to 0>><</link>>
@@ -2011,7 +2011,7 @@
 				<br>
 			<</if>>
 		<<else>>
-			<<insufficientStat "promiscuity" "to flaunt your body parts at them">>
+			<<insufficientStat "promiscuity" "그들에게 신체 부위를 과시하기엔">>
 			<br>
 		<</if>>
 

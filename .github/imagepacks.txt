@@ -1,18 +1,4 @@
-# DoL+의 .gitlab-ci.yml과 같은 구성: 이름  이미지 팩(앞에서부터 차례로 덮어씀)
+# 릴리스로 만드는 구성: 이름  이미지 팩(앞에서부터 차례로 덮어씀)
+# 기본 이미지(vanilla + dolp)만 넣는다. 저장소의 다른 이미지 팩(BEEESSS, Goose, Mikili, Aoki Utage, Rotting,
+# Mysterious 등)은 각 제작자의 작품이라 이 저장소의 릴리스로 다시 배포하지 않는다.
 Vanilla                     vanilla dolp
-BEEESSS                     vanilla dolp b3s kaervek dolp_b3s
-BEEESSS_Mysterious          vanilla dolp b3s kaervek dolp_b3s mysterious
-BEEESSS_Hikari_Female       vanilla dolp b3s kaervek dolp_b3s b3s_hikfem b3s_hikfemsubs
-BEEESSS_Hikari_Female_Mysterious vanilla dolp b3s kaervek dolp_b3s b3s_hikfem b3s_hikfemsubs mysterious
-Goose_Female                vanilla dolp goosefem goosefemsubs
-Goose_Female_Mysterious     vanilla dolp goosefem goosefemsubs mysterious
-Goose_Masc                  vanilla dolp goosemasc goosemascsubs
-Goose_Masc_Mysterious       vanilla dolp goosemasc goosemascsubs mysterious
-Mikili                      vanilla dolp mikili mikilisubs
-Mikili_Mysterious           vanilla dolp mikili mikilisubs mysterious
-Aoki_Utage                  vanilla dolp au
-Aoki_Utage_Mysterious       vanilla dolp au mysterious
-Aoki_Utage_Masc             vanilla dolp aumasc
-Aoki_Utage_Masc_Mysterious  vanilla dolp aumasc mysterious
-Rotting                     vanilla dolp rotting
-Rotting_Mysterious          vanilla dolp rotting mysterious

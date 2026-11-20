@@ -62,7 +62,7 @@
 	<<set C.npc.Alex.pregnancy.nursery to true>>
 	<<unset $cottage_nursery_prep>>
 
-	새로운 육아실이 증축되었습니다. <span class="gold">이제 당신과 알렉스의 아이들이 농장에서 생활할 수 있습니다.</span>
+	새로운 육아실이 증축되었다. <span class="gold">이제 당신과 알렉스의 아이들이 농장에서 생활할 수 있습니다.</span>
 	<br><br>
 	<<link [[다음|Farm Cottage]]>><</link>>
 
@@ -313,7 +313,7 @@
 		<<case "thunderstorm">>
 			<span class="yellow">뇌우</span>
 		<<default>>
-			<span class="red">오류입니다. 프로스트버그에게 알려 주세요.</span>
+			<span class="red">오류입니다. 프로스트버그에게 알려 주십시오.</span>
 	<</switch>>
 	, 일시는 <<print window.KR.getMonthKr(_forecastDate.monthName) + " " + _forecastDate.day + "일, ">> <<ampm _forecastDate.hour _forecastDate.minute>>, 지금으로부터
 	<<if Time.date.compareWith(_forecastDate).days gt 0>>
@@ -1765,7 +1765,7 @@
 			<<if $possessed>>
 				<span class="purple">슬라임은 조용하다.</span>
 			<<else>>
-				<span class="purple">슬라임이 당신이 무언가를 입고 자는 것을 허락하지 않습니다.</span>
+				<span class="purple">슬라임이 당신이 무언가를 입고 자는 것을 허락하지 않는다.</span>
 			<</if>>
 		<</if>>
 		<br>
@@ -3274,7 +3274,7 @@
 <<else>>
 	당신은 <<his>> 바지 지퍼를 내려 <<his>> 복서 팬티를 드러낸다.
 <</if>>
-당신은 천 너머로 <<his>> _genitals 위를 손가락으로 쓸어내리며 <<him>>【의】 눈을 바라본다. <<He>>【은는】 대화에 집중하려 하지만, 당신의 손길에 <<his>> 목소리가 떨린다.
+당신은 천 너머로 <<his>> _genitals 위를 손가락으로 쓸어내리며 <<him>>의 눈을 바라본다. <<He>>【은는】 대화에 집중하려 하지만, 당신의 손길에 <<his>> 목소리가 떨린다.
 <<promiscuity4>>
 
 당신은 <<his>> 속옷을 옆으로 당긴다.
@@ -3378,7 +3378,7 @@
 	<br><br>
 	"여기서 씨발 뭐 하는 거야?" 알렉스가 말한다. 창문을 통해 <<him>>【이가】 다가오는 것이 보인다. 다른 인물이 <<him>>【을를】 맞으러 걸어온다. <span class="red">베일리다.</span>
 	<br><br>
-	"내 피보호자가 여기 있어." 베일리가 말한다. "<<pShe>> 내게 빚이 있지. 받으러 왔다."
+	"내 피보호자가 여기 있어." 베일리가 말한다. "<<pShe>>【은는】 내게 빚이 있지. 받으러 왔다."
 	<br><br>
 
 	<<link [[베일리와 대면한다|Farm Cottage Bailey Confront]]>><</link>>
@@ -3386,17 +3386,17 @@
 	<<link [[알렉스가 베일리를 처리하게 둔다|Farm Cottage Bailey Deal]]>><</link>>
 	<br>
 <<elseif $phase is 2>>
-	당신은 문을 연다. <span class="red">베일리다.</span> "빚 갚을 시간이야." <<nnpc_he Bailey>> 말한다.
+	당신은 문을 연다. <span class="red">베일리다.</span> "빚 갚을 시간이야." <<nnpc_he Bailey>>【은는】 말한다.
 	<br><br>
 	발소리가 들린다. 알렉스가 오두막으로 뛰어 들어와 당신 옆에 선다. "네가 어떤 결정을 하든 지지할게." <<he>>【이가】 속삭인다.
 	<br><br>
 
 	<<cottage_bailey_options>>
 <<elseif $phase is 1>>
-	알렉스가 문을 연다. <span class="red">베일리다.</span> <<nnpc_He Bailey>> 알렉스를 지나쳐 당신을 똑바로 쳐다본다.
+	알렉스가 문을 연다. <span class="red">베일리다.</span> <<nnpc_He Bailey>>【이가】 알렉스를 지나쳐 당신을 똑바로 쳐다본다.
 	<br><br>
 
-	"빚 갚을 시간이야." <<nnpc_he Bailey>> 말한다.
+	"빚 갚을 시간이야." <<nnpc_he Bailey>>【은는】 말한다.
 	<br><br>
 
 	알렉스는 당신 옆에 서서 베일리를 쏘아본다. "네가 어떤 결정을 하든 지지할게." <<he>>【이가】 속삭인다.
@@ -3406,7 +3406,7 @@
 
 	당신은 문을 연다. <span class="red">베일리다.</span>
 	<br><br>
-	"빚 갚을 시간이야." <<nnpc_he Bailey>> 말한다.
+	"빚 갚을 시간이야." <<nnpc_he Bailey>>【은는】 말한다.
 	<br><br>
 	알렉스가 당신 곁으로 와서 베일리를 쏘아본다. "네가 어떤 결정을 하든 지지할게." <<he>>【이가】 속삭인다.
 	<br><br>
@@ -3436,7 +3436,7 @@
 땅에서."
 <br><br>
 
-"좋아." 베일리가 말한다. "내 친구들이 기뻐하겠군." <<nnpc_He Bailey>> 몸을 돌려 걸어간다.
+"좋아." 베일리가 말한다. "내 친구들이 기뻐하겠군." <<nnpc_He Bailey>>【은는】 몸을 돌려 걸어간다.
 <br><br>
 
 <<if $bailey_encroach gte 1>>
@@ -3486,7 +3486,7 @@
 땅에서."
 <br><br>
 
-"좋아." 베일리가 말한다. "내 친구들이 기뻐하겠군." <<nnpc_He Bailey>> 몸을 돌려 걸어간다.
+"좋아." 베일리가 말한다. "내 친구들이 기뻐하겠군." <<nnpc_He Bailey>>【은는】 몸을 돌려 걸어간다.
 <br><br>
 
 <<if $bailey_encroach gte 1>>
@@ -4513,7 +4513,7 @@
 <<He>>【은는】 <<his>> <<pluralise $alexBabiesCount "아이" "아이">>에게 마지막으로 길게 안아준 후, <<pluralise $alexBabiesCount "아이를" "아이를">> 베일리에게 건네준다.
 <br><br>
 
-"합의에 이르러서 기쁘군요. 그럼, 실례하겠습니다..." 베일리가 <<nnpc_he "Bailey">> 떠나면서 말한다.
+"합의에 이르러서 기쁘군요. 그럼, 실례하겠습니다..." 베일리가 <<nnpc_he "Bailey">>【이가】 떠나면서 말한다.
 <br><br>
 
 알렉스는 굳은 표정으로 말없이, <<his>> <<pluralise $alexBabiesCount "아이" "아이">>【이가】 끌려가는 것을 무력하게 지켜본다.
@@ -4913,7 +4913,7 @@
 당신은 당신의 <<pluralise $pcBabyCount "아이" "아이">>에게 마지막으로 길게 안아준 후, <<pluralise $pcBabyCount "아이를" "아이를">> 베일리에게 건네준다.
 <br><br>
 
-"합의에 이르러서 기쁘군요. 그럼, 실례하겠습니다..." 베일리가 <<nnpc_he "Bailey">> 떠나면서 말한다.
+"합의에 이르러서 기쁘군요. 그럼, 실례하겠습니다..." 베일리가 <<nnpc_he "Bailey">>【이가】 떠나면서 말한다.
 <br><br>
 
 당신은 굳은 표정으로 말없이, 당신의 <<pluralise $pcBabyCount "아이" "아이">>【이가】 끌려가는 것을 무력하게 지켜본다.

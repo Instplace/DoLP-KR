@@ -83,7 +83,7 @@
 	<</if>>
 	<br>
 	<<if $earSlime.forcedCommando isnot undefined and !$worn.under_lower.type.includes("naked") and !$hypnosis_traits?.silence>>
-		<span class="red">귓속의 슬라임이 <<underwearTypeText>>【을를】 입은 채로 나가는 것을 허락하지 않는다.</span>
+		<span class="red">귀 슬라임이 <<underwearTypeText>>【을를】 입은 채로 나가는 것을 허락하지 않는다.</span>
 	<<elseif $exhibitionism lte 75 and $exposed gte 1>>
 		<span class="pink">이런 차림으로는 나갈 수 없다!</span>
 	<<elseif $exposed gte 1>>
@@ -485,7 +485,7 @@
 				사물함 옆 벤치 위에 옷가지들이 깔끔하게 더미로 쌓여 있다.
 				<br>
 			<<elseif _clothes.length is 2>>
-				사물함 옆 벤치 위에 _clothes[0].name와 _clothes[1].name【이가】 놓여 있다.
+				사물함 옆 벤치 위에 _clothes[0].name【와과】 _clothes[1].name【이가】 놓여 있다.
 				<br>
 			<<else>>
 				사물함 옆 벤치 위에 _clothes[0].name【이가】 놓여 있다.

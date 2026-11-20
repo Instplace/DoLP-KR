@@ -994,7 +994,7 @@
 	<<switch $phase>>
 	<<case "banana" "wild_carrot" "chilli_pepper">>
 		<<if $speech_attitude is "meek" or $speech_attitude_avery>>
-			"<<recipe_name $phase "article">>【을를】 쓰고 싶었어요." 당신은 머릿속에 가장 먼저 떠오른 말을 내뱉는다. "ㅈ-재미로요"<br>
+			"<<recipe_name $phase "article">>【을를】 쓰고 싶었어요." 당신은 머릿속에 가장 먼저 떠오른 말을 내뱉는다. "재-재미로요"<br>
 		<<elseif $speech_attitude is "bratty">>
 			"<<recipe_name $phase "article">>【을를】 박고 싶었거든." 당신은 머릿속에 가장 먼저 떠오른 말을 내뱉는다.<br>
 		<<else>>

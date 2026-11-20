@@ -149,7 +149,7 @@
 :: Widgets Fishing Moor Cut [widget]
 <<widget "fishingMoorLineCut">>
 	<<effects>>
-	당신은 낚싯줄을 <span class="purple">끊어버렸고</span>, <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 깊은 물 속으로 헤엄쳐 도망간다.
+	당신은 낚싯줄을 <span class="purple">끊어버리고</span>, <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 깊은 물 속으로 헤엄쳐 도망간다.
 	<br><br><br>
 
 	<<fishingMinigameResultUi $fishingMinigame.fishDistance "cut">>
@@ -166,7 +166,7 @@
 <<widget "fishingMoorLineCutFox">>
 	<<effects>>
 	<<loadNPC 0 "moor_fishing_fox">>
-	당신은 낚싯줄을 <span class="purple">끊어버렸고</span>, <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 깊은 물 속으로 헤엄쳐 도망간다.
+	당신은 낚싯줄을 <span class="purple">끊어버리고</span>, <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 깊은 물 속으로 헤엄쳐 도망간다.
 	<br><br><br>
 
 	<<fishingMinigameResultUi $fishingMinigame.fishDistance "cut">>
@@ -260,7 +260,7 @@
 
 
 <<widget "fishingMoorLineSnapped">>
-	낚싯줄이 팽팽해지더니, 이내 <span class="red">끊어진다.</span> <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 사라졌다.
+	낚싯줄이 팽팽해지더니, 이내 <span class="red">끊어진다.</span> <<= setup.foodstuff[$fishingHookedFish.type].name>>【은는】 사라진다.
 	<br><br><br>
 
 	<<fishingMinigameResultUi $fishingMinigame.fishDistance "lineSnapped">>
@@ -286,7 +286,7 @@
 
 :: Widgets Fishing Moor Fish Too Far [widget]
 <<widget "fishingMoorFishTooFar">>
-	<<= setup.foodstuff[$fishingHookedFish.type].name>>【이가】 낚싯줄 끝까지 도달해 바늘을 풀고 <span class="red">도망쳤다</span>.
+	<<= setup.foodstuff[$fishingHookedFish.type].name>>【이가】 낚싯줄 끝까지 도달해 바늘을 풀고 <span class="red">도망친다</span>.
 	<br><br><br>
 
 	<<fishingMinigameResultUi $fishingMinigame.fishDistance "fishOffHook">>

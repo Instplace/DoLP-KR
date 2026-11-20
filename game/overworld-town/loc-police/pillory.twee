@@ -454,7 +454,7 @@
 	<br>
 	"벌도 아니지, 저 더러운 <<slut>>【은는】 분명 즐겼을 거야."
 	<br>
-	<span class="pink">군중이 더 커지고 대담해집니다.</span>
+	<span class="pink">군중이 더 커지고 대담해진다.</span>
 	<<set $pillory.audience += 1>>
 	<br><br>
 
@@ -469,7 +469,7 @@
 
 	"무고한 <<beastsplural>>【을를】 때리다니. 저기 묶여 있는 게 당연해." 누군가 외치는 소리가 들린다.
 	<br>
-	<span class="teal">군중이 더 작아지고 조심스러워집니다.</span>
+	<span class="teal">군중이 더 작아지고 조심스러워진다.</span>
 	<<set $pillory.audience -= 1>>
 	<br><br>
 
@@ -527,7 +527,7 @@
 	<br>
 	"벌도 아니지, 저 더러운 <<slut>>【은는】 분명 즐겼을 거야."
 	<br>
-	<span class="pink">군중이 더 커지고 대담해집니다.</span>
+	<span class="pink">군중이 더 커지고 대담해진다.</span>
 	<<set $pillory.audience += 1>>
 	<br><br>
 
@@ -542,7 +542,7 @@
 
 	"정말 폭력적이군. 저기 묶여 있는 게 당연해." 누군가 외치는 소리가 들린다.
 	<br>
-	<span class="teal">군중이 더 작아지고 조심스러워집니다.</span>
+	<span class="teal">군중이 더 작아지고 조심스러워진다.</span>
 	<<set $pillory.audience -= 1>>
 	<br><br>
 
@@ -927,7 +927,7 @@
 	<br>
 	"벌도 아니지, 저 더러운 <<slut>>【은는】 분명 즐겼을 거야."
 	<br>
-	<span class="pink">군중이 더 커지고 대담해집니다.</span>
+	<span class="pink">군중이 더 커지고 대담해진다.</span>
 	<<set $pillory.audience += 1>>
 	<br><br>
 
@@ -942,7 +942,7 @@
 
 	"정말 폭력적이군. 저기 묶여 있는 게 당연해." 누군가 외치는 소리가 들린다.
 	<br>
-	<span class="teal">군중이 더 작아지고 조심스러워집니다.</span>
+	<span class="teal">군중이 더 작아지고 조심스러워진다.</span>
 	<<set $pillory.audience -= 1>>
 	<br><br>
 
@@ -1108,12 +1108,12 @@
 	<<if $arousal gte $arousalmax>>
 		너무 과하다. <<orgasm>>
 
-		관중들이 야유하고 조롱하며 더 많은 관심을 끈다. 당신은 굴욕감을 느낀다. <span class="red">군중이 훨씬 더 커지고 대담해집니다.</span>
+		관중들이 야유하고 조롱하며 더 많은 관심을 끈다. 당신은 굴욕감을 느낀다. <span class="red">군중이 훨씬 더 커지고 대담해진다.</span>
 		<<set $pillory.audience += 2>><<ggtrauma>><<trauma 12>>
 		<br><br>
 	<<else>>
 
-		<span class="pink">군중이 더 커지고 대담해집니다.</span>
+		<span class="pink">군중이 더 커지고 대담해진다.</span>
 		<<set $pillory.audience += 1>>
 		<br><br>
 	<</if>>
@@ -1140,7 +1140,7 @@
 	<</if>>
 	<br><br>
 
-	당신은 굴욕감을 느낀다. <span class="pink">군중이 더 커지고 대담해집니다.</span>
+	당신은 굴욕감을 느낀다. <span class="pink">군중이 더 커지고 대담해진다.</span>
 	<<set $pillory.audience += 1>><<ggtrauma>><<trauma 12>>
 	<br><br>
 <</if>>

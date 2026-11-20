@@ -43,7 +43,7 @@
 				<br><br>
 			<</if>>
 			<<if $awareness lte 100>>
-				<<generate1>><<person1>>이상하다. 바로 옆 칸이 비어 있는데 왜 저렇게 많은 <<women_npc>>【이】 한 화장실에만 줄을 서 있는지 모르겠다. 누군가 어질러 놓기라도 한 걸까?
+				<<generate1>><<person1>>이상하다. 바로 옆 칸이 비어 있는데 왜 저렇게 많은 <<women_npc>>【이가】 한 화장실에만 줄을 서 있는지 모르겠다. 누군가 어질러 놓기라도 한 걸까?
 				<<endevent>> /* Tidying up the people generated in this fork */
 			<<elseif $awareness lte 300>>
 				뭔가 불건전한 일이 벌어지고 있다는 것을 짐작할 수 있다. 굳이 자세히 알고 싶지는 않다.
@@ -415,7 +415,7 @@
 			<<elseif (setup.bodyliquid.combined("mouth") + setup.bodyliquid.combined("face")) gte 5>>"<<pHer>> 얼굴 좀 봐! 선생들한테 전부 빨아줬나 보네
 			<<elseif $liquidoutsidecount gte 6>>"정액으로 뒤덮였잖아
 			<<elseif $fame.rape gte 600>>"마을 절반은 이미 <<phim>>【을를】 따먹었을걸
-			<<elseif $fame.bestiality gte 600>>"<<pShe>> 아마 개랑 벌써 다섯 번은 했을 거야
+			<<elseif $fame.bestiality gte 600>>"<<pShe>>【은는】 아마 개랑 벌써 다섯 번은 했을 거야
 			<<elseif (setup.bodyliquid.combined("vagina") + setup.bodyliquid.combined("anus")) gte 2>>"정액이 줄줄 새는 게 보이네
 			<<elseif $fame.sex gte 400>>"마을 절반은 <<pher>> 섹스 동영상 가지고 있을걸
 			<<else>>"오늘 밤에 벌써 한 번은 박혔네
@@ -656,7 +656,7 @@
 		그 <<person>>【은는】 당신의 <<bottom>>【을를】 후려치고, 풀밭에 쓰러진 당신을 내버려 두고 떠난다.
 	<</if>>
 	<br><br>
-	<<tearful>> 당신은 몸을 일으킵니다.
+	<<tearful>> 당신은 몸을 일으킨다.
 	<br><br>
 	<<clotheson>>
 	<<endcombat>>
@@ -768,7 +768,7 @@
 	<br><br>
 	"두 분이 저를 강간해 주셔야 해요." 당신이 말한다. 보행자의 편안한 표정이 순식간에 충격으로 바뀐다.
 	<br><br>
-	"물론, 그렇게 할 수 있지." 경찰관이 대답한다. 경찰관이 어깨를 으쓱하자 보행자는 <<him>>에게 믿을 수 없다는 표정을 보낸다. "<<pShes>>【이가】 부탁한 거잖아."
+	"물론, 그렇게 할 수 있지." 경찰관이 대답한다. 경찰관이 어깨를 으쓱하자 보행자는 <<him>>에게 믿을 수 없다는 표정을 보낸다. "<<pShes>> 부탁한 거잖아."
 	<br><br>
 	둘 다 당신에게 다가온다.
 <</if>>

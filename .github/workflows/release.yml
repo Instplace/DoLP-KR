@@ -73,7 +73,8 @@ jobs:
           FORCE_VERSION="$VERSION" ./compile.sh
           test -s "Degrees of Lewdity $VERSION.html"
 
-      # 개발판은 기본(Vanilla) 구성만, 정식 릴리스는 DoL+와 같은 이미지 팩 구성을 모두 만든다.
+      # 기본(Vanilla) 구성만 만든다. 다른 이미지 팩은 제작자의 작품이라 릴리스에 넣지 않는다 (.github/imagepacks.txt).
+      # 정식 릴리스에는 이미지 없이 HTML만 든 zip도 함께 올린다.
       - name: PC용 zip
         run: |
           mkdir -p out
@@ -89,6 +90,10 @@ jobs:
           while read -r variant packs; do
             case "$variant" in ''|'#'*) continue;; esac
             if [ "$PRERELEASE" = "true" ] && [ "$variant" != "Vanilla" ]; then continue; fi
+            # 기본 이미지 말고는 릴리스에 넣지 않는다: 목록에 다른 팩이 들어오면 멈춘다.
+            for p in $packs; do
+              case "$p" in vanilla|dolp) ;; *) echo "::error::이미지 팩 '$p'은(는) 릴리스에 넣지 않습니다 (.github/imagepacks.txt)"; exit 1;; esac
+            done
             pack "$variant" $packs
           done < .github/imagepacks.txt
           if [ "$PRERELEASE" != "true" ]; then

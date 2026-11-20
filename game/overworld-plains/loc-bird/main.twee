@@ -190,7 +190,7 @@
 		<<else>>
 			"투지가 넘치는군. 감명받았다."
 		<</if>>
-		<<bhis>>의 등 뒤에서 날개가 격렬하게 퍼덕이는 동안 <<bhe>>【이가】 말한다.
+		<<bhis>> 등 뒤에서 날개가 격렬하게 퍼덕이는 동안 <<bhe>>【이가】 말한다.
 	<<elseif $birdescaped gte 1>>
 		<<bHe>>【이가】 <<bhis>> 날개를 격렬하게 퍼덕이며 기뻐하는 듯 지저귄다.
 	<</if>>
@@ -1833,7 +1833,7 @@
 	<</if>>
 	<br><br>
 	<<if $monster is 1>>
-		"정말이야?" <<bhe>> 다시 묻는다. 당신은 대답을 반복한다. <<bHe>>【은는】 그 대답에 만족하지 않는 듯한 목소리다.
+		"정말이야?" <<bhe>>【은는】 다시 묻는다. 당신은 대답을 반복한다. <<bHe>>【은는】 그 대답에 만족하지 않는 듯한 목소리다.
 	<<else>>
 		<<bHe>>【은는】 당신의 대답에 만족하지 않는 듯 보인다.
 	<</if>>
@@ -3240,7 +3240,7 @@
 :: Bird Tower Nest Rub
 <<setTowerTemp>><<effects>><<npc "Great Hawk">>
 당신은 천천히 <<beasttypes>> 깃털을 따라 <<bhis>> <<nnpc_genitals "Great Hawk">> 쪽으로 손을 쓸어내린다.
-<<bhis>>의 눈이 당신이 문지르기 시작하자 깜빡이며 열린다.
+<<bhis>> 눈이 당신이 문지르기 시작하자 깜빡이며 열린다.
 <<if $phase is 1>>
 	<<deviancy1>>
 	<<if $monster is 1>>"<<Wife>>【이가】 날 위해 이럴 필요는 없는데," <<bhe>>【이가】 눈을 비비며 말한다. "하지만 거절할 수는 없군."<</if>>
@@ -3425,7 +3425,7 @@
 <<if $daily.birdWash is undefined>>
 	<<set $daily.birdWash to 1>>
 	<<if $monster is 1>>
-		<<beasttype>>【이가】 다시 헤엄쳐 와서 당신 뒤로 미끄러져 들어온다. <<bhis>>【이가】 <<bhe>> 손으로 당신의 <<breasts>>【을를】 잡자 <<bhis>> 날개가 양옆으로 펼쳐진다. "씻는 거 도와줄까?"
+		<<beasttype>>【이가】 다시 헤엄쳐 와서 당신 뒤로 미끄러져 들어온다. <<bhis>>【이가】 <<bhe>>【이가】 손으로 당신의 <<breasts>>【을를】 잡자 <<bhis>> 날개가 양옆으로 펼쳐진다. "씻는 거 도와줄까?"
 	<<else>>
 		<<beasttype>>【이가】 다시 헤엄쳐 와서 <<bhis>> 날개로 당신에게 물을 끼얹는다. <<bHe>>【은는】 당신이 씻는 것을 도우려 한다.
 	<</if>>
@@ -3780,7 +3780,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 		당신은 <<if $bird.upgrades.decor gte 3>>커튼을 밀치고 <</if>><<beasttype>>【와과】 함께 <<bhis>> 횃대에 오른다.
 		<<if $syndromebird isnot 1>>
 			<<bird_greeting>>
-			<<bHe>>【은는】 <<bhis>> 날개를 펼치지만, 당신은 <<bhes>>【이가】 무엇을 하려는지 확신할 수 없다.
+			<<bHe>>【은는】 <<bhis>> 날개를 펼치지만, 당신은 <<bhes>> 무엇을 하려는지 확신할 수 없다.
 			<<if $bird.activity is "sing" and $bird.state is "home">>
 				잠시 후, <<bhis>> 날개가 내려가고 <<bhis>> 노래가 계속된다.
 			<<else>>
@@ -3964,7 +3964,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 				<<elseif C.npc.Robin.dom gte 50>>
 					<<nnpc_he "Robin">>【이가】 당신을 찾으러 올지 궁금해진다.
 				<<else>>
-					<<nnpc_hes "Robin">>【이가】 어떻게 지내는지 궁금해지자 잠깐 죄책감이 스친다.
+					<<nnpc_hes "Robin">> 어떻게 지내는지 궁금해지자 잠깐 죄책감이 스친다.
 				<</if>>
 			<<case "Kylar">>
 				카일라에게로 향한다.
@@ -3980,7 +3980,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 				<<if Time.weekDay is 1>>
 					<<nnpc_Hes "Sydney">> 아마 지금쯤 신전에서 열심히 일하고 있을 것이다.
 				<<else>>
-					<<nnpc_his "Sydney">>의 미소를 생각하니 마음이 따뜻해진다.
+					<<nnpc_his "Sydney">> 미소를 생각하니 마음이 따뜻해진다.
 				<</if>>
 			<<case "Eden">>
 				에덴에게로 향한다. <<nnpc_He "Eden">>【은는】 아마 재미 삼아 거대 매를 사냥할 것이다. 특히 <<nnpc_he "Eden">>【이가】 당신이 무슨 짓을 하고 있는지 알게 된다면 말이다.
@@ -4114,7 +4114,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 			<<if $monster is 1>>
 				<<bHe>>【은는】 목을 가다듬기 위해 짧게 기침을 하고, 더 이상 문제없이 다시 시작한다.
 			<<else>>
-				<<bHe>> 고개를 앞뒤로 움직이기 시작하더니, <<bhis>> 목에서 작은 뼈처럼 보이는 것을 토해낸다. <<bHe>>【은는】 더 이상 문제없이 노래를 다시 시작한다.
+				<<bHe>>【은는】 고개를 앞뒤로 움직이기 시작하더니, <<bhis>> 목에서 작은 뼈처럼 보이는 것을 토해낸다. <<bHe>>【은는】 더 이상 문제없이 노래를 다시 시작한다.
 			<</if>>
 		<</if>>
 		<br><br>
@@ -4281,26 +4281,26 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<switch $skin[_bodypart].pen>>
 		<<case "marker">>
 			<<set _tattoo to "permanent marker">>
-			<<set _tattwo to "mark hers">>
+			<<set _tattwo to "매, 직">>
 		<<case "brand">>
 			<<set _tattoo to "a brand">>
-			<<set _tattwo to "brands">>
+			<<set _tattwo to "낙, 인">>
 		<<default>>
 			<<set _tattoo to "a tattoo">>
-			<<set _tattwo to "tat twos">>
+			<<set _tattwo to "문, 신">>
 	<</switch>>
 	<<set _tattooKr to {"permanent marker": "유성 매직", "a brand": "낙인", "a tattoo": "문신"}[_tattoo]>>
 	<<if $monster is 1>>
 		<<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
-			"이건 _tattooKr라는 거야. 미안하지만, 아무리 열심히 닦아도 지울 수 없어." 당신이 말한다.
+			"이건 _tattooKr【이】라는 거야. 미안하지만, 아무리 열심히 닦아도 지울 수 없어." 당신이 말한다.
 		<<elseif $speech_attitude is "bratty">>
-			"이건 _tattooKr라는 건데, 지워지지 않아." 당신이 말한다. "<<= _tattoo is "permanent marker" ? '적어도 지금은 말이야' : '영원히'>>."
+			"이건 _tattooKr【이】라는 건데, 지워지지 않아." 당신이 말한다. "<<= _tattoo is "permanent marker" ? '적어도 지금은 말이야' : '영원히'>>."
 		<<else>>
-			"이건 _tattooKr라고 하는데, <<= _tattoo is "permanent marker" ? "음... 영구적이야. 적어도 지금은" : "영구적이야">>." 당신이 말한다.
+			"이건 _tattooKr【이】라고 하는데, <<= _tattoo is "permanent marker" ? "음... 영구적이야. 적어도 지금은" : "영구적이야">>." 당신이 말한다.
 		<</if>>
 		<br><br>
 
-		"정말?" <<beasttype>>【이가】 당신의 <<tattoo _bodypart>>【을를】 살피기 위해 손질을 멈추며 묻는다. "<<Wife>>【은는】 더 조심해야 해. 더 이상... _tattwo가 묻지 않게 해."
+		"정말?" <<beasttype>>【이가】 당신의 <<tattoo _bodypart>>【을를】 살피기 위해 손질을 멈추며 묻는다. "<<Wife>>【은는】 더 조심해야 해. 더 이상... _tattwo【이가】 묻지 않게 해."
 
 		<<if $skin[_bodypart].special is "Great Hawk">>
 			<br><br>
@@ -4713,7 +4713,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<bHe>>【이가】 당신 뒤로 걸어가, <<bhis>> 손으로 당신의 날개를 주무르고 부드럽게 올렸다 내렸다 하기 시작한다.
 	"근육이 별로 없네. 아주 새로워. 나는 데 어려움이 있을 거야. 하지만 활공은 잘할 거야."
 <<else>>
-	처음에는 <<bhes>>【이가】 당신을 밀까 봐 걱정한다.
+	처음에는 <<bhes>> 당신을 밀까 봐 걱정한다.
 <</if>>
 당신의 걱정은 <<bhe>>【이가】 횃대 가장자리로 <<if $monster is 1>>걸어가자<<else>>뛰어가자<</if>> 사라진다.
 <<bHe>><<bhis>> 날개를 펴기 시작하고, 당신에게도 똑같이 하라고 고개를 끄덕인다. 당신은 요령을 알 것 같다.
@@ -5287,7 +5287,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	당신은 <<bhim>>【을를】 부드럽게 흔들어 깨운다.
 <</if>>
 <<switch $speech_attitude>>
-	<<case "meek">>"<<if $speech_attitude_special is "docile">>ㅁ-미안... 그런데... <</if>>ㅈ-좀 더 부드럽게 만들 수 있을까? 좀... 거칠어서." 당신이 말한다.
+	<<case "meek">>"<<if $speech_attitude_special is "docile">>미-미안... 그런데... <</if>>조-좀 더 부드럽게 만들 수 있을까? 좀... 거칠어서." 당신이 말한다.
 	<<case "flamboyant" "special" "polite">>"좀 더 부드럽게 만들면 안 될까? 난 너처럼 깃털이 많지 않아서, 나한텐 좀 거칠어." 당신이 말한다.
 	<<case "bratty">>"나뭇가지에 찔리는 거 지긋지긋해." 당신이 말한다. "더 편안하게 만들 거야."
 	<<default>>"여기, 내가 도와줄게." 당신이 말한다. "난 너처럼 깃털이 많지 않아서, 나한테는 좀 거칠어."
@@ -6596,7 +6596,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<else>>
 	<<if $monster is 1>>
 		<<your_bird_text "cap">>【이가】 곁으로 다가와 당신을 한 팔로 감싸 안는다. "너와 이렇게 나는 것은 마음이 편안해진다. 기꺼이 또 함께하겠다, <<wife>>." <<bhe>>【이가】 말한다.
-		당신은 <<bhim>>을 끌어안는다. 둘은 잠시 서로를 품에 안고 있다가, 이내 떨어진다.
+		당신은 <<bhim>>【을를】 끌어안는다. 둘은 잠시 서로를 품에 안고 있다가, 이내 떨어진다.
 	<<else>>
 		<<your_bird_text "cap">>【이가】 당신에게 슬그머니 다가와 부리로 얼굴을 어루만지며, 애정과 행복을 표현한다.
 		당신은 <<bhim>>의 머리를 쓰다듬으며 즐거웠다고 말한다. 당신의 얼굴에 닿는 <<bhis>> 부리의 감촉을 잠시 즐기다가, 마침내 몸을 뗀다.
@@ -6622,7 +6622,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 <<deviancy1>>
 
 <<if currentSkillValue("danceskill") gte 1000>>
-	<span class="green">당신의 비행은 상대 못지않게, 어쩌면 그보다 더 우아하다.</span> 당신은 <<bhim>>과 함께 하늘을 가로지르며 아름다운 춤을 엮어낸다. <<your_bird_text "cap">>【이가】 감탄한 기색을 보인다.
+	<span class="green">당신의 비행은 상대 못지않게, 어쩌면 그보다 더 우아하다.</span> 당신은 <<bhim>>【와과】 함께 하늘을 가로지르며 아름다운 춤을 엮어낸다. <<your_bird_text "cap">>【이가】 감탄한 기색을 보인다.
 <<elseif currentSkillValue("danceskill") gte 500>>
 	<span class="green">당신은 어떻게든 <<bhim>>【을를】 따라붙는다.</span> 둘의 움직임은 점차 한 편의 춤처럼 어우러진다. <<bHe>>【이가】 감탄한 기색을 보인다.
 <<else>>
@@ -6742,7 +6742,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<</if>>
 	<<bHe>>【이가】 둥지 안으로 들어와 당신과 합친다.
 <<elseif $phase is 1>>
-	당신은 다시 횃대에 내려앉는다. 몸속에서 열기가 차오르는 것이 느껴진다. 당신은 <<your_bird_text>>【이가】 내려앉기를 기다렸다가 <<bhim>>【을를】 품에 끌어안는다. 뜻밖의 행동에 <<bhim>>은 깜짝 놀란다. 당신은 살며시 <<bhis>> 머리를 아래로 끌어당긴 뒤, <<bhis>> 귀에 입술을 가져다 대고 속삭인다.
+	당신은 다시 횃대에 내려앉는다. 몸속에서 열기가 차오르는 것이 느껴진다. 당신은 <<your_bird_text>>【이가】 내려앉기를 기다렸다가 <<bhim>>【을를】 품에 끌어안는다. 뜻밖의 행동에 <<bhim>>【은는】 깜짝 놀란다. 당신은 살며시 <<bhis>> 머리를 아래로 끌어당긴 뒤, <<bhis>> 귀에 입술을 가져다 대고 속삭인다.
 	<br><br>
 
 	<<switch $speech_attitude>>
@@ -7206,8 +7206,8 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<set $eggLayNumber to random(2,4)>>
 <</if>>
 <<switch $eggLayNumber>>
-	<<case 1>><<set $eggLayText to `<span class="lewd">An egg pops out.</span>`>>
-	<<case 2>><<set $eggLayText to `<span class="lewd">An egg pops out, followed shortly by another.</span>`>>
+	<<case 1>><<set $eggLayText to `<span class="lewd">알이 하나 튀어나온다.</span>`>>
+	<<case 2>><<set $eggLayText to `<span class="lewd">알이 하나 튀어나오고, 곧이어 하나가 더 튀어나온다.</span>`>>
 	<<default>><<set $eggLayText to `<span class="lewd">알 <<number $eggLayNumber>>개가 하나씩 튀어나온다.</span>`>>
 <</switch>>
 <<switch $phase>>
@@ -7370,7 +7370,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<<if $phase gte 2>>
 		당신은 힘겨운 일을 겪은 <<bhim>>【이가】 편히 쉴 수 있도록 자리를 잡아 준다.
 		<<if $bird.syndrome gte 15 and $syndromebird isnot 1>>
-			당신의 시선이 알로 내려간다. <<bHis>> 아이. <i>당신의 아이라고,</i> 당신은 생각한다. 당신은 <<bhis>> 어깨에 머리를 기댄다. <<bHis>> 깃털은 너무나도 부드럽다. <<bhim>>과 함께 이곳에 머무는 것도 이제는 그리 나쁘지 않게 느껴진다.
+			당신의 시선이 알로 내려간다. <<bHis>> 아이. <i>당신의 아이라고,</i> 당신은 생각한다. 당신은 <<bhis>> 어깨에 머리를 기댄다. <<bHis>> 깃털은 너무나도 부드럽다. <<bhim>>【와과】 함께 이곳에 머무는 것도 이제는 그리 나쁘지 않게 느껴진다.
 			<span class="red"><<bhis>> 탓이 아니다. <<bHe>>【은는】 그저 짝을 원할 뿐이다.
 			<br>
 			스톡홀름 증후군: 거대 매 특성을 획득했습니다.</span>
@@ -7530,9 +7530,9 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<</if>>
 <<else>>
 	<<if $eggLayNumber gte 2>>
-		<span class="lewd">$eggLayNumber개의 알이</span> 당신의 _eggnantGenital을 통과해 둥지에 떨어진다.
+		<span class="lewd">$eggLayNumber개의 알이</span> 당신의 _eggnantGenital【을를】 통과해 둥지에 떨어진다.
 	<<else>>
-		<span class="lewd">알 하나가</span> 당신의 _eggnantGenital을 통과해 둥지에 떨어진다.
+		<span class="lewd">알 하나가</span> 당신의 _eggnantGenital【을를】 통과해 둥지에 떨어진다.
 	<</if>>
 <</if>>
 <<if $arousal gte $arousalmax>>
@@ -7569,7 +7569,7 @@ or ($demon gte 6 and $transformationParts.demon.wings isnot "hidden")>>
 	<br><br>
 	<<wearProp `"hawk egg " + Math.clamp(_eggIcon, 1, 3)`>>
 	<<if $syndromebird isnot 1 and $bird.syndrome gte 15>>
-		당신의 시선이 알로 내려간다. 당신의 아이. 본능적인 사명감이 마음속을 가득 채운다. 당신은 <<bhis>> 어깨에 머리를 기댄다. <<bHis>> 깃털은 너무나 부드럽다. <<bhim>>과 함께 이곳에 머무는 것도 이제는 그리 나쁘지 않게 느껴진다.
+		당신의 시선이 알로 내려간다. 당신의 아이. 본능적인 사명감이 마음속을 가득 채운다. 당신은 <<bhis>> 어깨에 머리를 기댄다. <<bHis>> 깃털은 너무나 부드럽다. <<bhim>>【와과】 함께 이곳에 머무는 것도 이제는 그리 나쁘지 않게 느껴진다.
 		<span class="red"><<bhis>> 탓이 아니다. <<bHe>>【은는】 그저 짝을 원할 뿐이다.
 		<br>
 		스톡홀름 증후군: 거대 매 특성을 획득했습니다.</span>

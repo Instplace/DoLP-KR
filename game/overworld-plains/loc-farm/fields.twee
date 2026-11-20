@@ -499,7 +499,7 @@
 <<seductionskilluse>>
 
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
-	"ㅈ-재미 좀 보지 않을래요?" 당신이 나긋하게 말한다.
+	"재-재미 좀 보지 않을래요?" 당신이 나긋하게 말한다.
 <<elseif $speech_attitude is "bratty">>
 	"재미 좀 보자." 당신이 말한다.
 <<else>>

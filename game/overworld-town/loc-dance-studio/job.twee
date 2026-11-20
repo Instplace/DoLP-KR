@@ -2443,7 +2443,7 @@
 <<effects>>
 <<endevent>>
 <<beastNEWinit 1 horse>>
-<<if beastSexEnabledForType("horse", $monster is 1) and random(1, 2) is 2 and not ($NPCList[0] and $NPCList[0].lewdBlocked))>>
+<<if beastSexEnabledForType("horse", $monster is 1) and random(1, 2) is 2 and not ($NPCList[0] and $NPCList[0].lewdBlocked)>>
 	"그럴 가치가 있나?" 가면 쓴 손님 중 한 명이 유리창 너머로 당신을 들여다보며 묻는다. "고작 그 돈 때문에 말을 상대하다니." 당신의 <<bottom>>에 털이 눌리는 것이 느껴진다.
 	<br><br>
 

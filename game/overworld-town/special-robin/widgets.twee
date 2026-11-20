@@ -1075,14 +1075,14 @@
 
 <<widget "depositBaileyExitConfirm">>
 	<<if _args[0] is 0>>
-		<<set _rentstage to $rentstage - 1>>
+		<<set _rentstage to $rentStage - 1>><<set _rentMoneyNow to $rentMoney>>
 		<<set _baileyDepositMax to 0>>
 		<<for _i to 1; _i <= $depositMax; _i++>>
-			<<set $rentmoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp(_rentstage,0,6)]>>
+			<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp(_rentstage,0,6)]>>
 			<<rentmod>>
 			<<set _rentstage += 1>>
-			<<set _baileyDepositMax += $rentmoney + ($babyRent or 0)>>
-		<</for>>
+			<<set _baileyDepositMax += $rentMoney + ($babyRent or 0)>>
+		<</for>><<set $rentMoney to _rentMoneyNow>>
 		<<if $baileyDeposit + _depositAmount gte _baileyDepositMax and $depositMax gt 0>>
 			보증금은 <span class="gold">$depositMax</span>주 치까지만 낼 수 있으며, 이는 <<printmoney _baileyDepositMax>>에 해당한다.
 			<br>

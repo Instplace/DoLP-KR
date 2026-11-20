@@ -1221,6 +1221,17 @@
 	<</if>>
 <</widget>>
 
+<<widget "footwork">>
+	<<if _args[0] and $statFreeze isnot true>>
+		<<if $combatExtended.footwork gt 1000 or $AMCTraits.halfGain is 1>>
+			<<set $combatExtended.footwork += _args[0] / $AMCTraits.footwork * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))>>
+		<<else>>
+			<<set $combatExtended.footwork += _args[0] * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))>>
+		<</if>>
+		<<set $combatExtended.footwork to Math.clamp($combatExtended.footwork, 0, 1000 * $AMCTraits.footwork)>>
+	<</if>>
+<</widget>>
+
 <<widget "bruise">>
 	<<if _args[0] and $statFreeze isnot true>>
 		<<switch _args[0]>>
@@ -2949,7 +2960,7 @@
 	<<if $location is "cafe">>
 		<<set _profit to _profit + 500>>
 	<</if>>
-	<span class="gold"><<printmoney _profit>> <<if random(1, 10000) is 10000>>브루주프를 획득했다.<<else>>벌었다.<</if>></span>
+	<span class="gold"><<printmoney _profit>> <<if random(1, 10000) is 10000>>브루주프를 획득한다.<<else>>번다.<</if>></span>
 	<<money _profit `_args[0] ? _args[0] : ""`>>
 	<<if $tip gte 50000>>
 		<<earnFeat "Negotiator">>
@@ -3228,11 +3239,11 @@
 	<<elseif $location is "island">>
 		/* Steal a specific antique like a wooden carving? */
 		<<if $rng gte 91>>
-			<span class="green">나뭇가지를 발견했다.</span><<set $island.wood += 1>>
+			<span class="green">나뭇가지를 발견한다.</span><<set $island.wood += 1>>
 		<<elseif $rng gte 76>>
-			<span class="green">호두 한 줌을 발견했다.</span><<set $island.walnut += 1>>
+			<span class="green">호두 한 줌을 발견한다.</span><<set $island.walnut += 1>>
 		<<else>>
-			<span class="red">훔칠 만한 물건을 찾지 못했다.</span>
+			<span class="red">훔칠 만한 물건을 찾지 못한다.</span>
 			<<set _emptyHanded to true>>
 		<</if>>
 	<<elseif $location is "farm" and ($livestock.dig.fence isnot undefined or $livestock.dig.barn isnot undefined)>>
@@ -3241,19 +3252,19 @@
 			<<set $livestock.lock.unlocked to false>>
 			당신은 <<persons>> 주머니에서 <span class="green">열쇠 꾸러미</span>를 빼내어 짚단 안에 숨긴다.
 		<<else>>
-			<span class="red">훔칠 만한 물건을 찾지 못했다.</span>
+			<span class="red">훔칠 만한 물건을 찾지 못한다.</span>
 			<<set _emptyHanded to true>>
 		<</if>>
 	<<elseif ["naked", "schoolSwim"].includes(_stealType)>>
-		<span class="red">훔칠 만한 물건을 찾지 못했다.</span>
+		<span class="red">훔칠 만한 물건을 찾지 못한다.</span>
 		<<set _emptyHanded to true>>
 	<<elseif $rng gte 96 and $spray lt $spraymax>>
 		<<spray 1>>
-		<span class="green">페퍼 스프레이 충전재를 훔쳤다.</span>
+		<span class="green">페퍼 스프레이 충전재를 훔친다.</span>
 		<<crimeUp 50 "petty">>
 	<<elseif $rng gte 91 and !$compound.card>>
 		<<set $compound.card to true>>
-		<span class="green">이상한 카드를 훔쳤다.</span> 카드에는 <span class="gold">엘크 가</span>의 어떤 장소 주소가 적혀 있다.
+		<span class="green">이상한 카드를 훔친다.</span> 카드에는 <span class="gold">엘크 가</span>의 어떤 장소 주소가 적혀 있다.
 	<<else>>
 		<<rng 5 100>>
 		<<moneyGain $rng>>【을를】 훔친다.
@@ -5730,7 +5741,7 @@
 	<</silently>>
 	<<if $options.debugdisable is "f" and $_fail is true>>
 		<<error {
-			message	: `bodyliquid 위젯: ${Utils.GetStack()} 실패. 제보해 주세요`,
+			message	: `bodyliquid 위젯: ${Utils.GetStack()} 실패. 제보해 주십시오`,
 			source	: `Arguments: ${$_bodypart} | ${_args[0]} | ${_args[1]} | ${_args[2]} | ${_args[3]}.`
 		}>>
 	<</if>>
@@ -6358,9 +6369,9 @@
 
 		<<if !$settings.blindStatsEnabled>>
 			<<if _refreshTrap>>
-				<span class="blue"><i>베일리의 깡패들이 지금 <<print _location.toUpperFirst()>> 가에서 당신을 적극적으로 찾고 있다. 한동안은 이곳에 돌아오지 않는 편이 좋을 것이다.</i></span>
+				<span class="blue"><i>베일리의 깡패들이 지금 <<print window.getMapNameKr(_location.toUpperFirst() + " Street")>>에서 당신을 적극적으로 찾고 있다. 한동안은 이곳에 돌아오지 않는 편이 좋을 것이다.</i></span>
 			<<else>>
-				<span class="blue"><i>베일리의 깡패들에게 <<print _location.toUpperFirst()>> 가에서 모습을 들켰으므로, 한동안 이 근처에서 당신을 찾고 있을 것이다.</i></span>
+				<span class="blue"><i>베일리의 깡패들에게 <<print window.getMapNameKr(_location.toUpperFirst() + " Street")>>에서 모습을 들켰으므로, 한동안 이 근처에서 당신을 찾고 있을 것이다.</i></span>
 			<</if>>
 			<br><br>
 		<</if>>

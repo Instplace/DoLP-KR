@@ -1798,7 +1798,7 @@
 <<elseif playerBellyVisible() and getActivePregnancies("pc").some(p => p.donor is "Harper's serum")>>
 	"<<phim>>에게 최고 품질의 음식과 신선한 공기, 그리고 물을 꼭 주세요. 제 혈청은 대상의 상태가 좋을 때 가장 효과가 좋습니다." <<He>>【은는】 당신의 엉덩이를 애정 어리게 두드린다.
 <<elseif playerBellyVisible()>>
-	"<<phim>>에게 많은 음식과 신선한 공기, 그리고 물을 꼭 주세요. <<pShe>> 아이를 가졌습니다. 영양을 공급해야 합니다."
+	"<<phim>>에게 많은 음식과 신선한 공기, 그리고 물을 꼭 주세요. <<pShe>>【은는】 아이를 가졌습니다. 영양을 공급해야 합니다."
 <<else>>
 	"스트레스가 우유 생산에 영향을 줄 수 있어요. 좀 더 개인적인 관심을 기울이면 도움이 될 거예요."
 <</if>>

@@ -1876,7 +1876,7 @@
 	포피가 문을 닫는다. "이게 다 널 위한 거야." <<He>>【은는】 안쓰럽다는 듯 당신에게 미소 짓는다.
 <</if>>
 <<poppyOpiumPulse>>
-<<set $renttime to 7>><<set $rentday to Time.weekDay>>
+<<set $rentTime to 7>><<set $rentDay to Time.weekDay>>
 <<link [[다음|Flats Poppy Living Room]]>><</link>>
 
 :: Flats Poppy Bailey Plead
@@ -1893,19 +1893,19 @@
 	<</if>>
 	<<He>>【은는】 망설이는 듯하다. <<he>>【이가】 고민하는 동안 베일리가 <<him>>【을를】 쳐다본다.
 	<br><br>
-	<<set _rentOwed to ($rentmoney + ($babyRent or 0))>>한숨을 내쉬며 포피는 결국 마음을 굽혀, 당신이 베일리에게 빚진 <<printmoney _rentOwed>>【을를】 대신 낸다.
+	<<set _rentOwed to ($rentMoney + ($babyRent or 0))>>한숨을 내쉬며 포피는 결국 마음을 굽혀, 당신이 베일리에게 빚진 <<printmoney _rentOwed>>【을를】 대신 낸다.
 	<<npcincr Poppy love -1>><<llove>><<npcincr Poppy patience -1>><<lpatience>>
 	<br><br>
-	<<set $rentmoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentstage,1,6)]>><<rentmod>>
+	<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentStage,1,6)]>><<rentmod>>
 	베일리가 포피의 손에서 돈을 받아 세기 시작한다. 다 세고 나서 베일리는 고개를 끄덕인다.
-	<<if $rentstage is 1>>
-		"다음 주에는 <<printmoney $rentmoney "pink">><<babyRentDisplay " 추가로, " " 아이들을 돌보지 않는다면" "pink">>【을를】 가져와. 점점 쉬워질 거라고 생각한 건 아니겠지?"
+	<<if $rentStage is 1>>
+		"다음 주에는 <<printmoney $rentMoney "pink">><<babyRentDisplay " 추가로, " " 아이들을 돌보지 않는다면" "pink">>【을를】 가져와. 점점 쉬워질 거라고 생각한 건 아니겠지?"
 	<<else>>
-		"다음 주에는 <<printmoney $rentmoney "pink">><<babyRentDisplay " 추가로, " " 아이들을 돌보지 않는다면" "pink">>【을를】 가져와."
+		"다음 주에는 <<printmoney $rentMoney "pink">><<babyRentDisplay " 추가로, " " 아이들을 돌보지 않는다면" "pink">>【을를】 가져와."
 	<</if>>
 	<<set $baileydefeatedchain to 0>><<set $baileyRefusedToPay to 0>><<set $baileypaychain to ($baileypaychain || 0) + 1>>
 	<<unset $bailey_encroach>>
-	<<set $rentstage += 1>><<set $renttime to 7>><<set $rentday to Time.weekDay>>
+	<<set $rentStage += 1>><<set $rentTime to 7>><<set $rentDay to Time.weekDay>>
 	<br><br>
 	베일리가 돌아서 떠나고 포피가 문을 닫는다. "다음부터는 네 개인적인 일은 네가 더 책임지고 처리해. 내가 매번 도와줄 수는 없어, 특히 그렇게 갑자기 나한테 떠넘기면 곤란해."
 	<br><br>
@@ -1936,13 +1936,13 @@
 
 :: Flats Poppy Bailey Refuse
 <<set $outside to 0>><<effects>><<run poppySchedule()>>
-<<set _rentDue to $rentmoney + ($babyRent or 0)>>
+<<set _rentDue to $rentMoney + ($babyRent or 0)>>
 <<set $baileypaychain to 0>><<set $baileyRefusedToPayTotal += _rentDue>><<set $baileyRefusedToPayTotalStat += _rentDue>>
-<<set $renttime to 7>><<set $rentday to Time.weekDay>>
+<<set $rentTime to 7>><<set $rentDay to Time.weekDay>>
 <<if ($speech_attitude is "meek" or $speech_attitude is "shy")>>
 	"아, 아니." 당신은 자신의 용기에 스스로 놀라 말을 더듬는다. "안 낼 거야."
 <<elseif $speech_attitude is "docile">>
-	당신은 돈을 움켜쥐어 가슴에 바짝 붙인다. "싫어! ㅈ-줄 수 없어."
+	당신은 돈을 움켜쥐어 가슴에 바짝 붙인다. "싫어! 주-줄 수 없어."
 <<elseif $speech_attitude is "confident">>
 	당신은 베일리의 시선을 마주한다. "이 돈은 네 게 아니야. 내가 갖고 있을 거야."
 <<elseif ($speech_attitude is "bratty" or $speech_attitude is "cruel")>>

@@ -65,7 +65,7 @@ function masturbationEffects() {
 	if (V.corruptionMasturbation) {
 		if (pcAreArmsBound("both")) {
 			sWikifier(
-				'귀 속 슬라임에 의해 당신은 팔을 묶은 구속을 풀려고 한다. 하지만 진전이 없자, <span class="blue">슬라임은 포기한다.</span><<arousal 600 "masturbation">><<stress 6>><<gstress>><<garousal>>'
+				'귀 슬라임에 의해 당신은 팔을 묶은 구속을 풀려고 한다. 하지만 진전이 없자, <span class="blue">슬라임은 포기한다.</span><<arousal 600 "masturbation">><<stress 6>><<gstress>><<garousal>>'
 			);
 			fragment.append(" ");
 			V.rightaction = "mrest";
@@ -77,7 +77,7 @@ function masturbationEffects() {
 			(playerHeatMinArousal() + playerRutMinArousal() >= 1000 && V.earSlime.growth >= 100 && V.earSlime.defyCooldown)
 		) {
 			sWikifier(
-				'귀 속 슬라임은 지금 당신에게 자위를 강요할 가치가 없다고 느끼고, <span class="blue">당신을 놓아준다.</span>'
+				'귀 슬라임은 지금 당신에게 자위를 강요할 가치가 없다고 느끼고, <span class="blue">당신을 놓아준다.</span>'
 			);
 			fragment.append(" ");
 			V.corruptionMasturbation = false;
@@ -92,7 +92,7 @@ function masturbationEffects() {
 						// Prevents the PC from continuing actions that they normally are unable to do yet
 						if (V.mouth === "mpenis") {
 							sWikifier(
-								'<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 입에서 <<penis>>【을를】 빼내고 물러난다.</span>'
+								'<span class="green">귀 슬라임이 통제력을 잃자, 당신은 입에서 <<penis>>【을를】 빼내고 물러난다.</span>'
 							);
 							fragment.append(" ");
 							V.mouthactiondefault = "rest";
@@ -100,7 +100,7 @@ function masturbationEffects() {
 							V.mouth = 0;
 							V.penisuse = 0;
 						} else if (V.mouth === "mpenisentrance") {
-							sWikifier('<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 <<penis>>에서 물러난다.</span>');
+							sWikifier('<span class="green">귀 슬라임이 통제력을 잃자, 당신은 <<penis>>에서 물러난다.</span>');
 							fragment.append(" ");
 							V.mouthactiondefault = "rest";
 							V.mouthaction = 0;
@@ -108,7 +108,7 @@ function masturbationEffects() {
 							V.penisuse = 0;
 						} else if (V.mouth === "mchastityparasiteentrance") {
 							sWikifier(
-								'<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 정조대 기생충에서 물러난다.</span>'
+								'<span class="green">귀 슬라임이 통제력을 잃자, 당신은 정조대 기생충에서 물러난다.</span>'
 							);
 							fragment.append(" ");
 							V.mouthactiondefault = "rest";
@@ -116,7 +116,7 @@ function masturbationEffects() {
 							V.mouth = 0;
 							V.penisuse = 0;
 						} else if (V.mouth === "mvaginaentrance") {
-							sWikifier('<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 <<pussy>>에서 물러난다.</span>');
+							sWikifier('<span class="green">귀 슬라임이 통제력을 잃자, 당신은 <<pussy>>에서 물러난다.</span>');
 							fragment.append(" ");
 							V.mouthactiondefault = "rest";
 							V.mouthaction = 0;
@@ -124,11 +124,11 @@ function masturbationEffects() {
 						} else if (V.mouth === "mbreast" || V.leftarm === "mbreasthold" || V.rightarm === "mbreasthold") {
 							if (V.mouth === "mbreast") {
 								sWikifier(
-									'<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 <<breasts>>에서 입을 뗀다.</span>'
+									'<span class="green">귀 슬라임이 통제력을 잃자, 당신은 <<breasts>>에서 입을 뗀다.</span>'
 								);
 							} else {
 								sWikifier(
-									'<span class="green">귀 속 슬라임이 통제력을 잃자, 당신은 <<breasts>>【을를】 쥐는 것을 멈춘다.</span>'
+									'<span class="green">귀 슬라임이 통제력을 잃자, 당신은 <<breasts>>【을를】 쥐는 것을 멈춘다.</span>'
 								);
 							}
 							fragment.append(" ");
@@ -298,7 +298,7 @@ function masturbationEffects() {
 	) {
 		V.corruptionMasturbation = true;
 		V.corruptionMasturbationCount = random(1, 4);
-		fragment.append(span("귀 속 슬라임은 당신이 더 즐기길 바란다고 결심한다.", "red"));
+		fragment.append(span("귀 슬라임은 당신이 더 즐기길 바란다고 결심한다.", "red"));
 		fragment.append(" ");
 	}
 
@@ -351,7 +351,7 @@ function masturbationEffectsArms(
 		) {
 			V.corruptionMasturbation = true;
 			V.corruptionMasturbationCount = random(2, 6);
-			fragment.append(span("귀 속 슬라임은 당신 대신 계속하기로 정했다.", "red"));
+			fragment.append(span("귀 슬라임은 당신 대신 계속하기로 정했다.", "red"));
 			fragment.append(" ");
 			clearAction(0);
 		} else {
@@ -854,11 +854,11 @@ function masturbationEffectsArms(
 					} else if (V.arousal >= (V.arousalmax / 5) * 3) {
 						fragment.append(span(`당신은 ${
 									handsOn > 1 ? "양쪽 " : ""
-								}유두을 견딜 수 있는 만큼 꼬집는다.`));
+								}유두를 견딜 수 있는 만큼 꼬집는다.`));
 					} else {
 						fragment.append(span(`당신은 ${
 									handsOn > 1 ? "양쪽 " : ""
-								}유두을 가볍게 꼬집는다.`));
+								}유두를 가볍게 꼬집는다.`));
 					}
 				}
 			} else {
@@ -918,7 +918,7 @@ function masturbationEffectsArms(
                 } else if (!V.worn.under_lower.vagina_exposed) {
                     sWikifier(`손가락으로 <<penis>>【을를】 훑는다${calculatePenisBulge() ? ", <<exposedlower>> 아래의 불룩한 윤곽이 느껴진다" : ""}.`);
                 } else {
-                    sWikifier(`손가락으로<<penis>>【을를】 훑다가 잠시 멈칫한다. <span class="red">아무것도 느껴지지 않는다.</span>`);
+                    sWikifier(`손가락으로 <<penis>>【을를】 훑다가 잠시 멈칫한다. <span class="red">아무것도 느껴지지 않는다.</span>`);
                 }
 			} else {
 				wikifier("arousal", 100 * handsOn, "masturbationGenital");
@@ -2301,7 +2301,7 @@ function masturbationEffectsArms(
 			V.vaginause = "mvaginafist";
 			wikifier("arousal", 650, "masturbationVagina");
 			sWikifier(
-				`<span class="lblue">마지막으로 힘을 주자 손가락 다섯 개를 모두 보지 안으로 밀어 넣을 수 있었다.</span> 근육이 침입을 받아들이듯 벌어지고, 손 주위에서 맥동하는 것이 느껴진다.`
+				`<span class="lblue">마지막으로 힘을 주자 손가락 다섯 개를 모두 보지 안으로 밀어 넣을 수 있다.</span> 근육이 침입을 받아들이듯 벌어지고, 손 주위에서 맥동하는 것이 느껴진다.`
 			);
 			break;
 		case "mvaginatease":
@@ -3132,7 +3132,7 @@ function masturbationEffectsMouth({
 				if (V.awareness < 200 && V.corruptionMasturbation) {
 					wikifier("awareness", 1);
 					sWikifier(
-						`<span class="red">귀 속의 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
+						`<span class="red">귀 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
 					);
 					fragment.append(" ");
 				}
@@ -3158,7 +3158,7 @@ function masturbationEffectsMouth({
 				if (V.awareness < 200 && V.corruptionMasturbation) {
 					wikifier("awareness", 1);
 					sWikifier(
-						`<span class="red">귀 속의 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
+						`<span class="red">귀 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
 					);
 					fragment.append(" ");
 				}
@@ -3396,7 +3396,7 @@ function masturbationEffectsMouth({
 				if (V.awareness < 200 && V.corruptionMasturbation) {
 					wikifier("awareness", 1);
 					sWikifier(
-						`<span class="red">귀 속의 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
+						`<span class="red">귀 슬라임이 당신을 억지로 숙이게 만든다. 앞으로 벌어질 일을 좋아하게 될지는 확신할 수 없다.</span><<gawareness>>`
 					);
 					fragment.append(" ");
 				}

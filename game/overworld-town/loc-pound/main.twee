@@ -1451,7 +1451,7 @@
 <<effects>>
 
 <<if $danceSuccess>>
-	당신은 <<beasttype>>【을를】 계속 씻긴다. <<bhes>>【이가】 물을 튀길 것 같을 때 뒤로 물러선다. <span class="green">당신은 젖지 않고 버텨냈다.</span>
+	당신은 <<beasttype>>【을를】 계속 씻긴다. <<bhes>> 물을 튀길 것 같을 때 뒤로 물러선다. <span class="green">당신은 젖지 않고 버텨냈다.</span>
 <<else>>
 	당신은 <<beasttype>>【을를】 계속 씻긴다. <span class="red">경고도 없이</span>, <<bhe>>【은는】 <<bhis>> 털을 흔들어 <span class="red">당신을 물에 흠뻑 적신다.</span><<gstress>><<stress 6>>
 	<<wetAll>>

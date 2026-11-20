@@ -68,7 +68,7 @@
 	<span class="purple">포피는 <<nnpc_his "Poppy">> 집 안에서 각성제를 사용하는 것을 금지했다.</span>
 	<br>
 <<elseif $mathsstim gte 1 and modLISelected("Poppy") and $location is "flats">>
-	<<pillicon "stimulant">><<link [["각성제를 사용한다 (" + _timeString + ")"|Maths Project Stim Poppy]]>><<set $mathschance += 16>><</link>><<gggmaths>>
+	<<pillicon "stimulant">><<link [["각성제를 사용한다 (" + _timeString + ")"|Math Project Stim poppy]]>><<set $mathschance += 16>><</link>><<gggmaths>>
 	<br>
 <<elseif $mathsstim gte 1>>
 	<<pillicon "stimulant">><<link [["각성제를 사용한다 (" + _timeString + ")"|Maths Project Stim]]>><<if (($location is "home" or $location is "alex_cottage") and _chair.type.includes("comfy")) or $location is "avery_mansion">><<set $mathschance += 20>><<else>><<set $mathschance += 16>><</if>><<set $mathsstim -= 1>><<set $mathsstimused += 1>><<mathsskill 40>><<pass _finalTime>><</link>><<gggmaths>>
@@ -540,7 +540,7 @@
 포피는 각성제를 쓰레기통에 던져 넣고 방을 나선다.
 <br><br>
 <<set $poppySeen.push("stimulant_use")>>
-<<link [[다음|Flat Poppy Bedroom]]>><</link>>
+<<link [[다음|Flats Poppy Bedroom]]>><</link>>
 
 :: Maths Project Robin
 <<effects>>
@@ -1064,7 +1064,7 @@
 	<<maninit>>
 
 	<<if $pain gt 90>>
-		"<<pShes>>【은는】 기절할 거야." 누군가 말하는 소리가 들린다. "<<phim>>에게 한 알 줘." 한 손이 당신의 머리카락을 잡아 머리를 뒤로 젖히고, 다른 손이 분홍색 알약을 입에 억지로 밀어 넣는다.
+		"<<pShes>> 기절할 거야." 누군가 말하는 소리가 들린다. "<<phim>>에게 한 알 줘." 한 손이 당신의 머리카락을 잡아 머리를 뒤로 젖히고, 다른 손이 분홍색 알약을 입에 억지로 밀어 넣는다.
 		<<garousal>><<lpain>><<drugs 60>><<set $pain to 90>>
 		<br><br>
 	<</if>>
