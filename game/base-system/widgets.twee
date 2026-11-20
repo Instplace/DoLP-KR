@@ -970,32 +970,32 @@
 		<<set _chair to Furniture.get('chair', $location)>>
 		<<if $location is "avery_mansion">>
 			<<set _studyGain to 2>>
-		<<elseif _chair.name is "egg armchairs">>
+		<<elseif _chair.id is "egg">>
 			<<set _studyGain to 1.75>>
-		<<elseif _chair.name is "armchairs">>
+		<<elseif _chair.id is "armchair">>
 			<<set _studyGain to 1.5>>
-		<<elseif _chair.name is "shell chairs">>
+		<<elseif _chair.id is "shellchair">>
 			<<set _studyGain to 1.25>>
-		<<elseif _chair.name is "swivel chairs">>
+		<<elseif _chair.id is "swivelchair">>
 			<<set _studyGain to 1>>
-		<<elseif _chair.name is "wooden chairs" or $location is "cabin">>
+		<<elseif _chair.id is "woodenchair" or $location is "cabin">>
 			<<set _studyGain to 0.75>>
-		<<elseif _chair.name is "stools">>
+		<<elseif _chair.id is "stool">>
 			<<set _studyGain to 0.5>>
-		<<elseif _chair.name is "chair">>
+		<<elseif _chair.id is "chair">>
 			<<set _studyGain to 0.25>>
 		<</if>>
 
 		<<set _desk to Furniture.get('desk', $location)>>
 		<<if $location is "avery_mansion">>
 			<<set _studyGain += 2>>
-		<<elseif _desk.name is "antique desk">>
+		<<elseif _desk.id is "deskAntique">>
 			<<set _studyGain += 1.5>>
-		<<elseif _desk.name is "mid-century modern desk">>
+		<<elseif _desk.id is "deskMidcentury">>
 			<<set _studyGain += 1>>
-		<<elseif _desk.name is "glass desk">>
+		<<elseif _desk.id is "deskGlass">>
 			<<set _studyGain += 0.5>>
-		<<elseif _desk.name is "basic desk">>
+		<<elseif _desk.id is "desk">>
 			<<set _studyGain += 0>>
 		<</if>>
 		<<if $studyBooks.rented.science is 1>>
@@ -6403,7 +6403,7 @@
 	<<for _i to 0; _i lt _food_keys.length; _i++>>
 		<<set _food to _food_keys[_i]>>
 		<<if setup.foodstuff[_food].category is "seafood">>
-			<<if ($foodstuff[_food]?.amount gte 1 and !["prawn", "clam", "bait_fish", "bait_worm"].includes(setup.foodstuff[_food].name) or $foodstuff[_food]?.amount gte 12)>>
+			<<if ($foodstuff[_food]?.amount gte 1 and !["prawn", "clam", "bait_fish", "bait_worm"].includes(_food) or $foodstuff[_food]?.amount gte 12)>>
 				<<set _fish_gift_found to true>>
 				<label><<foodstufficon _food>><<print $foodstuff[_food].name.toUpperFirst()>> (<<print $foodstuff[_food].amount>>) <<radiobutton "$gift" _food checked>></label> |
 			<</if>>

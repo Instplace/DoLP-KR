@@ -3349,7 +3349,7 @@
 			<<case 3>>
 				<<set _change to random(100,500)>>
 
-				주인이 안쪽에서 물건을 정리하고 있는 가판대를 발견한다. 카운터 위에 잔돈이 있다. 원한다면 몰래 집어갈 수 있을 것 같다.
+				주인이 안쪽에서 물건을 정리하고 있는 가판대를 발견한다. 카운터 위에 잔돈 <<printmoney _change>>【이가】 있다. 원한다면 몰래 집어갈 수 있을 것 같다.
 				<br><br>
 
 				<<crimeicon "mark">><<link [[잔돈을 훔친다|Connudatus Street]]>><<crimeUp 1 "petty">><<money _change>><<endevent>><</link>><<crime "petty">>

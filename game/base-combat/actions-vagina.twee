@@ -203,9 +203,9 @@
 	<<set _vaginaaction["끝을 자극한다"] to "penistease">>
 	<<if $settings.vaginalDoubleEnabled and _secondtarget is true and ($anususe is 0 or ($anususe isnot 0 and $anususe isnot "penisdouble")) and $awareness gte 300 and !["legLock","legLocked"].includes($feetuse)>>
 		<<if $npc.includes($NPCList[$vaginadoubletarget].fullDescription)>>
-			<<set _vaginaaction[$NPCList[$vaginadoubletarget].fullDescription + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
+			<<set _vaginaaction[window.KR.getDescriptionKr($NPCList[$vaginadoubletarget].fullDescription) + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
 		<<else>>
-			<<set _vaginaaction[$NPCList[$vaginadoubletarget].fullDescription + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
+			<<set _vaginaaction[window.KR.getDescriptionKr($NPCList[$vaginadoubletarget].fullDescription) + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
 		<</if>>
 	<</if>>
 <</widget>>
@@ -242,9 +242,9 @@
 	<</if>>
 	<<if $settings.vaginalDoubleEnabled and _secondtarget is true and ($anususe is 0 or ($anususe isnot 0 and $anususe isnot "penisdouble")) and $awareness gte 300 and !["legLock","legLocked"].includes($feetuse)>>
 		<<if $npc.includes($NPCList[$vaginadoubletarget].fullDescription)>>
-			<<set _vaginaaction[$NPCList[$vaginadoubletarget].fullDescription + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
+			<<set _vaginaaction[window.KR.getDescriptionKr($NPCList[$vaginadoubletarget].fullDescription) + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
 		<<else>>
-			<<set _vaginaaction[$NPCList[$vaginadoubletarget].fullDescription + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
+			<<set _vaginaaction[window.KR.getDescriptionKr($NPCList[$vaginadoubletarget].fullDescription) + "의 " + window.KR.getPenisDescKr($NPCList[$vaginadoubletarget].penisdesc) + " 위로 올라탄다"] to "vaginatopenisdouble">>
 		<</if>>
 	<</if>>
 <</widget>>

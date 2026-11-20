@@ -629,47 +629,47 @@
 	미키가 고개를 젓는다. "<span class="red">미안.</span> 네 <<fameProse $pubfame.target>> 평판은 너무 최근에 건드렸어. 소문판을 더 건드렸다가는 역효과가 날 거야. 그건 도와줄 수 없어." 그들이 어깨를 으쓱한다. "원한다면 지금 영구적으로 <<if $pubfame.goal.includes("Lower")>>낮출<<else>>올릴<</if>> 수는 있어. 하지만 일시적인 건 안 돼. 아직은. 다시 골라 줘."
 	<br><br>
 
-	<span class="gold">당신은 <<fameProse $pubfame.target>> 명성을 다시 일시적으로 바꿀 수 있습니다
+	<span class="gold">당신은 <<fameProse $pubfame.target>>【을를】 다시 일시적으로 바꿀 수 있습니다
 	<<if $fameDecayTimer[$pubfame.goal] gt 1>><<number $fameDecayTimer[$pubfame.goal]>>일 뒤에<<else>>내일<</if>>.</span>
 
 <<elseif $pubfame.goal.includes("Raise") and ["sex","rape","bestiality","exhibitionism"].includes($pubfame.target)>>
-	미키가 눈을 깜빡인다. "네 <<fameProse $pubfame.target>> 명성을 높여달라고? 그건 너한테 해만 될 텐데." 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
+	미키가 눈을 깜빡인다. "네 <<fameProse $pubfame.target>>【을를】 높여달라고? 그건 너한테 해만 될 텐데." 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
 
 <<elseif $pubfame.goal.includes("Lower") and ["scrap","good","business","social","pimp"].includes($pubfame.target)>>
-	미키가 눈을 깜빡인다. "네 <<fameProse $pubfame.target>> 명성을 낮춰달라고? 그건 너한테 해만 될 텐데." 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
+	미키가 눈을 깜빡인다. "네 <<fameProse $pubfame.target>>【을를】 낮춰달라고? 그건 너한테 해만 될 텐데." 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
 
 <<elseif $pubfame.goal.includes("Raise") and $pubfame.target is "prostitution">>
-	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>> 명성을 높여달라고? 뭐, 화대라도 올리고 싶은 건가?" 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
+	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>>【을를】 높여달라고? 뭐, 화대라도 올리고 싶은 건가?" 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
 
 <<elseif $pubfame.goal.includes("Raise") and ["pregnancy", "impreg"].includes($pubfame.target)>>
-	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>> 명성을 높여달라고? 그렇게 가족이 절실한 거야?" 그들이 얼굴을 찡그린다. "미안. 무신경했네. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
+	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>>【을를】 높여달라고? 그렇게 가족이 절실한 거야?" 그들이 얼굴을 찡그린다. "미안. 무신경했네. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
 
 <<elseif $pubfame.goal.includes("Lower") and $pubfame.target is "model">>
-	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>> 명성을 낮춰달라고? 스타덤이 부담스러워졌나 보지?" 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
+	미키가 눈썹을 치켜올린다. "네 <<fameProse $pubfame.target>>【을를】 낮춰달라고? 스타덤이 부담스러워졌나 보지?" 그들이 어깨를 으쓱한다. "네가 원한다면야. 쉬운 일이니, <span class="green">간단한 부탁 하나 들어주면 돼.</span>"
 
 <<elseif $pubfame.goal is "permRaise" and $pubfame.target is "scrap">>
-	미키가 이를 악물고 숨을 들이쉰다. "네 <<fameProse $pubfame.target>> 명성을 영구적으로 높이는 거라. 그건 어렵겠네. <span class="pink">대신 큰 부탁 하나 들어줘야 할 거야.</span> 억지로 수락하라는 건 아니고."
+	미키가 이를 악물고 숨을 들이쉰다. "네 <<fameProse $pubfame.target>>【을를】 영구적으로 높이는 거라. 그건 어렵겠네. <span class="pink">대신 큰 부탁 하나 들어줘야 할 거야.</span> 억지로 수락하라는 건 아니고."
 
 <<elseif $pubfame.goal is "permLower" and $pubfame.target is "exhibitionism">>
-	미키가 이를 악물고 숨을 들이쉰다. "네 <<fameProse $pubfame.target>> 명성을 영구적으로 낮추는 거라. 그건 어렵겠네. <span class="pink">대신 큰 부탁 하나 들어줘야 할 거야.</span> 억지로 수락하라는 건 아니고."
+	미키가 이를 악물고 숨을 들이쉰다. "네 <<fameProse $pubfame.target>>【을를】 영구적으로 낮추는 거라. 그건 어렵겠네. <span class="pink">대신 큰 부탁 하나 들어줘야 할 거야.</span> 억지로 수락하라는 건 아니고."
 
 <<elseif $pubfame.goal is "permLower" and ["sex","prostitution","rape","bestiality","pregnancy","impreg"].includes($pubfame.target)>>
-	"영구적으로 <<fameProse $pubfame.target>> 명성을 낮추는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
+	"영구적으로 <<fameProse $pubfame.target>>【을를】 낮추는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
 
 <<elseif $pubfame.goal is "permRaise" and ["good","business","social","model","pimp"].includes($pubfame.target)>>
-	"영구적으로 <<fameProse $pubfame.target>> 명성을 올리는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
+	"영구적으로 <<fameProse $pubfame.target>>【을를】 올리는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
 
 <<elseif $pubfame.goal is "tempRaise" and $pubfame.target is "scrap">>
-	"일시적으로 <<fameProse $pubfame.target>> 명성을 올리는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
+	"일시적으로 <<fameProse $pubfame.target>>【을를】 올리는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
 
 <<elseif $pubfame.goal is "tempLower" and $pubfame.target is "exhibitionism">>
-	"일시적으로 <<fameProse $pubfame.target>> 명성을 낮추는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
+	"일시적으로 <<fameProse $pubfame.target>>【을를】 낮추는 거, 알았어." 미키가 당신의 눈을 똑바로 쳐다본다. "이건 까다로운 일이라, <span class="purple">더 힘든 부탁을 해야겠어.</span> 괜찮았으면 좋겠네."
 
 <<elseif $pubfame.goal.includes("Raise")>>
-	"일시적으로 <<fameProse $pubfame.target>> 명성을 올리는 거, 알았어." 미키가 고개를 끄덕인다. <span class="blue">"네가 뭘 해줬으면 하는지 생각이 있어."</span>
+	"일시적으로 <<fameProse $pubfame.target>>【을를】 올리는 거, 알았어." 미키가 고개를 끄덕인다. <span class="blue">"네가 뭘 해줬으면 하는지 생각이 있어."</span>
 
 <<elseif $pubfame.goal.includes("Lower")>>
-	"일시적으로 <<fameProse $pubfame.target>> 명성을 낮추는 거, 알았어." 미키가 고개를 끄덕인다. <span class="blue">"네가 뭘 해줬으면 하는지 생각이 있어."</span>
+	"일시적으로 <<fameProse $pubfame.target>>【을를】 낮추는 거, 알았어." 미키가 고개를 끄덕인다. <span class="blue">"네가 뭘 해줬으면 하는지 생각이 있어."</span>
 
 <<else>> <!-- all conditions should be met in the above if statements -->
 	<<set _failed to 1>>

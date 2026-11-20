@@ -799,9 +799,9 @@
 :: Poppy Flats Gifts
 <<effects>><<run poppySchedule()>><<set $outside to 0>><<run statusCheck("Poppy")>>
 <<if setup.foodstuff[$gift].category is "dish">>
-	<<set _gift to setup.foodstuff[$gift].name + (setup.foodstuff[$gift].food.handheld_gift ? " gift" : "")>>
+	<<set _gift to $gift + (setup.foodstuff[$gift].food.handheld_gift ? " gift" : "")>>
 <<else>>
-	<<set _gift to setup.foodstuff[$gift].name>>
+	<<set _gift to $gift>>
 <</if>>
 <<set _giftData to setup.foodstuff[$gift]>>
 <<if $plural is undefined>><<set _gifted to setup.foodstuff[$gift].singular>><<else>><<set _gifted to setup.foodstuff[$gift].plural>><<set $plural to undefined>><</if>>
@@ -810,7 +810,7 @@
 	포피에게 선물을 건네려는 순간, <span class="red">무언가 잘못된다.</span>
 	<br><br>
 <<elseif setup.foodstuff[$gift].category is "dish">>
-	<<set _gift to _giftData.name + (_giftData.food?.handheld_gift ? " gift" : "")>><<wearProp _gift>>
+	<<set _gift to $gift + (_giftData.food?.handheld_gift ? " gift" : "")>><<wearProp _gift>>
 	<<if T.poppyStatus and T.poppyStatus.includes("LowPatience")>>
 		포피가 당신 손에 들린 선물을 힐끗 보더니 일부러 시선을 돌린다.
 		<br><br>

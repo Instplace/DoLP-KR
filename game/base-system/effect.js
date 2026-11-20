@@ -1672,7 +1672,7 @@ function effects() {
 						`허리 아래와 목이 가렵다. ${
 							V.loveInterest.primary !== "None"
 								? `생각은 ${
-										["Black Wolf", "Great Hawk"].includes(V.loveInterest.primary) ? `그 ${window.KR.gatPersonNameDictKR(V.loveInterest.primary)},` : `${window.KR.gatPersonNameDictKR(V.loveInterest.primary)},`
+										["Black Wolf", "Great Hawk"].includes(V.loveInterest.primary) ? `그 ${window.KR.gatPersonNameDictKR(V.loveInterest.primary)}` : `${window.KR.gatPersonNameDictKR(V.loveInterest.primary)}`
 								  }에게로 향하고, 그와 함께 있고 싶은 원초적이고 거의 동물적인 충동이 든다.`
 								: "함께할 진정한 짝을 갑자기 갈망한다."
 						}`,
@@ -1729,7 +1729,7 @@ function effects() {
 						`두피가 가렵다. ${
 							V.loveInterest.primary !== "None"
 								? `생각은 ${
-										["Black Wolf", "Great Hawk"].includes(V.loveInterest.primary) ? `그 ${window.KR.gatPersonNameDictKR(V.loveInterest.primary)},` : `${window.KR.gatPersonNameDictKR(V.loveInterest.primary)},`
+										["Black Wolf", "Great Hawk"].includes(V.loveInterest.primary) ? `그 ${window.KR.gatPersonNameDictKR(V.loveInterest.primary)}` : `${window.KR.gatPersonNameDictKR(V.loveInterest.primary)}`
 								  }에게로 향하고, 그와 함께 있고 싶은 원초적이고 거의 동물적인 충동이 든다.`
 								: "함께할 진정한 짝을 갑자기 갈망한다."
 						}`,
@@ -1899,16 +1899,10 @@ function effects() {
 		V.timeMessages = [];
 	}
 
-	sWikifier("<<integritycheck>><<exposure>>");
+	sWikifier("<<integritycheck>>");
 
 	V.orgasmdown -= 1;
 	V.orgasmCum -= 1;
-
-	if (V.exposed >= 1 && V.exposedcheck === 1) {
-		V.exposedcheck = 0;
-		sWikifier("자신의 <<nudity>>【이가】 신경 쓰인다.");
-		br();
-	}
 
 	if (V.timer >= 1) V.timer--;
 	// V.turnCount++;

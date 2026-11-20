@@ -75,7 +75,7 @@
 
 	<<link [[거부한다|Fishing Whitney Pier Kiss Fish Refuse]]>><<npcincr Whitney dom -1>><</link>><<ldom>><<athleticsdifficulty 600 1200>>
 	<br>
-	<<link [[setup.foodstuff[$fishingHookedFish.type].name에게 키스한다|Fishing Whitney Pier Kiss Fish Accept]]>><<npcincr Whitney dom 1>><</link>><<deviant1>><<gdom>><<if $player.virginity.kiss is true>><<kissvirginitywarning>><</if>>
+	<<link [[<<= setup.foodstuff[$fishingHookedFish.type].name>>에게 키스한다|Fishing Whitney Pier Kiss Fish Accept]]>><<npcincr Whitney dom 1>><</link>><<deviant1>><<gdom>><<if $player.virginity.kiss is true>><<kissvirginitywarning>><</if>>
 <</widget>>
 
 
