@@ -5153,7 +5153,7 @@
 		<</if>>
 		<</if>>
 /* 		<<if displayDefiantOption(500)>>
- */			<<link [[Demand payment|Street Car Sex Entrap]]>><<set $phase to 3>><<crimeUp 50 "prostitution">><<wolfDefiant 500>><</link>><<defianttext 500>>
+ */			<<link [[대가를 요구한다|Street Car Sex Entrap]]>><<set $phase to 3>><<crimeUp 50 "prostitution">><<wolfDefiant 500>><</link>><<defianttext 500>>
 			<<if !$settings.blindStatsEnabled and $street_car_police is not true>>
 				| <span class="red">범죄? (매춘)</span>
 			<<else>>

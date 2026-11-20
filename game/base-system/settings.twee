@@ -1866,20 +1866,20 @@
 				</label>
 			</div>
 			<<if $settings.granularBeastControl>>
-				<<beastTypeSettingRow "dog" "Dogs">>
-				<<beastTypeSettingRow "cat" "Cats">>
-				<<beastTypeSettingRow "pig" "Pigs">>
-				<<beastTypeSettingRow "boar" "Boars">>
-				<<beastTypeSettingRow "wolf" "Wolves">>
-				<<beastTypeSettingRow "bear" "Bears">>
-				<<beastTypeSettingRow "dolphin" "Dolphins">>
-				<<beastTypeSettingRow "lizard" "Lizards">>
-				<<beastTypeSettingRow "cow" "Cattle">>
-				<<beastTypeSettingRow "horse" "Horses">>
-				<<beastTypeSettingRow "fox" "Foxes">>
-				<<beastTypeSettingRow "hawk" "Hawks">>
-				<<beastTypeSettingRow "spider" "Spiders">>
-				<<beastTypeSettingRow "snake" "Snakes">>
+				<<beastTypeSettingRow "dog" "개">>
+				<<beastTypeSettingRow "cat" "고양이">>
+				<<beastTypeSettingRow "pig" "돼지">>
+				<<beastTypeSettingRow "boar" "멧돼지">>
+				<<beastTypeSettingRow "wolf" "늑대">>
+				<<beastTypeSettingRow "bear" "곰">>
+				<<beastTypeSettingRow "dolphin" "돌고래">>
+				<<beastTypeSettingRow "lizard" "도마뱀">>
+				<<beastTypeSettingRow "cow" "소">>
+				<<beastTypeSettingRow "horse" "말">>
+				<<beastTypeSettingRow "fox" "여우">>
+				<<beastTypeSettingRow "hawk" "매">>
+				<<beastTypeSettingRow "spider" "거미">>
+				<<beastTypeSettingRow "snake" "뱀">>
 			<<else>>
 				<div class="settingsToggleItem">
 					<<beastAttractionSettings>>
