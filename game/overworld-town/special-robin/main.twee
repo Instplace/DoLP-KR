@@ -5397,7 +5397,7 @@ _skin_array.includes("right_cheek") and !["tattoo", "brand", "magic"].includes($
 		<br><br>
 
 		/* <<if displayDefiantOption(500)>> */
-			<<link [[돈을 요구한다|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><<wolfDefiant 500>><</link 500>><<llove>><<ldom>>
+			<<link [[돈을 요구한다|Robin Money Demand]]>><<def 1>><<set $robindebt += 1>><<npcincr Robin trauma 3>><<npcincr Robin love -1>><<npcincr Robin dom -1>><<wolfDefiant 500>><</link>><<llove>><<ldom>>
 			<br>
 		/* <</if>> */
 		<<robinoptions>>

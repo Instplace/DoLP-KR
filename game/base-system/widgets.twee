@@ -1221,6 +1221,17 @@
 	<</if>>
 <</widget>>
 
+<<widget "footwork">>
+	<<if _args[0] and $statFreeze isnot true>>
+		<<if $combatExtended.footwork gt 1000 or $AMCTraits.halfGain is 1>>
+			<<set $combatExtended.footwork += _args[0] / $AMCTraits.footwork * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))>>
+		<<else>>
+			<<set $combatExtended.footwork += _args[0] * (($statGainMult / 100) * (1 + 0.5 * $featsBoosts.upgrades.transcend / 100))>>
+		<</if>>
+		<<set $combatExtended.footwork to Math.clamp($combatExtended.footwork, 0, 1000 * $AMCTraits.footwork)>>
+	<</if>>
+<</widget>>
+
 <<widget "bruise">>
 	<<if _args[0] and $statFreeze isnot true>>
 		<<switch _args[0]>>

@@ -398,7 +398,7 @@ $whitneycollar - if whitney ever put a collar on you
 				"누가 널 소유하고 있는지 기억해." <<He>>【이가】 능글맞게 웃는다. "너 같은 걸레들은 자기 좋으라고 잠기고 표시가 새겨지는 거야."
 				<</addSpeechLine>>
 			<<else>>									 	/*just collared */
-				<<addSpeechline "collared">>
+				<<addSpeechLine "collared">>
 				<<He>>【이가】 능글맞게 웃는다. "내 밑에서 애원하는 꼴이 아주 귀엽네."
 				<</addSpeechLine>>
 			<</if>>

@@ -676,7 +676,7 @@
 <<set $outside to 0>><<set $location to "museum">><<effects>>
 <<npc Winter>><<person1>>
 <<if $mathsTraitBuffs.antiques is 1>>
-	<<set _sale to ($antiquemoney * 100 * (1 + ($mathstrait/4)))
+	<<set _sale to ($antiquemoney * 100 * (1 + ($mathstrait/4)))>>
 <<else>>
 	<<set _sale to ($antiquemoney * 100)>>
 <</if>>

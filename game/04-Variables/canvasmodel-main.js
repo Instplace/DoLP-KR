@@ -830,7 +830,7 @@ Renderer.CanvasModels.main = {
 			options.worn.over_head.setup.mask_img === 1
 			&& !(options.hood_down && options.worn.over_head.setup.hood && options.worn.over_head.setup.outfitSecondary !== undefined) && V.tfearshatposition == "under"
 		) {
-			options.headMask.push(`img/clothes/over_head/${options.worn.over_head.setup.variable}/mask.png`);
+			options.headMask.push(`img/clothes/over-head/${options.worn.over_head.setup.variable}/mask.png`);
 		}
 		if (
 			options.worn.head.setup.mask_img === 1
@@ -1815,7 +1815,7 @@ Renderer.CanvasModels.main = {
 			srcfn(options) {
 				if (!options.penis_parasite.includes("ear-slime")) return `img/body/parasites/${options.penis_parasite}.png`;
 				const folder = options.balls ? "penis" : "penis-no-balls";
-				return `img/body/parasite/${folder}/${options.penis_parasite}.png`;
+				return `img/body/${folder}/${options.penis_parasite}.png`;
 			},
 			showfn(options) {
 				return options.crotch_visible && !!options.penis && !!options.penis_parasite && !playerHasStrapon();

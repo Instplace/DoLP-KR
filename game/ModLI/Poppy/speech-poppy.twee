@@ -78,7 +78,7 @@
 			<<if typeof $poppyromance is "number" and $poppyromance gte 0>>
 				<<He>>【은는】 당신이 하고 있는 사역마 목줄을 알아본다. "그 목줄... 우리 집에 올 때는 그윌란한테 풀어 달라고 말해 줄 수 있어? 그럼 기쁠 것 같아."<<npcincr Poppy patience -2>><<lpatience>>
 			<<else>>
-				<<He>>【은는】 당신이 하고 있는 사역마 목줄을 알아본다. "어머! 그윌란 거야? 잘됐네. 나도 <<npc_him "Gwylan">>【을를】 전에 마주친 적 있어. <<npc_Hes "Gwylan">> 꽤 괜찮은 사람이야."
+				<<He>>【은는】 당신이 하고 있는 사역마 목줄을 알아본다. "어머! 그윌란 거야? 잘됐네. 나도 <<nnpc_him "Gwylan">>【을를】 전에 마주친 적 있어. <<nnpc_Hes "Gwylan">> 꽤 괜찮은 사람이야."
 			<</if>>
 
 		<<else>>

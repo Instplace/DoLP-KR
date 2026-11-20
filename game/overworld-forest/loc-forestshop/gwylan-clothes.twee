@@ -1497,7 +1497,7 @@
 	<<nnpc_His "Eden">> 죄는 모든 나무에 새겨져 있다. <<nnpc_he "Eden">>【이가】 누군가 질식하도록 흙 속에 아무렇게나 버려둔 총알 하나하나에까지도."
 <<elseif $phase is 3>>
 	<<switch $speech_attitude>>
-		<<case "meek "shy" "special">>
+		<<case "meek" "shy" "special">>
 			"<<nnpc_Hes "Eden">>... 무서워요." 당신은 말한다. "너무 무서워서 <<nnpc_him "Eden">>에게서 떨어져 있는 게 두려워졌어요."
 		<<case "bratty">>
 			"<<nnpc_Hes "Eden">> 골칫덩어리예요." 당신은 동의한다. "<<nnpc_He "Eden">>【은는】 <<nnpc_he "Eden">>【이가】 원하는 건 뭐든지 가질 수 있다고 생각하죠. 아무리 도망치려 해도 소용없어요."

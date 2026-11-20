@@ -90,7 +90,7 @@
 		<hr>
 		<h1 class="header gold bold">중요 알림</h1>
 		<ul class="journal">
-			<<set $rentmoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentstage - 1,0,6)]>>
+			<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp($rentStage - 1,0,6)]>>
 			<<rentmod>>
 			<<if $rentTime isnot undefined>>
 				<<if isRentDue() or isBaileyLookingForPlayer()>>
@@ -115,17 +115,17 @@
 						<</if>>
 					<</if>></li>
 				<<elseif isAveryPayingBailey() isnot 2>>
-					<<if $baileyDeposit gte ($rentmoney * $settings.rentCostModifier) + ($babyRent or 0)>>
-						<<set _rentstage to $rentstage>>
+					<<if $baileyDeposit gte $rentMoney + ($babyRent or 0)>>
+						<<set _rentstage to $rentStage>><<set _rentMoneyNow to $rentMoney>>
 						<<set _baileyDepositDays to 0>>
 						<<set _baileyDepositWorth to 0>>
-						<<for _baileyDeposit = $baileyDeposit; _baileyDeposit >= ($rentmoney * $settings.rentCostModifier) + ($babyRent or 0) && _baileyDepositDays lt 1000; _baileyDeposit -= ($rentmoney * $settings.rentCostModifier) + ($babyRent or 0)>>
-							<<set $rentmoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp(_rentstage - 1,0,6)]>>
+						<<for _baileyDeposit = $baileyDeposit; _baileyDeposit >= $rentMoney + ($babyRent or 0) && _baileyDepositDays lt 1000; _baileyDeposit -= $rentMoney + ($babyRent or 0)>>
+							<<set $rentMoney to [10000,30000,50000,70000,100000,150000,200000][Math.clamp(_rentstage - 1,0,6)]>>
 							<<rentmod>>
 							<<set _rentstage += 1>>
 							<<set _baileyDepositDays += 1>>
-							<<set _baileyDepositWorth += $rentmoney + ($babyRent or 0)>>
-						<</for>>
+							<<set _baileyDepositWorth += $rentMoney + ($babyRent or 0)>>
+						<</for>><<set $rentMoney to _rentMoneyNow>>
 						<li>베일리에게 맡긴 예치금이 아직 <span class="gold">_baileyDepositDays</span><<if _baileyDepositDays gte 1000>>+<</if>>주 치 남아 있으며, 이는 <<printmoney _baileyDepositWorth>><<if _baileyDepositDays gte 1000>>+<</if>>에 해당합니다.</li>
 					<<else>>
 						<li><<rentday>>까지 베일리가 요구하는 금액은 <<printmoney $rentMoney>><<babyRentDisplay " (고아원 아이 돌봄 명목 " " 포함)" "gold">>입니다.</li>
@@ -1964,7 +1964,7 @@
 		<<link "새 페이지">>
 			<<journalNotesTextareaSave>>
 			<<set _newName to journalNotesReplacer(_pageName).slice(0,20)>>
-			<<if $journalNotes[_newName] is undefined>>
+			<<if _newName isnot "" and $journalNotes[_newName] is undefined>>
 				<<set $journalNotes[_newName] to "">>
 				<<set _currentPage to _newName>>
 				<<replace "#customOverlayContent">><<journalNotes>><</replace>>
@@ -2029,8 +2029,8 @@
 
 <<widget "journalNotesTextareaSave">>
 	<<set _noteElement to jQuery('#textarea--displayedtextarea')[0]>>
-	<<if _noteElement and _noteElement.value>>
-		<<set $journalNotes[_currentPage] to LZString.compress(_noteElement.value)>>
+	<<if _noteElement and (_noteElement.value or $journalNotes[_currentPage])>>
+		<<set $journalNotes[_currentPage] to (_noteElement.value ? LZString.compress(_noteElement.value) : "")>>
 		/* put notes into save data immediately without the need to change passage */
 		<<run State.history[State.activeIndex].variables.journalNotes = clone(V.journalNotes)>>
 	<</if>>

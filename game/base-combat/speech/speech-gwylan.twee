@@ -794,38 +794,6 @@
 				<</addSpeechLine>>
 			<</if>>
 		<</if>>
-	<<elseif $speechapologise is 1>>
-		<<He>>【이가】 킥킥 웃는다. "아아, 그렇게 나를 바라보면 계속 화내기 힘들잖아."
-	<<elseif $speechapologiseno is 1>>
-		<<He>>【이가】 킥킥 웃는다. "좋아. 더 애원해봐."
-	<<elseif $speechapologiseunforgiving is 1>>
-		<<He>>【이가】 험악한 얼굴을 한다. "사과만으로는 부족해, <<pcpetname 'Gwylan'>>【아야】."
-	<<elseif ($speechvaginawithhold + $speechanuswithhold + $speechpeniswithhold + $speechotheranuswithhold) gte 1 and !$gwylanUniqueComments.includes("withhold")>>
-		<<set $gwylanUniqueComments.pushUnique("withhold")>>
-		<<if (($angel gte 6 and $transformationParts.traits.activeDivineTF is "disabled") or $transformationParts.traits.activeDivineTF is "angel") and ($speechvaginawithhold + $speechpeniswithhold) gte 1>>
-			<<if $transformationParts.angel.halo isnot "hidden">>
-				<<He>>【은는】 당신의 헤일로를 손가락으로 따라 그리며, 미소 짓는다. "네게서 이걸 빼앗진 않을 거야."
-			<<else>>
-				<<He>>【은는】 당신의 머리 위로 동그라미를 그리며, 미소 짓는다. "네게서 이걸 빼앗진 않을 거야."
-			<</if>>
-		<<else>>
-			<<He>>【이가】 한숨을 쉰다. "알았어, 그게 네가 바라는 거라면."
-		<</if>>
-	<<elseif $speechchastity is 1 and !$gwylanUniqueComments.includes("chastity")>>
-		<<set $gwylanUniqueComments.pushUnique("chastity")>>
-			<<if $worn.genitals.name is "chastity parasite">>
-				"이걸로 어떻게든 해볼게. 끝나면 씻어야겠어."
-			<<else>>
-				"골치 아픈 도구네. 내 장비들이 있었으면 좋았을 텐데."
-			<</if>>
-	<<elseif ($speechcoverface + $speechcoverpenis + $speechcovervagina) gte 1 and !$gwylanUniqueComments.includes("hide")>>
-		<<set $gwylanUniqueComments.pushUnique("hide")>>
-		<<He>>【이가】 킥킥 웃는다. "어머, 부끄러워?"
-	<<elseif $speechhair is 1 and !$gwylanUniqueComments.includes("hair")>>
-		<<set $gwylanUniqueComments.pushUnique("hair")>>
-		<<He>>【이가】 말한다. "머리를 빗겨주고 싶어."
-	<<elseif ($speechhandjobpenis + $speechhandjobvagina + $speechcheeks + $speechthigh + $speechfeet + $speechchestrub + $speechbreastrub) gte 1 and $gwylanComments.touch is 0>>
-		<<set $gwylanComments.touch to 4>>
 		<<if $enemyarousal gte ($enemyarousalmax / 5) * 4>>
 			<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>
 				<<addSpeechLine "touch">>
@@ -833,7 +801,11 @@
 				<</addSpeechLine>>
 			<</if>>
 		<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 2>>
-			<<He>>【이가】 미소 짓는다. "날 돌봐주려고? 그래, 계속해봐."
+			<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>
+				<<addSpeechLine "touch">>
+					<<He>>【이가】 미소 짓는다. "날 돌봐주려고? 그래, 계속해봐."
+				<</addSpeechLine>>
+			<</if>>
 		<<else>>
 			<<if $speechHandjobPenis or $speechHandjobVagina or $speechCheeks or $speechThigh or $speechFeet or $speechChestRub or $speechBreastRub>>
 				<<addSpeechLine "touch">>
@@ -851,67 +823,6 @@
 				<<He>>【이가】 킥킥 웃는다. "나 예뻐 보여?"
 			<</addSpeechLine>>
 		<</if>>
-	<<elseif $combat_silenced and !$gwylanUniqueComments.includes("silenced")>>
-		<<set $gwylanUniqueComments.pushUnique("silenced")>>
-		"내 말 들었어야지, 이 못된 <<girl>>【아야】."
-	<<elseif $speechaskrough is 1>>
-		<<He>>【이가】 킥킥 웃는다. "어떻게 거절하겠어? 달콤하게 아프게 해줄게."
-	<<elseif $speechbeat is 1>>
-		<<print either(
-			`<<He>>【이가】 눈살을 찌푸린다. "그만 반항해, <<pcpetname 'Gwylan' 'naughty'>>【아야】."`,
-			`<<He>>【이가】 눈살을 찌푸린다. "그냥 복종해. 그럼 아픔은 전부 사라질 테니까."`,
-			`<<He>>【이가】 눈살을 찌푸린다. "왜 버둥거리는 거야? 이게 네가 원하던 거 아니었어, 얘야?"`,
-			`<<He>>【이가】 눈살을 찌푸린다. "나도 이러는 게 즐거운 건 아니야, 얘야, 그러니까 제발. 의미 없는 발버둥은 멈춰."`,
-			`<<He>>【이가】 눈살을 찌푸린다. "미안해. 다 끝나면 아프지 않게 뭐라도 줄게."`,
-		)>>
-	<<elseif $speechgrowl is 1>>
-		<<He>>【이가】 킥킥 웃는다. "오, 흥분되는 으르렁거림이네. 그 송곳니 다시 보여줘 봐." <<npcincr Gwylan lust 1>><<glust>><br>
-	<<elseif $speechgrowlheat is 1 or $speechgrowlrut is 1>>
-		<<He>>【이가】 킥킥 웃는다. "오, 사랑스러운 으르렁거림이네. 쉿, 내가 기분 좋게 해줄게." <<npcincr Gwylan lust 1>><<glust>><br>
-	<<elseif $speechplead is 1>>
-		<<He>>【이가】 킥킥 웃는다. "쉿, 조용."
-	<<elseif $speechdemand is 1 and $hypnosis_traits.devotion gte 2 and !$combat_silenced>>
-		<<if $gwylanUniqueComments.includes("demand")>>
-			<br><span class="red"><<He>>【은는】 멈칫하더니 속을 알 수 없는 표정으로 당신을 노려본다.</span> "내가 경고했잖아."
-			당신이 입을 열자마자 <<his>> 손가락이 목을 훑고 올라온다.
-			<<if $hallucinations gte 2>>
-				<<hypnosisText "<span class='red'>푸른 안개가 당신의 입에서 새어 나오고, <<he>>【은는】 그것을 <<his>> 손으로 부드럽게 붙잡는다. 아무리 애써도 목소리를 빼앗긴 것처럼 아무 소리도 나오지 않는다.</span>">>
-			<<else>>
-				<<hypnosisText "<span class='red'>목소리가 목에 걸린다. 아무리 애써도 아무 말도 할 수 없다.</span>">>
-			<</if>>
-			<br>
-			<<gwylanHypnoName "cap">>【은는】 다시 미소 짓는다. "네가 얌전히 굴면 돌려줄게. 자, <<pcpetname "Gwylan" "good">>【이】니까 쉿해." <<He>>【은는】 다시 자리를 잡고 행동을 재개한다.
-			<<set $combat_silenced to true>>
-			<<if $consensual is 1>>
-				<<set $consensual to 0>>
-				<<molested>><<controlloss>>
-			<</if>><br><br>
-		<<else>>
-			<<set $gwylanUniqueComments.pushUnique("demand")>>
-			<<He>>【이가】 킥킥 웃는다. "<<gwylanCommand "그 입 다물고 있어. 아니면 내가 막아줄 테니.">>"
-		<</if>>
-	<<elseif $speechdemand is 1 and !$gwylanUniqueComments.includes("demand")>>
-		<<set $gwylanUniqueComments.pushUnique("demand")>>
-		<<He>>【이가】 킥킥 웃는다. "계속 그렇게 센 척 해봐. 난 네 얼굴을 기억하고 싶어."
-	<<elseif $speechforgive is 1>>
-		<<He>>【은는】 인상을 찌푸리더니 잠시 침묵한다. "내가 네 용서를 받을 자격이 있을까?"
-	<<elseif $speechhit is 1>>
-		<<if $rng gte 100>>
-			<<He>>【은는】 당신이 때리자 뒷걸음질을 친다. "붸에!"
-		<<elseif $enemyarousal gte ($enemyarousalmax / 5) * 4>>
-			<<He>>【은는】 흥분과 고통에 숨을 헐떡인다. "모-<<pcpetname 'Gwylan' 'naughty'>>【아야】!"
-		<<else>>
-			<<He>>【이가】 흠칫 놀란다. "아야! 아우, <<pcpetname 'Gwylan' 'bad'>>【아야】."
-		<</if>>
-	<<elseif $speechvaginaflaunt is 1 and $gwylanComments.flaunt is 0>>
-		<<set $gwylanComments.flaunt to 3>>
-		<<print either(
-			`<<He>>【이가】 얼굴을 붉힌다. "구경은 즐거워?"`,
-			`<<He>>【이가】 킥킥 웃는다. "네 눈길이 나를 훑고 다니는 게 느껴져, 난 그게 좋아."`,
-			`<<He>>【이가】 킥킥 웃는다. "나 예뻐 보여?"`
-		)>>
-	<<else>>
-		<<cleareventpool>>
 
 		<<if !$gwylanUniqueComments.includes("clothes")>>
 			<<if $worn.upper.name is "chain tunic">>

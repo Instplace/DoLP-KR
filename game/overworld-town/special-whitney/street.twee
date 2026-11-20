@@ -227,7 +227,7 @@
 					"무슨 일이야, 걸레야?" 휘트니다. 당신이 대답하기도 전에 <<He>>【이가】 당신에게 입을 맞춘다.<<stress 2>><<arousal 500 "mouth">><<gstress>><<garousal>>
 					<br><br>
 					/* <<if displayDefiantOption(500)>> */
-						<<link [[주도한다|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link 500>><<promiscuous1>><<ldom>>
+						<<link [[주도한다|Street Bully Makeout]]>><<set $phase to 2>><<def 3>><<npcincr Whitney dom -1>><<wolfDefiant 500>><</link>><<promiscuous1>><<ldom>>
 						<br>
 					/* <</if>> */
 					<<link [[순순히 따른다|Street Bully Makeout]]>><<set $phase to 1>><<sub 1>><<stress 4>><<arousal 1000 "mouth">><<npcincr Whitney dom 1>><</link>><<gstress>><<garousal>><<gdom>>

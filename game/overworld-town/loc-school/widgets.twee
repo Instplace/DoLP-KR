@@ -1628,7 +1628,7 @@
 				<<link [[옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 1>><</link>>
 				<br>
 				/* <<if displayDefiantOption(500)>> */
-					<<link [[휘트니의 옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link 500>><<ldom>>
+					<<link [[휘트니의 옷에 손을 닦는다|Whitney Maths Wake]]>><<set $phase to 2>><<wolfDefiant 500>><</link>><<ldom>>
 				/* <</if>> */
 			<</if>>
 		<</addinlineevent>>

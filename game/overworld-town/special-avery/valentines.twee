@@ -2976,7 +2976,7 @@
 	<<if $enemyhealth gte $enemyhealthmax>>
 		"벌을 온순하게 받아들이는 법은 아는 것 같아 다행이군요. 하지만 애초에 날 화나게 하지 않는 편이 가장 이상적이었겠지요. 앞으로는 약속을 끝까지 지키길 기대하겠어요. 알아들었어요?"<<npcincr Avery rage -1>><<larage>>
 	<<else>>
-		"반항하려 들지 않았다면 이 정도로 심하진 않았을 거예요, <<= C.npc.Avery.rage gte 60 ? "<<girl>>" : "<<pcpetname "Avery">>">>. 다음부턴 똑똑히 기억해 두세요."<<npcincr Avery rage 1>><<garage>>
+		"반항하려 들지 않았다면 이 정도로 심하진 않았을 거예요, <<= C.npc.Avery.rage gte 60 ? '<<girl>>' : '<<pcpetname "Avery">>'>>. 다음부턴 똑똑히 기억해 두세요."<<npcincr Avery rage 1>><<garage>>
 	<</if>><<npcincr Avery dom 1>><<gdom>>
 	<br><br>
 	그렇게 말하고, <<he>>【은는】

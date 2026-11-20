@@ -10474,7 +10474,7 @@
 	<br><br>
 	<<he>>【이가】 시야에서 사라지자, 아직 남아 있는 긴장에 뒤섞인 흥분이 밀려드는 것을 어쩔 수 없다. 감정의 롤러코스터를 탄 듯 숨이 조금 가쁘지만, 일이 이렇게 풀려서 어쩐지 기분도 좋다.<<arousal 600>><<npcincr Whitney lust 3>><<garousal>><<glust "Whitney">>
 	<br><br>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	당신은 고개를 젓는다. 눈에는 반항기가 어려 있다.
 	<<if $speech_attitude is "meek">>
@@ -10632,7 +10632,7 @@
 	<<else>>
 		몇 분 쉬고 나서 당신은 몸을 추스르고 공원으로 돌아간다.
 		<br><br>
-		<<whitneyexit>>
+		<<whitneyExit>>
 	<</if>>
 <<elseif $enemyhealth lte 0>>
 
@@ -10643,7 +10643,7 @@
 	<<clotheson>>
 	<<endcombat>>
 
-	<<whitneyexit>>
+	<<whitneyExit>>
 
 <<else>>
 
@@ -10657,7 +10657,7 @@
 	<<tearful>> 당신은 휘트니와 같은 길로 떠나지만, 어디에서도 <<nnpc_him "Whitney">>【을를】 보지 못한다.
 	<br><br>
 
-	<<whitneyexit>>
+	<<whitneyExit>>
 
 <</if>>
 
@@ -10778,7 +10778,7 @@
 
 :: Whitney Collar Replace Kneel 3 Dolp
 <<effects>><<set $location to "park">>
-<<whitneyoptions>>
+<<whitneyOptions>>
 
 :: Whitney Collar Replace Run Dolp
 <<effects>><<set $location to "park">>
@@ -10790,7 +10790,7 @@
 	<br><br>
 	<<him>>【이가】 가방을 집어 들고 시야에서 사라지는 것이 보인다.
 	<br><br>
-	<<whitneyexit>>
+	<<whitneyExit>>
 <<else>>
 	<<He>>【은는】 당신을 더 세게 움켜쥔다. "뭐 하는 짓이야, 걸레야?" <<His>> 손아귀 힘이 더욱 세진다. "네가 갈 수 있을 것 같아, 응?"
 	<br><br>
@@ -10809,5 +10809,5 @@
 	당신은 눈을 감고 목에 묵직한 가죽 목걸이가 살갗에 바싹 당겨지는 것을 느낀다. 자물쇠가 찰칵 걸리고, 휘트니가 그것을 홱 잡아당겨 당신을 억지로 다시 일으켜 세운다. "이제 착하게 굴어." <<He>>【은는】 당신의 엉덩이를 찰싹 때린다.
 	<br><br>
 	<<neckwear "Whitney's collar">>
-	<<whitneyoptions>>
+	<<whitneyOptions>>
 <</if>>

@@ -3042,7 +3042,7 @@
 			<</switch>>
 			에덴이 다시 오두막을 나선다.
 			<<pass 20>>
-			<<set $weekly.theft.cabin."bird_egg" to true>>
+			<<set $weekly.theft.cabin["bird_egg"] to true>>
 		<<else>>
 			"좀 더 조심해." 에덴이 말하고는 다시 오두막을 나선다.
 			<<pass 30>>
@@ -3052,7 +3052,7 @@
 			<<else>>
 				그런 다음에야 남은 달걀을 건진다. <<tending_pick $phase 1 1>>
 			<</if>>
-			<<set $weekly.theft.cabin."bird_egg" to true>>
+			<<set $weekly.theft.cabin["bird_egg"] to true>>
 		<</if>>
 
 		<br><br>
@@ -3073,7 +3073,7 @@
 		<<else>>
 			그런 다음에야 남은 달걀을 건진다. <<tending_pick $phase 1 1>>
 		<</if>>
-		<<set $weekly.theft.cabin."bird_egg" to true>>
+		<<set $weekly.theft.cabin["bird_egg"] to true>>
 		<<pass 30>>
 		<br><br>
 		<<ind>><br>
@@ -3090,7 +3090,7 @@
 		에덴이 그 소리를 듣지는 못한 것 같다.
 
 		에덴이 눈치채기 전에 서둘러 어질러진 것을 치운다.<<gtiredness>><<tiredness 6>><<gstress>><<stress 2>>
-		<<set $weekly.theft.cabin."bird_egg" to true>>
+		<<set $weekly.theft.cabin["bird_egg"] to true>>
 		<<pass 25>>
 		<br><br>
 		<<ind>><br>

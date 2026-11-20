@@ -639,7 +639,7 @@
 	<<set _settingsExitPassage to clone($settingsExitPassage)>>
 	<<unset $settingsExitPassage>>
 	<<run State.display(_settingsExitPassage)>>
-	<<set $saveName to $saveName.replace(/[^a-zA-Z\u4e00-\u9fa5 0-9]+/g,"")>>
+	<<set $saveName to $saveName.replace(/[^a-zA-Z\u4e00-\u9fa5\uac00-\ud7a3\u3131-\u318e 0-9]+/g,"")>>
 	<<unset $importString>>
 
 	/* Updates the penis max size for females so its never below 2 */
