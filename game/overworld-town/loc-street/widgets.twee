@@ -963,7 +963,7 @@
 		<br><br>
 
 		<<if !hasSexStat("promiscuity", 2)>>
-			<<set _desperateaction to "the ear slime commanded you to do it">>
+			<<set _desperateaction to "귀 슬라임이 시켰다">>
 		<</if>>
 		<<link [[복종한다|Street Car Slime Obey]]>>
 			<<corruption 1>><<pain -4>><<stress -6>><<trauma -12>><<sub 2>>

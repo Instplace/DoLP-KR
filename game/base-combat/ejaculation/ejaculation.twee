@@ -1769,7 +1769,7 @@
 
 								<<case "othermouth">>
 									<<He>>【이가】 흥분에 몸을 떨며 끝을 맞는다. <<his>> 페니스 밴드의 하네스가 <<himself>>에게 갈린다.
-									<<set _postOrgasmSpeech to `"That was awesome."`>>
+									<<set _postOrgasmSpeech to `"정말 끝내줬어."`>>
 
 								<<default>>
 									<<if $NPCList[_nn].mouth is "penis">>

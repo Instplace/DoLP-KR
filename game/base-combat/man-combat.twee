@@ -100,7 +100,7 @@
 
 		<<set $_waves to ".">>
 		<<if $spankobject is "paddle">>
-			<<set $_waves to ($_through ? "," : " and") + " sending waves of pain through your whole body.">>
+			<<set $_waves to ($_through ? "." : ".") + " 고통이 온몸으로 번져 나간다.">>
 		<</if>>
 
 		<<He>>【은는】 <<if $_through>>당신의 $_through 너머로 <<else>>당신의 노출된 피부를 붉게 달구며 <</if>><<if $spankobject is "paddle" or getSexToysofType("dildos and whips").includes($spankobject)>><<print window.KR.getToolKr($spankobject)>>【으로로】 <</if>>당신의 <<bottom>>【을를】 <<print either("찰싹 때린다","후려친다","때린다","철썩 때린다","세게 내리친다")>>$_waves

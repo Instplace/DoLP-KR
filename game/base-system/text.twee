@@ -5373,23 +5373,16 @@
 		<<case "plead">>
 			<<if $pain lte 60>>
 				<<if $rng lte 33>><<set _text_output to "애원한다">>
-					<<set _text_output to "plead">>
 				<<elseif $rng lte 66>><<set _text_output to "간청한다">>
-					<<set _text_output to "beg">>
 				<<elseif $wolfgirl gte 4>><<set _text_output to "훌쩍인다">>
-					<<set _text_output to "whimper">>
 				<<elseif $cat gte 4>><<set _text_output to "낑낑댄다">>
-					<<set _text_output to "mewl">>
 				<<elseif $cow gte 4>><<set _text_output to "음매거린다">>
-					<<set _text_output to "moo">>
 				<<elseif $bear gte 4>>
-					<<set _text_output to "yelp">>
+					<<set _text_output to "끙끙댄다">>
 				<<elseif $harpy gte 4>><<set _text_output to "짹짹거린다">>
-					<<set _text_output to "chirp">>
 				<<elseif $fox gte 4>><<set _text_output to "훌쩍인다">>
-					<<set _text_output to "whimper">>
 				<<else>>
-					<<set _text_output to "plead">>
+					<<set _text_output to "애원한다">>
 				<</if>>
 			<<else>>
 				<<if $rng lte 50>><<set _text_output to "울며 애원한다">>
@@ -5402,53 +5395,39 @@
 			<<elseif $rng lte 50>><<set _text_output to "중얼거린다">>
 			<<elseif $rng lte 75>>
 				<<if $arousal lt ($arousalmax / 5) * 3>><<set _text_output to "킥킥댄다">>
-					<<set _text_output to "giggle">>
 				<<else>>
-					<<set _text_output to "gasp and giggle">>
+					<<set _text_output to "숨을 헐떡이며 킥킥댄다">>
 				<</if>>
 			<<elseif $wolfgirl gte 4>><<set _text_output to "숨을 헐떡인다">>
-				<<set _text_output to "pant">>
 			<<elseif $cat gte 4>><<set _text_output to "가르랑거린다">>
-				<<set _text_output to "purr">>
 			<<elseif $cow gte 4>><<set _text_output to "음매거린다">>
-				<<set _text_output to "moo">>
 			<<elseif $bear gte 4>>
-				<<set _text_output to "purr">>
+				<<set _text_output to "그르렁거린다">>
 			<<elseif $harpy gte 4>><<set _text_output to "짹짹거린다">>
-				<<set _text_output to "chirp">>
 			<<elseif $fox gte 4>><<set _text_output to "깨갱거린다">>
-				<<set _text_output to "yip">>
 			<<else>>
-				<<set _text_output to "moan">>
+				<<set _text_output to "신음한다">>
 			<</if>>
 		<<case "demand">>
 			<<if $arousal lt ($arousalmax / 5) * 3>>
 				<<if $rng lte 33>><<set _text_output to "말한다">>
-					<<set _text_output to "speak">>
 				<<elseif $rng lte 66>><<set _text_output to "소리친다">>
-					<<set _text_output to "yell">>
 				<<elseif $wolfgirl gte 4>><<set _text_output to "짖는다">>
-					<<set _text_output to "bark">>
 				<<elseif $cat gte 4>><<set _text_output to "하악질한다">>
-					<<set _text_output to "hiss">>
 				<<elseif $cow gte 4>><<set _text_output to "콧김을 뿜는다">>
-					<<set _text_output to "exhale through your nostrils threateningly">>
+					<<set _text_output to "콧김을 뿜는다">>
 				<<elseif $bear gte 4>>
-					<<set _text_output to "growl">>
+					<<set _text_output to "으르렁거린다">>
 				<<elseif $harpy gte 4>><<set _text_output to "새액거린다">>
-					<<set _text_output to "screech">>
 				<<elseif $fox gte 4>><<set _text_output to "비명을 지른다">>
-					<<set _text_output to "scream">>
 				<<else>>
-					<<set _text_output to "spit">>
+					<<set _text_output to "내뱉는다">>
 				<</if>>
 			<<elseif $rng lte 50>><<set _text_output to "헐떡인다">>
-				<<set _text_output to "gasp">>
 			<<else>>
-				<<set _text_output to "growl">>
+				<<set _text_output to "으르렁거린다">>
 			<</if>>
 		<<default>><<set _text_output to "딸꾹질을 한다">>
-			<<set _text_output to "try to speak, but hiccup instead. This is a bug, please report to Vrelnir" + (_args[0] isnot undefined ? _args[0] : "undefined")>>
 	<</switch>>
 	<<print _text_output>>
 <</widget>>

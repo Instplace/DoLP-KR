@@ -1134,7 +1134,7 @@
 				<<if (($enemyanger / $enemyangermax) * 100) gte 10>> /* high anger */
 					<<switch $npcspeechcycle>>
 						<<case 0>> "내 자지를 제대로 다루는 게 좋을 거다."
-						<<case 1>> <<print[`My cock needs better than this.`,`This toy is better than your worn-out ${$player.vaginaExist ? "holes" : "ass"}.`][random(0,1)]>>
+						<<case 1>> <<print[`내 자지에는 이보다 나은 솜씨가 필요하다.`,`이 장난감이 네 닳아빠진 ${$player.vaginaExist ? "구멍" : "엉덩이"}보다 낫군.`][random(0,1)]>>
 						<<case 2>> "네 더러운 장난감을 내 자지에서 떼."
 						<<case 3>> "뭘 하는지 알고 있는 게 좋을걸."
 						<<case 4>> "네 장난감만으로는 부족해."

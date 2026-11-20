@@ -627,7 +627,7 @@
 		<</addinlineevent>>
 	<</if>>
 	<<addinlineevent "whitney_pantieComment_2">>
-		"귀여운 $worn.under_lower.name_simple이네. <<print calculatePenisBulge() ? `I bet you love showing off that${calculatePenisBulge() lte 3 ? " tiny" : ""} bulge` : "Almost a shame you can't show off a bulge">>."
+		"귀여운 $worn.under_lower.name_simple이네. <<print calculatePenisBulge() ? `그 ${calculatePenisBulge() lte 3 ? "쪼그만 " : ""}불룩한 거 자랑하는 거 좋아하지?` : "그 불룩한 걸 자랑하지 못하는 게 좀 아깝네">>."
 	<</addinlineevent>>
 	<<addinlineevent "whitney_pantieComment_3">>
 		"착한 <<girl>>【이】네. 그 $worn.under_lower.name_simple【이가】 <<if $worn.under_lower.plural is 1>>아늑하고 편안하길<<else>>아늑하고 편안하길<</if>> 바라."
