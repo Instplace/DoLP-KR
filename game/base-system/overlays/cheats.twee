@@ -3240,12 +3240,13 @@
 <</widget>>
 <<widget "cheatsSpeechAttitude">>
 	<<set _submissiveness = [1500, 1000, 500]>>
-	<<set _attitude = ["순종적", "중립", "반항적"]>>
+	<<set _attitude = ["meek", "neutral", "bratty"]>>
+	<<set _attitudeKr = ["순종적", "중립", "반항적"]>>
 
-	<<capture _i, _submissiveness, _attitude>>
+	<<capture _i, _submissiveness, _attitude, _attitudeKr>>
 		<<for _i = 0; _i < _attitude.length; _i++>>
 			<span @class="$speech_attitude is _attitude[_i] ? 'goldLink' : 'link'">
-				<<link _attitude[_i].toUpperFirst()>>
+				<<link _attitudeKr[_i]>>
 					<<set $speech_attitude to _attitude[_i]>>
 					<<set $submissive to _submissiveness[_i]>>
 					<<replace "#statsSpeechAttitude">><<cheatsSpeechAttitude>><</replace>>

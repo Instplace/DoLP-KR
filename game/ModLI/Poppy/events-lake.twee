@@ -557,9 +557,9 @@
 :: Poppy Lake Gifts
 <<effects>><<lakeeffects>><<run poppySchedule()>><<run statusCheck("Poppy")>>
 <<if setup.foodstuff[$gift].category is "dish">>
-	<<set _gift to setup.foodstuff[$gift].name + (setup.foodstuff[$gift].food.handheld_gift ? " gift" : "")>>
+	<<set _gift to $gift + (setup.foodstuff[$gift].food.handheld_gift ? " gift" : "")>>
 <<else>>
-	<<set _gift to setup.foodstuff[$gift].name>>
+	<<set _gift to $gift>>
 <</if>>
 <<wearProp _gift>>
 <<if $plural is undefined>><<set _gifted to setup.foodstuff[$gift].singular>><<else>><<set _gifted to setup.foodstuff[$gift].plural>><<set $plural to undefined>><</if>>

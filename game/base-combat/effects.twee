@@ -2398,9 +2398,11 @@
 							<<if $_npc.vagina is "clothed">>
 								<<set $_npc.vagina to 0>>
 							<</if>>
+							<<namedNpcReaction $righttarget "expose">>
 						<<default>>
 							당신은 <<him>>【을를】 벗기려 하지만, 허공만 잡을 뿐이다. <span class="red">잘못된 옷 타겟: $_clothesTarget. 이 버그를 제보해 주세요.</span>
 					<</switch>>
+					<<namedNpcReaction $righttarget "undress">>
 				<<else>>
 					당신은 <<npcUndressText $_npc $_clothesTarget>> 하려 하지만 <<he>>【이가】 자신의 옷을 꽉 붙잡는다.
 					<<set $_npc.clothes[$_clothesTarget].integrity -= Math.floor((currentSkillValue("handskill") / 100) * 1.5)>>

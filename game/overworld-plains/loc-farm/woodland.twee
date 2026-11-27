@@ -179,6 +179,7 @@
 	<<else>>
 		작업 중 돌풍이 나뭇가지를 흔들며, 당신의 피부를 긁고 지나간다.<<gpain>><<pain 4>>
 	<</if>>
+	<<integritycheck no_text>><<exposure>>
 	<br><br>
 	<<link [[다음|Farm Woodland]]>><</link>>
 <<else>>
